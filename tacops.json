@@ -1,0 +1,276 @@
+{
+    "battleclade": {
+        "archetypes": [
+            "infiltration",
+            "recon"
+        ]
+    },
+    "blades-of-khaine": {
+        "archetypes": [
+            "security",
+            "seek-destroy",
+            "recon",
+            "infiltration"
+        ]
+    },
+    "blooded": {
+        "archetypes": [
+            "seek-destroy",
+            "infiltration"
+        ]
+    },
+    "brood-brothers": {
+        "archetypes": [
+            "infiltration",
+            "security"
+        ]
+    },
+    "canoptek": {
+        "archetypes": [
+            "recon",
+            "security"
+        ]
+    },
+    "chaos-cult": {
+        "archetypes": [
+            "infiltration",
+            "seek-destroy"
+        ]
+    },
+    "corsair-voidscarred": {
+        "archetypes": [
+            "infiltration",
+            "recon"
+        ]
+    },
+    "deathwatch": {
+        "archetypes": [
+            "seek-destroy",
+            "security"
+        ]
+    },
+    "elucidian-starstrider": {
+        "archetypes": [
+            "security",
+            "recon"
+        ]
+    },
+    "exaction-squad": {
+        "archetypes": [
+            "security",
+            "seek-destroy"
+        ]
+    },
+    "farstalker-kinband": {
+        "archetypes": [
+            "recon",
+            "infiltration"
+        ]
+    },
+    "fellgor-ravagers": {
+        "archetypes": [
+            "seek-destroy",
+            "recon"
+        ]
+    },
+    "gellerpox": {
+        "archetypes": [
+            "seek-destroy",
+            "security"
+        ]
+    },
+    "goremongers": {
+        "archetypes": [
+            "recon",
+            "seek-destroy"
+        ]
+    },
+    "hearthkyn-salvager": {
+        "archetypes": [
+            "security",
+            "recon"
+        ]
+    },
+    "hierotek": {
+        "archetypes": [
+            "security",
+            "recon"
+        ]
+    },
+    "hunter-clade": {
+        "archetypes": [
+            "recon",
+            "seek-destroy"
+        ]
+    },
+    "imperial-navy-breachers": {
+        "archetypes": [
+            "security",
+            "seek-destroy"
+        ]
+    },
+    "inquisitorial-agent": {
+        "archetypes": [
+            "security",
+            "seek-destroy",
+            "infiltration",
+            "recon"
+        ]
+    },
+    "intercessors": {
+        "archetypes": [
+            "seek-destroy",
+            "security"
+        ]
+    },
+    "kabalite": {
+        "archetypes": [
+            "seek-destroy",
+            "recon"
+        ]
+    },
+    "kasrkin": {
+        "archetypes": [
+            "seek-destroy",
+            "security"
+        ]
+    },
+    "kommandos": {
+        "archetypes": [
+            "seek-destroy",
+            "infiltration"
+        ]
+    },
+    "legionary": {
+        "archetypes": [
+            "security",
+            "seek-destroy"
+        ]
+    },
+    "mandrakes": {
+        "archetypes": [
+            "recon",
+            "infiltration"
+        ]
+    },
+    "nemesis-claw": {
+        "archetypes": [
+            "seek-destroy",
+            "infiltration"
+        ]
+    },
+    "novitiates": {
+        "archetypes": [
+            "security",
+            "recon"
+        ]
+    },
+    "pathfinders": {
+        "archetypes": [
+            "recon",
+            "infiltration"
+        ]
+    },
+    "phobos": {
+        "archetypes": [
+            "infiltration",
+            "recon"
+        ]
+    },
+    "plague-marines": {
+        "archetypes": [
+            "security",
+            "seek-destroy"
+        ]
+    },
+    "ratling": {
+        "archetypes": [
+            "infiltration",
+            "security"
+        ]
+    },
+    "raveners": {
+        "archetypes": [
+            "infiltration",
+            "seek-destroy"
+        ]
+    },
+    "sanctifiers": {
+        "archetypes": [
+            "seek-destroy",
+            "security"
+        ]
+    },
+    "scouts": {
+        "archetypes": [
+            "infiltration",
+            "recon"
+        ]
+    },
+    "tempestus-aquilons": {
+        "archetypes": [
+            "recon",
+            "seek-destroy"
+        ]
+    },
+    "vespid-stingwings": {
+        "archetypes": [
+            "recon",
+            "seek-destroy"
+        ]
+    },
+    "veteran-guardsmen": {
+        "archetypes": [
+            "security",
+            "seek-destroy"
+        ]
+    },
+    "void-dancer-troupe": {
+        "archetypes": [
+            "infiltration",
+            "recon"
+        ]
+    },
+    "warpcoven": {
+        "archetypes": [
+            "security",
+            "recon"
+        ]
+    },
+    "wrecka-krew": {
+        "archetypes": [
+            "seek-destroy",
+            "security"
+        ]
+    },
+    "wyrmblade": {
+        "archetypes": [
+            "infiltration",
+            "seek-destroy"
+        ]
+    },
+    "yaegirs": {
+        "archetypes": [
+            "seek-destroy",
+            "infiltration"
+        ]
+    },
+    "xv26-battlesuits":{
+        "archetypes": [
+            "recon",
+            "infiltration"
+        ]
+    },
+    "wolf-scouts":{
+        "archetypes": [
+            "seek-destroy",
+            "recon"
+        ]
+    },
+    "strike-force-variel":{
+        "archetypes": [
+            "infiltration",
+            "seek-destroy"
+        ]
+    }
+}

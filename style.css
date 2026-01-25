@@ -1,0 +1,779 @@
+/* Add these new styles to the end of your style.css file */
+
+#year-select {
+margin-bottom: 1rem;
+}
+
+/* --- Faction Page Specific Styles --- */
+.faction-pane-content {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-top: none;
+}
+
+body.dark-mode .faction-pane-content {
+    background-color: #343a40;
+    border-color: #495057;
+}
+
+/* --- Datacard Styles --- */
+.card-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+body.dark-mode .card-container {
+    border-color: #555;
+    background-color: #2c3034;
+}
+
+.card-header {
+    background-color: #e9ecef;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+body.dark-mode .card-header {
+    background-color: #495057;
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: inherit;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+}
+
+.card-stats {
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+}
+
+body.dark-mode .card-stats {
+    background-color: #212529;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6c757d;
+}
+
+body.dark-mode .stat-label {
+    color: #adb5bd;
+}
+
+.stat-icon-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stat-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    filter: invert(30%);
+}
+body.dark-mode .stat-icon {
+    filter: invert(80%);
+}
+
+
+/* --- Weapon Table Styles --- */
+.weapons-table {
+    padding: 0 1rem;
+}
+
+.weapons-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.weapons-table th, .weapons-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+body.dark-mode .weapons-table th, body.dark-mode .weapons-table td {
+    border-bottom-color: #495057;
+}
+
+.weapons-table th {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+body.dark-mode .weapons-table th {
+    background-color: #343a40;
+}
+
+.weapon-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.weapon-profile-row.multi-profile td:first-child {
+    padding-left: 2rem;
+}
+
+/* --- Abilities & Actions Styles --- */
+.abilities-section, .unique-actions-section {
+    padding: 1rem;
+}
+.ability-card, .ploy-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+body.dark-mode .ability-card, body.dark-mode .ploy-card {
+    background-color: #212529;
+    border-color: #495057;
+}
+.ability-card h5, .ploy-card h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+.ploy-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.ploy-type-strategic {
+    color: #0d6efd;
+}
+.ploy-type-tactical {
+    color: #fd7e14;
+}
+
+.card-footer {
+    padding: 0.75rem 1rem;
+    background-color: #e9ecef;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #6c757d;
+}
+body.dark-mode .card-footer {
+    background-color: #495057;
+    color: #adb5bd;
+}
+
+.faction {
+    font-weight: bold;
+    color: #d63384; /* Example color */
+}
+body.dark-mode .faction {
+    color: #ff85c6;
+}
+.scoreboard {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.digit-container {
+    display: inline-block;
+    min-width: 1.5em;
+    text-align: center;
+}
+
+.digit {
+    display: inline-block;
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    color: #00ff00;
+    padding: 0.25rem 0.5rem;
+    border: 2px solid #00ff00;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.digit-separator {
+    display: inline-block;
+    color: #00ff00;
+    font-size: 1.5rem;
+    margin: 0 0.25rem;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gip-scoring-table th {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+}
+
+.gip-scoring-table td {
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .scoreboard {
+        font-size: 1.5rem;
+    }
+
+    .digit {
+        padding: 0.2rem 0.4rem;
+    }
+}
+:root {
+    --player1-color: #ae0707;
+    --player2-color: #103252;
+}
+
+.skull-grid {
+    display: inline-block;
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.skull-grid.lit-p1 {
+    background: var(--player1-color);
+    border-color: var(--player1-color);
+}
+
+.skull-grid.lit-p2 {
+    background: var(--player2-color);
+    border-color: var(--player2-color);
+}
+
+.skull-grid:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.skull-grid.lit-p1:before,
+.skull-grid.lit-p2:before {
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+.tp-column {
+    min-width: 80px;
+    text-align: center;
+    padding: 8px 4px;
+    border-right: 1px solid #dee2e6;
+}
+
+.tp-column:last-child {
+    border-right: none;
+}
+
+.scoring-row {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.scoring-label {
+    width: 60px;
+    font-weight: bold;
+    padding: 8px;
+    background: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+.kill-skulls-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.kill-skulls-main {
+    display: flex;
+    gap: 2px;
+}
+
+.kill-skulls-sixth {
+    margin-left: 20px;
+}
+
+.cp-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.cp-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cp-btn:hover {
+    background: #5a6268;
+}
+
+.cp-display {
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.tacop-select {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.primary-btn, .enemy-ops-select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primary-btn:hover, .enemy-ops-select:hover {
+    background: #f8f9fa;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.counter-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.counter-display {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+.player-section {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    margin: 10px 0;
+    background: white;
+}
+
+.player1-section {
+    border-color: var(--player1-color);
+}
+
+.player2-section {
+    border-color: var(--player2-color);
+}
+
+.player-header {
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.player1-header {
+    background: var(--player1-color);
+}
+
+.player2-header {
+    background: var(--player2-color);
+}
+
+.scoring-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.turning-point-header {
+    background: #e9ecef;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 2px solid #dee2e6;
+}
+
+body.dark-mode .turning-point-header {
+    background: #343a40;
+    color: #ffffff;
+    border-bottom-color: #495057;
+}
+
+.current-tp {
+    background: #cfe2ff !important;
+    border-color: #0d6efd !important;
+    color: #000000 !important; /* Black text for high contrast */
+}
+
+body.dark-mode .current-tp {
+    background: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: #ffffff !important; /* White text for high contrast */
+}
+
+body.dark-mode {
+    background-color: #212529;
+    color: #ffffff;
+}
+
+body.dark-mode .player-section {
+    background: #343a40;
+}
+
+body.dark-mode .scoring-label {
+    background: #495057;
+    color: white;
+}
+
+body.dark-mode .skull-grid {
+    background: #495057;
+    border-color: #666;
+}
+
+body.dark-mode .skull-grid.lit-p1 {
+    background: var(--player1-color);
+    border-color: var(--player1-color);
+}
+
+body.dark-mode .skull-grid.lit-p2 {
+    background: var(--player2-color);
+    border-color: var(--player2-color);
+}
+/* =================================================================== */
+/*  REVISED TacOps Card Styles (Replace the old block with this one)   */
+/* =================================================================== */
+
+.tacop.card {
+    border-radius: 10px;
+    padding: 0;
+    text-align: left;
+    color: #333;
+    overflow: hidden;
+    border: 3px solid transparent; /* Border color will be set by archetype */
+}
+
+body.dark-mode .tacop.card {
+    color: #ddd;
+    background-color: #343a40; /* Darker card background */
+}
+
+.tacop .archetype {
+    color: white;
+    padding: 8px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* --- Archetype Colors (from original source) --- */
+/* Light Mode */
+.tacop.recon { background-color: #cde2d6; border-color: #588169; }
+.recon .archetype { background-color: #588169; }
+
+.tacop.seek-destroy { background-color: #e5c3c6; border-color: #8c3b45; }
+.seek-destroy .archetype { background-color: #8c3b45; }
+
+.tacop.security { background-color: #ddebf8; border-color: #4a7ebb; }
+.security .archetype { background-color: #4a7ebb; }
+
+.tacop.infiltration { background-color: #f7e9c3; border-color: #af8d3b; }
+.infiltration .archetype { background-color: #af8d3b; }
+
+/* Dark Mode */
+body.dark-mode .tacop.recon { background-color: #3a4c41; border-color: #588169; }
+body.dark-mode .recon .archetype { background-color: #588169; }
+
+body.dark-mode .tacop.seek-destroy { background-color: #5b3f43; border-color: #8c3b45; }
+body.dark-mode .seek-destroy .archetype { background-color: #8c3b45; }
+
+body.dark-mode .tacop.security { background-color: #425264; border-color: #4a7ebb; }
+body.dark-mode .security .archetype { background-color: #4a7ebb; }
+
+body.dark-mode .tacop.infiltration { background-color: #635841; border-color: #af8d3b; }
+body.dark-mode .infiltration .archetype { background-color: #af8d3b; }
+
+
+.tacop .archetype .bi-heart {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    padding-right: 15px;
+    cursor: pointer;
+    color: white; /* Ensure heart is visible */
+}
+
+/* --- Archetype Icons --- */
+.recon-icon .archetype::before { font-family: 'bootstrap-icons'; content: "\F52E"; padding-right: 10px; }
+.seek-destroy-icon .archetype::before { font-family: 'bootstrap-icons'; content: "\F28A"; padding-right: 10px; }
+.security-icon .archetype::before { font-family: 'bootstrap-icons'; content: "\F528"; padding-right: 10px; }
+.infiltration-icon .archetype::before { font-family: 'bootstrap-icons'; content: "\F4D4"; padding-right: 10px; }
+
+
+.tacop .middle {
+    padding: 15px;
+}
+
+.tacop .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.tacop .mission-container .sub-header {
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+body.dark-mode .tacop .mission-container .sub-header {
+    border-color: #555;
+}
+
+.tacop .mission-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+body.dark-mode .tacop .mission-container .header {
+    background-color: #495057;
+}
+
+.tacop .ap-box {
+    background-color: #343a40;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+body.dark-mode .tacop .ap-box {
+    background-color: #212529;
+}
+
+.tacop .content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tacop .content li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.icon-yes, .icon-no {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.icon-yes {
+    background-image: url('resources/game_rules_files/yes.svg');
+}
+
+.icon-no {
+    background-image: url('resources/game_rules_files/no.svg');
+}
+
+/* CSS for the two-column layout in the "Flank" card */
+.tacop-columns {
+    align-items: flex-start;
+}
+
+/* Custom Switch for Favorites Toggle */
+.switch-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    vertical-align: middle;
+}
+
+/* Hide default checkbox */
+#FavTacops-switch {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.switch-label::before { /* The track */
+    content: '';
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+#FavTacops-switch:checked + .switch-label::before {
+background-color: #0d6efd;
+}
+
+.switch-label::after { /* The handle */
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+#FavTacops-switch:checked + .switch-label::after {
+transform: translateX(26px);
+}
+.section {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--bs-dark-orange);
+    color: var(--bs-dark-orange);
+}
+
+.crit-op[data-type="action"], .tacop, .unique-actions-section {
+    border: 1px solid var(--bs-orange) !important;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.crit-op[data-type="action"] .header, .tacop .header, .unique-actions-section .header {
+    background-color: var(--bs-orange);
+    color: white;
+    padding: 6px 10px 6px 6px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.crit-op[data-type="action"] .content, .tacop .content, .unique-actions-section .content {
+    padding: 1rem;
+}
+
+.crit-op[data-type="action"] .content em, .tacop .content em, .unique-actions-section .content em {
+    color: var(--bs-orange);
+    font-style: italic;
+}
+
+.larow .card-header {
+    padding: 0;
+}
+
+
+.larow .card-stats {
+    padding: 1rem;
+}
+
+@media (min-width: 992px) {
+    .larow .header-image {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+}
+
+.equipment-header {
+    background-color: black !important; /* Tu color personalizado */
+}
+
+.equipment-card {
+    border: 2px solid orangered;
+}
+
+/* Cambia el color de la letra del título */
+.equipment-header h5 {
+    color: orangered; 
+}

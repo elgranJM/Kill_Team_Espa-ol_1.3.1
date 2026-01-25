@@ -1,0 +1,1030 @@
+{
+    "battleclade": [
+        {
+            "id_racial": 190,
+            "faction": "battleclade",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>TECNOARQUEÓLOGO</b> <span class=\"faction\">CLADO DE BATALLA</span><br>\n1 agente <b>SUPERVISOR DE SERVIDORES</b> <span class=\"faction\">CLADO DE BATALLA</span><br>\n8 agentes <span class=\"faction\">CLADO DE BATALLA</span> seleccionados de la siguiente lista:\n<ul>\n  <li><b>SERVIDOR AUTOTRANSMISOR</b></li>\n  <li><b>SERVIDOR IRRUPTOR</b></li>\n  <li><b>SERVIDOR DE COMBATE</b> con una de las siguientes opciones:\n    <ul>\n      <li>Servogarras; cebador incendine</li>\n      <li>Servogarras; rifle de fusión</li>\n      <li>Servogarras; bláster phosphor</li>\n    </ul>\n  </li>\n  <li><b>SERVIDOR DE ARMAMENTO</b> con rifle voltaico pesado y garra augmética</li>\n  <li><b>SERVIDOR DE ARMAMENTO</b> con bólter pesado y garra augmética</li>\n  <li><b>SERVIDOR TECNOMÉDICO</b></li>\n</ul>\n<p>Aparte de los agentes <b>SERVIDOR DE COMBATE</b>, tu kill team solo puede incluir cada agente de arriba una vez. No puedes seleccionar un <b>SERVIDOR DE COMBATE</b> con rifle de fusión más de una vez, y no puedes seleccionar uno con cebador incendine más de tres veces.</p>\n"
+        },
+        {
+            "id_racial": 191,
+            "faction": "battleclade",
+            "type": "racial",
+            "name": "RED NOOSFÉRICA",
+            "description": "<p>Siempre que un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo sea activado, puedes <b>Transferir Energía</b>. Si lo haces, resta 1 de su <b>LPA</b> hasta el final de esa activación.</p>\n\n<p>Después de esa activación, puedes realizar un <b>Contraataque de Red</b> con otro agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo antes de que tu oponente active. Siempre que realices un <b>Contraataque de Red</b> con un agente amigo, primero selecciona su orden. Luego puede realizar una acción de <b>1PA</b> gratis, pero no puede moverse. Una vez que lo haya hecho, tu oponente activa de manera normal.</p>\n\n<p>Un agente no puede <b>Transferir Energía</b> o realizar un <b>Contraataque de Red</b> si tiene un atributo de <b>LPA</b> de menos de 2 (p. ej. si el atributo ha sido cambiado a menos de 2 por una regla). <b>Contraataque de Red</b> es un contraataque, pero el agente no necesita estar agotado con una orden de Trabarse para hacerlo. Eso significa que si están preparados cuando realizan el <b>Contraataque de Red</b>, todavía pueden ser activados de manera normal más tarde en el punto de inflexión. Un agente que realiza un <b>Contraataque de Red</b> no puede volver a hacerlo, o contraatacar, durante el mismo punto de inflexión.</p>\n"
+        }
+    ],
+    "blades-of-khaine": [
+        {
+            "id_racial": 29,
+            "faction": "blades-of-khaine",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente seleccionado de la siguiente lista:<ul><li><b>EXARCA VENGADOR IMPLACABLE</b> equipado con una de las siguientes opciones:<ul><li>Catapulta shuriken; Puños</li><li>Catapulta shuriken gemela; Culatas</li></ul>O una opción de cada una de las siguientes:<ul><li>Espada funesta o Arma de energía</li><li>Escudo brillante o Pistola shuriken</li></ul></li><li><b>EXARCA ESPECTRO AULLANTE</b> equipado con una de las siguientes opciones:<ul><li>Espadas espejo</li><li>Pistola shuriken; Ejecutora</li><li>Pistola shuriken; Arma de energía</li><li>Triskele, Arma de energía</li><li>Triskele, Pistola shuriken</li></ul></li><li><b>EXARCA ESCORPIÓN ASESINO</b> equipado con una de las siguientes opciones:<ul><li>Pistola shuriken; Sable mordedor</li><li>Pistola shuriken; pinza de escorpión y Espada sierra</li><li>Pistolas shuriken gemelas; Espadas sierra gemelas</li></ul></ul>7 agentes <span class=\"faction\">FILOS DE KHAINE</span> seleccionados de la siguiente lista:<ul><li><b>COMBATIENTE VENGADOR IMPLACABLE</b></li><li><b>COMBATIENTE ESPECTRO AULLANTE</b></li><li><b>COMBATIENTE ESCORPIÓN ASESINO</b></li></ul>"
+        },
+        {
+            "id_racial": 33,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Técnicas de Aspecto",
+            "description": "<p>Cada <strong>TÉCNICA DE ASPECTO</strong> está en una categoría: Vengador Implacable, Espectro Aullante y Escorpión Asesino. Cada <strong>TÉCNICA DE ASPECTO</strong> solo puede usarse con un agente amigo que tenga la clave de Aspecto coincidente, y cada una especificará cuándo se puede usar y cuáles son sus efectos. Además:</p><ul><li>No puedes usar más de una <strong>TÉCNICA DE ASPECTO</strong> por activación o contraataque.</li><li>No puedes usar cada <strong>TÉCNICA DE ASPECTO</strong> más de una vez por punto de inflexión.</li><li>Si cada agente <span class=\"faction\">FILOS DE KHAINE</span> amigo seleccionado para el despliegue tiene la misma clave de Aspecto (p. ej. <strong>ESCORPIÓN ASESINO</strong>), no puedes usar cada <strong>TÉCNICA DE ASPECTO</strong> más de dos veces por punto de inflexión (en lugar de una vez).</li></ul>"
+        },
+        {
+            "id_racial": 34,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Técnicas de Aspecto Vengador Implacable",
+            "description": "<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Muerte de Mil Filos</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>VENGADOR IMPLACABLE</strong> amigo esté realizando la acción <strong>Disparar</strong> y selecciones una catapulta shuriken o catapulta shuriken gemela. Hasta el final de esa acción, ese arma tiene la regla de arma <strong>Torrente 2\"</strong>, pero no puedes seleccionar más de un objetivo secundario.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Calor Furioso de la Llama Moribunda</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> durante la activación de un agente <strong>VENGADOR IMPLACABLE</strong> amigo. Hasta el inicio de la próxima activación de ese agente, puedes ignorar cualquier cambio en sus atributos por estar lesionado (incluyendo los atributos de sus armas).</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Vigilancia del Vengador</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>VENGADOR IMPLACABLE</strong> amigo esté realizando la acción <strong>Disparar</strong> y selecciones una catapulta shuriken o catapulta shuriken gemela. Hasta el final de esa acción, ese arma tiene la regla de arma <strong>Letal 5+</strong>.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">El Huracán Cortante</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>VENGADOR IMPLACABLE</strong> amigo esté realizando la acción <strong>Reposicionarse</strong>. Ese agente puede realizar la acción <strong>Disparar</strong> durante esa acción (debe hacerlo en una ubicación donde pueda ser colocado, y cualquier distancia de movimiento restante que tuviera de esa acción <strong>Reposicionarse</strong> puede usarse después de hacerlo). Debes seleccionar su catapulta shuriken, pistola shuriken o catapulta shuriken gemela para esa acción <strong>Disparar</strong>.</p></div>"
+        },
+        {
+            "id_racial": 35,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Técnicas de Aspecto Espectro Aullante",
+            "description": "<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">El Dolor</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> durante la activación de un agente <strong>ESPECTRO AULLANTE</strong> amigo, después de que haya realizado la acción <strong>Cargar</strong> e incapacitado a un agente enemigo durante la acción <strong>Combatir</strong>, y ya no esté dentro del rango de control de agentes enemigos. Ese agente amigo puede realizar inmediatamente una acción <strong>Cargar</strong> gratuita usando cualquier distancia de movimiento restante que tuviera de esa primera acción <strong>Cargar</strong>. Esta <strong>TÉCNICA DE ASPECTO</strong> permite a ese agente realizar dos acciones <strong>Cargar</strong> durante su activación para hacerlo.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Grito que Roba</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>ESPECTRO AULLANTE</strong> amigo esté combatiendo o tomando represalias, al inicio del paso Resolver Dados de Ataque. Puedes resolver uno de tus éxitos antes del orden normal. Si lo haces, ese éxito debe usarse para bloquear.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Lluvia de Lágrimas</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>ESPECTRO AULLANTE</strong> amigo esté combatiendo, después de que golpees con un éxito crítico. Termina esa secuencia (cualquier dado de ataque restante se descarta) e inmediatamente realiza una acción gratuita de <strong>Correr</strong> o <strong>Retirarse</strong> hasta 3\" con ese agente. Hazlo incluso si ha realizado una acción que le impide realizar la acción <strong>Correr</strong> o <strong>Retirarse</strong>.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Chillido que Mata</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>ESPECTRO AULLANTE</strong> amigo esté realizando la acción <strong>Disparar</strong>. Hasta el final de esa acción, ese agente puede usar la siguiente arma a distancia: <div class=\"weapons-table col-12 p-0 pt-2 position-relative\"><table><tbody><tr><th class=\"text-start ps-2\">Nombre</th><th>A</th><th>HP/HA</th><th>D</th></tr><tr><td class=\"text-start ps-2\">Chillido que Mata</td><td>6</td><td>3+</td><td>1/2</td></tr><tr><th colspan=\"4\" class=\"text-start ps-2\">RA</th></tr><tr><td colspan=\"4\" class=\"text-start ps-2\">Alcance 6”, Saturar, Buscadora Ligera, Aturdidora, Torrente 1</td></tr></tbody></table></div></p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Acróbata</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>ESPECTRO AULLANTE</strong> amigo realice una acción en la que se mueva. Hasta el final de la acción, ese agente: <ul><li>Puede ignorar todas las distancias verticales siempre que caiga y escale.</li><li>Puede moverse a través de agentes enemigos, moverse dentro de su rango de control, y durante la acción <strong>Cargar</strong>, puede salir de su rango de control (aún debe terminar el movimiento siguiendo todos los requisitos para ese movimiento).</li><li>No puede moverse más que su atributo de Movimiento si es la acción <strong>Cargar</strong>.</li></ul></p></div>"
+        },
+        {
+            "id_racial": 88,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Técnicas de Aspecto Escorpión Asesino",
+            "description": "<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Acecho Paciente, Golpe Repentino</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>ESCORPIÓN ASESINO</strong> amigo con una orden de Ocultación realice la acción <strong>Reposicionarse</strong>. Durante esa acción, ese agente puede moverse dentro del Rango de Control de agentes enemigos (pero no puede terminar el movimiento allí), y puedes infligir <b>D3+2</b> de daño a un agente enemigo dentro del Rango de Control después de que se haya movido.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Golpear y Desvanecerse</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>ESCORPIÓN ASESINO</strong> amigo incapacite a un agente enemigo durante <span class=\"text-warning-emphasis\">mientras <b>combate</b> o <b>toma represalias</b></span>, y ya no esté a 3” de agentes enemigos. Cambia la orden de ese agente amigo a <strong>Ocultación</strong> y puede realizar inmediatamente una acción gratuita de <strong>Correr</strong>, incluso si ha realizado una acción que le impide realizar la acción <strong>Correr</strong>.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Ojo de Escorpión</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>ESCORPIÓN ASESINO</strong> amigo realice la acción <strong>Disparar</strong> y selecciones una pistola shuriken. Hasta el final de esa acción, ese arma tiene la regla de arma <strong>Buscadora Ligera</strong>.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Golpes Despiadados</span><p class=\"p-2\">Usa esta <strong>TÉCNICA DE ASPECTO</strong> cuando un agente <strong>ESCORPIÓN ASESINO</strong> amigo esté combatiendo. La primera vez que golpees con un éxito crítico durante esa secuencia, las armas cuerpo a cuerpo de ese agente ganan la regla de arma <strong>Choque</strong> hasta el final de la secuencia.</p></div>"
+        }
+    ],
+    "blooded": [
+        {
+            "id_racial": 2,
+            "faction": "blooded",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>JEFE</b> <span class=\"faction\">ENSANGRENTADO</span> equipado con una de las siguientes opciones:\r\n<ul><li>Pistola automática o pistola láser; espada sierra o arma de energía</li>\r\n<li>Pistola bólter; espada sierra</li>\r\n<li>Rifle bólter; bayoneta</li>\r\n<li>Pistola de plasma; filo improvisado<span class=\"faction\"><sup>2</sup></span></li>\r\n</ul>\r\n9 agentes <span class=\"faction\">ENSANGRENTADOS</span> seleccionados de la siguiente lista:\r\n<ul>\r\n<li><b>GRANADERO AZUFRE</b></li>\r\n<li><b>CARNICERO</b></li>\r\n<li><b>COMUNICACIONES</b></li>\r\n<li><b>ENFERMERO</b></li>\r\n<li><b>DESOLLADOR</b></li>\r\n<li><b>TIRADOR</b> con bayoneta y lanzallamas<span class=\"faction\"><sup>1</sup></span></li>\r\n<li><b>TIRADOR</b> con bayoneta y lanzagranadas<span class=\"faction\"><sup>1</sup></span></li>\r\n<li><b>TIRADOR</b> con bayoneta y rifle de fusión<span class=\"faction\"><sup>1</sup></span></li>\r\n<li><b>TIRADOR</b> con bayoneta y rifle de plasma<span class=\"faction\"><sup>1,2</sup></span></li>\r\n<li><b>FRANCOTIRADOR<span class=\"faction\"><sup>1</sup></span></b></li>\r\n<li><b>MATÓN</b></li>\r\n<li><b>BARRETRINCHERAS</b></li>\r\n<li><b>SOLDADO</b></li>\r\n</ul>\r\n4 agentes <span class=\"faction\">ENSANGRENTADOS</span> seleccionados de la siguiente lista:\r\n<ul><li><b>EJECUTOR</b> (cuenta como dos selecciones)</li>\r\n<li><b>OGRYN</b> (cuenta como dos selecciones)</li>\r\n<li><b>SOLDADO</b></li>\r\n</ul>\r\n<p>Aparte de los agentes <b>SOLDADO</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>\r\n<p><span class=\"faction\"><sup>1</sup></span> No puedes seleccionar más de tres de estos agentes combinados.</p>\r\n<p><span class=\"faction\"><sup>2</sup></span> No puedes seleccionar esta opción y este agente. En otras palabras, solo puedes tener un agente con un arma de plasma.</p>"
+        },
+        {
+            "id_racial": 43,
+            "faction": "blooded",
+            "type": "racial",
+            "name": "Ensangrentado",
+            "description": "Ganas una ficha de Ensangrentado:<ul><li>En el paso de Preparar de cada fase de Estrategia.</li><li>La primera vez que un agente enemigo es incapacitado durante cada punto de inflexión.</li><li>La primera vez que un agente amigo es incapacitado a 6” de un agente enemigo durante cada punto de inflexión.</li></ul><p>Como un <b>GAMBITO ESTRATÉGICO</b>, puedes asignar cualquiera de tus fichas de Ensangrentado no asignadas a agentes <span class=\"faction\">ENSANGRENTADOS</span> amigos. Cada agente no puede tener más de una de tus fichas de Ensangrentado. Luego, si cuatro o más agentes amigos en la killzone tienen una de tus fichas de Ensangrentado, puedes seleccionar uno de ellos para estar bajo la <b>MIRADA DE LOS DIOSES</b> hasta el final del punto de inflexión.</p><p>Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo tenga una de tus fichas de Ensangrentado, sus armas tienen la regla de arma Precisa 1. Si ese agente <span class=\"faction\">ENSANGRENTADO</span> amigo está bajo la <b>MIRADA DE LOS DIOSES</b>, puedes retener uno de tus éxitos normales como resultado de la regla de arma Precisa 1 como un éxito crítico en su lugar.</p>"
+        }
+    ],
+    "brood-brothers": [
+        {
+            "id_racial": 99,
+            "faction": "brood-brothers",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 <b>COMANDANTE</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> equipado con una de las siguientes opciones:<ul><li>Pistola bólter; Espada sierra y Garra</li><li>Rifle automático de tambor; Bayoneta</li><li>Pistola láser; Arma de energía y Garra</li></ul>9 agentes <span class=\"faction\">HERMANO DE LA PROGENIE</span> de la siguiente lista:<ul><li><b>AGITADOR HERMANO DE LA PROGENIE</b></li><li><b>TIRADOR HERMANO DE LA PROGENIE</b> con Lanzallamas y Bayoneta</li><li><b>TIRADOR HERMANO DE LA PROGENIE</b> con Lanzagranadas y Bayoneta</li><li><b>TIRADOR HERMANO DE LA PROGENIE</b> con Rifle de fusión y Bayoneta</li><li><b>TIRADOR HERMANO DE LA PROGENIE</b> con Rifle de plasma y Bayoneta</li><li><b>PORTAICONO HERMANO DE LA PROGENIE</b></li><li><b>LUCHADOR CON CUCHILLO HERMANO DE LA PROGENIE</b></li><li><b>MÉDICO HERMANO DE LA PROGENIE</b></li><li><b>ZAPADOR HERMANO DE LA PROGENIE</b></li><li><b>FRANCOTIRADOR HERMANO DE LA PROGENIE</b></li><li><b>SOLDADO HERMANO DE LA PROGENIE</b></li><li><b>VETERANO HERMANO DE LA PROGENIE</b></li><li><b>OPERADOR DE VOX HERMANO DE LA PROGENIE</b></li></ul>3 agentes/Recursos Tácticos <span class=\"faction\">HERMANO DE LA PROGENIE</span> seleccionados de la siguiente lista:<ul><li><b>2 FAMILIARES PSÍQUICOS</b> (aún cuenta como una selección)</li><li><b>MAGUS</b> (cuenta como dos selecciones)</li><li><b>PATRIARCA</b> (cuenta como tres selecciones)</li><li><b>PRIMUS</b> (cuenta como dos selecciones)</li><li><b>SOLDADO HERMANO DE LA PROGENIE</b></li></ul><p>Aparte de los agentes SOLDADO, tu kill team solo puede incluir cada opción de enfrente una vez. No puede incluir más de tres agentes <b>TIRADOR</b> y <b>FRANCOTIRADOR</b> combinados.</p><ol><li>Tu kill team solo puede incluir hasta un agente <b>AQUELARRE DE LA PROGENIE</b>. Si uno de estos agentes es seleccionado para el despliegue, tu agente <b>COMANDANTE</b> pierde la clave <b>LÍDER</b> para la batalla.</li><li>Estos son recursos tácticos, no agentes, y se explican en la página siguiente. No están en tu lista/tarjeta de datos.</li><li>Hasta tres veces, en lugar de seleccionar uno de estos agentes, puedes seleccionar un ardid <span class=\"faction\">HERMANO DE LA PROGENIE</span> para que te cueste 0PM para la batalla. Ten en cuenta que las selecciones que 'cuentan como' aún se aplican; por ejemplo, si seleccionas un agente <strong>PATRIARCA</strong>, no podrías hacer esto.</li></ol>"
+        },
+        {
+            "id_racial": 101,
+            "faction": "brood-brothers",
+            "type": "racial",
+            "name": "Fuego Cruzado",
+            "description": "Siempre que un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo esté disparando o combatiendo contra un agente enemigo, después de resolver todos tus dados de ataque, si ese agente enemigo no está incapacitado, gana una de tus fichas de Fuego Cruzado.<p>Siempre que un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo esté disparando, combatiendo o tomando represalias contra un agente enemigo que tiene alguna de tus fichas de Fuego Cruzado, puedes retirar cualquiera de esas fichas. Por cada una que retires, puedes volver a tirar uno de tus dados de ataque.</p>"
+        }
+    ],
+    "canoptek": [
+        {
+            "id_racial": 194,
+            "faction": "canoptek",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTIDO</span><br>\r\n2 agentes <b>TREPATUMBAS</b> <span class=\"faction\">CÍRCULO CANÓPTIDO</span> con una de las siguientes opciones (seleccionar por separado para cada uno):\r\n\r\n<ul> <li>Segador gauss doble; garras</li> <li>Aislador transdimensional; garras *</li> </ul> 1 agente <b>ACELERADOR</b> <span class=\"faction\">CÍRCULO CANÓPTIDO</span><br> 1 agente <b>REANIMADOR</b> <span class=\"faction\">CÍRCULO CANÓPTIDO</span><br> 3 agentes <b>COMBATIENTE</b> <span class=\"faction\">CÍRCULO CANÓPTIDO</span> con una de las siguientes opciones (seleccionar por separado para cada uno): <ul> <li>Escalpelo gauss; garras y cola</li> <li>Lanzaparticula tesla; garras y cola</li> </ul> <p>* Tu kill team solo puede incluir hasta un aislador transdimensional.</p>"
+        },
+        {
+            "id_racial": 195,
+            "faction": "canoptek",
+            "type": "racial",
+            "name": "MATRIZ DE NODOS OBELISCO",
+            "description": "<p>Los nodos obelisco son concentraciones de tecnología Necrona, centros de energía y flujos de datos. Ya sea levantados de sus sitios de entierro antiguo, formados a partir de materia local reestructurada o puestos en fase desde una dimensión de bolsillo, estos nodos angulares pueden empoderar a un Criptecnólogo y sus sirvientes. Impulsados a posiciones donde pueden conectarse en una matriz de poder, ayudan a las ambiciones del Criptecnólogo mientras obstaculizan a sus enemigos.</p> <p>Como un <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión, coloca tus tres marcadores de <b>NODO OBELISCO</b> totalmente dentro de tu territorio. Como un <b>GAMBITO ESTRATÉGICO</b> en cada punto de inflexión después del primero, puedes mover tus marcadores de <b>NODO OBELISCO</b> hasta 3\" cada uno.</p> <p>Tus marcadores de <b>NODO OBELISCO</b> controlan otros marcadores a 1\" de ellos que ningún agente enemigo dispute (trata tus marcadores de <b>NODO OBELISCO</b> como agentes amigos para este propósito). Si más de un jugador usaría sus marcadores de <b>NODO OBELISCO</b> para controlar el mismo marcador, ningún marcador de <b>NODO OBELISCO</b> lo controla.</p> <p>Siempre que uno de tus marcadores de <b>NODO OBELISCO</b> esté a 6\" horizontalmente de otro de tus marcadores de <b>NODO OBELISCO</b>, esos marcadores y el área entre ellos crean una <b>MATRIZ DE NODOS OBELISCO</b> por encima y por debajo (en otras palabras, su altura en la killzone es irrelevante). Si los tres de tus marcadores de <b>NODO OBELISCO</b> cumplen esto, se crea una <b>MATRIZ DE NODOS OBELISCO</b> combinada más grande.</p> <p>Siempre que un agente del <span class=\"faction\">CÍRCULO CANÓPTIDO</span> amigo esté dentro de tu <b>MATRIZ DE NODOS OBELISCO</b>:</p> <ul> <li>Las armas en su hoja de datos tienen la regla de arma <b>Precisa 2</b>.</li> <li>Suma 1 a su atributo de <b>LPA</b>.</li> </ul>\n\n<figure class=\"figure\"><img src=\"./resources/matrix_canoptek-min.png\" class=\"figure-img img-fluid rounded mx-auto d-block\">"
+        }
+    ],
+    "chaos-cult": [
+        {
+            "id_racial": 4,
+            "faction": "chaos-cult",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<p>1 agente <b>DEMAGOGO DEL CULTO</b>.</p><p>2 agentes <b>ESPADA BENDITA</b>.</p><p>9 agentes <b>DEVOTO DEL CAOS</b>.</p><p>1 agente <b>ICONARCA</b>.</p><p>1 agente <b>BRUJA MENTAL</b>.</p>"
+        },
+        {
+            "id_racial": 68,
+            "faction": "chaos-cult",
+            "type": "racial",
+            "name": "Mutación",
+            "description": "<p>\n    Durante la batalla, los agentes de la <span class=\"faction\">SECTA DEL CAOS</span> amigos pueden <b>MUTAR</b> de la siguiente manera:\n</p>\n<ul>\n    <li>\n        Como un <b>GAMBITO ESTRATÉGICO</b>, puedes <b>MUTAR</b> un número de agentes de la <span class=\"faction\">SECTA DEL CAOS</span> amigos basado en el punto de inflexión de la siguiente manera: TP1 = 2, TP2 = 2, TP3 = 3, TP4+ = 4.\n    </li>\n    <li>\n        Siempre que un agente <b>DEVOTO</b> amigo incapacite a un agente enemigo dentro de su rango de control, puede <b>MUTAR</b>.\n    </li>\n    <li>\n        Cada agente no puede <b>MUTAR</b> más de una vez por punto de inflexión.\n    </li>\n</ul>\n<p>\n    Siempre que un agente amigo <b>MUTE</b>, selecciona uno de los siguientes:\n</p>\n<ul>\n    <li>\n        Si es un agente <b>DEVOTO</b>, conviértelo en un agente <b>MUTANTE</b>.\n    </li>\n    <li>\n        Si es un agente <b>MUTANTE</b>, conviértelo en un agente <b>TORMENTO</b> (máx <span class=\"text-info-emphasis\">dos veces</span> por punto de inflexión).\n    </li>\n    <li>Puede recuperar D3+1 heridas perdidas.</li>\n</ul>\n<p>\n    No puedes tener más de cinco agentes <b>MUTANTE</b> y tres agentes <b>TORMENTO</b> a la vez. Siempre que un agente amigo se convierta en un nuevo agente:\n</p>\n<ul>\n    <li>\n        Intercambia las miniaturas, asegurando que el centro de la peana de la nueva miniatura esté lo más cerca posible de donde estaba el centro de la peana de la antigua miniatura. Esto puede ponerlo dentro del rango de control de agentes enemigos, y si la antigua miniatura lo estaba, la nueva miniatura debe estarlo si es posible.\n    </li>\n    <li>\n        El nuevo tipo de agente pierde un número de heridas igual a las heridas perdidas de su tipo de agente precedente.\n    </li>\n    <li>\n        Sigue siendo el mismo agente para cualquier regla para la que ya haya sido seleccionado. El agente es simplemente un nuevo tipo de agente y usará la miniatura y las reglas de hoja de datos de ese nuevo tipo.\n    </li>\n</ul>\n</ul>"
+        },
+        {
+            "id_racial": 69,
+            "faction": "chaos-cult",
+            "type": "racial",
+            "name": "Dones Malditos",
+            "description": "<p><b>DONES MALDITOS</b> son reglas que los agentes de la <span class='faction'>SECTA DEL CAOS</span> amigos ganan cuando se convierten en otro tipo de agente (ver regla de facción Mutación). La primera vez que un agente <b>DEVOTO</b> amigo se convierte en un agente <b>MUTANTE</b> durante la batalla, selecciona tu <b>DON MALDITO</b> primario. La primera vez que un agente <b>MUTANTE</b> amigo se convierte en un agente <b>TORMENTO</b> durante la batalla, selecciona tu <b>DON MALDITO</b> secundario.\n</p>\n<p>Todos los agentes <b>MUTANTE</b> amigos tienen tu <b>DON MALDITO</b> primario, y todos los agentes <b>TORMENTO</b> amigos tienen tus <b>DONES MALDITOS</b> primario y secundario. No puedes seleccionar el mismo <b>DON MALDITO</b> más de una vez por batalla.</p>\n\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">1. Alas Deformes</span></span>\n    <p class=\"px-2\">Siempre que este agente esté escalando <span class=\"text-info-emphasis\">hacia arriba, puedes</span> tratar la distancia vertical como <b>2\"</b> (independientemente de qué tan lejos se mueva realmente el agente verticalmente). Siempre que este agente esté cayendo, ignora la distancia vertical.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">2. Veloz</span>\n    <p class=\"px-2\">Suma <b>1\"</b> al atributo de Movimiento de este agente.</p>\n</div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">3. Quitinoso</span>\n    <p class=\"px-2\">\n        Mejora el atributo de Salvación de este agente en 1.\n    </p>\n</div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">4. Cornudo</span>\n    <p class=\"px-2\">Siempre que este agente termine su movimiento durante la acción <b>Cargar</b>, puedes infligir 1 de daño a un agente enemigo dentro de su rango de control, o D3 de daño en su lugar si este agente es un <b>TORMENTO</b>.</p>\n</div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">5. Pseudópodos Prensiles</span>\n    <p class=\"px-2\">Este agente puede realizar la acción <b>Retirarse</b> por 1 PA menos.</p>\n</div>"
+        }
+    ],
+    "corsair-voidscarred": [
+        {
+            "id_racial": 5,
+            "faction": "corsair-voidscarred",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>FELARCA CORSARIO</b> equipado con una de las siguientes opciones:\n<ul>\n    <li>Rifle shuriken; Pistola shuriken; Arma de energía</li>\n    <li>Neurodisruptor; Arma de energía</li>\n</ul>\n8 agentes <span class=\"faction\">CORSARIOS DEL VACÍO</span> seleccionados de la siguiente lista:\n<ul>\n    <li><b>DEALER DEL DESTINO</b></li>\n    <li><b>TIRADOR</b> equipado con una pistola shuriken, puños y una de las siguientes opciones:\n        <ul>\n            <li>Bláster*; Pistola shuriken; Puños</li>\n            <li>Desgarrador; Pistola shuriken; Puños</li>\n        </ul>\n    </li>\n    <li><b>TIRADOR PESADO</b> equipado con una pistola shuriken, puños y una de las siguientes opciones:\n        <ul>\n            <li>Cañón shuriken; Pistola shuriken; Puños</li>\n            <li>Cañón espectral*; Pistola shuriken; Puños</li>\n        </ul>\n    </li>\n    <li><b>KURNATHI</b></li>\n    <li><b>CAZADOR KURNITA</b></li>\n    <li><b>CORREDOR SOMBRÍO</b></li>\n    <li><b>TEJEDOR DE ALMAS</b></li>\n    <li><b>DUELISTA TORMENTA ESTELAR</b></li>\n    <li><b>BUSCADOR DE SENDAS</b></li>\n<li><b>COMBATIENTE</b> con una de las siguientes opciones:\n<ul><li>Pistola shuriken; \narma de energía</li>\n<li>Rifle shuriken; puños</li></ul></ul>\n<p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p><p>*Tu kill team no puede incluir tanto un Bláster como un Cañón espectral.</p>"
+        },
+        {
+            "id_racial": 55,
+            "faction": "corsair-voidscarred",
+            "type": "racial",
+            "name": "Asaltantes Aeldari",
+            "description": "Cada agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo puede realizar una acción gratuita de <b>Correr</b> durante su activación."
+        },
+        {
+            "id_racial": 87,
+            "faction": "corsair-voidscarred",
+            "type": "racial",
+            "name": "Rifles",
+            "description": "Siempre que un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo esté disparando con un rifle shuriken o un rifle largo de explorador durante una activación en la que no ha realizado la acción <b>Cargar</b>, <b>Retirarse</b> o <b>Reposicionarse</b>, ese arma tiene la regla de arma <b>Precisa 1</b>. Ten en cuenta que el agente no tiene restringido realizar esas acciones después de disparar."
+        }
+    ],
+    "deathwatch": [
+        {
+            "id_racial": 196,
+            "faction": "deathwatch",
+            "type": "team",
+            "name": "Agentes",
+            "description": "5 agentes <span class=\"faction\">DEATHWATCH</span> seleccionados de la siguiente lista:\n\n<ul> <li><b>SARGENTO DE LA GUARDIA</b></li> <li><b>ÉGIDA</b></li> <li><b>MAESTRO DE LA ESPADA</b></li> <li><b>BOMBARDA</b></li> <li><b>BRECHADOR</b></li> <li><b>DEMOLEDOR</b></li> <li><b>DISRUPTOR</b></li> <li><b>TIRADOR</b></li> <li><b>COBRADOR DE CABEZAS</b></li> <li><b>MATAHORDAS</b></li> <li><b>TIRADOR</b></li> </ul> <p>Tu kill team solo puede incluir cada agente en esta lista una vez, y solo puede incluir hasta un agente <b>GRAVIS</b>.</p>"
+        },
+        {
+            "id_racial": 197,
+            "faction": "deathwatch",
+            "type": "racial",
+            "name": "VETERANO ASTARTES",
+            "description": "<p>Durante la activación de cada agente <span class=\"faction\">DEATHWATCH</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b> y se selecciona un <b>lanzagranadas auxiliar</b>, <b>cañón frag</b>, <b>incinerador de plasma pesado</b>, <b>bólter pesado infernus</b>, <b>pistola de plasma</b> o <b>rifle bólter silencioso</b> para ambas, se debe gastar 1 <b>PA</b> adicional para la segunda acción.</p> <p>Cada agente <span class=\"faction\">DEATHWATCH</span> amigo puede <b>contraatacar</b> independientemente de su orden. Siempre que lo haga, puede realizar una <b>acción adicional de 1PA gratis</b> durante ese contraataque, pero ambas acciones deben ser diferentes.</p>"
+        },
+        {
+            "id_racial": 198,
+            "faction": "deathwatch",
+            "type": "racial",
+            "name": "MUNICIÓN ESPECIAL",
+            "description": "<p>Una vez por punto de inflexión, cuando un agente <span class=\"faction\">DEATHWATCH</span> amigo esté realizando la acción <b>Disparar</b>, en el paso <b>Seleccionar Arma</b>, puedes usar esta regla. Si lo haces, selecciona una de las siguientes <b>reglas de armas</b> para que las armas a distancia de ese agente la tengan hasta el final de la acción. Esta regla no se puede usar con <b>granadas explosivas</b> (ver equipamiento universal) o <b>bombas de fusión</b>.</p> <ul> <li><b>Estallido 1\"</b> (no puedes seleccionar esto si el perfil de arma que se está usando tiene la regla de arma <b>Torrente</b>)</li> <li><b>Devastadora 1</b></li> <li><b>Letal 5+</b></li> <li><b>Perforante 1</b></li> <li><b>Desgarradora</b></li> <li><b>Saturar</b></li> <li><b>Severa</b></li> </ul>"
+        }
+    ],
+    "elucidian-starstrider": [
+        {
+            "id_racial": 11,
+            "faction": "elucidian-starstrider",
+            "type": "team",
+            "name": "Agentes",
+            "description": "Cada agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> en la siguiente lista:\n<ul>\n  <li><b>1 ELUCIA VHANE</b></li>\n  <li><b>1 CÁNIDO</b></li>\n  <li><b>1 EJECUTOR DEL CULTO DE LA MUERTE</b></li>\n  <li><b>1 LECTRO-MAESTRO</b></li>\n  <li><b>1 ADEPTA REJUVENAT</b></li>\n  <li><b>1 MAESTRO DEL VACÍO</b></li>\n  <li><b>3 VOIDSMAN</b> con rifle láser y culata</li>\n  <li><b>1 VOIDSMAN</b> con cañón rotatorio y culata</li>\n</ul>\n"
+        },
+        {
+            "id_racial": 48,
+            "faction": "elucidian-starstrider",
+            "type": "racial",
+            "name": "Cédula de Comercio",
+            "description": "<p>Hasta tres veces por batalla, puedes usar una regla de <b>CÉDULA DE COMERCIO</b> (abajo). Cada una especifica cuándo se puede usar, y \nno puedes usar la misma regla de <b>CÉDULA DE COMERCIO</b> más de una vez por batalla.</p>\n\n<span class=\"faction fs-6\">Consideración</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">En el paso Seleccionar Operativos, después de revelar tus opciones de equipo, selecciona una opción de equipo adicional. No puede ser una opción que hayas seleccionado previamente.</p></div>\n\n<span class=\"faction fs-6\">Coordinar</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Al final del paso Seleccionar Operativos, ganas 1 PM adicional.</p></div>\n\n<span class=\"faction fs-6\">Coaccionar</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Al inicio del paso Desplegar Agentes, selecciona una de las siguientes opciones:\n<ul><li>Tu oponente debe desplegar todo su equipo antes de que tú despliegues alguno.</li>\n<li>Puedes desplegar todo tu equipo antes de que tu oponente despliegue alguno.</li>\n<li>Tu oponente debe desplegar todos sus agentes antes de que tú despliegues alguno.</li></ul></p></div>\n\n<span class=\"faction fs-6\">Explorar</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\"><b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Realiza una acción <b>Reposicionarse</b> gratuita con un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo que esté totalmente dentro de tu zona de desembarco. Debe terminar ese movimiento totalmente a 3\" de tu zona de desembarco.</p></div>\n\n<span class=\"faction fs-6\">Soborno</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Es tu turno de activar un agente. Puedes saltar esa activación.</p></div>\n\n<span class=\"faction fs-6\">Aprovechar</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">En la fase de Estrategia, después de tirar para decidir la iniciativa, puedes usar esta regla. Si lo haces, ganas la tirada.</p></div>"
+        },
+        {
+            "id_racial": 49,
+            "faction": "elucidian-starstrider",
+            "type": "racial",
+            "name": "Recurso de Apoyo Corsario",
+            "description": "<p>Una vez por fase de tiroteo, cuando un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> <b>NAVIS</b> o <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> <b>ELUCIA VHANE</b> amigo realice la acción <b>Disparar</b>, puedes seleccionar una de las siguientes armas a distancia de <b>RECURSO DE APOYO CORSARIO</b> para que la use. No puedes usar cada <b>RECURSO DE APOYO CORSARIO</b> más de una vez por batalla.</p>\n<p>Siempre que un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo esté usando un <b>RECURSO DE APOYO CORSARIO</b>, determina las salvaciones por cobertura de manera diferente. En su lugar, el objetivo tiene una salvación por cobertura si cualquier parte de su peana está debajo de terreno de Ventaja. Ten en cuenta que si bien esto puede afectar la salvación por cobertura del objetivo, aún debes seleccionar un blanco válido de manera normal. En otras palabras, el disparo es guiado por un agente en \nla killzone, pero viene desde arriba</p>\n\n<div class=\"weapons-table col-12 p-0 pt-2 mb-2 position-relative\"><table><tbody><tr><th class=\"text-start ps-2\">NOMBRE</th><th>ATQ</th><th>IMP</th><th>DÑ</th></tr><tr><td class=\"text-start ps-2\">Rayo Arqueotecnológico</td><td>4</td><td>3+</td><td>6/7</td></tr><tr><th colspan=\"4\" class=\"text-start ps-2\">RA</th></tr><tr><td colspan=\"4\" class=\"text-start ps-2\">Perforante 2, Pesada (solo Reposicionarse), Silenciosa</td></tr></tbody></table></div>\n\n<div class=\"weapons-table col-12 p-0 pt-2 mb-2 position-relative\"><table><tbody><tr><th class=\"text-start ps-2\">NOMBRE</th><th>ATQ</th><th>IMP</th><th>DÑ</th></tr><tr><td class=\"text-start ps-2\">Batería de Plasma</td><td>5</td><td>4+</td><td>5/6</td></tr><tr><th colspan=\"4\" class=\"text-start ps-2\">RA</th></tr><tr><td colspan=\"4\" class=\"text-start ps-2\">Letal 5+, Perforante 1, Pesada (solo Reposicionarse), Silenciosa</td></tr></tbody></table></div>\n\n<div class=\"weapons-table col-12 p-0 pt-2 mb-2 position-relative\"><table><tbody><tr><th class=\"text-start ps-2\">NOMBRE</th><th>ATQ</th><th>IMP</th><th>DÑ</th></tr><tr><td class=\"text-start ps-2\">Granada Vórtice</td><td>4</td><td>3+</td><td>3/4</td></tr><tr><th colspan=\"4\" class=\"text-start ps-2\">RA</th></tr><tr><td colspan=\"4\" class=\"text-start ps-2\">Estallido 2\", Indirecta, Limitada, Pesada (solo Reposicionarse), Silenciosa</td></tr></tbody></table></div>"
+        }
+    ],
+    "exaction-squad": [
+        {
+            "id_racial": 12,
+            "faction": "exaction-squad",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>PROCURADOR-EXACTOR</b> con una de las siguientes\nopciones:\n<ul>\n  <li>Escopeta de combate; porra de represión</li>\n  <li>Pistola escopeta; maza dominadora y escudo de asalto</li>\n</ul>\n10 agentes de <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> seleccionados de la\nsiguiente lista:\n<ul>\n  <li><b>CASTIGADOR</b></li>\n  <li><b>QUIRURGO</b></li>\n  <li><b>MAESTRO DE LA CORREA</b></li>\n  <li><b>CIBERMASTÍN R-VR</b></li>\n  <li><b>MALOCATOR</b></li>\n  <li><b>TIRADOR</b></li>\n  <li><b>REVELATUM</b></li>\n  <li><b>SUBDUCTOR</b></li>\n  <li><b>VIGILANTE</b></li>\n  <li><b>SIGNIFICADOR VOX</b></li>\n  <li>\n    <b>TIRADOR</b> equipado con una de las siguientes opciones:\n    <ul>\n      <li>Lanzagranadas; porra de represión</li>\n      <li>Ametralladora pesada; porra de represión</li>\n      <li>Webber; porra de represión</li>\n    </ul>\n  </li>\n</ul>\n<p>\nAparte de los agentes <b>TIRADOR</b>, <b>SUBDUCTOR</b> y <b>VIGILANTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta dos agentes <b>TIRADOR</b> (cada uno debe tener una opción diferente) y hasta cuatro agentes <b>SUBDUCTOR</b>.\n</p>\n"
+        },
+        {
+            "id_racial": 47,
+            "faction": "exaction-squad",
+            "type": "racial",
+            "name": "Eficiencia Implacable",
+            "description": "<p>Siempre que un agente de <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté disparando (excluyendo con granadas frag o krak) y estés seleccionando un blanco válido, puedes usar esta regla. Si lo haces, tener otros agentes de <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigos dentro del rango de control de un agente enemigo no impide que ese agente enemigo sea seleccionado. </p>"
+        },
+        {
+            "id_racial": 137,
+            "faction": "exaction-squad",
+            "type": "racial",
+            "name": "Reprimir",
+            "description": "<p>Algunas armas en las reglas de este equipo tienen la regla de arma Reprimir a continuación.</p>\n<p><b>*Reprimir:</b> Siempre que este agente esté usando este arma:</p>\n<ul>\n  <li>Cada uno de tus bloqueos puede asignarse para bloquear dos éxitos no resueltos (en lugar de uno).</li>\n  <li>Si este agente está tomando represalias, resuelves el primer dado de ataque (es decir, defensor en lugar de atacante).</li>\n</ul>"
+        },
+        {
+            "id_racial": 139,
+            "faction": "exaction-squad",
+            "type": "racial",
+            "name": "Marcado para la Justicia",
+            "description": "<b>GAMBITO ESTRATÉGICO</b>. Selecciona un agente enemigo para que sea tu marca para el punto de inflexión. Siempre que un agente de <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté disparando, combatiendo o tomando represalias contra tu marca, las armas de ese agente amigo tienen la regla de arma Castigadora. Siempre que tu\nmarca sea incapacitada, puedes seleccionar un nuevo agente enemigo para que sea tu marca para el punto de inflexión (y puedes continuar haciéndolo durante este punto de inflexión)."
+        }
+    ],
+    "farstalker-kinband": [
+        {
+            "id_racial": 23,
+            "faction": "farstalker-kinband",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<ul>\n  <li>1 agente \n <b>NEGOCIAMUERTES</b> <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> con una de las siguientes opciones:\n    <ul>\n      <li>Rifle Kroot; filo ritual</li>\n      <li>Arma de inducción; filo ritual</li>\n    </ul>\n  </li>\n  <li>11 agentes de <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> seleccionados de la siguiente lista:\n    <ul>\n      <li><b>CAZADARQUERO</b></li>\n      <li><b>SANGREFRÍA</b></li>\n      <li><b>CORTAPIELES</b></li>\n      <li><b>MASTÍN DE GUERRA</b></li>\n      <li><b>LARGAVISTA</b></li>\n      <li><b>PISTOLERO</b></li>\n      <li><b>ACECHADOR</b></li>\n      <li><b>RASTREADOR</b></li>\n      <li><b>TIRADOR PESADO</b> con una de las siguientes opciones:\n        <ul>\n          <li>Desollador Dvorgita; arma de filo</li>\n          <li>Triballesta Londaxi; arma de filo</li>\n        </ul>\n      </li>\n      <li><b>COMBATIENTE</b> con una de las siguientes opciones:\n        <ul>\n          <li>Rifle Kroot; arma de filo</li>\n          <li>Trabuco Kroot; arma de filo</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n</ul>\n<p>Aparte de los agentes <b>MASTÍN DE GUERRA</b> y <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta dos agentes <b>MASTÍN DE GUERRA</b>.</p>\n"
+        },
+        {
+            "id_racial": 62,
+            "faction": "farstalker-kinband",
+            "type": "racial",
+            "name": "Acechante Lejano",
+            "description": "En el paso de Preparar de cada fase de Estrategia, puedes cambiar la orden de hasta tres agentes de <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigos que no estén dentro del rango de control de agentes enemigos.\n\n<p>Siempre que sea tu turno de contraatacar, puedes cambiar la orden de un agente de <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo que no esté dentro del rango de control de agentes enemigos en su lugar. Esto aún cuenta como si hubieras contraatacado (por lo que la activación se alterna de nuevo a tu oponente después), pero no cuenta como el contraataque de ese agente amigo para este punto de inflexión.</p>"
+        }
+    ],
+    "fellgor-ravagers": [
+        {
+            "id_racial": 8,
+            "faction": "fellgor-ravagers",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>CUERNOFÉRREO</b> <span class=\"faction\">EXPOLIAGOR IMPÍO</span> con una de las siguientes opciones:<ul><li>Pistola corrupta; Espada sierra corrupta</li><li>Pistola de plasma; Garrote</li></ul>9 agentes <span class=\"faction\">EXPOLIAGORES IMPÍOS</span> seleccionados de la siguiente lista:<ul><li><b>TAÑEMUERTE</b></li><li><b>BRAMIDO DE FLUJO</b></li><li><b>CICATRIZ NUDOSA</b></li><li><b>CUERNOSANGRIENTO</b></li><li><b>ARREATOR DE REBAÑO</b></li><li><b>TRITURADOR</b></li><li><b>CHAMÁN</b></li><li><b>CUERNOTÓXICO</b></li><li><b>VÁNDALO</b></li><li><b>COMBATIENTE</b> con una de las siguientes opciones:<ul><li>Pistola automática; Garrote</li><li>Pistola automática; Cuchillo de carnicero</li></ul></li></ul><p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 44,
+            "faction": "fellgor-ravagers",
+            "type": "racial",
+            "name": "Frenesí",
+            "description": "<p>\n    Cada vez que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo sin una ficha de Frenesí fuera a ser incapacitado, gana una ficha de Frenesí en su lugar. \n    Si estaba luchando en combate, todos los dados de ataque restantes (incluidos los de tu oponente) se descartan. Si tiene una orden de Ocultación, cámbiala a Trabarse.\n</p>\n<p>\n    Mientras un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo tenga una ficha de Frenesí:\n    <ul>\n        <li>Solo es incapacitado como se especifica a continuación.</li>\n        <li>No puede tener una orden de Ocultación.</li>\n        <li>Está lesionado.</li>\n        <li>No puede realizar acciones de misión o la acción Recoger.</li>\n        <li>Trata su característica de LPA como 1 (después de todos los modificadores) para los propósitos de determinar el control (p. ej. marcadores de objetivo).</li>\n    </ul>\n</p>\n<p>\n    Un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo con una ficha de Frenesí es incapacitado cuando se cumple una de las siguientes condiciones:\n    <ul>\n        <li>Su activación <span class=\"text-info-emphasis\">o contraataque</span> termina.</li>\n        <li>Un agente enemigo lo golpea con un impacto crítico en combate.</li>\n        <li>Un agente enemigo lo golpea por segunda vez con un impacto normal en combate. Ten en cuenta que esto pueden ser golpes de dos combates diferentes.</li>\n        <li>La batalla termina.</li>\n        <li>Se le inflige daño crítico en un ataque de disparo posterior (es decir, no el mismo ataque de disparo en el que ganó una ficha de Frenesí).</li>\n    </ul>\n</p>\n<p>\n<p>\nTu oponente trata a un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> como siendo incapacitado (en lugar de cuando sería incapacitado normalmente) cuando gana una de tus fichas de Frenesí para los propósitos de puntuar PV (p. ej. kill op) y reglas de facción que requieran que sea incapacitado (p. ej. Poder del Dolor de <b>MANO DEL ARCONTE</b>, Mutación de <b>SECTA DEL CAOS</b>, etc.).</p>\n"
+        }
+    ],
+    "gellerpox": [
+        {
+            "id_racial": 9,
+            "faction": "gellerpox",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<p>↳ Cada agente <span class=\"faction\">INFECTADO GELLERPOX</span> en la siguiente lista:</p>\n<ul>\n    <li>1 <b>VULGRAR TRES VECES MALDITO INFECTADO GELLERPOX</b></li>\n    <li>1 <b>ENGENDRO HINCHADO INFECTADO GELLERPOX</b></li>\n    <li>1 <b>GRITACARNE INFECTADO GELLERPOX</b></li>\n    <li>1 <b>ÁNIMA DEL MADERO INFECTADO GELLERPOX</b></li>\n    <li>4 <b>GLITCHLING INFECTADO GELLERPOX</b></li>\n    <li>1 <b>MUTANTE INFECTADO GELLERPOX</b> con granada frag y hacha pesada</li>\n    <li>2 <b>MUTANTE INFECTADO GELLERPOX</b> con granada frag y arma improvisada</li>\n</ul>\n<p>Si seleccionaste el equipo de facción Alimañas Mutoides:</p>\n<p>↳ Número especificado de agentes <span class=\"faction\">INFECTADO GELLERPOX</span> seleccionados de la siguiente lista:</p>\n<ul>\n    <li><b>ÁCARO MALDITO</b></li>\n    <li><b>ENJAMBRE DE AGUIJONES OCULARES</b></li>\n    <li><b>LARVA DE FANGO</b></li>\n</ul>\n"
+        },
+        {
+            "id_racial": 59,
+            "faction": "gellerpox",
+            "type": "racial",
+            "name": "Tecnomaldición",
+            "description": "<p><b>Al final del paso Seleccionar Operativos</b>, selecciona una <b>TECNOMALDICIÓN</b> para que los agentes <span class=\"faction\">INFECTADO GELLERPOX</span> amigos la ganen para la batalla. Siempre que un agente enemigo esté dentro del <span class=\"text-info-emphasis\">rango de infección de tu <b>TECNOMALDICIÓN</b> seleccionada</span>, ese agente enemigo se ve afectado por el <span class=\"text-info-emphasis\">síntoma de la <b>TECNOMALDICIÓN</b> seleccionada</span>. Cada <b>TECNOMALDICIÓN</b><span class=\"text-info-emphasis\">, su rango de infección y su síntoma</span> se enumeran a continuación:</p>\n\n<span class=\"faction fs-6\">Deformación de Cañón</span>\n<div class=\"action-box col-12 position-relative mb-3\">\n<p class=\"px-2\"><span class=\"text-info-emphasis\"><b>Rango de infección:</b> A 2\" de un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo (excluyendo <b>ALIMAÑAS MUTOIDES</b>), o a 3\" de un agente <b>GLITCHLING</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigo.</span></p>\n<p class=\"px-2\"><b>Síntoma:</b> Resta 1 del atributo de Atq de las armas a distancia de ese agente enemigo.</p>\n</div>\n\n<span class=\"faction fs-6\">Puntas de Óxido Chillón</span>\n<div class=\"action-box col-12 position-relative mb-3\">\n<p class=\"px-2\"><span class=\"text-info-emphasis\"><b>Rango de infección:</b> Dentro del rango de control de un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo (excluyendo <b>ALIMAÑAS MUTOIDES</b>).</span></p>\n<p class=\"px-2\"><b>Síntoma:</b> Siempre que ese agente enemigo esté combatiendo o tomando represalias contra un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo, si tu oponente descarta algún dado de ataque como fallo, inflige 1 de daño a ese agente enemigo.</p>\n</div>\n\n<span class=\"faction fs-6\">Vox-estática Viral</span>\n<div class=\"action-box col-12 position-relative mb-3\">\n<p class=\"px-2\"><span class=\"text-info-emphasis\"><b>Rango de infección:</b> A 3\" de un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo (excluyendo <b>ALIMAÑAS MUTOIDES</b>), o a 4\" de un agente <b>GLITCHLING</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigo.</span></p>\n<p class=\"px-2\"><b>Síntoma:</b> El atributo de LPA de ese agente enemigo no se puede aumentar (elimina todos los cambios positivos de atributo de LPA que tenga).</p>\n</div>\n"
+        },
+        {
+            "id_racial": 60,
+            "faction": "gellerpox",
+            "type": "racial",
+            "name": "Asquerosamente Resistentes",
+            "description": "<p>Siempre que un dado de ataque inflija daño de 3 o más a un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> o <b>MUTANTE</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigo, tira un D6: con un 4+, resta 1 de ese daño infligido.</p>"
+        },
+        {
+            "id_racial": 61,
+            "faction": "gellerpox",
+            "type": "racial",
+            "name": "Alimañas Mutoides",
+            "description": "<p>Los agentes <b>ALIMAÑAS MUTOIDES</b> no pueden realizar ninguna acción que no sea <b>Cargar</b>, <b>Correr</b>, <b>Retirarse</b>, <b>Combatir</b>, <b>Reposicionarse</b> y <b>Disparar</b>, y no pueden usar ninguna arma que no esté en su hoja de datos. Pueden realizar la acción de Retirarse por 1 PA menos.</p>\n\n<p>Los agentes <b>ALIMAÑAS MUTOIDES</b> no pueden disputar marcadores o áreas de la killzone, y son ignorados para la kill/elimination op de tu oponente (cuando son incapacitados, y al determinar tu número inicial de agentes). También son ignorados para las condiciones de victoria <span class=\"text-info-emphasis\">y puntuar PV si alguno</span> requiere que los agentes \"escapen\", \"sobrevivan\" o sean incapacitados (si escapan/sobreviven/son incapacitados <span class=\"text-info-emphasis\">por agentes enemigos</span>, determinando cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.).</p>\n\n<p>Los agentes pueden moverse a través de los agentes <b>ALIMAÑAS MUTOIDES</b>, y los agentes enemigos pueden moverse dentro de su rango de control. Tener solo agentes <b>ALIMAÑAS MUTOIDES</b> dentro de su rango de control no impide que los agentes enemigos realicen las acciones de <b>Cargar</b>, <b>Correr</b> y <b>Reposicionarse</b>, y los agentes enemigos pueden salir del rango de control de los agentes <b>ALIMAÑAS MUTOIDES</b> al realizar la acción de <b>Cargar</b>.</p>\n"
+        },
+        {
+            "id_racial": 144,
+            "faction": "gellerpox",
+            "type": "racial",
+            "name": "Moles de Pesadilla",
+            "description": "<p>Siempre que tu oponente esté seleccionando un blanco válido, los agentes <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigos no pueden usar terreno Ligero para cobertura. Aunque esto puede permitir que tales agentes sean seleccionados como objetivo (asumiendo que son visibles), no elimina su salvación por cobertura (si la hay).</p>\n\n<p>Los agentes <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigos no pueden realizar acciones únicas. Debes gastar 1 PA adicional para que los agentes <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigos (excluyendo <b>VULGRAR TRES VECES MALDITO</b>) realicen la acción <b>Recoger Marcador</b> y acciones de misión (excluyendo <b>Operar Compuerta</b>).</p>"
+        }
+    ],
+    "goremongers": [
+        {
+            "id_racial": 184,
+            "faction": "goremongers",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<ul>\n<li>1 agente <b>HERALDO DE SANGRE</b> <span class=\"faction\">SIEMBRASANGRE</span></li>\n<li>7 agentes <span class=\"faction\">SIEMBRASANGRES</span> seleccionados de la siguiente lista:</li>\n<ul>\n<li><b>ASPIRANTE</b></li>\n<li><b>TOMADOR DE SANGRE</b></li>\n<li><b>EMPALADOR</b></li>\n<li><b>INCITADOR</b></li>\n<li><b>RECLAMADOR DE CRÁNEOS</b></li>\n<li><b>ACECHANTE</b></li>\n</ul>\n</ul>\n<p>Aparte de los agentes <b>ASPIRANTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 185,
+            "faction": "goremongers",
+            "type": "racial",
+            "name": "Runas de Khorne",
+            "description": "Cada agente <span class=\"faction\">SIEMBRASANGRE</span> amigo no puede perder más de 8 heridas por acción de <b>Disparar</b>.\n"
+        },
+        {
+            "id_racial": 186,
+            "faction": "goremongers",
+            "type": "racial",
+            "name": "Tanques de Sangre",
+            "description": "Cada agente <span class=\"faction\">SIEMBRASANGRE</span> amigo tiene un <b>TANQUE DE SANGRE</b> que tiene tres niveles: lleno, medio y vacío. Comienzan la batalla en medio. Siempre que un <b>TANQUE DE SANGRE</b> aumenta, sube un nivel; siempre que disminuye, baja un nivel. Un <b>TANQUE DE SANGRE</b> no puede aumentar cuando ya está lleno, o disminuir cuando ya está vacío (ver diagrama abajo).\n\n<p>Siempre que un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo incapacite a un agente dentro de su rango de control, o visible para y a 2\" de él, puedes aumentar su <b>TANQUE DE SANGRE</b>.</p>\n\n<p>Siempre que un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo use una regla <b>SANGUAVITAE</b> (ver derecha), debes disminuir su <b>TANQUE DE SANGRE</b>.</p>\n"
+        },
+        {
+            "id_racial": 187,
+            "faction": "goremongers",
+            "type": "racial",
+            "name": "Sanguavitae",
+            "description": "<p>Puedes gastar las reglas <b>SANGUAVITAE</b> de los agentes amigos en los efectos a continuación cuando se cumpla la condición \"Cuándo\". No puedes usar la misma regla <b>SANGUAVITAE</b> más de una vez por activación o contraataque, y no puedes usar más de dos reglas <b>SANGUAVITAE</b> por activación o contraataque. No puedes usar Manía y Furia durante la misma activación.</p>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Rejuvenecer</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Durante la activación o contraataque de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, antes o después de que realice una acción.</p>\n    <p class=\"px-2\"><b>Efecto</b>: Ese agente recupera <span class=\"text-warning-emphasis\">D3+1</span> heridas perdidas.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Manía</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Durante la activación de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, antes o después de que realice una acción.</p>\n    <p class=\"px-2\"><b>Efecto</b>: Hasta el inicio de la próxima activación de ese agente, suma 1 a su atributo de LPA.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Furia</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Durante la activación de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, antes o después de que realice una acción.</p>\n    <p class=\"px-2\"><b>Efecto</b>: Ese agente puede realizar dos acciones de <b>Combatir</b> durante esa activación, y la segunda es gratuita.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Rastrillar</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo realiza la acción <b>Cargar</b>.</p>\n    <p class=\"px-2\"><b>Efecto</b>: Cuando ese agente termina de moverse durante esa acción, puedes infligir 1 de daño a un agente enemigo dentro de su rango de control.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Oleada</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo realiza la acción <b>Cargar</b> o <b>Reposicionarse</b>.</p>\n    <p class=\"px-2\"><b>Efecto</b>: Hasta el final de esa acción, suma 1\" al atributo de Movimiento de ese agente.</p>\n</div>\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Rabia</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo realiza la acción <b>Combatir</b>.</p>\n    <p class=\"px-2\"><b>Efecto</b>: Hasta el final de esa  \nacción, suma 1 al atributo de Atq de las armas cuerpo a cuerpo de ese agente.</p>\n</div>\n</div>\n"
+        }
+    ],
+    "hearthkyn-salvager": [
+        {
+            "id_racial": 13,
+            "faction": "hearthkyn-salvager",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<p>1 agente <b>THEYN</b> <span class=\"faction\">SALVADOR HEARTHKYN</span> con una opción de cada uno de los siguientes:</p>\n<ul>\n    <li><b>Pistola bólter modelo Autoch</b>, <b>Bólter modelo Autoch</b>, <b>revólver bólter</b>, <b>pistola de plasma EtaCarn</b>, <b>bláster de iones</b> o <b>pistola de iones</b></li>\n    <li><b>Guantelete de conmoción</b> o <b>arma de plasma</b></li>\n</ul>\n\n<p>9 agentes <span class=\"faction\">SALVADORES HEARTHKYN</span> seleccionados de la siguiente lista:</p>\n<ul>\n    <li><b>DŌZR</b></li>\n    <li><b>MÉDICO DE CAMPO</b></li>\n    <li><b>GRANADERO</b></li>\n    <li><b>COMBATIENTE CON PROPULSOR DE SALTO</b></li>\n    <li><b>KINLYNK</b>*</li>\n    <li><b>KOGNITÅÅR</b>*</li>\n    <li><b>LOKÅTR</b>*</li>\n    <li><b>LUGGER</b></li>\n    <li><b>COMBATIENTE</b>*</li>\n    <li><b>TIRADOR</b> con una de las siguientes opciones:\n        <ul>\n            <li>Proyector de plasma EtaCarn; puños</li>\n            <li>Rifle automático HYLas; puños</li>\n            <li>Cañón rotatorio HYLas; puños</li>\n            <li>Lanzamisiles L7; puños</li>\n            <li>Rifle de riel Magna; puños</li>\n        </ul>\n    </li>\n</ul>\n\n<p>* Con una de las siguientes opciones:</p>\n<ul>\n    <li><b>Bólter modelo Autoch</b>; <b>puños</b></li>\n    <li><b>Bláster de iones</b>; <b>puños</b></li>\n</ul>\n\n<p>Aparte de los agentes <b>TIRADOR</b> y <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta tres agentes <b>TIRADOR</b> (cada uno debe tener una opción diferente).</p>\n"
+        },
+        {
+            "id_racial": 65,
+            "faction": "hearthkyn-salvager",
+            "type": "racial",
+            "name": "Rencor",
+            "description": "<p>Siempre que un agente enemigo incapacite a un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo, ese agente enemigo gana una de tus fichas de Rencor para la batalla. Siempre que un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo esté disparando, combatiendo o tomando represalias contra un agente enemigo, por cada una de tus fichas de Rencor que tenga ese agente enemigo, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar. Ten en cuenta que las fichas de Rencor no se retiran cuando haces esto.</p>"
+        }
+    ],
+    "hierotek": [
+        {
+            "id_racial": 21,
+            "faction": "hierotek",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> seleccionado de la siguiente lista:\r\n<ul>\r\n    <li>Agente <b>CRONOMANTE</b> con una de las siguientes opciones:\r\n        <ul>\r\n            <li>Bastón Eónico</li>\r\n            <li>Lanza entrópica</li>\r\n        </ul>\r\n    </li>\r\n    <li><b>PSICOMANTE</b></li>\r\n    <li><b>TECNOMANTE</b></li>\r\n</ul>\r\n<p>1 agente <b>ACELERADOR PLASMÁCITA</b></p>\r\n<p>1 agente <b>REANIMADOR PLASMÁCITA</b></p>\r\n<p>5 agentes del <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> seleccionados de la siguiente lista:</p>\r\n<ul>\r\n    <li><b>APRENTECNÓLOGO</b></li>\r\n    <li><b>OMNICIDA</b></li>\r\n    <li><b>DÉSPOTECNÓLOGO</b> con una de las siguientes opciones:\r\n        <ul>\r\n            <li>Bláster gauss; bayoneta</li>\r\n            <li>Carabina tesla; bayoneta</li>\r\n        </ul>\r\n    </li>\r\n    <li><b>GUARDIÁN</b> con una de las siguientes opciones:\r\n        <ul>\r\n            <li>Bláster gauss; bayoneta</li>\r\n            <li>Carabina tesla; bayoneta</li>\r\n        </ul>\r\n    </li>\r\n</ul>\r\n<p>Aparte de los agentes <b>OMNICIDA</b> y <b>GUARDIÁN</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 75,
+            "faction": "hierotek",
+            "type": "racial",
+            "name": "Metal Viviente",
+            "description": "En el paso de Preparar de cada fase de Estrategia, después de resolver todas las demás reglas en este paso (p. ej. regla de facción <b>Protocolos de Reanimación</b>), cada agente del <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo recupera D3+1 heridas perdidas (tira por separado para cada uno)."
+        },
+        {
+            "id_racial": 76,
+            "faction": "hierotek",
+            "type": "racial",
+            "name": "Protocolos de Reanimación",
+            "description": "<p>La primera vez que cada agente del <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo sea incapacitado, antes de que sea retirado de la killzone, coloca uno de tus marcadores de Reanimación dentro de su rango de control. Luego retíralo como incapacitado, eliminando también cualquier ficha y efecto de regla que tuviera (p. ej. la acción Cronometrón del agente <b>CRONOMANTE</b>, fichas de Veneno, cambios de atributo de LPA, estar implantado, etc.).</p>\n<p>En el paso de Preparar de cada fase de Estrategia, selecciona uno de tus marcadores de Reanimación y tira un D6: con un 1-2, deja ese marcador de Reanimación en la killzone y repite este proceso con uno diferente de tus marcadores de Reanimación (si los hay); con un 3+, un agente es <b>REANIMADO</b>.</p>\n<p>Solo puedes seleccionar cada uno de tus marcadores de Reanimación una vez por punto de inflexión, y una vez que saques un 3+, no seleccionas más para ese punto de inflexión. Siempre que un agente sea <b>REANIMADO</b>:</p>\n<ul>\n    <li>Coloca al agente para el que se colocó ese marcador de Reanimación (ya no está incapacitado). Debe colocarse a 3\" de ese marcador de Reanimación y no dentro del rango de control de agentes enemigos (si no puedes hacerlo, trata la tirada como 1-2 en su lugar).</li>\n    <li>Tiene <span class=\"text-info-emphasis\">1 herida restante.</span></li>\n    <li>Tiene una orden de tu elección y está preparado.</li>\n    <li>Retira ese marcador de Reanimación.</li>\n</ul>\n<p>Como los agentes <b>REANIMADOS</b> ya no están incapacitados, para los propósitos de la kill op, esto significa que el grado de muertes de tu oponente puede bajar durante la batalla (pierden PV en consecuencia). Sin embargo, no cambiará retroactivamente ningún otro PV que tu oponente haya anotado, p. ej. de tac ops.</p>"
+        },
+        {
+            "id_racial": 122,
+            "faction": "hierotek",
+            "type": "racial",
+            "name": "Magnificar",
+            "description": "Algunas armas de <b>APRENTEK</b> y <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> en las reglas de este equipo tienen la regla de arma Magnificar a continuación.\n<p><b>*Magnificar:</b> Siempre que este agente esté realizando la acción <b>Disparar</b> con este arma, si otro agente <b>APRENTEK</b> o <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo tiene una orden de <b>Trabarse</b> y es visible para este agente, puedes <span class=\"text-info-emphasis\">usar esta regla. Si lo haces,</span> trata a ese agente como el agente activo para los propósitos de determinar un blanco válido<span class=\"text-info-emphasis\">, cobertura y ofuscado</span>. Si lo haces, este arma tiene la regla de arma <b>Incesante</b> hasta el final de esa acción.</p>"
+        }
+    ],
+    "hunter-clade": [
+        {
+            "id_racial": 14,
+            "faction": "hunter-clade",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <span class=\"faction\">CLADO DE CAZA</span> seleccionado de la siguiente lista:\n<ul>\n    <li><b>PRINCEPS INFILTRADO SICARIAN</b> con una opción de cada una de las siguientes categorías:\n        <ul>\n            <li>Bláster flechette o Carabina</li>\n            <li>Arma de energía o vara táser</li>\n        </ul>\n    </li>\n    <li><b>PRINCEPS FERRACECHADOR SICARIAN</b></li>\n    <li><b>ALFA EXPLORADOR SKITARII</b> con una de las siguientes opciones:\n        <ul>\n            <li>Rifle galvánico; culata</li>\n            <li>Pistola radium artesanal; arma de energía</li>\n        </ul>\n        O una opción de cada una de las siguientes categorías:\n        <ul>\n            <li>Pistola voltaica o pistola bláster phosphor</li>\n            <li>Maza voltaica o vara táser</li>\n        </ul>\n    </li>\n    <li><b>ALFA VANGUARDIA SKITARII</b> con una de las siguientes opciones:\n        <ul>\n            <li>Carabina radium; culata</li>\n            <li>Pistola radium artesanal; arma de energía</li>\n        </ul>\n        O una opción de cada una de las siguientes categorías:\n        <ul>\n            <li>Pistola voltaica o pistola bláster phosphor</li>\n            <li>Maza voltaica o vara taser</li>\n        </ul>\n    </li>\n</ul>\n9 agentes <span class=\"faction\">CLADO DE CAZA</span> seleccionados de la siguiente lista:\n<ul>\n    <li><b>COMBATIENTE INFILTRADOR SICARIANO</b>* con una opción de cada una de las siguientes categorías:\n        <ul>\n            <li>Bláster flechette o carabina</li>\n            <li>Arma de energía o vara taser</li>\n        </ul>\n    </li>\n    <li><b>COMBATIENTE FERROACHECHADOR SICARIANO</b>* con una de las siguientes opciones:\n        <ul>\n            <li>Garracorde y cuchilla transónica</li>\n            <li>Filos transónicos</li>\n        </ul>\n    </li>\n    <li><b>DIKTAT EXPLORADOR SKITARII</b></li>\n    <li><b>TIRADOR EXPLORADOR SKITARII</b>* con culata y una de las siguientes opciones:\n        <ul>\n            <li>Rifle voltaica, caliver de plasma o arcabuz transuránico</li>\n        </ul>\n    </li>\n    <li><b>SUPERVISOR EXPLORADOR SKITARII</b></li>\n    <li><b>COMBATIENTE EXPLORADOR SKITARII</b></li>\n    <li><b>DIKTAT VANGUARDIA SKITARII</b></li>\n    <li><b>TIRADOR VANGUARDIA SKITARII</b>* con culata y una de las siguientes opciones:\n        <ul>\n            <li>Rifle voltaico, caliver de plasma o arcabuz transuránico</li>\n        </ul>\n    </li>\n    <li><b>SUPERVISOR VANGUARDIA SKITARII</b></li>\n    <li><b>COMBATIENTE VANGUARDIA SKITARII</b></li>\n</ul>\n<p>*No puedes seleccionar más de 7 de estos agentes en total.</p>\n<p>Aparte de los agentes <b>TIRADOR</b> y <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta un agente <b>DIKTAT</b>, hasta un agente <b>SUPERVISOR</b> y hasta cinco agentes <b>SICARIANO</b>. Tu kill team solo puede incluir hasta un rifle voltaico, hasta un caliver de plasma y hasta un arcabuz transuránico.</p>"
+        },
+        {
+            "id_racial": 64,
+            "faction": "hunter-clade",
+            "type": "racial",
+            "name": "Imperativos de Doctrina",
+            "description": "<p><span class=\"text-info-emphasis\">Al final del paso Seleccionar Operativos, selecciona un <b>IMPERATIVO DE DOCTRINA</b> para que sea un Modo Primario para tu kill team hasta el final de la batalla (ten en cuenta que seleccionar un Modo Primario no te da automáticamente los efectos de ese <b>IMPERATIVO DE DOCTRINA</b> para la batalla; aún debes seleccionarlo como un <b>GAMBITO ESTRATÉGICO</b>, como se indica a continuación)</span></p>\n\n<p>GAMBITO ESTRATÉGICO. Selecciona un <b>IMPERATIVO DE DOCTRINA</b> para que los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos lo tengan hasta el paso de Preparar de la siguiente fase de Estrategia. Cada <b>IMPERATIVO DE DOCTRINA</b> tiene una regla de Optimización y una de Deprecación. Ambas están en efecto mientras tu kill team tiene ese <b>IMPERATIVO DE DOCTRINA</b>. <span class=\"text-info-emphasis\">Una vez por batalla, cuando seleccionas el <b>IMPERATIVO DE DOCTRINA</b> que es el Modo Primario de tu kill team, puedes ignorar su regla de Deprecación.</span></p>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Imperativo Protector</span>\n    <p class=\"px-2\"><b>Optimización</b>: Las armas a distancia de los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos tienen la regla de arma Incesante.</p>\n    <p class=\"px-2\"><b>Deprecación</b>: Empeora el atributo de Impacto de las armas cuerpo a cuerpo de los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos en 1. Esto no es acumulativo con estar lesionado.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Imperativo Conquistador</span>\n    <p class=\"px-2\"><b>Optimización</b>: Las armas cuerpo a cuerpo de los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos tienen la regla de arma Incesante.</p>\n    <p class=\"px-2\"><b>Deprecación</b>: Empeora el atributo de Impacto de las armas a distancia de los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos en 1. Esto no es acumulativo con estar lesionado.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Imperativo Baluarte</span>\n    <p class=\"px-2\"><b>Optimización</b>: <span class=\"text-info-emphasis\">El Daño Normal de 3 o más inflige 1 menos de daño a los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos.</span></p>\n    <p class=\"px-2\"><b>Deprecación</b>: Resta 1\" del atributo de Movimiento de los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Imperativo Agresor</span>\n    <p class=\"px-2\"><b>Optimización</b>: Suma 1\" al atributo de Movimiento de los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos.</p>\n    <p class=\"px-2\"><b>Deprecación</b>: Empeora el atributo de Salvación de los agentes <span class=\"faction\">CLADO DE CAZA</span> amigos en 1.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Imperativo Neutral</span>\n    <p class=\"px-2\"><b>Optimización</b>: Ninguna.</p>\n    <p class=\"px-2\"><b>Deprecación</b>: Ninguna.</p>\n</div>\n"
+        }
+    ],
+    "imperial-navy-breachers": [
+        {
+            "id_racial": 1,
+            "faction": "imperial-navy-breachers",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>SARGENTO</b> <span class=\"faction\">ABORDADORES DE LA ARMADA IMPERIAL</span> con el siguiente equipo:\n<ul>\n<li>Escopeta de la Amada y hacha de la Armada</li>\n<li>O una opción de cada una de estas categorías:<ul>\n  <li>Pistola bólter o pistola automática heredada</li>\n  <li>Espada sierra o arma de energía</li></ul></li>\n</ul>\n\n11 agentes de <span class=\"faction\">ABORDADORES DE LA ARMADA IMPERIAL</span> seleccionados de la siguiente lista:\n<ul>\n<li><b>INFANTE</b></li>\n<li><b>HACHERO</b></li>\n<li><b>UNIDAD C.A.T.O*</b></li>\n<li><b>DEFENSOR</b></li>\n<li><b>ESPECTROCRÁNEO*</b></li>\n<li><b>GRANADERO</b></li>\n<li><b>TIRADOR</b> con repetidor láser de la Armada y culata</li>\n<li><b>TIRADOR</b> con rifle de fusión y culata</li>\n<li><b>TIRADOR</b> con rifle de plasma y culata</li>\n<li><b>CORTAHIERROS</b></li>\n<li><b>PROSPECTOR</b></li>\n<li><b>INTERFERIDOR</b></li>\n</ul>\n\n<p>Aparte de los agentes <b>INFANTES</b>, tu comando solo puede incluir uno de cada uno de los agentes de esta lista. Tu comando solo puede incluir hasta dos agentes<b>TIRADOR</b>.</p>\n\n<p>Tu kill team solo puede incluir un agente <b>ESPECTROCRÁNEO</b> si también incluye un agente <b>INTERFERIDOR</b>, y solo puede incluir un agente <b>UNIDAD C.A.T.O.</b> si también incluye un agente <b>PROSPECTOR</b>.</p>\n\n<p><b>*</b>Estos agentes cuentan como media selección cada uno, lo que significa que puedes seleccionar ambos y se trata como una selección.</p>"
+        },
+        {
+            "id_racial": 41,
+            "faction": "imperial-navy-breachers",
+            "type": "racial",
+            "name": "Brechar y Despejar",
+            "description": "Una vez por Punto de Inflexión, cuando se activa un agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo preparado, puedes usar esta regla. Si lo haces, selecciona otro agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo preparado visible para y a 3\" de ese agente. Cuando ese primer agente amigo esté agotado, puedes activar a ese otro agente amigo antes de que active tu oponente. Cuando ese otro agente esté agotado, tu oponente activa entonces de manera normal."
+        },
+        {
+            "id_racial": 42,
+            "faction": "imperial-navy-breachers",
+            "type": "racial",
+            "name": "Armadura del Vacío",
+            "description": "<p>Siempre que un agente esté disparando a un agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo, si el arma a distancia en esa secuencia\ntiene la regla de arma Estallido o Torrente (excluyendo armas\nque tienen un perfil de barrido), puedes volver a tirar uno de tus\ndados de defensa, o hasta dos de tus dados de defensa si ese agente\namigo es un GRANADERO.</p>\n\n<p>Los agentes <span class=\"faction\">ABORDADORES DE LA ARMADA IMPERIAL</span> amigos\nno se ven afectados por la regla de arma Devastadora x\" (es decir,\nDevastadora con una distancia) a menos que sean el objetivo durante\nesa secuencia.</p>"
+        }
+    ],
+    "inquisitorial-agent": [
+        {
+            "id_racial": 15,
+            "faction": "inquisitorial-agent",
+            "type": "team",
+            "name": "Agentes",
+            "description": "Un kill team de <span class=\"faction\">AGENTES INQUISITORIALES</span> consiste en:\n    <li><b>1 agente INTERROGADOR</b> <span class=\"faction\">AGENTE INQUISITORIAL</span></li>\n    <li><b>1 agente CRÁNEO-TOMO</b> <span class=\"faction\">AGENTE INQUISITORIAL</span></li>\n    <li><b>5 agentes <span class=\"faction\">AGENTE INQUISITORIAL</span></b> seleccionados de esta lista:</li>\n    <ul>\n        <li>AUTOSAVANT</li>\n        <li>BUSCADOR DE MISIONES</li>\n        <li>VETERANO DE MUNDO LETAL</li>\n        <li>ILUMINADOR</li>\n        <li>HEXORCISTA</li>\n        <li>MÍSTICO</li>\n        <li>LEGIONARIO PENAL</li>\n        <li>PISTOLERO</li>\n        <li>SERVIDOR TIRADOR con una de las siguientes opciones:</li>\n        <ul>\n            <li>Bólter pesado; Servogarras</li>\n            <li>Multi-fusión; Servogarras</li>\n            <li>Cañón de plasma; Servogarras</li>\n        </ul>\n    </ul></li>\n</ul>\n5 agentes <span class='faction'> AGENTE INQUISITORIAL</span> seleccionados de la lista anterior, o agentes <b>REQUISADOS</b> de un grupo en la regla de facción Requisición Inquisitorial (no puedes seleccionar agentes <b>REQUISADOS</b> de grupos diferentes).\n</p>\n<p>\n    Tu kill team solo puede incluir cada agente en esta lista una vez, a menos que no estés incluyendo ningún agente <b>REQUISADO</b>, en cuyo caso puedes incluir hasta dos agentes <b>SERVIDOR TIRADOR</b>, pero cada uno debe tener opciones diferentes.\n</p>\n<p><span class=\"text-info-emphasis\">Tu kill team (incluyendo cualquier agente <b>REQUISADO</b>) no puede incluir más de un arma con la regla de arma Perforante 2, y no puede incluir más de tres armas con la regla de arma Perforante X (excluyendo Perforante Críticos X) combinadas.</span></p>"
+        },
+        {
+            "id_racial": 133,
+            "faction": "inquisitorial-agent",
+            "type": "racial",
+            "name": "REQUISICIÓN INQUISITORIAL",
+            "description": "<p>Los agentes <b>REQUISADOS</b> pueden tomarse de uno de los siguientes grupos para complementar un kill team de <b>AGENTE INQUISITORIAL</b>, como se especifica en las reglas de selección de este kill team:</p>\n<ul>\n<li><span class='faction'>KORPS DE LA MUERTE</span></li>\n<li><span class='faction'>ESCUADRA DE EXACCIÓN</span></li>\n<li><span class='faction'>ABORDADORES DE LA ARMADA IMPERIAL</span></li>\n<li><span class='faction'>KASRKIN</span></li>\n<li><span class='faction'>HERMANA DEL SILENCIO</span></li>\n<li><span class='faction'>SCION TEMPESTUS</span></li>\n</ul>\n<p>Estos agentes tienen su clave de facción reemplazada en todas las instancias en sus hojas de datos con <b>AGENTE INQUISITORIAL</b> (a menos que ya la tengan). No puedes usar ardides y equipo asociado con la clave de facción anterior de un agente <b>REQUISADO</b>, y no puedes usar las reglas de facción anteriores de un agente <b>REQUISADO</b> a menos que se especifique en su tarjeta de Requisición Inquisitorial (solo se aplica a esos agentes <b>REQUISADOS</b>). Ten en cuenta que con su nueva clave de facción, los agentes <b>REQUISADOS</b> pueden interactuar con las reglas de <b>AGENTE INQUISITORIAL</b>.</p>\n\n<p>Por ejemplo, un agente <b>OPERADOR DE VOX</b> <b>REQUISADO</b> del grupo <span class='faction'>KORPS DE LA MUERTE</span> tendría su clave <span class='faction'>KORPS DE LA MUERTE</span> reemplazada en todas las instancias en su hoja de datos con <span class='faction'>AGENTE INQUISITORIAL</span>. Esto te permite seleccionar cualquier otro agente <span class='faction'>AGENTE INQUISITORIAL</span> amigo para su acción única Señal. Sin embargo, la regla de facción Órdenes de Guardia no está permitida, por lo que su regla adicional Retransmitir Órdenes sería ignorada. Ahora también sería un agente válido para la acción única Adivinar del agente <b>MÍSTICO</b> <span class='faction'>AGENTE INQUISITORIAL</span>.</p>\n\n<span class=\"faction fs-6\">ABORDADORES DE LA ARMADA IMPERIAL</span>\n<p>5 agentes <b>ABORDADORES DE LA ARMADA IMPERIAL</b> seleccionados de la siguiente lista:</p>\n<ul>\n<li><b>SOLDADO DE ARMAS</b></li>\n<li><b>HACHERO</b></li>\n<li><b>UNIDAD C.A.T.</b>*</li>\n<li><b>RESISTENTE</b></li>\n<li><b>CRÁNEO ESPECTRAL</b>*</li>\n<li><b>GRANADERO</b></li>\n<li><b>CORTAESCOTILLAS</b></li>\n<li><b>TOPÓGRAFO</b></li>\n<li><b>INTERFERIDOR DE VACÍO</b></li>\n<li><b>TIRADOR</b> con láser de volea Navis y culata</li>\n<li><b>TIRADOR</b> con rifle de fusión y culata</li>\n<li><b>TIRADOR</b> con rifle de plasma y culata</li>\n</ul>\n<p>Aparte de los agentes <b>SOLDADO DE ARMAS</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir un agente <b>CRÁNEO ESPECTRAL</b> si también incluye un agente <b>INTERFERIDOR DE VACÍO</b>, y solo puede incluir un agente <b>UNIDAD C.A.T.</b> si también incluye un agente <b>TOPÓGRAFO</b>.</p>\n<p><b>*</b> Estos agentes cuentan como media selección cada uno, lo que significa que puedes seleccionar ambos y se trata como una selección en total. Regla de facción <span class='faction'>ABORDADOR DE LA ARMADA IMPERIAL</span> permitida: <b>Armadura del Vacío</b>.</p>\n\n<span class=\"faction fs-6\">ESCUADRA DE EXACCIÓN</span>\n<p><b>5 agentes de ESCUADRA DE EXACCIÓN</b> seleccionados de la siguiente lista:</p>\n<ul>\n<li><b>CASTIGADOR</b></li>\n<li><b>QUIRURGO</b></li>\n<li><b>TIRADOR</b> con una de las siguientes opciones:</li>\n<ul>\n    <li>Lanzagranadas; porra de represión</li>\n    <li>Ametralladora pesada; porra de represión</li>\n    <li>Webber; porra de represión</li>\n</ul>\n<li><b>MAESTRO DE LA CORREA</b></li>\n<li><b>MALOCATOR</b></li>\n<li><b>TIRADOR</b></li>\n<li><b>REVELATUM</b></li>\n<li><b>CIBERMASTÍN R-VR</b></li>\n<li><b>SUBDUCTOR</b></li>\n<li><b>VIGILANTE</b></li>\n<li><b>SIGNIFICADOR VOX</b></li>\n</ul>\n<p>Aparte de los agentes <b>SUBDUCTOR</b> y <b>VIGILANTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta dos agentes <b>SUBDUCTOR</b>. Reglas de facción <span class='faction'>ESCUADRA DE EXACCIÓN</span> permitidas: <b>Eficiencia Implacable</b>,<b> Reprimir</b>.</p>\n\n<span class=\"faction fs-6\">KORPS DE LA MUERTE</span>\n<p><b>6 agentes KORPS DE LA MUERTE</b> seleccionados de la siguiente lista:</p>\n<ul>\n<li><b>MATÓN</b></li>\n<li><b>CONFIDENTE</b> con una de las siguientes opciones:\n    <ul>\n        <li>Bólter o rifle láser; bayoneta</li>\n        <li>Pistola bólter o pistola láser reliquia; espada sierra</li>\n    </ul>\n</li>\n<li><b>TIRADOR</b> con lanzallamas y bayoneta*</li>\n<li><b>TIRADOR</b> con lanzagranadas</li>\n<li><b>TIRADOR</b> con rifle de fusión y bayoneta*</li>\n<li><b>TIRADOR</b> con rifle de plasma y bayoneta*</li>\n<li><b>MÉDICO</b></li>\n<li><b>ZAPADOR</b></li>\n<li><b>FRANCOTIRADOR*</b></li>\n<li><b>SOLDADO</b></li>\n<li><b>VETERANO</b></li>\n<li><b>OPERADOR DE VOX</b></li>\n<li><b>FANÁTICO</b></li>\n</ul>\n<p>Aparte de los agentes <b>SOLDADO</b>, tu kill team solo puede incluir cada agente en esta lista una vez. <b>*</b> No puedes seleccionar más de tres de estos agentes combinados.</p>\n\n\n<span class=\"faction fs-6\">KASRKIN</span>\n<p><b>5 agentes KASRKIN</b> seleccionados de la siguiente lista:</p>\n<ul>\n<li><b>MÉDICO DE COMBATE</b></li>\n<li><b>DEMO-SOLDADO</b></li>\n<li><b>TIRADOR</b> con lanzallamas y culata*</li>\n<li><b>TIRADOR</b> con lanzagranadas y culata*</li>\n<li><b>TIRADOR</b> con cañón de volea hot-shot y culata*</li>\n<li><b>TIRADOR</b> con rifle de fusión y culata*</li>\n<li><b>TIRADOR</b> con rifle de plasma y culata*</li>\n<li><b>SOLDADO DE RECONOCIMIENTO</b></li>\n<li><b>TIRADOR</b>*</li>\n<li><b>SOLDADO</b></li>\n<li><b>SOLDADO VOX</b></li>\n</ul>\n<p>Aparte de los agentes <b>SOLDADO</b>, tu kill team solo puede incluir cada agente en esta lista una vez. * No puedes seleccionar más de dos de estos agentes combinados. </p>\n\n<span class=\"faction fs-6\">SCIONS TEMPESTUS</span>\n<p><b>5 agentes SCION TEMPESTUS</b> seleccionados de la siguiente lista:<br></p>\n<ul>\n<li><b>TIRADOR</b> con lanzallamas y culata</li>\n<li><b>TIRADOR</b> con lanzagranadas y culata</li>\n<li><b>TIRADOR</b> con cañón de volea hot-shot y culata</li>\n<li><b>TIRADOR</b> con rifle de fusión y culata</li>\n<li><b>TIRADOR</b> con rifle de plasma y culata</li>\n<li><b>MÉDICO</b></li>\n<li><b>SOLDADO</b></li>\n<li><b>OPERADOR DE VOX</b></li>\n</ul>\n<p>Aparte de los agentes <b>SOLDADO</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team\ncan solo puede incluir hasta dos agentes <b>TIRADOR</b>.</p>\n\n<span class=\"faction fs-6\">HERMANAS DEL SILENCIO</span>\n<p>5 agentes <b>HERMANA DEL SILENCIO</b> seleccionados de la siguiente lista:</p>\n<ul>\n<li><b>FISCAL</b></li>\n<li><b>VIGILANTE</b></li>\n<li><b>BUSCADORA DE BRUJAS</b></li>\n</ul>"
+        }
+    ],
+    "intercessors": [
+        {
+            "id_racial": 16,
+            "faction": "intercessors",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> seleccionado de la siguiente lista:<ul><li><b>SARGENTO INTERCESOR DE ASALTO</b> con una opción de cada uno de los siguientes:<ul><li>Lanzallamas de mano o pistola bólter pesada</li><li>Espada sierra, puño de energía, arma de energía o martillo trueno</li></ul>O la siguiente opción:<ul><li>Pistola de plasma; espada sierra</li></ul></li><li><b>SARGENTO INTERCESOR</b> con una opción de cada uno de los siguientes:<ul><li>Rifle bólter automático, rifle bólter o rifle bólter silencioso</li><li>Espada sierra, puños, puño de energia, arma de energía o martillo trueno</li></ul></li><li><b>CAPITÁN MARINE ESPACIAL</b></li></ul>5 agentes <span class=\"faction\">ÁNGEL DE LA MUERTE</span> seleccionados de la siguiente lista:<ul><li><b>GRANADERO INTERCESOR DE ASALTO</b></li><li><b>COMBATIENTE INTERCESOR DE ASALTO</b></li><li><b>FRANCOTIRADOR ELIMINADOR *</b></li><li><b>TIRADOR INTERCESOR PESADO *</b></li><li><b>TIRADOR INTERCESOR</b> con lanzagranadas auxiliar y una de las siguientes opciones:<ul><li>Rifle bólter automático; puños</li><li>Rifle bólter; puños</li><li>Rifle bólter silencioso; puños</li></ul></li><li><b>COMBATIENTE INTERCESOR</b> con una de las siguientes opciones:<ul><li>Rifle bólter automático; puños</li><li>Rifle bólter; puños</li><li>Rifle bólter silencioso; puños</li></ul></li></ul><p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p><p> * No puedes seleccionar más de uno de estos agentes en total.</p> <p>Algunas reglas de <span class=\"faction\">ÁNGEL DE LA MUERTE</span> hacen referencia a “armas bólter”. Eso es cualquier arma a distancia que incluya la palabra “bólter” en el nombre, como por ejemplo “rifle bólter silencioso”, “pistola bólter pesada”, etc.</p>"
+        },
+        {
+            "id_racial": 79,
+            "faction": "intercessors",
+            "type": "racial",
+            "name": "Tácticas de Capítulo",
+            "description": "<p>Al seleccionar tu kill team, selecciona una <b>TÁCTICA DE CAPÍTULO</b> primaria y secundaria para que los agentes <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigos la ganen para la batalla. Múltiples instancias de la misma <b>TÁCTICA DE CAPÍTULO</b> no son acumulativas.</p>\n<p><i><b>Nota del Diseñador:</b> Si estás jugando una serie de partidas, es decir, una campaña o torneo, debes seleccionar la misma <b>TÁCTICA DE CAPÍTULO</b> primaria y secundaria para cada batalla (aún puedes cambiar la secundaria con el ardid estratégico Tácticas Adaptables).</i></p>\n\n<span class=\"faction fs-6\">Agresivo</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Las armas cuerpo a cuerpo de este agente tienen la regla de arma <b>Desgarradora</b>.</p></div>\n\n<span class=\"faction fs-6\">Duelista</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\"><span class=\"text-warning-emphasis\">Siempre que este agente esté combatiendo o tomando represalias, cada uno de tus éxitos normales puede bloquear un éxito crítico no resuelto (a menos que el arma del agente enemigo tenga la regla de arma Brutal).</span></p></div>\n\n<span class=\"faction fs-6\">Resuelto</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Puedes ignorar cualquier cambio en el atributo de <b>LPA</b> de este agente.</p></div>\n\n<span class=\"faction fs-6\">Sigiloso</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Siempre que un agente esté disparando a este agente, si retienes alguna salvación por cobertura, puedes retener una salvación por cobertura adicional o retener una salvación por cobertura como un éxito crítico en su lugar. Esto no es acumulativo con salvaciones por cobertura mejoradas de terreno de Ventaja. </p></div>\n\n<span class=\"faction fs-6\">Móvil</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Este agente puede realizar la acción <b>Retirarse</b> por 1 PA menos. También puede realizar la acción <b>Cargar</b> mientras esté dentro del rango de control de un agente enemigo y salir de su rango de control.</p></div>\n\n<span class=\"faction fs-6\">Robusto</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Siempre que un agente esté disparando a este agente, los resultados de dados de defensa de 5+ son éxitos críticos.</p></div>\n\n<span class=\"faction fs-6\">Tirador</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Siempre que este agente esté disparando durante una activación en la que no haya realizado <b>Cargar</b>, <b>Retirarse</b> o <b>Reposicionarse</b>, sus armas bólter ganan la regla de arma <b>Severa</b>.</p></div>\n\n<span class=\"faction fs-6\">Especialista en Asedio</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Las armas a distancia de este agente tienen la regla de arma <b>Saturar</b>.</p></div>"
+        },
+        {
+            "id_racial": 121,
+            "faction": "intercessors",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "Durante la activación de cada agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b>, se debe seleccionar un arma bólter para al menos una de ellas, y si es un rifle de francotirador bólter o bólter pesado, se debe gastar 1 PA adicional para la segunda acción si ambas acciones están usando ese arma.<br><br> Cada agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo puede contraatacar independientemente de su orden."
+        }
+    ],
+    "kabalite": [
+        {
+            "id_racial": 6,
+            "faction": "kabalite",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>ARCOSIBARITA</b> <span class=\"faction\">MANO DEL ARCONTE</span> con una de las siguientes opciones:\n<ul>\n  <li>Pistola bláster; espada venenosa</li>\n  <li>Pistola cristalina; espada venenosa</li>\n  <li>Pistola cristalina; agonizador</li>\n  <li>Pistola cristalina; arma de energía</li>\n  <li>Rifle cristalino; matriz de espadas</li>\n</ul>\n\n8 agentes <span class=\"faction\">MANO DEL ARCONTE</span> seleccionados de la siguiente lista:\n<ul>\n  <li><b>AGENTE</b></li>\n  <li><b>DUELISTA CARMESÍ</b></li>\n  <li><b>DISCÍPULO DE YAELINDRA</b></li>\n  <li><b>ELIXICANTE</b></li>\n  <li><b>DESOLLADOR</b></li>\n  <li><b>TIRADOR</b> con una de las siguientes opciones:\n    <ul>\n      <li>Bláster; matriz de espadas</li>\n      <li>Desgarrador; matriz de espadas</li>\n    </ul>\n  </li>\n  <li><b>TIRADOR PESADO</b> con una de las siguientes opciones:\n    <ul>\n      <li>Lanza oscura; matriz de espadas</li>\n      <li>Cañón cristalino; matriz de espadas</li>\n    </ul>\n  </li>\n  <li><b>ASESINO ROMPECIELOS</b></li>\n</ul>\n\n<p>Aparte de los agentes <b>AGENTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta dos armas de luz oscura (pistola bláster, bláster y lanza oscura son armas de luz oscura).</p>\n"
+        },
+        {
+            "id_racial": 45,
+            "faction": "kabalite",
+            "type": "racial",
+            "name": "Poder del Dolor",
+            "description": "<p>Después de que un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo realice una acción, gana una de tus fichas de Dolor si:</p>\n<ul>\n    <li>Un agente enemigo fue lesionado durante esa acción, pero no fue incapacitado.</li>\n    <li>Un agente enemigo fue incapacitado durante esa acción. Si ese agente enemigo tenía un atributo de Heridas de 12 o más, ese agente amigo gana dos de tus fichas de Dolor en su lugar.</li>\n</ul>\n<p>Puedes gastar las fichas de Dolor de los agentes amigos en las vigorizaciones a continuación cuando se cumpla la condición \"Cuándo\". No puedes usar más de una vigorización por activación o contraataque, excepto Sentidos Estimulados, que se puede usar <span class=\"text-warning-emphasis\">una vez por activación o contraataque</span> además de otra vigorización.</p>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Ánimo Oscuro</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Durante la activación del agente, antes o después de que realice una acción.</p>\n    <p class=\"px-2\"><b>Efecto</b>: Hasta el inicio de la próxima activación del agente, suma 1 a su atributo de LPA.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Rejuvenecimiento Acelerado</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Durante la activación o contraataque del agente, antes o después de que realice una acción.</p>\n    <p class=\"px-2\"><b>Efecto</b>: El agente recupera D3+1 heridas perdidas.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Oleada Vitalizada</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Después de que el agente incapacite a un agente enemigo y ese agente enemigo sea retirado de la killzone.</p>\n    <p class=\"px-2\"><b>Efecto</b>: El agente puede realizar inmediatamente una acción de <b>Correr</b> gratuita, incluso si ha realizado una acción que le impide realizar la acción de <b>Correr</b>.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Sentidos Estimulados</span>\n    <p class=\"px-2\"><b>Cuándo</b>: Después de tirar tus dados de ataque o defensa para el agente.</p>\n    <p class=\"px-2\"><b>Efecto</b>: Puedes volver a tirar <span class=\"text-info-emphasis\">uno de tus dados</span></p>\n</div>\n"
+        },
+        {
+            "id_racial": 135,
+            "faction": "kabalite",
+            "type": "racial",
+            "name": "Rifles",
+            "description": "<p>Siempre que un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo esté disparando con un rifle cristalino durante una activación en la que no ha realizado la acción de <b>Cargar</b>, <b>Retirarse</b> o <b>Reposicionarse</b>, ese arma tiene la regla de arma <b>Precisa 1</b>. Ten en cuenta que el agente no tiene restringido realizar esas acciones después de disparar.</p>\n"
+        }
+    ],
+    "kasrkin": [
+        {
+            "id_racial": 17,
+            "faction": "kasrkin",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<p><b>1 SARGENTO <span class=\"faction\">KASRKIN</span></b> agente con una de las siguientes opciones:</p>\n<ul>\n  <li>Pistola bólter; arma de energía</li>\n  <li>Rifle láser hot-shot; culata</li>\n  <li>Pistola láser hot-shot; arma de energía</li>\n  <li>Pistola de plasma; espada sierra</li>\n</ul>\n\n<p><b>9 agentes <span class=\"faction\">KASRKIN</span></b> seleccionados de la siguiente lista:</p>\n<ul>\n  <li><b>MÉDICO DE COMBATE</b></li>\n  <li><b>DEMO-SOLDADO</b></li>\n  <li><b>TIRADOR</b> con lanzallamas y culata<b>*</b></li>\n  <li><b>TIRADOR</b> con lanzagranadas y culata<b>*</b></li>\n  <li><b>TIRADOR</b> con cañón de volea hot-shot y culata<b>*</b></li>\n  <li><b>TIRADOR</b> con rifle de fusión y culata<b>*</b></li>\n  <li><b>TIRADOR</b> con rifle de plasma y culata<b>*</b></li>\n  <li><b>SOLDADO DE RECONOCIMIENTO</b></li>\n  <li><b>TIRADOR</b><b>*</b></li>\n  <li><b>SOLDADO</b></li>\n  <li><b>SOLDADO VOX</b></li>\n</ul>\n\n<p>Aparte de los agentes <b>SOLDADO</b>, tu kill team solo puede incluir cada agente en esta lista una vez.</p>\n<p>* No puedes seleccionar más de cuatro de estos agentes combinados.</p>\n\n<p>Algunas reglas de <span class=\"faction\">KASRKIN</span> se refieren a un \"arma hot-shot\". Esta es un arma a distancia que incluye \"hot-shot\" en su nombre, p. ej. rifle láser hot-shot, todos los perfiles de un rifle de tirador hot-shot, etc.</p>"
+        },
+        {
+            "id_racial": 58,
+            "faction": "kasrkin",
+            "type": "racial",
+            "name": " Habilidad con las armas",
+            "description": "<p><b>GAMBITO ESTRATÉGICO</b>. Selecciona una <b>HABILIDAD CON LAS ARMAS</b> para que los agentes <span class=\"faction\">KASRKIN</span> amigos la tengan hasta el paso de Preparar de la próxima fase de Estrategia.</p>\n\n<span class=\"faction fs-6\">¡Iluminadlos!</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\"><span class=\"text-info-emphasis\">Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo esté disparando, sus armas a distancia tienen la regla de arma Severa si alguna de las siguientes es cierta para el objetivo:</span><ul>\n<li><span class=\"text-info-emphasis\">Está preparado.</span></li>\n<li><span class=\"text-info-emphasis\">No está en cobertura.</span></li>\n<li><span class=\"text-info-emphasis\">Está siendo escaneado (ver <b>SOLDADO DE RECONOCIMIENTO</b>).</span></li>\n</ul></p></div>\n\n<span class=\"faction fs-6\">Golpe Rápido</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo esté realizando la acción <b>Reposicionarse</b>, suma 1\" a su atributo de Movimiento.</p></div>\n\n<span class=\"faction fs-6\">Hielo en las Venas</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo esté combatiendo o tomando represalias, o un agente le esté disparando, la primera vez que un dado de ataque inflija Daño Normal de <span class=\"text-info-emphasis\">3</span> o más a este agente durante esa secuencia, ese dado le inflige 1 menos de daño.</p></div>\n\n<span class=\"faction fs-6\">¡Por Cadia!</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Suma 1 al atributo de Atq de las armas cuerpo a cuerpo de los agentes <span class=\"faction\">KASRKIN</span> amigos (hasta un máximo de 4). <span class=\"text-info-emphasis\">Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo esté combatiendo, la primera vez que golpees durante esa secuencia, inflige 1 daño adicional.</span></p></div>"
+        }
+    ],
+    "kommandos": [
+        {
+            "id_racial": 22,
+            "faction": "kommandos",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>NOBLE KOMANDO</b> con una de las siguientes opciones:<ul><li>Pistola; Rebanadora grande</li><li>Pistola; Garra de combate</li></ul>9 agentes <span class=\"faction\">KOMANDOS</span> seleccionados de la siguiente lista:<ul><li><b>CHIKO KOMANDO</b></li><li><b>GROT KOMANDO*</b></li><li><b>CHIKO CORTADOR KOMANDO</b></li><li><b>CHIKO BRECHADOR KOMANDO</b></li><li><b>CHIKO FRANCOTIRADOR KOMANDO</b></li><li><b>CHIKO AKRIBILLADOR KOMANDO</b></li><li><b>CHIKO DE COMUNICACIONES KOMANDO</b></li><li><b>CHIKO KEMADOR KOMANDO</b></li><li><b>CHIKO COHETERO KOMANDO</b></li><li><b>GARRAPATO BOMBA*</b></li></ul><p>Aparte de los agentes <b>CHIKO</b>, tu kill team solo puede incluir cada agente en esta lista una vez.</p><p>*Estos agentes cuentan como media selección cada uno, lo que significa que puedes seleccionar ambos y se trata como una selección en total.</p>"
+        },
+        {
+            "id_racial": 46,
+            "faction": "kommandos",
+            "type": "racial",
+            "name": "Cortagargantas",
+            "description": "Este agente puede realizar una acción de <b>Cargar</b> mientras tiene una orden de Ocultación. Esta habilidad no se puede aplicar al agente <b>GARRAPATO BOMBA</b>."
+        }
+    ],
+    "legionary": [
+        {
+            "id_racial": 10,
+            "faction": "legionary",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <span class=\"faction\">LEGIONARIO</span> seleccionado de la siguiente lista:<ul><li>Agente <b>ELEGIDO LEGIONARIO</b> equipado con una opción de cada uno de los siguientes:<ul><li>Pistola de plasma o Pistola bólter corrupta</li><li>Espada demonio</li></ul></li><li>Agente <b>ASPIRANTE A CAMPEÓN LEGIONARIO</b> equipado con una opción de cada uno de los siguientes:<ul><li>Pistola de plasma o Pistola bólter corrupta</li><li>Espada sierra corrupta, Arma de energía, Puño de combate o Maza de energía</li></ul></li></ul>5 agentes <span class=\"faction\">LEGIONARIO</span> seleccionados de la siguiente lista:<ul><li><b>COMBATIENTE LEGIONARIO</b> equipado con una de las siguientes opciones:<ul><li>Rifle bólter; Puños</li><li>Pistola bólter; Espada sierra</li></ul></li><li><b>TIRADOR LEGIONARIO</b> equipado con una de las siguientes opciones:<ul><li>Pistola bólter; Lanzallamas; Puños</li><li>Pistola bólter; Rifle de fusión; Puños</li><li>Pistola bólter; Rifle de plasma; Puños</li></ul></li><li><b>TIRADOR PESADO LEGIONARIO</b> equipado con una de las siguientes opciones:<ul><li>Pistola bólter; Bólter pesado; Puños</li><li>Pistola bólter; Lanzamisiles; Puños</li><li>Pistola bólter; Cañón segador; Puños</li></ul></li><li><b>PORTAICONO LEGIONARIO</b> equipado con una de las siguientes opciones:<ul><li>Rifle bólter; Puños</li><li>Pistola bólter; espada sierra</li></ul></li><li><b>UNGIDO LEGIONARIO</b></li><li><b>CARNICERO LEGIONARIO</b></li><li><b>ACÓLITO DE FUEGO BALÍFICO LEGIONARIO</b></li><li><b>DESGARRAO LEGIONARIO</b></li></ul><p>Aparte de los agentes <b>COMBATIENTE LEGIONARIO</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 72,
+            "faction": "legionary",
+            "type": "racial",
+            "name": "MARCA DEL CAOS",
+            "description": "<p>Al seleccionar un agente <span class=\"faction\">LEGIONARIO</span> para la batalla, debes elegir una de las siguientes claves para que la tenga durante esa batalla: <b>KHORNE</b>, <b>NURGLE</b>, <b>SLAANESH</b>, <b>TZEENTCH</b>, <b>ABSOLUTO</b>. La clave de cada agente puede ser diferente, pero un agente <b>ACÓLITO DE FUEGO BALÍFICO</b> no puede tener la clave <b>KHORNE</b>.</p><p>Los agentes <span class=\"faction\">LEGIONARIO</span> amigos tienen una regla adicional determinada por esta clave. Además, los ardides de <span class=\"faction\">LEGIONARIO</span> tienen beneficios adicionales para los agentes con la clave relevante.</p><p>Este agente gana una habilidad de las enumeradas a continuación. La habilidad que gana depende de su clave <MARCA DEL CAOS>.</p>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Khorne - Embestida Iracunda</span>\n        <p class=\"px-2\">Las armas cuerpo a cuerpo de este agente tienen la regla de arma Severa.</p>\n    </div>\n    <img src=\"./resources/khorne-min.png\" alt=\"Khorne\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Nurgle - Vigor Asqueroso</span>\n        <p class=\"px-2\">Siempre que se inflija Daño Normal de 3 o más a este agente, tira un D6: con un 5+, resta 1 de ese daño infligido.</p>\n    </div>\n    <img src=\"./resources/nurgle-min.png\" alt=\"Nurgle\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Slaanesh - Agilidad Antinatural</span>\n        <p class=\"px-2\">Suma 1” al Atributo de Movimiento de este agente.</p>\n    </div>\n    <img src=\"./resources/slaanesh-min.png\" alt=\"Slaanesh\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Tzeentch - Guía Empírea</span>\n        <p class=\"px-2\">Las armas de disparo de este agente tienen la regla de arma Severa.</p>\n    </div>\n    <img src=\"./resources/tzeentch-min.png\" alt=\"Tzeentch\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Absoluto - Saqueadores Viciosos</span>\n        <p class=\"px-2\">Siempre que este agente esté disparando, combatiendo o tomando represalias contra un agente enemigo a 6” de él, las armas de este agente tienen la regla de arma Incesante.</p>\n    </div>\n    <img src=\"./resources/undivided-min.png\" alt=\"Absoluto\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>"
+        },
+        {
+            "id_racial": 74,
+            "faction": "legionary",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "<p>Durante la activación de cada agente <span class=\"faction\">LEGIONARIO</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de Disparar, se debe seleccionar una pistola bólter, un bólter o una pistola bólter corrupta para al menos una de ellas.</p><p>Cada agente <span class=\"faction\">LEGIONARIO</span> amigo puede <b>Contraatacar</b> independientemente de su orden.</p>"
+        }
+    ],
+    "mandrakes": [
+        {
+            "id_racial": 91,
+            "faction": "mandrakes",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<p>1 <b>DEMONIO NOCTURNO</b> <span class=\"faction\">MANDRÁGORA</span></p>8 agentes <span class=\"faction\">MANDRÁGORA</span> seleccionados de la siguiente lista:<ul><li><b>ABISAL</b></li><li><b>ELEGIDOR DE LA CARNE</b></li><li><b>FAUCES DE ENDECHA</b></li><li><b>TEJEDOR DE SOMBRAS</b></li><li><b>COMBATIENTE</b></li></ul><p>Excepto los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 92,
+            "faction": "mandrakes",
+            "type": "racial",
+            "name": "Dentro de la Sombra",
+            "description": "Un agente está <b>DENTRO DE LA SOMBRA</b> si se cumple alguna de las siguientes condiciones:<ul><li>Está a 1\" de terreno Pesado que no es más bajo que él.</li><li>Cualquier parte de su peana está debajo de terreno de Ventaja.</li><li>Un marcador de Portal de Sombras está dentro de su rango de control (ver agente <b>TEJEDOR DE SOMBRAS</b>).</li></ul>"
+        },
+        {
+            "id_racial": 93,
+            "faction": "mandrakes",
+            "type": "racial",
+            "name": "Paso de Sombras",
+            "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">MANDRÁGORA</span> amigo <b>DENTRO DE LA SOMBRA</b> puede usar un <b>PASO DE SOMBRAS</b> cuando realiza la acción <b>Reposicionarse</b>. Si lo hace, no lo muevas. En su lugar, retíralo de la killzone y colócalo de nuevo <b>DENTRO DE LA SOMBRA</b> en una ubicación donde pueda ser colocado. Cuando lo coloques de nuevo, no puede:<ul><li>Estar dentro del rango de control de un agente enemigo.</li><li>Ser un blanco válido para un agente enemigo.</li><li>Realizar la acción <b>Disparar</b> o <b>Combatir</b> hasta el inicio del siguiente punto de inflexión.</li></ul>"
+        },
+        {
+            "id_racial": 94,
+            "faction": "mandrakes",
+            "type": "racial",
+            "name": "Entidades Umbrías",
+            "description": "Siempre que un agente esté disparando a un agente <span class=\"faction\">MANDRÁGORA</span> amigo, ignora la regla de arma Perforante. Siempre que un agente <span class=\"faction\">MANDRÁGORA</span> amigo esté <b>DENTRO DE LA SOMBRA</b>, mejora su atributo de Salvación en 1."
+        },
+        {
+            "id_racial": 95,
+            "faction": "mandrakes",
+            "type": "racial",
+            "name": "Golpe de Alma",
+            "description": "<p>Algunas armas en las reglas de este equipo tienen la regla de arma Golpe de Alma a continuación:</p><p><b>*Golpe de Alma:</b> Los dados de defensa exitosos se determinan de manera diferente. Cada resultado que sea igual o menor que el atributo de LPA del objetivo es un éxito y se retiene. Cada resultado que sea mayor que el atributo de LPA del objetivo es un fallo y se descarta. Cada resultado de 1 es siempre un éxito crítico. Cada otro éxito es un éxito normal. Cada resultado de 6 es siempre un fallo.</p><p><i>Nota del Diseñador: Muchas de las reglas de este kill team se refieren al atributo de LPA de un agente enemigo. Este sería el atributo de LPA en el momento en que la regla surte efecto (es decir, incluyendo cambios).</i></p>"
+        }
+    ],
+    "nemesis-claw": [
+        {
+            "id_racial": 97,
+            "faction": "nemesis-claw",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 <b>VISIONARIO AMO DE LA NOCHE</b> de la <span class=\"faction\">GARRA NÉMESIS</span> con una de las siguientes opciones:\n<ul>\n    <li>Pistola bólter; Arma de energía</li>\n    <li>Pistola de plasma; Espada sierra de Nostramo</li>\n    <li>Pistola bólter; Maza de energía</li>\n    <li>Pistola bólter; Puño de combate</li>\n</ul>\n5 agentes de la <span class=\"faction\">GARRA NÉMESIS</span> seleccionados de la siguiente lista:\n<ul>\n    <li><b>SIEMBRAMIEDOS</b></li>\n    <li><b>CHILLADOR</b></li>\n    <li><b>ROBAPIELES</b></li>\n    <li><b>VENTRILOKAR</b></li>\n    <li><b>TIRADOR PESADO</b> con una de las siguientes opciones:\n        <ul>\n            <li>Pistola bólter; Bólter pesado; Puños</li>\n            <li>Pistola bólter; Lanzamisiles; Puños</li>\n        </ul>\n    </li>\n    <li><b>TIRADOR</b> con una de las siguientes opciones:\n        <ul>\n            <li>Pistola bólter; Lanzallamas; Puños</li>\n            <li>Pistola bólter; Rifle de fusión; Puños</li>\n            <li>Pistola bólter; Rifle de plasma; Puños</li>\n        </ul>\n    </li>\n    <li><b>COMBATIENTE</b> equipado con una de las siguientes opciones:\n        <ul>\n            <li>Pistola bólter; Espada sierra</li>\n            <li>Rifle bólter; Puños</li>\n        </ul>\n    </li>\n</ul>\n<p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 98,
+            "faction": "nemesis-claw",
+            "type": "racial",
+            "name": "Vestido de Medianoche",
+            "description": "Siempre que un agente enemigo esté disparando a un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo, ese agente amigo está ofuscado si ambas de las siguientes condiciones son verdaderas:<ul><li>Está a más de <span class=\"text-warning-emphasis\">8</span>\" de agentes enemigos a los que es visible.</li><li>Tiene terreno Pesado dentro de su rango de control, o cualquier parte de su peana está debajo de terreno de Ventaja.</li></ul>"
+        },
+        {
+            "id_racial": 113,
+            "faction": "nemesis-claw",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "<p>Durante la activación de cada agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b>, se debe seleccionar una pistola bólter, un bólter o una pistola bólter con mira para al menos una de ellas.</p><p>Cada agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo puede contraatacar independientemente de su orden.</p>"
+        }
+    ],
+    "novitiates": [
+        {
+            "id_racial": 18,
+            "faction": "novitiates",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>SUPERIORA</b> <span class=\"faction\">NOVICIA</span> con una de las siguientes opciones:\n<ul>\n  <li>Pistola de plasma; arma de energía</li>\n  <li>Rifle bólter reliquia; culata</li>\n  <li>Pistola bólter reliquia; arma de energía</li>\n</ul>\n\n9 agentes <span class=\"faction\">NOVICIAS</span> seleccionados de la siguiente lista:\n<ul>\n  <li><b>CONDENADORA</b></li>\n  <li><b>DIALOGUS</b></li>\n  <li><b>DUELISTA</b></li>\n  <li><b>EXACTORA</b></li>\n  <li><b>HOSPITALARIA</b></li>\n  <li><b>PENITENTE</b></li>\n  <li><b>PRECEPTORA</b></li>\n  <li><b>PRONATUS</b></li>\n  <li><b>PURGATUS</b></li>\n  <li><b>RELIQUARIUS</b></li>\n  <li><b>MILITANTE</b> con una de las siguientes opciones:\n  <ul>\n    <li>Pistola automática; espada de novicia</li>\n    <li>Rifle automático; culata</li>\n  </ul>\n</ul>\n\n<p>Aparte de los agentes <b>MILITANTE</b> y <b>PURGATUS</b>,\ntu kill team solo puede incluir cada agente en esta\nlista una vez. Tu kill team solo puede incluir hasta dos agentes\n<b>PURGATUS</b>.</p>"
+        },
+        {
+            "id_racial": 80,
+            "faction": "novitiates",
+            "type": "racial",
+            "name": "Actos de Fe",
+            "description": "<p>En el paso de Preparar de cada fase de Estrategia, ganas un número de Puntos de Fe igual a la mitad del número de agentes <span class=\"faction\">NOVICIA</span> amigos que no han sido incapacitados (redondeando hacia arriba). Siempre que un agente <span class=\"faction\">NOVICIA</span> amigo esté disparando, combatiendo o tomando represalias, o un agente le esté disparando, en el paso Tirar Dados de Ataque (o Tirar Dados de Defensa si un agente le está disparando), puedes gastar tus Puntos de Fe para usar un <b>ACTO DE FE</b>. No puedes usar más de un <b>ACTO DE FE</b> por secuencia, y sus costos y efectos son los siguientes:\r\n\r\n<div class=\"action-box col-12 position-relative mb-3\">\r\n  <div class=\"header\"><div>Guía</div><div class=\"ap-box\">1 Punto de Fe</div></div>\r\n  <div class=\"content\">\r\n    Puedes volver a tirar uno de tus dados.\r\n  </div>\r\n</div>\r\n\r\n<div class=\"action-box col-12 position-relative mb-3\">\r\n  <div class=\"header\"><div>Bendición</div><div class=\"ap-box\">2 Puntos de Fe</div></div>\r\n  <div class=\"content\">\r\n    Puedes retener uno de tus éxitos normales como un éxito crítico\r\nen su lugar.\r\n  </div>\r\n</div>\r\n\r\n<div class=\"action-box col-12 position-relative mb-3\">\r\n  <div class=\"header\"><div>Intervención</div><div class=\"ap-box\">3 Puntos de Fe</div></div>\r\n  <div class=\"content\">\r\n    Puedes retener uno de tus fallos como un éxito normal en lugar de\r\ndescartarlo.\r\n  </div>\r\n</div>"
+        }
+    ],
+    "pathfinders": [
+        {
+            "id_racial": 24,
+            "faction": "pathfinders",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>SHAS'UI</b> <span class=\"faction\">RASTREADOR®</span>\n<p>11 agentes <span class=\"faction\">RASTREADORES®</span> seleccionados de la siguiente lista:</p>\n<ul>\n  <li><b>GRANADERO DE ASALTO</b></li>\n  <li><b>ENSANGRENTADO</b></li>\n  <li><b>ESPECIALISTA EN COMUNICACIONES</b></li>\n  <li><b>CONTROLADOR DE DRONES</b></li>\n  <li><b>TIRADOR</b></li>\n  <li><b>TÉCNICO MÉDICO</b></li>\n  <li><b>SHAS'LA</b></li>\n  <li><b>INTERFERENCIA TRANSPECTRAL</b></li>\n  <li><b>DRON DE RECONOCIMIENTO MB3</b> (cuenta como dos selecciones)</li>\n  <li><b>DRON ACELERADOR DE PULSOS MV31</b></li>\n  <li><b>DRON INHIBIDOR GRAVITATORIO MV33</b></li>\n  <li><b>DRON TIRADOR MV1</b></li>\n  <li><b>DRON ESCUDO MV4</b></li>\n  <li><b>DRON MARCADOR MV7</b></li>\n  <li><b>EXPERTO EN ARMAS</b> con una de las siguientes opciones:\n    <ul>\n      <li>Rifle iónico; culata</li>\n      <li>Rifle acelerador; culata</li>\n    </ul>\n  </li>\n</ul>\n<p>Aparte de los agentes <b>SHAS'LA</b> y <b>EXPERTO EN ARMAS</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta dos agentes <b>EXPERTO EN ARMAS</b>.</p>"
+        },
+        {
+            "id_racial": 38,
+            "faction": "pathfinders",
+            "type": "racial",
+            "name": "Armas de Pulso",
+            "description": "<p>Algunas reglas de <span class=\"faction\">RASTREADOR®</span> se refieren a un \"arma de pulso\". Las siguientes armas son armas de pulso: cañón rotatorio, carabina de pulso, carabina de pulso con supresor, carabina de pulso gemela.</p>"
+        },
+        {
+            "id_racial": 39,
+            "faction": "pathfinders",
+            "type": "racial",
+            "name": "Marcadores Telemétricos",
+            "description": "Algunos agentes <span class=\"faction\">RASTREADOR</span> (indicados en su hoja de datos) pueden realizar la acción única Marcador Telemétrico:\n\n<span class=\"faction fs-6\">Marcador Telemétrico</span>\n<div class=\"action-box col-12 position-relative mb-3\">\n  <div class=\"header\"><div>Marcador Telemétrico</div><div class=\"ap-box\">1PA</div></div>\n  <div class=\"content\">\n    <ul>\n      <li><span class=\"icon icon-yes\"></span>\n        Selecciona un agente enemigo visible para este agente. Ese agente enemigo gana una de tus fichas de Marcador Telemétrico (hasta un máximo de cuatro).\n      </li>\n      <li><span class=\"icon icon-no\"></span>\n        Un agente no puede realizar esta acción mientras esté dentro del rango de control de un agente enemigo. Si un agente (excluyendo <b>MB3 de Reconocimiento</b>) realizara la acción <b>Disparar</b> (excluyendo <b>Guardia</b>) y esta acción durante la misma activación, solo el objetivo de esa acción <b>Disparar</b> puede ser seleccionado para esta acción (y viceversa).\n      </li>\n    </ul>\n  </div>\n</div>\n\nUna vez durante cada una de sus activaciones, siempre que un agente enemigo que tenga alguna de tus fichas de Marcador Telemétrico realice la acción <b>Correr</b>, <b>Cargar</b>, <b>Retirarse</b> o <b>Reposicionarse</b>, retira una de esas fichas.\n\nMientras que solo algunos agentes <span class=\"faction\">RASTREADOR</span> pueden realizar la acción Marcador Telemétrico, todos los agentes <span class=\"faction\">RASTREADOR</span> pueden beneficiarse de sus efectos. Siempre que un agente <span class=\"faction\">RASTREADOR</span> amigo esté disparando con un arma de su hoja de datos (excluyendo la granada de fusión del <b>GRANADERO DE ASALTO</b>), tiene reglas adicionales determinadas por el número de tus fichas de Marcador Telemétrico que tenga el objetivo. Estas son acumulativas, por lo que si un agente enemigo tiene dos de tus fichas de Marcador Telemétrico, el agente amigo que le dispara tiene las reglas para 1 y 2 fichas durante esa secuencia.\n\n<div class=\"weapons-table col-12 p-0 pt-2 position-relative\">\n  <table>\n    <thead>\n      <tr>\n        <th class=\"text-start align-top p-1 fw-bold text-center\">Fichas de Marcador Telemétrico</th>\n        <th class=\"text-start align-top p-1 fw-bold\">Reglas Adicionales</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"text-start align-top p-1 text-center\">1</td>\n        <td class=\"text-start align-top p-1\">Reglas de arma Saturar <span class=\"text-info-emphasis\">y equilibrada</span>.</td>\n      </tr>\n      <tr>\n        <td class=\"text-start align-top p-1 text-center\">2</td>\n        <td class=\"text-start align-top p-1\"> <span class=\"text-info-emphasis\">Mejora el atributo de Impacto de las armas a distancia de ese agente amigo en 1 (hasta un máximo de 3+).</span></td>\n      </tr>\n      <tr>\n        <td class=\"text-start align-top p-1 text-center\">3</td>\n        <td class=\"text-start align-top p-1\">El objetivo no puede estar ofuscado.</td>\n      </tr>\n      <tr>\n        <td class=\"text-start align-top p-1 text-center\">4</td>\n        <td class=\"text-start align-top p-1\">Regla de arma Buscadora Ligera.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+        }
+    ],
+    "phobos": [
+        {
+            "id_racial": 19,
+            "faction": "phobos",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente de <span class=\"faction\">ASALTANTES PHOBOS</span> seleccionado de la siguiente lista:<ul><li><b>SARGENTO INFILTRADOR</b></li><li><b>SARGENTO INCURSOR</b></li><li><b>SARGENTO SAQUEADOR</b> con una de las siguientes opciones:<ul><li>Pistola bólter especial; filoarma</li><li>Carabina bólter; puños</li></ul></li></ul>5 agentes de <span class=\"faction\">ASALTANTES PHOBOS</span> seleccionados de la siguiente lista:<ul><li><b>COMUNICADOR INFILTRADOR</b></li><li><b>ADEPTO HELIX INFILTRADOR</b></li><li><b>ZAPADOR INFILTRADOR</b></li><li><b>VETERANO INFILTRADOR</b></li><li><b>VOCOPIRATA INFILTRADOR</b></li><li><b>COMBATIENTE INFILTRADOR</b></li><li><b>OJO PRECISO INCURSOR</b></li><li><b>MINADOR INCURSOR</b></li><li><b>COMBATIENTE INCURSOR</b></li><li><b>COMBATIENTE SAQUEADOR</b> con una de las siguientes opciones:<ul><li>Pistola bólter especial; filoarma</li><li>Carabina bólter; puños</li></ul></li></ul><p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez.</p>"
+        },
+        {
+            "id_racial": 50,
+            "faction": "phobos",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "<p>Durante la activación de cada agente de <span class=\"faction\">ASALTANTES PHOBOS</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b>, se debe seleccionar un arma bólter para al menos una de ellas. Un arma bólter es cualquier arma a distancia que incluya 'bólter' en su nombre, p. ej. carabina bólter de tirador, pistola bólter de munición especial, etc.</p>\n\n<p>Cada agente de <span class=\"faction\">ASALTANTES PHOBOS</span> amigo puede contraatacar independientemente de su orden.</p>"
+        },
+        {
+            "id_racial": 51,
+            "faction": "phobos",
+            "type": "racial",
+            "name": "Terror",
+            "description": "<p>Siempre que un agente enemigo esté a 3\" de agentes <b>REIVER</b> amigos, tu oponente debe gastar 1 PA adicional para que ese agente enemigo realice la acción <b>Recoger Marcador</b> y acciones de misión.</p>\n\n<p>Siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menor si al menos uno de esos agentes enemigos está a 3\" de agentes <b>REIVER</b> amigos. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.</p>"
+        },
+        {
+            "id_racial": 52,
+            "faction": "phobos",
+            "type": "racial",
+            "name": "Omni-Perturbador",
+            "description": "<p><b>GAMBITO ESTRATÉGICO</b> si un agente <b>INFILTRADOR</b> amigo está en la killzone. Selecciona un agente enemigo visible para un agente <b>INFILTRADOR</b> amigo, o a 6\" de un agente <b>ROMPEVOX</b> amigo. En la siguiente fase de Tiroteo, ese agente enemigo no puede ser activado ni realizar acciones hasta que una de las siguientes condiciones sea verdadera:</p>\n\n<ul>\n<li>Tu oponente ha activado un número de agentes enemigos\nigual al número de agentes <b>INFILTRADOR</b> amigos en\nla killzone cuando se usó este <b>GAMBITO ESTRATÉGICO</b>.</li>\n<li>Es el último agente enemigo en ser activado.</li>\n</ul>"
+        },
+        {
+            "id_racial": 53,
+            "faction": "phobos",
+            "type": "racial",
+            "name": "Matriz Multiespectro",
+            "description": "Siempre que un agente <b>INCURSOR</b> amigo esté disparando, los agentes enemigos no pueden estar ofuscados."
+        }
+    ],
+    "plague-marines": [
+        {
+            "id_racial": 165,
+            "faction": "plague-marines",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<p>1 agente <b>CAMPEÓN</b> <span class=\"faction\">MARINE DE PLAGA</span></p>\n<p>5 agentes <span class=\"faction\">MARINES DE PLAGA</span> seleccionados de la siguiente lista:</p>\n<ul>\n    <li><b>BOMBARDIER</b></li>\n    <li><b>LUCHADOR</b></li>\n    <li><b>TIRADOR PESADO</b></li>\n    <li><b>PORTAICONO</b></li>\n    <li><b>LANZAPLAGAS MALIGNO</b></li>\n    <li><b>COMBATIENTE</b></li>\n</ul>\n<p>Tu kill team solo puede incluir cada agente en esta lista una vez.</p>"
+        },
+        {
+            "id_racial": 167,
+            "faction": "plague-marines",
+            "type": "racial",
+            "name": "Veneno",
+            "description": "Algunas armas en las reglas de este equipo tienen la regla de arma <b>Veneno</b>.\n\n<p>*<b>Veneno</b>: En el paso Resolver Dados de Ataque, si infliges daño con cualquier éxito, el agente contra el que se está usando este arma <span class=\"text-info-emphasis\">(excluyendo agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos)</span> gana una de tus fichas de Veneno (si no tiene ya una). Siempre que un agente que tenga una de tus fichas de Veneno sea activado, inflige 1 de daño a él.</p>\n\n"
+        },
+        {
+            "id_racial": 168,
+            "faction": "plague-marines",
+            "type": "racial",
+            "name": "Asquerosamente Resistentes",
+            "description": "Siempre que un dado de ataque inflija daño de 3 o más a un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, tira un D6: con un 4+, resta 1 de ese daño infligido."
+        },
+        {
+            "id_racial": 169,
+            "faction": "plague-marines",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "Durante la activación de cada agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b>, se debe seleccionar una pistola bólter, bólter o arma <b>PSÍQUICA</b> para al menos una de ellas. No puedes seleccionar la misma arma <b>PSÍQUICA</b> <span class=\"text-info-emphasis\">a distancia</span> más de una vez por activación.\n\n<p>Cada agente <span class=\"faction\">MARINE DE PLAGA</span> amigo puede contraatacar independientemente de su orden.</p>"
+        }
+    ],
+    "ratling": [
+        {
+            "id_racial": 178,
+            "faction": "ratling",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>ARREGLADOR</b> <span class=\"faction\">RÁTIDO</span> con una de las siguientes opciones:\n<ul>\n<li>Rifle de batalla; puños</li>\n<li>Rifle de francotirador; puños</li>\n</ul>\n\n10 agentes <span class=\"faction\">RÁTIDOS</span> seleccionados de la siguiente lista:\n<ul>\n<li><b>MASTÍN DE BATALLA</b></li>\n<li><b>BOMBARDERO</b></li>\n<li><b>BULLGRYN*</b> con una opción de cada uno de los siguientes:\n  <ul>\n  <li>Guantelete de granadero o maza de energía</li>\n  <li>Escudo bruto o escudo de losa</li>\n  </ul>\n</li>\n<li><b>OGRYN*</b></li>\n<li><b>GRAN DISPARO</b></li>\n<li><b>GOLPE DURO</b></li>\n<li><b>ASALTANTE</b></li>\n<li><b>FURTIVO</b></li>\n<li><b>FRANCOTIRADOR</b></li>\n<li><b>OBSERVADOR</b></li>\n<li><b>MAESTRO DE ALIJOS</b></li>\n<li><b>LADRÓN DE VOX</b></li>\n</ul>\n\n<p>* No puedes seleccionar más de tres de estos agentes combinados. Hasta tres veces, en lugar de seleccionar uno de estos agentes, puedes seleccionar un ardid <span class=\"faction\">RÁTIDO</span> para que te cueste 0PM para la batalla.</p>\n<p>Aparte de los agentes <b>BULLGRYN</b>, <b>OGRYN</b> y <b>FRANCOTIRADOR</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>\n<p>Algunas reglas de <span class=\"faction\">RÁTIDO</span> se refieren a un \"rifle\". Esta es un arma a distancia que incluye \"rifle\" en su nombre, p. ej., todos los perfiles de un rifle de francotirador, rifle antitanque, etc.</p>\n"
+        },
+        {
+            "id_racial": 179,
+            "faction": "ratling",
+            "type": "racial",
+            "name": "ESCAPAR",
+            "description": "<p>Después de la activación de cada agente enemigo, antes de que el siguiente agente sea activado, puedes realizar una acción gratuita de <b>Correr</b> con un agente <span class=\"faction\">RÁTIDO</span> amigo (excluyendo <b>BULLGRYN</b>, <b>OGRYN</b> y <b>FURTIVO</b>), pero no puede terminar ese movimiento a 3\" de un agente enemigo a menos que no sea visible para ningún agente enemigo cuando termine ese movimiento.</p>\n<p>Cada agente amigo solo puede hacer esto una vez por punto de inflexión, y no puede hacerlo después de la última activación del punto de inflexión. No puedes usar esta regla después de activaciones enemigas consecutivas durante el mismo punto de inflexión (en otras palabras, después de usar esta regla, debes saltar la siguiente oportunidad durante ese punto de inflexión antes de poder usarla nuevamente).</p>"
+        }
+    ],
+    "raveners": [
+        {
+            "id_racial": 188,
+            "faction": "raveners",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>PRIME</b> <span class=\"faction\">MANTIFEX</span><br>\n4 agentes <span class=\"faction\">MANTIFEXES</span> seleccionados de la siguiente lista:\n<ul>\n  <li><b>GARRA FEROZ</b></li>\n  <li><b>GUADAÑA SÍSMICA</b></li>\n  <li><b>ESCUPIDOR DE VENENO</b></li>\n  <li><b>COMBATIENTE</b></li>\n  <li><b>DESTRUCTOR</b></li>\n</ul>\n<p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>\n"
+        },
+        {
+            "id_racial": 189,
+            "faction": "raveners",
+            "type": "racial",
+            "name": "EXCAVAR",
+            "description": "<p>Al desplegar un kill team <span class=\"faction\">MANTIFEX</span> antes de la batalla, tus primeros dos agentes deben desplegarse de manera normal. Cada otro agente <span class=\"faction\">MANTIFEX</span> amigo a partir de entonces puede desplegarse bajo tierra: colócalo a un lado en lugar de en la killzone.</p>\n\n<p>En la fase de Tiroteo, los agentes <span class=\"faction\">MANTIFEXES</span> amigos desplegados bajo tierra son activados y pueden contraatacar de manera normal. Siempre que un agente <span class=\"faction\">MANTIFEX</span> amigo esté bajo tierra, no puede realizar ninguna acción que no sea <b>Excavar</b>. Al final de la batalla, cada agente <span class=\"faction\">MANTIFEX</span> amigo que esté bajo tierra es incapacitado.</p>\n\n<p>Los agentes <span class=\"faction\">MANTIFEXES</span> amigos pueden realizar la siguiente acción única:</p>\n\n<div class=\"header\"><div>Excavar</div><div class=\"ap-box\">1PA</div></div>\n<div class=\"content\"><ul>\n<li><span class=\"icon icon-yes\"></span> \nSi este agente está bajo tierra, despliégalo en tu <b>TÚNEL</b> en una ubicación donde pueda ser colocado (ya no está bajo tierra, y puede ser desplegado dentro del rango de control de agentes enemigos). Hasta el final de la activación/contraataque, resta 2\" de su atributo de Movimiento.\n</li>\n<li><span class=\"icon icon-yes\"></span> \nAlternativamente, en lugar de resolver el efecto anterior, si este agente está en la killzone y en tu <b>TÚNEL</b>, retíralo de la killzone: ahora está bajo tierra.\n</li>\n<li><span class=\"icon icon-no\"></span> \nUn agente no puede realizar esta acción mientras lleva un marcador.\n</li>\n</ul></div>\n"
+        },
+        {
+            "id_racial": 192,
+            "faction": "raveners",
+            "type": "racial",
+            "name": "TÚNEL",
+            "description": "<p>Al final del paso Desplegar Agentes, coloca tu marcador de Túnel numerado “0” en el suelo de la killzone, totalmente dentro de tu zona de desembarco y tocando tu borde de la killzone.</p>\n\n<p><b>Como un GAMBITO ESTRATÉGICO</b> en los primeros cuatro puntos de inflexión, puedes colocar tu siguiente marcador de Túnel numerado en el suelo de la killzone totalmente a 5\" de tu marcador de Túnel anterior (en Killzone: Gallowdark, esta distancia puede medirse a través de muros). Esto significa que, a medida que avanza la batalla, puedes tener una serie of marcadores de Túnel numerados secuencialmente (0, 1, 2, 3 y 4). Una vez que hayas colocado cinco marcadores de Túnel, no coloques más (es decir, si tu batalla dura más de cuatro puntos de inflexión).</p>\n\n<p>Tus marcadores de Túnel y el área entre tus marcadores numerados secuencialmente (es decir, entre 0 y 1, y 1 y 2, etc.) crean tu <b>TÚNEL</b>.</p>\n\n<p>En una killzone que usa las reglas de áreas peligrosas (p. ej. Killzone: Bheta-Decima), para los propósitos de la regla Movimiento Restringido, las partes de un marcador de Túnel que estén tocando un área peligrosa se tratan como un área peligrosa.</p>\n\n<figure class=\"figure\"><img src=\"./resources/tunnel_mantifex.png\" class=\"figure-img img-fluid rounded mx-auto d-block\"><p>En este ejemplo, el agente A está en tu <b>TÚNEL</b> ya que está en el área entre los marcadores 0 y 1. El agente B también está en tu <b>TÚNEL</b> ya que está tocando uno de tus marcadores de Túnel. El agente C no está en tu <b>TÚNEL</b> ya que los marcadores 1 y 3 no son secuenciales, por lo que el área entre esos marcadores no es parte de tu <b>TÚNEL</b>.</p></figure>\n"
+        },
+        {
+            "id_racial": 193,
+            "faction": "raveners",
+            "type": "racial",
+            "name": "INSTINTOS PREDADORES",
+            "description": "<p>Durante la activación de cada agente <span class=\"faction\">MANTIFEX</span> amigo, puede realizar dos acciones de <b>Combatir</b>.</p>\n\n<p>Cada agente <span class=\"faction\">MANTIFEX</span> amigo puede contraatacar independientemente de su orden.</p>\n\n<ul>\n<li>Puedes cambiar su orden primero, o cambiar su orden en lugar de realizar una acción (para lo último, aún trátalo como habiendo contraatacado este punto de inflexión).</li>\n<li>Durante ese contraataque, si no realiza una acción de misión, puede realizar una acción de <b>Excavar</b> gratuita.</li>\n</ul>\n"
+        }
+    ],
+    "sanctifiers": [
+        {
+            "id_racial": 181,
+            "faction": "sanctifiers",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<ul>\n<li>1 agente <b>CONFESOR</b> <span class=\"faction\">SANTIFICADOR</span></li>\n<li>1 agente <b>QUERUBÍN</b> <span class=\"faction\">SANTIFICADOR</span></li>\n<li>9 agentes <span class=\"faction\">SANTIFICADORES</span> seleccionados de la siguiente lista:</li>\n<ul>\n<li><b>CONFLAGRADOR</b></li>\n<li><b>ASESINO DEL CULTO DE LA MUERTE</b></li>\n<li><b>ABAB TALADRO</b></li>\n<li><b>MILAGRERO</b></li>\n<li><b>MISIONERO</b> con una de las siguientes opciones:</li>\n<ul>\n<li>Lanzallamas del Ministorum; brasero de fuego sagrado<span class=\"icon\">*</span></li>\n<li>Lanzallamas del Ministorum; culata; reliquia sagrada</li>\n</ul>\n<li><b>MISIONERO</b> con una de las siguientes opciones:</li>\n<ul>\n<li>Rifle de fusión; espada sierra; reliquia sagrada</li>\n<li>Rifle de plasma; espada sierra; brasero de fuego sagrado<span class=\"icon\">*</span></li>\n</ul>\n<li><b>PERSEGUIDOR</b></li>\n<li><b>PREDICADOR</b></li>\n<li><b>RELIQUANTE</b></li>\n<li><b>SALVACIONISTA</b></li>\n</ul>\n</ul>\n<p>Aparte de los agentes <b>PREDICADOR</b>, tu kill team solo puede incluir cada agente de arriba una vez. Tu kill team solo puede incluir hasta cuatro agentes <b>PREDICADOR</b>.</p>\n<p><span class=\"icon\">*</span> No puedes seleccionar una opción que incluya un brasero de fuego sagrado más de una vez por batalla.</p>\n</div>"
+        },
+        {
+            "id_racial": 182,
+            "faction": "sanctifiers",
+            "type": "racial",
+            "name": "Sermón del Ministorum",
+            "description": "<p><b>GAMBITO ESTRATÉGICO.</b> Selecciona un agente <span class=\"faction\">SANTIFICADOR</span> amigo. Si un agente <b>CONFESOR</b> amigo no ha sido incapacitado, debes seleccionarlo. Hasta que uses este <b>GAMBITO ESTRATÉGICO</b> nuevamente durante la batalla, ese agente tiene la clave <b>ORADOR</b>.</p>\n\n<p>Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté a 3\" de un agente <b>ORADOR</b> amigo (o 6\" si el <b>ORADOR</b> es un <b>CONFESOR</b>), ese agente <span class=\"faction\">SANTIFICADOR</span> amigo se está beneficiando del <b>SERMÓN</b>.</p>\n\n<p>Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo sea activado a 3\" de un agente <b>ORADOR</b> amigo (o 6\" si el <b>ORADOR</b> es un <b>CONFESOR</b>), ese agente <span class=\"faction\">SANTIFICADOR</span> amigo se está beneficiando del <b>SERMÓN</b> hasta el final de esa activación (es decir, incluso si luego se mueve más allá del requisito de distancia del agente <b>ORADOR</b>).</p>\n\n<p>Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo se esté beneficiando del <b>SERMÓN</b>, el Daño Normal y Crítico de 3 o más le inflige 1 menos de daño.</p>"
+        },
+        {
+            "id_racial": 183,
+            "faction": "sanctifiers",
+            "type": "racial",
+            "name": "Llamarada",
+            "description": "<p>Algunas armas en las reglas de este equipo tienen la regla de arma <b>Llamarada</b> a continuación.</p>\n\n<p><b>Llamarada:</b> Si <span class=\"text-warning-emphasis\">infliges daño con</span> éxitos críticos, el agente contra el que se está usando este arma gana una de tus fichas de Llamarada (si no tiene ya una). Siempre que un agente que tenga una de tus fichas de Llamarada sea activado, inflige D3 de daño a él. Luego, el jugador controlador de ese agente selecciona uno de los siguientes:</p>\n\n<ul>\n<li>Tira un D6: con un 3+, retira esa ficha.</li>\n<li>Resta 1 del atributo de LPA del agente hasta el final de esa activación para retirar esa ficha.</li>\n</ul>\n"
+        }
+    ],
+    "scouts": [
+        {
+            "id_racial": 28,
+            "faction": "scouts",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>SARGENTO EXPLORADOR</b> con una de las siguientes opciones:\n    <ul>\n        <li>Escopeta Astartes; Puños</li>\n        <li>Bólter; Puños</li>\n        <li>Pistola bólter; Espada sierra</li>\n    </ul>\n    8 agentes de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> seleccionados de la siguiente lista:\n    <ul>\n        <li><b>EXPLORADOR TIRADOR PESADO</b> con Puños, una Pistola bólter y un Bólter pesado</li>\n        <li><b>EXPLORADOR TIRADOR PESADO</b> con Puños, una Pistola bólter y un Lanzamisiles</li>\n        <li><b>EXPLORADOR CAZADOR</b></li>\n        <li><b>EXPLORADOR FRANCOTIRADOR</b></li>\n        <li><b>EXPLORADOR RASTREADOR</b></li>\n        <li><b>COMBATIENTE EXPLORADOR</b> con una de las siguientes opciones:\n            <ul>\n                <li>Escopeta Astartes; Puños</li>\n                <li>Rifle bólter; Puños</li>\n                <li>Pistola bólter; Cuchillo de combate</li>\n            </ul>\n        </li>\n    </ul>\n    <p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team puede incluir cada agente en esta lista una vez.</p>"
+        },
+        {
+            "id_racial": 83,
+            "faction": "scouts",
+            "type": "racial",
+            "name": "Exploración Avanzada",
+            "description": "<p>Al final del paso Desplegar Agentes, puedes seleccionar y resolver hasta <span class=\"text-info-emphasis\"><b>seis</b></span> opciones de Exploración Avanzada. Cada opción tiene un número entre paréntesis, que es el número máximo de veces que puedes seleccionarla y resolverla para la batalla. Por ejemplo, tus seis selecciones podrían ser Reposicionarse x2, Alarma de Disparo, Trampa Explosiva, Maniobra Táctica y Diversión. Si ambos jugadores tienen esta habilidad, alternan resolviendo, comenzando con el Defensor.</p>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Redesplegar [1]</span>\n        <p class=\"px-2\">Cambia el despliegue de un tercio de tus agentes (redondeando hacia arriba).</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Reposicionarse [2]</span>\n        <p class=\"px-2\">Realiza una acción de <b>Reposicionarse</b> gratuita con un agente amigo que esté totalmente dentro de tu zona de desembarco. Debe terminar ese movimiento totalmente a 3\" de tu zona de desembarco.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Alarma de Disparo [2]</span>\n        <p class=\"px-2\">Coloca uno de tus marcadores de Alarma de Disparo a más de 6\" de la zona de desembarco de tu oponente. Durante el primer y segundo punto de inflexión, siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté disparando a un agente enemigo que esté a 2\" de ese marcador, sus armas a distancia tienen la regla de arma Buscadora. En el paso de Preparar de la tercera fase de Estrategia, retira ese marcador.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Trampa Explosiva [1]</span>\n        <p class=\"px-2\">Coloca uno de tus marcadores de Trampa Explosiva a más de 6\" de la zona de desembarco de tu oponente y a más de 2\" de otros marcadores, puntos de acceso y terreno accesible. La primera vez que tu marcador de Trampa Explosiva esté dentro del rango de control de un agente enemigo, retira ese marcador e inflige 2D3 de daño a ese agente; si no es incapacitado, termina su acción (si la hay), incluso si los efectos de esa acción no se cumplen. Si no se puede colocar, muévelo la cantidad mínima para hacerlo.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Diversión [1]</span>\n        <p class=\"px-2\"><b>GAMBITO ESTRATÉGICO</b> una vez por batalla. Selecciona un agente enemigo a 6\" de un borde de la killzone. Hasta el final de la siguiente activación de ese agente, resta 1 de su atributo de LPA.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Idear Plan [1]</span>\n        <p class=\"px-2\">Ganas 1PM.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Designar Objetivo [1]</span>\n        <p class=\"px-2\">Selecciona un agente enemigo para ganar una de tus fichas de Objetivo. Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté disparando, combatiendo o tomando represalias contra un agente enemigo que tenga una de tus fichas de Objetivo, puedes volver a tirar uno de tus dados de ataque.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Espiar [1]</span>\n        <p class=\"px-2\">Solo Ops Aprobadas. Tu oponente debe revelar su tac op seleccionada.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\"><span class=\"text-info-emphasis\">Maniobra Táctica [1]</span></span>\n        <p class=\"px-2\"><span class=\"text-info-emphasis\"><b>GAMBITO ESTRATÉGICO</b> una vez por batalla. Selecciona un agente amigo. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo de LPA.</span></p>\n    </div>"
+        }
+    ],
+    "tempestus-aquilons": [
+        {
+            "id_racial": 118,
+            "faction": "tempestus-aquilons",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>TEMPESTOR</b> <span class=\"faction\">AQUILÓN TEMPESTUS</span> con una de las siguientes opciones:<ul><li>Pistola láser hot-shot; arma de energía</li><li>Pistola bólter reliquia; espada sierra</li><li>Carabina láser hot-shot; puños</li></ul>\n1 <b>SERVO-CENTINELA</b> con una de las siguientes opciones:*<ul><li>Lanzallamas</li><li>Lanzagranadas</li><li>Cañón de volea hot-shot</li></ul>\n9 agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> seleccionados de la siguiente lista:<ul><li><b>GRANADERO</b></li><li><b>PISTOLERO</b></li><li><b>TIRADOR</b> con carabina de fusión y puños*</li><li><b>TIRADOR</b> con carabina de plasma y puños*</li><li><b>TIRADOR</b>*</li><li><b>PRECURSOR</b></li><li><b>SOLDADO</b></li></ul><p>Aparte de los agentes <b>SOLDADO</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 119,
+            "faction": "tempestus-aquilons",
+            "type": "racial",
+            "name": "Inserción por Despliegue",
+            "description": "<p>Al desplegar un kill team <span class=\"faction\">AQUILÓN TEMPESTUS</span> antes de la batalla, el primer tercio de tu kill team debe desplegarse de manera normal. Cada tercio a partir de entonces puede desplegarse arriba: colócalos a un lado en lugar de en la killzone. Por cada tercio que se despliegue arriba, debes desplegar todo el tercio de esta manera (no algunos de ellos), luego coloca uno de tus marcadores de Despliegue totalmente dentro de tu zona de desembarco.</p>\n\t<p>Como un <b>GAMBITO ESTRATÉGICO</b> en el primer y segundo punto de inflexión, puedes mover tus marcadores de Despliegue hasta 4\", midiendo solo la distancia horizontal. En combate cerrado, esto se puede medir y mover a través de muros.</p>\n\t<p>Durante la fase de Tiroteo, los agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> amigos desplegados arriba se activan de manera normal. Cuando lo haces, puedes agotar o aterrizar a ese agente. Si aterriza, despliégalo en la killzone en una ubicación donde pueda ser colocado de la siguiente manera (ya no está desplegado arriba):</p>\n\t<ul>\n\t<li>A 3” de uno de tus marcadores de Despliegue, midiendo solo la distancia horizontal, o totalmente dentro de tu zona de desembarco.</li>\n\t<li>No dentro del rango de control de un agente enemigo (a menos que estés desplegando un agente <b>PRECURSOR</b>, que puede desplegarse dentro del rango de control de un agente enemigo).</li>\n\t<li>Sin ninguna parte de su peana debajo de terreno de Ventaja.</li>\n\t<li>Con una orden de tu elección.</li>\n\t</ul>\n\t<p>El agente se trata como si realizara la acción <b>Reposicionarse</b> (gasta los PA en consecuencia), luego continúa su activación de manera normal. Está ofuscado hasta el final de la siguiente activación o el final del punto de inflexión (lo que ocurra primero).</p>\n\t<p>Menos de la mitad de tus agentes pueden estar desplegados arriba al final del primer punto de inflexión. En otras palabras, al final del primer punto de inflexión, más de la mitad de tus agentes deben haber sido desplegados en la killzone durante la batalla.</p>\n\t<p>Al preparar a tus agentes durante el segundo y tercer punto de inflexión, retira uno de tus marcadores de Despliegue. Esto significa que los agentes que aún estén desplegados arriba son incapacitados al final del segundo punto de inflexión.</p>"
+        },
+        {
+            "id_racial": 120,
+            "faction": "tempestus-aquilons",
+            "type": "racial",
+            "name": "Gravacaídas",
+            "description": "Cuando un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo está cayendo, ignora la distancia vertical."
+        }
+    ],
+    "vespid-stingwings": [
+        {
+            "id_racial": 114,
+            "faction": "vespid-stingwings",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>HIMENÓPTERO</b> <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span><br>1 agente <b>DRÓN DE VIGILANCIA</b> <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span><br>9 agentes <span class=\"faction\">AGUIJONES ALADOS VÉSPID</span> seleccionados de la siguiente lista:<ul><li><b>AGUIJÓNLARGO</b></li><li><b>CEPASOMBRÍA</b></li><li><b>BOMBACELESTE</b></li><li><b>GUARDIAENJAMBRE</b></li><li><b>COMBATIENTE</b></li></ul><p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 115,
+            "faction": "vespid-stingwings",
+            "type": "racial",
+            "name": "Carga de Neutrones",
+            "description": "Las armas de neutrones son cualquier arma que tenga la palabra “neutrón” en su nombre, p. ej. bláster de neutrones, lanzagranadas de neutrones, etc. Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo se mueva o use <b>VOLAR</b>, sus armas de neutrones tienen la regla de arma <b>Perforante 1</b> hasta el final del punto de inflexión."
+        },
+        {
+            "id_racial": 116,
+            "faction": "vespid-stingwings",
+            "type": "racial",
+            "name": "Comunión",
+            "description": "<p>Los puntos de Comunión se usan para mantener el enfoque táctico de los agentes <span class=\"faction\">AGUIJONES ALADOS VÉSPID</span> amigos. En el paso de Preparar de cada fase de Estrategia ganas D3 puntos de Comunión, más 1 si un agente <b>DRÓN DE SUPERVISIÓN</b> amigo está en la killzone. Los puntos de Comunión se usan de la siguiente manera (los agentes <b>DRÓN DE SUPERVISIÓN</b> no se ven afectados por lo siguiente):</p>\n\t<ol>\n\t<li>Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo esté realizando la acción <b>Disparar</b>, solo puede apuntar al agente enemigo más cercano a 8\" de él (excluyendo agentes enemigos dentro del rango de control de otros agentes <span class=\"faction\">AGUIJONES ALADOS VÉSPID</span> amigos) a menos que gastes 1 de tus puntos de Comunión. Para armas con las reglas de arma Estallido y Torrente, solo el primer objetivo debe seleccionarse de esta manera.</li>\n\t<li>Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo realice la acción <b>Cargar</b>, debe terminar la acción dentro del rango de control del agente enemigo más cercano que pueda a menos que gastes 1 de tus puntos de Comunión.</li>\n\t<li>Siempre que fueras a realizar la acción <b>Recoger Marcador</b> o una acción de misión <span class=\"text-info-emphasis\">(excluyendo <b>Operar Compuerta</b>)</span> con un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo, también debes gastar 1 de tus puntos de Comunión para hacerlo.</li>\n\t<li>Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo esté disparando, puedes gastar 1 (y solo 1) de tus puntos de Comunión para volver a tirar un dado de ataque.</li>\n\t</ol>"
+        },
+        {
+            "id_racial": 117,
+            "faction": "vespid-stingwings",
+            "type": "racial",
+            "name": "Volar",
+            "description": "<p>Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo realice una acción en la que se mueva, puede <b>VOLAR</b>. Si lo hace, no lo muevas. En su lugar, retíralo de la killzone y colócalo de nuevo totalmente dentro de una distancia igual a su atributo de Movimiento (o 3\" si fue una <b>Carrera</b>) de su ubicación original, midiendo solo la distancia horizontal. Ten en cuenta que no gana distancia adicional al realizar la acción <b>Cargar</b>.</p>\r\n\t<p>Debe colocarse en una ubicación donde pueda ser colocado, y a menos que sea la acción <b>Cargar</b>, no puede colocarse dentro del rango de control de un agente enemigo. En una killzone que usa las reglas de combate cerrado (p. ej. Killzone: Gallowdark), no puedes medir la distancia sobre o a través de terreno de muro, y ese agente no puede colocarse en el otro lado de un punto de acceso (en otras palabras, no puede <b>VOLAR</b> a través de una compuerta abierta).</p>"
+        }
+    ],
+    "veteran-guardsmen": [
+        {
+            "id_racial": 20,
+            "faction": "veteran-guardsmen",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>MAESTRO VIGÍA</b> <span class=\"faction\">KORPS DE LA MUERTE</span> equipado con una de las siguientes opciones:<ul>\r\n<li>Rifle bólter; Bayoneta.</li>\r\n<li>Pistola bólter, Pistola láser reliquia o Pistola de plasma; Espada sierra o Arma de energía.</li></ul>\r\n<p>4 agentes <b>SOLDADO</b>*</p>\r\n9 agentes <span class=\"faction\">KORPS DE LA MUERTE</span> seleccionados de la siguiente lista:<ul>\r\n<li><b>MATÓN</b></li>\n<li><b>CONFIDENTE</b> equipado con una de las siguientes opciones:<ul>\r\n<li>Rifle bólter o Rifle láser; Bayoneta.</li>\r\n<li>Pistola bólter o Pistola láser; Espada sierra.</li></ul></li>\r\n<li><b>TIRADOR</b> equipado con una Bayoneta y Lanzallamas</li>\r\n<li><b>TIRADOR</b> equipado con una Bayoneta y Lanzagranadas</li>\r\n<li><b>TIRADOR</b> equipado con una Bayoneta y Rifle de fusión</li>\r\n<li><b>TIRADOR</b> equipado con una Bayoneta y Rifle de plasma</li>\r\n<li><b>MÉDICO</b></li>\r\n<li><b>ZAPADOR</b></li>\r\n<li><b>FRANCOTIRADOR</b></li>\r\n<li><b>OBSERVADOR</b></li>\r\n<li><b>SOLDADO</b></li>\r\n<li><b>VETERANO</b></li>\r\n<li><b>OPERADOR DE VOX</b></li>\r\n<li><b>FANÁTICO</b></li></ul>\r\n<p>Aparte de los agentes <b>SOLDADO</b>, tu Kill team solo puede incluir cada agente en esta lista una vez.</p>\r\n<p>*Hasta cuatro veces, en lugar de tomar uno de estos agentes <b>SOLDADO</b>, puedes seleccionar un ardid <span class=\"faction\">KORPS DE LA MUERTE</span> para que te cueste 0PM para la batalla.</p>"
+        },
+        {
+            "id_racial": 78,
+            "faction": "veteran-guardsmen",
+            "type": "racial",
+            "name": "Órdenes de Guardia",
+            "description": "<p><b>GAMBITO ESTRATÉGICO y APOYO.</b> Un agente <b>MAESTRO VIGÍA</b> <span class=\"faction\">KORPS DE LA MUERTE</span> amigo puede emitir una <b>ORDEN DE GUARDIA</b>. Siempre que lo haga, selecciona una <b>ORDEN DE GUARDIA</b> para que todos los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos a 6\" de él la reciban.</p><p>Siempre que un agente amigo reciba una <b>ORDEN DE GUARDIA</b>, aplica sus reglas hasta el final del punto de inflexión. Los agentes no pueden beneficiarse de más de una <b>ORDEN DE GUARDIA</b> a la vez; solo se benefician de la orden más reciente que recibieron durante el punto de inflexión.</p>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">¡Moverse! ¡Moverse! ¡Moverse!</span><p class=\"px-2\">Siempre que un agente que ha recibido esta orden realice una acción de <b>Reposicionarse</b>, suma 1\" a su atributo de Movimiento.</p></div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">¡Apunten!</span><p class=\"px-2\">Las armas a distancia de los agentes que han recibido esta orden (excluyendo andanada de mortero y detonador remoto) tienen la regla de arma <span class=\"text-info-emphasis\">Incesante</span>.</p></div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">¡Atrincherarse!</span><p class=\"px-2\">Siempre que un agente enemigo esté disparando a un agente amigo que ha recibido esta orden, si retienes alguna salvación por cobertura, puedes volver a tirar <span class=\"text-info-emphasis\">cualquiera de los resultados de tus dados de defensa de un resultado (p. ej. resultados de 2)</span>.</p></div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">¡Calen Bayonetas!</span><p class=\"px-2\">Las armas cuerpo a cuerpo de los agentes que han recibido esta orden tienen la regla de arma <span class=\"text-info-emphasis\">Incesante</span>.</p></div>"
+        }
+    ],
+    "void-dancer-troupe": [
+        {
+            "id_racial": 7,
+            "faction": "void-dancer-troupe",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>PRIMADONNA</b> <b><span class=\"faction\">COMPAÑIA DE BAILARINES DEL VACÍO</span></b> con una opción de cada uno de los siguientes categorías:<ul><li>Pistola fundidora, neurodisruptor o pistola shuriken</li><li>Abrazo, arma de energía, arma de filo, beso o caricia</li></ul>7 agentes <b><span class=\"faction\">COMPAÑIA DE BAILARINES DEL VACÍO</span></b> seleccionados de la siguiente lista:<ul><li><b>BUFÓN DE MUERTE</b></li><li><b>INTERPRETE</b> con una opción de cada uno de los siguientes:<ul><li>Pistola fundidora, neurodisruptor o pistola shuriken</li><li>Abrazo, arma de filo, beso o caricia</li></ul></li><li><b>VIDENTE DE SOMBRAS</b> con granada alucinógena y una de las siguientes opciones:<ul><li>Neurodisruptor; bastón de bruma</li><li>Pistola shuriken; bastón de bruma</li></ul></li></ul><p>Aparte de los agentes <b>INTERPRETE</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta una pistola fundidora y hasta un neurodisruptor.</p>"
+        },
+        {
+            "id_racial": 82,
+            "faction": "void-dancer-troupe",
+            "type": "racial",
+            "name": "Saedath",
+            "description": "<p>Como un <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión, debes seleccionar una <b>ALEGORÍA</b> para tu kill team para la batalla, y un agente de la <span class=\"faction\">COMPAÑIA DE BAILARINES DEL VACÍO</span> amigo para tener el <b>ROL PIVOTAL</b> para la batalla. Siempre que un agente amigo tenga el <b>ROL PIVOTAL</b>, tiene la regla de <b>GALARDÓN</b> de tu <b>ALEGORÍA</b> para la batalla.</p>\n<p>Como un <b>GAMBITO ESTRATÉGICO</b> en cada punto de inflexión subsiguiente, puedes seleccionar un agente de la <span class=\"faction\">COMPAÑIA DE BAILARINES DEL VACÍO</span> amigo para ganar la regla de <b>GALARDÓN</b> de tu <b>ALEGORÍA</b> para la batalla.</p>\n<p>Una vez por punto de inflexión, cuando un agente amigo que tiene el <b>ROL PIVOTAL</b> completa la actuación de tu <b>ALEGORÍA</b>, puedes seleccionar un agente de la <span class=\"faction\">COMPAÑIA DE BAILARINES DEL VACÍO</span> amigo para ganar la regla de <b>GALARDÓN</b> de tu <b>ALEGORÍA</b> para la batalla.</p>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Épica</span>\n<p class=\"px-2\"><b>Actuación</b>: El agente incapacita a un agente enemigo mientras combate.</p>\n<p class=\"px-2\"><b>Galardón</b>: <span class=\"text-info-emphasis\">Siempre que este agente esté combatiendo, sus</span> armas cuerpo a cuerpo tienen la regla de arma Equilibrada.</p></div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Melodrama</span>\n<p class=\"px-2\"><b>Actuación</b>: El agente incapacita a un agente enemigo mientras dispara.</p>\n<p class=\"px-2\"><b>Galardón</b>: Las armas a distancia del agente tienen la regla de arma Equilibrada.</p></div>"
+        },
+        {
+            "id_racial": 89,
+            "faction": "void-dancer-troupe",
+            "type": "racial",
+            "name": "Panoplia de Arlequín",
+            "description": "<p>Siempre que un agente esté disparando a un agente de la <span class=\"faction\">COMPAÑIA DE BAILARINES DEL VACÍO</span> amigo, ignora la regla de arma Perforante.</p>\n<p>Siempre que un agente de la <span class=\"faction\">COMPAÑIA DE BAILARINES DEL VACÍO</span> amigo esté escalando <span class=\"text-info-emphasis\">hacia arriba, puedes</span> tratar la distancia vertical como <span class=\"text-info-emphasis\">2\"</span> (independientemente de qué tan lejos se mueva realmente el agente verticalmente).</p>\n<p>Los agentes de la <span class=\"faction\">COMPAÑIA DE BAILARINES DEL VACÍO</span> amigos pueden moverse dentro del rango de control de agentes enemigos (aún deben comenzar y terminar el movimiento siguiendo todos los requisitos para ese movimiento).</p>\n"
+        }
+    ],
+    "warpcoven": [
+        {
+            "id_racial": 27,
+            "faction": "warpcoven",
+            "type": "team",
+            "name": "Agentes",
+            "description": "5 agentes del <span class=\"faction\">AQUELARRE DE DISFORME</span> seleccionados de la siguiente lista:\n<ul>\n  <li>\n    <b>HECHICERO DEL DESTINO</b><span class=\"faction\"><sup>1</sup></span>\n  </li>\n  <li>\n    <b>HECHICERO DEL TEMPYRION</b><span class=\"faction\"><sup>1</sup></span>\n  </li>\n  <li>\n    <b>HECHICERO DEL FUEGO DISFORME</b><span class=\"faction\"><sup>1</sup></span>\n  </li>\n  <li>\n    <b>TIRADOR MARINE RÚBRICA</b> con una de las siguientes opciones:\n    <ul>\n      <li>Lanzallamas disforme; puños</li>\n      <li>Cañón cosechaalmas<span class=\"faction\"><sup>2</sup></span>; puños</li>\n    </ul>\n  </li>\n  <li><b>PORTAICONO MARINE RÚBRICA</b></li>\n  <li><b>COMBATIENTE MARINE RÚBRICA</b></li>\n  <li>\n    <b>CAMPEÓN TZAANGOR</b><span class=\"faction\"><sup>3</sup></span> con una de las siguientes opciones:\n    <ul>\n      <li>Gran hacha</li>\n      <li>Espadón</li>\n    </ul>\n  </li>\n  <li><b>PORTACUERNO TZAANGOR</b><span class=\"faction\"><sup>3</sup></span></li>\n  <li><b>PORTAICONO TZAANGOR</b><span class=\"faction\"><sup>3</sup></span></li>\n  <li>\n    <b>COMBATIENTE TZAANGOR</b><span class=\"faction\"><sup>3</sup></span> con una de las siguientes opciones:\n    <ul>\n      <li>Armas de Tzaangor</li>\n      <li>Arma y escudo de Tzaangor</li>\n      <li>Pistola automática; espada sierra</li>\n    </ul>\n  </li>\n</ul>\n<p>\n  <span class=\"faction\"><sup>1</sup></span> Con bastón de psicofuerza, las armas <b>PSÍQUICAS</b> en su hoja de datos y una de las siguientes opciones:\n     <ul>\n      <li>Pistola bólter inferno</li>\n      <li>Khopesh prosperiano</li>\n      <li>Pistola de llamas disformes<span class=\"faction\"><sup>2</sup></span></li>\n    </ul>\n</p>\n<p><span class=\"faction\"><sup>2</sup></span> Tu kill team solo puede incluir hasta una pistola de llamas disformes\ny hasta un cañón cosechaalmas.</p>\n<p><span class=\"faction\"><sup>3</sup></span> Estos agentes cuentan como media selección cada uno, lo que significa que puedes elegir ambos a la vez y se les considera una unica elección en total.</p>\n<p>\n Debes seleccionar al menos un agente <b>HECHICERO</b> amigo. Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez.\n</p>\n"
+        },
+        {
+            "id_racial": 56,
+            "faction": "warpcoven",
+            "type": "racial",
+            "name": "Dones de Tzeentch",
+            "description": "<p>\nSiempre que selecciones un agente <b>HECHICERO</b> para la batalla, debes seleccionar un <b>DON DE TZEENTCH</b> (abajo) para que lo tenga para la batalla. No puedes seleccionar cada DON DE TZEENTCH más de una vez por batalla.\n</p>\n\n<span class=\"faction pb-2 d-block\">Vista Incorpórea</span>\n<p>\nLas armas a distancia de este agente tienen la regla de arma Saturar. Siempre que este agente esté disparando, los agentes enemigos no pueden estar ofuscados. \n</p>\n\n<span class=\"faction pb-2 d-block\">Caminar en el Tiempo</span>\n<p>\nSuma 1\" al atributo de Movimiento de este agente.\n</p>\n\n<span class=\"faction pb-2 d-block\">Ecos de la Disformidad</span>\n<p>\nUna vez por batalla, cuando contraatacas con este agente, puedes cambiar su orden, y puede realizar una acción adicional de\n1PA gratis durante ese contraataque, pero ambas acciones deben ser diferentes.\n</p>\n\n<span class=\"faction pb-2 d-block\">Oleada de Disformidad</span>\n<p>\nSuma 1 al atributo de Daño Normal de las armas cuerpo a cuerpo de este agente.\n</p>\n\n<span class=\"faction pb-2 d-block\">Vuelo Inmaterial</span>\n<p>\nUna vez por punto de inflexión, cuando este agente esté realizando la acción <b>Cargar</b> o <b>Reposicionarse</b> durante su activación, puede <b>VOLAR</b>. Si lo hace, no lo muevas. En su lugar, retíralo de la killzone y colócalo de nuevo totalmente dentro de una distancia igual a su atributo de Movimiento de su ubicación original, midiendo solo la distancia horizontal. En una killzone que usa las reglas de combate cerrado (p. ej. Killzone: Gallowdark), esta distancia no se puede medir sobre o a través de terreno de Muro, y ese agente no puede colocarse en el otro lado de un punto de acceso (en otras palabras, no puede <b>VOLAR</b> a través de una compuerta abierta). Ten en cuenta que no gana distancia adicional al realizar la acción <b>Cargar</b>. Debe colocarse en una ubicación donde pueda ser colocado, y a menos que sea la acción <b>Cargar</b>, no puede colocarse dentro del rango de control de un agente enemigo.\n</p>\n\n<span class=\"faction pb-2 d-block\">Giro del Destino</span>\n<p>\nLas armas a distancia <b>PSÍQUICAS</b> de este agente tienen la regla de arma Perforante Críticos 1.\n</p>\n\n<span class=\"faction pb-2 d-block\">Apéndice Mutante</span>\n<p> Tener un agente enemigo dentro del rango de control de este agente no le impide realizar la acción <b>Recoger Marcador</b> o acciones de misión. Una vez por activación, este agente puede realizar la acción <b>Recoger Marcador</b>, <b>Colocar Marcador</b> o una acción de misión por 1 PA menos.\n</p>\n\n\n<span class=\"faction pb-2 d-block\">Bombardeo Astral</span>\n<p>\nSelecciona una de las armas a distancia <b>PSÍQUICAS</b> de este agente. Ese arma tiene la regla de arma Devastadora 1. Si seleccionas un rayo de condenación, tiene la regla de arma 2\" Devastadora 2 en lugar de Devastadora 2.<span class=\"text-info-emphasis\">Si seleccionas tormenta de fuego o quemadura mental (HECHICERO DEL FUEGO DE DISFORMIDAD), siempre que ese agente realice la acción <b>Disparar</b>, selecciona la regla de arma Buscadora Ligera o Devastadora 1 para que ese arma la tenga hasta el final de la acción (no puede tener ambas).</span>\n</p>\n\n<span class=\"faction pb-2 d-block\">Maestro del Inmaterium</span>\n<p>Suma 3\" a los requisitos de distancia de las acciones <b>PSÍQUICAS</b> de este agente que tengan un requisito de distancia. <span class=\"text-info-emphasis\">Ten en cuenta que para la acción <b>Flujo Temporal</b> <b>HECHICERO DEL TEMPYRION</b>, este don solo afecta la distancia en el primer efecto de esa regla.</span></p>\n"
+        },
+        {
+            "id_racial": 57,
+            "faction": "warpcoven",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "<p>\nDurante la activación de cada agente <b>HERETIC ASTARTES</b> <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de Combatir. Si son dos acciones de <b>Disparar</b> y se selecciona un cañón segador de almas o un lanzallamas de disformidad para ambas, se debe gastar 1 PA adicional para la segunda acción. No puedes seleccionar la misma arma a distancia <b>PSÍQUICA</b> más de una vez por activación.\n</p>\n<p>\nCada agente <b>HERETIC ASTARTES</b> <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo puede contraatacar independientemente de su orden.\n</p>\n"
+        }
+    ],
+    "wrecka-krew": [
+        {
+            "id_racial": 171,
+            "faction": "wrecka-krew",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>JEFASO NOBLE</b> <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> con una de las siguientes opciones:\n<ul>\n  <li>Pistola de cohetes; martillo aplastador</li>\n  <li>Dos pistolas de cohetes; rebanadora</li>\n</ul>\n2 agentes <b>GARRAPATO BOMBA</b> <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span><br>\n5 agentes del <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> seleccionados de la siguiente lista:\n<ul>\n  <li><b>CHIKO ROMPEDOR DEMOLEDOR</b></li>\n  <li><b>CHIKO ROMPEDOR LUCHADOR</b></li>\n  <li><b>CHIKO ROMPEDOR APLASTADOR</b></li>\n  <li><b>TIRADOR MATATANKES</b> con una de las siguientes opciones:\n    <ul>\n      <li>’Eavy rokkit launcha; puños</li>\n      <li>Lanzacohetes; puños</li>\n    </ul>\n  </li>\n  <li><b>COHETERO MATATANKES</b> con una de las siguientes opciones:\n    <ul>\n      <li>Lanzacohetes; cohete de pulso; puños</li>\n      <li>Lanzacohetes; estante de cohetes; puños</li>\n    </ul>\n  </li>\n</ul>\n<p>Aparte de los agentes <b>GARRAPATO BOMBA</b>, <b>CHIKO ROMPEDOR LUCHADOR</b> y <b>TIRADOR MATATANKES</b>, tu kill team solo puede incluir uno de cada uno de los agentes enumerados anteriormente.</p>\n"
+        },
+        {
+            "id_racial": 176,
+            "faction": "wrecka-krew",
+            "type": "racial",
+            "name": "FRENESÍ DE DEMOLICIÓN",
+            "description": "Siempre que un agente del <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo esté disparando, combatiendo o tomando represalias, en el paso Tirar Dados de Ataque:\n<ul>\n  <li>Por cada resultado de dado de ataque de 6 que retengas, ganas un punto de Demolición.</li>\n  <li>Puedes gastar hasta 3 de tus puntos de Demolición (a menos que sea un <b>GARRAPATO BOMBA</b>). Por cada punto que gastes de esta manera, retén uno de tus fallos como un éxito normal en lugar de descartarlo.</li>\n</ul>\nNo puedes tener más de 6 puntos de Demolición a la vez. <span class=\"text-info-emphasis\">Puedes ganar y gastar puntos de Demolición durante la misma acción y puedes hacerlo en un orden de tu elección, a menos que hayas comenzado la acción con 6, en cuyo caso solo puedes gastarlos.</span>"
+        },
+        {
+            "id_racial": 177,
+            "faction": "wrecka-krew",
+            "type": "racial",
+            "name": "BIEN BLINDADO",
+            "description": "Siempre que un agente del <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo (excluyendo <b>GARRAPATO BOMBA</b>) que tenga una orden de Trabarse realice la acción de Combatir o Disparar (excluyendo Guardia), suma 1 a su atributo de LPA hasta el inicio de su próxima activación."
+        }
+    ],
+    "wyrmblade": [
+        {
+            "id_racial": 25,
+            "faction": "wyrmblade",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>LÍDER NEÓFITO</b> de la <span class=\"faction\">HOJA DE LA SIERPE</span> con una de las siguientes opciones:\n<ul>\n\t<li>Rifle automático; Culata</li>\n\t<li>Escopeta; Culata</li>\n</ul>\nO una opción de cada uno de los siguientes:\n<ul>\n\t<li>Pistola bólter, pistola automática artesanal o pistola de red</li>\n\t<li>Espada sierra, maza de energía o pico de energía</li>\n</ul>\n\n13 agentes de la <span class=\"faction\">HOJA DE LA SIERPE</span> seleccionados de la siguiente lista:\n<ul>\n\t<li><b>KELERMORPH*</b></li>\n\t<li><b>LOCUS*</b></li>\n\t<li><b>TIRADOR</b> con lanzallamas y culata</li>\n\t<li><b>TIRADOR</b> con lanzagranadas y culata</li>\n\t<li><b>TIRADOR</b> con lanzaredes y culata</li>\n\t<li><b>TIRADOR PESADO</b> con ametralladora pesada y culata</li>\n\t<li><b>TIRADOR PESADO</b> con láser de minería y culata</li>\n\t<li><b>TIRADOR PESADO</b> con cañón sísmico y culata</li>\n\t<li>\n\t\t<b>PORTAICONO</b> con una de las siguientes opciones:\n\t\t<ul>\n\t\t\t<li>Rifle automático; culata</li>\n\t\t\t<li>Escopeta; culata</li>\n\t\t</ul>\n\t</li>\n\t<li><b>FRANCOTIRADOR SANCTUS*</b></li>\n\t<li><b>GARRA SANCTUS*</b></li>\n\t<li>\n\t\t<b>COMBATIENTE</b> con una de las siguientes opciones:\n\t\t<ul>\n\t\t\t<li>Rifle automático; culata</li>\n\t\t\t<li>Escopeta; culata</li>\n\t\t</ul>\n\t</li>\n</ul>\n\n<p><b>*</b> Estos agentes cuentan como dos selecciones cada uno.</p>\n\n<p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente en esta lista una vez. Tu kill team solo puede incluir hasta dos agentes <b>TIRADOR</b>, hasta dos agentes <b>TIRADOR PESADO</b> y hasta dos agentes <b>AGENTE DEL CULTO</b>.</p>\n"
+        },
+        {
+            "id_racial": 70,
+            "faction": "wyrmblade",
+            "type": "racial",
+            "name": "Territorio Familiar",
+            "description": "<p>Al desplegar un kill team de la <span class=\"faction\">HOJA DE LA SIERPE</span> antes de la batalla, un tercio de tu kill team puede desplegarse <b>ESCONDIDO</b>: colócalos a un lado en lugar de en la killzone. Los agentes <b>AGENTE DEL CULTO</b> no pueden\tdesplegarse <b>ESCONDIDOS</b>.</p>\n<p>En la fase de Tiroteo, los agentes de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigos desplegados <b>ESCONDIDOS</b> son activados de manera normal. Cuando lo haces, puedes agotar a ese agente o hacer que emerja. Si emerge, despliégalo en la killzone en una ubicación donde pueda ser colocado de la siguiente manera (ya no está desplegado <b>ESCONDIDO</b>):</p>\n<ul>\n\t<li>Totalmente a 6\" de tu zona de desembarco.</li>\n\t<li>A más de 6\" de agentes enemigos.</li>\n\t<li>Con una orden de tu elección.</li>\n</ul>\n<p>El agente se trata como si realizara la acción Reposicionarse (gasta los PA en consecuencia), luego continúa su activación de manera normal. Si el agente es un <b>COMBATIENTE</b>, ignora su regla de Activación de Grupo. Los agentes amigos que aún estén <b>ESCONDIDOS</b> al final del segundo punto de inflexión son incapacitados.</p>\n"
+        },
+        {
+            "id_racial": 71,
+            "faction": "wyrmblade",
+            "type": "racial",
+            "name": "Emboscada del Culto",
+            "description": "<p>Siempre que un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo esté disparando o combatiendo durante su activación, si su orden cambió de Ocultación a Trabarse al inicio de esa activación, o no era visible para agentes enemigos al inicio de esa activación, las armas de ese agente amigo tienen la regla de arma Incesante.</p>\n"
+        },
+        {
+            "id_racial": 148,
+            "faction": "wyrmblade",
+            "type": "racial",
+            "name": "Agente del Culto",
+            "description": "<p>Siempre que un agente esté disparando a un agente <b>AGENTE DEL CULTO</b> de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo:</p>\n<ul>\n\t<li>Ignora las reglas de arma Perforante y Saturar.</li>\n\t<li>Si puedes retener alguna salvación por cobertura, puedes retener una salvación por cobertura adicional, o puedes retener una salvación por cobertura como un éxito crítico en su lugar. Esto no es acumulativo con salvaciones por cobertura mejoradas de terreno de Ventaja.</li>\n</ul>\n"
+        }
+    ],
+    "yaegirs": [
+        {
+            "id_racial": 103,
+            "faction": "yaegirs",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<p>1 agente <b>THEYN</b> <span class=\"faction\">YAEGIR HERNKYN</span></p>9 agentes <span class=\"faction\">YAEGIR HERNKYN</span> seleccionados de la siguiente lista:<ul><li><b>ESPADACHÍN</b></li><li><b>BOMBAST</b></li><li><b>TIRADOR</b></li><li><b>ROMPEHIERRO</b></li><li><b>RIFLERO</b></li><li><b>RASTREADOR</b></li><li><b>COMBATIENTE</b> equipado con una de las siguientes opciones:<ul><li>Revólver bólter, cuchillo de plasma</li><li>Escopeta bólter; puños</li></ul></li></ul><p>Aparte de los agentes <b>COMBATIENTE</b>, tu kill team solo puede incluir cada agente de arriba una vez.</p>"
+        },
+        {
+            "id_racial": 104,
+            "faction": "yaegirs",
+            "type": "racial",
+            "name": "Ingenioso",
+            "description": "<p>En el paso de Preparar de cada fase de Estrategia después de la primera, ganas puntos de Ingenio determinados por el número de agentes <span class=\"faction\">YAEGIR HERNKYN</span> amigos en la killzone que no están dentro del rango de control de agentes enemigos. Al final de cada punto de inflexión, descarta tus puntos de Ingenio.</p><div class=\"weapons-table col-12 p-0 pt-2 position-relative\"><table><tbody><tr><th>Agentes</th><th>Puntos de Ingenio</th></tr><tr><td>6+</td><td>2</td></tr><tr><td>3-5</td><td>1</td></tr><tr><td>0-2</td><td>0</td></tr></tbody></table></div><p>Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo que no está dentro del rango de control de agentes enemigos sea activado, puedes gastar 1 de tus puntos de Ingenio para hacer una de las siguientes:</p><ul><li>Hasta el final de su activación, suma 1 a su atributo de LPA.</li><li>Recupera D3+1 heridas perdidas.</li></ul>"
+        },
+        {
+            "id_racial": 105,
+            "faction": "yaegirs",
+            "type": "racial",
+            "name": "Exploradores Intrépidos",
+            "description": "<p><b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Cada agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo totalmente dentro de tu zona de desembarco puede realizar inmediatamente una acción gratuita de Reposicionarse. Cada uno que lo haga debe terminar ese movimiento totalmente a 4\" de tu zona de desembarco.</p>"
+        }
+    ],
+    "xv26-battlesuits": [
+        {
+            "id_racial": 100,
+            "faction": "xv26-battlesuits",
+            "type": "team",
+            "name": "Agentes",
+            "description": "<p>1 agente <b>SHAS'VRE</b> <span class=\"faction\">XV26 STEALTH BATTLESUIT</span> equipado con una de las siguientes opciones:<ul><li>Cañón de ráfaga o bláster de fusión</li></p><p> 1 agente <b>MV75 MARKER DRONE</b> <span class=\"faction\">XV26 STEALTH BATTLESUIT</span></p><p> 1 agente <b>MV15 GUN DRONE</b> <span class=\"faction\">XV26 STEALTH BATTLESUIT</span></p> 4 agentes <span class=\"faction\">XV26 STEALTH BATTLESUIT</span> seleccionados de la siguiente lista:<ul><li><b>DESIGNATOR*</b></li><li><b>INFILTRATOR*</b></li><li><b>LIBERATOR*</b></li><li><b>LODESTAR*</b></li><li><b>NEUTRALISER*</b></li><p>Aparte de los agentes <b>INFILTRATOR</b>, tu kill team solo puede incluir cada agente de arriba una vez. Tu equipo de eliminación solo puede incluir hasta dos blásters de fusión.</p><p>*Con una de las siguientes opciones:</p><li>Cañón de ráfaga; puños</li><li>Blaster de fusión; puños</li>"
+        },
+        {
+            "id_racial": 106,
+            "faction": "xv26-battlesuits",
+            "type": "racial",
+            "name": "Campos de Sigilo",
+            "description": "<p>Siempre que un agente amigo <span class=\"faction\">XV26 STEALTH BATTLESUIT</span> tenga una orden de Ocultar, esta no será visible para los operativos enemigos a más de 3\" de ella (teniendo prioridad sobre todas las demás reglas).</p><p>Siempre que un agente amigo <span class=\"faction\">XV26 STEALTH BATTLESUIT</span> tenga una orden de Ocultar, puede realizar la acción de Retirada por 1 PA menos.</p>"
+        },
+        {
+            "id_racial": 107,
+            "faction": "xv26-battlesuits",
+            "type": "racial",
+            "name": "Kauyon",
+            "description": "Siempre que un agente <span class=\"faction\">XV26 STEALTH BATTLESUIT</span> dispara a un operativo enemigo, sus armas a distancia tienen la regla de arma X precisa. X está determinada por la ubicación de ese operativo enemigo. <div class=\"weapons-table col-12 p-0 pt-2 position-relative\"> <table> <thead> <tr> <th class=\"text-start align-top p-1 fw-bold text-center\">Ubicación del operativo enemigo</th> <th class=\"text-start align-top p-1 fw-bold\">Precisa X</th> </tr> </thead> <tbody> <tr> <td class=\"text-start align-top p-1 text-center\">A menos de 3\" de tu territorio</td> <td class=\"text-start align-top p-1\">Preciso 1</td> </tr> <tr> <td class=\"text-start align-top p-1 text-center\">Dentro de tu territorio</td> <td class=\"text-start align-top p-1\">Preciso 2</td> </tr><tr> <td class=\"text-start align-top p-1 text-center\">A menos de 3\" de tu zona de despliegue</td> <td class=\"text-start align-top p-1\">Preciso 3</td> </tr> </tbody> </table> </div>"
+        }
+    ],
+    "wolf-scouts": [
+        {
+            "id_racial": 108,
+            "faction": "wolf-scouts",
+            "type": "team",
+            "name": "Agentes",
+            "description": "1 agente <b>FENRISIAN WOLF</b> de los <span class=\"faction\">EXPLORADORES LOBO</span><br>\n 5 agentes <span class=\"faction\">EXPLORADORES LOBO</span> seleccionados de la siguiente lista:\n\n<ul> <li><b>PACK LEADER</b></li> <li><b>FANGBEARER</b></li> <li><b>TRAPMASTER</b></li> <li><b>BOMBARDA</b></li> <li><b>HUNTER</b></li> <li><b>GUNNER</b></li> <li><b>FROSTEYE</b></li> <li><b>RUNE PRIEST SKJALD</b></li> </ul> <p>A excepción de los agentes <b>HUNTER</b>, tu equipo de exterminio solo puede incluir a cada operativo en esta lista una vez.</p>"
+        },
+        {
+            "id_racial": 109,
+            "faction": "wolf-scouts",
+            "type": "racial",
+            "name": "Astartes Cazadores",
+            "description": "Durante la activación de cada agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo, puede realizar dos acciones de Disparo o dos de Lucha. Si son dos acciones de Disparo: <p><ul><li>Se debe gastar 1 PA adicional para la segunda acción si ambas acciones utilizan un arma de plasma o una pistola de plasma.</li></ul> <ul><li>No puedes seleccionar dos armas a distancia <b>PSÍQUICAS</b>.</li></ul></p> \nCada agente <span class=\"faction\">EXPLORADOR LOBO</span> puede reaccionar independientemente de su orden. Al hacerlo dentro de tu <b>TORMENTA</b>, puedes cambiar su orden primero o cambiar su orden en lugar de realizar la acción (para esto último, se considera que ha reaccionado en este punto de inflexión)."
+        },
+        {
+            "id_racial": 110,
+            "faction": "wolf-scouts",
+            "type": "racial",
+            "name": "Tormenta elemental",
+            "description": "<p>Como un <b>GAMBITO ESTRATÉGICO:</b> Retira tu marcador de Tormenta de la zona de aniquilación (si lo hay) y colócalo allí. Siempre que un agente esté a 6\" o menos horizontalmente de tu marcador de Tormenta, estará dentro de tu <b>TORMENTA</b>.</p> <p>Cada agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo puede realizar la acción <b>Cargar</b> mientras tenga una orden de <b>Ocultar</b> si comienza y/o finaliza esa acción dentro de tu <b>TORMENTA</b>.</p>"
+        }
+    ],
+    "strike-force-variel": [
+        {
+            "id_racial": 111,
+            "faction": "strike-force-variel",
+            "type": "team",
+            "name": "Agentes",
+            "description": "Un kill team <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> está formado por 6 agentes diferentes de <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>"
+        },
+        {
+            "id_racial": 112,
+            "faction": "strike-force-variel",
+            "type": "racial",
+            "name": "No clasificado",
+            "description": "El kill team <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> no esta clasificado."
+        }
+    ]
+}

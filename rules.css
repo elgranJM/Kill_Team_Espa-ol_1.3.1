@@ -1,0 +1,120 @@
+/* Game Rules Section */
+
+#rules-search-input {
+    margin-bottom: 1rem;
+}
+
+#search-results {
+    margin-bottom: 1rem;
+}
+
+.rules-title {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.section {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+body.dark-mode .section {
+    border-bottom-color: #495057;
+}
+
+#rules-pane .intro {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6c757d;
+}
+
+body.dark-mode #rules-pane .intro {
+    color: #adb5bd;
+}
+
+#rules-pane .rules-examples {
+    margin-top: 1rem;
+}
+
+#rules-pane .rules-example .figure {
+    margin-bottom: 1rem;
+}
+
+#rules-pane .rules-example .figure-img {
+    margin-bottom: 0.5rem;
+}
+
+#rules-pane .datacard-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#rules-pane .tacop {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+body.dark-mode #rules-pane .tacop {
+    border-color: #495057;
+}
+
+#rules-pane .tacop .header {
+    background-color: #f8f9fa;
+    padding: 0.75rem 1.25rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.dark-mode #rules-pane .tacop .header {
+    background-color: #343a40;
+    border-bottom-color: #495057;
+}
+
+#rules-pane .tacop .content {
+    padding: 1.25rem;
+}
+
+#rules-pane .tacop .sub-header {
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#rules-pane .tacop .victory-points {
+    margin-top: 1rem;
+}
+
+#equipment-content img[src*="ammo-cache.png"],
+#equipment-content img[src*="comms-device.png"],
+#equipment-content img[src*="mines.png"],
+#equipment-content img[src*="razor-wire.png"],
+#equipment-content img[src*="light-barricade.png"],
+#equipment-content img[src*="heavy-barricade.png"],
+#equipment-content img[src*="ladder.png"],
+#equipment-content img[src*="portable-barricade.png"] {
+    max-width: 158px;
+    max-height: 152px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block !important; /* Added !important */
+    float: none;
+    line-height: 24px; /* Updated line-height */
+    position: static;
+    z-index: auto;
+}
+
+.equipment-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

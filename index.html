@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kill Team BattleKit Local</title>
+    <!-- Bootstrap CSS -->
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timeline.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="#">Kill Team BattleKit</a>
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-md-none collapsed me-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav nav-pills flex-column" id="main-nav" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="game-sequence-tab" data-bs-toggle="pill" data-bs-target="#game-sequence-pane" type="button" role="tab">
+                                <i class="bi bi-sort-numeric-down me-2"></i> Secuencia de Juego
+                            </button>
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tacops-tab" data-bs-toggle="pill" data-bs-target="#tacops-pane" type="button" role="tab">
+                                <i class="bi bi-bookmark-star me-2"></i> TacOps
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="factions-tab" data-bs-toggle="pill" data-bs-target="#factions-pane" type="button" role="tab">
+                                <i class="bi bi-person-vcard me-2"></i> Reglas de Facción
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="rules-tab" data-bs-toggle="pill" data-bs-target="#rules-pane" type="button" role="tab">
+                                <i class="bi bi-book me-2"></i> Reglas de Juego
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="games-tab" data-bs-toggle="pill" data-bs-target="#games-pane" type="button" role="tab">
+                                <i class="bi bi-list-ol me-2"></i> Partidas
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation" id="game-in-progress-nav-item" style="display: none;">
+                            <button class="nav-link" id="game-in-progress-tab" data-bs-toggle="pill" data-bs-target="#game-in-progress-pane" type="button" role="tab">
+                                <i class="bi bi-dice-5 me-2"></i> Partida en Curso
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="tab-content pt-3" id="main-content">
+
+                    <div class="tab-pane fade" id="game-sequence-pane" role="tabpanel">
+                        <ul class="timeline">
+                            <li class="timeline-item">
+                                <div class="timeline-icon"><i class="bi bi-map-fill"></i></div>
+                                <div class="timeline-content">
+                                    <h5>1. Preparar la Batalla</h5>
+                                    <ul>
+                                        <li>Cada jugador selecciona un kill team para la batalla.</li>
+                                        <li>Determinar la killzone y preparar los elementos de terreno. Asegúrate de especificar los tipos de terreno.</li>
+                                        <li>Determinar una crit op compartida y colocar los marcadores de objetivo. A excepción de Killzone: Bheta-Decima, todos los marcadores de objetivo deben colocarse en el suelo de la killzone.</li>
+                                        <li><b>Tirada de iniciativa:</b> el ganador decide quién tiene la iniciativa.</li>
+                                        <li>El jugador con la iniciativa selecciona una zona de desembarco. Su oponente obtiene la otra zona de desembarco y gana la carta <i>Repetir iniciativa</i> (explicado en el paso 4).</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                                <div class="timeline-content">
+                                    <h5>2. Seleccionar Agentes</h5>
+                                    <ul>
+                                        <li>Cada jugador selecciona en secreto sus agentes para la batalla, cumpliendo con los requisitos de selección en las reglas de su kill team. Luego revelan sus selecciones simultáneamente.</li>
+                                        <li>Cada jugador selecciona en secreto hasta cuatro opciones de equipamiento. Cada opción no puede ser seleccionada más de una vez por jugador. Luego revelan sus selecciones simultáneamente.</li>
+                                        <li>Cada jugador comienza con 2PM.</li>
+                                        <li>Cada jugador selecciona en secreto una tac op de uno de los arquetipos de su kill team (Infiltración, Reconocimiento, Seguridad o Buscar y Destruir, según se especifique en las reglas de su kill team).</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-icon"><i class="bi bi-signpost-2-fill"></i></div>
+                                <div class="timeline-content">
+                                    <h5>3. Desplegar Agentes</h5>
+                                    <ul>
+                                        <li>Cada jugador alterna la colocación de un elemento de equipamiento que se coloca antes de la batalla (escaleras, etc.), comenzando con el jugador con la iniciativa. Nota: es elemento por elemento, no opción por opción.</li>
+                                        <li>Cada jugador alterna el despliegue de un tercio de su kill team (redondeando hacia arriba), comenzando con el jugador con la iniciativa. Cuando un jugador despliega un agente, debe estar totalmente dentro de su zona de desembarco y debe dársele una orden de Ocultación.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
+                                <div class="timeline-content">
+                                    <h5>4. Jugar la batalla</h5>
+                                    <ul>
+                                        <li>Para determinar la iniciativa durante cada punto de inflexión (incluyendo el primero), los jugadores hacen una tirada (los empates no se repiten). Comenzando con el jugador que perdió la tirada, cada jugador alterna el uso de una carta de iniciativa para alterar el resultado de su tirada o pasar, hasta que ambos pasen en sucesión.</li>
+                                        <li>Si un jugador (o jugadores) usara las reglas de su kill team para afectar la tirada, debe hacerlo antes de jugar cartas de iniciativa, comenzando con el jugador que está perdiendo la tirada.</li>
+                                        <li>La carta Repetir iniciativa permite al jugador volver a tirar su dado de iniciativa. Las cartas de iniciativa restantes cambian el resultado de la tirada del jugador hacia arriba o hacia abajo (esto puede llevarlo por encima de 6 o por debajo de 1).</li>
+                                        <li>El ganador de la tirada decide quién tiene la iniciativa. Excepto durante el cuarto punto de inflexión, el perdedor de la tirada gana una carta de iniciativa con un valor igual al punto de inflexión. Si la tirada es un empate, el jugador que no tenía la iniciativa en ese momento es el ganador.</li>
+                                        <li>Como un <b>Gambito Estratégico</b> durante el primer punto de inflexión, cada jugador selecciona en secreto una de sus tres operaciones (crítica, eliminación o táctica) como su operación primaria. Luego, cada jugador coloca una carta con su elección boca abajo, o usa un dado u otro método para indicarlo.</li>
+                                        <li>Cada jugador puede obtener un máximo de 6PV por cada operación.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-icon"><i class="bi bi-sign-stop-fill"></i></div>
+                                <div class="timeline-content">
+                                    <h5>5. Terminar la Batalla</h5>
+                                    <ul>
+                                        <li>La batalla termina después de que se hayan completado cuatro puntos de inflexión. Si un jugador no tiene agentes en la killzone pero la batalla no ha terminado, el otro jugador completa los puntos de inflexión restantes hasta que la batalla termine.</li>
+                                        <li>Al final de la batalla, todos los jugadores revelan simultáneamente sus operaciones primarias. Obtienen PV adicionales iguales a la mitad de lo que obtuvieron para esa operación (redondeando hacia arriba).</li>
+                                        <li>El jugador con más PV es el ganador. Si los jugadores están empatados, la batalla es un empate.</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="tacops-pane" role="tabpanel">
+                        <!-- TacOps Filter Controls -->
+                        <div class="row">
+                            <div class="col text-center p-3">
+                                <div class="form-control text-center p-3 border-0 bg-transparent">
+                                    <span>Todos</span>
+                                    <input type="checkbox" id="FavTacops-switch" class="ms-1 me-1">
+                                    <label class="switch-label" for="FavTacops-switch"></label>
+                                    <span class="p-2">Favoritos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tacopsFilter" class="row ps-3 pe-3">
+                            <div class="col-md-6 offset-md-3 text-center p-3">
+                                <label for="tacopsFilterSelect" class="form-label">Filtrar por Arquetipo:</label>
+                                <select id="tacopsFilterSelect" class="form-select">
+                                    <option value="" selected="selected">Todos los Arquetipos</option>
+                                    <option value="security">Seguridad</option>
+                                    <option value="seek-destroy">Buscar y Destruir</option>
+                                    <option value="recon">Reconocimiento</option>
+                                    <option value="infiltration">Infiltración</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- TacOps Cards Container -->
+                        <div class="row justify-content-center">
+
+                            <!-- Recon Card (Flank) -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="flank" class="tacop card recon recon-icon">
+                                    <div class="archetype position-relative">Reconocimiento<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Flanco</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points">
+                                                <div class="sub-header">Revelar</div>
+                                                Como un <b>GAMBITO ESTRATÉGICO</b>.
+                                            </div>
+                                            <div class="victory-points">
+                                                <div class="sub-header">Reglas Adicionales</div>
+                                                <div class="row g-3 tacop-columns">
+                                                    <div class="col-12 col-md-6">
+                                                        <p>Divide la killzone en dos flancos (izquierdo y derecho) trazando una línea imaginaria igual que la línea central, excepto que va desde el centro del borde de la killzone de cada jugador. Un agente disputa un flanco mientras esté totalmente dentro de él y dentro del territorio de su oponente. Los agentes amigos controlan un flanco si el atributo LPA total de los que lo disputan es mayor que el de los agentes enemigos.</p>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 text-center">
+                                                        <img src="./resources/tacops_files/flank_tacop-1.png" alt="Diagrama de Flanco (Reconocimiento)" class="img-fluid">
+                                                        <p class="small mt-2 mb-0">P. ej., el Jugador 1 controla este flanco ya que el LPA total de los agentes del jugador 1 totalmente dentro del territorio del jugador 2 es mayor que el de los agentes del jugador 2 totalmente dentro del territorio del jugador 1.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="victory-points">
+                                                <div class="sub-header">Puntos de Victoria</div>
+                                                <ul>
+                                                    <li>Después de revelar esta op, al final de cada punto de inflexión después del primero, por cada flanco que los agentes amigos controlen, obtienes 1PV.</li>
+                                                    <li>Si los agentes amigos también controlaron ese flanco al final del punto de inflexión anterior (excluyendo el primero), obtienes 2PV en su lugar.</li>
+                                                </ul>
+                                                <p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Retrieval Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="retrieval" class="tacop card recon recon-icon">
+                                    <div class="archetype position-relative">Reconocimiento<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Recuperación</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que obtengas PV de esta op.</div>
+                                            <div class="sub-header mt-3">Acción de Misión</div>
+                                            <div class="header"><div>Recuperar</div><div class="ap-box">1LPA</div></div>
+                                            <div class="content"><ul><li><span class="icon-yes"></span>Si el agente activo controla un marcador de objetivo que no ha sido buscado por agentes amigos, ese agente ahora lleva uno de tus marcadores de misión de Recuperación y ese marcador de objetivo ha sido buscado por agentes amigos. Los agentes amigos pueden realizar la acción "Recoger Marcador" en tus marcadores de misión de Recuperación.</li><li><span class="icon-no"></span>Un agente no puede realizar esta acción durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.</li></ul></div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p>La primera vez que se busca cada marcador de objetivo... obtienes 1PV.</p><p>Al final de la batalla, por cada uno de tus marcadores de misión de Recuperación... obtienes 1PV.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Scout Enemy Movement Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="scout-enemy-movement" class="tacop card recon recon-icon">
+                                    <div class="archetype position-relative">Reconocimiento<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Vigilar el Movimiento Enemigo</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente amigo realiza la acción <b>Vigilar</b>.</div>
+                                            <div class="sub-header mt-3">Acción de Misión</div>
+                                            <div class="header"><div>Vigilar</div><div class="ap-box">1LPA</div></div>
+                                            <div class="content"><ul><li><span class="icon-yes"></span>Selecciona un agente enemigo preparado, visible y a más de 6" del agente activo. Ese agente enemigo ahora está vigilado hasta el paso de Preparar de la próxima fase de Estrategia.</li><li><span class="icon-no"></span>Un agente no puede realizar esta acción mientras tiene una orden de Trabarse, durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.</li></ul></div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><ul><li>Al final de cada punto de inflexión después del primero, por cada agente enemigo vigilado... obtienes 1PV.</li></ul><p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sweep & Clear Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="sweep-clear" class="tacop card seek-destroy seek-destroy-icon">
+                                    <div class="archetype position-relative">Buscar y Destruir<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Revisar y Purgar</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente enemigo es incapacitado mientras disputa un marcador de objetivo, o la primera vez que un agente amigo realiza la acción <b>Purgar</b> (lo que ocurra primero).</div>
+                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Cuando un agente enemigo que disputa un marcador de objetivo es incapacitado, ese marcador de objetivo gana una de tus fichas de <b>Revisado</b> (si aún no tiene una) hasta el paso de Preparar de la próxima fase de Estrategia.</div>
+                                            <div class="sub-header mt-3">Acción de Misión</div>
+                                            <div class="header"><div>Purgar</div><div class="ap-box">1LPA</div></div>
+                                            <div class="content"><ul><li><span class="icon-yes"></span> Un marcador de objetivo que controla el agente activo queda purgado para el punto de inflexión.</li><li><span class="icon-no"></span> Un agente no puede realizar esta acción durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.</li></ul></div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><ul><li>Al final de cada punto de inflexión después del primero, si los agentes amigos controlan algún marcador de objetivo que tenga una de tus fichas de <b>Revisado</b>, obtienes 1PV.</li><li>Si esto es cierto y cualquiera de esos marcadores de objetivo también está <b>purgado</b>, obtienes 2PV en su lugar.</li></ul><p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dominate Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="dominate" class="tacop card seek-destroy seek-destroy-icon">
+                                    <div class="archetype position-relative">Buscar y Destruir<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Dominar</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente enemigo es incapacitado por un agente amigo.</div>
+                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Cada vez que un agente amigo incapacita a un agente enemigo, ese agente amigo gana una de tus fichas de Dominación.</div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p><ul><li>Al final del tercer y cuarto punto de inflexión, puedes retirar fichas de Dominación de los agentes aliados que no estén incapacitados. Por cada ficha que elimines, obtienes 1 PV.</li></ul></p><p>No puedes obtener más de 3PV de esta op por punto de inflexión.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Rout Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="rout" class="tacop card seek-destroy seek-destroy-icon">
+                                    <div class="archetype position-relative">Buscar y Destruir<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Hacer Huir</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que obtengas PV de esta op.</div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><ul><li>Siempre que un agente amigo incapacite a un agente enemigo, si ese agente amigo está a 6" de la zona de caída de tu oponente, obtienes 1 PV.</li><li>Si su atributo de Heridas es de 12 o más, obtienes 2PV en su lugar.</li></ul><p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Plant Banner Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="plant-banner" class="tacop card security security-icon">
+                                    <div class="archetype position-relative">Seguridad<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Izar Bandera</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>Cuando realizas la acción <b>Izar Bandera</b>.</div>
+                                            <div class="sub-header mt-3">Acción de Misión</div>
+                                            <div class="header"><div>Izar Bandera</div><div class="ap-box">1LPA</div></div>
+                                            <div class="content"><ul><li><span class="icon-yes"></span> Coloca tu marcador de misión de Bandera dentro del rango de control del agente activo, totalmente dentro del territorio de tu oponente y a más de 5" de un borde de killzone neutral. Los agentes pueden realizar la acción "Recoger Marcador" en tu marcador de misión de Bandera.</li><li><span class="icon-no"></span> Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo, o si un agente amigo ya ha realizado esta acción durante la batalla.</li></ul></div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p>Al final de cada punto de inflexión después del primero, si tu marcador de misión de Bandera está totalmente dentro del territorio de tu oponente y los agentes amigos lo controlan, obtienes 1PV</p><p>Si eso es cierto y ningún agente enemigo lo disputa, obtienes 2PV en su lugar. Ten en cuenta que tu marcador de misión de Bandera debe estar en la killzone (no siendo transportado) para puntuar.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Martyrs Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="martyrs" class="tacop card security security-icon">
+                                    <div class="archetype position-relative">Seguridad<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Mártires</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente amigo es incapacitado mientras disputa un marcador de objetivo.</div>
+                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Siempre que un agente amigo es incapacitado mientras disputa un marcador de objetivo, ese marcador gana una de tus fichas de Mártir. Ten en cuenta que esto es solo la primera vez que cada agente es incapacitado, así que si un agente es incapacitado, se vuelve a desplegar (p. ej. Protocolos de Reanimación del <b>CÍRCULO HIEROTEK</b>) y luego es incapacitado de nuevo, no se puede ganar una segunda ficha de Mártir como resultado.</div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><ul><p><li>Al final de cada punto de inflexión después del primero, si los agentes amigos disputan un marcador de objetivo que tiene una o más de tus fichas de Mártir, puedes retirar cualquiera de esas fichas. Por cada ficha que retires, obtienes 1PV</li><li>Si los agentes amigos también controlan ese marcador, obtienes 2PV en su lugar.</li></p></ul><p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Envoy Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="envoy" class="tacop card security security-icon">
+                                    <div class="archetype position-relative">Seguridad<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Mensajero</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que seleccionas un mensajero.</div>
+                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Como un <b>GAMBITO ESTRATÉGICO</b> en cada punto de inflexión después del primero, selecciona un agente amigo para ser tu mensajero hasta el paso de Preparar de la próxima fase de Estrategia. No puedes seleccionar un agente que seleccionaste durante un punto de inflexión anterior o un agente que es ignorado para la kill op.</div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p>Al final de cada punto de inflexión... si tu mensajero está totalmente dentro del territorio enemigo... obtienes 1PV</p><p>Si esto es cierto y tu mensajero no ha perdido ninguna herida... obtienes 2PV en su lugar.</ul></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Track Enemy Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="track-enemy" class="tacop card infiltration infiltration-icon">
+                                    <div class="archetype position-relative">Infiltración<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Localizar Enemigo</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que obtengas PV de esta op.</div>
+                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Un agente enemigo está siendo localizado si es un Blanco Valido para un agente amigo a menos de 6" de él. Ese agente amigo debe tener una orden de Ocultación, no puede ser un Blanco Valido para el agente enemigo que está intentando localizar, y no puede estar dentro del rango de control de agentes enemigos.</div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div>
+                                                <p>Al final de cada punto de inflexión después del primero:</p>
+                                                <ul>
+                                                    <li>Si un agente enemigo está siendo localizado, obtienes 1PV, o 2PV en su lugar si es el cuarto punto de inflexión.</li>
+                                                    <li>Si dos o más agentes enemigos están siendo localizados, obtienes 2PV.</li>
+                                                </ul>
+                                                <p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Plant Devices Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="plant-devices" class="tacop card infiltration infiltration-icon">
+                                    <div class="archetype position-relative">Infiltración<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Colocar dispositivos</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente amigo realiza la acción <b>Colocar Dispositivo</b>.</div>
+                                            <div class="sub-header mt-3">Acción de Misión</div>
+                                            <div class="header"><div>Colocar Dispositivo</div><div class="ap-box">1LPA</div></div>
+                                            <div class="content"><ul><li><span class="icon-yes"></span> Un marcador de objetivo que controla el agente activo gana una de tus fichas de Dispositivo.</li><li><span class="icon-no"></span> Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo, o si ese marcador de objetivo ya tiene una de tus fichas de Dispositivo.</li></ul></div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div>
+                                                <p>Al final de cada punto de inflexión después del primero:</p>
+                                                <ul>
+                                                    <li>Si el marcador de objetivo de tu oponente tiene una de tus fichas de Dispositivo, obtienes 1PV.</li>
+                                                    <li>Por cada otro marcador de objetivo que disputen los agentes enemigos que tenga una de tus fichas de Dispositivo, obtienes 1PV.</li>
+                                                </ul>
+                                                <p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Steal Intelligence Card -->
+                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
+                                <div id="steal-intelligence" class="tacop card infiltration infiltration-icon">
+                                    <div class="archetype position-relative">Infiltración<i class="gototacops bi bi-heart position-absolute"></i></div>
+                                    <div class="middle">
+                                        <h2 class="name">Robar Información</h2>
+                                        <div class="mission-container pt-0">
+                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente enemigo es incapacitado.</div>
+                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div><p>Siempre que un agente enemigo es incapacitado, antes de que sea retirado de la killzone, coloca uno de tus marcadores de misión de Información dentro de su rango de control.</p><p>Los agentes amigos pueden realizar la acción <b>Recoger Marcador</b> en tus marcadores de misión de Información, y para los propósitos de las condiciones de esa acción, ignora el primer marcador de misión de Información que lleva el agente activo. En otras palabras, cada agente amigo puede llevar hasta dos marcadores de misión de Información, o uno y otro marcador.</p></div>
+                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p>Al final de cada punto de inflexión después del primero, si algún agente amigo lleva alguno de tus marcadores de misión de Información, obtienes 1PV.</p><p>Al final de la batalla, por cada uno de tus marcadores de misión de Información que lleven los agentes amigos, obtienes 1PV.</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- End of TacOps Cards Container -->
+                    </div>
+
+                    <!-- Faction Rules Pane -->
+                    <div class="tab-pane fade show active" id="factions-pane" role="tabpanel">
+                        <h3>Reglas de Facción</h3>
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <!-- UPDATED: Selector changed from Year/Edition to Faction Type -->
+                                <label for="faction-type-select" class="form-label">Filtrar por Tipo de Facción:</label>
+                                <select class="form-select" id="faction-type-select">
+                                    <option value="" selected>Todas las facciones</option>
+                                    <option value="Imperio">Imperio</option>
+                                    <option value="Caos">Caos</option>
+                                    <option value="Xenos">Xenos</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="faction-select" class="form-label">Seleccionar Kill Team:</label>
+                                <select class="form-select" id="faction-select">
+                                    <option selected>Elige un Kill Team...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Sub-navigation for the selected faction -->
+                        <ul class="nav nav-tabs mt-4" id="faction-details-nav" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="faction-info-tab" data-bs-toggle="tab" data-bs-target="#faction-info-pane" type="button" role="tab">Info de Facción</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="operatives-tab-btn" data-bs-toggle="tab" data-bs-target="#operatives-pane" type="button" role="tab">Agentes</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="faction-tacops-tab-btn" data-bs-toggle="tab" data-bs-target="#faction-tacops-pane" type="button" role="tab">Tacops</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="ploys-tab-btn" data-bs-toggle="tab" data-bs-target="#ploys-pane" type="button" role="tab">Ardides</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="equipment-tab-btn" data-bs-toggle="tab" data-bs-target="#equipment-pane" type="button" role="tab">Equipamiento</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content faction-pane-content" id="faction-details-content">
+                            <!-- Corrected Panes with IDs for JS to target -->
+                            <div class="tab-pane fade show active p-3" id="faction-info-pane" role="tabpanel">
+                                <div id="faction-container">
+                                    <div class="alert alert-info">Selecciona una facción para ver sus Reglas de Facción.</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3" id="operatives-pane" role="tabpanel">
+                                <div id="datacards-container">
+                                    <div class="alert alert-info">Selecciona una facción para ver sus hojas de datos de agentes.</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3" id="faction-tacops-pane" role="tabpanel">
+                                <div id="tacop-container">
+                                    <div class="alert alert-info">Selecciona una facción para ver sus TacOps.</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3" id="ploys-pane" role="tabpanel">
+                                <div id="ploys-container">
+                                    <div class="alert alert-info">Selecciona una facción para ver sus Ardides.</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade p-3" id="equipment-pane" role="tabpanel">
+                                <div id="equip-container">
+                                    <div class="alert alert-info">Selecciona una facción para ver sus Equipamientos.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="rules-pane" role="tabpanel">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="rules-search-input" class="form-control" placeholder="Buscar reglas...">
+                                    <button class="btn btn-outline-secondary" type="button" id="rules-search-button">Buscar</button>
+                                </div>
+                                <div id="search-results" class="list-group position-absolute" style="z-index: 1000;"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <ul class="nav nav-pills flex-column" id="rules-nav" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="principles-tab-button" data-bs-toggle="pill" data-bs-target="#principles-content" type="button" role="tab">Principios Básicos</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="actions-tab-button" data-bs-toggle="pill" data-bs-target="#actions-content" type="button" role="tab">Acciones</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="weapons-tab-button" data-bs-toggle="pill" data-bs-target="#weapons-content" type="button" role="tab">Reglas de Armas</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="terrain-tab-button" data-bs-toggle="pill" data-bs-target="#terrain-content" type="button" role="tab">Terreno</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="equipment-tab-button" data-bs-toggle="pill" data-bs-target="#equipment-content" type="button" role="tab">Equipamiento</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="tab-content" id="rules-content-container">
+                                    <div class="tab-pane fade show active" id="principles-content" role="tabpanel"></div>
+                                    <div class="tab-pane fade" id="actions-content" role="tabpanel"></div>
+                                    <div class="tab-pane fade" id="weapons-content" role="tabpanel"></div>
+                                    <div class="tab-pane fade" id="terrain-content" role="tabpanel"></div>
+                                    <div class="tab-pane fade" id="equipment-content" role="tabpanel"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="games-pane" role="tabpanel">
+                        <h3>Partidas</h3>
+                        <!-- Profile Management -->
+                        <div class="row align-items-center mb-3">
+                            <div class="col-md-4">
+                                <label for="profile-select" class="form-label">Seleccionar Perfil:</label>
+                                <select class="form-select" id="profile-select"></select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="new-profile-name" class="form-label">Crear Nuevo Perfil:</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="new-profile-name" placeholder="Nombre del Perfil">
+                                    <button class="btn btn-outline-secondary" type="button" id="create-profile-btn">Crear</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-end">
+                                <button id="createGameBtn" type="button" class="btn btn-primary ms-auto">Nueva Partida</button>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-3">
+                            <div class="col-md-6">
+                                <button id="export-profile-btn" class="btn btn-secondary">Exportar Perfil</button>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="file" id="import-profile-input" style="display: none;" accept=".json">
+                                <label for="import-profile-input" class="btn btn-secondary">Importar Perfil</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Games Table -->
+                        <div id="games-table-container">
+                            <table class="table table-bordered table-hover" id="gamesTable">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" style="width: 10%;"><i class="bi bi-clock-history"></i></th>
+                                        <th class="text-center">Puntuación</th>
+                                        <th class="text-center d-none d-md-table-cell align-middle">Oponente</th>
+                                        <th class="text-center" style="width: 10%;">Res</th>
+                                        <th class="text-center" style="width: 5%;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Game rows will be inserted here by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="game-in-progress-pane" role="tabpanel">
+    <div class="row mb-3">
+        <div class="col-12">
+            <h4 class="text-center mb-3">Partida en Curso</h4>
+        </div>
+    </div>
+
+    <!-- Turning Point Selection -->
+    <div class="row mb-3">
+        <div class="col-12 text-center">
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="tp-radio" id="tp1" data-tp="1" checked>
+                <label class="btn btn-outline-primary current-tp" for="tp1">TP1</label>
+                <input type="radio" class="btn-check" name="tp-radio" id="tp2" data-tp="2">
+                <label class="btn btn-outline-primary" for="tp2">TP2</label>
+                <input type="radio" class="btn-check" name="tp-radio" id="tp3" data-tp="3">
+                <label class="btn btn-outline-primary" for="tp3">TP3</label>
+                <input type="radio" class="btn-check" name="tp-radio" id="tp4" data-tp="4">
+                <label class="btn btn-outline-primary" for="tp4">TP4</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scoreboard -->
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <div style="font-size: 3rem; font-weight: bold; color: #0d6efd;">
+                <span id="player1-total-score">0</span> - <span id="player2-total-score">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scoring Grid -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h5 class="text-center">Jugador 1</h5>
+            <table class="scoring-table">
+                <thead>
+                    <tr class="turning-point-header">
+                        <td style="width: 60px;"></td>
+                        <td class="tp-column tp1-col current-tp">TP1</td>
+                        <td class="tp-column tp2-col">TP2</td>
+                        <td class="tp-column tp3-col">TP3</td>
+                        <td class="tp-column tp4-col">TP4</td>
+                        <td class="tp-column" style="min-width: 200px;">Crit Tac Kill</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="scoring-row">
+                        <td class="scoring-label">Crit</td>
+                        <td class="tp-column">
+                            <div style="opacity: 0.5; font-size: 12px;">Marcado</div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="1" data-category="crit" data-tp="2">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="1" data-category="crit" data-tp="3">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="1" data-category="crit" data-tp="4">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column"></td>
+                    </tr>
+                    <tr class="scoring-row">
+                        <td class="scoring-label">Tac</td>
+                        <td class="tp-column">
+                            <div style="opacity: 0.5; font-size: 12px;">Marcado</div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="1" data-category="tac" data-tp="2">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="1" data-category="tac" data-tp="3">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="1" data-category="tac" data-tp="4">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column"></td>
+                    </tr>
+                    <tr class="scoring-row">
+                        <td class="scoring-label">Kill</td>
+                        <td class="tp-column"></td>
+                        <td class="tp-column"></td>
+                        <td class="tp-column"></td>
+                        <td class="tp-column"></td>
+                        <td class="tp-column">
+                            <div class="kill-skulls-container" data-player="1">
+                                <div class="kill-skulls-main">
+                                    <div class="skull-grid kill-skull" data-skull="1"></div>
+                                    <div class="skull-grid kill-skull" data-skull="2"></div>
+                                    <div class="skull-grid kill-skull" data-skull="3"></div>
+                                    <div class="skull-grid kill-skull" data-skull="4"></div>
+                                    <div class="skull-grid kill-skull" data-skull="5"></div>
+                                </div>
+                                <div class="kill-skulls-sixth">
+                                    <div class="skull-grid kill-skull-sixth" data-skull="6"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h5 class="text-center">Jugador 2</h5>
+            <table class="scoring-table">
+                <thead>
+                    <tr class="turning-point-header">
+                        <td style="width: 60px;"></td>
+                        <td class="tp-column tp1-col current-tp">TP1</td>
+                        <td class="tp-column tp2-col">TP2</td>
+                        <td class="tp-column tp3-col">TP3</td>
+                        <td class="tp-column tp4-col">TP4</td>
+                        <td class="tp-column" style="min-width: 200px;">Crit Tac Kill</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="scoring-row">
+                        <td class="scoring-label">Crit</td>
+                        <td class="tp-column">
+                            <div style="opacity: 0.5; font-size: 12px;">Marcado</div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="2" data-category="crit" data-tp="2">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="2" data-category="crit" data-tp="3">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="2" data-category="crit" data-tp="4">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column"></td>
+                    </tr>
+                    <tr class="scoring-row">
+                        <td class="scoring-label">Tac</td>
+                        <td class="tp-column">
+                            <div style="opacity: 0.5; font-size: 12px;">Marcado</div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="2" data-category="tac" data-tp="2">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="2" data-category="tac" data-tp="3">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column">
+                            <div class="skull-container" data-player="2" data-category="tac" data-tp="4">
+                                <div class="skull-grid" data-skull="1"></div>
+                                <div class="skull-grid" data-skull="2"></div>
+                            </div>
+                        </td>
+                        <td class="tp-column"></td>
+                    </tr>
+                    <tr class="scoring-row">
+                        <td class="scoring-label">Kill</td>
+                        <td class="tp-column"></td>
+                        <td class="tp-column"></td>
+                        <td class="tp-column"></td>
+                        <td class="tp-column"></td>
+                        <td class="tp-column">
+                            <div class="kill-skulls-container" data-player="2">
+                                <div class="kill-skulls-main">
+                                    <div class="skull-grid kill-skull" data-skull="1"></div>
+                                    <div class="skull-grid kill-skull" data-skull="2"></div>
+                                    <div class="skull-grid kill-skull" data-skull="3"></div>
+                                    <div class="skull-grid kill-skull" data-skull="4"></div>
+                                    <div class="skull-grid kill-skull" data-skull="5"></div>
+                                </div>
+                                <div class="kill-skulls-sixth">
+                                    <div class="skull-grid kill-skull-sixth" data-skull="6"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Player Sections -->
+    <div class="row">
+        <!-- Player 1 -->
+        <div class="col-md-6">
+            <div class="player-section player1-section">
+                <div class="player1-header player-header">
+                    Jugador 1
+                </div>
+                <div class="p-3">
+                    <!-- CP Counter -->
+                    <div class="cp-container">
+                        <button class="cp-btn" onclick="adjustCP(1, -1)">-</button>
+                        <div>
+                            <div style="font-size: 14px; text-align: center;">PM</div>
+                            <div class="cp-display" id="cp-p1">3</div>
+                        </div>
+                        <button class="cp-btn" onclick="adjustCP(1, 1)">+</button>
+                    </div>
+
+                    <!-- Tac Op Selector -->
+                    <select class="tacop-select" id="tacop-p1">
+                        <option value="">Seleccionar Tac Op</option>
+                        <optgroup label="Reconocimiento">
+                            <option value="170">Flanco</option>
+                            <option value="173">Recuperación</option>
+                            <option value="178">Vigilar el Movimiento Enemigo</option>
+                        </optgroup>
+                        <optgroup label="Seguridad">
+                            <option value="202">Mensajero</option>
+                            <option value="199">Mártires</option>
+                            <option value="194">Izar Bandera</option>
+                        </optgroup>
+                    </select>
+
+                    <!-- Primary Selection -->
+                    <button class="primary-btn" id="primary-p1" onclick="openPrimaryModal(1)">
+                        <i class="bi bi-shield-fill-exclamation heartbeat-icon"></i> Primaria
+                    </button>
+
+                    <!-- Enemy Operatives Selector -->
+                    <select class="enemy-ops-select" id="enemy-ops-p1" onchange="updateKillTarget(1)">
+                        <option value="0">Agentes enemigos</option>
+                        <option value="5">Agentes a eliminar: 5</option>
+                        <option value="6">Agentes a eliminar: 6</option>
+                        <option value="7">Agentes a eliminar: 7</option>
+                        <option value="8">Agentes a eliminar: 8</option>
+                        <option value="9">Agentes a eliminar: 9</option>
+                        <option value="10">Agentes a eliminar: 10</option>
+                        <option value="11">Agentes a eliminar: 11</option>
+                        <option value="12">Agentes a eliminar: 12</option>
+                        <option value="13">Agentes a eliminar: 13</option>
+                        <option value="14">Agentes a eliminar: 14</option>
+                    </select>
+
+                    <!-- Kill Counter -->
+                    <div class="counter-container" id="kill-counter-p1" style="display: none;">
+                        <button class="counter-btn" onclick="adjustKillCount(1, -1)">-</button>
+                        <div>
+                            <div style="font-size: 12px; text-align: center;">Bajas</div>
+                            <div class="counter-display" id="kill-count-p1">0</div>
+                        </div>
+                        <button class="counter-btn" onclick="adjustKillCount(1, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player 2 -->
+        <div class="col-md-6">
+            <div class="player-section player2-section">
+                <div class="player2-header player-header">
+                    Jugador 2
+                </div>
+                <div class="p-3">
+                    <!-- CP Counter -->
+                    <div class="cp-container">
+                        <button class="cp-btn" onclick="adjustCP(2, -1)">-</button>
+                        <div>
+                            <div style="font-size: 14px; text-align: center;">PM</div>
+                            <div class="cp-display" id="cp-p2">3</div>
+                        </div>
+                        <button class="cp-btn" onclick="adjustCP(2, 1)">+</button>
+                    </div>
+
+                    <!-- Tac Op Selector -->
+                    <select class="tacop-select" id="tacop-p2">
+                        <option value="">Seleccionar Tac Op</option>
+                        <optgroup label="Reconocimiento">
+                            <option value="170">Flanco</option>
+                            <option value="173">Recuperación</option>
+                            <option value="178">Vigilar el Movimiento Enemigo</option>
+                        </optgroup>
+                        <optgroup label="Infiltración">
+                            <option value="211">Colocar dispositivos</option>
+                            <option value="216">Robar Información</option>
+                            <option value="205">Localizar Enemigo</option>
+                            <option value="208">Localizar Enemigo</option>
+                        </optgroup>
+                    </select>
+
+                    <!-- Primary Selection -->
+                    <button class="primary-btn" id="primary-p2" onclick="openPrimaryModal(2)">
+                        <i class="bi bi-shield-fill-exclamation heartbeat-icon"></i> Primaria
+                    </button>
+
+                    <!-- Enemy Operatives Selector -->
+                    <select class="enemy-ops-select" id="enemy-ops-p2" onchange="updateKillTarget(2)">
+                        <option value="0">Agentes enemigos</option>
+                        <option value="5">Agentes a eliminar: 5</option>
+                        <option value="6">Agentes a eliminar: 6</option>
+                        <option value="7">Agentes a eliminar: 7</option>
+                        <option value="8">Agentes a eliminar: 8</option>
+                        <option value="9">Agentes a eliminar: 9</option>
+                        <option value="10">Agentes a eliminar: 10</option>
+                        <option value="11">Agentes a eliminar: 11</option>
+                        <option value="12">Agentes a eliminar: 12</option>
+                        <option value="13">Agentes a eliminar: 13</option>
+                        <option value="14">Agentes a eliminar: 14</option>
+                    </select>
+
+                    <!-- Kill Counter -->
+                    <div class="counter-container" id="kill-counter-p2" style="display: none;">
+                        <button class="counter-btn" onclick="adjustKillCount(2, -1)">-</button>
+                        <div>
+                            <div style="font-size: 12px; text-align: center;">Bajas</div>
+                            <div class="counter-display" id="kill-count-p2">0</div>
+                        </div>
+                        <button class="counter-btn" onclick="adjustKillCount(2, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Finish Game Button -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <button id="finishGameBtn" class="btn btn-success btn-lg">
+                <i class="bi bi-check-circle me-2"></i>Terminar Partida
+            </button>
+        </div>
+    </div>
+</div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Create Game Modal -->
+    <div class="modal fade" id="createGameModal" tabindex="-1" aria-labelledby="createGameModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createGameModalLabel">Nueva Partida</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body mb-3">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">1. Selecciona tu facción</label>
+                        <select id="create_match_faccion_player_1" class="form-select form-select-lg">
+                            <option value="blank" selected>Selecciona una facción</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="opponent-name" class="form-label fw-semibold">2. Nombre del Oponente</label>
+                        <input type="text" class="form-control" id="opponent-name" placeholder="Ingresa el nombre del oponente">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">3. Selecciona la facción del oponente</label>
+                        <select id="create_match_faccion_player_2" class="form-select form-select-lg">
+                            <option value="blank" selected>Selecciona una facción</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="startGameBtn">Iniciar Partida</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script src="rules.js"></script>
+    <script src="games.js"></script>
+    <script src="tacops.js"></script>
+    <!-- Primary Selection Modal -->
+<div class="modal fade" id="primaryModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Elige tu primaria</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-body-p">Elige cómo quieres enfocar este enfrentamiento: puntuando <b>CRIT OP</b>, <b>TAC OP</b> o <b>KILL OP</b>. Al final del enfrentamiento, ganarás la mitad de los Puntos de Victoria obtenidos de tu selección, redondeando hacia arriba.</p>
+                <div class="my-3 d-flex justify-content-center">
+                    <div class="btn-group btn-group-md" role="group">
+                        <input type="radio" class="btn-check" name="primaryRadio" id="primaryCrit" value="CRIT OP">
+                        <label class="btn btn-outline-primary" for="primaryCrit">CRIT OP</label>
+                        <input type="radio" class="btn-check" name="primaryRadio" id="primaryTac" value="TAC OP">
+                        <label class="btn btn-outline-primary" for="primaryTac">TAC OP</label>
+                        <input type="radio" class="btn-check" name="primaryRadio" id="primaryKill" value="KILL OP">
+                        <label class="btn btn-outline-primary" for="primaryKill">KILL OP</label>
+                    </div>
+                </div>
+                <div id="text_primaryCrit" class="alert alert-info d-none py-2 mt-3">
+                    <p class="modal-body-p"><b>CRIT OP:</b> Obtén PV realizando acciones de misión y controlando marcadores de objetivo.</p>
+                </div>
+                <div id="text_primaryTac" class="alert alert-info d-none py-2 mt-3">
+                    <p class="modal-body-p"><b>TAC OP:</b> Obtén PV de una tac op seleccionada secretamente de uno de los arquetipos de tu kill team.</p>
+                </div>
+                <div id="text_primaryKill" class="alert alert-info d-none py-2 mt-3">
+                    <p class="modal-body-p"><b>KILL OP:</b> Obtén PV a medida que los agentes enemigos sean incapacitados.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="savePrimary()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

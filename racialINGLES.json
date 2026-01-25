@@ -1,0 +1,975 @@
+{
+    "battleclade": [
+        {
+            "id_racial": 190,
+            "faction": "battleclade",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">BATTLECLADE</span> <b>TECHNOARCHEOLOGIST</b> operative<br>\n1 <span class=\"faction\">BATTLECLADE</span> <b>SERVITOR UNDERSEER</b> operative<br>\n8 <span class=\"faction\">BATTLECLADE</span> operatives selected from the following list:\n<ul>\n  <li><b>AUTO-PROXY SERVITOR</b></li>\n  <li><b>BREACHER SERVITOR</b></li>\n  <li><b>COMBAT SERVITOR</b> with one of the following options:\n    <ul>\n      <li>Servo-claw; incendine igniter</li>\n      <li>Servo-claw; meltagun</li>\n      <li>Servo-claw; phosphor blaster</li>\n    </ul>\n  </li>\n  <li><b>GUN SERVITOR</b> with heavy arc rifle and augmetic claw</li>\n  <li><b>GUN SERVITOR</b> with heavy bolter and augmetic claw</li>\n  <li><b>TECHNOMEDIC SERVITOR</b></li>\n</ul>\n<p>Other than <b>COMBAT SERVITOR</b> operatives, your kill team can only include each operative above once. You cannot select a <b>COMBAT SERVITOR</b> with meltagun more than once, and you cannot select one with incendine igniter more than three times.</p>\n"
+        },
+        {
+            "id_racial": 191,
+            "faction": "battleclade",
+            "type": "racial",
+            "name": "NOOSPHERIC NETWORK",
+            "description": "<p>Whenever a friendly <b>SERVITOR</b> <span class=\"faction\">BATTLECLADE</span> operative is activated, you can <b>Transfer Power</b>. If you do, subtract 1 from its <b>APL</b> until the end of that activation.</p>\n\n<p>After that activation, you can <b>Network Counteract</b> with one other friendly <b>SERVITOR</b> <span class=\"faction\">BATTLECLADE</span> operative before your opponent activates. Whenever you <b>Network Counteract</b> with a friendly operative, first select its order. It can then perform a <b>1AP</b> action for free, but cannot move. Once it\u2019s done so, your opponent then activates as normal.</p>\n\n<p>An operative cannot <b>Transfer Power</b> or <b>Network Counteract</b> if it has an <b>APL</b> stat of less than 2 (e.g. if the stat has been changed to less than 2 by a rule). <b>Network Counteract</b> is a counteraction, but the operative doesn\u2019t need to be expended with an Engage order to do it. That means if they\u2019re ready when they <b>Network Counteract</b>, they can still be activated as normal later in the turning point. An operative that does <b>Network Counteract</b> cannot do so again, or counteract, during the same turning point.</p>\n"
+        }
+    ],
+    "blades-of-khaine": [
+        {
+            "id_racial": 29,
+            "faction": "blades-of-khaine",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 operative selected from the following list:<ul><li><b>DIRE AVENGER EXARCH</b> equipped with one of the following options:<ul><li>Shuriken catapult; Fists</li><li>Twin shuriken catapult; Gun butts</li></ul>Or one option from each of the following:<ul><li>Diresword or Power weapon</li><li>Shimmershield or Suriken pistol</li></ul></li><li><b>HOWLING BANSHEE EXARCH</b> equipped with one of the following options:<ul><li>Mirrorswords</li><li>Shuriken pistol; Executioner</li><li>Shuriken pistol; Power weapon</li><li>Triskele, Power weapon</li><li>Triskele, Shuriken pistol</li></ul></li><li><b>STRIKING SCORPION EXARCH</b> equipped with one of the following options:<ul><li>Shuriken pistol; Biting blade</li><li>Shuriken pistol; scorpion\u2019s clay and Chainsword</li><li>Twin shuriken pistols; twin Chainswords</li></ul></ul>7 <span class=\"faction\">BLADES OF KHAINE</span> operatives selected from the following list:<ul><li><b>DIRE AVENGER WARRIOR</b></li><li><b>HOWLING BANSHEE WARRIOR</b></li><li><b>STRIKING SCORPION WARRIOR</b></li></ul>"
+        },
+        {
+            "id_racial": 33,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Aspect Techniques",
+            "description": "<p>Each <strong>ASPECT TECHNIQUE</strong> is in a category: Dire Avenger, Howling Banshee and Striking Scorpion. Each <strong>ASPECT TECHNIQUE</strong> can only be used with a friendly operative that has the matching Aspect keyword, and each will specify when it can be used and what its effects are. In addition:</p><ul><li>You cannot use more than one <strong>ASPECT TECHNIQUE</strong> per activation or counteraction.</li><li>You cannot use each <strong>ASPECT TECHNIQUE</strong> more than once per turning point.</li><li>If every friendly <span class=\"faction\">BLADES OF KHAINE</span> operative selected for deployment has the same Aspect keyword (e.g. <strong>STRIKING SCORPION</strong>), you cannot use each <strong>ASPECT TECHNIQUE</strong> more than twice per turning point (instead of once).</li></ul>"
+        },
+        {
+            "id_racial": 34,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Aspect Techniques Dire Avenger",
+            "description": "<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Death of a Thousand Blades</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>DIRE AVENGER</strong> operative is performing the <strong>Shoot</strong> action and you select a shuriken catapult or twin shuriken catapult. Until the end of that action, that weapon has the <strong>Torrent 2\"</strong> weapon rule, but you cannot select more than one secondary target.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Raging Heat of the Dying Flame</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> during a friendly <strong>DIRE AVENGER</strong> operative\u2019s activation. Until the start of that operative\u2019s next activation, you can ignore any changes to its stats from being injured (including its weapons\u2019 stats).</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Vigilance of the Avenger</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>DIRE AVENGER</strong> operative is performing the <strong>Shoot</strong> action and you select a shuriken catapult or twin shuriken catapult. Until the end of that action, that weapon has the <strong>Lethal 5+</strong> weapon rule.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">The Slicing Hurricane</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>DIRE AVENGER</strong> operative is performing the <strong>Reposition</strong> action. That operative can perform the <strong>Shoot</strong> action during that action (it must do so in a location it can be placed, and any remaining move distance it had from that <strong>Reposition</strong> action can be used after it does so). You must select its shuriken catapult, shuriken pistol or twin shuriken catapult for that <strong>Shoot</strong> action.</p></div>"
+        },
+        {
+            "id_racial": 35,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Aspect Techniques Howling Banshee",
+            "description": "<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">The Woe</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> during a friendly <strong>HOWLING BANSHEE</strong> operative\u2019s activation, after it\u2019s performed the <strong>Charge</strong> action and incapacitated an enemy operative during the <strong>Fight</strong> action, and is no longer within control range of enemy operatives. That friendly operative can immediately perform a free <strong>Charge</strong> action using any remaining move distance it had from that first <strong>Charge</strong> action. This <strong>ASPECT TECHNIQUE</strong> allows that operative to perform two <strong>Charge</strong> actions during its activation to do so.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Scream-that-steals</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>HOWLING BANSHEE</strong> operative is fighting or retaliating, at the start of the Resolve Attack Dice step. You can resolve one of your successes before the normal order. If you do, that success must be used to block.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Rain of Tears</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>HOWLING BANSHEE</strong> operative is fighting, after you strike with a critical success. End that sequence (any remaining attack dice are discarded) and immediately perform a free <strong>Dash</strong> or <strong>Fall Back</strong> action up to 3\" with that operative. Do so even if it\u2019s performed an action that prevents it from performing the <strong>Dash</strong> or <strong>Fall Back</strong> action.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Shriek-that-kills</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>HOWLING BANSHEE</strong> operative is fighting, after you select a valid target. Until the end of that sequence, that enemy operative\u2019s melee weapons have the <strong>Stun</strong> weapon rule.</p></div>"
+        },
+        {
+            "id_racial": 88,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Aspect Techniques Striking Scorpion",
+            "description": "<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Patient Stalk, Sudden Blow</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>STRIKING SCORPION</strong> operative with a Conceal order performs the <strong>Reposition</strong> action. During that action, that operative can move within Control Range of enemy operatives (but cannot finish the move there), and you can inflict <b>D3+2</b> damage on one enemy operative within Control Range after it has moved.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Strike and Fade</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>STRIKING SCORPION</strong> operative incapacitates an enemy operative during <span class=\"text-warning-emphasis\">while <b>fighting</b> or <b>retaliating</b></span>, and is no longer within 3\" of enemy operatives. Change that friendly operative\u2019s order to <strong>Conceal</strong> and it can immediately perform a free <strong>Dash</strong> action, even if it\u2019s performed an action that prevents it from performing the <strong>Dash</strong> action.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Scorpion's Eye</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>STRIKING SCORPION</strong> operative performs the <strong>Shoot</strong> action and you select a shuriken pistol. Until the end of that action, that weapon has the <strong>Seek Light</strong> weapon rule.</p></div><div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Merciless Strikes</span><p class=\"p-2\">Use this <strong>ASPECT TECHNIQUE</strong> when a friendly <strong>STRIKING SCORPION</strong> operative is fighting. The first time you strike with a critical success during that sequence, that operative\u2019s melee weapons gain the <strong>Shock</strong> weapon rule.</p></div>"
+        },
+        {
+            "id_racial": 180,
+            "faction": "blades-of-khaine",
+            "type": "racial",
+            "name": "Archetypes",
+            "description": "Seek&Destroy, or the associated archetype of the most common Aspect Keyword in your kill team (if two keywords are equally most common, you can choose on of those keywords). Aspect keywords and their asociated archetypes are as follows:\n<ul>\n<li><b>DIRE AVENGER:</b> Security</li>\n<li><b>HOWLING BANSHEE:</b> Recon</li>\n<li><b>STRIKING SCORPION:</b> Infiltration</li>\n</ul>"
+        }
+    ],
+    "blooded": [
+        {
+            "id_racial": 2,
+            "faction": "blooded",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">BLOODED</span> <b>CHIEFTAIN</b> operative equipped with one of the following options:\r\n<ul><li>Autopistol or laspistol; chainsword or power weapon</li>\r\n<li>Bolt pistol; chainsword</li>\r\n<li>Boltgun; bayonet</li>\r\n<li>Plasma pistol; improvised blade<sup>2</sup></li>\r\n</ul>\r\n9 <span class=\"faction\">BLOODED</span> operatives selected from the following list:\r\n<ul>\r\n<li><b>BRIMSTONE GRENADIER</b></li>\r\n<li><b>BUTCHER</b></li>\r\n<li><b>COMMSMAN</b></li>\r\n<li><b>CORPSEMAN</b></li>\r\n<li><b>FLENSER</b></li>\r\n<li><b>GUNNER</b> with bayonet and flamer<sup>1</sup></li>\r\n<li><b>GUNNER</b> with bayonet and grenade launcher<sup>1</sup></li>\r\n<li><b>GUNNER</b> with bayonet and meltagun<sup>1</sup></li>\r\n<li><b>GUNNER</b> with bayonet and plasma gun<sup>1,2</sup></li>\r\n<li><b>SHARPSHOOTER<sup>1</sup></b></li>\r\n<li><b>THUG</b></li>\r\n<li><b>TRENCH SWEEPER</b></li>\r\n<li><b>TROOPER</b></li>\r\n</ul>\r\n4 <span class=\"faction\">BLOODED</span> operatives selected from the following list:\r\n<ul><li><b>ENFORCER</b> (counts as two selections)</li>\r\n<li><b>OGRYN</b> (counts as two selections)</li>\r\n<li><b>TROOPER</b></li>\r\n</ul>\r\n<p>Other than <b>TROOPER</b> operatives, your kill team can only include each operative above once.</p>\r\n<p><sup>1</sup> You cannot select more than three of these operatives combined.</p>\r\n<p><sup>2</sup> You cannot select this option and this operative. In other words, you can only have one operative with a plasma weapon.</p>"
+        },
+        {
+            "id_racial": 43,
+            "faction": "blooded",
+            "type": "racial",
+            "name": "Blooded",
+            "description": "You gain one Blooded token:<ul><li>In the Ready step of each Strategy phase.</li><li>The first time an enemy operative is incapacitated during each turning point.</li><li>The first time a friendly operative is incapacitated within 6\u201d of an enemy operative during each turning point.</li></ul><p>As a <b>STRATEGIC GAMBIT</b>, you can assign any of your unassigned Blooded tokens to friendly <span class=\"faction\">BLOODED</span> operatives. Each operative cannot have more than one of your Blooded tokens. Then, if four or more friendly operatives in the killzone have one of your Blooded tokens, you can select one of them to be under the <b>GAZE OF THE GODS</b> until the end of the turning point.</p><p>Whenever a friendly <span class=\"faction\">BLOODED</span> operative has one of your Blooded tokens, its weapons have the Accurate 1 weapon rule. If that friendly <span class=\"faction\">BLOODED</span> operative is under the <b>GAZE OF THE GODS</b>, you can retain one of your normal successes as a result of the Accurate 1 weapon rule as a critical success instead.</p>"
+        }
+    ],
+    "brood-brothers": [
+        {
+            "id_racial": 99,
+            "faction": "brood-brothers",
+            "type": "team",
+            "name": "Roster",
+            "description": "1 <span class=\"faction\">BROOD BROTHER</span> <b>COMMANDER</b> equipped with one of the following options:<ul><li>Bolt Pistol; Chainsword and Claw</li><li>Drum-fed autogun; Bayonet</li><li>Laspistol; Power Weapon and Claw</li></ul>9 <span class=\"faction\">BROOD BROTHER</span> operatives from the following list:<ul><li><b>BROOD BROTHER AGITATOR</b></li><li><b>BROOD BROTHER GUNNER</b> with a Flamer and Bayonet</li><li><b>BROOD BROTHER GUNNER</b> with a Grenade Launcher and Bayonet</li><li><b>BROOD BROTHER GUNNER</b> with a Meltagun and Bayonet</li><li><b>BROOD BROTHER GUNNER</b> with a Plasma Gun and Bayonet</li><li><b>BROOD BROTHER ICONWARD</b></li><li><b>BROOD BROTHER KNIFE FIGHTER</b></li><li><b>BROOD BROTHER MEDIC</b></li><li><b>BROOD BROTHER SAPPER</b></li><li><b>BROOD BROTHER SNIPER</b></li><li><b>BROOD BROTHER TROOPER</b></li><li><b>BROOD BROTHER VETERAN</b></li><li><b>BROOD BROTHER VOX OPERATOR</b></li></ul>3 <span class=\"faction\">BROOD BROTHER</span> operatives/Tactical Assets selected from the following list:<ul><li><b>2 PSYCHIC FAMILIARS</b> (still counts as one selection)</li><li><b>MAGUS</b> (counts as two selections)</li><li><b>PATRIARCH</b> (counts as three selections)</li><li><b>PRIMUS</b> (counts as two selections)</li><li><b>BROOD BROTHER TROOPER</b></li></ul><p>Other than TROOPER operatives, your kill team can only include each option opposite once. It cannot include more than three <b>GUNNER</b> and <b>SNIPER</b> operatives combined.</p><ol><li>Your kill team can only include up to one <b>BROODCOVEN</b> operative. If one of these operatives is selected for deployment, your <b>COMMANDER</b> operative loses the <b>LEADER</b> keyword for the battle.</li><li>These are tactical assets, not operatives, and are explained on the following page. They are not on your roster/dataslate.</li><li>Up to three times, instead of selecting one of these operatives, you can select one <span class=\"faction\">BROOD BROTHER</span> ploy to cost you 0CP for the battle.</li></ol>"
+        },
+        {
+            "id_racial": 101,
+            "faction": "brood-brothers",
+            "type": "racial",
+            "name": "Crossfire",
+            "description": "Whenever a friendly <span class=\"faction\">BROOD BROTHER</span> operative is shooting against or fighting against an enemy operative, after resolving all of your attack dice, if that enemy operative isn\u2019t incapacitated it gains one of your Crossfire tokens.<p>Whenever a friendly <span class=\"faction\">BROOD BROTHER</span> operative is shooting against, fighting against or retaliating against an enemy operative that has any of your Crossfire tokens, you can remove any of those tokens. For each that you do, you can re-roll one of your attack dice.</p>"
+        }
+    ],
+    "canoptek": [
+        {
+            "id_racial": 194,
+            "faction": "canoptek",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">CANOPTEK CIRCLE</span> <b>GEOMANCER</b> operative<br>\r\n2 <span class=\"faction\">CANOPTEK CIRCLE</span> <b>TOMB CRAWLER</b> operatives with one of the following options (select separately for each):\r\n\r\n<ul> <li>Twin gauss reapers; claws</li> <li>Transdimensional isolator; claws *</li> </ul> 1 <span class=\"faction\">CANOPTEK CIRCLE</span> <b>ACCELERATOR</b> operative<br> 1 <span class=\"faction\">CANOPTEK CIRCLE</span> <b>REANIMATOR</b> operative<br> 3 <span class=\"faction\">CANOPTEK CIRCLE</span> <b>WARRIOR</b> operatives with one of the following options (select separately for each): <ul> <li>Gauss scalpel; claws & tail</li> <li>Tesla caster; claws & tail</li> </ul> <p>* Your kill team can only include up to one transdimensional isolator.</p>"
+        },
+        {
+            "id_racial": 195,
+            "faction": "canoptek",
+            "type": "racial",
+            "name": "OBELISK NODE MATRIX",
+            "description": "<p>Obelisk nodes are concentrations of Necron technology, hubs of energy and data streams. Whether raised up from their sites of ancient burial, formed from restructured local matter or phased into place from a pocket dimension, these angular nodes can empower a Cryptek and their servants. Impelled into positions where they can connect in a matrix of power, they aid the Cryptek\u2019s ambitions whilst hampering their foes.</p> <p>As a <b>STRATEGIC GAMBIT</b> in the first turning point, place your three <b>OBELISK NODE</b> markers wholly within your territory. As a <b>STRATEGIC GAMBIT</b> in each turning point after the first, you can move your <b>OBELISK NODE</b> markers up to 3\" each.</p> <p>Your <b>OBELISK NODE</b> markers control other markers within 1\" of them that no enemy operatives contest (treat your <b>OBELISK NODE</b> markers as friendly operatives for this purpose). If more than one player would use their <b>OBELISK NODE</b> markers to control the same marker, no <b>OBELISK NODE</b> markers control it.</p> <p>Whenever one of your <b>OBELISK NODE</b> markers is within 6\" horizontally of another of your <b>OBELISK NODE</b> markers, those markers and the area between them create an <b>OBELISK NODE MATRIX</b> above and below (in other words, their height in the killzone is irrelevant). If all three of your <b>OBELISK NODE</b> markers fulfil this, it creates a larger combined <b>OBELISK NODE MATRIX</b>.</p> <p>Whenever a friendly <span class=\"faction\">CANOPTEK CIRCLE</span> operative is within your <b>OBELISK NODE MATRIX</b>:</p> <ul> <li>Weapons on its datacard have the <b>Accurate 2</b> weapon rule.</li> <li>Add 1 to its <b>APL</b> stat.</li> </ul>\n\n<figure class=\"figure\"><img src=\"./img/rules/matrix_canoptek-min.png\" class=\"figure-img img-fluid rounded mx-auto d-block\">"
+        }
+    ],
+    "chaos-cult": [
+        {
+            "id_racial": 4,
+            "faction": "chaos-cult",
+            "type": "team",
+            "name": "Operatives",
+            "description": "<p>1 <b>CULT DEMAGOGUE</b> operative.</p><p>2 <b>BLESSED BLADE</b> operatives.</p><p>9 <b>CHAOS DEVOTEE</b> operatives.</p><p>1 <b>ICONARCH</b> operative.</p><p>1 <b>MINDWITCH</b> operative.</p>"
+        },
+        {
+            "id_racial": 68,
+            "faction": "chaos-cult",
+            "type": "racial",
+            "name": "Mutation",
+            "description": "<p>\n    During the battle, friendly <span class=\"faction\">CHAOS CULT</span> operatives can <b>MUTATE</b> as follows:\n</p>\n<ul>\n    <li>\n        As a <b>STRATEGIC GAMBIT</b>, you can <b>MUTATE</b> a number of friendly <span class=\"faction\">CHAOS CULT</span> operatives based on the turning point as follows: TP1 = 2, TP2 = 2, TP3 = 3, TP4+ = 4.\n    </li>\n    <li>\n        Whenever a friendly <b>DEVOTEE</b> operative incapacitates an enemy operative within its control range, it can <b>MUTATE</b>.\n    </li>\n    <li>\n        Each operative cannot <b>MUTATE</b> more than once per turning point.\n    </li>\n</ul>\n<p>\n    Whenever a friendly operative <b>MUTATES</b>, select one of the following:\n</p>\n<ul>\n    <li>\n        If it's a <b>DEVOTEE</b> operative, turn it into a <b>MUTANT</b> operative.\n    </li>\n    <li>\n        If it's a <b>MUTANT</b> operative, turn it into a <b>TORMENT</b> operative (max <span class=\"text-info-emphasis\">twice</span> per turning point).\n    </li>\n    <li>It can regain D3+1 lost wounds.</li>\n</ul>\n<p>\n    You cannot have more than five <b>MUTANT</b> operatives and three <b>TORMENT</b> operatives at once. Whenever a friendly operative turns into a new operative:\n</p>\n<ul>\n    <li>\n        Swap the miniatures, ensuring the centre of the new miniature's base is as close as possible to where the centre of the old miniature's base was. This can put it within control range of enemy operatives, and if the old miniature was, the new miniature must be if possible.\n    </li>\n    <li>\n        The new operative type loses a number of wounds equal to the lost wounds of its preceding operative type.\n    </li>\n    <li>\n        It's still the same operative for any rules it's already been selected for. The operative is simply a new operative type and will use that new type's miniature and datacard rules.\n    </li>\n</ul>\n</ul>"
+        },
+        {
+            "id_racial": 69,
+            "faction": "chaos-cult",
+            "type": "racial",
+            "name": "Accursed Gifts",
+            "description": "<p><b>ACCURSED GIFTS</b> are rules that friendly <span class='faction'>CHAOS CULT</span> operatives gain when they turn\n    into another operative type (see Mutation faction rule). The first time a friendly <b>DEVOTEE</b> operative turns\n    into a <b>MUTANT</b> operative during the battle, select your primary <b>ACCURSED GIFT</b>. The first time a\n    friendly <b>MUTANT</b> operative turns into a <b>TORMENT</b> operative during the battle, select your secondary\n    <b>ACCURSED GIFT</b>.\n</p>\n<p>All friendly <b>MUTANT</b> operatives have your primary <b>ACCURSED GIFT</b>, and all friendly <b>TORMENT</b> operatives have your primary and secondary <b>ACCURSED GIFTS</b>. You cannot select the same <b>ACCURSED GIFT</b> more than once per battle.</p>\n\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">1. Deformed Wings</span></span>\n    <p class=\"px-2\">Whenever this operative is climbing <span class=\"text-info-emphasis\">up, you can</span> treat the vertical distance as <b>2\"</b> (regardless of how far the operative actually moves vertically). Whenever this operative is dropping, ignore the vertical distance.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">2. Fleet</span>\n    <p class=\"px-2\">Add <b>1\"</b> to this operative's Move stat.</p>\n</div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">3. Chitinous</span>\n    <p class=\"px-2\">\n        Improve this operative's Save stat by 1.\n    </p>\n</div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">4. Horned</span>\n    <p class=\"px-2\">Whenever this operative ends its move during the <b>Charge</b> action, you can inflict 1 damage on one enemy\n        operative within its control range, or D3 damage instead if this operative is a <b>TORMENT</b>.</p>\n</div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">5. Grasping Pseudopods</span>\n    <p class=\"px-2\">This operative can perform the <b>Fall Back</b> action for 1 less AP.</p>\n</div>"
+        }
+    ],
+    "corsair-voidscarred": [
+        {
+            "id_racial": 5,
+            "faction": "corsair-voidscarred",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <b>VOIDSCARRED FELARCH</b> operative equipped with one of the following options:\n<ul>\n    <li>Shuriken rifle; Shuriken pistol; Power weapon</li>\n    <li>Neuro disruptor; Power weapon</li>\n</ul>\n8 <span class=\"faction\">CORSAIR VOIDSCARRED</span> operatives selected from the following list:\n<ul>\n    <li><b>FATE DEALER</b></li>\n    <li><b>GUNNER</b> equipped with a shuriken pistol, fists and one of the following options:\n        <ul>\n            <li>Blaster*; Shuriken pistol; Fists</li>\n            <li>Shredder; Shuriken pistol; Fists</li>\n        </ul>\n    </li>\n    <li><b>HEAVY GUNNER</b> equipped with a shuriken pistol, fists and one of the following options:\n        <ul>\n            <li>Shuriken cannon; Shuriken pistol; Fists</li>\n            <li>Wraithcannon*; Shuriken pistol; Fists</li>\n        </ul>\n    </li>\n    <li><b>KURNATHI</b></li>\n    <li><b>KURNITE HUNTER</b></li>\n    <li><b>SHADE RUNNER</b></li>\n    <li><b>SOUL WEAVER</b></li>\n    <li><b>STARSTORM DUELLIST</b></li>\n    <li><b>WAY SEEKER</b></li>\n<li><b>WARRIOR</b> with one of the following options:\n<ul><li>Shuriken pistol; \npower weapon</li>\n<li>Shuriken rifle; fists</li></ul></ul>\n<p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative above once.</p><p>*Your kill team cannot include both a Blaster and a Wraithcannon.</p>"
+        },
+        {
+            "id_racial": 55,
+            "faction": "corsair-voidscarred",
+            "type": "racial",
+            "name": "Aeldari Raiders",
+            "description": "Each friendly <span class=\"faction\">CORSAIR VOIDSCARRED</span> operative can perform a free <b>Dash</b> action during their activation."
+        },
+        {
+            "id_racial": 87,
+            "faction": "corsair-voidscarred",
+            "type": "racial",
+            "name": "Rifles",
+            "description": "Whenever a friendly <span class=\"faction\">CORSAIR VOIDSCARRED</span> operative is shooting with a shuriken rifle or ranger long rifle during an activation in which it hasn\u2019t performed the <b>Charge</b>, <b>Fall Back</b> or <b>Reposition</b> action, that weapon has the <b>Accurate 1</b> weapon rule. Note that operative isn\u2019t restricted from performing those actions after shooting."
+        }
+    ],
+    "deathwatch": [
+        {
+            "id_racial": 196,
+            "faction": "deathwatch",
+            "type": "team",
+            "name": "Operatives",
+            "description": "5 <span class=\"faction\">DEATHWATCH</span> operatives selected from the following list:\n\n<ul> <li><b>WATCH SERGEANT</b></li> <li><b>AEGIS</b></li> <li><b>BLADEMASTER</b></li> <li><b>BOMBARD</b></li> <li><b>BREACHER</b></li> <li><b>DEMOLISHER</b></li> <li><b>DISRUPTOR</b></li> <li><b>GUNNER</b></li> <li><b>HEADTAKER</b></li> <li><b>HORDE-SLAYER</b></li> <li><b>MARKSMAN</b></li> </ul> <p>Your kill team can only include each operative on this list once, and can only include up to one <b>GRAVIS</b> operative.</p>"
+        },
+        {
+            "id_racial": 197,
+            "faction": "deathwatch",
+            "type": "racial",
+            "name": "VETERAN ASTARTES",
+            "description": "<p>During each friendly <span class=\"faction\">DEATHWATCH</span> operative\u2019s activation, it can perform either two <b>Shoot</b> actions or two <b>Fight</b> actions. If it\u2019s two <b>Shoot</b> actions and an <b>auxiliary grenade launcher</b>, <b>frag cannon</b>, <b>heavy plasma incinerator</b>, <b>infernus heavy bolter</b>, <b>plasma pistol</b> or <b>stalker bolt rifle</b> is selected for both, 1 additional <b>AP</b> must be spent for the second action.</p> <p>Each friendly <span class=\"faction\">DEATHWATCH</span> operative can <b>counteract</b> regardless of its order. Whenever it does, it can perform an <b>additional 1AP action for free</b> during that counteraction, but both actions must be different.</p>"
+        },
+        {
+            "id_racial": 198,
+            "faction": "deathwatch",
+            "type": "racial",
+            "name": "SPECIAL ISSUE AMMUNITION",
+            "description": "<p>Once per turning point, when a friendly <span class=\"faction\">DEATHWATCH</span> operative is performing the <b>Shoot</b> action, in the <b>Select Weapon</b> step, you can use this rule. If you do, select one of the following <b>weapon rules</b> for that operative\u2019s ranged weapons to have until the end of the action. This rule cannot be used with <b>explosive grenades</b> (see universal equipment) or <b>melta bombs</b>.</p> <ul> <li><b>Blast 1\"</b> (you cannot select this if the weapon profile being used has the <b>Torrent</b> weapon rule)</li> <li><b>Devastating 1</b></li> <li><b>Lethal 5+</b></li> <li><b>Piercing 1</b></li> <li><b>Rending</b></li> <li><b>Saturate</b></li> <li><b>Severe</b></li> </ul>"
+        }
+    ],
+    "elucidian-starstrider": [
+        {
+            "id_racial": 11,
+            "faction": "elucidian-starstrider",
+            "type": "team",
+            "name": "Operatives",
+            "description": "Every <span class=\"faction\">ELUCIAN STARSTRIDER</span> operative in the following list:\n<ul>\n  <li><b>1 ELUCIA VHANE</b></li>\n  <li><b>1 CANID</b></li>\n  <li><b>1 DEATH CULT EXECUTIONER</b></li>\n  <li><b>1 LECTRO-MAESTER</b></li>\n  <li><b>1 REJUVENAT ADEPT</b></li>\n  <li><b>1 VOIDMASTER</b></li>\n  <li><b>3 VOIDSMAN</b> with lasgun and gun butt</li>\n  <li><b>1 VOIDSMAN</b> with rotor cannon and gun butt</li>\n</ul>\n"
+        },
+        {
+            "id_racial": 48,
+            "faction": "elucidian-starstrider",
+            "type": "racial",
+            "name": "Warrant Of Trade",
+            "description": "<p>Up to three times per battle, you can use a <b>WARRANT OF TRADE</b> rule (below). Each one specifies when it can be used, and you \ncannot use the same <b>WARRANT OF TRADE</b> rule more than once per battle.</p>\n\n<span class=\"faction fs-6\">Consideration</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">In the Select Operatives step, after revealing your equipment options, select one additional equipment option. It cannot be an option you have previously selected.</p></div>\n\n<span class=\"faction fs-6\">Coordinate</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">At the end of the Select Operatives step, you gain 1 additional CP.</p></div>\n\n<span class=\"faction fs-6\">Coerce</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">At the start of the Set Up Operatives step, select one of the following options:\n<ul><li>Your opponent must set up all of their equipment before you set up any.</li>\n<li>You can set up all of your equipment before your opponent sets up any.</li>\n<li>Your opponent must set up all of their operatives before you set up any.</li></ul></p></div>\n\n<span class=\"faction fs-6\">Explore</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\"><b>STRATEGIC GAMBIT</b> in the first turning point. Perform a free <b>Reposition</b> action with one friendly <span class=\"faction\">ELUCIAN STARSTRIDER</span> operative that\u2019s wholly within your drop zone. It must end that move wholly within 3\" of your drop zone.</p></div>\n\n<span class=\"faction fs-6\">Bribe</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">It\u2019s your turn to activate an operative. You can skip that activation.</p></div>\n\n<span class=\"faction fs-6\">Seize</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">In the Strategy phase, after rolling off to decide initiative, you can use this rule. If you do, you win the roll-off.</p></div>"
+        },
+        {
+            "id_racial": 49,
+            "faction": "elucidian-starstrider",
+            "type": "racial",
+            "name": "Privateer Support Asset",
+            "description": "<p>Once per firefight phase, when a friendly <span class=\"faction\">ELUCIDIAN STARSTRIDER</span> <b>NAVIS</b> or <span class=\"faction\">ELUCIDIAN STARSTRIDER</span> <b>ELUCIA VHANE</b> operative performs the <b>Shoot</b> action, you can select one of the following <b>PRIVATEER SUPPORT ASSET</b> ranged weapons for it to use. You cannot use each <b>PRIVATEER SUPPORT ASSET</b> more than once per battle.</p>\n<p>Whenever a friendly <span class=\"faction\">ELUCIDIAN STARSTRIDER</span> operative is using a <b>PRIVATEER SUPPORT ASSET</b>, determine cover saves differently. Instead, the target has a cover save if any part of its base is underneath Vantage terrain. Note that while this can affect the target\u2019s cover save, you must still select a valid target as normal. In other words, the shot is guided by an operative in \nthe killzone, but it comes from above</p>\n\n<div class=\"weapons-table col-12 p-0 pt-2 mb-2 position-relative\"><table><tbody><tr><th class=\"text-start ps-2\">NAME</th><th>ATK</th><th>HIT</th><th>DMG</th></tr><tr><td class=\"text-start ps-2\">Archeotech beam</td><td>4</td><td>3+</td><td>6/7</td></tr><tr><th colspan=\"4\" class=\"text-start ps-2\">WR</th></tr><tr><td colspan=\"4\" class=\"text-start ps-2\">Piercing 2, Heavy (Reposition only), Silent</td></tr></tbody></table></div>\n\n<div class=\"weapons-table col-12 p-0 pt-2 mb-2 position-relative\"><table><tbody><tr><th class=\"text-start ps-2\">NAME</th><th>ATK</th><th>HIT</th><th>DMG</th></tr><tr><td class=\"text-start ps-2\">Plasma Battery</td><td>5</td><td>4+</td><td>5/6</td></tr><tr><th colspan=\"4\" class=\"text-start ps-2\">WR</th></tr><tr><td colspan=\"4\" class=\"text-start ps-2\">Lethal 5+, Piercing 1, Heavy (Reposition only), Silent</td></tr></tbody></table></div>\n\n<div class=\"weapons-table col-12 p-0 pt-2 mb-2 position-relative\"><table><tbody><tr><th class=\"text-start ps-2\">NAME</th><th>ATK</th><th>HIT</th><th>DMG</th></tr><tr><td class=\"text-start ps-2\">Vortex grenade</td><td>4</td><td>3+</td><td>3/4</td></tr><tr><th colspan=\"4\" class=\"text-start ps-2\">WR</th></tr><tr><td colspan=\"4\" class=\"text-start ps-2\">Blast 2\", Indirect, Limited, Heavy (Reposition only), Silent</td></tr></tbody></table></div>"
+        }
+    ],
+    "exaction-squad": [
+        {
+            "id_racial": 12,
+            "faction": "exaction-squad",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <b>PROCTOR-EXACTANT</b> operative with one of the following\noptions:\n<ul>\n  <li>Combat shotgun; repression baton</li>\n  <li>Shotpistol; dominator maul & assault shield</li>\n</ul>\n10 <span class=\"faction\">EXACTION SQUAD</span> operatives selected from the\nfollowing list:\n<ul>\n  <li><b>CASTIGATOR</b></li>\n  <li><b>CHIRURGANT</b></li>\n  <li><b>LEASHMASTER</b></li>\n  <li><b>R-VR CYBER-MASTIFF</b></li>\n  <li><b>MALOCATOR</b></li>\n  <li><b>MARKSMAN</b></li>\n  <li><b>REVELATUM</b></li>\n  <li><b>SUBDUCTOR</b></li>\n  <li><b>VIGILANT</b></li>\n  <li><b>VOX-SIGNIFIER</b></li>\n  <li>\n    <b>GUNNER</b> equipped with one of the following options:\n    <ul>\n      <li>Grenade launcher; repression baton</li>\n      <li>Heavy stubber; repression baton</li>\n      <li>Webber; repression baton</li>\n    </ul>\n  </li>\n</ul>\n<p>\nOther than <b>GUNNER</b>, <b>SUBDUCTOR</b> and <b>VIGILANT</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two <b>GUNNER</b> operatives (each must have a different option) and up to four <b>SUBDUCTOR</b> operatives.\n</p>\n"
+        },
+        {
+            "id_racial": 47,
+            "faction": "exaction-squad",
+            "type": "racial",
+            "name": "Ruthless Efficiency",
+            "description": "<p>Whenever a friendly <span class=\"faction\">EXACTION SQUAD</span> operative is shooting (excluding with frag or krak grenades) and you\u2019re selecting a valid target, you can use this rule. If you do, having other friendly <span class=\"faction\">EXACTION SQUAD</span> operatives within an enemy operative\u2019s control range doesn\u2019t prevent that enemy operative from being selected. </p>"
+        },
+        {
+            "id_racial": 137,
+            "faction": "exaction-squad",
+            "type": "racial",
+            "name": "Repress",
+            "description": "<p>Some weapons in this team\u2019s rules have the Repress weapon rule below.</p>\n<p><b>*Repress:</b> Whenever this operative is using this weapon:</p>\n<ul>\n  <li>Each of your blocks can be allocated to block two unresolved successes (instead of one).</li>\n  <li>If this operative is retaliating, you resolve the first attack dice (i.e. defender instead of attacker).</li>\n</ul>"
+        },
+        {
+            "id_racial": 139,
+            "faction": "exaction-squad",
+            "type": "racial",
+            "name": "Marked For Justice",
+            "description": "<b>STRATEGIC GAMBIT</b>. Select one enemy operative to be your mark for the turning point. Whenever a friendly <span class=\"faction\">EXACTION SQUAD</span> operative is shooting against, fighting against or retaliating against your mark, that friendly operative\u2019s weapons have the Punishing weapon rule. Whenever your\nmark is incapacitated, you can select a new enemy operative to be your mark for the turning point (and can continue to do so during this turning point)."
+        }
+    ],
+    "farstalker-kinband": [
+        {
+            "id_racial": 23,
+            "faction": "farstalker-kinband",
+            "type": "team",
+            "name": "Operatives",
+            "description": "<ul>\n  <li>1 <span class=\"faction\">FARSTALKER KINBAND</span> \n <b>KILL-BROKER</b> operative with one of the following options:\n    <ul>\n      <li>Kroot rifle; ritual blade</li>\n      <li>Pulse weapon; ritual blade</li>\n    </ul>\n  </li>\n  <li>11 <span class=\"faction\">FARSTALKER KINBAND</span> operatives selected from the following list:\n    <ul>\n      <li><b>BOW-HUNTER</b></li>\n      <li><b>COLD-BLOOD</b></li>\n      <li><b>CUT-SKIN</b></li>\n      <li><b>HOUND</b></li>\n      <li><b>LONG-SIGHT</b></li>\n      <li><b>PISTOLIER</b></li>\n      <li><b>STALKER</b></li>\n      <li><b>TRACKER</b></li>\n      <li><b>HEAVY GUNNER</b> with one of the following options:\n        <ul>\n          <li>Dvorgite skinner; blade</li>\n          <li>Londaxi tribelast; blade</li>\n        </ul>\n      </li>\n      <li><b>WARRIOR</b> with one of the following options:\n        <ul>\n          <li>Kroot rifle; blade</li>\n          <li>Kroot scattergun; blade</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n</ul>\n<p>Other than <span class=\"faction\">HOUND</span> and <span class=\"faction\">WARRIOR</span> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two <span class=\"faction\">HOUND</span> operatives.</p>\n"
+        },
+        {
+            "id_racial": 62,
+            "faction": "farstalker-kinband",
+            "type": "racial",
+            "name": "Farstalker",
+            "description": "In the Ready step of each Strategy phase, you can change the order of up to three friendly <span class=\"faction\">FARSTALKER KINBAND</span> operatives that are not within control range of enemy operatives.\n\n<p>Whenever it\u2019s your turn to counteract, you can change the order of one friendly <span class=\"faction\">FARSTALKER KINBAND</span> operative that\u2019s not within control range of enemy operatives instead. This still counts as you counteracting (so activation alternates back to your opponent afterwards), but doesn\u2019t count as that friendly operative\u2019s counteraction for this turning point.</p>"
+        }
+    ],
+    "fellgor-ravagers": [
+        {
+            "id_racial": 8,
+            "faction": "fellgor-ravagers",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <b>IRONHORN</b> <span class=\"faction\">FELLGOR RAVAGER</span> operative with one of the following options:<ul><li>Corrupted pistol; Corrupted chainsword</li><li>Plasma pistol; Bludgeon</li></ul>9 <span class=\"faction\">FELLGOR RAVAGER</span> operatives selected from the following list:<ul><li><b>DEATHKNELL</b></li><li><b>FLUXBRAY</b></li><li><b>GNARLSCAR</b></li><li><b>GOREHORN</b></li><li><b>HERD-GOAD</b></li><li><b>MANGLER</b></li><li><b>SHAMAN</b></li><li><b>TOXHORN</b></li><li><b>VANDAL</b></li><li><b>WARRIOR</b> with one of the following options:<ul><li>Autopistol; Bludgeon</li><li>Autopistol; Cleaver</li></ul></li></ul><p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative above once.</p>"
+        },
+        {
+            "id_racial": 44,
+            "faction": "fellgor-ravagers",
+            "type": "racial",
+            "name": "Frenzy",
+            "description": "<p>\n    Each time a friendly <span class=\"faction\">FELLGOR RAVAGER</span> operative without a Frenzy token would be incapacitated, it gains a Frenzy token instead. \n    If it was fighting in combat, all remaining attack dice (including your opponent\u2019s) are discarded. If it has a Conceal order, change it to Engage.\n</p>\n<p>\n    While a friendly <span class=\"faction\">FELLGOR RAVAGER</span> operative has a Frenzy token:\n    <ul>\n        <li>It\u2019s only incapacitated as specified below.</li>\n        <li>It cannot have a Conceal order.</li>\n        <li>It\u2019s injured.</li>\n        <li>It cannot perform mission actions or the Pick Up action.</li>\n        <li>Treat its APL characteristic as 1 (after all modifiers) for the purposes of determining control (e.g. objective markers).</li>\n    </ul>\n</p>\n<p>\n    A friendly <span class=\"faction\">FELLGOR RAVAGER</span> operative with a Frenzy token is incapacitated when one of the following conditions is met:\n    <ul>\n        <li>Its activation <span class=\"text-info-emphasis\">or counteraction</span> ends.</li>\n        <li>An enemy operative strikes it with a critical hit in combat.</li>\n        <li>An enemy operative strikes it a second time with a normal hit in combat. Note that this can be strikes from two different combats.</li>\n        <li>The battle ends.</li>\n        <li>Critical damage is inflicted on it in a subsequent shooting attack (i.e. not the same shooting attack in which it gained a Frenzy token).</li>\n    </ul>\n</p>\n<p>\n<p>\nYour opponent treats a <span class=\"faction\">FELLGOR RAVAGER</span> operative as being incapacitated (instead of when it would be incapacitated normally) when it gains one of your Frenzy tokens for the purposes of scoring VPs (e.g. kill op) and faction rules that require it to be incapacitated (e.g. <b>HAND OF THE ARCHON</b> Power From Pain, <b>CHAOS CULT</b> Mutation, etc.).</p>\n"
+        }
+    ],
+    "gellerpox": [
+        {
+            "id_racial": 9,
+            "faction": "gellerpox",
+            "type": "team",
+            "name": "Operatives",
+            "description": "<p>\u21b3 Every <span class=\"faction\">GELLERPOX INFECTED</span> operative in the following list:</p>\n<ul>\n    <li>1 <b>GELLERPOX INFECTED VULGRAR THRICE-CURSED</b></li>\n    <li>1 <b>GELLERPOX INFECTED BLOATSPAWN</b></li>\n    <li>1 <b>GELLERPOX INFECTED FLESHSCREAMER</b></li>\n    <li>1 <b>GELLERPOX INFECTED LUMBERGHAST</b></li>\n    <li>4 <b>GELLERPOX INFECTED GLITCHLING</b></li>\n    <li>1 <b>GELLERPOX INFECTED MUTANT</b> with frag grenade and heavy axe</li>\n    <li>2 <b>GELLERPOX INFECTED MUTANT</b> with frag grenade and improvised weapon</li>\n</ul>\n<p>If you selected the Mutoid Vermin faction equipment:</p>\n<p>\u21b3 Specified number of <span class=\"faction\">GELLERPOX INFECTED</span> operatives selected from the following list:</p>\n<ul>\n    <li><b>CURSEMITE</b></li>\n    <li><b>EYE STINGER SWARM</b></li>\n    <li><b>SLUDGE-GRUB</b></li>\n</ul>\n"
+        },
+        {
+            "id_racial": 59,
+            "faction": "gellerpox",
+            "type": "racial",
+            "name": "Techno-Curse",
+            "description": "<p><b>At the end of the Select Operatives step</b>, select one <b>TECHNO-CURSE</b> for friendly <span class=\"faction\">GELLERPOX INFECTED</span> operatives to gain for the battle. Whenever an enemy operative is within <span class=\"text-info-emphasis\">your selected <b>TECHNO-CURSE</b>\u2019s infection range</span>, that enemy operative is affected by the <span class=\"text-info-emphasis\">symptom of the selected <b>TECHNO-CURSE</b></span>. Each <b>TECHNO-CURSE</b><span class=\"text-info-emphasis\">, its infection rante and its symptom</span> is listed below:</p>\n\n<span class=\"faction fs-6\">Barrelwarp</span>\n<div class=\"action-box col-12 position-relative mb-3\">\n<p class=\"px-2\"><span class=\"text-info-emphasis\"><b>Infection range:</b> Within 2\" of a friendly <span class=\"faction\">GELLERPOX INFECTED</span> operative (excluding <b>MUTOID VERMIN</b>), or within 3\" of a friendly <span class=\"faction\">GELLERPOX INFECTED</span> <b>GLITCHLING</b> operative.</span></p>\n<p class=\"px-2\"><b>Symptom:</b> Subtract 1 from the Atk stat of that enemy operative\u2019s ranged weapons.</p>\n</div>\n\n<span class=\"faction fs-6\">Screaming Rustspikes</span>\n<div class=\"action-box col-12 position-relative mb-3\">\n<p class=\"px-2\"><span class=\"text-info-emphasis\"><b>Infection range:</b> Within control range of a friendly <span class=\"faction\">GELLERPOX INFECTED</span> operative (excluding <b>MUTOID VERMIN</b>).</span></p>\n<p class=\"px-2\"><b>Symptom:</b> Whenever that enemy operative is fighting or retaliating against a friendly <span class=\"faction\">GELLERPOX INFECTED</span> operative, if your opponent discards any attack dice as a fail, inflict 1 damage on that enemy operative.</p>\n</div>\n\n<span class=\"faction fs-6\">Viral Vox-static</span>\n<div class=\"action-box col-12 position-relative mb-3\">\n<p class=\"px-2\"><span class=\"text-info-emphasis\"><b>Infection range:</b> Within 3\" of a friendly <span class=\"faction\">GELLERPOX INFECTED</span> <b>GLITCHLING</b> operative.</span></p>\n<p class=\"px-2\"><b>Symptom:</b> That enemy operative cannot perform mission actions or the <b>Pick Up Marker</b> action.</p>\n</div>"
+        },
+        {
+            "id_racial": 60,
+            "faction": "gellerpox",
+            "type": "racial",
+            "name": "Revoltingly Resilient",
+            "description": "<p>Whenever an attack dice inflicts damage of 3 or more on a friendly <span class=\"faction\">GELLERPOX INFECTED</span> <b>NIGHTMARE HULK</b> or <span class=\"faction\">GELLERPOX INFECTED</span> <b>MUTANT</b> operative, roll one D6: on a 4+, subtract 1 from that inflicted damage.</p>"
+        },
+        {
+            "id_racial": 61,
+            "faction": "gellerpox",
+            "type": "racial",
+            "name": "Mutoid Vermin",
+            "description": "<p><b>MUTOID VERMIN</b> operatives cannot perform any actions other than <b>Charge</b>, <b>Dash</b>, <b>Fall Back</b>, <b>Fight</b>, <b>Reposition</b>, and <b>Shoot</b>, and cannot use any weapons that aren\u2019t on their datacard. They can perform the Fall Back action for 1 less AP.</p>\n\n<p><b>MUTOID VERMIN</b> operatives cannot contest markers or areas of the killzone, and are ignored for your opponent\u2019s kill/elimination op (when they're incapacitated, and when determining your starting number of operatives). They're also ignored for victory conditions <span class=\"text-info-emphasis\">and scoring VPs if either</span> require operatives to \u201cescape,\u201d \u201csurvive,\u201d or be incapacitated (if they escape/survive/be incapacitated <span class=\"text-info-emphasis\">by enemy operatives</span>, determining how many operatives must escape/survive/be incapacitated, etc.).</p>\n\n<p>Operatives can move through <b>MUTOID VERMIN</b> operatives, and enemy operatives can move within their control range. Having only <b>MUTOID VERMIN</b> operatives within their control range doesn't prevent enemy operatives from performing the <b>Charge</b>, <b>Dash</b>, and <b>Reposition</b> actions, and enemy operatives can leave <b>MUTOID VERMIN</b> operatives' control range when performing the <b>Charge</b> action.</p>\n"
+        },
+        {
+            "id_racial": 144,
+            "faction": "gellerpox",
+            "type": "racial",
+            "name": "Nightmare Hulks",
+            "description": "<p>Whenever your opponent is selecting a valid target, friendly <span class=\"faction\">GELLERPOX INFECTED</span> <b>NIGHTMARE HULK</b> operatives cannot use Light terrain for cover. While this can allow such operatives to be targeted (assuming they\u2019re visible), it doesn\u2019t remove their cover save (if any).</p>\n\n<p><b>NIGHTMARE HULK</b> Friendly <span class=\"faction\">GELLERPOX INFECTED</span> operatives cannot perform unique actions. You must spend 1 additional AP for friendly <span class=\"faction\">GELLERPOX INFECTED</span> <b>NIGHTMARE HULK</b> operatives (excluding <b>VULGRAR THRICE-CURSED</b>) to perform the <b>Pick Up Marker</b> and mission actions (excluding <b>Operate Hatch</b>).</p>"
+        }
+    ],
+    "goremongers": [
+        {
+            "id_racial": 184,
+            "faction": "goremongers",
+            "type": "team",
+            "name": "Operatives",
+            "description": "<ul>\n<li>1 <span class=\"faction\">GOREMONGER</span> <b>BLOOD HERALD</b> operative</li>\n<li>7 <span class=\"faction\">GOREMONGER</span> operatives selected from the following list:</li>\n<ul>\n<li><b>ASPIRANT</b></li>\n<li><b>BLOODTAKER</b></li>\n<li><b>IMPALER</b></li>\n<li><b>INCITER</b></li>\n<li><b>SKULLCLAIMER</b></li>\n<li><b>STALKER</b></li>\n</ul>\n</ul>\n<p>Other than <b>ASPIRANT</b> operatives, your kill team can only include each operative above once.</p>"
+        },
+        {
+            "id_racial": 185,
+            "faction": "goremongers",
+            "type": "racial",
+            "name": "Runes of Khorne",
+            "description": "Each friendly <span class=\"faction\">GOREMONGER</span> operative cannot lose more than 8 wounds per <b>Shoot</b> action.\n"
+        },
+        {
+            "id_racial": 186,
+            "faction": "goremongers",
+            "type": "racial",
+            "name": "Gore Tanks",
+            "description": "Each friendly <span class=\"faction\">GOREMONGER</span> operative has a <b>GORE TANK</b> that has three levels: full, half, and empty. They start the battle at half. Whenever a <b>GORE TANK</b> increases, it goes up one level; whenever it decreases, it goes down one level. A <b>GORE TANK</b> cannot increase when it\u2019s already full, or decrease when it\u2019s already empty (see diagram below).\n\n<p>Whenever a friendly <span class=\"faction\">GOREMONGER</span> operative incapacitates an operative within its control range, or visible to and within 2\" of it, you can increase its <b>GORE TANK</b>.</p>\n\n<p>Whenever a friendly <span class=\"faction\">GOREMONGER</span> operative uses a <b>SANGUAVITAE</b> rule (see right), you must decrease its <b>GORE TANK</b>.</p>\n"
+        },
+        {
+            "id_racial": 187,
+            "faction": "goremongers",
+            "type": "racial",
+            "name": "Sanguavitae",
+            "description": "<p>You can spend friendly operatives' <b>SANGUAVITAE</b> rules on the effects below when the \"When\" condition is met. You cannot use the same <b>SANGUAVITAE</b> rule more than once per activation or counteraction, and you cannot use more than two <b>SANGUAVITAE</b> rules per activation or counteraction. You cannot use Mania and Fury during the same activation.</p>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Rejuvenate</span>\n    <p class=\"px-2\"><b>When</b>: During a friendly <span class=\"faction\">GOREMONGER</span> operative\u2019s activation or counteraction, before or after it performs an action.</p>\n    <p class=\"px-2\"><b>Effect</b>: That operative regains <span class=\"text-warning-emphasis\">D3+1</span> lost wounds.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Mania</span>\n    <p class=\"px-2\"><b>When</b>: During a friendly <span class=\"faction\">GOREMONGER</span> operative\u2019s activation, before or after it performs an action.</p>\n    <p class=\"px-2\"><b>Effect</b>: Until the start of that operative\u2019s next activation, add 1 to its APL stat.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Fury</span>\n    <p class=\"px-2\"><b>When</b>: During a friendly <span class=\"faction\">GOREMONGER</span> operative\u2019s activation, before or after it performs an action.</p>\n    <p class=\"px-2\"><b>Effect</b>: That operative can perform two <b>Fight</b> actions during that activation, and the second one is free.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Rake</span>\n    <p class=\"px-2\"><b>When</b>: When a friendly <span class=\"faction\">GOREMONGER</span> operative performs the <b>Charge</b> action.</p>\n    <p class=\"px-2\"><b>Effect</b>: When that operative finishes moving during that action, you can inflict 1 damage on one enemy operative within its control range.</p>\n</div>"
+        }
+    ],
+    "hearthkyn-salvager": [
+        {
+            "id_racial": 13,
+            "faction": "hearthkyn-salvager",
+            "type": "team",
+            "name": "Operatives",
+            "description": "<p>1 <span class=\"faction\">HEARTHKYN SALVAGER</span> <b>THEYN</b> operative with one option from each of the following:</p>\n<ul>\n    <li><b>Autoch-pattern bolt pistol</b>, <b>Autoch-pattern bolter</b>, <b>bolt revolver</b>, <b>EtaCarn plasma pistol</b>, <b>ion blaster</b> or <b>ion pistol</b></li>\n    <li><b>Concussion gauntlet</b> or <b>plasma weapon</b></li>\n</ul>\n\n<p>9 <span class=\"faction\">HEARTHKYN SALVAGER</span> operatives selected from the following list:</p>\n<ul>\n    <li><b>D\u014cZR</b></li>\n    <li><b>FIELD MEDIC</b></li>\n    <li><b>GRENADIER</b></li>\n    <li><b>JUMP PACK WARRIOR</b></li>\n    <li><b>KINLYNK</b>*</li>\n    <li><b>KOGNIT\u00c5\u00c5R</b>*</li>\n    <li><b>LOK\u00c5TR</b>*</li>\n    <li><b>LUGGER</b></li>\n    <li><b>WARRIOR</b>*</li>\n    <li><b>GUNNER</b> with one of the following options:\n        <ul>\n            <li>EtaCarn plasma beamer; fists</li>\n            <li>HYLas auto rifle; fists</li>\n            <li>HYLas rotary cannon; fists</li>\n            <li>L7 missile launcher; fists</li>\n            <li>Magna rail rifle; fists</li>\n        </ul>\n    </li>\n</ul>\n\n<p>* With one of the following options:</p>\n<ul>\n    <li><b>Autoch-pattern bolter</b>; <b>fists</b></li>\n    <li><b>Ion blaster</b>; <b>fists</b></li>\n</ul>\n\n<p>Other than <b>GUNNER</b> and <b>WARRIOR</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to three <b>GUNNER</b> operatives (each must have a different option).</p>\n"
+        },
+        {
+            "id_racial": 65,
+            "faction": "hearthkyn-salvager",
+            "type": "racial",
+            "name": "Grudge",
+            "description": "<p>Whenever an enemy operative incapacitates a friendly <span class=\"faction\">HEARTHKYN SALVAGER</span> operative, that enemy operative gains one of your Grudge tokens for the battle. Whenever a friendly <span class=\"faction\">HEARTHKYN SALVAGER</span> operative is shooting against, fighting against or retaliating against an enemy operative, for each of your Grudge tokens that enemy operative has, you can retain one of your normal successes as a critical success instead. Note that Grudge tokens aren\u2019t removed when you do this.</p>"
+        }
+    ],
+    "hierotek": [
+        {
+            "id_racial": 21,
+            "faction": "hierotek",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">HIEROTEK CIRCLE</span> operative selected from the following list:\r\n<ul>\r\n    <li><b>CHRONOMANCER</b> operative with one of the following options:\r\n        <ul>\r\n            <li>Aeonstave</li>\r\n            <li>Entropic lance</li>\r\n        </ul>\r\n    </li>\r\n    <li><b>PSYCHOMANCER</b></li>\r\n    <li><b>TECHNOMANCER</b></li>\r\n</ul>\r\n<p>1 <b>PLASMACYTE ACCELERATOR</b> operative</p>\r\n<p>1 <b>PLASMACYTE REANIMATOR</b> operative</p>\r\n<p>5 <span class=\"faction\">HIEROTEK CIRCLE</span> operatives selected from the following list:</p>\r\n<ul>\r\n    <li><b>APPRENTEK</b></li>\r\n    <li><b>DEATHMARK</b></li>\r\n    <li><b>DESPOTEK</b> with one of the following options:\r\n        <ul>\r\n            <li>Gauss blaster; bayonet</li>\r\n            <li>Tesla carbine; bayonet</li>\r\n        </ul>\r\n    </li>\r\n    <li><b>GUARDIAN</b> with one of the following options:\r\n        <ul>\r\n            <li>Gauss blaster; bayonet</li>\r\n            <li>Tesla carbine; bayonet</li>\r\n        </ul>\r\n    </li>\r\n</ul>\r\n<p>Other than <b>DEATHMARK</b> and <b>GUARDIAN</b> operatives, your kill team can only include each operative above once.</p>"
+        },
+        {
+            "id_racial": 75,
+            "faction": "hierotek",
+            "type": "racial",
+            "name": "Living Metal",
+            "description": "In the Ready step of each Strategy phase, after resolving all other rules in this step (e.g. <b>Reanimation Protocols</b> faction rule), each friendly <span class=\"faction\">HIEROTEK CIRCLE</span> operative regains D3+1 lost wounds (roll separately for each)."
+        },
+        {
+            "id_racial": 76,
+            "faction": "hierotek",
+            "type": "racial",
+            "name": "Reanimation Protocols",
+            "description": "<p>The first time each friendly <span class=\"faction\">HIEROTEK CIRCLE</span> operative is incapacitated, before it\u2019s removed from the killzone, place one of your Reanimation markers within its control range. Then remove it as incapacitated, also removing any tokens and rules effects it had (e.g. <b>CHRONOMANCER</b> operative\u2019s Chronometron action, Poison tokens, APL stat changes, being implanted, etc.).</p>\n<p>In the Ready step of each Strategy phase, select one of your Reanimation markers and roll one D6: on a 1-2, leave that Reanimation marker in the killzone and repeat this process with a different one of your Reanimation markers (if any); on a 3+, an operative is <b>REANIMATED</b>.</p>\n<p>You can only select each of your Reanimation markers once per turning point, and once you roll a 3+, you don\u2019t select any more for that turning point. Whenever an operative is <b>REANIMATED</b>:</p>\n<ul>\n    <li>Set up the operative that Reanimation marker was placed for (it\u2019s no longer incapacitated). It must be placed within 3\" of that Reanimation marker and not within control range of enemy operatives (if you cannot do so, treat the roll as 1-2 instead).</li>\n    <li>It has <span class=\"text-info-emphasis\">1 wounds remaining.</span></li>\n    <li>It has an order of your choice and is ready.</li>\n    <li>Remove that Reanimation marker.</li>\n</ul>\n<p>As <b>REANIMATED</b> operatives are no longer incapacitated, for the purposes of the kill op, this means your opponent\u2019s kill grade can go down during the battle (they lose VP accordingly). However, it won\u2019t retroactively change any other VPs your opponent has scored, e.g. from tac ops.</p>"
+        },
+        {
+            "id_racial": 122,
+            "faction": "hierotek",
+            "type": "racial",
+            "name": "Magnify",
+            "description": "Some <span class=\"faction\">HIEROTEK CIRCLE</span> <b>APPRENTEK</b> and <span class=\"faction\">HIEROTEK CIRCLE</span> <b>CRYPTEK</b> weapons in this team's rules have the Magnify weapon rule below.\n<p><b>*Magnify:</b> Whenever this operative is performing the <b>Shoot</b> action with this weapon, if another friendly <span class=\"faction\">HIEROTEK CIRCLE</span> <b>APPRENTEK</b> or <span class=\"faction\">HIEROTEK CIRCLE</span> <b>CRYPTEK</b> operative has an <b>Engage</b> order and is visible to this operative, you can <span class=\"text-info-emphasis\">use this rule. If you do,</span> treat that operative as the active operative for the purposes of determining a valid target<span class=\"text-info-emphasis\">, cover and obscured</span>. If you do, this weapon has the <b>Ceaseless</b> weapon rule until the end of that action.</p>"
+        }
+    ],
+    "hunter-clade": [
+        {
+            "id_racial": 14,
+            "faction": "hunter-clade",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">HUNTER CLADE</span> operative selected from the following list:\n<ul>\n    <li><b>SICARIAN INFILTRATOR PRINCEPS</b> with one option from each of the following categories:\n        <ul>\n            <li>Flechette blaster or stubcarbine</li>\n            <li>Power weapon or taser goad</li>\n        </ul>\n    </li>\n    <li><b>SICARIAN RUSTSTALKER PRINCEPS</b></li>\n    <li><b>SKITARII RANGER ALPHA</b> with one of the following options:\n        <ul>\n            <li>Galvanic rifle; gun butt</li>\n            <li>Master-crafted radium pistol; power weapon</li>\n        </ul>\n        Or one option from each of the following categories:\n        <ul>\n            <li>Arc pistol or phosphor blast pistol</li>\n            <li>Arc maul or taser goad</li>\n        </ul>\n    </li>\n    <li><b>SKITARII VANGUARD ALPHA</b> with one of the following options:\n        <ul>\n            <li>Radium carbine; gun butt</li>\n            <li>Master-crafted radium pistol; power weapon</li>\n        </ul>\n        Or one option from each of the following categories:\n        <ul>\n            <li>Arc pistol or phosphor blast pistol</li>\n            <li>Arc maul or taser goad</li>\n        </ul>\n    </li>\n</ul>\n9 <span class=\"faction\">HUNTER CLADE</span> operatives selected from the following list:\n<ul>\n    <li><b>SICARIAN INFILTRATOR WARRIOR</b>* with one option from each of the following categories:\n        <ul>\n            <li>Flechette blaster or stubcarbine</li>\n            <li>Power weapon or taser goad</li>\n        </ul>\n    </li>\n    <li><b>SICARIAN RUSTSTALKER WARRIOR</b>* with one of the following options:\n        <ul>\n            <li>Chordclaw and transonic razor</li>\n            <li>Transonic blades</li>\n        </ul>\n    </li>\n    <li><b>SKITARII RANGER DIKTAT</b></li>\n    <li><b>SKITARII RANGER GUNNER</b>* with gun butt and one of the following options:\n        <ul>\n            <li>Arc rifle, gun butt</li>\n            <li>Plasma gun; gun butt</li>\n            <li>Transuranic arquebus; gun butt</li>\n        </ul>\n    </li>\n    <li><b>SKITARII VANGUARD DIKTAT</b></li>\n    <li><b>SKITARII VANGUARD GUNNER</b>* with gun butt and one of the following options:\n        <ul>\n            <li>Plasma caliver; gun butt</li>\n            <li>Radium carbine; gun butt</li>\n        </ul>\n    </li>\n    <li><b>SKITARII VANGUARD SHOCKTROOPER</b></li>\n    <li><b>SKITARII VANGUARD SURVEYOR</b></li>\n    <li><b>SKITARII RANGER SURVEYOR</b></li>\n    <li><b>SKITARII RANGER WARRIOR</b></li>\n    <li><b>SKITARII VANGUARD WARRIOR</b></li>\n</ul>\n<p>* You cannot select more than four of these operatives combined.</p>"
+        },
+        {
+            "id_racial": 64,
+            "faction": "hunter-clade",
+            "type": "racial",
+            "name": "Doctrina Imperatives",
+            "description": "<p><span class=\"text-info-emphasis\">At the end of the Select Operatives step, select one <b>DOCTRINA IMPERATIVE</b> to be a Primary Mode for your kill team until the end of the battle (note that selecting a Primary Mode doesn\u2019t automatically give you the effects of that <b>DOCTRINA IMPERATIVE</b> for the battle; you must still select it as a <b>STRATEGIC GAMBIT</b>, as below)</span></p>\n\n<p>STRATEGIC GAMBIT. Select one <b>DOCTRINA IMPERATIVE</b> for friendly <span class=\"faction\">HUNTER CLADE</span> operatives to have until the Ready step of the next Strategy phase. Each <b>DOCTRINA IMPERATIVE</b> has both an Optimisation and a Deprecation rule. Both are in effect while your kill team has that <b>DOCTRINA IMPERATIVE</b>. <span class=\"text-info-emphasis\">Once per battle, when you select the <b>DOCTRINA IMPERATIVE</b> that\u2019s your kill team\u2019s Primary Mode, you can ignore its Deprecation rule.</span></p>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Protector Imperative</span>\n    <p class=\"px-2\"><b>Optimisation</b>: Friendly <span class=\"faction\">HUNTER CLADE</span> operatives' ranged weapons have the Ceaseless weapon rule.</p>\n    <p class=\"px-2\"><b>Deprecation</b>: Worsen the Hit stat of friendly <span class=\"faction\">HUNTER CLADE</span> operatives' melee weapons by 1. This isn\u2019t cumulative with being injured.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Conqueror Imperative</span>\n    <p class=\"px-2\"><b>Optimisation</b>: Friendly <span class=\"faction\">HUNTER CLADE</span> operatives' melee weapons have the Ceaseless weapon rule.</p>\n    <p class=\"px-2\"><b>Deprecation</b>: Worsen the Hit stat of friendly <span class=\"faction\">HUNTER CLADE</span> operatives' ranged weapons by 1. This isn\u2019t cumulative with being injured.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Bulwark Imperative</span>\n    <p class=\"px-2\"><b>Optimisation</b>: Whenever an operative is shooting a friendly <span class=\"faction\">HUNTER CLADE</span> operative, if you retain any cover saves, you can re-roll one of your defence dice.</p>\n    <p class=\"px-2\"><b>Deprecation</b>: Subtract 1\" from the Move stat of friendly <span class=\"faction\">HUNTER CLADE</span> operatives.</p>\n</div>"
+        }
+    ],
+    "imperial-navy-breachers": [
+        {
+            "id_racial": 1,
+            "faction": "imperial-navy-breachers",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">IMPERIAL NAVY BREACHER</span> <b>SERGEANT-AT-ARMS</b> operative with the following:\n<ul>\n<li>Navis shotgun and Navis hatchet</li>\n<li>Or one option from each of the following:<ul>\n  <li>Bolt pistol or heirloom autopistol</li>\n  <li>Chainsword or power weapon</li></ul></li>\n</ul>\n\n10 <span class=\"faction\">IMPERIAL NAVY BREACHER</span> operatives selected from the following list:\n<ul>\n<li><b>ARMSMAN</b></li>\n<li><b>AXEJACK</b></li>\n<li><b>C.A.T. UNIT*</b></li>\n<li><b>ENDURANT</b></li>\n<li><b>GHEISTSKULL*</b></li>\n<li><b>GRENADIER</b></li>\n<li><b>GUNNER</b> with Navis las-volley and gun butt</li>\n<li><b>GUNNER</b> with meltagun and gun butt</li>\n<li><b>GUNNER</b> with plasma gun and gun butt</li>\n<li><b>HATCHCUTTER</b></li>\n<li><b>SURVEYOR</b></li>\n<li><b>VOID-JAMMER</b></li>\n</ul>\n\n<p>Other than <b>ARMSMAN</b> <span class=\"text-info-emphasis text-decoration-line-through\">and <b>GUNNER</b></span> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two <b>GUNNER</b> operatives.</p>\n\n<p>Your kill team can only include a <b>GHEISTSKULL</b> operative if it also includes a <b>VOID-JAMMER</b> operative, and it can only include a <b>C.A.T. UNIT</b> operative if it also includes a <b>SURVEYOR</b> operative.</p>\n\n<p><b>*</b>These operatives count as half a selection each, meaning you can select both of them and it\u2019s treated as one selection\nin total.</p>"
+        },
+        {
+            "id_racial": 41,
+            "faction": "imperial-navy-breachers",
+            "type": "racial",
+            "name": "Breach And Clear",
+            "description": "Once per Turning Point, when a ready friendly <span class=\"faction\">IMPERIAL NAVY BREACHER</span> operative is activated, you can use this rule. If you do,  select one other ready friendly <span class=\"faction\">IMPERIAL NAVY BREACHER</span> operative visible to and within 3\" of that operative. When that first friendly operative is expended, you can activate that other friendly operative before your opponent activates. When that other operative is expended, your opponent then activates as normal."
+        },
+        {
+            "id_racial": 42,
+            "faction": "imperial-navy-breachers",
+            "type": "racial",
+            "name": "Void Armour",
+            "description": "<p>Whenever an operative is shooting a friendly <span class=\"faction\">IMPERIAL NAVY BREACHER</span> operative, if the ranged weapon in that sequence\nhas the Blast or Torrent weapon rule (excluding weapons\nthat have a sweeping profile), you can re-roll one of your\ndefence dice, or up to two of your defence dice if that friendly\noperative is a GRENADIER.</p>\n\n<p>Friendly <span class=\"faction\">IMPERIAL NAVY BREACHER</span> operatives\naren\u2019t affected by the x\" Devastating x weapon rule (i.e.\nDevastating with a distance) unless they are the target during\nthat sequence.</p>"
+        }
+    ],
+    "inquisitorial-agent": [
+        {
+            "id_racial": 15,
+            "faction": "inquisitorial-agent",
+            "type": "team",
+            "name": "Operatives",
+            "description": "An <span class=\"faction\">INQUISITORIAL AGENT</span> kill team consists of:\n    <li><b>1 INQUISITORIAL AGENT</b> INTERROGATOR operative</li>\n    <li><b>1 INQUISITORIAL AGENT</b> TOME-SKULL operative</li>\n    <li><b>5 INQUISITORIAL AGENT</b> operatives selected from this list:</li>\n    <ul>\n        <li>AUTOSAVANT</li>\n        <li>QUESTKEEPER</li>\n        <li>DEATH WORLD VETERAN</li>\n        <li>ENLIGHTENER</li>\n        <li>HEXORCIST</li>\n        <li>MYSTIC</li>\n        <li>PENAL LEGIONNAIRE</li>\n        <li>PISTOLIER</li>\n        <li>GUN SERVITOR with one of the following options:</li>\n        <ul>\n            <li>Heavy bolter; servo claw</li>\n            <li>Multi-melta; servo claw</li>\n            <li>Plasma cannon; servo claw</li>\n        </ul>\n    </ul></li>\n</ul>\n5 <span class='faction'> INQUISITORIAL AGENT</span> operatives selected from the above list, or <b>REQUISITIONED</b> operatives from one group in the Inquisitorial Requisition faction rule (you cannot select <b>REQUISITIONED</b> operatives from different groups).\n</p>\n<p>\n    Your kill team can only include each operative on this list once, unless you are not including any <b>REQUISITIONED</b> operatives, in which case you can include up to two <b>GUN SERVITOR</b> operatives, but each one must have different options.\n</p>\n<p><span class=\"text-info-emphasis\">Your kill team (including any <b>REQUISITIONED</b> operatives) cannot include more than one weapon with the Piercing 2 weapon rule, and cannot include more than three weapons with the Piercing X (excluding Piercing Crits X) weapon rule combined.</span></p>"
+        },
+        {
+            "id_racial": 133,
+            "faction": "inquisitorial-agent",
+            "type": "racial",
+            "name": "INQUISITORIAL REQUISITION",
+            "description": "<p><b>REQUISITIONED</b> operatives can be taken from one of the following groups to supplement an <b>INQUISITORIAL\n    AGENT</b> kill team, as specified in this kill team's selection rules:</p>\n<ul>\n<li><span class='faction'>DEATH KORPS</span></li>\n<li><span class='faction'>EXACTION SQUAD</span></li>\n<li><span class='faction'>IMPERIAL NAVY BREACHER</span></li>\n<li><span class='faction'>KASRKIN</span></li>\n<li><span class='faction'>SISTER OF SILENCE</span></li>\n<li><span class='faction'>TEMPESTUS SCION</span></li>\n</ul>\n<p>These operatives have their faction keyword replaced in all instances on their datacards with <b>INQUISITORIAL\n    AGENT</b> (unless they already have it). You cannot use ploys and equipment associated with a\n<b>REQUISITIONED</b> operative's former faction keyword, and you cannot use a <b>REQUISITIONED</b> operative's\nformer faction rules unless specified on their Inquisitorial Requisition card (it only applies to those\n<b>REQUISITIONED</b> operatives). Note that with their new faction keyword, <b>REQUISITIONED</b> operatives can\ninteract with the <b>INQUISITORIAL AGENT</b> rules.</p>\n\n<p>For example, a <b>REQUISITIONED</b> VOX-OPERATOR</b> operative from the <span class='faction'>DEATH KORPS</span>\ngroup would have its <span class='faction'>DEATH KORPS</span> keyword replaced in all instances on its datacard with\n<span class='faction'>INQUISITORIAL AGENT</span>. This allows you to select any other friendly <span class='faction'>INQUISITORIAL AGENT</span> operative for\nits Signal unique action. However, the Guardsman Orders faction rule isn't permitted, so its Relay Orders additional\nrule would be ignored. It would now also be a valid operative for the <span class='faction'>INQUISITORIAL AGENT</span> <b>MYSTIC</b>\noperative's Scry unique action.</p>\n\n<span class=\"faction fs-6\">IMPERIAL NAVY BREACHERS</span>\n<p>5 <b>IMPERIAL NAVY BREACHER</b> operatives selected from the following list:</p>\n<ul>\n<li><b>ARMSMAN</b></li>\n<li><b>AXEJACK</b></li>\n<li><b>ENDURANT</b></li>\n<li><b>GRENADIER</b></li>\n<li><b>GUNNER</b> with Navis las-volley and gun butt</li>\n<li><b>GUNNER</b> with meltagun and gun butt</li>\n<li><b>GUNNER</b> with plasma gun and gun butt</li>\n<li><b>HATCHCUTTER</b></li>\n<li><b>VOID-JAMMER</b></li>\n</ul>\n<p>Other than <b>ARMSMAN</b> and <b>GUNNER</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two <b>GUNNER</b> operatives.</p>\n\n<span class=\"faction fs-6\">KASRKIN</span>\n<p>5 <b>KASRKIN</b> operatives selected from the following list:</p>\n<ul>\n<li><b>COMBAT MEDIC</b></li>\n<li><b>DEMO-TROOPER</b></li>\n<li><b>GUNNER</b> with flamer and gun butt</li>\n<li><b>GUNNER</b> with grenade launcher and gun butt</li>\n<li><b>GUNNER</b> with hot-shot volley gun and gun butt</li>\n<li><b>GUNNER</b> with meltagun and gun butt</li>\n<li><b>GUNNER</b> with plasma gun and gun butt</li>\n<li><b>RECON-TROOPER</b></li>\n<li><b>SHARPSHOOTER</b></li>\n<li><b>VOX-TROOPER</b></li>\n</ul>\n<p>Other than <b>GUNNER</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to four <b>GUNNER</b> operatives.</p>\n\n<span class=\"faction fs-6\">SISTERS OF SILENCE</span>\n<p>5 <b>SISTER OF SILENCE</b> operatives selected from the following list:</p>\n<ul>\n<li><b>PROSECUTOR</b></li>\n<li><b>VIGILATOR</b></li>\n<li><b>WITCHSEEKER</b></li>\n</ul>\n<p>Your kill team can only include each operative on this list once.</p>\n\n<span class=\"faction fs-6\">TEMPESTUS SCIONS</span>\n<p>5 <b>TEMPESTUS SCION</b> operatives selected from the following list:</p>\n<ul>\n<li><b>COMMS</b></li>\n<li><b>GUNNER</b> with flamer and gun butt</li>\n<li><b>GUNNER</b> with grenade launcher and gun butt</li>\n<li><b>GUNNER</b> with hot-shot volley gun and gun butt</li>\n<li><b>GUNNER</b> with meltagun and gun butt</li>\n<li><b>GUNNER</b> with plasma gun and gun butt</li>\n<li><b>TROOPER</b></li>\n</ul>\n<p>Other than <b>TROOPER</b> and <b>GUNNER</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to four <b>GUNNER</b> operatives (each must have a different option).</p>"
+        }
+    ],
+    "intercessors": [
+        {
+            "id_racial": 16,
+            "faction": "intercessors",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">ANGEL OF DEATH</span> operative selected from the following list:<ul><li><b>ASSAULT INTERCESSOR SERGEANT</b> with one option from each of the following:<ul><li>Hand flamer or heavy bolt pistol</li><li>Chainsword, power fist, power weapon or thunder hammer</li></ul>Or the following option:<ul><li>Plasma pistol; chainsword</li></ul></li><li><b>INTERCESSOR SERGEANT</b> with one option from each of the following:<ul><li>Auto bolt rifle, bolt rifle or stalker bolt rifle</li><li>Chainsword, fists, power fist, power weapon or thunder hammer</li></ul></li><li><b>SPACE MARINE CAPTAIN</b></li></ul>5 <span class=\"faction\">ANGEL OF DEATH</span> operatives selected from the following list:<ul><li><b>ASSAULT INTERCESSOR GRENADIER</b></li><li><b>ASSAULT INTERCESSOR WARRIOR</b></li><li><b>ELIMINATOR SNIPER *</b></li><li><b>HEAVY INTERCESSOR GUNNER *</b></li><li><b>INTERCESSOR GUNNER</b> with auxiliary grenade launcher and one of the following options:<ul><li>Auto bolt rifle; fists</li><li>Bolt rifle; fists</li><li>Stalker bolt rifle; fists</li></ul></li><li><b>INTERCESSOR WARRIOR</b> with one of the following options:<ul><li>Auto bolt rifle; fists</li><li>Bolt rifle; fists</li><li>Stalker bolt rifle; fists</li></ul></li></ul><p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative above once.</p><p> * You cannot select more than one of these operatives combined.</p>"
+        },
+        {
+            "id_racial": 79,
+            "faction": "intercessors",
+            "type": "racial",
+            "name": "Chapter Tactics",
+            "description": "<p>When selecting your kill team, select a primary and secondary <b>CHAPTER TACTIC</b> for friendly <span class=\"faction\">ANGEL OF DEATH</span> operatives to gain for the battle. Multiple instances of the same <b>CHAPTER TACTIC</b> are not cumulative.</p>\n<p><i><b>Designer\u2019s Note:</b> If you\u2019re playing a series of games, i.e. a campaign or tournament, you must select the same primary and secondary <b>CHAPTER TACTIC</b> for every battle (you can still change the secondary with the Adaptive Tactics strategy ploy).</i></p>\n\n<span class=\"faction fs-6\">Aggressive</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">This operative's melee weapons have the <b>Rending</b> weapon rule.</p></div>\n\n<span class=\"faction fs-6\">Dueller</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\"><span class=\"text-warning-emphasis\">Whenever this operative is fighting or retaliating, each of your normal successes can block one unresolved critical success (unless the enemy operative\u2019s weapon has the Brutal weapon rule).</span></p></div>\n\n<span class=\"faction fs-6\">Resolute</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">You can ignore any changes to this operative's <b>APL</b> stat.</p></div>\n\n<span class=\"faction fs-6\">Stealthy</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Whenever an operative is shooting this operative, if you retain any cover saves, you can retain one additional cover save or retain one cover save as a critical success instead. This isn\u2019t cumulative with improved cover saves from Vantage terrain. </p></div>\n\n<span class=\"faction fs-6\">Mobile</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">This operative can perform the <b>Fall Back</b> action for 1 less AP. It can also perform the <b>Charge</b> action while within control range of an enemy operative and leave that enemy operative\u2019s control range during that move.</p></div>\n\n<span class=\"faction fs-6\">Methodical</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Whenever this operative is shooting, its ranged weapons have the <b>Ceaseless</b> weapon rule if it hasn\u2019t performed the <b>Charge</b>, <b>Fall Back</b> or <b>Reposition</b> action during this activation.</p></div>"
+        },
+        {
+            "id_racial": 121,
+            "faction": "intercessors",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "During each friendly <span class=\"faction\">ANGEL OF DEATH</span> operative\u2019s activation, it can perform either two <b>Shoot</b> actions or two <b>Fight</b> actions. If it\u2019s two <b>Shoot</b> actions, a bolt weapon must be selected for at least one of them, and if it\u2019s a bolt sniper rifle or heavy bolter, 1 additional AP must be spent for the second action if both actions are using that weapon.<br><br> Each friendly <span class=\"faction\">ANGEL OF DEATH</span> operative can counteract regardless of its order."
+        }
+    ],
+    "kabalite": [
+        {
+            "id_racial": 6,
+            "faction": "kabalite",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">HAND OF THE ARCHON</span> <b>ARCHSYBARITE</b> operative with one of the following options:\n<ul>\n  <li>Blast pistol; venom blade</li>\n  <li>Splinter pistol; venom blade</li>\n  <li>Splinter pistol; agoniser</li>\n  <li>Splinter pistol; power weapon</li>\n  <li>Splinter rifle; array of blades</li>\n</ul>\n\n8 <span class=\"faction\">HAND OF THE ARCHON</span> operatives selected from the following list:\n<ul>\n  <li><b>AGENT</b></li>\n  <li><b>CRIMSON DUELLIST</b></li>\n  <li><b>DISCIPLE OF YAELINDRA</b></li>\n  <li><b>ELIXICANT</b></li>\n  <li><b>FLAYER</b></li>\n  <li><b>GUNNER</b> with one of the following options:\n    <ul>\n      <li>Blaster; array of blades</li>\n      <li>Shredder; array of blades</li>\n    </ul>\n  </li>\n  <li><b>HEAVY GUNNER</b> with one of the following options:\n    <ul>\n      <li>Dark lance; array of blades</li>\n      <li>Splinter cannon; array of blades</li>\n    </ul>\n  </li>\n  <li><b>SKYSPLINTER ASSASSIN</b></li>\n</ul>\n\n<p>Other than <b>AGENT</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two darklight weapons (blast pistol, blaster and dark lance are darklight weapons).</p>\n"
+        },
+        {
+            "id_racial": 45,
+            "faction": "kabalite",
+            "type": "racial",
+            "name": "Power From Pain",
+            "description": "<p>After a friendly <span class=\"faction\">HAND OF THE ARCHON</span> operative performs an action, it gains one of your Pain tokens if:</p>\n<ul>\n    <li>An enemy operative was injured during that action, but was not incapacitated.</li>\n    <li>An enemy operative was incapacitated during that action. If that enemy operative had a Wounds stat of 12 or more, that friendly operative gains two of your Pain tokens instead.</li>\n</ul>\n<p>You can spend friendly operatives' Pain tokens on the invigorations below when the \"When\" condition is met. You cannot use more than one invigoration per activation or counteraction, except Stimulated Senses, which can be used <span class=\"text-warning-emphasis\">once per activation or counteraction</span> in addition to another invigoration.</p>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Dark Animus</span>\n    <p class=\"px-2\"><b>When</b>: During the operative's activation, before or after it performs an action.</p>\n    <p class=\"px-2\"><b>Effect</b>: Until the start of the operative's next activation, add 1 to its APL stat.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Accelerated Rejuvenation</span>\n    <p class=\"px-2\"><b>When</b>: During the operative's activation or counteraction, before or after it performs an action.</p>\n    <p class=\"px-2\"><b>Effect</b>: The operative regains D3+1 lost wounds.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Vitalised Surge</span>\n    <p class=\"px-2\"><b>When</b>: After the operative incapacitates an enemy operative and that enemy operative is removed from the killzone.</p>\n    <p class=\"px-2\"><b>Effect</b>: The operative can immediately perform a free <b>Dash</b> action, even if it's performed an action that prevents it from performing the <b>Dash</b> action.</p>\n</div>\n\n<div class=\"action-box col-12 position-relative mb-3\">\n    <span class=\"title-action\">Stimulated Senses</span>\n    <p class=\"px-2\"><b>When</b>: When the operative is activated.</p>\n    <p class=\"px-2\"><b>Effect</b>: The operative can perform two <b>Shoot</b> actions during the activation if a splinter pistol or splinter rifle is selected for at least one of them.</p>\n</div>"
+        },
+        {
+            "id_racial": 135,
+            "faction": "kabalite",
+            "type": "racial",
+            "name": "Rifles",
+            "description": "<p>Whenever a friendly <span class=\"faction\">HAND OF THE ARCHON</span> operative is shooting with a splinter rifle during an activation in which it hasn\u2019t performed the <b>Charge</b>, <b>Fall Back</b> or <b>Reposition</b> action, that weapon has the <b>Accurate 1</b> weapon rule. Note that operative isn\u2019t restricted from performing those actions after shooting.</p>\n"
+        }
+    ],
+    "kasrkin": [
+        {
+            "id_racial": 17,
+            "faction": "kasrkin",
+            "type": "team",
+            "name": "Operatives",
+            "description": "<p><b>1 <span class=\"faction\">KASRKIN</span> SERGEANT</b> operative with one of the following options:</p>\n<ul>\n  <li>Bolt pistol; power weapon</li>\n  <li>Hot-shot lasgun; gun butt</li>\n  <li>Hot-shot laspistol; power weapon</li>\n  <li>Plasma pistol; chainsword</li>\n</ul>\n\n<p><b>9 <span class=\"faction\">KASRKIN</span></b> operatives selected from the following list:</p>\n<ul>\n  <li><b>COMBAT MEDIC</b></li>\n  <li><b>DEMO-TROOPER</b></li>\n  <li><b>GUNNER</b> with flamer and gun butt<b>*</b></li>\n  <li><b>GUNNER</b> with grenade launcher and gun butt<b>*</b></li>\n  <li><b>GUNNER</b> with hot-shot volley gun and gun butt<b>*</b></li>\n  <li><b>GUNNER</b> with meltagun and gun butt<b>*</b></li>\n  <li><b>GUNNER</b> with plasma gun and gun butt<b>*</b></li>\n  <li><b>RECON-TROOPER</b></li>\n  <li><b>SHARPSHOOTER</b><b>*</b></li>\n  <li><b>TROOPER</b></li>\n  <li><b>VOX-TROOPER</b></li>\n</ul>\n\n<p>Other than <b>TROOPER</b> operatives, your kill team can only include each operative on this list once.</p>\n<p>* You cannot select more than four of these operatives combined.</p>\n\n<p>Some <span class=\"faction\">KASRKIN</span> rules refer to a \"hot-shot weapon\". This is a ranged weapon that includes \"hot-shot\" in its name, e.g. hot-shot lasgun, all profiles of a hot-shot marksman rifle, etc.</p>"
+        },
+        {
+            "id_racial": 58,
+            "faction": "kasrkin",
+            "type": "racial",
+            "name": " Skill at arms",
+            "description": "<p><b>STRATEGIC GAMBIT</b>. Select a <b>SKILL AT ARMS</b> for friendly <span class=\"faction\">KASRKIN</span> operatives to have until the Ready step of the next Strategy phase.</p>\n\n<span class=\"faction fs-6\">Light 'Em Up</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\"><span class=\"text-info-emphasis\">Whenever a friendly <span class=\"faction\">KASRKIN</span> operative is shooting, its ranged weapons have the Severe weapon rule if any of the following are true for the target:</span><ul>\n<li><span class=\"text-info-emphasis\">It\u2019s ready.</span></li>\n<li><span class=\"text-info-emphasis\">It\u2019s not in cover.</span></li>\n<li><span class=\"text-info-emphasis\">It\u2019s being scanned (see <b>RECON-TROOPER</b>).</span></li>\n</ul></p></div>\n\n<span class=\"faction fs-6\">Strike Fast</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Whenever a friendly <span class=\"faction\">KASRKIN</span> operative is performing the <b>Reposition</b> action, add 1\" to its Move stat.</p></div>\n\n<span class=\"faction fs-6\">Ice In Your Veins</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Whenever a friendly <span class=\"faction\">KASRKIN</span> operative is fighting or retaliating, or an operative is shooting it, the first time an attack dice inflicts Normal Dmg of <span class=\"text-info-emphasis\">3</span> or more on this operative during that sequence, that dice inflicts 1 less damage on it.</p></div>\n\n<span class=\"faction fs-6\">For Cadia!</span>\n<div class=\"action-box col-12 position-relative mb-3\"><p class=\"px-2\">Add 1 to the Atk stat of friendly <span class=\"faction\">KASRKIN</span> operatives\u2019 melee weapons (to a maximum of 4). <span class=\"text-info-emphasis\">Whenever a friendly <span class=\"faction\">KASRKIN</span> operative is fighting, the first time you strike during that sequence, inflict 1 additional damage.</span></p></div>"
+        }
+    ],
+    "kommandos": [
+        {
+            "id_racial": 22,
+            "faction": "kommandos",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <b>KOMMANDO NOB</b> operative with one of the following options:<ul><li>Slugga; Big choppa</li><li>Slugga; Power klaw</li></ul>9 <span class=\"faction\">KOMMANDO</span> operatives selected from the following list:<ul><li><b>KOMMANDO BOY</b></li><li><b>KOMMANDO GROT*</b></li><li><b>KOMMANDO SLASHA BOY</b></li><li><b>KOMMANDO BREACHA BOY</b></li><li><b>KOMMANDO SNIPA BOY</b></li><li><b>KOMMANDO DAKKA BOY</b></li><li><b>KOMMANDO COMMS BOY</b></li><li><b>KOMMANDO BURNA BOY</b></li><li><b>KOMMANDO ROKKIT BOY</b></li><li><b>BOMB SQUIG*</b></li></ul><p>Other than <b>BOY</b> operatives, your kill team can only include each operative on this list once.</p><p>*These operatives count as half a selection each, meaning you can select both of them and it\u2019s treated as one selection in total.</p>"
+        },
+        {
+            "id_racial": 46,
+            "faction": "kommandos",
+            "type": "racial",
+            "name": "Throat Slittas",
+            "description": "This operative can perform a <b>Charge</b> action while it has a Conceal order. This ability cannot be applied to <b>BOMB SQUIG</b> operative."
+        }
+    ],
+    "legionary": [
+        {
+            "id_racial": 10,
+            "faction": "legionary",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">LEGIONARY</span> operative selected from the following list:<ul><li><b>LEGIONARY CHOSEN</b> operative equipped with one option from each of the following:<ul><li>Plasma pistol or Tainted bolt pistol</li><li>Daemon blade</li></ul></li><li><b>LEGIONARY ASPIRING CHAMPION</b> operative equipped with one option from each of the following:<ul><li>Plasma pistol or Tainted bolt pistol</li><li>Tainted Chainsword, Power weapon, Power fist or Power maul</li></ul></li></ul>5 <span class=\"faction\">LEGIONARY</span> operatives selected from the following list:<ul><li><b>LEGIONARY WARRIOR</b> equipped with one of the following options:<ul><li>Boltgun; Fists</li><li>Bolt pistol; Chainsword</li></ul></li><li><b>LEGIONARY GUNNER</b> equipped with one of the following options:<ul><li>Bolt pistol; Flamer; Fists</li><li>Bolt pistol; Meltagun; Fists</li><li>Bolt pistol; Plasma gun; Fists</li></ul></li><li><b>LEGIONARY HEAVY GUNNER</b> equipped with one of the following options:<ul><li>Bolt pistol; Heavy bolter; Fists</li><li>Bolt pistol; Missile launcher; Fists</li><li>Bolt pistol; Reaper chaincannon; Fists</li></ul></li><li><b>LEGIONARY ICON</b> BEARER equipped with one of the following options:<ul><li>Boltgun; Fists</li><li>Bolt pistol; chainsword</li></ul></li><li><b>LEGIONARY ANOINTED</b></li><li><b>LEGIONARY BUTCHER</b></li><li><b>LEGIONARY BALEFIRE</b> ACOLYTE</li><li><b>LEGIONARY SHRIVETALON</b></li></ul><p>Other than <b>LEGIONARY WARRIOR</b> operatives, your kill team can only include each operative above once.</p>"
+        },
+        {
+            "id_racial": 72,
+            "faction": "legionary",
+            "type": "racial",
+            "name": "&lt;MARK OF CHAOS&gt;",
+            "description": "<p>When selecting a <span class=\"faction\">LEGIONARY</span> operative for the battle, you must choose one of the following keywords for it to have for that battle: <b>KHORNE</b>, <b>NURGLE</b>, <b>SLAANESH</b>, <b>TZEENTCH</b>, <b>UNDIVIDED</b>. Each operative\u2019s keyword can be different, but a <b>BALEFIRE ACOLYTE</b> operative cannot have the <b>KHORNE</b> keyword.</p><p>Friendly <span class=\"faction\">LEGIONARY</span> operatives have an additional rule determined by this keyword. In addition, <span class=\"faction\">LEGIONARY</span> ploys have additional benefits for operatives with the relevant keyword.</p><p>This operative gains one ability from those listed below. The ability it gains depends on its <MARK OF CHAOS> keyword.</p>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Khorne - Wrathful Onslaught</span>\n        <p class=\"px-2\">This operative\u2019s melee weapons have the Severe weapon rule.</p>\n    </div>\n    <img src=\"./img/khorne-min.png\" alt=\"Khorne\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Nurgle - Disgusting Vigour</span>\n        <p class=\"px-2\">Whenever Normal Dmg of 3 or more is inflicted on this operative, roll one D6: on a 5+, subtract 1 from that inflicted damage.</p>\n    </div>\n    <img src=\"./img/nurgle-min.png\" alt=\"Nurgle\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Slaanesh - Unnatural Agility</span>\n        <p class=\"px-2\">Add 1\u201d to this operative\u2019s Movement Stat.</p>\n    </div>\n    <img src=\"./img/slaanesh-min.png\" alt=\"Slaanesh\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Tzeentch - Aetheric Ward</span>\n        <p class=\"px-2\">Improve this operative\u2019s invulnerable save by 1.</p>\n    </div>\n    <img src=\"./img/tzeentch-min.png\" alt=\"Tzeentch\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>\n<div class=\"action-box col-12 position-relative mb-3 d-flex align-items-start\">\n    <div class=\"text-container flex-grow-1\">\n        <span class=\"title-action\">Undivided - Favoured of the Dark Gods</span>\n        <p class=\"px-2\">You can re-roll one of your attack dice during this operative\u2019s activation.</p>\n    </div>\n    <img src=\"./img/undivided-min.png\" alt=\"Undivided\" style=\"max-height: 100px; width: auto; margin-left: 10px;\">\n</div>"
+        },
+        {
+            "id_racial": 74,
+            "faction": "legionary",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "<p>During each friendly <span class=\"faction\">LEGIONARY</span> operative\u2019s activation, it can perform either two <b>Shoot</b> actions or two <b>Fight</b> actions. If it\u2019s two Shoot actions, a bolt pistol, boltgun or tainted bolt pistol must be selected for at least one of them.</p><p>Each friendly <span class=\"faction\">LEGIONARY</span> operative can <b>Counteract</b> regardless of its order.</p>"
+        }
+    ],
+    "mandrakes": [
+        {
+            "id_racial": 91,
+            "faction": "mandrakes",
+            "type": "team",
+            "name": "Roster",
+            "description": "<p>1 <span class=\"faction\">MANDRAKE</span> <b>NIGHTFIEND</b></p>8 <span class=\"faction\">MANDRAKE</span> operatives selected from the following list:<ul><li><b>ABYSSAL</b></li><li><b>CHOOSER OF THE FLESH</b></li><li><b>DIRGEMAW</b></li><li><b>SHADEWEAVER</b></li><li><b>WARRIOR</b></li></ul><p>Except operatives <b>WARRIOR</b>, your kill team can only include each operative above once.</p>"
+        },
+        {
+            "id_racial": 92,
+            "faction": "mandrakes",
+            "type": "racial",
+            "name": "Within Shadow",
+            "description": "An operative is <b>WITHIN SHADOW</b> if any of the following are true:<ul><li>It\u2019s within 1\" of Heavy terrain that\u2019s not lower than it.</li><li>Any part of its base is underneath Vantage terrain.</li><li>A Shadow Portal marker is within its control range (see <b>SHADEWEAVER</b> operative).</li></ul>"
+        },
+        {
+            "id_racial": 93,
+            "faction": "mandrakes",
+            "type": "racial",
+            "name": "Shadow Passage",
+            "description": "Once per turning point, one friendly MANDRAKE operative \n<b>WITHIN SHADOW</b> can use a <b>SHADOW PASSAGE</b> when it \nperforms the <b>Reposition</b> action. If it does, don\u2019t move it. Instead, remove it from the killzone and set it back up <b>WITHIN \nSHADOW</b> in a location it can be placed. When you set it back up, it cannot:<ul><li>Be within control range of an enemy operative.</li><li>Be a valid target for an enemy operative.</li><li>Perform the <b>Shoot</b> or <b>Fight</b> action until the start of the next turning point.</li></ul>"
+        },
+        {
+            "id_racial": 94,
+            "faction": "mandrakes",
+            "type": "racial",
+            "name": "Umbral Entities",
+            "description": "Whenever an operative is shooting a friendly <span class=\"faction\">MANDRAKE</span> operative, ignore the Piercing weapon rule. Whenever a friendly <span class=\"faction\">MANDRAKE</span> operative is <b>WITHIN SHADOW</b>, improve its Save stat by 1."
+        },
+        {
+            "id_racial": 95,
+            "faction": "mandrakes",
+            "type": "racial",
+            "name": "Soulstrike",
+            "description": "<p>Some weapons in this team\u2019s rules have the Soulstrike weapon rule below:</p><p><b>*Soulstrike:</b> Successful defence dice are determined differently. Each result that\u2019s equal to or less than the target\u2019s APL stat is a success and is retained. Each result that\u2019s higher than the target\u2019s APL stat is a fail and is discarded. Each result of 1 is always a critical success. Each other success is a normal success. Each result of 6 is always a fail.</p><p><i>Designer\u2019s Note: Many of this kill team\u2019s rules refer to an enemy operative\u2019s APL stat. This would be the APL stat at the time the rule takes effect (i.e., including changes).</i></p>"
+        }
+    ],
+    "nemesis-claw": [
+        {
+            "id_racial": 97,
+            "faction": "nemesis-claw",
+            "type": "team",
+            "name": "Roster",
+            "description": "1 <span class=\"faction\">NEMESIS CLAW</span> <b>NIGHT LORD VISIONARY</b> with one of the following options:\n<ul>\n    <li>Bolt pistol; Power weapon</li>\n    <li>Plasma pistol; Nostraman chainsblade</li>\n    <li>Bolt pistol; Power maul</li>\n    <li>Bolt pistol; Power fist</li>\n</ul>\n5 <span class=\"faction\">NEMESIS CLAW</span> operatives selected from the following list:\n<ul>\n    <li><b>FEARMONGER</b></li>\n    <li><b>SCREECHER</b></li>\n    <li><b>SKINTHIEF</b></li>\n    <li><b>VENTRILOKAR</b></li>\n    <li><b>HEAVY GUNNER</b> with one of the following options:\n        <ul>\n            <li>Bolt Pistol; Heavy b\u00f3lter; Fists</li>\n            <li>Bolt Pistol; Missile launcher; Fists</li>\n        </ul>\n    </li>\n    <li><b>GUNNER</b> with one of the following options:\n        <ul>\n            <li>Bolt Pistol; Flamer; Fists</li>\n            <li>Bolt Pistol; Meltagun; Fists</li>\n            <li>Bolt Pistol; Plasma gun; Fists</li>\n        </ul>\n    </li>\n    <li><b>WARRIOR</b> equipped with one of the following options:\n        <ul>\n            <li>Bolt pistol; Chainsword</li>\n            <li>Boltgun; Fists</li>\n        </ul>\n    </li>\n</ul>\n<p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative above once.</p>"
+        },
+        {
+            "id_racial": 98,
+            "faction": "nemesis-claw",
+            "type": "racial",
+            "name": "In midnight clad",
+            "description": "Whenever an enemy operative is shooting a friendly <span class=\"faction\">NEMESIS CLAW</span> operative, that friendly operative is obscured if both of the following are true:<ul><li>It\u2019s more than <span class=\"text-warning-emphasis\">8</span>\" from enemy operatives it\u2019s visible to.</li><li>It has Heavy terrain within its control range, or any part of its base is underneath Vantage terrain.</li></ul>"
+        },
+        {
+            "id_racial": 113,
+            "faction": "nemesis-claw",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "<p>During each friendly <span class=\"faction\">NEMESIS CLAW</span> operative\u2019s activation, it can perform either two <b>Shoot</b> actions or two <b>Fight</b> actions. If it\u2019s two <b>Shoot</b> actions, a bolt pistol, boltgun or scoped bolt pistol must be selected for at least one of them.</p><p>Each friendly <span class=\"faction\">NEMESIS CLAW</span> operative can counteract regardless of its order.</p>"
+        }
+    ],
+    "novitiates": [
+        {
+            "id_racial": 18,
+            "faction": "novitiates",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">NOVITIATE</span> <b>SUPERIOR</b> operative with one of the following options:\n<ul>\n  <li>Plasma pistol; power weapon</li>\n  <li>Relic boltgun; gun butt</li>\n  <li>Relic bolt pistol; power weapon</li>\n</ul>\n\n9 <span class=\"faction\">NOVITIATE</span> operatives selected from the following list:\n<ul>\n  <li><b>CONDEMNOR</b></li>\n  <li><b>DIALOGUS</b></li>\n  <li><b>DUELLIST</b></li>\n  <li><b>EXACTOR</b></li>\n  <li><b>HOSPITALLER</b></li>\n  <li><b>PENITENT</b></li>\n  <li><b>PRECEPTOR</b></li>\n  <li><b>PRONATUS</b></li>\n  <li><b>PURGATUS</b></li>\n  <li><b>RELIQUARIUS</b></li>\n  <li><b>MILITANT</b> with one of the following options:\n  <ul>\n    <li>Autopistol; Novitiate blade</li>\n    <li>Autogun; Gun butt</li>\n  </ul>\n</ul>\n\n<p>Other than <b>MILITANT</b> and <b>PURGATUS</b> operatives,\nyour kill team can only include each operative on this\nlist once. Your kill team can only include up to two\n<b>PURGATUS</b> operatives.</p>"
+        },
+        {
+            "id_racial": 80,
+            "faction": "novitiates",
+            "type": "racial",
+            "name": "Acts Of Faith",
+            "description": "<p>In the Ready step of each Strategy phase, you gain a number of Faith points equal to half the number of friendly\r\n<span class=\"faction\">NOVITIATE</span> operatives that haven\u2019t been incapacitated (rounding up). Whenever a friendly <span class=\"faction\">NOVITIATE</span> operative is shooting, fighting or retaliating, or an operative is shooting\r\nit, in the Roll Attack Dice (or Roll Defence Dice step if an operative is shooting it), you can spend your Faith points to use one <b>ACT OF FAITH</b>. You cannot use more than one <b>ACT OF FAITH</b> per sequence, and their costs and effects are as follows:\r\n\r\n<div class=\"action-box col-12 position-relative mb-3\">\r\n  <div class=\"header\"><div class=\"\">Guidance</div><div class=\"ap-box\">1 Faith Point</div></div>\r\n  <div class=\"content\">\r\n    You can re-roll one of your dice.\r\n  </div>\r\n</div>\r\n\r\n<div class=\"action-box col-12 position-relative mb-3\">\r\n  <div class=\"header\"><div class=\"\">Blessing</div><div class=\"ap-box\">2 Faith Points</div></div>\r\n  <div class=\"content\">\r\n    You can retain one of your normal successes as a critical\r\nsuccess instead.\r\n  </div>\r\n</div>\r\n\r\n<div class=\"action-box col-12 position-relative mb-3\">\r\n  <div class=\"header\"><div class=\"\">Intervention</div><div class=\"ap-box\">3 Faith Points</div></div>\r\n  <div class=\"content\">\r\n    You can retain one of your fails as a normal success instead of\r\ndiscarding it.\r\n  </div>\r\n</div>"
+        }
+    ],
+    "pathfinders": [
+        {
+            "id_racial": 24,
+            "faction": "pathfinders",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">PATHFINDER\u00ae SHAS'UI</span> operative\n<p>11 <span class=\"faction\">PATHFINDER\u00ae</span> operatives selected from the following list:</p>\n<ul>\n  <li><b>ASSAULT GRENADIER</b></li>\n  <li><b>BLOODED</b></li>\n  <li><b>COMMS SPECIALIST</b></li>\n  <li><b>DRONE CONTROLLER</b></li>\n  <li><b>MARKSMAN</b></li>\n  <li><b>MEDICAL TECHNICIAN</b></li>\n  <li><b>SHAS'LA</b></li>\n  <li><b>TRANSPECTRAL INTERFERENCE</b></li>\n  <li><b>MB3 RECON DRONE</b> (counts as two selections)</li>\n  <li><b>MV31 PULSE ACCELERATOR DRONE</b></li>\n  <li><b>MV33 GRAV-INHIBITOR DRONE</b></li>\n  <li><b>MV1 GUN DRONE</b></li>\n  <li><b>MV4 SHIELD DRONE</b></li>\n  <li><b>MV7 MARKER DRONE</b></li>\n  <li><b>WEAPONS EXPERT</b> with one of the following options:\n    <ul>\n      <li>Ion rifle; gun butt</li>\n      <li>Rail rifle; gun butt</li>\n    </ul>\n  </li>\n</ul>\n<p>Other than <b>SHAS'LA</b> and <b>WEAPONS EXPERT</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two <b>WEAPONS EXPERT</b> operatives.</p>"
+        },
+        {
+            "id_racial": 38,
+            "faction": "pathfinders",
+            "type": "racial",
+            "name": "Pulse Weapons",
+            "description": "<p>Some <span class=\"faction\">PATHFINDER\u00ae</span> rules refer to a \"pulse weapon\". The following weapons are pulse weapons: burst cannon, pulse carbine, suppressed pulse carbine, twin pulse carbine.</p>"
+        },
+        {
+            "id_racial": 39,
+            "faction": "pathfinders",
+            "type": "racial",
+            "name": "Markerlights",
+            "description": "Some <span class=\"faction\">PATHFINDER</span> operatives (indicated on their datacard) can perform the Markerlight unique action:\n\n<span class=\"faction fs-6\">Markerlight</span>\n<div class=\"action-box col-12 position-relative mb-3\">\n  <div class=\"header\"><div class=\"\">Markerlight</div><div class=\"ap-box\">1AP</div></div>\n  <div class=\"content\">\n    <ul>\n      <li><span class=\"icon icon-yes\"></span>\n        Select one enemy operative visible to this operative. That enemy operative gains one of your Markerlight tokens (to a maximum of four).\n      </li>\n      <li><span class=\"icon icon-no\"></span>\n        An operative cannot perform this action while within control range of an enemy operative. If an operative (excluding <b>MB3 RECON</b>) would perform the <b>Shoot</b> action (excluding <b>Guard</b>) and this action during the same activation, only the target of that <b>Shoot</b> action can be selected for this action (and vice versa).\n      </li>\n    </ul>\n  </div>\n</div>\n\nOnce during each of their activations, whenever an enemy operative that has any of your Markerlight tokens performs the <b>Dash</b>, <b>Charge</b>, <b>Fall Back</b> or <b>Reposition</b> action, remove one of those tokens.\n\nWhile only some <span class=\"faction\">PATHFINDER</span> operatives can perform the Markerlight action, all <span class=\"faction\">PATHFINDER</span> operatives can benefit from its effects. Whenever a friendly <span class=\"faction\">PATHFINDER</span> operative is shooting with a weapon from its datacard (excluding <b>ASSAULT GRENADIER\u2019S</b> fusion grenade), it has additional rules determined by the number of your Markerlight tokens the target has. These are cumulative, so if an enemy operative has two of your Markerlight tokens, the friendly operative shooting it has the rules for 1 and 2 tokens during that sequence.\n\n<div class=\"weapons-table col-12 p-0 pt-2 position-relative\">\n  <table>\n    <thead>\n      <tr>\n        <th>MARKERLIGHT TOKENS</th>\n        <th>RULES</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>1</td>\n        <td>You can re-roll one of your attack dice.</td>\n      </tr>\n      <tr>\n        <td>2</td>\n        <td>Its ranged weapons have the Ceaseless weapon rule.</td>\n      </tr>\n      <tr>\n        <td>3</td>\n        <td>Improve the Hit stat of its ranged weapons by 1.</td>\n      </tr>\n      <tr>\n        <td>4</td>\n        <td>Its ranged weapons have the Piercing 1 weapon rule.</td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+        }
+    ],
+    "phobos": [
+        {
+            "id_racial": 19,
+            "faction": "phobos",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">PHOBOS STRIKE TEAM</span> operative selected from the following list:<ul><li><b>INFILTRATOR SERGEANT</b></li><li><b>INCURSOR SERGEANT</b></li><li><b>REIVER SERGEANT</b> with one of the following options:<ul><li>Special issue bolt pistol; combat knife</li><li>Bolt carbine; fists</li></ul></li></ul>5 PHOBOS STRIKE TEAM operatives selected from the following list:<ul><li><b>INFILTRATOR COMMSMAN</b></li><li><b>INFILTRATOR HELIX ADEPT</b></li><li><b>INFILTRATOR SABOTEUR</b></li><li><b>INFILTRATOR VETERAN</b></li><li><b>INFILTRATOR VOXBREAKER</b></li><li><b>INFILTRATOR WARRIOR</b></li><li><b>INCURSOR MARKSMAN</b></li><li><b>INCURSOR MINELAYER</b></li><li><b>INCURSOR WARRIOR</b></li><li><b>REIVER WARRIOR</b> with one of the following options:<ul><li>Special issue bolt pistol; combat knife</li><li>Bolt carbine; fists</li></ul></li></ul><p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative on this list once.</p>"
+        },
+        {
+            "id_racial": 50,
+            "faction": "phobos",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "<p>During each friendly <span class=\"faction\">PHOBOS STRIKE TEAM</span> operative's activation, it can perform either two <b>Shoot</b> actions or two <b>Fight</b> actions. If it's two <b>Shoot</b> actions, a bolt weapon must be selected for at least one of them. A bolt weapon is any ranged weapon that includes 'bolt' in its name, e.g. marksman bolt carbine, special issue bolt pistol, etc.</p>\n\n<p>Each friendly <span class=\"faction\">PHOBOS STRIKE TEAM</span> operative can counteract regardless of its order.</p>"
+        },
+        {
+            "id_racial": 51,
+            "faction": "phobos",
+            "type": "racial",
+            "name": "Terror",
+            "description": "<p>Whenever an enemy operative is within 3\" of friendly <b>REIVER</b> operatives, your opponent must spend 1 additional AP for that enemy operative to perform the <b>Pick Up Marker</b> and mission actions.</p>\n\n<p>Whenever determining control of a marker, treat the total APL stat of enemy operatives that contest it as 1 lower if at least one of those enemy operatives is within 3\" of friendly <b>REIVER</b> operatives. Note this isn\u2019t a change to the APL stat, so any changes are cumulative with this.</p>"
+        },
+        {
+            "id_racial": 52,
+            "faction": "phobos",
+            "type": "racial",
+            "name": "Omni-Scrambler",
+            "description": "<p><b>STRATEGIC GAMBIT</b> if a friendly <b>INFILTRATOR</b> operative is in the killzone. Select one enemy operative visible to a friendly <b>INFILTRATOR</b> operative, or within 6\" of a friendly <b>VOXBREAKER</b> operative. In the following Firefight phase, that enemy operative cannot be activated or perform actions until one of the following is true:</p>\n\n<ul>\n<li>Your opponent has activated a number of enemy operatives\nequal to the number of friendly <b>INFILTRATOR</b> operatives in\nthe killzone when this <b>STRATEGIC GAMBIT</b> was used.</li>\n<li>It\u2019s the last enemy operative to be activated.</li>\n</ul>"
+        },
+        {
+            "id_racial": 53,
+            "faction": "phobos",
+            "type": "racial",
+            "name": "Multi-Spectrum Array",
+            "description": "Whenever a friendly <b>INCURSOR</b> operative is shooting, enemy operatives cannot be obscured."
+        }
+    ],
+    "plague-marines": [
+        {
+            "id_racial": 165,
+            "faction": "plague-marines",
+            "type": "team",
+            "name": "Operatives",
+            "description": "<p>1 <span class=\"faction\">PLAGUE MARINE</span> <b>CHAMPION</b> operative</p>\n<p>5 <span class=\"faction\">PLAGUE MARINE</span> operatives selected from the following list:</p>\n<ul>\n    <li><b>BOMBARDIER</b></li>\n    <li><b>FIGHTER</b></li>\n    <li><b>HEAVY GUNNER</b></li>\n    <li><b>ICON BEARER</b></li>\n    <li><b>MALIGNANT PLAGUECASTER</b></li>\n    <li><b>WARRIOR</b></li>\n</ul>\n<p>Your kill team can only include each operative on this list once.</p>"
+        },
+        {
+            "id_racial": 167,
+            "faction": "plague-marines",
+            "type": "racial",
+            "name": "Poison",
+            "description": "Some weapons in this team\u2019s rules have the <b>Poison</b> weapon rule.\n\n<p>*<b>Poison</b>: In the Resolve Attack Dice step, if you inflict damage with any successes, the operative this weapon is being used against <span class=\"text-info-emphasis\">(excluding friendly <span class=\"faction\">PLAGUE MARINE</span> operatives)</span> gains one of your Poison tokens (if it doesn\u2019t already have one). Whenever an operative that has one of your Poison tokens is activated, inflict 1 damage on it.</p>\n\n"
+        },
+        {
+            "id_racial": 168,
+            "faction": "plague-marines",
+            "type": "racial",
+            "name": "Disgustingly Resilient",
+            "description": "Whenever an attack dice inflicts damage of 3 or more on a friendly <span class=\"faction\">PLAGUE MARINE</span> operative, roll one D6: on a 4+, subtract 1 from that inflicted damage."
+        },
+        {
+            "id_racial": 169,
+            "faction": "plague-marines",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "During each friendly <span class=\"faction\">PLAGUE MARINE</span> operative\u2019s activation, it can perform either two <b>Shoot</b> actions or two <b>Fight</b> actions. If it\u2019s two <b>Shoot</b> actions, a bolt pistol, boltgun or <b>PSYCHIC</b> weapon must be selected for at least one of them. You cannot select the same <span class=\"text-info-emphasis\">ranged</span> <b>PSYCHIC</b> weapon more than once per activation.\n\n<p>Each friendly <span class=\"faction\">PLAGUE MARINE</span> operative can counteract regardless of its order.</p>"
+        }
+    ],
+    "ratling": [
+        {
+            "id_racial": 178,
+            "faction": "ratling",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">RATLING</span> <b>FIXER</b> operative with one of the following options:\n<ul>\n<li>Battle rifle; fists</li>\n<li>Sniper rifle; fists</li>\n</ul>\n\n10 <span class=\"faction\">RATLING</span> operatives selected from the following list:\n<ul>\n<li><b>BATTLEMUTT</b></li>\n<li><b>BOMBER</b></li>\n<li><b>BULLGRYN*</b> with one option from each of the following:\n  <ul>\n  <li>Grenadier gauntlet or power maul</li>\n  <li>Brute shield or slabshield</li>\n  </ul>\n</li>\n<li><b>OGRYN*</b></li>\n<li><b>BIG SHOT</b></li>\n<li><b>HARDHIT</b></li>\n<li><b>RAIDER</b></li>\n<li><b>SNEAK</b></li>\n<li><b>SNIPER</b></li>\n<li><b>SPOTTER</b></li>\n<li><b>STASHMASTER</b></li>\n<li><b>VOX-THIEF</b></li>\n</ul>\n\n<p>* You cannot select more than three of these operatives combined. Up to three times, instead of selecting one of these operatives, you can select one <span class=\"faction\">RATLING</span> ploy to cost you 0CP for the battle.</p>\n<p>Other than <b>BULLGRYN</b>, <b>OGRYN</b> and <b>SNIPER</b> operatives, your kill team can only include each operative above once.</p>\n<p>Some <span class=\"faction\">RATLING</span> rules refer to a \"rifle\". This is a ranged weapon that includes \"rifle\" in its name, e.g., all profiles of a sniper rifle, tankstopper rifle, etc.</p>\n"
+        },
+        {
+            "id_racial": 179,
+            "faction": "ratling",
+            "type": "racial",
+            "name": "SCARPER",
+            "description": "<p>After each enemy operative\u2019s activation, before the next operative is activated, you can perform a free <b>Dash</b> action with one friendly <span class=\"faction\">RATLING</span> operative (excluding <b>BULLGRYN</b>, <b>OGRYN</b> and <b>SNEAK</b>), but it cannot finish that move within 3\" of an enemy operative unless it\u2019s not visible to every enemy operative when it finishes that move.</p>\n<p>Each friendly operative can only do this once per turning point, and cannot do so after the final activation of the turning point. You cannot use this rule after consecutive enemy activations during the same turning point (in other words, after using this rule, you must skip the next opportunity during that turning point before you can use it again).</p>"
+        }
+    ],
+    "raveners": [
+        {
+            "id_racial": 188,
+            "faction": "raveners",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">RAVENER</span> <b>PRIME</b> operative<br>\n4 <span class=\"faction\">RAVENER</span> operatives selected from the following list:\n<ul>\n  <li><b>FELLTALON</b></li>\n  <li><b>TREMORSCYTHE</b></li>\n  <li><b>VENOMSPITTER</b></li>\n  <li><b>WARRIOR</b></li>\n  <li><b>WRECKER</b></li>\n</ul>\n<p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative above once.</p>\n"
+        },
+        {
+            "id_racial": 189,
+            "faction": "raveners",
+            "type": "racial",
+            "name": "BURROW",
+            "description": "<p>When setting up a <span class=\"faction\">RAVENER</span> kill team before the battle, your first two operatives must be set up as normal. Each other friendly <span class=\"faction\">RAVENER</span> operative thereafter can be set up underground: place it to one side instead of in the killzone.</p>\n\n<p>In the Firefight phase, friendly <span class=\"faction\">RAVENER</span> operatives set up underground are activated and can counteract as normal. Whenever a friendly <span class=\"faction\">RAVENER</span> operative is underground, it cannot perform any actions other than <b>Burrow</b>. At the end of the battle, each friendly <span class=\"faction\">RAVENER</span> operative that\u2019s underground is incapacitated.</p>\n\n<p>Friendly <span class=\"faction\">RAVENER</span> operatives can perform the following unique action:</p>\n\n<div class=\"header\"><div class=\"\">Burrow</div><div class=\"ap-box\">1AP</div></div>\n<div class=\"content\"><ul>\n<li><span class=\"icon icon-yes\"></span> \nIf this operative is underground, set it up on your <b>TUNNEL</b> in a location it can be placed (it\u2019s no longer underground, and it can be set up within control range of enemy operatives). Until the end of the activation/counteraction, subtract 2\" from its Move stat.\n</li>\n<li><span class=\"icon icon-yes\"></span> \nAlternatively, instead of resolving the above effect, if this operative is in the killzone and on your <b>TUNNEL</b>, remove it from the killzone: it\u2019s now underground.\n</li>\n<li><span class=\"icon icon-no\"></span> \nAn operative cannot perform this action while carrying a marker.\n</li>\n</ul></div>\n"
+        },
+        {
+            "id_racial": 192,
+            "faction": "raveners",
+            "type": "racial",
+            "name": "TUNNEL",
+            "description": "<p>At the end of the Set Up Operatives step, place your Tunnel marker numbered \u201c0\u201d on the killzone floor, wholly within your drop zone and touching your killzone edge.</p>\n\n<p><b>As a STRATEGIC GAMBIT</b> in the first four turning points, you can place your next numbered Tunnel marker on the killzone floor wholly within 5\" of your preceding Tunnel marker (in Killzone: Gallowdark, this distance can be measured through walls). This means that, as the battle progresses, you can have a series of sequentially numbered Tunnel markers (0, 1, 2, 3 and 4). Once you have placed five Tunnel markers, don\u2019t place any more (i.e. if your battle lasts more than four turning points).</p>\n\n<p>Your Tunnel markers and the area between your sequentially numbered markers (i.e. between 0 and 1, and 1 and 2, etc.) create your <b>TUNNEL</b>.</p>\n\n<p>In a killzone that uses the hazardous areas rules (e.g. Killzone: Bheta Decima), for the purposes of the Restricted Movement rule, parts of a Tunnel marker that are touching a hazardous area are treated as a hazardous area.</p>\n\n<figure class=\"figure\"><img src=\"./img/rules/tunnel_mantifex.png\" class=\"figure-img img-fluid rounded mx-auto d-block\"><p>In this example, operative A is on your <b>TUNNEL</b> as it\u2019s on the area between markers 0 and 1. Operative B is also on your <b>TUNNEL</b> as it\u2019s touching one of your Tunnel markers. Operative C is not on your <b>TUNNEL</b> as markers 1 and 3 are not sequential, so the area between those markers is not part of your <b>TUNNEL</b>.</p></figure>\n"
+        },
+        {
+            "id_racial": 193,
+            "faction": "raveners",
+            "type": "racial",
+            "name": "PREDATORY INSTINCTS",
+            "description": "<p>During each friendly <span class=\"faction\">RAVENER</span> operative\u2019s activation, it can perform two <b>Fight</b> actions.</p>\n\n<p>Each friendly <span class=\"faction\">RAVENER</span> operative can counteract regardless of its order.</p>\n\n<ul>\n<li>You can change its order first, or change its order instead of performing an action (for the latter, still treat it as having counteracted this turning point).</li>\n<li>During that counteraction, if it doesn\u2019t perform a mission action it can perform a free <b>Burrow</b> action.</li>\n</ul>\n"
+        }
+    ],
+    "sanctifiers": [
+        {
+            "id_racial": 181,
+            "faction": "sanctifiers",
+            "type": "team",
+            "name": "Operatives",
+            "description": "<ul>\n<li>1 <span class=\"faction\">SANCTIFIER</span> <b>CONFESSOR</b> operative</li>\n<li>1 <span class=\"faction\">SANCTIFIER</span> <b>CHERUB</b> operative</li>\n<li>9 <span class=\"faction\">SANCTIFIER</span> operatives selected from the following list:</li>\n<ul>\n<li><b>CONFLAGRATOR</b></li>\n<li><b>DEATH CULT ASSASSIN</b></li>\n<li><b>DRILL ABBOT</b></li>\n<li><b>MIRACULIST</b></li>\n<li><b>MISSIONARY</b> with one of the following options:</li>\n<ul>\n<li>Ministorum flamer; brazier of holy fire<span class=\"icon\">*</span></li>\n<li>Ministorum flamer; gun butt; holy relic</li>\n</ul>\n<li><b>MISSIONARY</b> with one of the following options:</li>\n<ul>\n<li>Meltagun; chainsword; holy relic</li>\n<li>Plasma gun; chainsword; brazier of holy fire<span class=\"icon\">*</span></li>\n</ul>\n<li><b>PERSECUTOR</b></li>\n<li><b>PREACHER</b></li>\n<li><b>RELIQUANT</b></li>\n<li><b>SALVATIONIST</b></li>\n</ul>\n</ul>\n<p>Other than <b>PREACHER</b> operatives, your kill team can only include each operative above once. Your kill team can only include up to four <b>PREACHER</b> operatives.</p>\n<p><span class=\"icon\">*</span> You cannot select an option that includes a brazier of holy fire more than once per battle.</p>\n</div>"
+        },
+        {
+            "id_racial": 182,
+            "faction": "sanctifiers",
+            "type": "racial",
+            "name": "Ministorum Sermon",
+            "description": "<p><b>STRATEGIC GAMBIT.</b> Select one friendly <span class=\"faction\">SANCTIFIER</span> operative. If a friendly <b>CONFESSOR</b> operative hasn\u2019t been incapacitated, you must select it. Until you use this <b>STRATEGIC GAMBIT</b> again during the battle, that operative has the <b>ORATOR</b> keyword.</p>\n\n<p>Whenever a friendly <span class=\"faction\">SANCTIFIER</span> operative is within 3\" of a friendly <b>ORATOR</b> operative (or 6\" if the <b>ORATOR</b> is a <b>CONFESSOR</b>), that friendly <span class=\"faction\">SANCTIFIER</span> operative is benefitting from the <b>SERMON</b>.</p>\n\n<p>Whenever a friendly <span class=\"faction\">SANCTIFIER</span> operative is activated within 3\" of a friendly <b>ORATOR</b> operative (or 6\" if the <b>ORATOR</b> is a <b>CONFESSOR</b>), that friendly <span class=\"faction\">SANCTIFIER</span> operative is benefitting from the <b>SERMON</b> until the end of that activation (i.e. even if it then moves more than the distance requirement from the <b>ORATOR</b> operative).</p>\n\n<p>Whenever a friendly <span class=\"faction\">SANCTIFIER</span> operative is benefitting from the <b>SERMON</b>, Normal and Critical Dmg of 3 or more inflicts 1 less damage on it.</p>"
+        },
+        {
+            "id_racial": 183,
+            "faction": "sanctifiers",
+            "type": "racial",
+            "name": "Blaze",
+            "description": "<p>Some weapons in this team\u2019s rules have the <b>Blaze</b> weapon rule below.</p>\n\n<p><b>Blaze:</b> If you <span class=\"text-warning-emphasis\">infict damage with</span> critical successes, the operative this weapon is being used against gains one of your Blaze tokens (if it doesn\u2019t already have one). Whenever an operative that has one of your Blaze tokens is activated, inflict D3 damage on it. Then that operative\u2019s controlling player selects one of the following:</p>\n\n<ul>\n<li>Roll one D6: on a 3+, remove that token.</li>\n<li>Subtract 1 from the operative\u2019s APL stat until the end of that activation to remove that token.</li>\n</ul>\n"
+        }
+    ],
+    "scouts": [
+        {
+            "id_racial": 28,
+            "faction": "scouts",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <b>SCOUT SERGEANT</b> operative with one of the following options:\n    <ul>\n        <li>Astartes Shotgun; Fists</li>\n        <li>Bolter; Fists</li>\n        <li>Bolt pistol; Chainsword</li>\n    </ul>\n    8 <span class=\"faction\">SCOUT SQUAD</span> operatives selected from the following list:\n    <ul>\n        <li><b>SCOUT HEAVY GUNNER</b> with Fists, a Bolt pistol and a Heavy bolter</li>\n        <li><b>SCOUT HEAVY GUNNER</b> with Fists, a Bolt pistol and a Missile launcher</li>\n        <li><b>SCOUT HUNTER</b></li>\n        <li><b>SCOUT SNIPER</b></li>\n        <li><b>SCOUT TRACKER</b></li>\n        <li><b>SCOUT WARRIOR</b> with one of the following options:\n            <ul>\n                <li>Astartes Shotgun; Fists</li>\n                <li>Boltgun; Fists</li>\n                <li>Bolt pistol; Combat blade</li>\n            </ul>\n        </li>\n    </ul>\n    <p>Other than <b>WARRIOR</b> operatives, your kill team can include each operative on this list once.</p>"
+        },
+        {
+            "id_racial": 83,
+            "faction": "scouts",
+            "type": "racial",
+            "name": "Forward Scouting",
+            "description": "<p>At the end of the Set Up Operatives step, you can select and resolve up to <span class=\"text-info-emphasis\"><b>six</b></span> Forward Scouting options. Each option has a number in brackets, which is the maximum number of times you can select and resolve it for the battle. For example, your six selections could be Reposition x2, Trip Alarm, Booby Trap, Tactical Manoeuvre and Diversion. If both players have this ability, alternate resolving, starting with the Defender.</p>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Redeploy [1]</span>\n        <p class=\"px-2\">Change the set up of one third of your operatives (rounding up).</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Reposition [2]</span>\n        <p class=\"px-2\">Perform a free <b>Reposition</b> action with one friendly operative that\u2019s wholly within your drop zone. It must end that move wholly within 3\" of your drop zone.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Trip Alarm [2]</span>\n        <p class=\"px-2\">Place one of your Trip Alarm markers more than 6\" from your opponent\u2019s drop zone. During the first and second turning point, whenever a friendly <span class=\"faction\">SCOUT SQUAD</span> operative is shooting an enemy operative that\u2019s within 2\" of that marker, its ranged weapons have the Seek weapon rule. In the Ready step of the third Strategy phase, remove that marker.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Booby Trap [1]</span>\n        <p class=\"px-2\">Place one of your Booby Trap markers more than 6\" from your opponent\u2019s drop zone and more than 2\" from other markers, access points and accesible terrain. The first time your Booby Trap marker is within an enemy operative\u2019s control range, remove that marker and inflict 2D3 damage on that enemy operative.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Tactical Manoeuvre [1]</span>\n        <p class=\"px-2\">You can use the Reconnoitre strategic ploy twice during the first turning point.</p>\n    </div>\n    <div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Diversion [1]</span>\n        <p class=\"px-2\">Select one enemy operative. It cannot perform the <b>Guard</b> action during the first turning point.</p>\n    </div>"
+        }
+    ],
+    "tempestus-aquilons": [
+        {
+            "id_racial": 118,
+            "faction": "tempestus-aquilons",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">TEMPESTUS AQUILON</span> <b>TEMPESTOR</b> operative with one of the following options:<ul><li>Hot-shot laspistol; power weapon</li><li>Relic bolt pistol; chainsword</li><li>Hot-shot lascarbine; fists</li></ul>\n1 <b>SERVO-SENTRY</b> with one of the following options:*<ul><li>Flamer</li><li>Grenade launcher</li><li>Hot-shot volley gun</li></ul>\n9 <span class=\"faction\">TEMPESTUS AQUILON</span> operatives selected from the following list:<ul><li><b>GRENADIER</b></li><li><b>GUNFIGHTER</b></li><li><b>GUNNER</b> with melta carbine and fists*</li><li><b>GUNNER</b> with plasma carbine and fists*</li><li><b>MARKSMAN</b>*</li><li><b>PRECURSOR</b></li><li><b>TROOPER</b></li></ul><p>Other than <b>TROOPER</b> operatives, your kill team can only include each operative above once.</p><p><span class=\"text-decoration-line-through text-info-emphasis\">You cannot select more than 3 of these operatives combined.</span></p>"
+        },
+        {
+            "id_racial": 119,
+            "faction": "tempestus-aquilons",
+            "type": "racial",
+            "name": "Drop Insertion",
+            "description": "<p>When setting up a <span class=\"faction\">TEMPESTUS AQUILON</span> kill team before the battle, the first third of your kill team must be set up as normal. Each third thereafter can be set up above: place them to one side instead of in the killzone. For each third that\u2019s set up above, you must set up the whole third in this way (not some of them), then place one of your Drop markers wholly within your drop zone.</p>\n\t<p>As a <b>STRATEGIC GAMBIT</b> in the first and second turning point, you can move your Drop markers up to 4\", measuring the horizontal distance only. In close quarters, this can be measured and moved through walls.</p>\n\t<p>During the Firefight phase, friendly <span class=\"faction\">TEMPESTUS AQUILON</span> operatives set up above are activated as normal. When you do, you can either expend or land that operative. If it lands, set it up in the killzone in a location it can be placed as follows (it\u2019s no longer set up above):</p>\n\t<ul>\n\t<li>Within 3\u201d of one of your Drop markers, measuring the horizontal distance only, or wholly within your drop zone.</li>\n\t<li>Not within control range of an enemy operative (unless you\u2019re setting up a <b>PRECURSOR</b> operative, which can be set up within control range of an enemy operative).</li>\n\t<li>With no part of its base underneath Vantage terrain.</li>\n\t<li>With an order of your choice.</li>\n\t</ul>\n\t<p>The operative is treated as performing the <b>Reposition</b> action (spend the AP accordingly), then continue its activation as normal. It\u2019s obscured until the end of the next activation or the end of the turning point (whichever comes first).</p>\n\t<p>Less than half of your operatives can be set up above by the end of the first turning point. In other words, by the end of the first turning point, more than half of your operatives must have been set up in the killzone during the battle.</p>\n\t<p>When readying your operatives during the second and third turning points, you can select one of your Drop markers and remove it from the killzone.</p>\n\t<p>At the end of the battle, each friendly <span class=\"faction\">TEMPESTUS AQUILON</span> operative that\u2019s set up above is incapacitated.</p>"
+        },
+        {
+            "id_racial": 120,
+            "faction": "tempestus-aquilons",
+            "type": "racial",
+            "name": "Grav-chute",
+            "description": "When a friendly <span class=\"faction\">TEMPESTUS AQUILON</span> operative is dropping, ignore the vertical distance."
+        }
+    ],
+    "vespid-stingwings": [
+        {
+            "id_racial": 114,
+            "faction": "vespid-stingwings",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">VESPID STINGWING</span> <b>STRAIN LEADER</b> operative<br>1 <span class=\"faction\">VESPID STINGWING</span> <b>OVERSIGHT DRONE</b> operative<br>9 <span class=\"faction\">VESPID STINGWING</span> operatives selected from the following list:<ul><li><b>LONGSTING</b></li><li><b>SHADESTRAIN</b></li><li><b>SKYBLAST</b></li><li><b>SWARMGUARD</b></li><li><b>WARRIOR</b></li></ul><p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative above once.</p>"
+        },
+        {
+            "id_racial": 115,
+            "faction": "vespid-stingwings",
+            "type": "racial",
+            "name": "Neutron Charge",
+            "description": "Neutron weapons are any weapons that have the word \u201cneutron\u201d in their name, e.g. neutron blaster, neutron grenade launcher, etc. Whenever a friendly <span class=\"faction\">VESPID STINGWING</span> operative moves or uses <b>FLY</b>, its neutron weapons have the <b>Piercing 1</b> weapon rule until the end of the turning point."
+        },
+        {
+            "id_racial": 116,
+            "faction": "vespid-stingwings",
+            "type": "racial",
+            "name": "Communion",
+            "description": "<p>Communion points are used to maintain the tactical focus of friendly <span class=\"faction\">VESPID STINGWING</span> operatives. In the Ready step of each Strategy phase<span class=\"text-decoration-line-through text-info-emphasis\">, remove all Communion points from the previous turning point, then</span> you gain D3 Communion points, plus 1 if a friendly <b>OVERSIGHT DRONE</b> operative is in the killzone. Communion points are used as follows (<b>OVERSIGHT DRONE</b> operatives are unaffected by the following):</p>\n\t<ol>\n\t<li>Whenever a friendly <span class=\"faction\">VESPID STINGWING</span> operative is performing the <b>Shoot</b> action, it can only target the closest enemy operative within 8\" of it (excluding enemy operatives within control range of other friendly <span class=\"faction\">VESPID STINGWING</span> operatives) unless you spend 1 of your Communion points. For weapons with the Blast and Torrent weapon rules, only the first target must be selected in this way.</li>\n\t<li>Whenever a friendly <span class=\"faction\">VESPID STINGWING</span> operative performs the <b>Charge</b> action, it must finish the action within control range of the closest enemy operative it can unless you spend 1 of your Communion points.</li>\n\t<li>Whenever you would perform the <b>Pick Up Marker</b> or a mission action <span class=\"text-info-emphasis\">(excluding <b>Operate Hatch</b>)</span> with a friendly <span class=\"faction\">VESPID STINGWING</span> operative, you must also spend 1 of your Communion points to do so.</li>\n\t<li>Whenever a friendly <span class=\"faction\">VESPID STINGWING</span> operative is shooting, you can spend 1 (and only 1) of your Communion points to re-roll one attack dice.</li>\n\t</ol>"
+        },
+        {
+            "id_racial": 117,
+            "faction": "vespid-stingwings",
+            "type": "racial",
+            "name": "Fly",
+            "description": "<p>Whenever a friendly <span class=\"faction\">VESPID STINGWING</span> operative performs an action in which it moves, it can <b>FLY</b>. If it does, don\u2019t move it. Instead, remove it from the killzone and set it back up wholly within a distance equal to its Move stat (or 3\" if it was a <b>Dash</b>) of its original location, measuring the horizontal distance only. Note that it gains no additional distance when performing the <b>Charge</b> action.</p>\r\n\t<p>It must be set up in a location it can be placed, and unless it\u2019s the <b>Charge</b> action, it cannot be set up within control range of an enemy operative. In a killzone that uses the close quarters rules (e.g. Killzone: Gallowdark), you cannot measure the distance over or through wall terrain, and that operative cannot be set up on the other side of an access point (in other words, it cannot <b>FLY</b> through an open hatchway).</p>"
+        }
+    ],
+    "veteran-guardsmen": [
+        {
+            "id_racial": 20,
+            "faction": "veteran-guardsmen",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">DEATH KORPS</span> <b>WATCHMASTER</b> operative equipped with one of the following options:<ul>\r\n<li>Boltgun; Bayonet.</li>\r\n<li>Bolt pistol, Relic Laspistol or Plasma pistol; Chainsword or Power weapon.</li></ul>\r\n<p>4 operatives <b>TROOPER</b>*</p>\r\n9 <span class=\"faction\">DEATH KORPS</span> operatives selected from the following list:<ul>\r\n<li><b>BRUISER</b></li>\r\n<li><b>CONFIDANT</b> equipped with one of the following options:<ul>\r\n<li>Boltgun or Lasgun; Bayonet.</li>\r\n<li>Bolt pistol or Laspistol; Chainsword.</li></ul></li>\r\n<li><b>GUNNER</b> equipped with a Bayonet and Flamer</li>\r\n<li><b>GUNNER</b> equipped with a Bayonet and Grenade launcher</li>\r\n<li><b>GUNNER</b> equipped with a Bayonet and Meltagun</li>\r\n<li><b>GUNNER</b> equipped with a Bayonet and Plasma gun</li>\r\n<li><b>MEDIC</b></li>\r\n<li><b>SAPPER</b></li>\r\n<li><b>SNIPER</b></li>\n<li><b>SPOTTER</b></li>\r\n<li><b>TROOPER</b></li>\r\n<li><b>VETERAN</b></li>\r\n<li><b>VOX-OPERATOR</b></li>\r\n<li><b>ZEALOT</b></li></ul>\r\n<p>Other than <b>TROOPER</b> operatives, your Kill team can only include each operative on this list once.</p>\r\n<p>*Up to four times, instead of taking one of these <b>TROOPER</b> operatives, you can select one <span class=\"faction\">DEATH KORPS</span> ploy to cost you 0CP for the battle.</p>"
+        },
+        {
+            "id_racial": 78,
+            "faction": "veteran-guardsmen",
+            "type": "racial",
+            "name": "Guardsmen Orders",
+            "description": "<p><b>STRATEGIC GAMBIT and SUPPORT.</b> A friendly <b>WATCHMASTER</b> <span class=\"faction\">DEATH KORPS</span> operative can issue a <b>GUARDSMAN ORDER</b>. Whenever it does so, select one <b>GUARDSMAN ORDER</b> for all friendly <span class=\"faction\">DEATH KORPS</span> operatives within 6\" of it to receive.</p><p>Whenever a friendly operative receives a <b>GUARDSMAN ORDER</b>, apply its rules until the end of the turning point. Operatives cannot benefit from more than one <b>GUARDSMAN ORDER</b> at a time; they only benefit from the most recent order they received during the turning point.</p>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Move! Move! Move!</span><p class=\"px-2\">Whenever an operative that has received this order performs a <b>Reposition</b> action, add 1\" to its Movement stat.</p></div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Take Aim!</span><p class=\"px-2\">The ranged weapons of operatives that have received this order (excluding mortar barrage and remote detonator) have the <span class=\"text-info-emphasis\">Ceaseless</span> weapon rule.</p></div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Dig In!</span><p class=\"px-2\">Whenever an enemy operative is shooting a friendly operative that has received this order, if you retain any cover saves, you can re-roll <span class=\"text-info-emphasis\">any of your defence dice results of one result (e.g. results of 2)</span>.</p></div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Fix Bayonets!</span><p class=\"px-2\">Melee weapons of operatives that have received this order have the <span class=\"text-info-emphasis\">Ceaseless</span> weapon rule.</p></div>"
+        }
+    ],
+    "void-dancer-troupe": [
+        {
+            "id_racial": 7,
+            "faction": "void-dancer-troupe",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <b><span class=\"faction\">VOID-DANCER TROUPE</span> LEAD PLAYER</b> operative with one option from each of the following:<ul><li>Fusion pistol, neuro disruptor or shuriken pistol</li><li>Blade, caress, embrace, kiss or power weapon</li></ul>7 <b><span class=\"faction\">VOID-DANCER TROUPE</span></b> operatives selected from the following list:<ul><li><b>DEATH JESTER</b></li><li><b>PLAYER</b> with one option from each of the following:<ul><li>Fusion pistol, neuro disruptor or shuriken pistol</li><li>Blade, caress, embrace or kiss</li></ul></li><li><b>SHADOWSEER</b> with hallucinogen grenade and one of the following options:<ul><li>Neuro disruptor; miststave</li><li>Shuriken pistol; miststave</li></ul></li></ul><p>Other than <b>PLAYER</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to one fusion pistol and up to one neuro disruptor.</p>"
+        },
+        {
+            "id_racial": 82,
+            "faction": "void-dancer-troupe",
+            "type": "racial",
+            "name": "Saedath",
+            "description": "<p>As a <b>STRATEGIC GAMBIT</b> in the first turning point, you must select an <b>ALLEGORY</b> for your kill team for the battle, and one friendly <span class=\"faction\">VOID-DANCER TROUPE</span> operative to have the <b>PIVOTAL ROLE</b> for the battle. Whenever a friendly operative has the <b>PIVOTAL ROLE</b>, it has the <b>ACCOLADE</b> rule of your <b>ALLEGORY</b> for the battle.</p>\n<p>As a <b>STRATEGIC GAMBIT</b> in each subsequent turning point, you can select one friendly <span class=\"faction\">VOID-DANCER TROUPE</span> operative to gain the <b>ACCOLADE</b> rule of your <b>ALLEGORY</b> for the battle.</p>\n<p>Once per turning point, when a friendly operative that has the <b>PIVOTAL ROLE</b> completes the performance of your <b>ALLEGORY</b>, you can select a friendly <span class=\"faction\">VOID-DANCER TROUPE</span> operative to gain the <b>ACCOLADE</b> rule of your <b>ALLEGORY</b> for the battle.</p>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Epic</span>\n<p class=\"px-2\"><b>Performance</b>: The operative incapacitates an enemy operative while fighting. <span class=\"text-decoration-line-through text-info-emphasis\">or retaliating</span></p>\n<p class=\"px-2\"><b>Accolade</b>: <span class=\"text-info-emphasis\">Whenever this operative is fighting, its</span> melee weapons have the Balanced weapon rule.</p></div>\n<div class=\"action-box col-12 position-relative mb-3\"><span class=\"title-action\">Melodrama</span>\n<p class=\"px-2\"><b>Performance</b>: The operative incapacitates an enemy operative while shooting.</p>\n<p class=\"px-2\"><b>Accolade</b>: The operative\u2019s ranged weapons have the Balanced weapon rule.</p></div>"
+        },
+        {
+            "id_racial": 89,
+            "faction": "void-dancer-troupe",
+            "type": "racial",
+            "name": "Harlequin\u2019s Panoply",
+            "description": "<p>Whenever an operative is shooting a friendly <span class=\"faction\">VOID-DANCER TROUPE</span> operative, ignore the Piercing weapon rule.</p>\n<p>Whenever a friendly <span class=\"faction\">VOID-DANCER TROUPE</span> operative is climbing <span class=\"text-info-emphasis\">up, you can</span> treat the vertical distance as <span class=\"text-info-emphasis\">2\"</span> (regardless of how far the operative actually moves vertically).</p>\n<p>Friendly <span class=\"faction\">VOID-DANCER TROUPE</span> operatives can move within control range of enemy operatives (they must still start and end the move following all requirements for that move).</p>\n"
+        }
+    ],
+    "warpcoven": [
+        {
+            "id_racial": 27,
+            "faction": "warpcoven",
+            "type": "team",
+            "name": "Operatives",
+            "description": "6 <span class=\"faction\">WARPCOVEN</span> operatives selected from the following list:\n<ul>\n  <li>\n    <b>SORCERER OF DESTINY</b><sup>1</sup>\n  </li>\n  <li>\n    <b>SORCERER OF TEMPYRION</b><sup>1</sup>\n  </li>\n  <li>\n    <b>SORCERER OF WARPFIRE</b><sup>1</sup>\n  </li>\n  <li>\n    <b>RUBRIC MARINE GUNNER</b> with one of the following options:\n    <ul>\n      <li>Warpflamer; fists</li>\n      <li>Soulreaper cannon<sup>2</sup>; fists</li>\n    </ul>\n  </li>\n  <li><b>RUBRIC MARINE ICON BEARER</b></li>\n  <li><b>RUBRIC MARINE WARRIOR</b></li>\n  <li>\n    <b>TZAANGOR CHAMPION</b><sup>3</sup> with one of the following options:\n    <ul>\n      <li>Greataxe</li>\n      <li>Greatblade</li>\n    </ul>\n  </li>\n  <li><b>TZAANGOR HORN BEARER</b><sup>3</sup></li>\n  <li><b>TZAANGOR ICON BEARER</b><sup>3</sup></li>\n  <li>\n    <b>TZAANGOR WARRIOR</b><sup>3</sup> with one of the following options:\n    <ul>\n      <li>Tzaangor blades</li>\n      <li>Tzaangor blade & shield</li>\n      <li>Autopistol; chainsword</li>\n    </ul>\n  </li>\n</ul>\n<p>\n  <sup>1</sup> With force stave, <b>PSYCHIC</b> weapons on their datacard and one of the following options:\n     <ul>\n      <li>Inferno bolt pistol</li>\n      <li>Prosperine khopesh</li>\n      <li>Warpflame pistol<sup>2</sup></li>\n    </ul>\n</p>\n<p><sup>2</sup> Your kill team can only include up to one warpflame\npistol and up to one soulreaper cannon.</p>\n<p><sup>3</sup> These operatives count as half a selection each.</p>\n<p>\n You must select at least one friendly <b>SORCERER</b> operative, and one of your selected <b>SORCERER</b> operatives must have the <b>LEADER</b> keyword for the battle. Add 1 to that <b>LEADER</b> operative's Wounds stat for the battle. Other than <b>WARRIOR</b> and <b>GUNNER</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two <b>GUNNER</b> operatives.\n</p>\n"
+        },
+        {
+            "id_racial": 56,
+            "faction": "warpcoven",
+            "type": "racial",
+            "name": "Boons Of Tzeentch",
+            "description": "<p>\nWhenever you select a <b>SORCERER</b> operative for the battle, you must select a <b>BOON OF TZEENTCH</b> (below) for it to have for the battle. You cannot select each BOON OF TZEENTCH more than once per battle.\n</p>\n\n<span class=\"faction pb-2 d-block\">Incorporeal Sight</span>\n<p>\nThis operative\u2019s ranged weapons have the Saturate weapon rule. Whenever this operative is shooting, enemy operatives cannot be obscured. \n</p>\n\n<span class=\"faction pb-2 d-block\">Time-Walk</span>\n<p>\nAdd 1\" to this operative\u2019s Move stat.\n</p>\n\n<span class=\"faction pb-2 d-block\">Echoes from the Warp</span>\n<p>\nOnce per battle, when you counteract with this operative, you can change its order, and it can perform an additional\n1AP action for free during that counteraction, but both actions must be different.\n</p>\n\n<span class=\"faction pb-2 d-block\">Warp Swell</span>\n<p>\nAdd 1 to the Normal Dmg stat of this operative\u2019s melee weapons.\n</p>\n\n<span class=\"faction pb-2 d-block\">Immaterial Flight</span>\n<p>\nOnce per turning point, when this operative is performing the <b>Charge</b> or <b>Reposition</b> action during its activation, it can <b>FLY</b>. If it does, don\u2019t move it. Instead, remove it from the killzone and set it back up wholly within a distance equal to its Move stat of its original location, measuring the horizontal distance only. In a killzone that uses the close quarters rules (e.g. Killzone: Gallowdark), this distance cannot be measured over or through Wall terrain, and that operative cannot be set up on the other side of an access point (in other words, it cannot <b>FLY</b> through an open hatchway). Note that it gains no additional distance when performing the <b>Charge</b> action. It must be set up in a location it can be placed, and unless it\u2019s the <b>Charge</b> action, it cannot be set up within control range of an enemy operative.\n</p>\n\n<span class=\"faction pb-2 d-block\">Twist of Fate</span>\n<p>\nThis operative has an invulnerable save of 4+.\n</p>"
+        },
+        {
+            "id_racial": 57,
+            "faction": "warpcoven",
+            "type": "racial",
+            "name": "Astartes",
+            "description": "<p>\nDuring each friendly <span class=\"faction\">WARPCOVEN</span> <b>HERETIC ASTARTES</b> operative\u2019s activation, it can perform either two <b>Shoot</b> actions or two Fight actions. If it\u2019s two <b>Shoot</b> actions and a soulreaper cannon or a warpflamer is selected for both, 1 additional AP must be spent for the second action. You cannot select the same <b>PSYCHIC</b> ranged weapon more than once per activation.\n</p>\n<p>\nEach friendly <span class=\"faction\">WARPCOVEN</span> <b>HERETIC ASTARTES</b> operative can counteract regardless of its order.\n</p>"
+        }
+    ],
+    "wrecka-krew": [
+        {
+            "id_racial": 171,
+            "faction": "wrecka-krew",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">WRECKA KREW</span> <b>BOSS NOB</b> operative with one of the following options:\n<ul>\n  <li>Rokkit pistol; smash hammer</li>\n  <li>Two rokkit pistols; choppa</li>\n</ul>\n2 <span class=\"faction\">WRECKA KREW</span> <b>BOMB SQUIG</b> operatives<br>\n5 <span class=\"faction\">WRECKA KREW</span> operatives selected from the following list:\n<ul>\n  <li><b>BREAKA BOY DEMOLISHA</b></li>\n  <li><b>BREAKA BOY FIGHTER</b></li>\n  <li><b>BREAKA BOY KRUSHA</b></li>\n  <li><b>TANKBUSTA GUNNER</b> with one of the following options:\n    <ul>\n      <li>\u2019Eavy rokkit launcha; fists</li>\n      <li>Rokkit launcha; fists</li>\n    </ul>\n  </li>\n  <li><b>TANKBUSTA ROKKITEER</b> with one of the following options:\n    <ul>\n      <li>Rokkit launcha; pulsa rokkit; fists</li>\n      <li>Rokkit launcha; rokkit rack; fists</li>\n    </ul>\n  </li>\n</ul>\n<p>Other than <b>BOMB SQUIG</b>, <b>BREAKA BOY FIGHTER</b> and <b>TANKBUSTA GUNNER</b>, your kill team can only include one of each of the operatives listed above.</p>\n"
+        },
+        {
+            "id_racial": 176,
+            "faction": "wrecka-krew",
+            "type": "racial",
+            "name": "WRECKA RAMPAGE",
+            "description": "Whenever a friendly <span class=\"faction\">WRECKA KREW</span> operative is shooting, fighting or retaliating, in the Roll Attack Dice step:\n<ul>\n  <li>For each attack dice result of 6 you retain, you gain one Wrecka point.</li>\n  <li>You can spend up to 3 of your Wrecka points (unless it\u2019s a <b>BOMB SQUIG</b>). For each point you spend this way, retain one of your fails as a normal success instead of discarding it.</li>\n</ul>\nYou cannot have more than 6 Wrecka points at once. <span class=\"text-info-emphasis\">You can gain and spend Wrecka points during the same action and can do so in an order of your choice, unless you started the action with 6, in which case you can only spend them.</span>"
+        },
+        {
+            "id_racial": 177,
+            "faction": "wrecka-krew",
+            "type": "racial",
+            "name": "TANKED UP",
+            "description": "Whenever a friendly <span class=\"faction\">WRECKA KREW</span> operative (excluding <b>BOMB SQUIG</b>) that has an Engage order performs the Fight or Shoot action (excluding Guard), add 1 to its APL stat until the start of its next activation."
+        }
+    ],
+    "wyrmblade": [
+        {
+            "id_racial": 25,
+            "faction": "wyrmblade",
+            "type": "team",
+            "name": "Operatives",
+            "description": "1 <span class=\"faction\">WYRMBLADE</span> <b>NEOPHYTE LEADER</b> operative with one of the following options:\n<ul>\n\t<li>Autogun; Gun butt</li>\n\t<li>Shotgun; Gun butt</li>\n</ul>\nOr one option from each of the following:\n<ul>\n\t<li>Bolt pistol, master-crafted autopistol or web pistol</li>\n\t<li>Chainsword, power maul or power pick</li>\n</ul>\n\n13 <span class=\"faction\">WYRMBLADE</span> operatives selected from the following list:\n<ul>\n\t<li><b>KELERMORPH*</b></li>\n\t<li><b>LOCUS*</b></li>\n\t<li><b>GUNNER</b> with flamer and gun butt</li>\n\t<li><b>GUNNER</b> with grenade launcher and gun butt</li>\n\t<li><b>GUNNER</b> with webber and gun butt</li>\n\t<li><b>HEAVY GUNNER</b> with heavy stubber and gun butt</li>\n\t<li><b>HEAVY GUNNER</b> with mining laser and gun butt</li>\n\t<li><b>HEAVY GUNNER</b> with seismic cannon and gun butt</li>\n\t<li>\n\t\t<b>ICON BEARER</b> with one of the following options:\n\t\t<ul>\n\t\t\t<li>Autogun; gun butt</li>\n\t\t\t<li>Shotgun; gun butt</li>\n\t\t</ul>\n\t</li>\n\t<li><b>SANCTUS SNIPER*</b></li>\n\t<li><b>SANCTUS TALON*</b></li>\n\t<li>\n\t\t<b>WARRIOR</b> with one of the following options:\n\t\t<ul>\n\t\t\t<li>Autogun; gun butt</li>\n\t\t\t<li>Shotgun; gun butt</li>\n\t\t</ul>\n\t</li>\n</ul>\n\n<p><b>*</b> These operatives count as two selections each.</p>\n\n<p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two <b>GUNNER</b> operatives, up to two <b>HEAVY GUNNER</b> operatives and up to two <b>CULT AGENT</b> operatives.</p>\n"
+        },
+        {
+            "id_racial": 70,
+            "faction": "wyrmblade",
+            "type": "racial",
+            "name": "Familiar Territory",
+            "description": "<p>When setting up a <span class=\"faction\">WYRMBLADE</span> kill team before the battle, one third of your kill team can be set up in <b>HIDING</b>: place them to one side instead of in the killzone. <b>CULT AGENT</b> operatives cannot be\tset up in <b>HIDING</b>.</p>\n<p>In the Firefight phase, friendly <span class=\"faction\">WYRMBLADE</span> operatives set up in <b>HIDING</b> are activated as normal. When you do, you can either expend that operative or have it emerge. If it emerges, set it up in the killzone in a location it can be placed as follows (it\u2019s no longer set up in <b>HIDING</b>):</p>\n<ul>\n\t<li>Wholly within 6\" of your drop zone.</li>\n\t<li>More than 6\" from enemy operatives.</li>\n\t<li>With an order of your choice.</li>\n</ul>\n<p>The operative is treated as performing the Reposition action (spend the AP accordingly), then continue its activation as normal. If the operative is a <b>WARRIOR</b>, ignore its Group Activation rule. Friendly operatives still in <b>HIDING</b> at the end of the second turning point are incapacitated.</p>\n"
+        },
+        {
+            "id_racial": 71,
+            "faction": "wyrmblade",
+            "type": "racial",
+            "name": "Cult Ambush",
+            "description": "<p>Whenever a friendly <span class=\"faction\">WYRMBLADE</span> operative is shooting or fighting during its activation, if its order was changed from Conceal to Engage at the start of that activation, or it wasn\u2019t visible to enemy operatives at the start of that activation, that friendly operative's weapons have the Ceaseless weapon rule.</p>\n"
+        },
+        {
+            "id_racial": 148,
+            "faction": "wyrmblade",
+            "type": "racial",
+            "name": "Cult Agent",
+            "description": "<p>Whenever an operative is shooting a friendly <span class=\"faction\">WYRMBLADE</span> <b>CULT AGENT</b> operative:</p>\n<ul>\n\t<li>Ignore the Piercing and Saturate weapon rules.</li>\n\t<li>If you can retain any cover saves, you can retain one additional cover save, or you can retain one cover save as a critical success instead. This isn\u2019t cumulative with improved cover saves from Vantage terrain.</li>\n</ul>\n"
+        }
+    ],
+    "yaegirs": [
+        {
+            "id_racial": 103,
+            "faction": "yaegirs",
+            "type": "team",
+            "name": "Roster",
+            "description": "<p>1 <span class=\"faction\">HEARNKYN YAEGIR</span> <b>THEYN</b> operative</p>9 <span class=\"faction\">HERNKYN YAEGIR</span> operatives selected from the following list:<ul><li><b>BLADEKYN</b></li><li><b>BOMBAST</b></li><li><b>GUNNER</b></li><li><b>IRONBRAEK</b></li><li><b>RIFLEKYN</b></li><li><b>TRACKER</b></li><li><b>WARRIOR</b> equipped with one of the following options:<ul><li>Bolt revolver, plasma knife</li><li>Bolt shotgun; fists</li></ul></li></ul><p>Other than <b>WARRIOR</b> operatives, your kill team can only include each operative above once.</p>"
+        },
+        {
+            "id_racial": 104,
+            "faction": "yaegirs",
+            "type": "racial",
+            "name": "Resourceful",
+            "description": "<p>In the Ready step of each Strategy phase after the first, you gain Resourceful points determined by the number of friendly <span class=\"faction\">HERNKYN YAEGIR</span> operatives in the killzone that aren\u2019t within control range of enemy operatives. At the end of each turning point, discard your Resourceful points.</p><div class=\"weapons-table col-12 p-0 pt-2 position-relative\"><table><tbody><tr><th>Operatives</th><th>Resourceful Points</th></tr><tr><td>6+</td><td>2</td></tr><tr><td>3-5</td><td>1</td></tr><tr><td>0-2</td><td>0</td></tr></tbody></table></div><p>Whenever a friendly <span class=\"faction\">HERNKYN YAEGIR</span> operative that isn\u2019t within control range of enemy operatives is activated, you can spend 1 of your Resourceful points to do one of the following:</p><ul><li>Until the end of its activation, add 1 to its APL stat.</li><li>It regains D3+1 lost wounds.</li></ul>"
+        },
+        {
+            "id_racial": 105,
+            "faction": "yaegirs",
+            "type": "racial",
+            "name": "Dauntless Explorers",
+            "description": "<p><b>STRATEGIC GAMBIT</b> in the first turning point. Each friendly <span class=\"faction\">HERNKYN YAEGIR</span> operative wholly within your drop zone can immediately perform a free Reposition action. Each that does so must end that move wholly within 4\" of your drop zone.</p>"
+        }
+    ]
+}

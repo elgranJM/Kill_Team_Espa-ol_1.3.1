@@ -1,0 +1,80 @@
+/* Estilos para las Tarjetas de Equipamiento */
+.equipment-card {
+    border: 1px solid #444;
+    border-radius: 0; /* Bordes cuadrados como en Kill Team oficial */
+    overflow: hidden;
+    background-color: #fff;
+    height: 100%;
+}
+
+/* Franja Gris del Título */
+.equipment-header {
+    background-color: #4a4a4a; /* Gris oscuro */
+    color: #ffffff;
+    border-bottom: 2px solid #333;
+}
+
+/* Cuerpo de la tarjeta */
+.equipment-body {
+    padding: 15px;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* --- Estilos para la Tabla de Armas --- */
+.equip-weapon-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.equip-weapon-table th {
+    background-color: #212529; /* Negro/Gris muy oscuro */
+    color: white;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border: 1px solid #444;
+}
+
+.equip-weapon-table td {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+/* --- Estilos para Acciones de Equipamiento (Caja Naranja) --- */
+.equip-action-box {
+    border: 2px solid #d35400; /* Borde naranja oscuro */
+    margin-top: 15px;
+}
+
+.equip-action-header {
+    background-color: #e67e22; /* Naranja Kill Team */
+    color: white;
+    padding: 5px 10px;
+}
+
+.equip-action-content {
+    background-color: #fff;
+    border-top: 1px solid #d35400;
+}
+
+/* Caja Verde (Action YES) */
+.equip-action-yes {
+    background-color: #d4edda; /* Verde claro */
+    border-left: 5px solid #28a745; /* Borde verde fuerte */
+    color: #155724;
+    font-size: 0.9rem;
+}
+
+/* Caja Roja (Action NO) */
+.equip-action-no {
+    background-color: #f8d7da; /* Rojo claro */
+    border-left: 5px solid #dc3545; /* Borde rojo fuerte */
+    color: #721c24;
+    font-size: 0.9rem;
+    font-style: italic;
+}

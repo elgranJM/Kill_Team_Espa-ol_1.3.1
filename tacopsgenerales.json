@@ -1,0 +1,122 @@
+{
+    "Flanco": {
+        "name": "Flanco",
+        "archetype": "recon",
+        "Reveal": "Como un <b>GAMBITO ESTRATÉGICO</b>",
+        "additional_rules": "Divide la killzone en dos flancos (izquierdo y derecho) trazando una línea imaginaria igual que la línea central, excepto que va desde el centro del borde de la killzone de cada jugador. Un agente disputa un flanco mientras esté totalmente dentro de él y dentro del territorio de su oponente. Los agentes amigos controlan un flanco si el atributo LPA total de los que lo disputan es mayor que el de los agentes enemigos.",
+        "victoy_points": ["Después de revelar esta op, al final de cada punto de inflexión después del primero, por cada flanco que los agentes amigos controlen, obtienes 1PV.", 
+                        "Si los agentes amigos también controlaron ese flanco al final del punto de inflexión anterior (excluyendo el primero), obtienes 2PV en su lugar."]
+    },
+    "Recuperación": {
+        "name": "Recuperación",
+        "archetype": "recon",
+        "Reveal": "La primera vez que obtengas PV de esta op.",
+        "action_mission_name": "Recuperar",
+        "action_mission_cost": "1 LPA",
+        "action_mission_yes": "Si el agente activo controla un marcador de objetivo que no ha sido buscado por agentes amigos, ese agente ahora lleva uno de tus marcadores de misión de Recuperación y ese marcador de objetivo ha sido buscado por agentes amigos. Los agentes amigos pueden realizar la acción <b>Recoger Marcador</b> en tus marcadores de misión de Recuperación.",
+        "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.",
+        "victoy_points": ["La primera vez que se busca cada marcador de objetivo... obtienes 1PV.",
+                        "Al final de la batalla, por cada uno de tus marcadores de misión de Recuperación... obtienes 1PV."]
+    },
+    "Vigilar el Movimiento Enemigo": {
+        "name": "Vigilar el Movimiento Enemigo",
+        "archetype": "recon",
+        "Reveal": "La primera vez que un agente amigo realiza la acción <b>Vigilar</b>.",
+        "action_mission_name": "Vigilar",
+        "action_mission_cost": "1 LPA",
+        "action_mission_yes": "Selecciona un agente enemigo preparado, visible y a más de 6\" del agente activo. Ese agente enemigo ahora está vigilado hasta el paso de Preparar de la próxima fase de Estrategia.",
+        "action_mission_no": "Un agente no puede realizar esta acción mientras tiene una orden de Trabarse, durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.",
+        "victoy_points": ["Al final de cada punto de inflexión después del primero, por cada agente enemigo vigilado... obtienes 1PV.",
+                        "No puedes obtener más de 2PV de esta op por punto de inflexión."]
+    },
+    "Revisar y Purgar": {
+        "name": "Revisar y Purgar",
+        "archetype": "seek-destroy",
+        "Reveal": "La primera vez que un agente enemigo es incapacitado mientras disputa un marcador de objetivo, o la primera vez que un agente amigo realiza la acción <b>Purgar</b> (lo que ocurra primero).",
+        "additional_rules": "Cuando un agente enemigo que disputa un marcador de objetivo es incapacitado, ese marcador de objetivo gana una de tus fichas de <b>Revisado</b> (si aún no tiene una) hasta el paso de Preparar de la próxima fase de Estrategia.",
+        "action_mission_name": "Purgar",
+        "action_mission_cost": "1 LPA",
+        "action_mission_yes": "Un marcador de objetivo que controla el agente activo queda purgado para el punto de inflexión.",
+        "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.",
+        "victoy_points": ["Al final de cada punto de inflexión después del primero, si los agentes amigos controlan algún marcador de objetivo que tenga una de tus fichas de <b>Revisado</b>, obtienes 1PV.",
+                        "Si esto es cierto y cualquiera de esos marcadores de objetivo también está <b>purgado</b>, obtienes 2PV en su lugar.",
+                        "No puedes obtener más de 2PV de esta op por punto de inflexión."]
+    },
+    "Dominar": {
+        "name": "Dominar",
+        "archetype": "seek-destroy",
+        "Reveal": "<p><p>La primera vez que un agente enemigo es incapacitado por un agente amigo.</p></p>",
+        "additional_rules": "Cada vez que un agente amigo incapacita a un agente enemigo, ese agente amigo gana una de tus fichas de Dominación.",
+        "victoy_points": ["Al final del tercer y cuarto punto de inflexión, puedes retirar fichas de Dominación de los agentes aliados que no estén incapacitados. Por cada ficha que elimines, obtienes 1 PV.",
+                        "No puedes obtener más de 3PV de esta op por punto de inflexión."]
+    },
+    "Hacer Huir": {
+        "name": "Hacer Huir",
+        "archetype": "seek-destroy",
+        "Reveal": "<p><p>La primera vez que obtengas PV de esta op.</p></p>",
+        "victoy_points": ["Siempre que un agente amigo incapacite a un agente enemigo, si ese agente amigo está a 6\" de la zona de caída de tu oponente, obtienes 1 PV.",
+                        "Si su atributo de Heridas es de 12 o más, obtienes 2PV en su lugar.",
+                        "No puedes obtener más de 2PV de esta op por punto de inflexión."]
+    },
+    "Izar Bandera": {
+        "name": "Izar Bandera",
+        "archetype": "security",
+        "Reveal": "Cuando realizas la acción <b>Izar Bandera</b>.",
+        "action_mission_name": "Izar Bandera",
+        "action_mission_cost": "1 LPA",
+        "action_mission_yes": "Coloca tu marcador de misión de Bandera dentro del rango de control del agente activo, totalmente dentro del territorio de tu oponente y a más de 5\" de un borde de killzone neutral. Los agentes pueden realizar la acción <b>Recoger Marcador</b> en tu marcador de misión de Bandera.",
+        "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo, o si un agente amigo ya ha realizado esta acción durante la batalla.",
+        "victoy_points": ["Al final de cada punto de inflexión después del primero, si tu marcador de misión de Bandera está totalmente dentro del territorio de tu oponente y los agentes amigos lo controlan, obtienes 1PV", 
+                        "Si eso es cierto y ningún agente enemigo lo disputa, obtienes 2PV en su lugar. Ten en cuenta que tu marcador de misión de Bandera debe estar en la killzone (no siendo transportado) para puntuar."]
+    },
+    "Mártires": {
+        "name": "Mártires",
+        "archetype": "security",
+        "Reveal": "<p><p>Siempre que un agente amigo es incapacitado mientras disputa un marcador de objetivo, ese marcador gana una de tus fichas de Mártir. Ten en cuenta que esto es solo la primera vez que cada agente es incapacitado, así que si un agente es incapacitado, se vuelve a desplegar (p. ej. Protocolos de Reanimación del <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>) y luego es incapacitado de nuevo, no se puede ganar una segunda ficha de Mártir como resultado.</p></p>",
+        "additional_rules": "Siempre que un agente amigo es incapacitado mientras disputa un marcador de objetivo, ese marcador gana una de tus fichas de Mártir.",
+        "victoy_points": ["Al final de cada punto de inflexión después del primero, si los agentes amigos disputan un marcador de objetivo que tiene una o más de tus fichas de Mártir, puedes retirar cualquiera de esas fichas. Por cada ficha que retires, obtienes 1PV.",
+                        "Si los agentes amigos también controlan ese marcador, obtienes 2PV en su lugar.", 
+                        "No puedes obtener más de 2PV de esta op por punto de inflexión."]
+    },
+    "Mensajero": {
+        "name": "Mensajero",
+        "archetype": "security",
+        "Reveal": "<p><p>La primera vez que seleccionas un mensajero.</p></p>",
+        "additional_rules": ["Como un <b>GAMBITO ESTRATÉGICO</b> en cada punto de inflexión después del primero, selecciona un agente amigo para ser tu mensajero hasta el paso de Preparar de la próxima fase de Estrategia.",
+                            "No puedes seleccionar un agente que seleccionaste durante un punto de inflexión anterior o un agente que es ignorado para la kill op."],
+        "victoy_points": ["Al final de cada punto de inflexión... si tu mensajero está totalmente dentro del territorio enemigo... obtienes 1PV.",
+                        "Si esto es cierto y tu mensajero no ha perdido ninguna herida... obtienes 2PV en su lugar."]
+    },
+    "Localizar Enemigo": {
+        "name": "Localizar Enemigo",
+        "archetype": "infiltration",
+        "Reveal": "La primera vez que obtengas PV de esta op.",
+        "additional_rules": "Un agente enemigo está siendo localizado si es un Blanco Valido para un agente amigo a menos de 6\" de él. Ese agente amigo debe tener una orden de Ocultación, no puede ser un Blanco Valido para el agente enemigo que está intentando localizar, y no puede estar dentro del rango de control de agentes enemigos.",
+        "victoy_points": ["Al final de cada punto de inflexión después del primero:",
+                        "   - Al final de cada punto de inflexión después del primero, si los agentes amigos controlan algún marcador de objetivo que tenga una de tus fichas de <b>Revisado</b>, obtienes 1PV.",
+                        "   - Si dos o más agentes enemigos están siendo localizados, obtienes 2PV.",
+                        "No puedes obtener más de 2PV de esta op por punto de inflexión."]
+    },
+    "Colocar Dispositivos": {
+        "name": "Colocar dispositivos",
+        "archetype": "infiltration",
+        "Reveal": "La primera vez que un agente amigo realiza la acción <b>Colocar Dispositivo</b>.",
+        "action_mission_name": "Colocar Dispositivo",
+        "action_mission_cost": "1 LPA",
+        "action_mission_yes": "Un marcador de objetivo que controla el agente activo gana una de tus fichas de Dispositivo.",
+        "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo, o si ese marcador de objetivo ya tiene una de tus fichas de Dispositivo.",
+        "victoy_points": ["Al final de cada punto de inflexión después del primero:",
+                        "   - Si el marcador de objetivo de tu oponente tiene una de tus fichas de Dispositivo, obtienes 1PV.",
+                        "   - Por cada otro marcador de objetivo que disputen los agentes enemigos que tenga una de tus fichas de Dispositivo, obtienes 1PV.",
+                        "No puedes obtener más de 2PV de esta op por punto de inflexión."]
+    },
+    "Robar Información": {
+        "name": "Robar Información",
+        "archetype": "infiltration",
+        "Reveal": "La primera vez que un agente enemigo es incapacitado.",
+        "additional_rules": ["Siempre que un agente enemigo es incapacitado, antes de que sea retirado de la killzone, coloca uno de tus marcadores de misión de Información dentro de su rango de control.",
+                            "Los agentes amigos pueden realizar la acción <b>Recoger Marcador</b> en tus marcadores de misión de Información, y para los propósitos de las condiciones de esa acción, ignora el primer marcador de misión de Información que lleva el agente activo. En otras palabras, cada agente amigo puede llevar hasta dos marcadores de misión de Información, o uno y otro marcador."],
+        "victoy_points": ["Al final de cada punto de inflexión después del primero, si algún agente amigo lleva alguno de tus marcadores de misión de Información, obtienes 1PV.", 
+                        "Al final de la batalla, por cada uno de tus marcadores de misión de Información que lleven los agentes amigos, obtienes 1PV."]
+    }
+}

@@ -321,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Agentes
 function renderOperatives(factionKey) {
-    // Asumimos que gameData ahora carga los datos de operativesNUEVA.JSON
     const operatives = gameData.operatives[factionKey] || [];
 
     if (operatives.length === 0) {

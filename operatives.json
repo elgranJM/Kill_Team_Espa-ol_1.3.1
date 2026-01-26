@@ -4081,6 +4081,16 @@
                     }
                 },
                 {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                },
+                {
                     "name": "Arma de energía",
                     "type": "melee",
                     "stats": {
@@ -4102,17 +4112,17 @@
                     "name": "Mando",
                     "cost": "1 LPA",
                     "description": [
-                        "<b>APOYO.</b> Elige un agente TEMPESTUS AQUILON amigo distinto (salvo <b>SERVOCENTINELA</b>) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                        "APOYO. Elige un agente TEMPESTUS AQUILON amigo distinto (salvo SERVOCENTINELA) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, LÍDER, TEMPESTOR",
+            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, LÍDER, TEMPESTOR",
             "peana": "28"
         },
         {
-            "id": "aquilon-medic",
-            "name": "MÉDICO AQUILÓN",
+            "id": "aquilon-grenadier",
+            "name": "GRANADERO AQUILÓN",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4121,13 +4131,23 @@
             },
             "weapons": [
                 {
-                    "name": "Carabina láser potenciada",
+                    "name": "Pistola láser potenciada",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
+                        "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "-"
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Bomba de fusión",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "5/3",
+                        "RA": "Alcance 3\", Devastadora 3, Limitada 1, Penetración 2, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -4135,7 +4155,7 @@
                     "type": "melee",
                     "stats": {
                         "A": "3",
-                        "HP/HA": "3+",
+                        "HP/HA": "4+",
                         "Dñ": "2/3",
                         "RA": "-"
                     }
@@ -4143,26 +4163,17 @@
             ],
             "abilities": [
                 {
-                    "name": "Equipo médico",
-                    "description": "Una vez por punto de inflexión, la primera vez que un agente amigo a 3\" o menos de este agente fuera a resultar incapacitado, puedes usar esta regla. El agente no resulta incapacitado, le queda 1 herida y se descartan los ataques restantes."
+                    "name": "Granadero",
+                    "description": "Este agente puede usar granadas frag, perforantes, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente use una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
-            "uniqueActions": [
-                {
-                    "name": "Curar",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Elige un agente amigo a 1\" o menos de este agente para que recupere 2D3 heridas perdidas."
-                    ],
-                    "description_no": "No puede realizarse si este agente está en la zona de control de un agente enemigo."
-                }
-            ],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, MÉDICO",
+            "uniqueActions": [],
+            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, GRANADERO",
             "peana": "28"
         },
         {
-            "id": "aquilon-precursor",
-            "name": "PRECURSOR AQUILÓN",
+            "id": "aquilon-pistolier",
+            "name": "PISTOLERO AQUILÓN",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4171,43 +4182,48 @@
             },
             "weapons": [
                 {
-                    "name": "Carabina láser potenciada",
+                    "name": "Pistolas láser potenciadas (concentradas)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\", Desgarradora, Incesante"
+                    }
+                },
+                {
+                    "name": "Pistolas láser potenciadas (salva)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "3/4",
-                        "RA": "-"
+                        "RA": "Alcance 8\", Salva"
                     }
                 },
                 {
-                    "name": "Puños",
-                    "type": "melee",
+                    "name": "Pistolas láser potenciadas (a bocajarro)",
+                    "type": "ranged",
                     "stats": {
-                        "A": "3",
+                        "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "2/3",
-                        "RA": "-"
+                        "Dñ": "3/4",
+                        "RA": "Incesante"
                     }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Ataque por sorpresa",
-                    "description": "Siempre que este agente dispare a un enemigo a 3\" o menos de uno de tus marcadores de descenso, sus armas tienen la regla Incesante."
-                }
-            ],
-            "uniqueActions": [
+                    "name": "Salva",
+                    "description": "Elige hasta dos blancos válidos diferentes que no estén en la zona de control de agentes amigos. Dispara con esta arma contra ambos, en el orden que elijas (tira cada secuencia por separado)."
+                },
                 {
-                    "name": "Flanqueo",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Retira a este agente de la zona de aniquilación y sitúalo a 3\" o menos de uno de tus marcadores de descenso que no esté en la zona de control de un enemigo."
-                    ],
-                    "description_no": "No puede realizarse si este agente está en la zona de control de un agente enemigo."
+                    "name": "Tirotear",
+                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados, este agente puede realizar una acción libre de Disparar (cambiando su orden a trabarse), pero solo contra ese blanco con sus pistolas (concentrado) y tirando tantos dados como fallos del oponente más 1 (máximo 4)."
                 }
             ],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, PRECURSOR",
+            "uniqueActions": [],
+            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, PISTOLERO",
             "peana": "28"
         },
         {
@@ -4221,49 +4237,49 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle de fusión",
+                    "name": "Carabina de fusión",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
+                        "HP/HA": "3+",
                         "Dñ": "6/3",
                         "RA": "Alcance 6\", Devastadora 4, Penetración 2"
                     }
                 },
                 {
-                    "name": "Lanzallamas",
+                    "name": "Carabina de plasma (normal)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/3",
-                        "RA": "Alcance 6\", Ráfaga 1\", Saturación"
-                    }
-                },
-                {
-                    "name": "Rifle de plasma (normal)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "3/5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
                         "RA": "Alcance 8\", Penetración 1"
                     }
                 },
                 {
-                    "name": "Rifle de plasma (sobrecarga)",
+                    "name": "Carabina de plasma (sobrecarga)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "4/5",
+                        "HP/HA": "3+",
+                        "Dñ": "5/5",
                         "RA": "Alcance 8\", Letal 5+, Penetración 1, Sobrecalentamiento"
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
                     }
                 }
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, TIRADOR",
+            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, TIRADOR",
             "peana": "28"
         },
         {
@@ -4277,15 +4293,70 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle de francotirador de repetición",
+                    "name": "Rifle láser telescópico potenciado (oculto)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 3, Pesada (solo Correr), Silenciosa"
+                        "RA": "Devastadora 3, Pesada, Silenciosa, Posición oculta"
                     }
                 },
+                {
+                    "name": "Rifle láser telescópico potenciado (móvil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/3",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Rifle láser telescópico potenciado (inmóvil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 3, Pesada"
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Ventaja de francotirador",
+                    "description": "Siempre que este agente esté en terreno Aventajado y dispare contra un agente que tenga una orden de trabarse y se encuentre al menos 2\" por debajo de él, todos los perfiles de su rifle láser telescópico potenciado tienen la regla de arma Severa."
+                },
+                {
+                    "name": "Posición oculta",
+                    "description": "Este agente solo puede usar esta arma la primera vez que realiza una acción de Disparar durante la batalla."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, OJO PRECISO",
+            "peana": "28"
+        },
+        {
+            "id": "aquilon-precursor",
+            "name": "PRECURSOR AQUILÓN",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
                 {
                     "name": "Pistola láser potenciada",
                     "type": "ranged",
@@ -4295,34 +4366,74 @@
                         "Dñ": "3/4",
                         "RA": "Alcance 8\""
                     }
-                }
-            ],
-            "abilities": [],
-            "uniqueActions": [
+                },
                 {
-                    "name": "Ojo preciso",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Hasta el final de la activación de este agente, su rifle de francotirador de repetición tiene la regla de arma Letal 5+."
-                    ],
-                    "description_no": "No puede realizarse si este agente está en la zona de control de un agente enemigo."
+                    "name": "Daga Tempestus",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Incesante, Letal 5+"
+                    }
                 }
             ],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, OJO PRECISO",
+            "abilities": [
+                {
+                    "name": "Salvaje luchador a cuchillo",
+                    "description": "Cuando este agente combata, tras resolver tu primer dado de ataque, puedes resolver otro de inmediato (antes que tu oponente)."
+                },
+                {
+                    "name": "Enérgico",
+                    "description": "Siempre que este agente realice la acción de Combatir o Disparar, puede realizar inmediatamente después una acción libre de Correr. Puede hacerlo incluso si ha cargado, pero solo usando la distancia restante (máximo 3\")."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, PRECURSOR",
             "peana": "28"
         },
         {
             "id": "servo-sentry",
-            "name": "SERVOCENTINELA",
+            "name": "SERVOCENTINELA AQUILÓN",
             "stats": {
                 "LPA": "2",
                 "MOVER": "4\"",
-                "SALVACIÓN": "4+",
+                "SALVACIÓN": "3+",
                 "HERIDAS": "10"
             },
             "weapons": [
                 {
-                    "name": "Cañón de volea potenciado (concentrado)",
+                    "name": "Lanzallamas",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 8\", Ráfaga 2\", Saturación"
+                    }
+                },
+                {
+                    "name": "Lanzagranadas (frag)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "2/4",
+                        "RA": "Área 2\""
+                    }
+                },
+                {
+                    "name": "Lanzagranadas (perforante)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/5",
+                        "RA": "Penetración 1"
+                    }
+                },
+                {
+                    "name": "Fusil repetidor potenciado (concentrado)",
                     "type": "ranged",
                     "stats": {
                         "A": "5",
@@ -4332,7 +4443,7 @@
                     }
                 },
                 {
-                    "name": "Cañón de volea potenciado (barrido)",
+                    "name": "Fusil repetidor potenciado (barrido)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -4345,24 +4456,60 @@
             "abilities": [
                 {
                     "name": "Máquina",
-                    "description": "Este agente solo puede realizar acciones de <b>Correr</b>, <b>Retroceder</b>, <b>Reposicionarse</b> y <b>Disparar</b>. No puede contraatacar ni asistir en combate."
+                    "description": "Este agente solo puede realizar acciones de Correr, Disparar, Reposicionarse y Retroceder. No puede contraatacar, asistir en un combate ni usar armas que no figuren en su tarjeta de datos."
                 },
                 {
                     "name": "Torreta",
-                    "description": "Este agente puede realizar dos acciones de <b>Disparar</b> durante su activación."
+                    "description": "Este agente puede realizar dos acciones de Disparar durante su activación."
                 }
             ],
-            "uniqueActions": [
+            "uniqueActions": [],
+            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, SERVOCENTINELA",
+            "peana": "28"
+        },
+        {
+            "id": "aquilon-soldier",
+            "name": "SOLDADO AQUILÓN",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
                 {
-                    "name": "Anclaje",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Hasta el inicio de su siguiente activación, este agente no puede moverse voluntariamente, pero sus armas tienen la regla Incesante."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "name": "Carabina láser potenciada",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
                 }
             ],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, SERVOCENTINELA",
+            "abilities": [
+                {
+                    "name": "Inserción rápida",
+                    "description": "GAMBITO ESTRATÉGICO en la primera fase de estrategia. Cada agente SOLDADO TEMPESTUS AQUILON amigo completamente dentro de tu zona de descenso puede realizar inmediatamente una acción libre de Reposicionarse, pero debe terminar dicha acción completamente a 3\" o menos de tu zona de descenso."
+                },
+                {
+                    "name": "Aterrizaje raudo",
+                    "description": "Cuando este agente aterrice, puedes desplegarlo a 4\" o menos en horizontal de uno de tus marcadores de descenso. Esto tiene preferencia sobre el requisito normal de distancia."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, SOLDADO",
             "peana": "28"
         }
     ],

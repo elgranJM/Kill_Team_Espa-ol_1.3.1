@@ -4117,7 +4117,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, LÍDER, TEMPESTOR",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, LÍDER, TEMPESTOR",
             "peana": "28"
         },
         {
@@ -4168,7 +4168,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, GRANADERO",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, GRANADERO",
             "peana": "28"
         },
         {
@@ -4279,7 +4279,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, TIRADOR",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, TIRADOR",
             "peana": "28"
         },
         {
@@ -4344,7 +4344,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, OJO PRECISO",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, OJO PRECISO",
             "peana": "28"
         },
         {
@@ -4389,7 +4389,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, PRECURSOR",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, PRECURSOR",
             "peana": "28"
         },
         {
@@ -4464,7 +4464,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span> , IMPERIUM, SERVOCENTINELA",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, SERVOCENTINELA",
             "peana": "28"
         },
         {
@@ -4509,7 +4509,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, SOLDADO",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, SOLDADO",
             "peana": "28"
         }
     ],

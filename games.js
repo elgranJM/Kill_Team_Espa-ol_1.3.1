@@ -1,9 +1,9 @@
 // =============================================================================
-// Kill Team BattleKit - Juegos Locales y Lógica de Marcador (games.js)
+// Kill Team BattleKit - Local Games & Scoreboard Logic (games.js)
 // =============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Referencias a Elementos del DOM ---
+    // --- DOM Element References ---
     const profileSelect = document.getElementById('profile-select');
     const newProfileNameInput = document.getElementById('new-profile-name');
     const createProfileBtn = document.getElementById('create-profile-btn');
@@ -18,32 +18,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const exportProfileBtn = document.getElementById('export-profile-btn');
     const importProfileInput = document.getElementById('import-profile-input');
 
-    // Elementos de Partida en Curso (GIP)
+    // Game In Progress (GIP) Elements
     const gipNavItem = document.getElementById('game-in-progress-nav-item');
     const gipTab = new bootstrap.Tab(document.getElementById('game-in-progress-tab'));
     const gamesTab = new bootstrap.Tab(document.getElementById('games-tab'));
     const gipScoreDisplay1 = document.getElementById('gip-digit-1');
     const gipScoreDisplay2 = document.getElementById('gip-digit-2');
 
-    // --- Variables de Estado Global ---
+    // --- Global State Variables ---
     let currentProfile = '';
     let currentGame = null;
-    let factionsData = {}; // Para almacenar datos de all_factions_data.json
-    let tacopsData = {};   // Para almacenar datos de tacops.json
+    let factionsData = {}; // To store data from all_factions_data.json
+    let tacopsData = {};   // To store data from tacops.json
 
-    // --- Carga de Datos ---
+    // --- Data Loading ---
     Promise.all([
-        fetch('all_factions_data.json').then(res => res.json()).catch(err => { console.error("No se pudo cargar all_factions_data.json. Los desplegables de facción estarán vacíos.", err); return {}; }),
-        fetch('tacops.json').then(res => res.json()).catch(err => { console.error("No se pudo cargar tacops.json. Los desplegables de Tac Op estarán limitados.", err); return {}; })
+        fetch('all_factions_data.json').then(res => res.json()).catch(err => { console.error("Could not load all_factions_data.json. Faction dropdowns will be empty.", err); return {}; }),
+                fetch('tacops.json').then(res => res.json()).catch(err => { console.error("Could not load tacops.json. Tac Op dropdowns will be limited.", err); return {}; })
     ]).then(([factions, tacops]) => {
         factionsData = factions;
         tacopsData = tacops;
 
-        // Poblar selectores de facción en el modal "Nueva Partida"
+        // Populate faction selects in the "New Game" modal
         const factionNames = Object.keys(factionsData);
         if (factionNames.length > 0) {
-            playerFactionSelect.innerHTML = '<option value="blank" selected>Selecciona una facción</option>';
-            opponentFactionSelect.innerHTML = '<option value="blank" selected>Selecciona una facción</option>';
+            playerFactionSelect.innerHTML = '<option value="blank" selected>Select a faction</option>';
+            opponentFactionSelect.innerHTML = '<option value="blank" selected>Select a faction</option>';
             factionNames.sort().forEach(id => {
                 const name = id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
                 [playerFactionSelect, opponentFactionSelect].forEach(sel => {
@@ -54,14 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         }
-    }).catch(error => console.error("Error cargando datos iniciales del juego:", error));
+    }).catch(error => console.error("Error loading initial game data:", error));
 
 
-    // --- Importar/Exportar ---
+    // --- Import/Export ---
 
     function exportProfile() {
         if (!currentProfile) {
-            alert("Por favor, selecciona un perfil para exportar.");
+            alert("Please select a profile to export.");
             return;
         }
 
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);
         downloadAnchorNode.setAttribute("download", `${currentProfile}_killteam_profile.json`);
-        document.body.appendChild(downloadAnchorNode); // requerido para firefox
+        document.body.appendChild(downloadAnchorNode); // required for firefox
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
     }
@@ -93,11 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const { profileName, games, currentGame } = profileData;
 
                 if (!profileName) {
-                    alert("Archivo de perfil inválido: falta el nombre del perfil.");
+                    alert("Invalid profile file: missing profile name.");
                     return;
                 }
 
-                // Guardar el perfil importado
+                // Save the imported profile
                 let profiles = JSON.parse(localStorage.getItem('kt_profiles')) || [];
                 if (!profiles.includes(profileName)) {
                     profiles.push(profileName);
@@ -111,25 +111,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     localStorage.setItem(`kt_current_game_${profileName}`, JSON.stringify(currentGame));
                 }
 
-                // Recargar perfiles para actualizar la UI y cambiar al perfil importado
+                // Reload profiles to update the UI and switch to the imported profile
                 loadProfiles(); 
                 profileSelect.value = profileName;
                 switchProfile(profileName);
 
 
-                alert(`Perfil "${profileName}" importado con éxito.`);
+                alert(`Profile "${profileName}" imported successfully.`);
 
             } catch (error) {
-                alert("Error al importar el perfil: " + error.message);
+                alert("Failed to import profile: " + error.message);
             }
         };
         reader.readAsText(file);
     }
 
-    // --- Gestión de Perfiles ---
+    // --- Profile Management ---
 
     /**
-     * Carga perfiles desde localStorage, puebla el desplegable y establece el perfil activo.
+     * Loads profiles from localStorage, populates the dropdown, and sets the active profile.
      */
     function loadProfiles() {
         let profiles = [];
@@ -139,12 +139,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 profiles = JSON.parse(storedProfiles);
             }
         } catch (e) {
-            console.error("Error analizando perfiles desde localStorage", e);
+            console.error("Error parsing profiles from localStorage", e);
             profiles = [];
         }
 
         if (profiles.length === 0) {
-            profiles = ['Perfil Predeterminado'];
+            profiles = ['Default Profile'];
             localStorage.setItem('kt_profiles', JSON.stringify(profiles));
         }
 
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Crea un nuevo perfil de usuario y lo guarda en localStorage.
+     * Creates a new user profile and saves it to localStorage.
      */
     function createProfile() {
         const newProfile = newProfileNameInput.value.trim();
@@ -181,14 +181,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 profileSelect.value = newProfile;
                 switchProfile(newProfile);
             } else {
-                alert('El nombre del perfil ya existe.');
+                alert('Profile name already exists.');
             }
         }
     }
 
     /**
-     * Maneja el cambio de perfil activo y actualiza la UI en consecuencia.
-     * @param {string} newProfile - El nombre del perfil al cual cambiar.
+     * Handles switching the active profile and updating the UI accordingly.
+     * @param {string} newProfile - The name of the profile to switch to.
      */
     function switchProfile(newProfile) {
         currentProfile = newProfile;
@@ -197,35 +197,28 @@ document.addEventListener('DOMContentLoaded', () => {
         loadCurrentGameForProfile();
     }
 
-    // --- Gestión del Historial de Juegos ---
+    // --- Game History Management ---
 
     /**
-     * Renderiza la lista de juegos completados para el perfil actual desde localStorage.
+     * Renders the list of completed games for the current profile from localStorage.
      */
     function renderGames() {
         if (!currentProfile) return;
         gamesTableBody.innerHTML = '';
         const games = JSON.parse(localStorage.getItem(`kt_games_${currentProfile}`)) || [];
         if (games.length === 0) {
-            gamesTableBody.innerHTML = '<tr><td colspan="5" class="text-center">No hay partidas registradas para este perfil.</td></tr>';
+            gamesTableBody.innerHTML = '<tr><td colspan="5" class="text-center">No games recorded for this profile.</td></tr>';
             return;
         }
         games.sort((a, b) => b.timestamp - a.timestamp).forEach(game => {
             const result = game.playerScore > game.opponentScore ? 'won' : (game.playerScore < game.opponentScore ? 'lost' : 'draw');
             const resultBg = result === 'won' ? 'text-bg-success' : (result === 'lost' ? 'text-bg-danger' : 'text-bg-secondary');
-            
-            // Traducción del resultado para la visualización (badges)
-            let resultText = '';
-            if (result === 'won') resultText = 'Victoria';
-            else if (result === 'lost') resultText = 'Derrota';
-            else resultText = 'Empate';
-
             const row = document.createElement('tr');
             row.innerHTML = `
             <td class="text-center align-middle">${new Date(game.timestamp).toLocaleDateString()}</td>
             <td class="text-center align-middle"><b>${game.playerScore}</b> - ${game.opponentScore}</td>
             <td class="text-center d-none d-md-table-cell align-middle">${game.opponentName}</td>
-            <td class="text-center align-middle"><span class="badge rounded-pill ${resultBg}">${resultText}</span></td>
+            <td class="text-center align-middle"><span class="badge rounded-pill ${resultBg}">${result.charAt(0).toUpperCase() + result.slice(1)}</span></td>
             <td class="text-center align-middle"><button class="btn btn-sm btn-danger delete-game-btn" data-game-id="${game.id}"><i class="bi bi-trash"></i></button></td>
             `;
             gamesTableBody.appendChild(row);
@@ -233,11 +226,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Elimina un juego específico del historial.
-     * @param {string} gameId - El ID único del juego a eliminar.
+     * Deletes a specific game from the history.
+     * @param {string} gameId - The unique ID of the game to delete.
      */
     function deleteGame(gameId) {
-        if (confirm('¿Estás seguro de que deseas eliminar el historial de esta partida?')) {
+        if (confirm('Are you sure you want to delete this game history?')) {
             let games = JSON.parse(localStorage.getItem(`kt_games_${currentProfile}`)) || [];
             games = games.filter(game => game.id !== gameId);
             localStorage.setItem(`kt_games_${currentProfile}`, JSON.stringify(games));
@@ -245,10 +238,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Gestión de Partida en Curso (GIP) ---
+    // --- Game In Progress (GIP) Management ---
 
     /**
-     * Crea un nuevo objeto de juego, lo guarda e inicializa la vista del marcador.
+     * Creates a new game object, saves it, and initializes the scoreboard view.
      */
     function startGame() {
         const playerFaction = playerFactionSelect.value;
@@ -256,24 +249,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const opponentName = document.getElementById('opponent-name').value.trim();
 
         if (playerFaction === 'blank' || opponentFaction === 'blank' || !opponentName) {
-            alert('Por favor, selecciona facciones para ambos jugadores e ingresa el nombre del oponente.');
+            alert('Please select factions for both players and enter an opponent name.');
             return;
         }
 
         currentGame = {
             id: `game_${new Date().getTime()}`,
-            timestamp: new Date().getTime(),
-            playerFaction: playerFaction,
-            opponentFaction: opponentFaction,
-            opponentName: opponentName,
-            playerName: currentProfile,
-            state: {
-                player1_cp: 0,
-                player2_cp: 0,
-                current_tp: 1,
-                scores: {}, // Almacenar IDs de checkboxes y conteos de bajas
-                tacops: { p1: ['', '', ''], p2: ['', '', ''] }
-            }
+                          timestamp: new Date().getTime(),
+                          playerFaction: playerFaction,
+                          opponentFaction: opponentFaction,
+                          opponentName: opponentName,
+                          playerName: currentProfile,
+                          state: {
+                              player1_cp: 0,
+                          player2_cp: 0,
+                          current_tp: 1,
+                          scores: {}, // Store checkbox IDs and kill counts
+                          tacops: { p1: ['', '', ''], p2: ['', '', ''] }
+                          }
         };
 
         localStorage.setItem(`kt_current_game_${currentProfile}`, JSON.stringify(currentGame));
@@ -282,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Busca en localStorage una partida en curso para el perfil actual y la carga.
+     * Checks localStorage for a game in progress for the current profile and loads it.
      */
     function loadCurrentGameForProfile() {
         const savedGame = localStorage.getItem(`kt_current_game_${currentProfile}`);
@@ -291,12 +284,12 @@ document.addEventListener('DOMContentLoaded', () => {
             initializeGIPView();
         } else {
             currentGame = null;
-            gipNavItem.style.display = 'none'; // Ocultar la pestaña si no hay partida en curso
+            gipNavItem.style.display = 'none'; // Hide the tab if no game is in progress
         }
     }
 
     /**
-     * Configura la pestaña "Partida en Curso" con datos del objeto `currentGame`.
+     * Sets up the "Game in Progress" tab with data from the `currentGame` object.
      */
     function initializeGIPView() {
         if (!currentGame) return;
@@ -304,23 +297,23 @@ document.addEventListener('DOMContentLoaded', () => {
         gipNavItem.style.display = 'block';
         gipTab.show();
 
-        // Actualizar visualización de información del jugador
+        // Update player info display
         document.getElementById('gip-player1-name').textContent = currentGame.playerName;
         document.getElementById('gip-player1-faction').textContent = currentGame.playerFaction.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
         document.getElementById('gip-player2-name').textContent = currentGame.opponentName;
         document.getElementById('gip-player2-faction').textContent = currentGame.opponentFaction.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
-        // Poblar desplegables de TacOp basados en arquetipos de facción
+        // Populate TacOp dropdowns based on faction archetypes
         populateTacOpDropdowns(1, currentGame.playerFaction, currentGame.state.tacops.p1);
         populateTacOpDropdowns(2, currentGame.opponentFaction, currentGame.state.tacops.p2);
 
-        // Restaurar estado del juego (PM, Punto de Inflexión, puntuaciones)
+        // Restore game state (CP, TP, scores)
         const state = currentGame.state;
         document.getElementById('gip-player1-cp').value = state.player1_cp || 0;
         document.getElementById('gip-player2-cp').value = state.player2_cp || 0;
         document.querySelector(`.btntp[data-tp="${state.current_tp || 1}"]`).checked = true;
 
-        // Reiniciar y restaurar inputs de puntuación
+        // Reset and restore scoring inputs
         document.querySelectorAll('.gip-score-check, .gip-score-input').forEach(el => {
             if (el.type === 'checkbox') el.checked = false;
             else el.value = 0;
@@ -334,44 +327,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        recalculateScores(); // Calcular y mostrar puntuaciones iniciales
+        recalculateScores(); // Calculate and display initial scores
     }
 
     /**
-     * Llena los desplegables de selección de Tac Op basados en los arquetipos disponibles de la facción.
-     * @param {number} playerNum - El número de jugador (1 o 2).
-     * @param {string} factionId - La clave identificadora de la facción (p. ej., 'intercessors').
-     * @param {Array<string>} selections - Las Tac Ops seleccionadas actualmente para este jugador.
+     * Fills the Tac Op selection dropdowns based on the faction's available archetypes.
+     * @param {number} playerNum - The player number (1 or 2).
+     * @param {string} factionId - The faction identifier key (e.g., 'intercessors').
+     * @param {Array<string>} selections - The currently selected Tac Ops for this player.
      */
     function populateTacOpDropdowns(playerNum, factionId, selections) {
         const factionTacopsInfo = tacopsData[factionId];
         const archetypes = factionTacopsInfo ? factionTacopsInfo.archetypes : [];
 
-        // Mapa de traducción para arquetipos
-        const archetypeTranslations = {
-            'security': 'Seguridad',
-            'seek-destroy': 'Búsqueda y Destrucción',
-            'seek-and-destroy': 'Búsqueda y Destrucción',
-            'recon': 'Reconocimiento',
-            'infiltration': 'Infiltración'
-        };
-
         for (let i = 1; i <= 3; i++) {
             const selectEl = document.getElementById(`gip-player${playerNum}-tacop${i}`);
-            selectEl.innerHTML = `<option value="">Seleccionar Tac Op ${i}</option>`; // Reiniciar desplegable
+            selectEl.innerHTML = `<option value="">Select Tac Op ${i}</option>`; // Reset dropdown
 
             if (tacopsData.generic && archetypes.length > 0) {
                 archetypes.forEach(archKey => {
-                    // Traducir nombre del arquetipo
-                    const archName = archetypeTranslations[archKey] || archKey.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                    
+                    const archName = archKey.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
                     const optgroup = document.createElement('optgroup');
                     optgroup.label = archName;
 
                     const opsForArch = tacopsData.generic[archKey] || [];
                     opsForArch.forEach(opName => {
-                        // Aquí se podrían traducir nombres de TacOps genéricas si se tuvieran mapeados en JS, 
-                        // pero por ahora vienen del JSON. Se asume que el JSON podría contener los nombres originales.
                         const option = document.createElement('option');
                         option.value = opName;
                         option.textContent = opName;
@@ -387,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Reúne todos los datos actuales de la vista GIP y los guarda en localStorage.
+     * Gathers all current data from the GIP view and saves it to localStorage.
      */
     function saveGIPState() {
         if (!currentGame) return;
@@ -398,16 +378,16 @@ document.addEventListener('DOMContentLoaded', () => {
         state.current_tp = document.querySelector('.btntp:checked').dataset.tp;
         state.tacops.p1 = [
             document.getElementById('gip-player1-tacop1').value,
-            document.getElementById('gip-player1-tacop2').value,
-            document.getElementById('gip-player1-tacop3').value
+                          document.getElementById('gip-player1-tacop2').value,
+                          document.getElementById('gip-player1-tacop3').value
         ];
         state.tacops.p2 = [
             document.getElementById('gip-player2-tacop1').value,
-            document.getElementById('gip-player2-tacop2').value,
-            document.getElementById('gip-player2-tacop3').value
+                          document.getElementById('gip-player2-tacop2').value,
+                          document.getElementById('gip-player2-tacop3').value
         ];
 
-        // Guardar todos los inputs de puntuación
+        // Save all scoring inputs
         state.scores = {};
         document.querySelectorAll('.gip-score-check, .gip-score-input').forEach(el => {
             if (el.type === 'checkbox' && el.checked) {
@@ -421,8 +401,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Calcula los PV totales para cada jugador basándose en casillas marcadas y valores de entrada,
-     * actualiza la UI y guarda el estado.
+     * Calculates total VP for each player based on checked boxes and input values,
+     * updates the UI, and saves the state.
      */
     function recalculateScores() {
         let p1_vp = 0;
@@ -434,27 +414,27 @@ document.addEventListener('DOMContentLoaded', () => {
             else p2_vp += points;
         });
 
-        document.querySelectorAll('.gip-score-input').forEach(input => {
-            const points = parseInt(input.value) || 0; // Asumiendo 1 baja = 1 punto
-            if (input.dataset.player === '1') p1_vp += points;
-            else p2_vp += points;
-        });
+            document.querySelectorAll('.gip-score-input').forEach(input => {
+                const points = parseInt(input.value) || 0; // Assuming 1 kill = 1 point
+                if (input.dataset.player === '1') p1_vp += points;
+                else p2_vp += points;
+            });
 
-        document.getElementById('gip-player1-vp').value = p1_vp;
-        document.getElementById('gip-player2-vp').value = p2_vp;
-        gipScoreDisplay1.textContent = p1_vp;
-        gipScoreDisplay2.textContent = p2_vp;
+                document.getElementById('gip-player1-vp').value = p1_vp;
+                document.getElementById('gip-player2-vp').value = p2_vp;
+                gipScoreDisplay1.textContent = p1_vp;
+                gipScoreDisplay2.textContent = p2_vp;
 
-        saveGIPState();
+                saveGIPState();
     }
 
     /**
-     * Finaliza el juego actual, lo guarda en el historial y limpia el estado GIP.
+     * Finalizes the current game, saves it to history, and cleans up the GIP state.
      */
     function finishGame() {
         if (!currentGame) return;
 
-        // Calcular puntuaciones finales incluyendo bonificaciones primarias
+        // Calculate final scores including primary bonuses
         let player1Final = parseInt(document.getElementById('player1-total-score').textContent) || 0;
         let player2Final = parseInt(document.getElementById('player2-total-score').textContent) || 0;
         
@@ -505,23 +485,23 @@ document.addEventListener('DOMContentLoaded', () => {
         games.push(finalGame);
         localStorage.setItem(`kt_games_${currentProfile}`, JSON.stringify(games));
 
-        // Limpiar GIP
+        // Clean up GIP
         localStorage.removeItem(`kt_current_game_${currentProfile}`);
         currentGame = null;
         gipNavItem.style.display = 'none';
         gamesTab.show();
         renderGames();
 
-        const result = player1Final > player2Final ? '¡Jugador 1 Gana!' : 
-                      player2Final > player1Final ? '¡Jugador 2 Gana!' : 
-                      '¡Empate!';
+        const result = player1Final > player2Final ? 'Player 1 Wins!' : 
+                      player2Final > player1Final ? 'Player 2 Wins!' : 
+                      'Draw!';
 
-        alert(`¡Partida terminada y guardada! Puntuación final: ${player1Final} - ${player2Final}\n\n${result}`);
+        alert(`Game finished and saved! Final score: ${player1Final} - ${player2Final}\n\n${result}`);
     }
 
     const createGameBtn = document.getElementById('createGameBtn');
 
-    // --- Listeners de Eventos ---
+    // --- Event Listeners ---
     profileSelect?.addEventListener('change', () => switchProfile(profileSelect.value));
     createProfileBtn?.addEventListener('click', createProfile);
     newProfileNameInput?.addEventListener('keypress', e => { if(e.key === 'Enter') createProfile(); });
@@ -531,17 +511,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createGameBtn?.addEventListener('click', () => {
         if (currentGame) {
-            if (confirm("Hay una partida en curso. ¿Quieres terminarla?")) {
-                if (confirm("¿Quieres guardar la partida antes de terminar?")) {
-                    finishGame(); // Esto guardará y limpiará
-                    createGameModal.show(); // Mostrar el modal para iniciar un nuevo juego
+            if (confirm("A game is in progress. Do you want to end it?")) {
+                if (confirm("Do you want to save the game before ending?")) {
+                    finishGame(); // This will save and clean up
+                    createGameModal.show(); // Show the modal to start a new game
                 } else {
-                    // Descartar juego actual
+                    // Discard current game
                     localStorage.removeItem(`kt_current_game_${currentProfile}`);
                     currentGame = null;
                     gipNavItem.style.display = 'none';
                     gamesTab.show();
-                    createGameModal.show(); // Mostrar el modal para iniciar un nuevo juego
+                    createGameModal.show(); // Show the modal to start a new game
                 }
             }
         } else {
@@ -558,10 +538,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- NOTA DE CAMBIO HTML IMPORTANTE ---
-    // Para que esto funcione perfectamente, añade la clase `gip-score-input` a tus inputs de "Bajas" en index.html, así:
+    // --- IMPORTANT HTML CHANGE NOTE ---
+    // For this to work perfectly, add the class `gip-score-input` to your "Kills" inputs in index.html, like this:
     // <input type="number" class="form-control form-control-sm gip-score-input" ... >
-    // Y elimina el atributo `onchange="..."`, ya que este script ahora lo maneja.
+    // And remove the `onchange="..."` attribute, as this script now handles it.
 
     gipPane?.addEventListener('change', (e) => {
         const target = e.target;
@@ -586,11 +566,10 @@ document.addEventListener('DOMContentLoaded', () => {
     exportProfileBtn?.addEventListener('click', exportProfile);
     importProfileInput?.addEventListener('change', importProfile);
 
-    // --- Inicialización ---
+    // --- Initialisation ---
     loadProfiles();
 });
-
-// Sistema de Puntuación Mejorado para Partida en Curso
+// Enhanced Game in Progress Scoring System
 let gameState = {
     currentTP: 1,
     player1: { cp: 3, killTarget: 0, killCount: 0, primary: null, tacop: null },
@@ -603,9 +582,9 @@ let gameState = {
 
 let currentModalPlayer = 1;
 
-// Inicializar el sistema de puntuación mejorado cuando el DOM esté cargado
+// Initialize the enhanced scoring system when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Comprobar si estamos en la pestaña de partida en curso
+    // Check if we're on the game in progress tab
     if (document.getElementById('game-in-progress-pane')) {
         initializeEnhancedScoring();
     }
@@ -622,7 +601,7 @@ function initializeEnhancedScoring() {
 }
 
 function setupSkullClickHandlers() {
-    // Manejar calaveras de Crit y Tac
+    // Handle Crit and Tac skulls
     document.querySelectorAll('.skull-container .skull-grid').forEach(skull => {
         skull.addEventListener('click', function() {
             const container = this.closest('.skull-container');
@@ -635,7 +614,7 @@ function setupSkullClickHandlers() {
         });
     });
 
-    // Las calaveras de Kill se actualizan automáticamente basadas en el conteo de bajas
+    // Kill skulls are updated automatically based on kill count
 }
 
 function setupTurningPointHandlers() {
@@ -650,15 +629,15 @@ function setupTurningPointHandlers() {
 }
 
 function setupPrimaryModalHandlers() {
-    // Mostrar/ocultar descripciones basadas en la selección
+    // Show/hide descriptions based on selection
     document.querySelectorAll('input[name="primaryRadio"]').forEach(radio => {
         radio.addEventListener('change', function() {
-            // Ocultar todas las descripciones
+            // Hide all descriptions
             document.querySelectorAll('[id^="text_primary"]').forEach(div => {
                 div.classList.add('d-none');
             });
             
-            // Mostrar descripción seleccionada
+            // Show selected description
             if (this.checked) {
                 const targetId = 'text_primary' + this.value.replace(' OP', '');
                 const targetDiv = document.getElementById(targetId);
@@ -676,28 +655,28 @@ function handleSkullClick(player, category, tp, skullNum) {
     const skulls = document.querySelectorAll(`.skull-container[data-player="${player}"][data-category="${category}"][data-tp="${tp}"] .skull-grid`);
     
     if (skullNum === 1) {
-        // Primera calavera clickeada
+        // First skull clicked
         if (currentState === 0) {
-            // Encender primera calavera
+            // Light up first skull
             gameState.scores[`player${player}`][category][key] = 1;
             updateSkullDisplay(skulls, 1, player);
         } else {
-            // Apagar todas las calaveras
+            // Turn off all skulls
             gameState.scores[`player${player}`][category][key] = 0;
             updateSkullDisplay(skulls, 0, player);
         }
     } else if (skullNum === 2) {
-        // Segunda calavera clickeada
+        // Second skull clicked
         if (currentState === 0) {
-            // Encender primera calavera
+            // Light up first skull
             gameState.scores[`player${player}`][category][key] = 1;
             updateSkullDisplay(skulls, 1, player);
         } else if (currentState === 1) {
-            // Encender ambas calaveras
+            // Light up both skulls
             gameState.scores[`player${player}`][category][key] = 2;
             updateSkullDisplay(skulls, 2, player);
         } else {
-            // Apagar todas las calaveras
+            // Turn off all skulls
             gameState.scores[`player${player}`][category][key] = 0;
             updateSkullDisplay(skulls, 0, player);
         }
@@ -716,7 +695,7 @@ function updateSkullDisplay(skulls, litCount, player) {
 }
 
 function updateTurningPointDisplay() {
-    // Actualizar resaltado de columna TP
+    // Update TP column highlighting
     document.querySelectorAll('.tp-column').forEach(col => {
         col.classList.remove('current-tp');
     });
@@ -724,7 +703,7 @@ function updateTurningPointDisplay() {
         col.classList.add('current-tp');
     });
     
-    // Actualizar etiquetas de botones de radio
+    // Update radio button labels
     document.querySelectorAll('label[for^="tp"]').forEach(label => {
         label.classList.remove('current-tp');
     });
@@ -744,7 +723,7 @@ function updateKillTarget(player) {
     const counter = document.getElementById(`kill-counter-p${player}`);
     if (target > 0) {
         counter.style.display = 'flex';
-        // Reiniciar conteo de bajas al cambiar objetivo
+        // Reset kill count when changing target
         gameState[`player${player}`].killCount = 0;
         document.getElementById(`kill-count-p${player}`).textContent = '0';
         updateKillSkulls(player);
@@ -772,10 +751,10 @@ function updateKillSkulls(player) {
     
     if (killTarget === 0) return;
     
-    // Calcular cuántas calaveras deberían estar encendidas basándose en la progresión de bajas
+    // Calculate how many skulls should be lit based on kill progression
     let skullsToLight = calculateKillSkulls(killTarget, killCount);
     
-    // Actualizar las 5 calaveras principales de kill
+    // Update the 5 main kill skulls
     const mainSkulls = document.querySelectorAll(`.kill-skulls-container[data-player="${player}"] .kill-skull`);
     mainSkulls.forEach((skull, index) => {
         skull.classList.remove('lit-p1', 'lit-p2');
@@ -805,7 +784,7 @@ function updateSixthKillSkull() {
 function calculateKillSkulls(target, kills) {
     if (kills === 0) return 0;
     
-    // Calcular bajas necesarias por calavera basándose en el objetivo
+    // Calculate kills needed per skull based on target
     const killsPerSkull = getKillsPerSkull(target);
     
     let skullsLit = 0;
@@ -825,18 +804,18 @@ function calculateKillSkulls(target, kills) {
 }
 
 function getKillsPerSkull(target) {
-    // Devuelve array de bajas necesarias para cada posición de calavera
+    // Returns array of kills needed for each skull position
     switch(target) {
-        case 5: return [1, 1, 1, 1, 1]; // Cada baja = 1 calavera
-        case 6: return [1, 1, 2, 1, 1]; // 3.ª calavera necesita 2 bajas
-        case 7: return [1, 2, 1, 2, 1]; // 2.ª y 4.ª necesitan 2 bajas
-        case 8: return [2, 1, 2, 1, 2]; // 1.ª, 3.ª, 5.ª necesitan 2 bajas
-        case 9: return [2, 2, 1, 2, 2]; // Todas excepto 3.ª necesitan 2 bajas
-        case 10: return [2, 2, 2, 2, 2]; // Todas necesitan 2 bajas
-        case 11: return [2, 2, 3, 2, 2]; // 3.ª necesita 3, otras necesitan 2
-        case 12: return [2, 3, 2, 3, 2]; // 2.ª y 4.ª necesitan 3, otras necesitan 2
-        case 13: return [3, 2, 3, 2, 3]; // 1.ª, 3.ª, 5.ª necesitan 3, otras necesitan 2
-        case 14: return [3, 3, 2, 3, 3]; // Todas excepto 3.ª necesitan 3
+        case 5: return [1, 1, 1, 1, 1]; // Each kill = 1 skull
+        case 6: return [1, 1, 2, 1, 1]; // 3rd skull needs 2 kills
+        case 7: return [1, 2, 1, 2, 1]; // 2nd and 4th need 2 kills
+        case 8: return [2, 1, 2, 1, 2]; // 1st, 3rd, 5th need 2 kills
+        case 9: return [2, 2, 1, 2, 2]; // All except 3rd need 2 kills
+        case 10: return [2, 2, 2, 2, 2]; // All need 2 kills
+        case 11: return [2, 2, 3, 2, 2]; // 3rd needs 3, others need 2
+        case 12: return [2, 3, 2, 3, 2]; // 2nd and 4th need 3, others need 2
+        case 13: return [3, 2, 3, 2, 3]; // 1st, 3rd, 5th need 3, others need 2
+        case 14: return [3, 3, 2, 3, 3]; // All except 3rd need 3
         default: return [1, 1, 1, 1, 1];
     }
 }
@@ -845,7 +824,7 @@ function calculateTotalScores() {
     let player1Total = 0;
     let player2Total = 0;
     
-    // Calcular puntuaciones Crit y Tac para cada jugador
+    // Calculate Crit and Tac scores for each player
     ['crit', 'tac'].forEach(category => {
         [2, 3, 4].forEach(tp => {
             const key = `${category}_${tp}`;
@@ -854,11 +833,11 @@ function calculateTotalScores() {
         });
     });
     
-    // Añadir puntuaciones de bajas
+    // Add kill scores
     player1Total += calculateKillSkulls(gameState.player1.killTarget, gameState.player1.killCount);
     player2Total += calculateKillSkulls(gameState.player2.killTarget, gameState.player2.killCount);
     
-    // Actualizar visualizaciones
+    // Update displays
     const p1ScoreEl = document.getElementById('player1-total-score');
     const p2ScoreEl = document.getElementById('player2-total-score');
     if (p1ScoreEl) p1ScoreEl.textContent = player1Total;
@@ -872,7 +851,7 @@ function openPrimaryModal(player) {
     
     const modal = new bootstrap.Modal(modalEl);
     
-    // Limpiar selecciones previas
+    // Clear previous selections
     document.querySelectorAll('input[name="primaryRadio"]').forEach(radio => {
         radio.checked = false;
     });
@@ -880,7 +859,7 @@ function openPrimaryModal(player) {
         div.classList.add('d-none');
     });
     
-    // Mostrar selección actual si hay alguna
+    // Show current selection if any
     const currentPrimary = gameState[`player${player}`].primary;
     if (currentPrimary) {
         const radio = document.querySelector(`input[value="${currentPrimary}"]`);
@@ -898,7 +877,7 @@ function savePrimary() {
     if (selectedRadio) {
         gameState[`player${currentModalPlayer}`].primary = selectedRadio.value;
         
-        // Actualizar texto del botón
+        // Update button text
         const button = document.getElementById(`primary-p${currentModalPlayer}`);
         if (button) {
             button.innerHTML = `<i class="bi bi-shield-check-fill"></i> ${selectedRadio.value}`;
@@ -906,7 +885,7 @@ function savePrimary() {
             button.style.color = 'white';
         }
         
-        // Cerrar modal
+        // Close modal
         const modalEl = document.getElementById('primaryModal');
         if (modalEl) {
             const modal = bootstrap.Modal.getInstance(modalEl);
@@ -915,11 +894,12 @@ function savePrimary() {
     }
 }
 
-// Manejar selección de Tac Op (solo se puede seleccionar una)
+
+
+// Handle Tac Op selection (only one can be selected)
 document.addEventListener('change', function(e) {
     if (e.target && e.target.matches('.tacop-select')) {
         const player = e.target.id.includes('p1') ? 1 : 2;
         gameState[`player${player}`].tacop = e.target.value;
     }
 });
-

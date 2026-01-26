@@ -4104,7 +4104,7 @@
             "abilities": [
                 {
                     "name": "Veterano tempestus",
-                    "description": "Una vez por batalla, puedes usar o bien un ardid de tiroteo por 0PM si este es el agente TEMPESTUS AQUILÓN especificado, o bien el ardid de tiroteo Repetición de mando por 0PM si este es el agente por el que se han tirado los dados de ataque o defensa."
+                    "description": "Una vez por batalla, puedes usar o bien un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">TEMPESTUS AQUILÓN</span> especificado, o bien el ardid de tiroteo Repetición de mando por 0PM si este es el agente por el que se han tirado los dados de ataque o defensa."
                 }
             ],
             "uniqueActions": [
@@ -4112,12 +4112,12 @@
                     "name": "Mando",
                     "cost": "1 LPA",
                     "description": [
-                        "APOYO. Elige un agente TEMPESTUS AQUILON amigo distinto (salvo SERVOCENTINELA) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                        "<b>APOYO</b>. Elige un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo distinto (salvo <b>SERVOCENTINELA</b>) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, LÍDER, TEMPESTOR",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, LÍDER, TEMPESTOR",
             "peana": "28"
         },
         {
@@ -4168,7 +4168,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, GRANADERO",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, GRANADERO",
             "peana": "28"
         },
         {
@@ -4198,7 +4198,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "3/4",
-                        "RA": "Alcance 8\", Salva"
+                        "RA": "Alcance 8\", Salva<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -4214,16 +4214,16 @@
             ],
             "abilities": [
                 {
-                    "name": "Salva",
+                    "name": "<span class=\"faction\">*</span>Salva",
                     "description": "Elige hasta dos blancos válidos diferentes que no estén en la zona de control de agentes amigos. Dispara con esta arma contra ambos, en el orden que elijas (tira cada secuencia por separado)."
                 },
                 {
                     "name": "Tirotear",
-                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados, este agente puede realizar una acción libre de Disparar (cambiando su orden a trabarse), pero solo contra ese blanco con sus pistolas (concentrado) y tirando tantos dados como fallos del oponente más 1 (máximo 4)."
+                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados (incluyendo a este, si procede), este agente puede realizar una acción libre de Disparar (para ello, cambia su orden a trabarse), pero solo puede tomar como blanco a ese agente enemigo con sus pistolas láser potenciadas (concentrado), y solo puedes tirar tantos dados de ataque como los dados de ataque descartados del oponente más 1 (hasta un máximo de 4)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, PISTOLERO",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, PISTOLERO",
             "peana": "28"
         },
         {
@@ -4252,8 +4252,8 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "Alcance 8\", Penetración 1"
+                        "Dñ": "4/6",
+                        "RA": "Penetración 1"
                     }
                 },
                 {
@@ -4262,8 +4262,8 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "5/5",
-                        "RA": "Alcance 8\", Letal 5+, Penetración 1, Sobrecalentamiento"
+                        "Dñ": "5/6",
+                        "RA": "Letal 5+, Penetración 1, Sobrecalentamiento"
                     }
                 },
                 {
@@ -4279,7 +4279,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, TIRADOR",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, TIRADOR",
             "peana": "28"
         },
         {
@@ -4299,7 +4299,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 3, Pesada, Silenciosa, Posición oculta"
+                        "RA": "Devastadora 3, Pesada, Silenciosa, Posición oculta<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -4308,7 +4308,7 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "3/3",
+                        "Dñ": "3/4",
                         "RA": "-"
                     }
                 },
@@ -4339,12 +4339,12 @@
                     "description": "Siempre que este agente esté en terreno Aventajado y dispare contra un agente que tenga una orden de trabarse y se encuentre al menos 2\" por debajo de él, todos los perfiles de su rifle láser telescópico potenciado tienen la regla de arma Severa."
                 },
                 {
-                    "name": "Posición oculta",
-                    "description": "Este agente solo puede usar esta arma la primera vez que realiza una acción de Disparar durante la batalla."
+                    "name": "<span class=\"faction\">*</span>Posición oculta",
+                    "description": "Este agente solo puede usar esta arma la primera vez que realiza una acción de <b>Disparar</b> durante la batalla."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, OJO PRECISO",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, OJO PRECISO",
             "peana": "28"
         },
         {
@@ -4385,11 +4385,11 @@
                 },
                 {
                     "name": "Enérgico",
-                    "description": "Siempre que este agente realice la acción de Combatir o Disparar, puede realizar inmediatamente después una acción libre de Correr. Puede hacerlo incluso si ha cargado, pero solo usando la distancia restante (máximo 3\")."
+                    "description": "Siempre que este agente realice la acción de Combatir o Disparar, puede realizar inmediatamente después una acción libre de Correr. Puede hacerlo incluso si ha realizado una acción de Cargar durante esta activación, pero solo puede usar la distancia restante que le quedase de esa acción de Cargar (hasta un máximo de 3\")."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, PRECURSOR",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, PRECURSOR",
             "peana": "28"
         },
         {
@@ -4464,7 +4464,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, SERVOCENTINELA",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span> , IMPERIUM, SERVOCENTINELA",
             "peana": "28"
         },
         {
@@ -4501,7 +4501,7 @@
             "abilities": [
                 {
                     "name": "Inserción rápida",
-                    "description": "GAMBITO ESTRATÉGICO en la primera fase de estrategia. Cada agente SOLDADO TEMPESTUS AQUILON amigo completamente dentro de tu zona de descenso puede realizar inmediatamente una acción libre de Reposicionarse, pero debe terminar dicha acción completamente a 3\" o menos de tu zona de descenso."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> en la primera fase de estrategia. Cada agente <b>SOLDADO</b> <span class=\"faction\">TEMPESTUS AQUILON</span> amigo completamente dentro de tu zona de descenso puede realizar inmediatamente una acción libre de <b>Reposicionarse</b>, pero debe terminar dicha acción completamente a 3\" o menos de tu zona de descenso."
                 },
                 {
                     "name": "Aterrizaje raudo",
@@ -4509,7 +4509,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "TEMPESTUS AQUILONS, IMPERIUM, SOLDADO",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, SOLDADO",
             "peana": "28"
         }
     ],

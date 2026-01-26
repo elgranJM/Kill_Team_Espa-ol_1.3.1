@@ -19742,7 +19742,7 @@
                 },
                 {
                     "name": "Un paso por delante",
-                    "description": "Una vez por batalla, después de que un agente enemigo realice una acción, si este agente está apostado puedes usar esta regla. Si lo haces, tira 1D6: Si el resultado es mayor que el atributo LPA del agente enemigo, puedes interrumpir y realizar inmediatamente una acción libre de <b>Disparar</b> o de <b>Combatir</b> con este agente, pero no puedes tomar a otros agentes enemigos como blancos ni<b>Combatir</b> contra ellos durante dicha acción (aunque se seguirán pudiendo elegir como blancos secundarios de la regla de arma Área). Tras realizar la acción, resta 1 al atributo LPA de este agente hasta el final de su siguiente activación."
+                    "description": "Una vez por batalla, después de que un agente enemigo realice una acción, si este agente está apostado puedes usar esta regla. Si lo haces, tira 1D6: Si el resultado es mayor que el atributo LPA del agente enemigo, puedes interrumpir y realizar inmediatamente una acción libre de <b>Disparar</b> o de <b>Combatir</b> con este agente, pero no puedes tomar a otros agentes enemigos como blancos ni <b>Combatir</b> contra ellos durante dicha acción (aunque se seguirán pudiendo elegir como blancos secundarios de la regla de arma Área). Tras realizar la acción, resta 1 al atributo LPA de este agente hasta el final de su siguiente activación."
                 }
             ],
             "uniqueActions": [],

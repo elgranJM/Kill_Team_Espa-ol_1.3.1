@@ -53,8 +53,8 @@
   {
     "id_equip": 9,
     "faction": "scouts",
-    "name": "Hoja de Combate",
-    "description": "Los operativos SCOUT SQUAD amigos tienen la siguiente arma cuerpo a cuerpo. Ten en cuenta que algunos operativos ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
+    "name": "Filopuñales",
+    "description": "Los operativos <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigos tienen la siguiente arma cuerpo a cuerpo. Ten en cuenta que algunos operativos ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
     "ATK": "3",
     "HIT": "3+",
     "DMG": "4/5"
@@ -63,19 +63,19 @@
     "id_equip": 10,
     "faction": "scouts",
     "name": "Capa de Camuflaje",
-    "description": "Siempre que un operativo esté disparando a un operativo SCOUT SQUAD amigo (excluyendo SNIPER), si puedes retener alguna salvación por cobertura, puedes retener una salvación por cobertura adicional. Esto no es acumulativo con salvaciones por cobertura mejoradas por terreno Elevado."
+    "description": "Siempre que un agente dispare a un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo (salvo <b>FRANCOTIRADOR</b>), si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado."
   },
   {
     "id_equip": 11,
     "faction": "scouts",
-    "name": "Oculares de Puntería",
-    "description": "Hasta dos veces por Punto de Inflexión, cuando un operativo SCOUT SQUAD amigo esté realizando la acción de Disparar y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, sus armas a distancia tienen las reglas de arma Letal 5+ y Saturar."
+    "name": "Oculares Trazablancos",
+    "description": "Hasta dos veces por Punto de Inflexión, cuando un operativo <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté realizando la acción de <b>Disparar</b> y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, sus armas a distancia tienen las reglas de arma Letal 5+ y Saturación."
   },
   {
     "id_equip": 12,
     "faction": "scouts",
     "name": "Bípode de Arma Pesada",
-    "description": "Siempre que un operativo SCOUT SQUAD HEAVY GUNNER amigo esté disparando con un bólter pesado o lanzamisiles, si no se ha movido durante la activación, o si es una contracción, esa arma tiene la regla de arma Incesante; si el arma ya tiene esa regla, obtiene la regla de arma Implacable. Ten en cuenta que el operativo no tiene restringido moverse después de disparar."
+    "description": "Siempre que un operativo <b>TIRADOR PESADO</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté disparando con un bólter pesado o un lanzamisiles, si no se ha movido durante la activación, o si es una reacción, esa arma tiene la regla de arma Incesante; si el arma ya tiene esa regla, obtiene la regla de arma Implacable. Ten en cuenta que el operativo no tiene restringido moverse después de <b>Disparar</b>."
   },
   {
     "id_equip": 13,
@@ -163,7 +163,7 @@
     "id_equip": 24,
     "faction": "phobos",
     "name": "Munición Especial",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo PHOBOS STRIKE TEAM amigo esté realizando la acción de Disparar y selecciones una carabina bólter, carabina bólter de tirador o carabina bólter occulus, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, esa arma tiene la regla de arma Perforante 1."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo PHOBOS STRIKE TEAM amigo esté realizando la acción de <b>Disparar</b> y selecciones una carabina bólter, carabina bólter de tirador o carabina bólter occulus, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, esa arma tiene la regla de arma Perforante 1."
   },
   {
     "id_equip": 25,
@@ -208,7 +208,7 @@
     "id_equip": 31,
     "faction": "kasrkin",
     "name": "Mira de Largo Alcance",
-    "description": "Siempre que un operativo KASRKIN amigo esté disparando a un operativo a más de 6\" de él, las armas sobrecargadas (hot-shot) de ese operativo amigo tienen la regla de arma Saturar."
+    "description": "Siempre que un operativo KASRKIN amigo esté disparando a un operativo a más de 6\" de él, las armas sobrecargadas (hot-shot) de ese operativo amigo tienen la regla de arma Saturación."
   },
   {
     "id_equip": 32,
@@ -253,7 +253,7 @@
     "id_equip": 38,
     "faction": "imperial-navy-breachers",
     "name": "Postas",
-    "description": "Hasta tres veces por Punto de Inflexión, siempre que un operativo IMPERIAL NAVY BREACHER amigo esté realizando la acción de Disparar y selecciones una escopeta navis (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora el atributo de Impacto de esa arma en 1 y añade 1 a ambos atributos de Daño."
+    "description": "Hasta tres veces por Punto de Inflexión, siempre que un operativo IMPERIAL NAVY BREACHER amigo esté realizando la acción de <b>Disparar</b> y selecciones una escopeta navis (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora el atributo de Impacto de esa arma en 1 y añade 1 a ambos atributos de Daño."
   },
   {
     "id_equip": 39,
@@ -296,8 +296,8 @@
     "faction": "exaction-squad",
     "name": "Cartuchos de Edición Especial",
     "description": [
-      "Hasta dos veces por Punto de Inflexión, cuando un operativo EXACTION SQUAD amigo esté realizando la acción de Disparar y selecciones una escopeta de combate, escopeta verdugo, pistola escopeta con mira o pistola escopeta, puedes usar esta regla. Si lo haces, selecciona una de las siguientes reglas de arma para que esa arma la tenga hasta el final de esa acción:",
-      "   - Saturar.",
+      "Hasta dos veces por Punto de Inflexión, cuando un operativo EXACTION SQUAD amigo esté realizando la acción de <b>Disparar</b> y selecciones una escopeta de combate, escopeta verdugo, pistola escopeta con mira o pistola escopeta, puedes usar esta regla. Si lo haces, selecciona una de las siguientes reglas de arma para que esa arma la tenga hasta el final de esa acción:",
+      "   - Saturación.",
       "   - Perforante 1, pero solo si el objetivo tiene un atributo de Salvación de 3+ o mejor.",
       "   - Torrente 1\", pero no puedes seleccionar más de un objetivo secundario."
     ]
@@ -330,13 +330,13 @@
     "id_equip": 50,
     "faction": "elucidian-starstrider",
     "name": "Condensadores Sobrecargados",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un operativo ELUCIDIAN STARSTRIDER amigo esté realizando la acción de Disparar y selecciones una pistola láser o rifle láser, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, añade 1 a ambos atributos de Daño de esa arma y tiene las reglas de arma Caliente y Críticos Perforantes 1. Ten en cuenta que las pistolas láser reliquia están excluidas de esta regla."
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un operativo ELUCIDIAN STARSTRIDER amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola láser o rifle láser, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, añade 1 a ambos atributos de Daño de esa arma y tiene las reglas de arma Caliente y Críticos Perforantes 1. Ten en cuenta que las pistolas láser reliquia están excluidas de esta regla."
   },
   {
     "id_equip": 51,
     "faction": "elucidian-starstrider",
     "name": "Enlace de Coordenadas Mejorado",
-    "description": "Siempre que un operativo ELUCIDIAN STARSTRIDER amigo esté usando un RECURSO DE APOYO CORSARIO, si el objetivo está a 6\" o menos de un operativo ELUCIDIAN STARSTRIDER NAVIS amigo, el objetivo no puede estar Ofuscado y esa arma tiene la regla de arma Saturar."
+    "description": "Siempre que un operativo ELUCIDIAN STARSTRIDER amigo esté usando un RECURSO DE APOYO CORSARIO, si el objetivo está a 6\" o menos de un operativo ELUCIDIAN STARSTRIDER NAVIS amigo, el objetivo no puede estar Ofuscado y esa arma tiene la regla de arma Saturación."
   },
   {
     "id_equip": 52,
@@ -368,7 +368,7 @@
     "id_equip": 55,
     "faction": "deathwatch",
     "name": "RESERVA DE MUNICIÓN",
-    "description": "Una vez por batalla, puedes usar la regla de facción Munición Especial para hasta dos acciones de Disparar durante un Punto de Inflexión, pero debes seleccionar diferentes reglas de arma para ambos usos. Esto tiene prioridad sobre las reglas normales de Munición Especial."
+    "description": "Una vez por batalla, puedes usar la regla de facción Munición Especial para hasta dos acciones de <b>Disparar</b> durante un Punto de Inflexión, pero debes seleccionar diferentes reglas de arma para ambos usos. Esto tiene prioridad sobre las reglas normales de Munición Especial."
   },
   {
     "id_equip": 56,
@@ -433,7 +433,7 @@
     "id_equip": 73,
     "faction": "battleclade",
     "name": "Células de Reserva Neurocíclicas",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Un número de veces durante la batalla igual al resultado, siempre que TRANSFIERAS ENERGÍA, puedes usar esta regla. Si lo haces, no restes 1 al atributo de LPA del operativo, pero este no puede realizar acciones de Combatir o Disparar durante esa activación (esto tiene prioridad sobre las reglas normales de Red Noosférica)."
+    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Un número de veces durante la batalla igual al resultado, siempre que TRANSFIERAS ENERGÍA, puedes usar esta regla. Si lo haces, no restes 1 al atributo de LPA del operativo, pero este no puede realizar acciones de Combatir o <b>Disparar</b> durante esa activación (esto tiene prioridad sobre las reglas normales de Red Noosférica)."
   },
   {
     "id_equip": 74,
@@ -457,7 +457,7 @@
     "id_equip": 77,
     "faction": "intercessors",
     "name": "Auspex",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo <span class=\"faction\">ÁNGELES DE LA MUERTE</span> amigo realiza la acción de Disparar y estás seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de la activación/contraacción, los operativos enemigos a 8\" o menos de ese operativo amigo no pueden estar Ofuscados."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo <span class=\"faction\">ÁNGELES DE LA MUERTE</span> amigo realiza la acción de <b>Disparar</b> y estás seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de la activación/contraacción, los operativos enemigos a 8\" o menos de ese operativo amigo no pueden estar Ofuscados."
   },
   {
     "id_equip": 78,
@@ -554,7 +554,7 @@
     "faction": "legionary",
     "name": "Proyectiles Corruptos",
     "description": [
-      "Una vez por Punto de Inflexión, cuando un operativo LEGIONARY amigo esté realizando la acción de Disparar y selecciones una pistola bólter o bólter, puedes usar esta regla.",
+      "Una vez por Punto de Inflexión, cuando un operativo LEGIONARY amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola bólter o bólter, puedes usar esta regla.",
       "Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Desgarradora."
     ]
   },
@@ -564,7 +564,7 @@
     "name": "Talismanes del Caos",
     "description": [
       "Gambito Estratégico. Selecciona una clave de Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un operativo LEGIONARY amigo que tenga esa clave esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes infligir D3 de daño a ese operativo amigo para descartar uno de ellos y retener el otro como un éxito normal en su lugar.",
-      "Ten en cuenta que si es la acción de Disparar y ese daño incapacita a ese operativo amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos)."
+      "Ten en cuenta que si es la acción de <b>Disparar</b> y ese daño incapacita a ese operativo amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos)."
     ]
   },
   {
@@ -589,7 +589,7 @@
     "id_equip": 97,
     "faction": "goremongers",
     "name": "Cadenas de Muñeca",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo GOREMONGER amigo realice la acción de Disparar y estés seleccionando un arma a distancia, puedes usar esta regla. Si lo haces, hasta el final de esa acción, las siguientes armas cuerpo a cuerpo se tratan como armas a distancia con la regla de arma Alcance 2\": espada sierra, guja sierra, gran hacha sierra (ignora su regla de arma Brutal), desgarradores de pico."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo GOREMONGER amigo realice la acción de <b>Disparar</b> y estés seleccionando un arma a distancia, puedes usar esta regla. Si lo haces, hasta el final de esa acción, las siguientes armas cuerpo a cuerpo se tratan como armas a distancia con la regla de arma Alcance 2\": espada sierra, guja sierra, gran hacha sierra (ignora su regla de arma Brutal), desgarradores de pico."
   },
   {
     "id_equip": 98,
@@ -691,13 +691,13 @@
     "id_equip": 114,
     "faction": "xv26-battlesuits",
     "name": "Selectores de Blanco Integrados",
-    "description": "Siempre que fueras a contraactuar, puedes hacerlo con un operativo XV26 STEALTH BATTLESUIT amigo que tenga una orden de Ocultarse y esté a más de 3\" de operativos enemigos, pero antes de que contraactúe, debes cambiar su orden a Trabarse y no puede realizar ninguna acción aparte de Disparar durante esa contraacción."
+    "description": "Siempre que fueras a contraactuar, puedes hacerlo con un operativo XV26 STEALTH BATTLESUIT amigo que tenga una orden de Ocultarse y esté a más de 3\" de operativos enemigos, pero antes de que contraactúe, debes cambiar su orden a Trabarse y no puede realizar ninguna acción aparte de <b>Disparar</b> durante esa contraacción."
   },
   {
     "id_equip": 115,
     "faction": "xv26-battlesuits",
     "name": "Multirrastreadores XV26",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo XV26 STEALTH BATTLESUIT amigo esté realizando la acción de Disparar y selecciones un cañón rotativo (barrido), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Torrente 2\"."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo XV26 STEALTH BATTLESUIT amigo esté realizando la acción de <b>Disparar</b> y selecciones un cañón rotativo (barrido), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Torrente 2\"."
   },
   {
     "id_equip": 116,
@@ -745,7 +745,7 @@
     "id_equip": 122,
     "faction": "wrecka-krew",
     "name": "Kohetes Taladradores",
-    "description": "Una vez por Punto de Inflexión, siempre que un operativo WRECKA KREW amigo esté realizando la acción de Disparar y selecciones un lanzakohetez o lanzakohetez pezado, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma pierde la regla de arma Explosión pero tiene la regla de arma Perforante 1."
+    "description": "Una vez por Punto de Inflexión, siempre que un operativo WRECKA KREW amigo esté realizando la acción de <b>Disparar</b> y selecciones un lanzakohetez o lanzakohetez pezado, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma pierde la regla de arma Explosión pero tiene la regla de arma Perforante 1."
   },
   {
     "id_equip": 123,
@@ -775,7 +775,7 @@
     "id_equip": 127,
     "faction": "void-dancer-troupe",
     "name": "Proyectiles de Toxina Aulladora",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo VOID-DANCER TROUPE amigo esté realizando la acción de Disparar y selecciones una pistola shuriken o cañón aullador (enfocado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Devastadora 1."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo VOID-DANCER TROUPE amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (enfocado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Devastadora 1."
   },
   {
     "id_equip": 128,
@@ -841,7 +841,7 @@
     "id_equip": 138,
     "faction": "pathfinders",
     "name": "Óptica de Análisis de Objetivos",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo PATHFINDER amigo (excluyendo DRONE) esté realizando la acción de Disparar y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, si el objetivo tiene al menos una de tus fichas de Luz de Marcado, se trata como si tuviera una más. Si el arma a distancia tiene la regla de arma Explosión o Torrente, solo el objetivo principal se ve afectado."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo PATHFINDER amigo (excluyendo DRONE) esté realizando la acción de <b>Disparar</b> y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, si el objetivo tiene al menos una de tus fichas de Luz de Marcado, se trata como si tuviera una más. Si el arma a distancia tiene la regla de arma Explosión o Torrente, solo el objetivo principal se ve afectado."
   },
   {
     "id_equip": 139,
@@ -884,7 +884,7 @@
     "id_equip": 144,
     "faction": "mandrakes",
     "name": "Gema del Alma",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo MANDRAKE amigo esté realizando la acción de Disparar y selecciones un fuego brujo, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Explosión 1\"."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo MANDRAKE amigo esté realizando la acción de <b>Disparar</b> y selecciones un fuego brujo, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Explosión 1\"."
   },
   {
     "id_equip": 145,
@@ -919,7 +919,7 @@
     "ATK": "5",
     "HIT": "4+",
     "DMG": "4/5",
-    "special_rules": "Alcance 4\", Explosión 1\", Pesada (Solo reposicionarse), Saturar"
+    "special_rules": "Alcance 4\", Explosión 1\", Pesada (Solo reposicionarse), Saturación"
   },
   {
     "id_equip": 149,
@@ -935,7 +935,7 @@
     "id_equip": 150,
     "faction": "hierotek",
     "name": "Conductos de Magnificación",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo APPRENTEK HIEROTEK CIRCLE o CRYPTEK HIEROTEK CIRCLE amigo esté realizando la acción de Disparar, puedes usar esta regla. Si lo haces, selecciona otro operativo HIEROTEK CIRCLE amigo (excluyendo PLASMACYTE) que tenga una orden de Trabarse y sea visible para ese operativo amigo. Hasta el final de esa acción, ese otro operativo amigo puede ser tratado como el operativo activo para la regla de arma Magnificar."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo APPRENTEK HIEROTEK CIRCLE o CRYPTEK HIEROTEK CIRCLE amigo esté realizando la acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, selecciona otro operativo HIEROTEK CIRCLE amigo (excluyendo PLASMACYTE) que tenga una orden de Trabarse y sea visible para ese operativo amigo. Hasta el final de esa acción, ese otro operativo amigo puede ser tratado como el operativo activo para la regla de arma Magnificar."
   },
   {
     "id_equip": 151,
@@ -969,13 +969,13 @@
     "id_equip": 155,
     "faction": "yaegirs",
     "name": "Cartuchos Bólter Estabilizados",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un operativo HERNKYN YAEGIR amigo esté realizando la acción de Disparar con una escopeta bólter (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora el atributo de Impacto de esa arma en 1 y añade 1 a ambos atributos de Daño."
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un operativo HERNKYN YAEGIR amigo esté realizando la acción de <b>Disparar</b> con una escopeta bólter (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora el atributo de Impacto de esa arma en 1 y añade 1 a ambos atributos de Daño."
   },
   {
     "id_equip": 156,
     "faction": "yaegirs",
     "name": "Cartuchos Bólter Tormenta de Fuego",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo HERNKYN YAEGIR amigo esté realizando la acción de Disparar con una escopeta bólter (corto alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Explosión 1\"."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo HERNKYN YAEGIR amigo esté realizando la acción de <b>Disparar</b> con una escopeta bólter (corto alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Explosión 1\"."
   },
   {
     "id_equip": 157,
@@ -1033,19 +1033,19 @@
     "id_equip": 165,
     "faction": "kabalite",
     "name": "Veneno Refinado",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un operativo HAND OF THE ARCHON amigo esté realizando la acción de Disparar y selecciones una carabina cristalina, cañón cristalino, pistola cristalina, rifle cristalino o pistola aguijón, puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 1 al atributo de Daño Normal de esa arma."
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un operativo HAND OF THE ARCHON amigo esté realizando la acción de <b>Disparar</b> y selecciones una carabina cristalina, cañón cristalino, pistola cristalina, rifle cristalino o pistola aguijón, puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 1 al atributo de Daño Normal de esa arma."
   },
   {
     "id_equip": 166,
     "faction": "farstalker-kinband",
     "name": "Disparo Perforante",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo FARSTALKER KINBAND amigo esté realizando la acción de Disparar y selecciones un rifle Kroot, escopeta de dispersión Kroot o pistolas Kroot duales (enfocadas), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Perforante 1. No puedes usar la regla Disparo Perforante y Disparo Tóxico durante la misma acción."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo FARSTALKER KINBAND amigo esté realizando la acción de <b>Disparar</b> y selecciones un rifle Kroot, escopeta de dispersión Kroot o pistolas Kroot duales (enfocadas), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Perforante 1. No puedes usar la regla Disparo Perforante y Disparo Tóxico durante la misma acción."
   },
   {
     "id_equip": 167,
     "faction": "farstalker-kinband",
     "name": "Disparo Tóxico",
-    "description": "Una vez por Punto de Inflexión, cuando un operativo FARSTALKER KINBAND amigo esté realizando la acción de Disparar y selecciones un rifle Kroot, escopeta de dispersión Kroot o pistolas Kroot duales (enfocadas), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene las reglas de arma Letal 5+ y Aturdir. No puedes usar la regla Disparo Perforante y Disparo Tóxico durante la misma acción."
+    "description": "Una vez por Punto de Inflexión, cuando un operativo FARSTALKER KINBAND amigo esté realizando la acción de <b>Disparar</b> y selecciones un rifle Kroot, escopeta de dispersión Kroot o pistolas Kroot duales (enfocadas), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene las reglas de arma Letal 5+ y Aturdir. No puedes usar la regla Disparo Perforante y Disparo Tóxico durante la misma acción."
   },
   {
     "id_equip": 168,

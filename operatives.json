@@ -309,7 +309,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando lo hace, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y Penetracións (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando lo hace, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -499,7 +499,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas auxiliar (perforante)",
+                    "name": "Lanzagranadas auxiliar (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -1425,7 +1425,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Puede usar granadas frag, perforantes, de humo y aturdidoras. No cuenta para los usos limitados del equipo. Si usa frag o perforante, mejora en 1 el atributo Impactar."
+                    "description": "Puede usar granadas frag, Penetracións, de humo y aturdidoras. No cuenta para los usos limitados del equipo. Si usa frag o Penetración, mejora en 1 el atributo Impactar."
                 }
             ],
             "uniqueActions": [],
@@ -1879,7 +1879,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (perforante)",
+                    "name": "Lanzagranadas (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -4164,7 +4164,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, perforantes, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente use una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, Penetracións, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente use una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -4423,7 +4423,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (perforante)",
+                    "name": "Lanzagranadas (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -4531,7 +4531,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Alcance 8\", Letal 5+, Perforante 1"
+                        "RA": "Alcance 8\", Letal 5+, Penetración 1"
                     }
                 },
                 {
@@ -4556,7 +4556,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, TENIENTE VARIEL, LÍDER",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, TENIENTE VARIEL",
             "peana": "40"
         },
         {
@@ -4586,7 +4586,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "6/3",
-                        "RA": "Alcance 6\", Devastadora 4, Limitada 1, Perforante 2"
+                        "RA": "Alcance 6\", Devastadora 4, Limitada 1, Penetración 2"
                     }
                 },
                 {
@@ -4649,6 +4649,10 @@
                 {
                     "name": "Astartes",
                     "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede contraatacar independientemente de su orden."
+                },
+                {
+                    "name": "Omni-Scrambler",
+                    "description": "como <b>GAMBITO ESTRATÉGICO</b>. Selecciona un operativo enemigo visible para este operativo y tira 1D3. En la siguiente fase de Tiroteo, ese operativo enemigo no podrá activarse ni realizar acciones hasta que se cumpla una de las siguientes condiciones: <li>Tu oponente ha activado un número de operativos enemigos igual al resultado del D3.</li> <li>Es el último operativo enemigo en ser activado.</li>"
                 }
             ],
             "uniqueActions": [],
@@ -4672,7 +4676,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Precisa 1"
+                        "RA": "Certera 1"
                     }
                 },
                 {
@@ -4693,7 +4697,7 @@
                 },
                 {
                     "name": "Inserción por Grav-chute",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Si este agente está totalmente dentro de tu zona de desembarco, puede realizar inmediatamente una acción de <b>Reposicionarse</b> gratuita. Debe terminar ese movimiento totalmente a 4\" de tu zona de desembarco."
+                    "description": "como un <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Si este agente está totalmente dentro de tu zona de despliegue, puede realizar inmediatamente una acción de <b>Reposicionarse</b> gratuita. Debe terminar ese movimiento totalmente a 4\" de tu zona de despliegue."
                 },
                 {
                     "name": "Astartes",
@@ -4721,7 +4725,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Alcance 8\", Perforante Críticos 1"
+                        "RA": "Alcance 8\", Críticos de Penetracion 1"
                     }
                 },
                 {
@@ -4762,7 +4766,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Perforante Críticos 1"
+                        "RA": "Críticos de Penetracion 1"
                     }
                 },
                 {
@@ -4803,7 +4807,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Alcance 8\""
+                        "RA": "-"
                     }
                 },
                 {
@@ -4813,7 +4817,7 @@
                         "A": "5",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Alcance 8\", Saturar, Torrente 2\""
+                        "RA": "Alcance 8\", Saturación, Torrente 2\""
                     }
                 },
                 {
@@ -4823,7 +4827,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Alcance 4\", Saturar, Buscadora Ligera"
+                        "RA": "Alcance 4\", Saturación, Buscadora Ligera"
                     }
                 },
                 {
@@ -4840,7 +4844,7 @@
             "abilities": [
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede contraatacar independientemente de su orden."
+                    "description": "Durante la activacion de este agente, puede realizar dos acciones de <b>Disparar</b> o dos de <b>Combatir</b>. Si se trata de dos acciones de <b>Disparar</b> y se selecciona un <b>Pirobláster</b> para ambas, se debe gastar 1 PA adicional para la segunda acción. Este agente puede <b>Contraatacar</b> independientemente de su orden."
                 }
             ],
             "uniqueActions": [],
@@ -4965,7 +4969,7 @@
                     }
                 },
                 {
-                    "name": "Lanzamisiles (perforante)",
+                    "name": "Lanzamisiles (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -6677,7 +6681,7 @@
       "abilities": [
         {
           "name": "Granadero",
-          "description": "Este agente puede usar granadas de plaga y perforantes (ver equipo de facción y universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma y las granadas de plaga tienen la regla de arma <span class=\"faction\">*</span>Tóxica."
+          "description": "Este agente puede usar granadas de plaga y Penetracións (ver equipo de facción y universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma y las granadas de plaga tienen la regla de arma <span class=\"faction\">*</span>Tóxica."
         },
         {
           "name": "<span class=\"faction\">*</span>Tóxica",
@@ -7736,7 +7740,7 @@
       "abilities": [
         {
           "name": "Especialista granadero",
-          "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Eso no cuenta para su límite de usos. Cuando haga tal cosa, mejora en 1 el atributo Impactar de esa arma."
+          "description": "Este agente puede usar granadas frag y Penetracións (ver equipo universal). Eso no cuenta para su límite de usos. Cuando haga tal cosa, mejora en 1 el atributo Impactar de esa arma."
         }
       ],
       "uniqueActions": [
@@ -9193,7 +9197,7 @@
           }
         },
         {
-          "name": "Lanzamisiles (perforante)",
+          "name": "Lanzamisiles (Perforante)",
           "type": "ranged",
           "stats": {
             "A": "4",
@@ -10120,7 +10124,7 @@
                     }
                 },
                 {
-                    "name": "Lanzamisiles (perforante)",
+                    "name": "Lanzamisiles (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -11075,7 +11079,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (perforante)",
+                    "name": "Lanzagranadas (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12054,7 +12058,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (perforante)",
+                    "name": "Lanzagranadas (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12629,7 +12633,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, perforantes y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, Penetracións y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -15001,7 +15005,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, perforantes, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente usa una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, Penetracións, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [
@@ -17797,7 +17801,7 @@
             "abilities": [
                 {
                     "name": "Listo para cualquier cosa",
-                    "description": "Una vez por punto de inflexión, durante la activación de un agente COMBATIENTE amigo, puedes usar las reglas Carne, Bala perforante o Bala de toxinas (ver equipo de facción) para ese agente. Hacer eso no cuenta para su límite de una vez por punto de inflexión."
+                    "description": "Una vez por punto de inflexión, durante la activación de un agente COMBATIENTE amigo, puedes usar las reglas Carne, Bala Penetración o Bala de toxinas (ver equipo de facción) para ese agente. Hacer eso no cuenta para su límite de una vez por punto de inflexión."
                 }
             ],
             "uniqueActions": [],
@@ -18759,7 +18763,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas auxiliar (perforante)",
+                    "name": "Lanzagranadas auxiliar (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19647,7 +19651,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (perforante)",
+                    "name": "Lanzagranadas (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -21274,7 +21278,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (perforante)",
+                    "name": "Lanzagranadas (Perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -21497,7 +21501,7 @@
                 },
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y Penetracións (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [
@@ -22118,7 +22122,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Eso no cuenta para su limite de usos. Cuando este agente usa una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y Penetracións (ver equipo universal). Eso no cuenta para su limite de usos. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
                 },
                 {
                     "name": "Deceso Explosivo",

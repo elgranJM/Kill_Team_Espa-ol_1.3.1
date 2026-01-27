@@ -4456,7 +4456,7 @@
             "abilities": [
                 {
                     "name": "Máquina",
-                    "description": "Este agente solo puede realizar acciones de Correr, Disparar, Reposicionarse y Retroceder. No puede contraatacar, asistir en un combate ni usar armas que no figuren en su tarjeta de datos."
+                    "description": "Este agente solo puede realizar acciones de Correr, Disparar, Reposicionarse y Retroceder. No puede <b>Contraatacar</b>, asistir en un combate ni usar armas que no figuren en su tarjeta de datos."
                 },
                 {
                     "name": "Torreta",
@@ -4552,7 +4552,7 @@
                 },
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede contraatacar independientemente de su orden."
+                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede reaccionar independientemente de su orden."
                 }
             ],
             "uniqueActions": [],
@@ -4576,7 +4576,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Torrente 1\""
+                        "RA": "Rafaga 1\""
                     }
                 },
                 {
@@ -4607,7 +4607,7 @@
                 },
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede contraatacar independientemente de su orden."
+                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede reaccionar independientemente de su orden."
                 }
             ],
             "uniqueActions": [],
@@ -4648,7 +4648,7 @@
             "abilities": [
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede contraatacar independientemente de su orden."
+                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede reaccionar independientemente de su orden."
                 },
                 {
                     "name": "Omni-Scrambler",
@@ -4701,7 +4701,7 @@
                 },
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede contraatacar independientemente de su orden."
+                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede reaccionar independientemente de su orden."
                 }
             ],
             "uniqueActions": [],
@@ -4742,7 +4742,7 @@
             "abilities": [
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede contraatacar independientemente de su orden."
+                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede reaccionar independientemente de su orden."
                 }
             ],
             "uniqueActions": [],
@@ -4783,7 +4783,7 @@
             "abilities": [
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede contraatacar independientemente de su orden."
+                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Este agente puede reaccionar independientemente de su orden."
                 }
             ],
             "uniqueActions": [],
@@ -4817,7 +4817,7 @@
                         "A": "5",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Alcance 8\", Saturación, Torrente 2\""
+                        "RA": "Alcance 8\", Saturación, Rafaga 2\""
                     }
                 },
                 {
@@ -4844,7 +4844,7 @@
             "abilities": [
                 {
                     "name": "Astartes",
-                    "description": "Durante la activacion de este agente, puede realizar dos acciones de <b>Disparar</b> o dos de <b>Combatir</b>. Si se trata de dos acciones de <b>Disparar</b> y se selecciona un <b>Pirobláster</b> para ambas, se debe gastar 1 PA adicional para la segunda acción. Este agente puede <b>Contraatacar</b> independientemente de su orden."
+                    "description": "Durante la activacion de este agente, puede realizar dos acciones de <b>Disparar</b> o dos de <b>Combatir</b>. Si se trata de dos acciones de <b>Disparar</b> y se selecciona un <b>Pirobláster</b> para ambas, se debe gastar 1 PA adicional para la segunda acción. Este agente puede reaccionar independientemente de su orden."
                 }
             ],
             "uniqueActions": [],
@@ -4943,7 +4943,7 @@
                     "type": "ranged",
                     "stats": {
                         "A": "5",
-                        "HP/HA": "4+",
+                        "HP/HA": "3+",
                         "Dñ": "4/5",
                         "RA": "Críticos de penetración 1, Pesada (solo Correr)"
                     }
@@ -4953,7 +4953,7 @@
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
+                        "HP/HA": "3+",
                         "Dñ": "4/5",
                         "RA": "Críticos de penetración 1, Pesada (solo Correr), Ráfaga 1\""
                     }
@@ -4963,8 +4963,8 @@
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "2/4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
                         "RA": "Área 2\", Pesada (solo Correr)"
                     }
                 },
@@ -4973,8 +4973,8 @@
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "4/5",
+                        "HP/HA": "3+",
+                        "Dñ": "5/7",
                         "RA": "Penetración 1, Pesada (solo Correr)"
                     }
                 },
@@ -4989,12 +4989,7 @@
                     }
                 }
             ],
-            "abilities": [
-                {
-                    "name": "Bípode de arma pesada",
-                    "description": "Mientras este agente no haya realizado una acción de Mover (salvo <b>Reposicionarse</b>) durante esta activación, sus armas pesadas tienen la regla Incesante. Si ya tenían esa regla, obtienen Implacable."
-                }
-            ],
+            "abilities": [],
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, TIRADOR PESADO",
             "peana": "28"
@@ -5010,16 +5005,6 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle de francotirador de explorador",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/3",
-                        "RA": "Devastadora 3, Pesada (solo Correr), Silenciosa"
-                    }
-                },
-                {
                     "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
@@ -5027,6 +5012,26 @@
                         "HP/HA": "3+",
                         "Dñ": "3/4",
                         "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Rifle de francotirador (movil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Rifle de francotirador (inmovil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 3, Pesada (solo Correr), Silenciosa"
                     }
                 },
                 {
@@ -5040,13 +5045,18 @@
                     }
                 }
             ],
-            "abilities": [],
+            "abilities": [
+                {
+                    "name": "Capa de camuflaje",
+                    "description": "Cuando un agente dispare contra este agente: <li>Ignora la regla de arma Saturación.</li> <li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li>"
+                }
+            ],
             "uniqueActions": [
                 {
-                    "name": "Ojo preciso",
+                    "name": "OPTICA",
                     "cost": "1 LPA",
                     "description": [
-                        "Hasta el final de la activación de este agente, su rifle de francotirador de explorador tiene la regla de arma Letal 5+."
+                        "Hasta el inicio de la siguiente activación de este agente, siempre que dispare, los agentes enemigos no pueden estar ofuscados."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -5065,6 +5075,16 @@
             },
             "weapons": [
                 {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
                     "name": "Cuchillo de combate",
                     "type": "melee",
                     "stats": {
@@ -5073,35 +5093,19 @@
                         "Dñ": "4/5",
                         "RA": "-"
                     }
-                },
-                {
-                    "name": "Escopeta Astartes",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "4/4",
-                        "RA": "Alcance 6\""
-                    }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Trampero",
-                    "description": "Este agente ignora la regla Trampa de los marcadores de mina enemigos. Además, suma 1 al atributo Impactar de su escopeta Astartes contra enemigos a 1\" de uno de tus marcadores de mina."
-                }
-            ],
-            "uniqueActions": [
+                    "name": "Lanzagarfios",
+                    "description": " Siempre que este agente trepe, puedes tratar la distancia vertical como 2\" (sin importar la distancia real que mueva en vertical dicho agente)."
+                },
                 {
-                    "name": "Colocar mina trampa",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Sitúa uno de tus marcadores de mina a 1\" o menos de este agente y a más de 2\" de enemigos.",
-                        "La primera vez que un agente enemigo termine un movimiento a 2\" o menos del marcador, detona e inflige 2D3 daños mortales."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "name": "Asalto con lanzagarfios",
+                    "description": " Siempre que este gente realice una acción de Cargar en su activación, si durante esa acción trepa, se deja caer, salta o su peana se mueve bajo terreno Aventajado, sus armas de combate tienen la regla de arma Letal 3+ hasta el final de dicha activación."
                 }
             ],
+            "uniqueActions": [],
             "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, CAZADOR",
             "peana": "28"
         },
@@ -5126,16 +5130,6 @@
                     }
                 },
                 {
-                    "name": "Pistola bólter",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\""
-                    }
-                },
-                {
                     "name": "Puños",
                     "type": "melee",
                     "stats": {
@@ -5149,11 +5143,18 @@
             "abilities": [],
             "uniqueActions": [
                 {
-                    "name": "Exploración",
+                    "name": "RASTREAR ENEMIGO",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente.",
-                        "Hasta el inicio de la siguiente activación de ese agente enemigo, no puede estar ofuscado y siempre que un aliado le dispare, las armas de ese aliado tienen la regla Saturación."
+                        "Elige un agente enemigo usado a 8\" o menos de este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a ese agente enemigo, las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero)."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                },
+                {
+                    "name": "ESCANEO AUSPEX",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; si ese agente amigo es un <b>FRANCOTIRADOR</b> bajo el efecto de su acción de <b>Óptica</b>, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -5182,16 +5183,6 @@
                     }
                 },
                 {
-                    "name": "Bólter",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "-"
-                    }
-                },
-                {
                     "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
@@ -5202,12 +5193,22 @@
                     }
                 },
                 {
+                    "name": "Bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                },
+                {
                     "name": "Filopuñal",
                     "type": "melee",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "3/5",
+                        "Dñ": "4/5",
                         "RA": "-"
                     }
                 },
@@ -5224,8 +5225,8 @@
             ],
             "abilities": [
                 {
-                    "name": "Guerrero Explorador",
-                    "description": "Puedes hacer cada una de las siguientes una vez por punto de inflexión: Un agente COMBATIENTE EXPLORADOR amigo puede realizar la acción <b>Granada de humo</b> o Granada Aturdidora (0 LPA). Esto no cuenta para los límites de uso de equipo si ya los habías seleccionado."
+                    "name": "Equipo adaptable",
+                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p> <p><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada de humo</b>.</li></p> <p><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada aturdidora</b>.</li></p> <p>Las reglas de esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acción (p.ej. si también has elegido esas granadas como equipo).</p>"
                 }
             ],
             "uniqueActions": [],
@@ -10773,7 +10774,7 @@
             "abilities": [
                 {
                     "name": "¿Ez lo mejor ke zabez hazer?",
-                    "description": "Después de <b>Combatir</b> o contraatacar, si no resulta incapacitado puede infligir 1D3 daños al enemigo."
+                    "description": "Después de <b>Combatir</b> o <b>contraatacar</b>, si no resulta incapacitado puede infligir 1D3 daños al enemigo."
                 }
             ],
             "uniqueActions": [],
@@ -11415,7 +11416,7 @@
                 },
                 {
                     "name": "Máquina",
-                    "description": "<ul><li>Las únicas acciones que puede realizar este agente son <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b> y <b>Reposicionarse</b></li></ul> <ul><li>No puede contraatacar ni asistir en un combate.</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y se encuentra tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., terreno Aventajado).</li></ul>"
+                    "description": "<ul><li>Las únicas acciones que puede realizar este agente son <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b> y <b>Reposicionarse</b></li></ul> <ul><li>No puede <b>Contraatacar</b> ni asistir en un combate.</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y se encuentra tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., terreno Aventajado).</li></ul>"
                 },
                 {
                     "name": "Prescindible",
@@ -12467,7 +12468,7 @@
             "abilities": [
                 {
                     "name": "Máquina",
-                    "description": "<ul><li>Este agente no puede ser activado o realizar acciones si se encuentra en la zona de control de un agente enemigo, o si un agente PROSPECTOR <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo ha sido incapacitado. El punto de inflexión puede terminar aunque este agente se encuentre aún apostado </li></ul> <ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Reposicionarse</b> y <b>Avistar</b></li></ul> <ul><li>No puede contraatacar, asistir en un combate, trepar ni saltar</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y está tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, traza la línea desde cualquier parte de la miniatura.</li></ul>"
+                    "description": "<ul><li>Este agente no puede ser activado o realizar acciones si se encuentra en la zona de control de un agente enemigo, o si un agente PROSPECTOR <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo ha sido incapacitado. El punto de inflexión puede terminar aunque este agente se encuentre aún apostado </li></ul> <ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Reposicionarse</b> y <b>Avistar</b></li></ul> <ul><li>No puede <b>Contraatacar</b>, asistir en un combate, trepar ni saltar</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y está tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, traza la línea desde cualquier parte de la miniatura.</li></ul>"
                 },
                 {
                     "name": "Prescindible",
@@ -12559,7 +12560,7 @@
             "abilities": [
                 {
                     "name": "Máquina",
-                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Reposicionarse</b> y Avistar</li></ul> <ul><li>No puede contraatacar, asistir en un combate, trepar ni saltar</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y está tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, traza la línea desde cualquier parte de la miniatura.</li></ul>"
+                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Reposicionarse</b> y Avistar</li></ul> <ul><li>No puede <b>Contraatacar</b>, asistir en un combate, trepar ni saltar</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y está tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, traza la línea desde cualquier parte de la miniatura.</li></ul>"
                 },
                 {
                     "name": "Prescindible",

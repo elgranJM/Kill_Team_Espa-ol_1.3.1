@@ -4556,7 +4556,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "IMPERIO, ADEPTUS ASTARTES, <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, TENIENTE VARIEL, LÍDER",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, TENIENTE VARIEL, LÍDER",
             "peana": "40"
         },
         {
@@ -4611,7 +4611,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "IMPERIO, ADEPTUS ASTARTES, <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, SARGENTO VETERANO RAMUS",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, SARGENTO VETERANO RAMUS",
             "peana": "32"
         },
         {
@@ -4652,7 +4652,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "IMPERIO, ADEPTUS ASTARTES, <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, HERMANO BELATH",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO BELATH",
             "peana": "32"
         },
         {
@@ -4701,7 +4701,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "IMPERIO, ADEPTUS ASTARTES, <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, HERMANO NAHRDEN",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO NAHRDEN",
             "peana": "32"
         },
         {
@@ -4742,7 +4742,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "IMPERIO, ADEPTUS ASTARTES, <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, HERMANO MAPHAEL",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO MAPHAEL",
             "peana": "32"
         },
         {
@@ -4783,7 +4783,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "IMPERIO, ADEPTUS ASTARTES, <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, HERMANO ZERADIM",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO ZERADIM",
             "peana": "32"
         },
         {
@@ -4844,7 +4844,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "IMPERIO, ADEPTUS ASTARTES, <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, HERMANO HAROTH",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO HAROTH",
             "peana": "32"
         }
     ],

@@ -66,16 +66,6 @@
             },
             "weapons": [
                 {
-                    "name": "Pistola bólter pesada",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\", Críticos de penetración 1"
-                    }
-                },
-                {
                     "name": "Pistola lanzallamas",
                     "type": "ranged",
                     "stats": {
@@ -83,6 +73,16 @@
                         "HP/HA": "2+",
                         "Dñ": "3/3",
                         "RA": "Alcance 6\", Ráfaga 1\", Saturación"
+                    }
+                },
+                {
+                    "name": "Pistola bólter pesada",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\", Críticos de penetración 1"
                     }
                 },
                 {
@@ -116,16 +116,6 @@
                     }
                 },
                 {
-                    "name": "Arma de energía",
-                    "type": "melee",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "3+",
-                        "Dñ": "4/6",
-                        "RA": "Letal 5+"
-                    }
-                },
-                {
                     "name": "Puño de energía",
                     "type": "melee",
                     "stats": {
@@ -133,6 +123,16 @@
                         "HP/HA": "4+",
                         "Dñ": "5/7",
                         "RA": "Brutal"
+                    }
+                },
+                {
+                    "name": "Arma de energía",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Letal 5+"
                     }
                 },
                 {
@@ -639,7 +639,7 @@
                 "LPA": "3",
                 "MOVER": "6\"",
                 "SALVACIÓN": "3+",
-                "HERIDAS": "19"
+                "HERIDAS": "9"
             },
             "weapons": [
                 {
@@ -666,7 +666,7 @@
             "abilities": [
                 {
                     "name": "Buscador de misterios divinos",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Puedes realizar de inmediato una acción libre de <b>Omniescáner</b>, <b>Retroceder</b>, <b>Colocar marcador</b>, <b>Recoger marcador</b>, <b>Reposicionarse</b> o acción libre de misión. Si es la acción de <b>Retroceder</b> o de <b>Reposicionarse</b> y este agente no está transportando un marcador, debe terminar ese movimiento o bien dentro de tu zona de descenso o bien con un marcador de objetivo o uno de tus marcadores de misión dentro de su zona de control."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Puedes realizar de inmediato una acción libre de <b>Omniescáner</b>, <b>Retroceder</b>, <b>Colocar marcador</b>, <b>Recoger marcador</b>, <b>Reposicionarse</b> o acción libre de misión. Si es la acción de <b>Retroceder</b> o de <b>Reposicionarse</b> y este agente no está transportando un marcador, debe terminar ese movimiento o bien dentro de tu zona de descenso (si no es posible, tan cerca de ella como pueda) o bien con un marcador de objetivo o uno de tus marcadores de misión dentro de su zona de control."
                 }
             ],
             "uniqueActions": [
@@ -674,8 +674,7 @@
                     "name": "Omniescáner",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente enemigo a 8\" o menos de este agente o visible para él. El agente enemigo elegido obtiene uno de tus marcadores de Omniescáner.",
-                        "Siempre que un agente CLADO DE BATALLA amigo dispare, combata o contraataque contra un agente enemigo que tenga uno de tus marcadores de Omniescáner, las armas de ese agente amigo tienen la regla de armas Incesante."
+                        "Elige un agente enemigo a 8\" o menos de este agente o visible para él. El agente enemigo elegido obtiene uno de tus marcadores de Omniescáner. Siempre que un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo dispare, combata o contraataque contra un agente enemigo que tenga uno de tus marcadores de Omniescáner, las armas de ese agente amigo tienen la regla de armas Incesante."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -707,7 +706,7 @@
             "abilities": [
                 {
                     "name": "Ojo aquiliano",
-                    "description": "Siempre que un agente CLADO DE BATALLA amigo dispare contra un agente enemigo visible para este agente, las armas a distancia de ese agente amigo tienen la regla de armas Saturación. Esta regla no tiene efecto si este agente se encuentra en la zona de control de un agente enemigo."
+                    "description": "Siempre que un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo dispare contra un agente enemigo visible para este agente, las armas a distancia de ese agente amigo tienen la regla de armas Saturación. Esta regla no tiene efecto si este agente se encuentra en la zona de control de un agente enemigo."
                 }
             ],
             "uniqueActions": [
@@ -715,8 +714,7 @@
                     "name": "Mirada del Omnissiah",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente CLADO DE BATALLA amigo dispare contra ese agente enemigo, puedes usar este efecto.",
-                        "Si lo haces: Las armas a distancia de ese agente amigo tienen la regla de armas Buscadora (Ligero) y ese agente enemigo no puede estar ofuscado."
+                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de armas Buscadora (Ligero)</li></ul> <ul><li> Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -731,7 +729,7 @@
                 "LPA": "2",
                 "MOVER": "5\"",
                 "SALVACIÓN": "4+",
-                "HERIDAS": "18"
+                "HERIDAS": "8"
             },
             "weapons": [
                 {
@@ -771,8 +769,7 @@
                     "name": "Abrir brecha",
                     "cost": "1 LPA",
                     "description": [
-                        "Coloca uno de tus marcadores de Brecha dentro de la zona de control de este agente y tan cerca como sea posible de un elemento de terreno en su zona de control.",
-                        "Cuando un agente se encuentre a 1\" o menos de ese marcador, las partes de ese elemento de terreno que no tengan más de 1\" de grosor se considerarán terreno Accesible para él."
+                        "Coloca uno de tus marcadores de Brecha dentro de la zona de control de este agente y tan cerca como sea posible de un elemento de terreno en su zona de control. Cuando un agente se encuentre a 1\" o menos de ese marcador, las partes de ese elemento de terreno que no tengan más de 1\" de grosor se considerarán terreno Accesible para él."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si no hay un elemento de terreno en su zona de control."
                 }
@@ -787,7 +784,7 @@
                 "LPA": "2",
                 "MOVER": "5\"",
                 "SALVACIÓN": "4+",
-                "HERIDAS": "18"
+                "HERIDAS": "8"
             },
             "weapons": [
                 {
@@ -916,7 +913,7 @@
             "abilities": [
                 {
                     "name": "Matriz de mecanosutura",
-                    "description": "Una vez por punto de inflexión, cuando un agente CLADO DE BATALLA amigo distinto vaya a resultar incapacitado a 3\" o menos y siendo visible, puedes usar esta regla. El agente no resulta incapacitado, le queda 1 herida y no puede resultar incapacitado durante el resto de la acción. Tras la acción, puede realizar una acción libre de <b>Correr</b> hacia la zona de control de este agente."
+                    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo distinto vaya a resultar incapacitado estando a 3\" o menos de este agente y siendo visible para él, puedes usar esta regla siempre que ni este ni el otro agente estén en la zona de control de algún agente enemigo Si lo haces, ese agente amigo no resulta incapacitado, le queda 1 herida restante y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede entonces realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Si esta regla fue usada durante la activación de ese agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco principal o secundario."
                 }
             ],
             "uniqueActions": [
@@ -924,9 +921,9 @@
                     "name": "Reparación conveniente",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente CLADO DE BATALLA amigo en la zona de control de este agente para que recupere hasta 1D3+3 heridas perdidas."
+                        "Elige un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo en la zona de control de este agente para que recupere hasta 1D3+3 heridas perdidas. No puede ser un agente con el que se haya usado la regla Matriz de mecanosutura durante este punto de inflexión."
                     ],
-                    "description_no": "No puede ser un agente con el que se haya usado la regla Matriz de mecanosutura durante este punto de inflexión, ni si este agente está en zona de control enemiga."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
             "keywords": "<span class=\"faction\">CLADO DE BATALLAS</span>, IMPERIUM, ADEPTUS MECHANICUS, MÉDICO, TECNOMÉDICO, SERVIDOR",
@@ -939,7 +936,7 @@
                 "LPA": "3",
                 "MOVER": "6\"",
                 "SALVACIÓN": "3+",
-                "HERIDAS": "19"
+                "HERIDAS": "9"
             },
             "weapons": [
                 {
@@ -969,8 +966,7 @@
                     "name": "Incentivo noosférico",
                     "cost": "1 LPA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente SERVIDOR CLADO DE BATALLA amigo a 6\" o menos de este agente o de un agente AUTOTRANSMISOR para realizar de inmediato una acción libre de <b>Correr</b>.",
-                        "Solo puedes elegir a cada agente SERVIDOR amigo para esta regla una vez por punto de inflexión."
+                        "<b>APOYO</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo para realizar de inmediato una acción libre de <b>Correr</b>. Solo puedes elegir a cada agente <b>SERVIDOR</b> amigo para esta regla una vez por punto de inflexión. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se determina la distancia debe controlar ese marcador."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -978,8 +974,7 @@
                     "name": "Anulación de red",
                     "cost": "1 LPA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente SERVIDOR CLADO DE BATALLA amigo a 6\" o menos de este agente o de un agente AUTOTRANSMISOR para REACCIONAR EN RED inmediatamente (sin transferir potencia).",
-                        "Continúa la activación de este agente tras hacerlo."
+                        "<b>APOYO</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo para <b>REACCIONAR EN RED</b> inmediatamente (no tienes que <b>TRANSFERIR POTENCIA</b> para ello). Continúa la activación de este agente tras hacerlo. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se determina la distancia debe controlar ese marcador."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -1063,11 +1058,11 @@
             "abilities": [
                 {
                     "name": "Controlador de Dron XV26",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> siempre que este agente se encuentre en la zona de aniquilación. Elige 1 agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> DRON amigo en la zona de aniquilación. Hasta el final de la siguiente activación de ese agente, ignora los dos primeros puntos de su regla de Dron (esto tiene prioridad frente a esa regla)."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> siempre que este agente se encuentre en la zona de aniquilación. Elige 1 agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> <b>DRON</b> amigo en la zona de aniquilación. Hasta el final de la siguiente activación de ese agente, ignora los dos primeros puntos de su regla de Dron (esto tiene prioridad frente a esa regla)."
                 },
                 {
                     "name": "Por el Bien Supremo",
-                    "description": "Al determinar el valor de Certera X de la regla de facción Kauyon, si este agente se encuentra en la zona de aniquilación, suma 1 al resultado si al menos 2 agentes <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigos (salvo DRON) están incapacitados (hasta un máximo de Certera 3). Requiere un mínimo de Certera 1 para usarse."
+                    "description": "Al determinar el valor de Certera X de la regla de facción Kauyon, si este agente se encuentra en la zona de aniquilación, suma 1 al resultado si al menos 2 agentes <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigos (salvo <b>DRON</b>) están incapacitados (hasta un máximo de Certera 3). Requiere un mínimo de Certera 1 para usar esta regla."
                 }
             ],
             "uniqueActions": [],
@@ -1105,16 +1100,6 @@
                     }
                 },
                 {
-                    "name": "Cañón rotativo (concentrado)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Incesante"
-                    }
-                },
-                {
                     "name": "Cañón rotativo (barrido)",
                     "type": "ranged",
                     "stats": {
@@ -1122,6 +1107,16 @@
                         "HP/HA": "4+",
                         "Dñ": "3/4",
                         "RA": "Incesante, Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Cañón rotativo (concentrado)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "4+",
+                        "Dñ": "3/4",
+                        "RA": "Incesante"
                     }
                 },
                 {
@@ -1138,7 +1133,7 @@
             "abilities": [
                 {
                     "name": "Marcador telemétrico",
-                    "description": "Siempre que un agente enemigo sea un blanco válido de este agente, o sea visible para este agente y se encuentre a 2\" o menos de tu marcador de Emboscada, está marcado. Siempre que un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo dispare a un agente marcado, sus armas a distancia tienen la regla de armas Severa."
+                    "description": "Siempre que un agente enemigo sea un blanco válido de este agente, o sea visible para este agente y se encuentre a 2\" o menos de tu marcador de Emboscada (ver ardid de estrategia Preparar emboscada), está marcado. Siempre que un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo dispare a un agente marcado, sus armas a distancia tienen la regla de armas Severa.  Recuerda que un agente puede ser un blanco válido para este agente aunque este agente no sea el agente activo."
                 }
             ],
             "uniqueActions": [],
@@ -1176,16 +1171,6 @@
                     }
                 },
                 {
-                    "name": "Cañón rotativo (concentrado)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Incesante"
-                    }
-                },
-                {
                     "name": "Cañón rotativo (barrido)",
                     "type": "ranged",
                     "stats": {
@@ -1193,6 +1178,16 @@
                         "HP/HA": "4+",
                         "Dñ": "3/4",
                         "RA": "Incesante, Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Cañón rotativo (concentrado)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "4+",
+                        "Dñ": "3/4",
+                        "RA": "Incesante"
                     }
                 },
                 {
@@ -1247,16 +1242,6 @@
                     }
                 },
                 {
-                    "name": "Cañón rotativo (concentrado)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Incesante"
-                    }
-                },
-                {
                     "name": "Cañón rotativo (barrido)",
                     "type": "ranged",
                     "stats": {
@@ -1264,6 +1249,16 @@
                         "HP/HA": "4+",
                         "Dñ": "3/4",
                         "RA": "Incesante, Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Cañón rotativo (concentrado)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "4+",
+                        "Dñ": "3/4",
+                        "RA": "Incesante"
                     }
                 },
                 {
@@ -1280,7 +1275,7 @@
             "abilities": [
                 {
                     "name": "Pack de sensores multiespectro",
-                    "description": "<b>APOYO</b>. Una vez por punto de inflexión, cuando un agente enemigo visible para este agente y a 8\" o menos se active, cada agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo a 3\" o menos de este agente puede hacer de inmediato: Realizar una acción libre de <b>Correr</b> o Cambiar su orden."
+                    "description": "<p><b>APOYO</b>. Puedes usar esta regla una vez por punto de inflexión, cuando un agente enemigo visible para este agente y a 8\" o menos de él se active. Si lo haces, cada agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo a 3\" o menos de este agente puede hacer de inmediato una de las siguientes opciones:</p> <p><ul><li> Realizar una acción libre de <b>Correr</b> (en el orden que elijas).</li></ul></p> <p><ul><li>Cambia su orden.</li></ul></p> <p>Los agentes amigos que realicen la acción de <b>Correr</b> no pueden terminar ese movimiento a 3\" o menos de algún agente enemigo. Recuerda que el equipo universal Aparato de comunicaciones solo afecta a la segunda distancia de esta regla.</p>"
                 }
             ],
             "uniqueActions": [
@@ -1288,9 +1283,9 @@
                     "name": "Interferir sistemas",
                     "cost": "1/2 PA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente. Hasta el final de la siguiente activación de ese agente, resta 1 a su atributo LPA."
+                        "Elige un agente enemigo visible para este agente. Hasta el final de la siguiente activación de ese agente, resta 1 a su atributo LPA. Mientras este agente tenga una orden de ocultarse, debes gastar 1PA adicional para realizar esta acción."
                     ],
-                    "description_no": "Mientras este agente tenga una orden de ocultarse, debes gastar 1 PA adicional. No puede realizarse si está en zona de control enemiga."
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
                 }
             ],
             "keywords": "<span class=\"faction\">EXOARMADURA XV26 SIGILO</span>, IMPERIO T'AU, NEUTRALIZADOR",
@@ -1327,16 +1322,6 @@
                     }
                 },
                 {
-                    "name": "Cañón rotativo (concentrado)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Incesante"
-                    }
-                },
-                {
                     "name": "Cañón rotativo (barrido)",
                     "type": "ranged",
                     "stats": {
@@ -1344,6 +1329,16 @@
                         "HP/HA": "4+",
                         "Dñ": "3/4",
                         "RA": "Incesante, Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Cañón rotativo (concentrado)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "4+",
+                        "Dñ": "3/4",
+                        "RA": "Incesante"
                     }
                 },
                 {
@@ -1360,11 +1355,11 @@
             "abilities": [
                 {
                     "name": "Lanzador de electrobengalas",
-                    "description": "Una vez por punto de inflexión, cuando un enemigo dispare a un blanco válido (salvo DRON), puedes usar esta regla. El agente amigo a 3\" de este y visible está ofuscado e ignora la regla Penetración."
+                    "description": "Una vez por punto de inflexión, cuando un agente enemigo realice la acción <b>Disparar</b> y tu oponente elija un blanco válido (salvo <b>DRON</b>), puedes usar esta regla, siempre y cuando este agente no esté en la zona de control de agentes enemigos. Si lo haces, hasta el final de esa acción, siempre que un agente enemigo dispare a un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo que sea visible para este agente, se encuentre a 3\" o menos de él y a más de 2\" de ese agente enemigo: <ul><li>Ignora la reglas de armas Penetración.</li></ul> <ul><li>Ese agente amigo está ofuscado.</li></ul>"
                 },
                 {
                     "name": "Baliza",
-                    "description": "Porta el marcador de baliza. En el paso de Preparación, si la baliza está en la zona de aniquilación a más de 6\" de tu zona de descenso, tira dados según posición para ganar 1 PM adicional con un 4+."
+                    "description": "<p>Este agente porta tu marcador de baliza. Los agentes (salvo <b>DRON</b>) pueden realizar la acción <b>Recoger marcador</b> sobre ese marcador. La primera vez que un agente enemigo realice la acción <b>Recoger marcador</b> sobre tu marcador de baliza, descarta ese marcador (retíralo del juego).</p> <p>En el paso de Preparación de cada fase de estrategia, cuando ganes PM, si tu marcador de baliza está en la zona de aniquilación y a más de 6\" de tu zona de descenso, tira 1D6. Si está en el territorio de tu oponente, en lugar de eso tira 2D6, o 3D6 si está a 6\" o menos de la zona de descenso de tu oponente. Si alguno de esos dados saca 4+, ganas 1PM adicional.</p>"
                 }
             ],
             "uniqueActions": [],
@@ -1382,6 +1377,26 @@
             },
             "weapons": [
                 {
+                    "name": "Bláster fundidor (corto alcance)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "6/3",
+                        "RA": "Alcance 6\", Devastadora 4, Penetración 2"
+                    }
+                },
+                {
+                    "name": "Bláster fundidor (largo alcance)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/5",
+                        "RA": "Alcance 12\", Penetración 1"
+                    }
+                },
+                {
                     "name": "Bomba PEM",
                     "type": "ranged",
                     "stats": {
@@ -1392,13 +1407,13 @@
                     }
                 },
                 {
-                    "name": "Bláster fundidor (corto alcance)",
+                    "name": "Cañón rotativo (barrido)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "4+",
-                        "Dñ": "6/3",
-                        "RA": "Alcance 6\", Devastadora 4, Penetración 2"
+                        "Dñ": "3/4",
+                        "RA": "Incesante, Rafaga 1\""
                     }
                 },
                 {
@@ -1425,7 +1440,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Puede usar granadas frag, Penetracións, de humo y aturdidoras. No cuenta para los usos limitados del equipo. Si usa frag o Penetración, mejora en 1 el atributo Impactar."
+                    "description": " Este agente puede usar granadas frag, perforantes, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -1466,7 +1481,7 @@
             "abilities": [
                 {
                     "name": "Dron",
-                    "description": "Solo puede realizar <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Lanzador de granada de fotones, <b>Reposicionarse</b> y <b>Disparar</b>. Se ignora para operaciones de asesinato y condiciones de victoria que requieran sobrevivir/escapar."
+                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Lanzador de granada de fotones</b>. <b>Reposicionarse</b> y <b>Disparar</b></li></ul> <ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Este agente no puede usar armas que no aparezcan en su tarjeta de datos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li>Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para las condiciones de victoria y la obtención de PV si requieren que los agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc).</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -1474,7 +1489,7 @@
                     "name": "Lanzador de granada de fotones",
                     "cost": "1 PA",
                     "description": [
-                        "Elige 1 agente enemigo visible para este agente y tira 1D6. Con 3+, hasta el final de la siguiente activación de ese agente, resta 2\" a su atributo Movimiento."
+                        "Elige 1 agente enemigo visible para este agente y tira 1D6. Con 3+, Hasta el final de la siguiente activación de ese agente, resta 2\" a su atributo Movimiento."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
                 }
@@ -1506,11 +1521,11 @@
             "abilities": [
                 {
                     "name": "Dron",
-                    "description": "Solo puede realizar <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, <b>Reposicionarse</b> y <b>Disparar</b>. Se ignora para operaciones de asesinato y condiciones de victoria que requieran sobrevivir/escapar."
+                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Reposicionarse</b> y <b>Disparar</b>.</li></ul> <ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Este agente no puede usar armas que no aparezcan en su tarjeta de datos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li> Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para las condiciones de victoria y la obtención de PV si requieren que los agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc).</li></ul>"
                 },
                 {
                     "name": "Marcador telemétrico",
-                    "description": "Siempre que un enemigo sea blanco válido o visible a 2\" de tu marcador de Emboscada, está marcado. Los disparos contra agentes marcados tienen la regla Severa."
+                    "description": "Siempre que un agente enemigo sea un blanco válido de este agente, o sea visible para este agente y esté a 2\" o menos de tu marcador de Emboscada (ver ardid de estrategia Preparar emboscada), está marcado. Siempre que un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo dispare a un agente marcado, sus armas a distancia tienen la regla de armas Severa. Recuerda que un agente puede ser un blanco válido para este agente aunque este agente no sea el agente activo."
                 }
             ],
             "uniqueActions": [],
@@ -1590,6 +1605,16 @@
                     }
                 },
                 {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                },
+                {
                     "name": "Maza de energía",
                     "type": "melee",
                     "stats": {
@@ -1613,7 +1638,7 @@
             "abilities": [
                 {
                     "name": "Vector de sombra",
-                    "description": "Una vez por punto de inflexión, puedes usar el ardid de tiroteo Serpiente enroscada o Desvanecerse en la oscuridad por 0PM si el agente FILOSIERPE amigo especificado es un NEÓFITO visible para este agente."
+                    "description": "Una vez por punto de inflexión, puedes usar el ardid de tiroteo Serpiente enroscada o Desvanecerse en la oscuridad por 0PM si el agente <span class=\"faction\">FILOSIERPE</span> amigo especificado es un <b>NEÓFITO</b> visible para este agente."
                 }
             ],
             "uniqueActions": [],
@@ -1637,7 +1662,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Alcance 6\", Buscadora (Ligero), Saturación, Hipersentido"
+                        "RA": "Alcance 6\", Buscadora (Ligero), Saturación, Hipersentido<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -1673,12 +1698,16 @@
             ],
             "abilities": [
                 {
+                    "name": "<span class=\"faction\">*</span>Hipersentido",
+                    "description": "Cuando este agente dispara con este perfil de arma, los agentes enemigos no pueden estar ofuscados."
+                },
+                {
                     "name": "Pistolero experto",
                     "description": "Este agente puede realizar dos acciones de <b>Disparar</b> durante su activación."
                 },
                 {
                     "name": "Inspiración heroica",
-                    "description": "Siempre que un agente NEÓFITO FILOSIERPE amigo a 3\" o menos de este agente y visible para él dispara, combate o contraataca, si este agente ha incapacitado a un agente enemigo durante este punto de inflexión, las armas de ese agente amigo tienen la regla de armas Severa."
+                    "description": "Siempre que un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo a 3\" o menos de este agente y visible para él dispara, combate o contraataca, si este agente ha incapacitado a un agente enemigo durante este punto de inflexión, las armas de ese agente amigo tienen la regla de armas Severa."
                 }
             ],
             "uniqueActions": [],
@@ -1719,15 +1748,15 @@
             "abilities": [
                 {
                     "name": "Espadachín experto",
-                    "description": "Este agente puede realizar dos acciones de <b>Combatir</b> durante su activación. Al terminar una acción de <b>Combatir</b>, si está fuera de zona de control enemiga, puede realizar una acción libre de <b>Cargar</b> (máx 3\")."
+                    "description": "Este agente puede realizar dos acciones de <b>Combatir</b> durante su activación. Cada vez que este agente termina una acción de <b>Combatir</b>, si ya no está en la de zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso si ya ha realizado una acción de <b>Cargar</b> durante esa activación), pero no puede mover más de 3\" durante esa acción. Hacer eso no le impide realizar la acción de Correr más tarde durante esa activación."
                 },
                 {
                     "name": "Golpe veloz",
-                    "description": "Una vez por punto de inflexión, después de que un enemigo se mueva o sea situado, puedes interrumpir para realizar una acción libre de <b>Cargar</b> (máx 3\") y terminar en su zona de control."
+                    "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción en la que se mueva o sea situado, puedes interrumpir para usar esta regla. Si lo haces, este agente puede realizar inmediatamente una acción libre de <b>Cargar</b> (puedes cambiar su orden para ello), pero no puede mover más de 3\", y debe terminar ese movimiento en la zona de control de ese agente enemigo. Si eso no es posible, la interrupción se cancela y esta regla no se ha usado."
                 },
                 {
                     "name": "Postura de esgrima",
-                    "description": "Cuando combata o contraataque, puedes resolver un éxito antes del orden normal, pero debe usarse para bloquear."
+                    "description": "Cuando este agente combata o contraataque, puedes resolver un impacto con éxito antes del orden normal. Si lo haces, ese impacto con éxito debe usarse para bloquear."
                 }
             ],
             "uniqueActions": [],
@@ -1789,8 +1818,7 @@
                     "name": "Familiar escrutaalmas",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente para que obtenga una de tus fichas de Escrutaalmas.",
-                        "Cuando este agente dispara contra ese enemigo, sus armas tienen Saturación y el enemigo no puede estar ofuscado."
+                        "Elige un agente enemigo visible para este agente. Hasta el final de la batalla, o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), ese agente enemigo obtiene una de tus fichas de Escrutaalmas. Cuando este agente dispara contra un agente enemigo que tenga una de tus fichas de Escrutaalmas, todos los perfiles del rifle de francotirador de Sanctus de este agente tienen la regla de armas Saturación y ese agente enemigo no puede estar ofuscado."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -1822,7 +1850,7 @@
             "abilities": [
                 {
                     "name": "Sombra reptante",
-                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de ocultarse. Tras<b>Combatir</b>, puede realizar un Correr o <b>Retroceder</b> libre (máx 3\")."
+                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de ocultarse. Siempre que este agente realice la acción de <b>Combatir</b>, puede realizar inmediatamente una acción libre de <b>Correr</b> o <b>Retroceder</b> (con la segunda, no puede mover más de 3\"), incluso si ha realizado una acción que le impide realizar esas acciones."
                 }
             ],
             "uniqueActions": [
@@ -1830,8 +1858,7 @@
                     "name": "Asesinar",
                     "cost": "2 LPA",
                     "description": [
-                        "Elige un enemigo para el que este agente no sea visible. Realiza una Carga libre (sin el +2\") y un<b>Combatir</b> libre.",
-                        "La primera vez que golpees, puedes resolver inmediatamente otro éxito como golpe antes que tu oponente."
+                        "Elige un agente enemigo para el que este agente no sea visible. Realiza una acción libre de <b>Cargar</b> con este agente, pero que no exceda su atributo Movimiento (es decir, no le sumes 2\"), y debe terminar esa acción en la zona de control de ese agente enemigo. A continuación, realiza inmediatamente una acción libre de <b>Combatir</b> con este agente contra ese agente enemigo. La primera vez que golpees durante esa acción, puedes resolver inmediatamente otro de tus éxitos como un golpe (antes que tu oponente)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de trabarse."
                 },
@@ -1839,8 +1866,7 @@
                     "name": "Familiar escrutaalmas",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un enemigo visible para que obtenga una ficha de Escrutaalmas.",
-                        "Al<b>Combatir</b> contra él, la biodaga tiene Brutal y Equilibrada."
+                        "Elige un agente enemigo visible para este agente. Hasta el final de la batalla, o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), ese agente enemigo obtiene una de tus fichas de Escrutaalmas. Cuando este agente combate o contraataca contra un agente enemigo que tenga una de tus fichas de Escrutaalmas, su biodaga de Sanctus tiene las reglas de armas Brutal y Equilibrada."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -1894,6 +1920,16 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 12\", Severa, Aturdidora"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
                         "Dñ": "3/4",
                         "RA": "Alcance 12\", Severa, Aturdidora"
                     }
@@ -1968,7 +2004,7 @@
             "abilities": [
                 {
                     "name": "Bípode de arma pesada",
-                    "description": "Si no se ha movido o es una reacción, el arma tiene Incesante; si ya la tenía, tiene Implacable."
+                    "description": "Cuando este agente dispara con un arma de su tarjeta de datos, si no se ha movido durante la activación o si es una reacción, esta arma tiene la regla de armas Incesante; si el arma ya tenía esa regla de armas (p. ej. debido a la regla de facción Emboscada del Culto), tiene la regla de armas Implacable. Ten en cuenta que este agente no tiene prohibido moverse tras disparar."
                 }
             ],
             "uniqueActions": [],
@@ -2004,16 +2040,26 @@
                         "Dñ": "3/3",
                         "RA": "Alcance 6\""
                     }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
                 }
             ],
             "abilities": [
                 {
                     "name": "Portador del icono",
-                    "description": "Trata el LPA de este agente como 1 mayor al determinar el control de un marcador."
+                    "description": "Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuese 1 mayor de lo que es. Ten en cuenta que esto no es un cambio al atributo LPA, por lo que cualquier cambio es acumulativo con esto."
                 },
                 {
                     "name": "Derrocar a los opresores",
-                    "description": "Una vez por punto de inflexión, cuando un aliado a 6\" es incapacitado, puede realizar un disparo libre o usar un ardid por 0PM antes de ser retirado."
+                    "description": "Una vez por punto de inflexión, cuando un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado es incapacitado estando a 6\" o menos de este agente y visible para él, puede o bien realizar una acción libre de <b>Disparar</b> (puedes cambiar su orden para ello), o bien puedes usar un ardid de tiroteo Un plan gestado hace generaciones por 0PM si ese agente incapacitado es el agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo especificado. A continuación es retirado de la zona de aniquilación de forma normal."
                 }
             ],
             "uniqueActions": [],
@@ -2054,7 +2100,7 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Al activarse, puedes activar a otro Combatiente amigo inmediatamente después."
+                    "description": " Cuando este agente quede usado, debes activar a continuación otro agente <b>COMBATIENTE</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
                 }
             ],
             "uniqueActions": [],
@@ -3979,7 +4025,7 @@
                     "name": "ASALTO CON ANTORCHA CELESTE",
                     "cost": "2PA",
                     "description": [
-                        "Realiza una acción libre de <b>Reposicionarse</b> con este agente. Durante esa acción, este debe VOLAR y puede mover 2\" adicionales. A continuación, realiza una acción libre de Disparar. Solo puedes elegie un lanzallamas (antorcha celeste) para dicha acción de Disparar."
+                        "Realiza una acción libre de <b>Reposicionarse</b> con este agente. Durante esa acción, este debe VOLAR y puede mover 2\" adicionales. A continuación, realiza una acción libre de <b>Disparar</b>. Solo puedes elegie un lanzallamas (antorcha celeste) para dicha acción de <b>Disparar</b>."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si tiene una orden de ocultarse, o si está en la zona de control de un agente enemigo."
                 }
@@ -4219,7 +4265,7 @@
                 },
                 {
                     "name": "Tirotear",
-                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados (incluyendo a este, si procede), este agente puede realizar una acción libre de Disparar (para ello, cambia su orden a trabarse), pero solo puede tomar como blanco a ese agente enemigo con sus pistolas láser potenciadas (concentrado), y solo puedes tirar tantos dados de ataque como los dados de ataque descartados del oponente más 1 (hasta un máximo de 4)."
+                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados (incluyendo a este, si procede), este agente puede realizar una acción libre de <b>Disparar</b> (para ello, cambia su orden a trabarse), pero solo puede tomar como blanco a ese agente enemigo con sus pistolas láser potenciadas (concentrado), y solo puedes tirar tantos dados de ataque como los dados de ataque descartados del oponente más 1 (hasta un máximo de 4)."
                 }
             ],
             "uniqueActions": [],
@@ -4385,7 +4431,7 @@
                 },
                 {
                     "name": "Enérgico",
-                    "description": "Siempre que este agente realice la acción de Combatir o Disparar, puede realizar inmediatamente después una acción libre de Correr. Puede hacerlo incluso si ha realizado una acción de Cargar durante esta activación, pero solo puede usar la distancia restante que le quedase de esa acción de Cargar (hasta un máximo de 3\")."
+                    "description": "Siempre que este agente realice la acción de Combatir o <b>Disparar</b>, puede realizar inmediatamente después una acción libre de Correr. Puede hacerlo incluso si ha realizado una acción de Cargar durante esta activación, pero solo puede usar la distancia restante que le quedase de esa acción de Cargar (hasta un máximo de 3\")."
                 }
             ],
             "uniqueActions": [],
@@ -4456,11 +4502,11 @@
             "abilities": [
                 {
                     "name": "Máquina",
-                    "description": "Este agente solo puede realizar acciones de Correr, Disparar, Reposicionarse y Retroceder. No puede <b>Contraatacar</b>, asistir en un combate ni usar armas que no figuren en su tarjeta de datos."
+                    "description": "Este agente solo puede realizar acciones de Correr, <b>Disparar</b>, Reposicionarse y Retroceder. No puede <b>Contraatacar</b>, asistir en un combate ni usar armas que no figuren en su tarjeta de datos."
                 },
                 {
                     "name": "Torreta",
-                    "description": "Este agente puede realizar dos acciones de Disparar durante su activación."
+                    "description": "Este agente puede realizar dos acciones de <b>Disparar</b> durante su activación."
                 }
             ],
             "uniqueActions": [],
@@ -4652,7 +4698,7 @@
                 },
                 {
                     "name": "Omni-Scrambler",
-                    "description": "como <b>GAMBITO ESTRATÉGICO</b>. Selecciona un operativo enemigo visible para este operativo y tira 1D3. En la siguiente fase de Tiroteo, ese operativo enemigo no podrá activarse ni realizar acciones hasta que se cumpla una de las siguientes condiciones: <li>Tu oponente ha activado un número de operativos enemigos igual al resultado del D3.</li> <li>Es el último operativo enemigo en ser activado.</li>"
+                    "description": "como <b>GAMBITO ESTRATÉGICO</b>. Selecciona un operativo enemigo visible para este operativo y tira 1D3. En la siguiente fase de Tiroteo, ese operativo enemigo no podrá activarse ni realizar acciones hasta que se cumpla una de las siguientes condiciones: <ul><li>Tu oponente ha activado un número de operativos enemigos igual al resultado del D3.</li></ul> <ul><li>Es el último operativo enemigo en ser activado.</li>"
                 }
             ],
             "uniqueActions": [],
@@ -5048,7 +5094,7 @@
             "abilities": [
                 {
                     "name": "Capa de camuflaje",
-                    "description": "Cuando un agente dispare contra este agente: <li>Ignora la regla de arma Saturación.</li> <li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li>"
+                    "description": "Cuando un agente dispare contra este agente: <ul><li>Ignora la regla de arma Saturación. </li></ul><ul><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li>"
                 }
             ],
             "uniqueActions": [

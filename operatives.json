@@ -2146,7 +2146,7 @@
                         "A": "6",
                         "HP/HA": "5+",
                         "Dñ": "4/5",
-                        "RA": "Alcance 8\", Área 1\", Salva"
+                        "RA": "Alcance 8\", Área 1\", Salva<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -2172,8 +2172,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Jefe <span class=\"faction\">DEMOLEDOREZ</span>",
-                    "description": "Cuando este agente realice una acción de <b>Combatir</b> o <b>Disparar</b> (salvo Ponerse en guardia), ganas 1 punto de Demolizión."
+                    "name": "Jefe Demoledorez",
+                    "description": "Cuando este agente realice una acción de <b>Combatir</b> o <b>Disparar</b> (salvo <b>Ponerse en guardia</b>), ganas 1 punto de Demolizión."
+                },
+                {
+                    "name": "<span class=\"faction\">*</span>Salva",
+                    "description": "Selecciona hasta dos blancos válidos diferentes que no estén en la zona de control de agentes amigos. Dispara con esta arma a ambos blancos principales en el orden que elijas, y luego a todos los blancos secundarios restantes del mismo modo (tira cada secuencia por separado). No puedes disparar a cada blanco (principal y secundario) más de una vez durante la acción."
                 }
             ],
             "uniqueActions": [],
@@ -2184,20 +2188,20 @@
             "id": "bomb-squig",
             "name": "GARRAPATO BOMBA DEMOLEDOR",
             "stats": {
-                "LPA": "1",
+                "LPA": "2",
                 "MOVER": "6\"",
                 "SALVACIÓN": "5+",
-                "HERIDAS": "6"
+                "HERIDAS": "5"
             },
             "weapons": [
                 {
-                    "name": "¡CUIDAO!",
+                    "name": "Explozivoz",
                     "type": "ranged",
                     "stats": {
-                        "A": "5",
-                        "HP/HA": "2+",
+                        "A": "6",
+                        "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Alcance 6\", Área 2\", Letal 5+, Críticos de penetración 1, Limitada 1"
+                        "RA": "Área 1\", Limitada 1, Explosiva<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -2206,207 +2210,36 @@
                     "stats": {
                         "A": "3",
                         "HP/HA": "4+",
-                        "Dñ": "3/3",
+                        "Dñ": "4/5",
                         "RA": "-"
                     }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Garrapato bomba",
-                    "description": "Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, <b>Reposicionarse</b> e ¡Inzentivo explosivo!."
+                    "name": "<span class=\"faction\">*</span>Explosiva",
+                    "description": "Este agente puede realizar la acción <b>Disparar</b> con esta arma mientras esté en la zona de control de un agente enemigo. No selecciones un blanco válido. En su lugar, este agente siempre es el blanco principal y no puede estar tras cobertura u ofuscado."
                 },
                 {
-                    "name": "Detonación próxima",
-                    "description": "La primera vez que este agente se encuentre a 1\" de un agente enemigo, el agente activo debe interrumpir su activación/reacción para realizar una acción libre de <b>Disparar</b> con el arma ¡CUIDAO!. Tras resolver el ataque, este agente es incapacitado."
-                }
-            ],
-            "uniqueActions": [
+                    "name": "Eztúpido",
+                    "description": "Durante la fase de tiroteo, al determinar la orden de este agente, no puedes elegir ocultarse. Este agente no puede realizar otras acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b> o <b>Reposicionarse</b>, ni usar armas que no figuren en su tarjeta de datos."
+                },
                 {
-                    "name": "¡Inzentivo explosivo!",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Realiza una acción de <b>Disparar</b> gratuita con el arma ¡CUIDAO!.",
-                        "Tras resolver los ataques de esa acción, este agente resulta incapacitado."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "name": "¡Bum!",
+                    "description": "Si este agente quede incapacitado durante la batalla sin haber usado sus explozivoz, tira un D6, o dos D6 si quieres. Si algún dado saca 4+, este agente realiza una acción libre de <b>Disparar</b> con sus explozivoz antes de ser retirado de la zona de aniquilación."
+                },
+                {
+                    "name": "Prescindible",
+                    "description": "Este agente se ignora en las operaciones de asesinato/eliminación del oponente (cuando esté incapacitado y a la hora de determinar el número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si huye/sobrevive/queda incapacitado, al determinar cuántos agentes deben huir/sobrevivir/quedar incapacitados, etc.)"
                 }
             ],
+            "uniqueActions": [],
             "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, GARRAPATO BOMBA",
             "peana": "25"
         },
         {
-            "id": "komando-boy",
-            "name": "CHIKO KOMANDO DEMOLEDOR",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "4+",
-                "HERIDAS": "11"
-            },
-            "weapons": [
-                {
-                    "name": "Piztola bólter",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\""
-                    }
-                },
-                {
-                    "name": "Rebanadora",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "-"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Erudito del zigilo",
-                    "description": "Este agente puede reaccionar independientemente de su orden."
-                }
-            ],
-            "uniqueActions": [
-                {
-                    "name": "¡Lanzamiento de rebanadora!",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Realiza un ataque a distancia contra un blanco visible a 6\" o menos.",
-                        "Usa el siguiente perfil: ATQ 4, IMP 3+, DAÑO 4/5."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
-                }
-            ],
-            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, CHIKO KOMANDO",
-            "peana": "32"
-        },
-        {
-            "id": "stormboy",
-            "name": "CHIKO DE CHOQUE DEMOLEDOR",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "4+",
-                "HERIDAS": "11"
-            },
-            "weapons": [
-                {
-                    "name": "Piztola de inducción",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\""
-                    }
-                },
-                {
-                    "name": "Rebanadora",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "-"
-                    }
-                }
-            ],
-            "abilities": [],
-            "uniqueActions": [
-                {
-                    "name": "¡Kohete a tope!",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Realiza una acción de <b>Correr</b> o Carga libre.",
-                        "Durante ese movimiento, este agente puede volar (ignora la distancia vertical y agentes)."
-                    ],
-                    "description_no": "Si el resultado de 1D6 es 1, sufre 1D3 daños mortales antes de mover. No puede realizarse en zona de control enemiga."
-                }
-            ],
-            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, CHIKO DE CHOQUE",
-            "peana": "32"
-        },
-        {
-            "id": "burner-boy",
-            "name": "CHIKO DE AKUCHILLAMIENTO DEMOLEDOR",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "4+",
-                "HERIDAS": "11"
-            },
-            "weapons": [
-                {
-                    "name": "Akuchillador",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/3",
-                        "RA": "Alcance 6\", Ráfaga 1\", Saturación"
-                    }
-                },
-                {
-                    "name": "Akuchillador (combate)",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/3",
-                        "RA": "Saturación"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Akuchillar",
-                    "description": "Cada vez que este agente realice una acción de <b>Disparar</b> o<b>Combatir</b> con su akuchillador, si sacas un éxito crítico, el agente enemigo queda ardiendo."
-                }
-            ],
-            "uniqueActions": [],
-            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, CHIKO DE AKUCHILLAMIENTO",
-            "peana": "32"
-        },
-        {
-            "id": "wrecker-boy",
-            "name": "CHIKO ROMPEDOR DEMOLEDOR",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "4+",
-                "HERIDAS": "11"
-            },
-            "weapons": [
-                {
-                    "name": "Martillo rompedor",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "5/6",
-                        "RA": "Aturdidora, Brutal"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "¡Aplastarlo todo!",
-                    "description": "Cuando este agente combate o contraataca, puede usar un éxito normal para bloquear dos éxitos normales enemigos."
-                }
-            ],
-            "uniqueActions": [],
-            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, CHIKO ROMPEDOR",
-            "peana": "32"
-        },
-        {
-            "id": "squig-assault-boy",
-            "name": "CHIKO DE AZALTO DEMOLEDOR",
+            "id": "tronch-wrecka",
+            "name": "TRONCHADEMOLEDOR",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -2415,53 +2248,7 @@
             },
             "weapons": [
                 {
-                    "name": "Lanza exploziiva",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "Choque, Críticos de penetración 1"
-                    }
-                }
-            ],
-            "abilities": [],
-            "uniqueActions": [
-                {
-                    "name": "¡Carga ezpectacular!",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Realiza una acción de Carga gratuita.",
-                        "Si terminas en zona de control enemiga, inflige 1D3 daños mortales a un enemigo a 1\"."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
-                }
-            ],
-            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, CHIKO DE AZALTO",
-            "peana": "32"
-        },
-        {
-            "id": "tankbusta-boy",
-            "name": "CHIKO TANQUE DEMOLEDOR",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "4+",
-                "HERIDAS": "11"
-            },
-            "weapons": [
-                {
-                    "name": "Lanzakobetez",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "4/5",
-                        "RA": "Alcance 12\", Área 1\""
-                    }
-                },
-                {
-                    "name": "Rebanadora",
+                    "name": "Palokabum (golpetazo)",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -2469,63 +2256,217 @@
                         "Dñ": "4/5",
                         "RA": "-"
                     }
-                }
-            ],
-            "abilities": [],
-            "uniqueActions": [
+                },
                 {
-                    "name": "¡Kabum!",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Realiza una acción de <b>Disparar</b> gratuita con el lanzakobetez.",
-                        "Suma 1 al atributo de Daño (normal y crítico) para esta acción."
-                    ],
-                    "description_no": "No se puede realizar si el agente ha movido más de 3\" en esta activación."
-                }
-            ],
-            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, CHIKO TANQUE",
-            "peana": "32"
-        },
-        {
-            "id": "brute-boy",
-            "name": "CHIKO BRUTOTE DEMOLEDOR",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "4+",
-                "HERIDAS": "13"
-            },
-            "weapons": [
-                {
-                    "name": "Rompenudillos",
+                    "name": "Palokabum (detonar)",
                     "type": "melee",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "5/6",
-                        "RA": "Brutal, Choque"
+                        "Dñ": "*",
+                        "RA": "Letal 5+, Limitada 1, Detonar<span class=\"faction\">*</span>"
                     }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Blindado",
-                    "description": "Tu oponente no puede retener éxitos críticos con resultados menores de 6 contra este agente."
+                    "name": "Temperamento temerario",
+                    "description": "El daño normal de 4 o más inflige 1 daño menos a este agente; si este agente tiene una orden de Trabarse, el daño crítico de 4 o más también inflige 1 daño menos a este agente."
+                },
+                {
+                    "name": "<span class=\"faction\">*</span>Detonar",
+                    "description": " La primera vez que este agente fuese a infligir daño a un agente enemigo con este perfil de arma durante la batalla, inflige por separado 1D6+6 de daño a ese agente y a cada otro agente dentro de la zona de control del agente enemigo si es un éxito normal, o 2D6+6 de daño si es un éxito crítico. Luego la acción termina y ganas 1 punto de Demolizión, más 1 punto adicional por cada agente que haya quedado incapacitado durante esa acción. El daño de esta arma no puede ignorarse ni reducirse."
                 }
             ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, TRONCHADOR, DEMOLEDOR",
+            "peana": "32"
+        },
+        {
+            "id": "tronch-figth",
+            "name": "TRONCHAPELEÓN",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "12"
+            },
+            "weapons": [
+                {
+                    "name": "Martillo brutal",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "5/6",
+                        "RA": "Brutal"
+                    }
+                }
+            ],
+            "abilities": [],
             "uniqueActions": [
                 {
-                    "name": "¡Embeztida demoledora!",
+                    "name": "ROMPER KOZAZ",
                     "cost": "1 LPA",
                     "description": [
-                        "Realiza una acción de Carga gratuita.",
-                        "Puedes mover a través de agentes enemigos (pero no terminar sobre ellos)."
+                        "Selecciona un elemento de terreno en la zona de control de este agente. Si es terreno equipo, retíralo. Si no, sitúa una de tus fichas de Brecha en la zona de control de este agente, lo más cerca posible de ese terreno. Cuando un agente esté a 1\" o menos de esa ficha, considera como terreno Accesible las partes de ese elemento de terreno que no tengan más de 1\" de grosor."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo, o si un elemento de terreno no está en su zona de control."
                 }
             ],
-            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, CHIKO BRUTOTE",
-            "peana": "40"
+            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, TRONCHADOR, LUCHADOR",
+            "peana": "32"
+        },
+        {
+            "id": "tronch-crush",
+            "name": "TRONCHAMACHAKADOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "12"
+            },
+            "weapons": [
+                {
+                    "name": "Kiebranudilloz",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "5/6",
+                        "RA": "Brutal, Choque, Destrozar<span class=\"faction\">*</span>"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "<span class=\"faction\">*</span>Destrozar",
+                    "description": "Cuando golpees, puedes mover en línea recta al agente enemigo hasta 1\". Si lo haces, debe terminar el movimiento más lejos de este agente y en un lugar donde pueda situarse. A continuación, mueve a este agente en línea recta hasta 1\", pero debe terminar ese movimiento en la zona de control del agente enemigo (si no es posible, no puedes moverlo)."
+                },
+                {
+                    "name": "Blindado",
+                    "description": "Cuando un agente enemigo dispare a este agente, o este agente combata o contraataque, tu oponente no puede guardar como éxitos críticos los resultados de dados de ataque inferiores a 6 (p. ej. de resultas de las reglas de armas Letal, Desgarradora o Severa)."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, TRONCHADOR, MACHAKADOR",
+            "peana": "32"
+        },
+        {
+            "id": "gunner-tankdeztroyer",
+            "name": "ARTILLERO PETATANKEZ",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "12"
+            },
+            "weapons": [
+                {
+                    "name": "Lanzakobetez",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "6",
+                        "HP/HA": "5+",
+                        "Dñ": "4/5",
+                        "RA": "Area 1\""
+                    }
+                },
+                {
+                    "name": "Lanzakobetez pezado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "6",
+                        "HP/HA": "4+",
+                        "Dñ": "4/5",
+                        "RA": "Area 1\", Pesada (solo Correr)"
+                    }
+                },
+                {
+                    "name": "Puñoz",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Ramalazo kompetitivo",
+                    "description": "Una vez por acción de <b>Disparar</b>, si este agente dispara a un agente enemigo al que otro agente amigo haya disparado durante este punto de inflexión, ganas 1 punto de Demolizión. Determina esto cuando selecciones un blanco válido, pero al hacerlo puedes incluir objetivos secundarios (p. ej. gracias a la regla de arma Área)"
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, PETATANKEZ, ARTILLERO",
+            "peana": "32"
+        },
+        {
+            "id": "rocketboy-tankdeztroyer",
+            "name": "KOBETEADOR PETATANKEZ",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "12"
+            },
+            "weapons": [
+                {
+                    "name": "Kobete induktor",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "6",
+                        "HP/HA": "5+",
+                        "Dñ": "-",
+                        "RA": "Pesada (solo Reposicionarse), Limitada 1, Indukzión<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Lanzakobetez",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "6",
+                        "HP/HA": "5+",
+                        "Dñ": "4/5",
+                        "RA": "Area 1\""
+                    }
+                },
+                {
+                    "name": "Bateria de kobetez",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "6",
+                        "HP/HA": "5+",
+                        "Dñ": "4/5",
+                        "RA": "Área 2\", Pesada (solo Reposicionarse), Limitada 1, Implacable"
+                    }
+                },
+                {
+                    "name": "Puñoz",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "<span class=\"faction\">*</span>Indukzion",
+                    "description": "No selecciones un blanco válido. En su lugar, sitúa tu marcador de Indukzión visible para este agente, o en terreno ventajoso de un elemento de terreno visible para este agente. Ese marcador gana 1 punto de Indukzión (usa las fichas de puntos de Indukzión); luego tira los dados de ataque: el marcador gana 1 punto de Indukzión adicional por cada éxito (hasta un máximo de 3 puntos adicionales). Inflige 1D3 de daño por separado a cada agente a x\" o menos de ese marcador, donde x equivale a los puntos de Indukzión de ese marcador. Después la acción finaliza."
+                },
+                {
+                    "name": "Onda de choke",
+                    "description": "Siempre que un agente esté a x\" o menos de tu marcador de Indukzión (ver columna contigua), empeora en 1 el atributo Imp de sus armas y resta 2\" a su atributo Movimiento. Esto se acumula con los efectos de estar herido. X equivale a los puntos de Indukzión de ese marcador. En el paso de preparación de cada fase de estrategia, resta 1 a los puntos de Indukzión que tenga tu marcador de Indukzión. Si un marcador de Indukzión llega a tener 0 puntos de Indukzión, retíralo del juego."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">DEMOLEDOREZ</span>, ORKO, PETATANKEZ, KOBETEADOR",
+            "peana": "32"
         }
     ],
     "wolf-scouts": [ 

@@ -2518,7 +2518,7 @@
                 },
                 {
                     "name": "Rudo veterano",
-                    "description": "La primera vez que este agente quedaría incapacitado durante la batalla, no queda incapacitado, le queda 1 herida restante y no puede ser incapacitado durante el resto de la acción. Todos los dados de ataque restantes se descartan."
+                    "description": "La primera vez que este agente quedaría incapacitado durante la batalla, no queda incapacitado, le queda 1 herida restante y no puede ser incapacitado durante el resto de la acción. Todos los dados de ataque restantes se descartan.  (incluyendo los tuyos si este agente está combatiendo o contraatacando). No puedes usar el ardid de tiroteo Contraataque para infligir daño como resultado de el ardid de estrategia Luchadores salvajes al final de esa acción."
                 }
             ],
             "uniqueActions": [],
@@ -2549,16 +2549,16 @@
             "abilities": [
                 {
                     "name": "Depredador instintivo",
-                    "description": "Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Retroceder</b>,<b>Combatir</b> y <b>Reposicionarse</b>. Puede realizar la acción <b>Cargar</b> mientras tiene una orden de Ocultarse."
+                    "description": "Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, <Ponerse en guardia</b> y <b>Reposicionarse</b>. No puede usar armas que no estén en su hoja de datos. Este agente puede realizar la acción de <b>Cargar</b> mientras tenga una orden de ocultarse."
                 },
                 {
                     "name": "Sin parar",
-                    "description": "Táctica estratégica que permite realizar una carga temprana para inmovilizar a un agente enemigo clave o a varios si realiza varias cargas con su gran peana."
+                    "description": "Una vez por batalla <b>GAMBITO ESTRATÉGICO</b>. Si el atributo LPA de este agente es 2 o más, este agente puede realizar una acción libre de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>. Si lo hace, hasta el final de su siguiente activación, resta 1 a su atributo LPA y no puede realizar ninguna de las acciones anteriores."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, LOBO FENRISIANO, BESTIA",
-            "peana": "40"
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, LOBO FENRISIANO",
+            "peana": "60x35"
         },
         {
             "id": "fang-bearer",
@@ -2566,7 +2566,7 @@
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
-                "SALVACIÓN": "4+",
+                "SALVACIÓN": "3+",
                 "HERIDAS": "13"
             },
             "weapons": [
@@ -2581,28 +2581,28 @@
                     }
                 },
                 {
-                    "name": "Pistola bólter",
+                    "name": "Pistola bólter absolvor",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\""
+                        "Dñ": "4/5",
+                        "RA": "Alcance 9\", Críticos de penetración 1"
                     }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Colmillo de Morkai",
-                    "description": "Una vez por punto de inflexión, cuando este agente combate o contraataca, puedes usar esta regla. Si lo haces, el arma de combate tiene la regla de arma Severa."
+                    "name": "Cirugía espiritual",
+                    "description": "Puedes ignorar los cambios a los atributos de los agentes <span class=\"faction\">EXPLORADOR LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) por estar lesionados (incluyendo los atributos de sus armas). Los agentes <span class=\"faction\">EXPLORADOR LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) no se ven afectados por las reglas Choque ni Aturdidora de las armas enemigas, y puedes ignorar los cambios a su atributo LPA. Recuerda que los agentes amigos solo tienen estas reglas si incluyes a este agente en la batalla (incluso si luego resulta incapacitado)."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "Tratamiento de campo",
+                    "name": "BÁLSAMOS CURATIVOS",
                     "cost": "1 LPA",
                     "description": [
-                        "Selecciona un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo a 1\" o menos para que recupere 2D3 heridas perdidas."
+                        "Elige un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo en la zona de control de este agente. Ese agente recupera hasta 1D3+3 heridas perdidas."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -2611,23 +2611,33 @@
             "peana": "32"
         },
         {
-            "id": "runic-priest",
+            "id": "rune-priest-skjald",
             "name": "SACERDOTE RÚNICO ESCALDO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
-                "SALVACIÓN": "4+",
+                "SALVACIÓN": "3+",
                 "HERIDAS": "13"
             },
             "weapons": [
                 {
-                    "name": "Báculo rúnico",
-                    "type": "melee",
+                    "name": "Fauces del Mundo Lobo",
+                    "type": "ranged",
                     "stats": {
-                        "A": "4",
+                        "A": "5",
                         "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "Aturdidora, Letal 5+"
+                        "Dñ": "3/5",
+                        "RA": "<b>PSÍQUICA</b>, Área 2\", Severa"
+                    }
+                },
+                {
+                    "name": "Golpe de trueno",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "2+",
+                        "Dñ": "2/2",
+                        "RA": "<b>PSÍQUICA</b>, Alcance 6\", Aturdidora, Buscadora (Ligero), Ráfaga 2\", Saturación"
                     }
                 },
                 {
@@ -2639,67 +2649,91 @@
                         "Dñ": "3/4",
                         "RA": "Alcance 8\""
                     }
+                },
+                {
+                    "name": "Báculo rúnico",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "<b>PSÍQUICA</b>, Choque"
+                    }
                 }
             ],
-            "abilities": [],
+            "abilities": [
+                {
+                    "name": "Lanzar runas",
+                    "description": "Tras elegir este agente, antes de la batalla, tira tres D6 y déjalos a un lado. Por cada 1-4, puedes usar el ardid de tiroteo Repetición de mando por 0PM una vez durante el punto de inflexión que coincida con el resultado. Por cada 5-6, ganas 1PM. Por ejemplo, si obtuviste 2, 2, y 5, ganas 1PM y durante el segundo punto de inflexión podrás usar Repetición de mando dos veces por 0PM."
+                }
+            ],
             "uniqueActions": [
                 {
                     "name": "Llamar a la tormenta",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo a 6\" o menos de este agente.",
-                        "Hasta el inicio de la siguiente activación de ese agente, se considera que está ofuscado (incluso si no tiene orden de Ocultarse)."
+                        "<b>PSÍQUICA</b>. Retira tu marcador de Tormenta de la zona de aniquilación (si lo hay). A continuación, colócalo en la zona de aniquilación.",
+                        "<b>PSÍQUICA</b>. Alternativamente, en lugar de resolver el efecto anterior, elige 1 agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado, o hasta que realice esta acción de nuevo (lo que ocurra antes), siempre que ese agente amigo esté en tu <b>TORMENTA</b> y a más de 3\" del agente activo, estará ofuscado."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, SACERDOTE RÚNICO",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PSÍQUICO, SACERDOTE RÚNICO ESCALDO",
             "peana": "32"
         },
         {
-            "id": "trapper",
-            "name": "TRAMPERO EXPLORADOR LOBO",
+            "id": "trapmaster",
+            "name": "MAESTRO TRAMPERO EXPLORADOR LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
-                "SALVACIÓN": "4+",
+                "SALVACIÓN": "3+",
                 "HERIDAS": "13"
             },
             "weapons": [
                 {
-                    "name": "Cuchillo de combate",
+                    "name": "Filopuñal",
                     "type": "melee",
                     "stats": {
-                        "A": "4",
+                        "A": "5",
                         "HP/HA": "3+",
-                        "Dñ": "3/5",
+                        "Dñ": "4/5",
                         "RA": "-"
                     }
                 },
                 {
-                    "name": "Escopeta de explorador",
+                    "name": "Pistola de plasma (normal)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/3",
-                        "RA": "Alcance 6\""
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Alcance 8\", Penetración 1"
+                    }
+                },
+                {
+                    "name": "Pistola de plasma (sobrecarga)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Alcance 8\", Letal 5+, Penetración 1, Sobrecalentamiento"
                     }
                 }
             ],
-            "abilities": [],
-            "uniqueActions": [
+            "abilities": [
                 {
                     "name": "Mina de disrupción",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Coloca tu marcador de Mina de disrupción a 6\" o menos de este agente y a más de 2\" de enemigos.",
-                        "La primera vez que un enemigo se encuentre a 2\" o menos, detona: inflige 2D3 daños mortales y el agente enemigo resta 1 a su LPA hasta el final de su siguiente activación."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description": "Este agente lleva tu marcador de Mina de disrupción. Puede realizar la acción de <b>Recoger marcador</b> sobre ese marcador, pero ese marcador no puede ser colocado en la zona de control de un agente enemigo (si este agente queda incapacitado mientras lleva el marcador en cuestión y el marcador no puede ser colocado, es retirado junto con este agente)."
+                },
+                {
+                    "name": "Mina de proximidad",
+                    "description": "La primera vez que tu marcador de Mina de disrupción quede dentro de la zona de control de otro agente, retira ese marcador, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación, e inflígele 2D3+3 daños (o 1D3+6 si ese marcador está a 6” o menos horizontalmente de tu marcador de Tormenta); si no resulta incapacitado, termina su acción (si está realizando una), aunque los efectos de la misma no se hayan completado. Si no puede ser colocado, muévelo la distancia mínima hasta que pueda. Este agente se ignora de cara a esos efectos (no puede activar ese marcador ni sufrir daños debido al mismo)."
                 }
             ],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, TRAMPERO",
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, MAESTRO TRAMPERO",
             "peana": "32"
         },
         {
@@ -2708,10 +2742,20 @@
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
-                "SALVACIÓN": "4+",
+                "SALVACIÓN": "3+",
                 "HERIDAS": "13"
             },
             "weapons": [
+                {
+                    "name": "Filopuñal",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                },
                 {
                     "name": "Rifle de plasma (normal)",
                     "type": "ranged",
@@ -2729,28 +2773,129 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "5/6",
-                        "RA": "Sobrecalentada, Letal 5+, Penetración 1"
-                    }
-                },
-                {
-                    "name": "Cuchillo de combate",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/5",
-                        "RA": "-"
+                        "RA": "Letal 5+, Penetración 1, Sobrecalentada"
                     }
                 }
             ],
             "abilities": [
                 {
                     "name": "Furia de la tempestad",
-                    "description": "Siempre que este agente esté dentro de tu TORMENTA: Todos los perfiles de su rifle de plasma tienen la regla de arma Castigadora. Su rifle de plasma (sobrecarga) no tiene la regla de arma Sobrecalentada."
+                    "description": "Siempre que este agente esté dentro de tu <b>TORMENTA<b>: <ul><li>Todos los perfiles de su rifle de plasma tienen la regla de armas Castigadora.</li></ul> <ul><li>Su rifle de plasma (sobrecarga) no tiene la regla de armas Sobrecalentamiento.</li></ul>"
                 }
             ],
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, TIRADOR",
+            "peana": "32"
+        },
+        {
+            "id": "frosteye",
+            "name": "OJOGÉLIDO EXPLORADOR LOBO",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "7\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "13"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina bólter instigador (pesada)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/4",
+                        "RA": "Críticos de penetración 1, Pesada (solo Correr), Silenciosa"
+                    }
+                },
+                {
+                    "name": "Carabina bólter instigador (móvil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Críticos de penetración 1, Silenciosa"
+                    }
+                },
+                {
+                    "name": "Filopuñal",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Tormenta ejecutora",
+                    "description": "Siempre que este agente esté en tu <b>TORMENTA</b>: <ul><li>Puede realizar la acción de <b>Ponerse en guardia</b> independientemente de la zona de aniquilación (ver reglas de combate cerrado, Reglamento básico de Kill Team).</li></ul> <ul><li>Puede realizar la acción de <b>Ponerse en guardia</b> mientras tiene una orden de ocultarse, pero, si lo hace, no puede realizar más de una acción de <b>Disparar</b> durante el resto del punto de inflexión (p. ej. no puede <b>Disparar</b> durante la interrupción y durante la reacción).</li></ul>"
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "SENTIDOS DE CAZADOR",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Elige 1 de las siguientes reglas para todos los perfiles de la carabina bólter instigador de este agente. La tendrán hasta el inicio de su siguiente activación: <ul><li>Severa.</li></ul> <ul><li>Saturación, y siempre que este agente dispare con esa arma, los agentes enemigos no pueden estar ofuscados.</li></ul>"
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, OJOGÉLIDO",
+            "peana": "32"
+        },
+        {
+            "id": "hunter",
+            "name": "CAZADOR EXPLORADOR LOBO",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "7\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "13"
+            },
+            "weapons": [
+                {
+                    "name": "Filopuñal",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Pistola de plasma (normal)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Alcance 8\", Penetración 1"
+                    }
+                },
+                {
+                    "name": "Pistola de plasma (sobrecarga)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Alcance 8\", Letal 5+, Penetración 1, Sobrecalentamiento"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Temperamento fiero",
+                    "description": "Siempre que este agente esté en tu <b>TORMENTA</b>, sus armas tienen la regla de armas Severa."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, CAZADOR",
             "peana": "32"
         }
     ],

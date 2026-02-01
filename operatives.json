@@ -2954,10 +2954,10 @@
                     "name": "Khopesh prosperiano",
                     "type": "melee",
                     "stats": {
-                        "A": "4",
+                        "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Equilibrada, Letal 5+"
+                        "RA": "Letal 5+"
                     }
                 }
             ],
@@ -2967,7 +2967,7 @@
                     "name": "PROTECCIÓN DEL DESTINO",
                     "cost": "1PA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Elige un agente <span class=\"faction\">AQUELARRE DISFORME</span> amigo visible para este agente. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice de nuevo esta acción (la que ocurra antes), siempre que un agente dispare contra ese agente elegido, puedes repetir cualesquiera de tus dados de defensa."
+                        "<b>PSÍQUICA.</b> Elige un agente <span class=\"faction\">AQUELARRE DISFORME</span> amigo visible para este agente. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice de nuevo esta acción (lo que ocurra antes), siempre que un agente dispare contra ese agente elegido, puedes repetir cualesquiera de tus dados de defensa."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -2975,7 +2975,7 @@
                     "name": "SABOTEAR DESTINO",
                     "cost": "1PA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Elige un agente enemigo a 9\" o menos de este agente y visible para él. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice de nuevo esta acción (la que ocurra antes), siempre que ese agente enemigo dispare, combata o contraataque, tu oponente debe repetir sus dados de ataque con un resultado de 6, y al determinar el control de un marcador, el atributo LPA del agente enemigo se considera 1 menos de lo que es. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto."
+                        "<b>PSÍQUICA.</b> Elige un agente enemigo a 9\" o menos de este agente y visible para él. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice de nuevo esta acción (lo que ocurra antes), siempre que ese agente enemigo dispare, combata o contraataque, tu oponente debe repetir sus dados de ataque con un resultado de 6, y al determinar el control de un marcador, el atributo LPA del agente enemigo se considera 1 menos de lo que es. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto.r cambio es acumulable con esto."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -3088,16 +3088,6 @@
                     }
                 },
                 {
-                    "name": "Quemar mente",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "1/1",
-                        "RA": "<b>PSÍQUICA</b>, Buscadora (Ligero), Letal 5+, Saturación, Quemar mente<span class=\"faction\">*</span>"
-                    }
-                },
-                {
                     "name": "Pistola bólter infierno",
                     "type": "ranged",
                     "stats": {
@@ -3105,6 +3095,16 @@
                         "HP/HA": "3+",
                         "Dñ": "3/4",
                         "RA": "Alcance 8\", Penetración 1"
+                    }
+                },
+                {
+                    "name": "Quemar mente",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "4+",
+                        "Dñ": "1/1",
+                        "RA": "<b>PSÍQUICA</b>, Buscadora (Ligero), Letal 5+, Saturación, Quemar mente<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -3342,11 +3342,11 @@
             "abilities": [
                 {
                     "name": "Brutalidad salvaje",
-                    "description": "La primera vez que este agente realice una acción de Combatir durante cada una de sus activaciones, si no resulta incapacitado, puede realizar inmediatamente una acción libre de <b>Combatir</b> a continuación (y no hace falta que elijas al mismo agente enemigo para combatir contra él). Esto tiene preferencia sobre las restricciones de acción."
+                    "description": "La primera vez que este agente realice una acción de <b>Combatir</b> durante cada una de sus activaciones, si no resulta incapacitado, puede realizar inmediatamente una acción libre de <b>Combatir</b> a continuación (y no hace falta que elijas al mismo agente enemigo para combatir contra él). Esto tiene preferencia sobre las restricciones de acción."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "AQUELARRE DISFORME, CAOS, TZAANGOR, CAMPEÓN",
+            "keywords": "<span class=\"faction\">AQUELARRE DISFORME</span>, CAOS, TZAANGOR, CAMPEÓN",
             "peana": "32"
         },
         {
@@ -3481,7 +3481,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "AQUELARRE DISFORME, CAOS, TZAANGOR, COMBATIENTE",
+            "keywords": "<span class=\"faction\">AQUELARRE DISFORME</span>, CAOS, TZAANGOR, COMBATIENTE",
             "peana": "32"
         }
     ],
@@ -3495,7 +3495,7 @@
                 "SALVACIÓN": "4+",
                 "HERIDAS": "9"
             },
-            "weapons": [
+            "weapons ": [
                 {
                     "name": "Pistola fundidora",
                     "type": "ranged",
@@ -3580,7 +3580,7 @@
             "abilities": [
                 {
                     "name": "Liderar la actuación",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> de una vez por batalla. Si este agente está en la zona de aniquilación, cambia la ALEGORÍA que esté activa actualmente por cualquier otra ALEGORÍA de tu elección (incluso si ya se ha usado esa batalla)."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> de una vez por batalla. Si este agente está en la zona de aniquilación, cambia la <b>ALEGORÍA</b> que elegiste para tu comando. Ten en cuenta que la regla de <b>GALARDÓN</b> que tengan los agentes amigos también cambiará."
                 }
             ],
             "uniqueActions": [],
@@ -3602,19 +3602,19 @@
                     "type": "ranged",
                     "stats": {
                         "A": "5",
-                        "HP/HA": "2+",
+                        "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Severa, Letal 5+"
+                        "RA": "Desgarradora, Pesada (solo Reposicionarse), Crueldad humillante<span class=\"faction\">*</span>"
                     }
                 },
                 {
-                    "name": "Cañón aullador (salva)",
+                    "name": "Cañón aullador (barrido)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/3",
-                        "RA": "Ráfaga 2\", Saturación"
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 2\", Crueldad humillante<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -3623,32 +3623,18 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "Letal 5+"
+                        "Dñ": "3/4",
+                        "RA": "Desgarradora"
                     }
                 }
             ],
-            "abilities": [],
-            "uniqueActions": [
+            "abilities": [
                 {
-                    "name": "Muerte trágica",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Elige un agente enemigo a 8\" o menos de este agente y visible para él.",
-                        "Hasta el inicio de la siguiente activación de ese agente enemigo, cada vez que dicho agente realice una acción de Mover, sufre 1D3 daños mortales."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
-                },
-                {
-                    "name": "Muerte piadosa",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Realiza una acción de <b>Disparar</b> gratuita con el perfil concentrado del cañón aullador.",
-                        "En esa acción, el arma tiene la regla de arma Buscadora (Ligero)."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "name": "<span class\"faction\">*</span>Crueldad humillante",
+                    "description": "Si el blanco de esta arma no resulta incapacitado pero alguno de tus dados de ataque inflige daño, el blanco obtiene una de tus fichas de Crueldad humillante (si no tiene una ya). Mientras un enemigo tenga una de tus fichas de Crueldad humillante, empeora en 1 el atributo Impactar de sus armas y resta 2\" a su atributo Movimiento. Esto no se acumula con estar lesionado. Al final de la próxima activación de ese agente enemigo, retira su ficha de Crueldad humillante."
                 }
             ],
+            "uniqueActions": [],
             "keywords": "<span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span>, AELDARI, ARLEQUÍN, BUFÓN DE MUERTE",
             "peana": "25"
         },
@@ -3662,6 +3648,16 @@
                 "HERIDAS": "9"
             },
             "weapons": [
+                {
+                    "name": "Granada alucinógena",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "1/1",
+                        "RA": "Alcance 6\", Área 2\", Aturdidora, Buscadora (Ligero), Silenciosa, Letal 5+"
+                    }
+                },
                 {
                     "name": "Neurodisruptor",
                     "type": "ranged",
@@ -3688,24 +3684,18 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "Aturdidora, Letal 5+"
+                        "Dñ": "4/4",
+                        "RA": "Choque"
                     }
                 }
             ],
-            "abilities": [
-                {
-                    "name": "Psíquico",
-                    "description": "Este agente puede realizar una de las siguientes acciones psíquicas una vez por activación: Niebla de sueños, Espejo de mentes o Velo de lágrimas."
-                }
-            ],
+            "abilities": [],
             "uniqueActions": [
                 {
                     "name": "Niebla de sueños",
                     "cost": "1 LPA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Selecciona un agente <span class=\"faction\">AQUELARRE DISFORME</span> amigo visible.",
-                        "Hasta el inicio de la siguiente activación de este agente, ese agente amigo se considera que tiene una orden de Ocultarse, sea cual sea su orden actual."
+                        "<b>PSÍQUICA.</b>. Elige un agente enemigo apostado visible para este agente y tira 1D6. Hasta el final del punto de inflexión, dicho agente enemigo no podrá ser activado ni realizar acciones hasta que sea el último agente enemigo en ser activado, o hasta que el oponente haya activado tantos agentes enemigos tras esta acción como el resultado del D6 (lo que ocurra antes)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -3713,8 +3703,7 @@
                     "name": "Espejo de mentes",
                     "cost": "1 LPA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Selecciona un agente enemigo visible para este agente.",
-                        "Ambos jugadores tiran un D6; si tu resultado es mayor o igual, el enemigo sufre 1D3 daños mortales. Repite este proceso hasta que falles o el enemigo sea incapacitado."
+                        "<b>PSÍQUICA.</b> Elige un agente enemigo que sea un blanco válido para este agente y que esté a 8\" o menos de él. Ambos jugadores tiran cinco dados. Empareja tus dados con los de tu oponente que hayan obtenido el mismo resultado. Por cada pareja, inflige 1D3 daños a ese agente enemigo (hasta un máximo de 8). Por ejemplo, si has sacado <b>6, 5, 5, 2, 1</b> y tu oponente a sacado <b>6, 5, 4, 3, 1</b>, infligirías 3D3 daños a ese agente enemigo."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -3741,13 +3730,13 @@
             },
             "weapons": [
                 {
-                    "name": "Pistola shuriken",
+                    "name": "Pistola fundidora",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\", Desgarradora"
+                        "Dñ": "5/3",
+                        "RA": "Alcance 3\", Devastadora 3, Penetración 2"
                     }
                 },
                 {
@@ -3758,6 +3747,16 @@
                         "HP/HA": "3+",
                         "Dñ": "4/5",
                         "RA": "Alcance 8\", Aturdidora, Penetración 1"
+                    }
+                },
+                {
+                    "name": "Pistola shuriken",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\", Desgarradora"
                     }
                 },
                 {
@@ -3799,22 +3798,12 @@
                         "Dñ": "3/7",
                         "RA": "-"
                     }
-                },
-                {
-                    "name": "Arma de energía",
-                    "type": "melee",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "3+",
-                        "Dñ": "4/6",
-                        "RA": "Letal 5+"
-                    }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Agilidad del Arlequín",
-                    "description": "Este agente puede ignorar la distancia vertical cuando trepa, se deja caer o salta, y puede moverse a través de otros agentes (pero no terminar sobre ellos)."
+                    "name": "Suerte del Dios que ríe",
+                    "description": "Una vez por punto de inflexión, puedes usar esta regla. En tal caso, puedes usar un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> especificado (incluyendo Repetición de mando si los dados de ataque o de defensa se tiraban para este agente). No puedes elegir el mismo ardid de tiroteo para esta regla más de una vez por batalla."
                 }
             ],
             "uniqueActions": [],
@@ -3892,7 +3881,7 @@
             "abilities": [
                 {
                     "name": "Dron evasivo",
-                    "description": "<ul><li>Este agente solo puede realizar acciones de Cargar, Combatir, Correr, Guía aérea, <b>Reposicionarse</b> y <b>Retroceder</b>.</li></ul> <ul><li>Al determinar el control de marcadores de objetivo, trata el atributo LPA de este agente como si fuera 1 menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y se encuentra tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., terreno Aventajado).</li></ul> <ul><li>Cuando un agente dispare contra este agente, ignora la regla de arma Penetración.</li></ul>"
+                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Guía aérea</b>, <b>Reposicionarse</b> y <b>Retroceder</b>.</li></ul> <ul><li>Al determinar el control de marcadores de objetivo, trata el atributo LPA de este agente como si fuera 1 menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y se encuentra tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., terreno Aventajado).</li></ul> <ul><li>Cuando un agente dispare contra este agente, ignora la regla de arma Penetración.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -3900,7 +3889,7 @@
                     "name": "GUÍA AÉREA",
                     "cost": "1PA",
                     "description": [
-                        "APOYO. Hasta el inicio de la siguiente activación de este agente, cuando otro agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo a 6\" o menos de este agente y visible para él dispare contra un agente enemigo visible para este agente, las armas a distancia de dicho agente amigo tienen las reglas de armas Saturación y Letal 5+. Esto no tiene efecto si este agente está en la zona de control de un agente enemigo."
+                        "<b>APOYO</b>. Hasta el inicio de la siguiente activación de este agente, cuando otro agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo a 6\" o menos de este agente y visible para él dispare contra un agente enemigo visible para este agente, las armas a distancia de dicho agente amigo tienen las reglas de armas Saturación y Letal 5+. Esto no tiene efecto si este agente está en la zona de control de un agente enemigo."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
@@ -3952,7 +3941,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Fragmento de neutrones",
-                    "description": "Si el blanco no resulta incapacitado pero resuelves algún dado de ataque, el blanco gana una de tus fichas de Fragmento de neutrones. Siempre que un agente que tenga alguna de tus fichas de Fragmento de neutrones sea activado, inflígele 103 daños por cada ficha de Fragmento de neutrones que tenga (tira por separado por cada una)"
+                    "description": "Si el blanco no resulta incapacitado pero resuelves algún dado de ataque, el blanco gana una de tus fichas de Fragmento de neutrones. Siempre que un agente que tenga alguna de tus fichas de Fragmento de neutrones sea activado, inflígele 1D3 daños por cada ficha de Fragmento de neutrones que tenga (tira por separado por cada una)"
                 }
             ],
             "uniqueActions": [],
@@ -4003,7 +3992,7 @@
             "abilities": [
                 {
                     "name": "Ingenio espectral",
-                    "description": "Mientras este agente tenga una orden de ocultarse, tu oponente no podrá elegirlo como blanco válido a menos que esté a 6\" o menos del agente que trata de tomarlo como blanco. Ten en cuenta que esta regia no tiene efecto si el agente no es elegido como el blanco válido, p.ej., si es un blanco secundario debido a la regla de arma Área."
+                    "description": "Mientras este agente tenga una orden de ocultarse, tu oponente no podrá elegirlo como blanco válido a menos que esté a 6\" o menos del agente que trata de tomarlo como blanco. Ten en cuenta que esta regla no tiene efecto si el agente no es elegido como el blanco válido, p.ej., si es un blanco secundario debido a la regla de arma Área."
                 },
                 {
                     "name": "Camuflado",

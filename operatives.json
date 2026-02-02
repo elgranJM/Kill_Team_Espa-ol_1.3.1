@@ -197,7 +197,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo Correr)"
+                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -369,7 +369,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/4",
-                        "RA": "Buscadora (Ligero), Pesada (solo Correr), Saturación, Silenciosa"
+                        "RA": "Buscadora (Ligero), Pesada (solo <b>Correr</b>), Saturación, Silenciosa"
                     }
                 },
                 {
@@ -379,7 +379,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "2/4",
-                        "RA": "Área 1\", Pesada (solo Correr), Silenciosa"
+                        "RA": "Área 1\", Pesada (solo <b>Correr</b>), Silenciosa"
                     }
                 },
                 {
@@ -389,7 +389,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 3, Penetración 1, Pesada (solo Correr), Silenciosa"
+                        "RA": "Devastadora 3, Penetración 1, Pesada (solo <b>Correr</b>), Silenciosa"
                     }
                 },
                 {
@@ -535,7 +535,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo Correr)"
+                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -601,7 +601,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo Correr)"
+                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -850,7 +850,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/6",
-                        "RA": "Aturdidora, Penetración 1, Pesada (solo Correr)"
+                        "RA": "Aturdidora, Penetración 1, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -860,7 +860,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada (solo Correr)"
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -870,7 +870,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada (solo Correr), Ráfaga 1\""
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>), Ráfaga 1\""
                     }
                 },
                 {
@@ -1403,7 +1403,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "2/2",
-                        "RA": "Alcance 4\", Área 2\", Devastadora 1, Letal 4+, Limitada 1, Pesada (solo Reposicionarse), Saturación"
+                        "RA": "Alcance 4\", Área 2\", Devastadora 1, Letal 4+, Limitada 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
                     }
                 },
                 {
@@ -1748,7 +1748,7 @@
             "abilities": [
                 {
                     "name": "Espadachín experto",
-                    "description": "Este agente puede realizar dos acciones de <b>Combatir</b> durante su activación. Cada vez que este agente termina una acción de <b>Combatir</b>, si ya no está en la de zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso si ya ha realizado una acción de <b>Cargar</b> durante esa activación), pero no puede mover más de 3\" durante esa acción. Hacer eso no le impide realizar la acción de Correr más tarde durante esa activación."
+                    "description": "Este agente puede realizar dos acciones de <b>Combatir</b> durante su activación. Cada vez que este agente termina una acción de <b>Combatir</b>, si ya no está en la de zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso si ya ha realizado una acción de <b>Cargar</b> durante esa activación), pero no puede mover más de 3\" durante esa acción. Hacer eso no le impide realizar la acción de <b>Correr</b> más tarde durante esa activación."
                 },
                 {
                     "name": "Golpe veloz",
@@ -1790,7 +1790,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 3, Pesada (solo Correr), Silenciosa"
+                        "RA": "Devastadora 3, Pesada (solo <b>Correr</b>), Silenciosa"
                     }
                 },
                 {
@@ -1957,7 +1957,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Pesada (solo Correr)"
+                        "RA": "Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -1967,7 +1967,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Pesada (solo Correr), Ráfaga 1\""
+                        "RA": "Pesada (solo <b>Correr</b>), Ráfaga 1\""
                     }
                 },
                 {
@@ -1977,7 +1977,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "5/6",
-                        "RA": "Penetración 1, Pesada (solo Correr)"
+                        "RA": "Penetración 1, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -1987,7 +1987,7 @@
                         "A": "6",
                         "HP/HA": "4+",
                         "Dñ": "2/2",
-                        "RA": "Área 1\", Aturdidora, Pesada (solo Correr)"
+                        "RA": "Área 1\", Aturdidora, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -1997,7 +1997,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/4",
-                        "RA": "Alcance 6\", Aturdidora, Críticos de penetración 1, Pesada (solo Correr)"
+                        "RA": "Alcance 6\", Aturdidora, Críticos de penetración 1, Pesada (solo <b>Correr</b>)"
                     }
                 }
             ],
@@ -2379,7 +2379,7 @@
                         "A": "6",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Area 1\", Pesada (solo Correr)"
+                        "RA": "Area 1\", Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -2420,7 +2420,7 @@
                         "A": "6",
                         "HP/HA": "5+",
                         "Dñ": "-",
-                        "RA": "Pesada (solo Reposicionarse), Limitada 1, Indukzión<span class=\"faction\">*</span>"
+                        "RA": "Pesada (solo <b>Reposicionarse</b>), Limitada 1, Indukzión<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -2440,7 +2440,7 @@
                         "A": "6",
                         "HP/HA": "5+",
                         "Dñ": "4/5",
-                        "RA": "Área 2\", Pesada (solo Reposicionarse), Limitada 1, Implacable"
+                        "RA": "Área 2\", Pesada (solo <b>Reposicionarse</b>), Limitada 1, Implacable"
                     }
                 },
                 {
@@ -2472,7 +2472,7 @@
     "wolf-scouts": [ 
         {
             "id": "pack-leader",
-            "name": "JEFE DE MANADA EXPLORADOR LOBO",
+            "name": "JEFE DE MANADA EXPL<b>ORADOR</b> LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2522,7 +2522,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, JEFE DE MANADA",
+            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, JEFE DE MANADA",
             "peana": "32"
         },
         {
@@ -2557,12 +2557,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, LOBO FENRISIANO",
+            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, LOBO FENRISIANO",
             "peana": "60x35"
         },
         {
             "id": "fang-bearer",
-            "name": "PORTACOLMILLOS EXPLORADOR LOBO",
+            "name": "PORTACOLMILLOS EXPL<b>ORADOR</b> LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2594,7 +2594,7 @@
             "abilities": [
                 {
                     "name": "Cirugía espiritual",
-                    "description": "Puedes ignorar los cambios a los atributos de los agentes <span class=\"faction\">EXPLORADOR LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) por estar lesionados (incluyendo los atributos de sus armas). Los agentes <span class=\"faction\">EXPLORADOR LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) no se ven afectados por las reglas Choque ni Aturdidora de las armas enemigas, y puedes ignorar los cambios a su atributo LPA. Recuerda que los agentes amigos solo tienen estas reglas si incluyes a este agente en la batalla (incluso si luego resulta incapacitado)."
+                    "description": "Puedes ignorar los cambios a los atributos de los agentes <span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) por estar lesionados (incluyendo los atributos de sus armas). Los agentes <span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) no se ven afectados por las reglas Choque ni Aturdidora de las armas enemigas, y puedes ignorar los cambios a su atributo LPA. Recuerda que los agentes amigos solo tienen estas reglas si incluyes a este agente en la batalla (incluso si luego resulta incapacitado)."
                 }
             ],
             "uniqueActions": [
@@ -2602,12 +2602,12 @@
                     "name": "BÁLSAMOS CURATIVOS",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo en la zona de control de este agente. Ese agente recupera hasta 1D3+3 heridas perdidas."
+                        "Elige un agente <span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span> amigo en la zona de control de este agente. Ese agente recupera hasta 1D3+3 heridas perdidas."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PORTACOLMILLOS",
+            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PORTACOLMILLOS",
             "peana": "32"
         },
         {
@@ -2673,17 +2673,17 @@
                     "cost": "1 LPA",
                     "description": [
                         "<b>PSÍQUICA</b>. Retira tu marcador de Tormenta de la zona de aniquilación (si lo hay). A continuación, colócalo en la zona de aniquilación.",
-                        "<b>PSÍQUICA</b>. Alternativamente, en lugar de resolver el efecto anterior, elige 1 agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado, o hasta que realice esta acción de nuevo (lo que ocurra antes), siempre que ese agente amigo esté en tu <b>TORMENTA</b> y a más de 3\" del agente activo, estará ofuscado."
+                        "<b>PSÍQUICA</b>. Alternativamente, en lugar de resolver el efecto anterior, elige 1 agente <span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span> amigo. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado, o hasta que realice esta acción de nuevo (lo que ocurra antes), siempre que ese agente amigo esté en tu <b>TORMENTA</b> y a más de 3\" del agente activo, estará ofuscado."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PSÍQUICO, SACERDOTE RÚNICO ESCALDO",
+            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PSÍQUICO, SACERDOTE RÚNICO ESCALDO",
             "peana": "32"
         },
         {
             "id": "trapmaster",
-            "name": "MAESTRO TRAMPERO EXPLORADOR LOBO",
+            "name": "MAESTRO TRAMPERO EXPL<b>ORADOR</b> LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2733,12 +2733,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, MAESTRO TRAMPERO",
+            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, MAESTRO TRAMPERO",
             "peana": "32"
         },
         {
             "id": "gunner",
-            "name": "TIRADOR EXPLORADOR LOBO",
+            "name": "TIRADOR EXPL<b>ORADOR</b> LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2784,12 +2784,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, TIRADOR",
+            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, TIRADOR",
             "peana": "32"
         },
         {
             "id": "frosteye",
-            "name": "OJOGÉLIDO EXPLORADOR LOBO",
+            "name": "OJOGÉLIDO EXPL<b>ORADOR</b> LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2804,7 +2804,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo Correr), Silenciosa"
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>), Silenciosa"
                     }
                 },
                 {
@@ -2844,12 +2844,12 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, OJOGÉLIDO",
+            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, OJOGÉLIDO",
             "peana": "32"
         },
         {
             "id": "hunter",
-            "name": "CAZADOR EXPLORADOR LOBO",
+            "name": "CAZADOR EXPL<b>ORADOR</b> LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2895,7 +2895,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, CAZADOR",
+            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, CAZADOR",
             "peana": "32"
         }
     ],
@@ -3604,7 +3604,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo Reposicionarse), Crueldad humillante<span class=\"faction\">*</span>"
+                        "RA": "Desgarradora, Pesada (solo <b>Reposicionarse</b>), Crueldad humillante<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -3614,7 +3614,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 2\", Crueldad humillante<span class=\"faction\">*</span>"
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 2\", Crueldad humillante<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -3924,7 +3924,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/4",
-                        "RA": "Devastadora 2, Letal 5+, Pesada (solo Correr), Fragmento de neutrones<span class=\"faction\">*</span>"
+                        "RA": "Devastadora 2, Letal 5+, Pesada (solo <b>Correr</b>), Fragmento de neutrones<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -4268,7 +4268,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "5/3",
-                        "RA": "Alcance 3\", Devastadora 3, Limitada 1, Penetración 2, Pesada (solo Reposicionarse)"
+                        "RA": "Alcance 3\", Devastadora 3, Limitada 1, Penetración 2, Pesada (solo <b>Reposicionarse</b>)"
                     }
                 },
                 {
@@ -4506,7 +4506,7 @@
                 },
                 {
                     "name": "Enérgico",
-                    "description": "Siempre que este agente realice la acción de Combatir o <b>Disparar</b>, puede realizar inmediatamente después una acción libre de Correr. Puede hacerlo incluso si ha realizado una acción de Cargar durante esta activación, pero solo puede usar la distancia restante que le quedase de esa acción de Cargar (hasta un máximo de 3\")."
+                    "description": "Siempre que este agente realice la acción de <b>Combatir</b> o <b>Disparar</b>, puede realizar inmediatamente después una acción libre de <b>Correr</b>. Puede hacerlo incluso si ha realizado una acción de <b>Cargar</b> durante esta activación, pero solo puede usar la distancia restante que le quedase de esa acción de <b>Cargar</b> (hasta un máximo de 3\")."
                 }
             ],
             "uniqueActions": [],
@@ -4577,7 +4577,7 @@
             "abilities": [
                 {
                     "name": "Máquina",
-                    "description": "Este agente solo puede realizar acciones de Correr, <b>Disparar</b>, Reposicionarse y Retroceder. No puede <b>Contraatacar</b>, asistir en un combate ni usar armas que no figuren en su tarjeta de datos."
+                    "description": "Este agente solo puede realizar acciones de <b>Correr</b>, <b>Disparar</b>, <b>Reposicionarse</b> y <b>Retroceder</b>. No puede <b>Contraatacar</b>, asistir en un combate ni usar armas que no figuren en su tarjeta de datos."
                 },
                 {
                     "name": "Torreta",
@@ -4586,7 +4586,7 @@
             ],
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, SERVOCENTINELA",
-            "peana": "28"
+            "peana": "40"
         },
         {
             "id": "aquilon-soldier",
@@ -4622,7 +4622,7 @@
             "abilities": [
                 {
                     "name": "Inserción rápida",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> en la primera fase de estrategia. Cada agente <b>SOLDADO</b> <span class=\"faction\">TEMPESTUS AQUILON</span> amigo completamente dentro de tu zona de descenso puede realizar inmediatamente una acción libre de <b>Reposicionarse</b>, pero debe terminar dicha acción completamente a 3\" o menos de tu zona de descenso."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Cada agente <b>SOLDADO</b> <span class=\"faction\">TEMPESTUS AQUILON</span> amigo completamente dentro de tu zona de descenso puede realizar inmediatamente una acción libre de <b>Reposicionarse</b>, pero debe terminar dicha acción completamente a 3\" o menos de tu zona de descenso."
                 },
                 {
                     "name": "Aterrizaje raudo",
@@ -4656,7 +4656,7 @@
                     }
                 },
                 {
-                    "name": "Cuchillo de Combate",
+                    "name": "Filopuñal",
                     "type": "melee",
                     "stats": {
                         "A": "5",
@@ -4976,7 +4976,7 @@
     "scouts": [
         {
             "id": "scout-sergeant",
-            "name": "SARGENTO EXPLORADOR",
+            "name": "SARGENTO EXPL<b>ORADOR</b>",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -4995,16 +4995,6 @@
                     }
                 },
                 {
-                    "name": "Bólter",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "-"
-                    }
-                },
-                {
                     "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
@@ -5012,6 +5002,16 @@
                         "HP/HA": "3+",
                         "Dñ": "3/4",
                         "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
                     }
                 },
                 {
@@ -5042,16 +5042,16 @@
                 },
                 {
                     "name": "Guía y experiencia",
-                    "description": "Una vez durante cada una de las activaciones de este agente, puedes elegir un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo distinto visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                    "description": "Una vez durante cada una de las activaciones de este agente, puedes elegir un agente <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo distinto visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, LÍDER, SARGENTO",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, LÍDER, SARGENTO",
             "peana": "28"
         },
         {
             "id": "scout-heavy-gunner",
-            "name": "TIRADOR PESADO EXPLORADOR",
+            "name": "TIRADOR PESADO EXPL<b>ORADOR</b>",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5112,12 +5112,12 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, TIRADOR PESADO",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, TIRADOR PESADO",
             "peana": "28"
         },
         {
             "id": "scout-sniper",
-            "name": "FRANCOTIRADOR EXPLORADOR",
+            "name": "FRANCOTIRADOR EXPL<b>ORADOR</b>",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5169,7 +5169,7 @@
             "abilities": [
                 {
                     "name": "Capa de camuflaje",
-                    "description": "Cuando un agente dispare contra este agente: <ul><li>Ignora la regla de arma Saturación. </li></ul><ul><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li>"
+                    "description": "Cuando un agente dispare contra este agente: <ul><li>Ignora la regla de arma Saturación. </li></ul> <ul><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li>"
                 }
             ],
             "uniqueActions": [
@@ -5182,12 +5182,12 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, FRANCOTIRADOR",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, FRANCOTIRADOR",
             "peana": "28"
         },
         {
             "id": "scout-hunter",
-            "name": "CAZADOR EXPLORADOR",
+            "name": "CAZADOR EXPL<b>ORADOR</b>",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5206,7 +5206,7 @@
                     }
                 },
                 {
-                    "name": "Cuchillo de combate",
+                    "name": "Filopuñal",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -5223,16 +5223,16 @@
                 },
                 {
                     "name": "Asalto con lanzagarfios",
-                    "description": " Siempre que este gente realice una acción de Cargar en su activación, si durante esa acción trepa, se deja caer, salta o su peana se mueve bajo terreno Aventajado, sus armas de combate tienen la regla de arma Letal 3+ hasta el final de dicha activación."
+                    "description": " Siempre que este gente realice una acción de <b>Cargar</b> en su activación, si durante esa acción trepa, se deja caer, salta o su peana se mueve bajo terreno Aventajado, sus armas de combate tienen la regla de arma Letal 3+ hasta el final de dicha activación."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, CAZADOR",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, CAZADOR",
             "peana": "28"
         },
         {
             "id": "scout-tracker",
-            "name": "RASTREADOR EXPLORADOR",
+            "name": "RASTREADOR EXPL<b>ORADOR</b>",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5267,7 +5267,7 @@
                     "name": "RASTREAR ENEMIGO",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente enemigo usado a 8\" o menos de este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a ese agente enemigo, las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero)."
+                        "Elige un agente enemigo usado a 8\" o menos de este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo dispare a ese agente enemigo, las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -5275,17 +5275,17 @@
                     "name": "ESCANEO AUSPEX",
                     "cost": "1 LPA",
                     "description": [
-                        "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; si ese agente amigo es un <b>FRANCOTIRADOR</b> bajo el efecto de su acción de <b>Óptica</b>, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
+                        "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), cuando un agente <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; si ese agente amigo es un <b>FRANCOTIRADOR</b> bajo el efecto de su acción de <b>Óptica</b>, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, RASTREADOR",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, RASTREADOR",
             "peana": "28"
         },
         {
             "id": "scout-warrior",
-            "name": "COMBATIENTE EXPLORADOR",
+            "name": "COMBATIENTE EXPL<b>ORADOR</b>",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5298,7 +5298,7 @@
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "3+",
+                        "HP/HA": "2+",
                         "Dñ": "4/4",
                         "RA": "Alcance 6\""
                     }
@@ -5347,11 +5347,11 @@
             "abilities": [
                 {
                     "name": "Equipo adaptable",
-                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p> <p><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada de humo</b>.</li></p> <p><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada aturdidora</b>.</li></p> <p>Las reglas de esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acción (p.ej. si también has elegido esas granadas como equipo).</p>"
+                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p> <p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo puede realizar la acción de <b>Granada de humo</b>.</li></ul></p> <p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo puede realizar la acción de <b>Granada aturdidora</b>.</li></ul></p> <p>Las reglas de esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acción (p.ej. si también has elegido esas granadas como equipo).</p>"
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, COMBATIENTE",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, COMBATIENTE",
             "peana": "28"
         }
     ],
@@ -5380,27 +5380,55 @@
             "abilities": [
                 {
                     "name": "Liderar la procesión",
-                    "description": "En cada punto de inflexión tras el primero, cuando este agente sea un ORADOR y lleve a cabo una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, puedes usar esta regla. Cada otro agente SANTIFICADOR amigo que se beneficie del SERMÓN y sea visible puede realizar una acción libre de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> (máx 3\") y debe terminar donde siga beneficiándose del SERMÓN."
-                }
-            ],
-            "uniqueActions": [
+                    "description": "En cada punto de inflexión tras el primero, cuando este agente sea un <b>ORADOR</b> y lleve a cabo una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> durante su activación, puedes usar esta regla antes de que se mueva. En tal caso, determina cada otro agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b> y que sea visible para este agente. Después de que este agente termine su acción, cada uno de esos otros agentes <span class=\"faction\">SANTIFICADOR</span> amigos puede realizar inmediatamente una acción libre de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> en el orden que prefieras (elige por separado para cada uno), pero cada uno no puede mover más de 3\" y debe terminar dicho movimiento en una ubicación en la que siga beneficiándose de <b>SERMÓN</b>. Si este agente queda incapacitado antes de que esta regla se resuelva completamente, por ejemplo debido a la interrupción de la acción de <b>Ponerse en guardia</b> (consulta las reglas de combate cerrado en el Libro básico de Kill Team), no lo retires de la zona de aniquilación hasta que esta regla haya sido resuelta completamente."
+                },
                 {
                     "name": "Declamar una orden",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Elige un agente SANTIFICADOR amigo visible para este agente.",
-                        "Ese agente puede realizar de inmediato una acción libre de <b>Disparar</b> o<b>Combatir</b>.",
-                        "Si el agente elegido tiene el beneficio del SERMÓN, suma 1 a su atributo de Daño normal para esa acción."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description": "Cuando un agente enemigo vaya a realizar una acción durante una activación o reacción mientras se encuentre a 6\" o menos de este agente y sea visible para él, puedes usar esta regla. Si lo haces, tira 1D6: si el resultado es mayor que el atributo LPA de ese agente enemigo: <ul><li>No puede realizar esa acción durante esa activación o reacción (los PA gastados en ella no se recuperan). Si era una reacción, dicha reacción termina</li></ul> <ul><li>No puedes usar esta regla de nuevo durante la batalla.</li></ul>"
                 }
             ],
+            "uniqueActions": [],
             "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, LÍDER, CONFESOR",
             "peana": "32"
         },
         {
-            "id": "fustigator",
-            "name": "SANTIFICADOR FUSTIGADOR",
+            "id": "cherub",
+            "name": "SANTIFICADOR QUERUBÍN",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "7\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "5"
+            },
+            "weapons": [
+                {
+                    "name": "Incentivador",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "5+",
+                        "Dñ": "1/3",
+                        "RA": "Choque"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Querubín",
+                    "description": "<ul><li> Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Eso no es un cambio a su atributo LPA, por lo que se acumula con otros cambios.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y se encuentra tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p.ej., Buscadora, terreno Aventajado) salvo estar a 2\" o menos</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo <b>Incentivar</b>.</li></ul>"
+                },
+                {
+                    "name": "Volar",
+                    "description": "Cuando este agente realice una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, puede <b>VOLAR</b>. Si lo hace, no lo muevas. En lugar de eso, retíralo de la zona de aniquilación y vuelve a colocarlo completamente a una distancia igual o menor a su atributo Movimiento de su localización original, midiendo solo la distancia horizontal (en una zona de aniquilación que utilice las reglas de combate cerrado, como por ejemplo Zona de aniquilación: Mundo Necrópolis, esta distancia no puede medirse por encima ni a través de terreno de Muro). Ten en cuenta que no gana distancia adicional al realizar la acción de <b>Cargar</b>. Debe ser desplegado en una ubicación en la que pueda ser colocado y, a menos que la acción sea de <b>Cargar</b>, no puede ser desplegado dentro de la zona de control de un agente enemigo."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, QUERUBÍN",
+            "peana": "25"
+        },
+        {
+            "id": "conflagrator",
+            "name": "SANTIFICADOR CONFLAGRADOR",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5409,25 +5437,435 @@
             },
             "weapons": [
                 {
-                    "name": "Látigo de castigo",
+                    "name": "Pistolas lanzallamas dobles (concentradas)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 6\", Ráfaga 2\", Saturación, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Pistolas lanzallamas dobles (Ráfaga doble)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 6\", Ráfaga 0\", Saturación, Ráfaga doble<span class=\"faction\"><sup>1</sup></span>, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Culatas",
                     "type": "melee",
                     "stats": {
                         "A": "4",
                         "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 2\", Incesante"
+                        "Dñ": "2/3",
+                        "RA": "-"
                     }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Castigo ejemplar",
-                    "description": "Siempre que un aliado a 3\" o menos de este agente combata o contraataque, puedes repetir uno de tus dados de ataque. Si el aliado es un FLAGELANTE, puedes repetir todos tus dados de ataque."
+                    "name": "<span class=\"faction\"><sup>1</sup></span>Ráfaga doble",
+                    "description": "Elige hasta dos blancos válidos diferentes que no estén en la zona de control de ningún agente enemigo. Dispara con esta arma contra ambos en el orden que elijas (tira cada secuencia por separado). Ráfaga 0\" significa que no puedes elegir blancos secundarios, pero esta arma sigue teniendo la regla de armas Ráfaga a todos los demás efectos de reglas, como la regla Fortaleza condensada (ver Zona de aniquilación: Volkus, Libro básico de Kill Team)."
+                },
+                {
+                    "name": "Batería de santificación",
+                    "description": "Este agente puede realizar la acción <b>Orbe de santificación</b> (ver equipo de facción). Hacerlo de esta manera no cuenta para el límite de una vez por punto de inflexión (es decir, si también has seleccionado este equipo para otros agentes)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, FUSTIGADOR",
-            "peana": "28"
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, CONFLAGRADOR",
+            "peana": "25"
+        },
+        {
+            "id": "death-cult-assassin",
+            "name": "SANTIFICADOR ASESINO DEL CULTO DE LA MUERTE",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Cuchillos arrojadizos",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/5",
+                        "RA": "Alcance 6\", Silenciosa"
+                    }
+                },
+                {
+                    "name": "Filos rituales",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "4/6",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Postura de esgrima",
+                    "description": "Cuando este agente combata o contraataque, puedes resolver uno de tus éxitos antes del orden normal. Si lo haces, ese éxito debe usarse para bloquear."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "ASESINO ENTRENADO",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Cambia la orden de este agente."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, ASESINO DEL CULTO DE LA MUERTE",
+            "peana": "25"
+        },
+        {
+            "id": "drill-abbot",
+            "name": "SANTIFICADOR ABAD INSTRUCTOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "7"
+            },
+            "weapons": [
+                {
+                    "name": "Gran martillo",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/4",
+                        "RA": "Brutal, Choque"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Disciplina de la Schola Progenium",
+                    "description": "Mientras un agente <span class=\"faction\">SANTIFICADOR</span> amigo se encuentre a 6\" o menos de este agente, puedes ignorar cualquier cambio a sus atributos por estar lesionado (incluyendo a los atributos de sus armas)."
+                },
+                {
+                    "name": "Cráneo nulificador",
+                    "description": "Cuando un agente enemigo se encuentre a 4\" o menos de este agente, no se puede sumar nada al atributo LPA de ese agente enemigo (retira todos los cambios positivos que tenga su atributo LPA). Si un agente enemigo a más de 4\" de este agente tiene un cambio de atributo LPA positivo y tu oponente gasta su último PA para mover a ese agente a 4\" o menos de este agente, esto puede causar que tu oponente haya gastado más PA que su atributo LPA; esto se permite en esta situación"
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, ABAD INSTRUCTOR",
+            "peana": "25"
+        },
+        {
+            "id": "persecutor",
+            "name": "SANTIFICADOR PERSEGUIDOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "7"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola lanzallamas",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 6\", Ráfaga 1\", Saturación, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Eviscerador",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "5/6",
+                        "RA": "Brutal"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Castigo inmisericorde",
+                    "description": "La primera vez que este agente realice la acció <b>Combatir</b> durante cada una de sus activaciones, si ni él ni el agente enemigo resultan incapacitados, este agente puede realizar inmediatamente después una acción libre de <b>Combatir</b>, pero no puedes elegir otro agente enemigo para combatir contra él (y solo si sigue siendo válido combatir contra ese agente enemigo). Esto tiene preferencia sobre las restricciones de acciones."
+                },
+                {
+                    "name": "Represalia fanática",
+                    "description": "Si este agente queda incapacitado durante una acción de <b>Combatir</b>, puedes golpear al agente enemigo en dicha secuencia con uno de tus éxitos sin resolver antes de que este agente sea retirado de la zona de aniquilación."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, PERSEGUIDOR",
+            "peana": "25"
+        },
+        {
+            "id": "miraculist",
+            "name": "SANTIFICADOR MILAGRERO",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "7"
+            },
+            "weapons": [
+                {
+                    "name": "Luz sagrada",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "4/3",
+                        "RA": "Alcance 8\", Devastadora 3, Limitada 1, Penetración 1, Saturación, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Envolver en llamas",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "4/4",
+                        "RA": "Área 1\", Limitada 1, Envuelto<span class=\"faction\"><sup>1</sup></span>, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Manos ardientes",
+                    "type": "melee",
+                    "stats": {
+                        "A": "1",
+                        "HP/HA": "2+",
+                        "Dñ": "7/8",
+                        "RA": "Brutal, Limitada 1, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "2",
+                        "HP/HA": "5+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "<span class=\"faction\"><sup>1</sup></span>Encuelto",
+                    "description": "Este agente puede realizar la acción de <b>Disparar</b> con esta arma aún estando en la zona de control de un agente enemigo. No selecciones un blanco válido. En lugar de eso, este agente es siempre el blanco principal, pero dispara solo contra los blancos secundarios y estos no pueden estar a cubierto ni ofuscados (en otras palabras, determina el Área desde este agente, pero este agente no se ve afectado)."
+                },
+                {
+                    "name": "Milagro",
+                    "description": "La primera vez que este agente vaya a resultar incapacitado durante la batalla, no resulta incapacitado, queda con 1 herida restante y no puede resultar incapacitado durante el resto de la acción. Todos los dados de ataque restantes son descartados (incluyendo los tuyos si este agente está combatiendo o contraatacando), entonces este agente puede realizar inmediatamente una acción libre de <b>Correr</b> o <b>Retroceder</b> (en el segundo caso, no puede moverse más de 3\"), incluso si ha realizado una acción que le impide realizar la acción de <b>Correr</b> o de <b>Retroceder</b>."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, MILAGRERO",
+            "peana": "25"
+        },
+        {
+            "id": "missionary",
+            "name": "SANTIFICADOR MISIONERO",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Brasero de fuego sagrado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "4/4",
+                        "RA": "Alcance 4\", Ráfaga 1\", Saturación, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Rifle de fusión",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "6/3",
+                        "RA": "Alcance 6\", Devastadora 4, Penetración 2"
+                    }
+                },
+                {
+                    "name": "Lanzallamas del Ministorum",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "4/4",
+                        "RA": "Alcance 8\", Ráfaga 2\", Saturación, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Rifle de plasma (normal)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/6",
+                        "RA": "Penetración 1"
+                    }
+                },
+                {
+                    "name": "Rifle de plasma (sobrecarga)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "5/6",
+                        "RA": "Letal 5+, Penetración 1, Sobrecalentamiento"
+                    }
+                },
+                {
+                    "name": "Brasero de fuego sagrado",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/4",
+                        "RA": "Choque, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Espada sierra",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Reliquia sagrada",
+                    "description": " Si este agente tiene una reliquia sagrada, siempre se beneficia de <b>SERMÓN</b>."
+                },
+                {
+                    "name": "Extender la palabra del Dios Emperador",
+                    "description": "Cuando este agente se encuentre a más de 6\" de otros agentes amigos, sus armas tienen la regla de armas Severa."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, MISIONERO",
+            "peana": "25"
+        },
+        {
+            "id": "preacher",
+            "name": "SANTIFICADOR PREDICADOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "7"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola lanzallamas",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 6\", Ráfaga 1\", Saturación, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Espada sierra",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Defender la fe",
+                    "description": "Cuando este agente controle un marcador de objetivo, se beneficia del <b>SERMÓN</b>."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, PREDICADOR",
+            "peana": "25"
+        },
+        {
+            "id": "reliquant",
+            "name": "SANTIFICADOR RELIQUIANTE",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "7"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola lanzallamas",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 6\", Ráfaga 1\", Saturación, Llamarada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Icono del culto",
+                    "description": "Al determinar el control de un marcador a 4\" o menos de este agente, trata el atributo LPA total de los agentes <span class=\"faction\">SANTIFICADOR</span> amigos que lo disputen como si fuera 1 punto mayor si al menos un agent <span class=\"faction\">SANTIFICADOR</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo LPA, de modo que cualquier cambio es acumulativo con esto."
+                },
+                {
+                    "name": "Devoción del Culto Imperial",
+                    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">SANTIFICADOR</span>  amigo apostado resulte incapacitado mientras sea visible para este agente y esté a 6\" o menos de él, puedes usar esta regla. Si lo haces, antes de que ese agente sea retirado de la zona de aniquilación, puede realizar una acción libre (salvo <b>Combatir</b>), y puedes cambiar su orden para ello. A continuación, es retirado de la zona de aniquilación de manera normal."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, RELIQUIANTE",
+            "peana": "25"
         },
         {
             "id": "salvationist",
@@ -5440,7 +5878,7 @@
             },
             "weapons": [
                 {
-                    "name": "Bastón de alma",
+                    "name": "Baculo de almas",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -5453,251 +5891,21 @@
             "abilities": [
                 {
                     "name": "Campo de conversión",
-                    "description": "Siempre que un enemigo a más de 6\" dispare a un aliado a 6\" o menos de este agente, mejora el atributo Salvación de ese aliado en 1."
+                    "description": "Siempre que un agente a más de 6\" de este agente dispare contra un agente <span class=\"faction\">SANTIFICADOR</span> amigo a 6\" o menos de este agente, mejora en 1 el atributo Salvación de ese agente amigo."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "Medikit",
+                    "name": "BOTIQUÍN",
                     "cost": "1 LPA",
                     "description": [
-                        "Selecciona un agente SANTIFICADOR amigo a 1\" o menos para que recupere 2D3 heridas perdidas."
+                        "Elige un agente <span class=\"faction\">SANTIFICADORES</span> amigo en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, SALVACIONISTA",
-            "peana": "28"
-        },
-        {
-            "id": "preacher",
-            "name": "SANTIFICADOR PREDICADOR",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "8"
-            },
-            "weapons": [
-                {
-                    "name": "Vindicador (lanzallamas)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/3",
-                        "RA": "Alcance 6\", Ráfaga 1\", Saturación"
-                    }
-                },
-                {
-                    "name": "Vindicador (combate)",
-                    "type": "melee",
-                    "stats": {
-                        "A": "3",
-                        "HP/HA": "4+",
-                        "Dñ": "4/5",
-                        "RA": "-"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Fervor religioso",
-                    "description": "Este agente tiene la regla ORADOR. Mientras esté activo el SERMÓN, este agente suma 1 a su atributo LPA (hasta un máximo de 3)."
-                }
-            ],
-            "uniqueActions": [
-                {
-                    "name": "Sermón",
-                    "cost": "0/1 LPA",
-                    "description": [
-                        "Hasta el inicio de tu próxima activación, todos los aliados a 6\" o menos de este agente y visibles para él se benefician del SERMÓN.",
-                        "Los agentes que se benefician del SERMÓN pueden repetir un dado de defensa en cada secuencia de disparo."
-                    ],
-                    "description_no": "Cuesta 0 LPA si no hay enemigos en zona de control; de lo contrario, cuesta 1 LPA."
-                }
-            ],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, PREDICADOR",
-            "peana": "28"
-        },
-        {
-            "id": "exorcist",
-            "name": "SANTIFICADOR EXORCISTA",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "8"
-            },
-            "weapons": [
-                {
-                    "name": "Libro de exorcismos",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "<b>PSÍQUICA</b>, Aturdidora, Letal 5+"
-                    }
-                },
-                {
-                    "name": "Maza bendita",
-                    "type": "melee",
-                    "stats": {
-                        "A": "3",
-                        "HP/HA": "4+",
-                        "Dñ": "4/5",
-                        "RA": "Choque"
-                    }
-                }
-            ],
-            "abilities": [],
-            "uniqueActions": [
-                {
-                    "name": "Exorcismo",
-                    "cost": "1 LPA",
-                    "description": [
-                        "<b>PSÍQUICA.</b> Elige un agente enemigo visible para este agente.",
-                        "Hasta el inicio de la siguiente activación de ese enemigo, resta 1 a su atributo LPA y no puede realizar acciones únicas."
-                    ],
-                    "description_no": "No puede realizarse si este agente está en zona de control enemiga."
-                }
-            ],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, EXORCISTA",
-            "peana": "32"
-        },
-        {
-            "id": "penitent",
-            "name": "SANTIFICADOR PENITENTE",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "8"
-            },
-            "weapons": [
-                {
-                    "name": "Eviscerador",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "5/6",
-                        "RA": "Brutal, Desgarradora"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Busca la redención",
-                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aunque tenga una orden de Ocultarse. Siempre que realice una Carga, suma 2\" a su movimiento."
-                }
-            ],
-            "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, PENITENTE",
-            "peana": "28"
-        },
-        {
-            "id": "reliquary",
-            "name": "SANTIFICADOR PORTARRELIQUIAS",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "8"
-            },
-            "weapons": [
-                {
-                    "name": "Icono de fe",
-                    "type": "melee",
-                    "stats": {
-                        "A": "3",
-                        "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Choque"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Reliquia sagrada",
-                    "description": "Mientras este agente esté en la zona de aniquilación, el radio del SERMÓN de todos tus agentes aumenta a 9\"."
-                }
-            ],
-            "uniqueActions": [
-                {
-                    "name": "Bendición de la Reliquia",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Hasta el inicio de la siguiente activación de este agente, todos los aliados a 6\" o menos ganan una salvación invulnerable de 5+."
-                    ],
-                    "description_no": "No puede realizarse si este agente está en zona de control enemiga."
-                }
-            ],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, PORTARRELIQUIAS",
-            "peana": "32"
-        },
-        {
-            "id": "flagellant",
-            "name": "SANTIFICADOR FLAGELANTE",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "9"
-            },
-            "weapons": [
-                {
-                    "name": "Azotes de flagelante",
-                    "type": "melee",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "4/5",
-                        "RA": "Incesante"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Fanatismo",
-                    "description": "Este agente ignora todos los modificadores a su atributo LPA y Movimiento. No puede realizar acciones de misión ni <b>Recoger marcador</b>."
-                }
-            ],
-            "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, FLAGELANTE",
-            "peana": "28"
-        },
-        {
-            "id": "miracler",
-            "name": "SANTIFICADOR MILAGRERO",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "8"
-            },
-            "weapons": [
-                {
-                    "name": "Espada de justicia",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "4/6",
-                        "RA": "Letal 5+"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Milagro",
-                    "description": "Una vez por batalla, cuando este agente fuera a resultar incapacitado, puedes usar esta regla. El agente no resulta incapacitado y recupera 1D6 heridas. Hasta el final del punto de inflexión, suma 1 a su atributo LPA."
-                }
-            ],
-            "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, MILAGRERO",
-            "peana": "32"
+            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, MÉDICO, SALVACIONISTA",
+            "peana": "25"
         }
     ],
     "raveners": [
@@ -5753,7 +5961,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador o si no está en tu TÚNEL/bajo tierra."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, LÍDER, PRIMUS",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, LÍDER, PRIMUS",
             "peana": "40"
         },
         {
@@ -5804,7 +6012,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador o si no está en tu TÚNEL/bajo tierra."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, GUADAÑA TRÉMULA",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, GUADAÑA TRÉMULA",
             "peana": "40"
         },
         {
@@ -5845,7 +6053,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, DEMOLEDOR",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, DEMOLEDOR",
             "peana": "40"
         },
         {
@@ -5894,7 +6102,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, GARRAVIL",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, GARRAVIL",
             "peana": "40"
         },
         {
@@ -5939,7 +6147,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, ESCUPEVENENO",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, ESCUPEVENENO",
             "peana": "40"
         }
     ],
@@ -6179,7 +6387,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "4/4",
-            "RA": "Devastadora 1, Pesada (solo Correr), Penetración 1"
+            "RA": "Devastadora 1, Pesada (solo <b>Correr</b>), Penetración 1"
           }
         },
         {
@@ -6225,7 +6433,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Alcance 3\", Área 1\", Pesada (solo Reposicionarse), Limitada 1, Penetración 1, Saturación"
+            "RA": "Alcance 3\", Área 1\", Pesada (solo <b>Reposicionarse</b>), Limitada 1, Penetración 1, Saturación"
           }
         },
         {
@@ -8170,7 +8378,7 @@
             "A": "5",
             "HP/HA": "4+",
             "Dñ": "3/4",
-            "RA": "Castigadora, Incesante, Pesada (solo Reposicionarse)"
+            "RA": "Castigadora, Incesante, Pesada (solo <b>Reposicionarse</b>)"
           }
         },
         {
@@ -8180,7 +8388,7 @@
             "A": "4",
             "HP/HA": "4+",
             "Dñ": "3/4",
-            "RA": "Castigadora, Incesante, Pesada (solo Reposicionarse), Ráfaga 1\""
+            "RA": "Castigadora, Incesante, Pesada (solo <b>Reposicionarse</b>), Ráfaga 1\""
           }
         },
         {
@@ -9295,7 +9503,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
+            "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
           }
         },
         {
@@ -9305,7 +9513,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse), Ráfaga 1\""
+            "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>), Ráfaga 1\""
           }
         },
         {
@@ -9315,7 +9523,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "3/5",
-            "RA": "Area 2\", Pesada (solo Reposicionarse)"
+            "RA": "Area 2\", Pesada (solo <b>Reposicionarse</b>)"
           }
         },
         {
@@ -9325,7 +9533,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "5/7",
-            "RA": "Penetración 1, Pesada (solo Reposicionarse)"
+            "RA": "Penetración 1, Pesada (solo <b>Reposicionarse</b>)"
           }
         },
         {
@@ -10832,7 +11040,7 @@
                         "A": "6",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Área 1\", Incesante, Pesada (solo Correr)"
+                        "RA": "Área 1\", Incesante, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -10939,7 +11147,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Pesada (solo Correr), Ráfaga 1\""
+                        "RA": "Pesada (solo <b>Correr</b>), Ráfaga 1\""
                     }
                 },
                 {
@@ -11972,7 +12180,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada (solo Correr)"
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -11982,7 +12190,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada (solo Correr), Ráfaga 1\""
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>), Ráfaga 1\""
                     }
                 },
                 {
@@ -11992,7 +12200,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "6/3",
-                        "RA": "Devastadora 4, Penetración 2, Pesada (solo Correr)"
+                        "RA": "Devastadora 4, Penetración 2, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -12002,7 +12210,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/6",
-                        "RA": "Área 2\", Penetración 1, Pesada (solo Correr)"
+                        "RA": "Área 2\", Penetración 1, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -12012,7 +12220,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "5/6",
-                        "RA": "Área 2\", Letal 5+, Penetración 1, Pesada (solo Correr), Sobrecalentamiento"
+                        "RA": "Área 2\", Letal 5+, Penetración 1, Pesada (solo <b>Correr</b>), Sobrecalentamiento"
                     }
                 },
                 {
@@ -12718,7 +12926,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Alcance 3\", Área 2\", Limitada 1, Penetración 1, Pesada (solo Reposicionarse), Saturación"
+                        "RA": "Alcance 3\", Área 2\", Limitada 1, Penetración 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
                     }
                 },
                 {
@@ -12779,7 +12987,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo Correr)"
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -12789,7 +12997,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 1\""
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 1\""
                     }
                 },
                 {
@@ -13028,7 +13236,7 @@
     "hunter-clade": [
         {
             "id": "skitarii-ranger-alpha",
-            "name": "ALFA EXPLORADOR SKITARII",
+            "name": "ALFA EXPL<b>ORADOR</b> SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13053,7 +13261,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
                     }
                 },
                 {
@@ -13120,7 +13328,7 @@
             "abilities": [
                 {
                     "name": "Cántico de Eliminación",
-                    "description": "Mientras un agente EXPLORADOR CLADO DE CAZA amigo esté a 3\" o menos de este agente, las armas a distancia de ese agente amigo tienen la regla de armas Castigadora."
+                    "description": "Mientras un agente EXPL<b>ORADOR</b> CLADO DE CAZA amigo esté a 3\" o menos de este agente, las armas a distancia de ese agente amigo tienen la regla de armas Castigadora."
                 },
                 {
                     "name": "Protocolos de apuntado",
@@ -13132,7 +13340,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, EXPLORADOR, ALFA",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, EXPL<b>ORADOR</b>, ALFA",
             "peana": "25"
         },
         {
@@ -13350,7 +13558,7 @@
         },
         {
             "id": "skitarii-ranger-gunner",
-            "name": "TIRADOR EXPLORADOR SKITARII",
+            "name": "TIRADOR EXPL<b>ORADOR</b> SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13395,7 +13603,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/3",
-                        "RA": "Devastadora 2, Pesada (solo Correr), Penetración 1"
+                        "RA": "Devastadora 2, Pesada (solo <b>Correr</b>), Penetración 1"
                     }
                 },
                 {
@@ -13426,7 +13634,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, TIRADOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPL<b>ORADOR</b>, TIRADOR",
             "peana": "25 (60x35 para Arcabuz)"
         },
         {
@@ -13476,7 +13684,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/3",
-                        "RA": "Devastadora 2, Pesada (solo Correr), Penetración 1"
+                        "RA": "Devastadora 2, Pesada (solo <b>Correr</b>), Penetración 1"
                     }
                 },
                 {
@@ -13512,7 +13720,7 @@
         },
         {
             "id": "skitarii-ranger-surveyor",
-            "name": "SUPERVISOR EXPLORADOR SKITARII",
+            "name": "SUPERVISOR EXPL<b>ORADOR</b> SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13527,7 +13735,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
                     }
                 },
                 {
@@ -13557,7 +13765,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, SUPERVISOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPL<b>ORADOR</b>, SUPERVISOR",
             "peana": "25"
         },
         {
@@ -13612,7 +13820,7 @@
         },
         {
             "id": "skitarii-ranger-diktat",
-            "name": "DIKTAT EXPLORADOR SKITARII",
+            "name": "DIKTAT EXPL<b>ORADOR</b> SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13627,7 +13835,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
                     }
                 },
                 {
@@ -13657,7 +13865,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, DIKTAT",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPL<b>ORADOR</b>, DIKTAT",
             "peana": "25"
         },
         {
@@ -13712,7 +13920,7 @@
         },
         {
             "id": "skitarii-ranger-warrior",
-            "name": "COMBATIENTE EXPLORADOR SKITARII",
+            "name": "COMBATIENTE EXPL<b>ORADOR</b> SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13727,7 +13935,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
+                        "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
                     }
                 },
                 {
@@ -13748,7 +13956,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPL<b>ORADOR</b>, COMBATIENTE",
             "peana": "25"
         },
         {
@@ -14289,7 +14497,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "4/3",
-                        "RA": "Devastadora 2, Penetración 1, Pesada (solo Correr), Severa"
+                        "RA": "Devastadora 2, Penetración 1, Pesada (solo <b>Correr</b>), Severa"
                     }
                 },
                 {
@@ -14596,7 +14804,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Penetración 1, Pesada (solo Reposicionarse), Bípode<span class=\"faction\">*</span>"
+                        "RA": "Penetración 1, Pesada (solo <b>Reposicionarse</b>), Bípode<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -14606,7 +14814,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "3/5",
-                        "RA": "Área 2\", Pesada (solo Reposicionarse), Bípode<span class=\"faction\">*</span>"
+                        "RA": "Área 2\", Pesada (solo <b>Reposicionarse</b>), Bípode<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -14616,7 +14824,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "2/4",
-                        "RA": "Área 3\", Pesada (solo Reposicionarse), Bípode<span class=\"faction\">*</span>"
+                        "RA": "Área 3\", Pesada (solo <b>Reposicionarse</b>), Bípode<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -14712,7 +14920,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Penetración 1, Pesada (solo Reposicionarse)"
+                        "RA": "Penetración 1, Pesada (solo <b>Reposicionarse</b>)"
                     }
                 },
                 {
@@ -15110,7 +15318,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Alcance 4\", Área 1\", Limitada 1, Penetración 1, Pesada (solo Reposicionarse), Saturación"
+                        "RA": "Alcance 4\", Área 1\", Limitada 1, Penetración 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
                     }
                 },
                 {
@@ -15181,7 +15389,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Incesante, Pesada (solo Reposicionarse), Saturación"
+                        "RA": "Incesante, Pesada (solo <b>Reposicionarse</b>), Saturación"
                     }
                 },
                 {
@@ -15201,7 +15409,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/2",
-                        "RA": "Devastadora 3, Pesada (solo Correr), Penetración 2"
+                        "RA": "Devastadora 3, Pesada (solo <b>Correr</b>), Penetración 2"
                     }
                 },
                 {
@@ -15956,7 +16164,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "6/7",
-                        "RA": "Penetración 2, Pesada (solo Correr)"
+                        "RA": "Penetración 2, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -15966,7 +16174,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Letal 5+, Pesada (solo Correr)"
+                        "RA": "Letal 5+, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -15976,7 +16184,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Letal 5+, Pesada (solo Correr), Rafaga 1\""
+                        "RA": "Letal 5+, Pesada (solo <b>Correr</b>), Rafaga 1\""
                     }
                 },
                 {
@@ -16291,7 +16499,7 @@
       ],
       "uniqueActions": [
         {
-          "name": "CORRER Y AMETRALLAR",
+          "name": "<b>Correr</b> Y AMETRALLAR",
           "cost": "1PA",
           "description": [
             "Realiza una acción libre de <b>Correr</b> y una acción libre de <b>Disparar</b> con este agente en cualquier orden. Solo puedes elegir unas pistolas automáticas dobles para esa acción de <b>Disparar</b>."
@@ -17578,7 +17786,7 @@
             "A": "5",
             "HP/HA": "2+",
             "Dñ": "3/3",
-            "RA": "Alcance 6\", Penetración 2, Pesada (solo Reposicionarse), Ráfaga 2\""
+            "RA": "Alcance 6\", Penetración 2, Pesada (solo <b>Reposicionarse</b>), Ráfaga 2\""
           }
         },
         {
@@ -17588,7 +17796,7 @@
             "A": "5",
             "HP/HA": "4+",
             "Dñ": "4/5",
-            "RA": "Desgarradora, Penetración 1, Pesada (solo Reposicionarse)"
+            "RA": "Desgarradora, Penetración 1, Pesada (solo <b>Reposicionarse</b>)"
           }
         },
         {
@@ -18275,7 +18483,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Pesada (solo Correr)"
+                        "RA": "Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -18285,7 +18493,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Pesada (solo Correr), Ráfaga 1\""
+                        "RA": "Pesada (solo <b>Correr</b>), Ráfaga 1\""
                     }
                 },
                 {
@@ -18911,7 +19119,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "5/3",
-                        "RA": "Alcance 3\", Devastadora 3, Pesada (solo Reposicionarse), Limitada 1, Penetración 2"
+                        "RA": "Alcance 3\", Devastadora 3, Pesada (solo <b>Reposicionarse</b>), Limitada 1, Penetración 2"
                     }
                 },
                 {
@@ -19214,7 +19422,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/5",
-                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo Correr)"
+                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -19598,7 +19806,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "5/6",
-                        "RA": "Limitada 1, Penetración 1, Pesada (solo Correr), Silenciosa, Detonar<span class=\"faction\">*</span>"
+                        "RA": "Limitada 1, Penetración 1, Pesada (solo <b>Correr</b>), Silenciosa, Detonar<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -19714,7 +19922,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "3/5",
-                        "RA": "Área 2\", Pesada (solo Correr), Silenciosa"
+                        "RA": "Área 2\", Pesada (solo <b>Correr</b>), Silenciosa"
                     }
                 },
                 {
@@ -20033,7 +20241,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle de explorador (móvil)",
+                    "name": "Rifle de expl<b>ORADOR</b> (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -20043,7 +20251,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de explorador (inmóvil)",
+                    "name": "Rifle de expl<b>ORADOR</b> (inmóvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -20156,7 +20364,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "6/3",
-                        "RA": "Devastadora 4, Penetración 2, Pesada (solo Correr)"
+                        "RA": "Devastadora 4, Penetración 2, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -20166,7 +20374,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 1\""
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 1\""
                     }
                 },
                 {
@@ -20176,7 +20384,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo Correr)"
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -21602,7 +21810,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Alcance 3\", Área 2\", Limitada 1, Penetración 1, Pesada (solo Reposicionarse), Saturación"
+                        "RA": "Alcance 3\", Área 2\", Limitada 1, Penetración 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
                     }
                 },
                 {
@@ -21962,7 +22170,7 @@
                     "cost": "2 PA",
                     "description": [
                         "<b>PSÍQUICA.</b> Elige un agente enemigo a 2\" o menos de este agente y visible para él. Ambos jugadores tiran 1D6 y le suman al total el atributo LPA de sus respectivos agentes. Si tu total es mayor que el de tu oponente, puedes resolver el segundo efecto de esta acción.",
-                        "Hasta el final de la activación, ese agente enemigo es un agente amigo (y un agente enemigo para tu oponente). Puedes cambiar su orden y realizar inmediatamente una acción libre con él. No puede realizar una acción en la que se mueva que no sea Correr (en cuyo caso debes especificar a tu oponente la localización a la que debe mover al agente). Solo puedes resolver el segundo efecto de esta acción una vez por batalla."
+                        "Hasta el final de la activación, ese agente enemigo es un agente amigo (y un agente enemigo para tu oponente). Puedes cambiar su orden y realizar inmediatamente una acción libre con él. No puede realizar una acción en la que se mueva que no sea <b>Correr</b> (en cuyo caso debes especificar a tu oponente la localización a la que debe mover al agente). Solo puedes resolver el segundo efecto de esta acción una vez por batalla."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, a menos que solo tenga a un agente enemigo en su zona de control y lo elija a él para esta acción."
                 }
@@ -22227,7 +22435,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/3",
-                        "RA": "Alcance 6\", Área 2\", Devastadora 2, Limitada 1, Penetración 1, Pesada (solo Reposicionarse), Saturación"
+                        "RA": "Alcance 6\", Área 2\", Devastadora 2, Limitada 1, Penetración 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
                     }
                 },
                 {
@@ -22648,7 +22856,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 1, Pesada (solo Correr), Silenciosa"
+                        "RA": "Devastadora 1, Pesada (solo <b>Correr</b>), Silenciosa"
                     }
                 },
                 {
@@ -23542,7 +23750,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo Correr)"
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>)"
                     }
                 },
                 {
@@ -23552,7 +23760,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 1\""
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 1\""
                     }
                 },
                 {

@@ -2472,7 +2472,7 @@
     "wolf-scouts": [ 
         {
             "id": "pack-leader",
-            "name": "JEFE DE MANADA EXPL<b>ORADOR</b> LOBO",
+            "name": "JEFE DE MANADA EXPLORADOR LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2522,7 +2522,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, JEFE DE MANADA",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, JEFE DE MANADA",
             "peana": "32"
         },
         {
@@ -2557,12 +2557,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, LOBO FENRISIANO",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, LOBO FENRISIANO",
             "peana": "60x35"
         },
         {
             "id": "fang-bearer",
-            "name": "PORTACOLMILLOS EXPL<b>ORADOR</b> LOBO",
+            "name": "PORTACOLMILLOS EXPLORADOR LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2594,7 +2594,7 @@
             "abilities": [
                 {
                     "name": "Cirugía espiritual",
-                    "description": "Puedes ignorar los cambios a los atributos de los agentes <span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) por estar lesionados (incluyendo los atributos de sus armas). Los agentes <span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) no se ven afectados por las reglas Choque ni Aturdidora de las armas enemigas, y puedes ignorar los cambios a su atributo LPA. Recuerda que los agentes amigos solo tienen estas reglas si incluyes a este agente en la batalla (incluso si luego resulta incapacitado)."
+                    "description": "Puedes ignorar los cambios a los atributos de los agentes <span class=\"faction\">EXPLORADOR LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) por estar lesionados (incluyendo los atributos de sus armas). Los agentes <span class=\"faction\">EXPLORADOR LOBO</span> amigos (salvo <b>LOBO FENRISIANO</b>) no se ven afectados por las reglas Choque ni Aturdidora de las armas enemigas, y puedes ignorar los cambios a su atributo LPA. Recuerda que los agentes amigos solo tienen estas reglas si incluyes a este agente en la batalla (incluso si luego resulta incapacitado)."
                 }
             ],
             "uniqueActions": [
@@ -2602,12 +2602,12 @@
                     "name": "BÁLSAMOS CURATIVOS",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span> amigo en la zona de control de este agente. Ese agente recupera hasta 1D3+3 heridas perdidas."
+                        "Elige un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo en la zona de control de este agente. Ese agente recupera hasta 1D3+3 heridas perdidas."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PORTACOLMILLOS",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PORTACOLMILLOS",
             "peana": "32"
         },
         {
@@ -2673,17 +2673,17 @@
                     "cost": "1 LPA",
                     "description": [
                         "<b>PSÍQUICA</b>. Retira tu marcador de Tormenta de la zona de aniquilación (si lo hay). A continuación, colócalo en la zona de aniquilación.",
-                        "<b>PSÍQUICA</b>. Alternativamente, en lugar de resolver el efecto anterior, elige 1 agente <span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span> amigo. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado, o hasta que realice esta acción de nuevo (lo que ocurra antes), siempre que ese agente amigo esté en tu <b>TORMENTA</b> y a más de 3\" del agente activo, estará ofuscado."
+                        "<b>PSÍQUICA</b>. Alternativamente, en lugar de resolver el efecto anterior, elige 1 agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado, o hasta que realice esta acción de nuevo (lo que ocurra antes), siempre que ese agente amigo esté en tu <b>TORMENTA</b> y a más de 3\" del agente activo, estará ofuscado."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PSÍQUICO, SACERDOTE RÚNICO ESCALDO",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PSÍQUICO, SACERDOTE RÚNICO ESCALDO",
             "peana": "32"
         },
         {
             "id": "trapmaster",
-            "name": "MAESTRO TRAMPERO EXPL<b>ORADOR</b> LOBO",
+            "name": "MAESTRO TRAMPERO EXPLORADOR LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2733,12 +2733,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, MAESTRO TRAMPERO",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, MAESTRO TRAMPERO",
             "peana": "32"
         },
         {
             "id": "gunner",
-            "name": "TIRADOR EXPL<b>ORADOR</b> LOBO",
+            "name": "TIRADOR EXPLORADOR LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2784,12 +2784,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, TIRADOR",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, TIRADOR",
             "peana": "32"
         },
         {
             "id": "frosteye",
-            "name": "OJOGÉLIDO EXPL<b>ORADOR</b> LOBO",
+            "name": "OJOGÉLIDO EXPLORADOR LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2844,12 +2844,12 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, OJOGÉLIDO",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, OJOGÉLIDO",
             "peana": "32"
         },
         {
             "id": "hunter",
-            "name": "CAZADOR EXPL<b>ORADOR</b> LOBO",
+            "name": "CAZADOR EXPLORADOR LOBO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -2895,7 +2895,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">EXPL<b>ORADOR</b> LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, CAZADOR",
+            "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, CAZADOR",
             "peana": "32"
         }
     ],
@@ -4976,7 +4976,7 @@
     "scouts": [
         {
             "id": "scout-sergeant",
-            "name": "SARGENTO EXPL<b>ORADOR</b>",
+            "name": "SARGENTO EXPLORADOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -5042,16 +5042,16 @@
                 },
                 {
                     "name": "Guía y experiencia",
-                    "description": "Una vez durante cada una de las activaciones de este agente, puedes elegir un agente <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo distinto visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                    "description": "Una vez durante cada una de las activaciones de este agente, puedes elegir un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo distinto visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, LÍDER, SARGENTO",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, LÍDER, SARGENTO",
             "peana": "28"
         },
         {
             "id": "scout-heavy-gunner",
-            "name": "TIRADOR PESADO EXPL<b>ORADOR</b>",
+            "name": "TIRADOR PESADO EXPLORADOR",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5112,12 +5112,12 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, TIRADOR PESADO",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, TIRADOR PESADO",
             "peana": "28"
         },
         {
             "id": "scout-sniper",
-            "name": "FRANCOTIRADOR EXPL<b>ORADOR</b>",
+            "name": "FRANCOTIRADOR EXPLORADOR",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5182,12 +5182,12 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, FRANCOTIRADOR",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, FRANCOTIRADOR",
             "peana": "28"
         },
         {
             "id": "scout-hunter",
-            "name": "CAZADOR EXPL<b>ORADOR</b>",
+            "name": "CAZADOR EXPLORADOR",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5227,12 +5227,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, CAZADOR",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, CAZADOR",
             "peana": "28"
         },
         {
             "id": "scout-tracker",
-            "name": "RASTREADOR EXPL<b>ORADOR</b>",
+            "name": "RASTREADOR EXPLORADOR",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5267,7 +5267,7 @@
                     "name": "RASTREAR ENEMIGO",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente enemigo usado a 8\" o menos de este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo dispare a ese agente enemigo, las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero)."
+                        "Elige un agente enemigo usado a 8\" o menos de este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a ese agente enemigo, las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -5275,17 +5275,17 @@
                     "name": "ESCANEO AUSPEX",
                     "cost": "1 LPA",
                     "description": [
-                        "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), cuando un agente <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; si ese agente amigo es un <b>FRANCOTIRADOR</b> bajo el efecto de su acción de <b>Óptica</b>, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
+                        "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; si ese agente amigo es un <b>FRANCOTIRADOR</b> bajo el efecto de su acción de <b>Óptica</b>, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, RASTREADOR",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, RASTREADOR",
             "peana": "28"
         },
         {
             "id": "scout-warrior",
-            "name": "COMBATIENTE EXPL<b>ORADOR</b>",
+            "name": "COMBATIENTE EXPLORADOR",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -5347,11 +5347,11 @@
             "abilities": [
                 {
                     "name": "Equipo adaptable",
-                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p> <p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo puede realizar la acción de <b>Granada de humo</b>.</li></ul></p> <p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span> amigo puede realizar la acción de <b>Granada aturdidora</b>.</li></ul></p> <p>Las reglas de esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acción (p.ej. si también has elegido esas granadas como equipo).</p>"
+                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p> <p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada de humo</b>.</li></ul></p> <p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada aturdidora</b>.</li></ul></p> <p>Las reglas de esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acción (p.ej. si también has elegido esas granadas como equipo).</p>"
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ESCUADRA DE EXPL<b>ORADOR</b>ES</span>, IMPERIUM, ADEPTUS ASTARTES, COMBATIENTE",
+            "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, COMBATIENTE",
             "peana": "28"
         }
     ],
@@ -5961,7 +5961,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador o si no está en tu TÚNEL/bajo tierra."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, LÍDER, PRIMUS",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, LÍDER, PRIMUS",
             "peana": "40"
         },
         {
@@ -6012,7 +6012,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador o si no está en tu TÚNEL/bajo tierra."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, GUADAÑA TRÉMULA",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, GUADAÑA TRÉMULA",
             "peana": "40"
         },
         {
@@ -6053,7 +6053,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, DEMOLEDOR",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, DEMOLEDOR",
             "peana": "40"
         },
         {
@@ -6102,7 +6102,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, GARRAVIL",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, GARRAVIL",
             "peana": "40"
         },
         {
@@ -6147,7 +6147,7 @@
                     "description_no": "No se puede realizar si el agente transporta un marcador."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEV<b>ORADOR</b>, TIRÁNIDOS, ESCUPEVENENO",
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, ESCUPEVENENO",
             "peana": "40"
         }
     ],
@@ -13236,7 +13236,7 @@
     "hunter-clade": [
         {
             "id": "skitarii-ranger-alpha",
-            "name": "ALFA EXPL<b>ORADOR</b> SKITARII",
+            "name": "ALFA EXPLORADOR SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13328,7 +13328,7 @@
             "abilities": [
                 {
                     "name": "Cántico de Eliminación",
-                    "description": "Mientras un agente EXPL<b>ORADOR</b> CLADO DE CAZA amigo esté a 3\" o menos de este agente, las armas a distancia de ese agente amigo tienen la regla de armas Castigadora."
+                    "description": "Mientras un agente EXPLORADOR CLADO DE CAZA amigo esté a 3\" o menos de este agente, las armas a distancia de ese agente amigo tienen la regla de armas Castigadora."
                 },
                 {
                     "name": "Protocolos de apuntado",
@@ -13340,7 +13340,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, EXPL<b>ORADOR</b>, ALFA",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, EXPLORADOR, ALFA",
             "peana": "25"
         },
         {
@@ -13558,7 +13558,7 @@
         },
         {
             "id": "skitarii-ranger-gunner",
-            "name": "TIRADOR EXPL<b>ORADOR</b> SKITARII",
+            "name": "TIRADOR EXPLORADOR SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13634,7 +13634,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPL<b>ORADOR</b>, TIRADOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, TIRADOR",
             "peana": "25 (60x35 para Arcabuz)"
         },
         {
@@ -13720,7 +13720,7 @@
         },
         {
             "id": "skitarii-ranger-surveyor",
-            "name": "SUPERVISOR EXPL<b>ORADOR</b> SKITARII",
+            "name": "SUPERVISOR EXPLORADOR SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13765,7 +13765,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPL<b>ORADOR</b>, SUPERVISOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, SUPERVISOR",
             "peana": "25"
         },
         {
@@ -13820,7 +13820,7 @@
         },
         {
             "id": "skitarii-ranger-diktat",
-            "name": "DIKTAT EXPL<b>ORADOR</b> SKITARII",
+            "name": "DIKTAT EXPLORADOR SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13865,7 +13865,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPL<b>ORADOR</b>, DIKTAT",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, DIKTAT",
             "peana": "25"
         },
         {
@@ -13920,7 +13920,7 @@
         },
         {
             "id": "skitarii-ranger-warrior",
-            "name": "COMBATIENTE EXPL<b>ORADOR</b> SKITARII",
+            "name": "COMBATIENTE EXPLORADOR SKITARII",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -13956,7 +13956,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPL<b>ORADOR</b>, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, COMBATIENTE",
             "peana": "25"
         },
         {
@@ -20241,7 +20241,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle de expl<b>ORADOR</b> (móvil)",
+                    "name": "Rifle de explorador (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -20251,7 +20251,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de expl<b>ORADOR</b> (inmóvil)",
+                    "name": "Rifle de explorador (inmóvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",

@@ -23803,7 +23803,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Alcabce 8\""
+                        "RA": "Alcance 8\""
                     }
                 },
                 {
@@ -23880,6 +23880,449 @@
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, LÍDER, SEÑOR",
             "peana": "40"
+        },
+        {
+            "id": "champion",
+            "name": "CAMPEÓN DEL ALA ASESINA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "14"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Pistola de plasma (normal)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Alcance 8\", Penetración 1"
+                    }
+                },
+                {
+                    "name": "Pistola de plasma (sobrecarga)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Alcance 8\", Letal 5+, Penetración 1, Sobrecalentamiento"
+                    }
+                },
+                {
+                    "name": "Arma de energía",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Letal 5+"
+                    }
+                },
+                {
+                    "name": "Puño de energía",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "5/7",
+                        "RA": "Brutal, Choque"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Campeón del Caos",
+                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Retira tu ficha de Desafío del agente enemigo que lo tenga (si lo hay), y a continuación elige un agente enemigo para que gane tu ficha de Desafío. Cuando este agente combata o contraataque contra un agente enemigo que tenga tu ficha de Desafío, durante el paso de elegir armas puedes seleccionar una de las siguientes reglas de armas para que la tengan las armas de combate de este agente hasta el final de la secuencia: Brutal, Castigadora, Choque, Equilibrada, Severa."
+                },
+                {
+                    "name": "Sendero a la gloria",
+                    "description": "Siempre que este agente incapacite a un agente enemigo que tenga tu ficha de Desafío, obtienes 1PM."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, CAMPEÓN",
+            "peana": "32"
+        },
+        {
+            "id": "curseclaw",
+            "name": "GARRAMALDITA DEL ALA ASESINA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "14"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Garras mutadas",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Desgarradora"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Ataque frenético",
+                    "description": "Si este agente queda incapacitado durante una acción de <b>Combatir</b>, puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de retirar a este agente de la zona de aniquilación."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "ATRAPAR",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Acción de <b>IMPULSO</b>. Elige un agente enemigo en la <b>ZONA DE IMPULSO</b> de este agente. Ambos jugadores tiran 1D6 y suman a su resultado el atributo Heridas de su respectivo agente. Si tu resultado es mayor, retira de la zona de aniquilación a ese agente enemigo y vuelve a desplegarlo en la <b>ZONA DE IMPULSO</b> o la zona de control de este agente. Debe desplegarse en una ubicación en la que pueda colocarse y no puede desplegarse más lejos de lo que estaba de este agente. Si ese agente enemigo se despliega en la zona de control de este agente, la acción de <b>Retroceder</b> o <b>Reposicionarse</b> termina (permitiendo a este agente terminar esa acción en la zona de control de agentes enemigos)."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción de manera normal. En lugar de ello, la realiza durante una acción de <b>Retroceder</b> o <b>Reposicionarse</b>, tras desplegarse debido a un <b>IMPULSO</b>."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, CAMPEÓN",
+            "peana": "32"
+        },
+        {
+            "id": "depredator",
+            "name": "DEPREDADOR DEL ALA ASESINA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "14"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Gran hacha sierra",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "4+",
+                        "Dñ": "5/7",
+                        "RA": "Brutal"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Desmembramiento horripilante",
+                    "description": "Siempre que este agente incapacite a un agente enemigo al combatir o contraatacar, elige un agente enemigo distinto a 3\" o menos de este agente o del agente enemigo incapacitado y visible para el mismo. Resta 1 al atributo LPA de ese agente enemigo hasta el final de su siguiente activación."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "GOLPE CERCENADOR",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Inflige 2D3 daños a cada otro agente visible para este agente y a 2\" o menos de él en el orden que elijas (tira por separado para cada uno)."
+                    ],
+                    "description_no": "A efectos de las restricciones de acciones y la regla de facción Astartes, esta acción se trata como una acción de <b>Combatir</b>. Este agente no puede realizar esta acción mientras tenga una orden de ocultarse, ni durante la misma activación en la que realizara la acción <b>Rebanar desde lo alto</b> (ver equipo de facción) o viceversa."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, DEPREDADOR",
+            "peana": "32"
+        },
+        {
+            "id": "huntmaster",
+            "name": "MAESTRO CAZADOR DEL ALA ASESINA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "14"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Arma de energía",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Letal 5+"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Presa acorralada",
+                    "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, si no hay otros agentes enemigos en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 2D6, o 1D6 si ese agente enemigo tiene un atributo Heridas mayor que este agente. Si sacas algún 4+, el agente enemigo no puede realizar esa acción durante esta activación/reacción (y no gasta PA en ella)."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "GOLPEAR DESDE LO ALTO",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Acción de <b>IMPULSO</b>. Inflige 2D3+1 daños a un agente enemigo en la <b>ZONA DE IMPULSO</b> de este agente."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción de manera normal. En lugar de ello, la realiza durante una acción de <b>Retroceder</b> o <b>Reposicionarse</b>, tras desplegarse debido a un <b>IMPULSO</b>."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, MAESTRO CAZADOR",
+            "peana": "32"
+        },
+        {
+            "id": "raptor",
+            "name": "RAPAZ DEL ALA ASESINA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "14"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Pistola de plasma (normal)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Alcance 8\", Penetración 1"
+                    }
+                },
+                {
+                    "name": "Pistola de plasma (sobrecarga)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Alcance 8\", Letal 5+, Penetración 1, Sobrecalentamiento"
+                    }
+                },
+                {
+                    "name": "Espada sierra",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "La excitación del vuelo",
+                    "description": "Siempre que este agente se dé un <b>IMPULSO</b> durante su activación: <ul><li>Puedes retirar cualesquiera cambios a su atributo LPA.</li></ul> <ul><li>Puedes ignorar cualesquiera cambios a sus atributos por estar lesionado (incluyendo los atributos de sus armas) hasta el final de la activación.</li></ul>"
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, RAPAZ",
+            "peana": "32"
+        },
+        {
+            "id": "shrieker",
+            "name": "ESTRIDENTE DEL ALA ASESINA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "14"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Espada sierra",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Vocoemisores modificados",
+                    "description": "<p> Cuando un agente enemigo se encuentre a 3\" o menos de este agente, tu oponente debe gastar 1 PA adicional para que ese agente enemigo pueda realizar acciones de <b>Recoger marcador</b> o de misión.</p> <p>Al determinar el control de un marcador, considera el atributo LPA total de los agentes enemigos que lo estén disputando como si fuera 1 menos si al menos uno de esos agentes enemigos está a 3\" o menos de este agente. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto.</p>"
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "ALARIDO",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Elige un agente enemigo a 6\" o menos de este agente y visible para él. Como alternativa, elige a un agente enemigo en la <b>ZONA DE IMPULSO</b>. de este agente (con lo cual esta acción se convierte en una acción de <b>IMPULSO</b>). Si hay agentes enemigos en la zona de control de este agente, no puedes elegir a un agente enemigo que no lo esté. Inflige 1D3 daños al agente elegido y resta 1 a su atributo LPA hasta el final de su siguiente activación."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción mientras tenga una orden de ocultarse. Si estás eligiendo a un agente enemigo en la <b>ZONA DE IMPULSO</b> de este agente, este agente no puede realizar esta acción de manera normal. En lugar de ello, la realiza durante una acción de <b>Retroceder</b> o <b>Reposicionarse</b> tras desplegarse debido a un <b>IMPULSO</b>."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, ESTRIDENTE",
+            "peana": "32"
+        },
+        {
+            "id": "skysear",
+            "name": "IGNÍFERO DEL ALA ASESINA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "14"
+            },
+            "weapons": [
+                {
+                    "name": "Lanzallamas",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 8\", Ráfaga 2\", Saturación"
+                    }
+                },
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Rifle de fusión",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "6/3",
+                        "RA": "Alcance 6\", Devastadora 4, Penetración 2"
+                    }
+                },
+                {
+                    "name": "Rifle de plasma (normal)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Penetración 1"
+                    }
+                },
+                {
+                    "name": "Rifle de plasma (sobrecarga)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "5/6",
+                        "RA": "Letal 5+, Penetración 1, Sobrecalentamiento"
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, IGNÍFERO",
+            "peana": "32"
+        },
+        {
+            "id": "warp-talon",
+            "name": "ESPOLÓN DE LA DISFORMIDAD DEL ALA ASESINA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "14"
+            },
+            "weapons": [
+                {
+                    "name": "Garras relámpago",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Desgarradora, Incesante, Letal 5+"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Rajar el velo",
+                    "description": "<p>Al desplegar a este agente antes de la batalla, en lugar de ello puedes desplegarlo en la disformidad: sitúalo a un lado en lugar de en la zona de aniquilación. En la primera fase de tiroteo, cuando se active a este agente, coloca uno de tus marcadores de Disformidad completamente dentro de tu territorio, y a continuación este agente queda usado.</p> <p>En la segunda fase de tiroteo, cuando actives a este agente, despliégalo con una orden de tu elección en una ubicación en la que pueda colocarse, o bien completamente dentro de tu zona de descenso, o completamente dentro de tu territorio disputando tu marcador de Disformidad. Continúa con su activación de manera normal, pero durante esa activación no puede realizar más de dos acciones y no puede usar más de 4\" de distancia de movimiento. Hasta el paso de preparación de la siguiente fase de estrategia, este agente está ofuscado para los agentes a más de 3\" de él</p> <p>Cuando este agente se encuentre en la disformidad, no puede ser el agente <span class=\"faction\">ALA ASESINA</span> amigo apostado de cara al ardid de tiroteo Narcisismo malicioso.</p>"
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, ESPOLÓN DE LA DISFORMIDAD",
+            "peana": "32"
         }
     ]
 }

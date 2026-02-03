@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Caos': [
             'blooded', 'chaos-cult', 'fellgor-ravagers', 'gellerpox',
             'goremongers', 'legionary', 'nemesis-claw', 'plague-marines',
-            'warpcoven'
+            'warpcoven', 'murderwing'
         ],
         'Xenos': [
             'blades-of-khaine', 'brood-brothers', 'canoptek', 'corsair-voidscarred',
@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'nemesis-claw': 'Garra Némesis',
         'plague-marines': 'Marines de Plaga',
         'warpcoven': 'Aquelarre Disforme',
+        'murderwing': 'Ala Asesina',
 
         'blades-of-khaine': 'Filos de Khaine',
         'brood-brothers': 'Hermanos de Progenie',

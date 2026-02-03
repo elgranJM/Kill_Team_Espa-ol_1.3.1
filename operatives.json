@@ -23784,5 +23784,68 @@
             "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, ARMADA, <b>INFANTE DEL VACÍO</b>",
             "peana": "25"
         }
+    ],
+    "murderwing":[
+        {
+            "id": "voidsman-rotor-cannon",
+            "name": "INFANTE DEL VACÍO",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "7"
+            },
+            "weapons": [
+                {
+                    "name": "Rifle láser",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Cañón rotatorio (concentrado)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "4+",
+                        "Dñ": "4/5",
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>)"
+                    }
+                },
+                {
+                    "name": "Cañón rotatorio (barrido)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/5",
+                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Tripulación",
+                    "description": "Una vez por punto de inflexión, cuando fueras a reaccionar, si no has usado un <b>ACTIVO DE <b>APOYO</b> PRIVADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, puedes reaccionar con un agente <b>INFANTE DEL VACÍO</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo que tenga una orden de ocultarse, pero durante esa reacción solo puedes realizar acciones de <b>Disparar</b>, y debes usar un <b>ACTIVO DE APOYO PRIVADO</b> para ello."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, ARMADA, <b>INFANTE DEL VACÍO</b>",
+            "peana": "25"
+        }
     ]
 }

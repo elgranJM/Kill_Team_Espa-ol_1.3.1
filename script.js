@@ -622,7 +622,7 @@ function renderOperatives(factionKey) {
                 actionHtml = `
                 <div class="equip-action-box mt-3">
                     <div class="equip-action-header d-flex justify-content-between align-items-center">
-                        <span class="fw-bold text-uppercase">${item.name}</span>
+                        <span class="fw-bold text-uppercase">${item.action_name}</span>
                         <span class="badge bg-light text-dark">${item.action_cost}</span>
                     </div>
                     <div class="equip-action-content p-2">

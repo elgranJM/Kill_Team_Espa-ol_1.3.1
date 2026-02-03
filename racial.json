@@ -1054,21 +1054,21 @@
             "faction": "murderwing",
             "type": "racial",
             "name": "ACCIONES DE IMPULSO",
-            "description": ""
+            "description": "<p>Algunas acciones se conocen como acciones de <b>IMPULSO</b>. Estas son acciones que se realizan durante otras acciones, cuando se aplica un <b>IMPULSO</b>. Cada agente solo puede realizar una acción de <b>IMPULSO</b> por activación/reacción.</p> <p>La mayoría de acciones de <b>IMPULSO</b> afectan a los agentes enemigos que están en la <b>ZONA DE IMPULSO</b> del agente <span class=\"faction\">ALA ASESINA</span>. Esta es la zona horizontal entre la ubicación actual de un agente <span class=\"faction\">ALA ASESINA</span> amigo y la ubicación desde la que usó el <b>IMPULSO</b>. Puedes determinarlo colocando temporalmente un marcador del mismo tamaño que la peana del agente. Los agentes enemigos que tengan alguna parte de la peana bajo terreno Aventajado no se consideran en las <b>ZONAS DE IMPULSO</b> de los agentes <span class=\"faction\">ALA ASESINA</span> amigos.</p>"
         },
         {
             "id_racial": 139,
             "faction": "murderwing",
             "type": "racial",
             "name": "EJEMPLO DE ACCIONES DE IMPULSO",
-            "description": ""
+            "description": "En este ejemplo, el agente de arriba (C) se encuentra en la <b>ZONA DE IMPULSO</b> del agente <span class=\"faction\">ALA ASESINA</span> (A). El agente de abajo (B) no, ya que su peana está bajo terreno Aventajado. <figure class=\"figure\"><img src=\"./resources/boost-action-example.png\" class=\"figure-img img-fluid rounded mx-auto d-block\">"
         },
         {
             "id_racial": 140,
             "faction": "murderwing",
             "type": "racial",
             "name": "ASTARTES",
-            "description": ""
+            "description": "<p>Durante la activación de cada agente <span class=\"faction\">ALA ASESINA</span> amigo, puede realizar o dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b>, debe seleccionarse una pistola bólter para al menos una de ellas.</p> <p>Cada agente <span class=\"faction\">ALA ASESINA</span> amigo puede reaccionar sin importar cuál sea su orden.</p>"
         }
     ]
 }

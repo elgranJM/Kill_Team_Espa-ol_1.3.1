@@ -272,5 +272,11 @@
             "infiltration",
             "seek-destroy"
         ]
+    },
+    "murderwing":{
+        "archetypes":[
+            "recon",
+            "seek-destroy"
+        ]
     }
 }

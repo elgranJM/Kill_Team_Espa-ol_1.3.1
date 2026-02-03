@@ -1157,5 +1157,29 @@
     "faction": "blades-of-khaine",
     "name": "Talismán de Hueso Espectral",
     "description": "Una vez por Punto de Inflexión, cuando un operativo BLADES OF KHAINE amigo esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar."
+  },
+  {
+    "id_equip": 186,
+    "faction": "murderwing",
+    "name": "FILOALETAS",
+    "description": ""
+  },
+  {
+    "id_equip": 187,
+    "faction": "murderwing",
+    "name": "ARMADURA CON GARRAS",
+    "description": ""
+  },
+  {
+    "id_equip": 188,
+    "faction": "murderwing",
+    "name": "COMBUSTIBLE DISFORME",
+    "description": ""
+  },
+  {
+    "id_equip": 189,
+    "faction": "murderwing",
+    "name": "VOCOEMISORES",
+    "description": ""
   }
 ]

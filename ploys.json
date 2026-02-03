@@ -579,7 +579,7 @@
         "id_ploy": 116,
         "faction": "inquisitorial-agent",
         "type": "strategic",
-        "cps": "1+PM",
+        "cps": "1PM",
         "name": "Denunciar",
         "description": "Selecciona un agente enemigo y tira un D3. En la Fase de Tiroteo de este punto de inflexión, ese agente enemigo no puede ser activado o realizar acciones hasta que sea el último agente enemigo en ser activado, o tu oponente haya activado un número de agentes enemigos igual al resultado del D3 (lo que ocurra primero). Este ardid te cuesta 1 PM adicional por cada vez anterior que lo hayas usado durante la batalla (p. ej. 1PM la primera vez que lo usarías, 2PM la segunda vez, etc.).",
         "typename": "Ardid Estratégico"
@@ -1623,7 +1623,7 @@
         "id_ploy": 283,
         "faction": "nemesis-claw",
         "type": "tactical",
-        "cps": "1+PM",
+        "cps": "1PM",
         "name": "Grito Vox",
         "description": "Usa este ardid de tiroteo cuando tu oponente fuera a activar un agente enemigo. Tu oponente no puede activar a ese agente durante esta activación. Si no hay otros agentes enemigos elegibles para ser activados, este ardid no tiene efecto. Este ardid te cuesta 1 PM adicional por cada vez anterior que lo hayas usado durante la batalla (p. ej. 1PM la primera vez que lo usarías, 2PM la segunda vez, etc.).",
         "typename": "Ardid Táctico"
@@ -3085,5 +3085,77 @@
         "name": "Asalto de Choque",
         "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> amigo esté realizando la acción <b>Combatir</b> durante una activación en la que realizó la acción <b>Cargar</b>, al inicio del paso Resolver Dados de Ataque. Hasta el final de esa acción:<ul><li>Su arma cuerpo a cuerpo tiene la regla de arma Choque.</li><li>La primera vez que golpees durante esa secuencia, inflige 1 de daño adicional.</li></ul>",
         "typename": "Ardid Táctico"
+    },
+    {
+        "id_ploy": 212,
+        "faction": "murderwing",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "DEPREDADORES AÉREOS",
+        "description": "",
+        "typename":"Ardid Estratégico"
+    },
+    {
+        "id_ploy": 213,
+        "faction": "murderwing",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "MASACRAR A LOS DÉBILES",
+        "description": "",
+        "typename":"Ardid Estratégico"
+    },
+    {
+        "id_ploy": 214,
+        "faction": "murderwing",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "PESADILLA EN LAS ALTURAS",
+        "description": "",
+        "typename":"Ardid Estratégico"
+    },
+    {
+        "id_ploy": 215,
+        "faction": "murderwing",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "INSTILAR MIEDO",
+        "description": "",
+        "typename":"Ardid Estratégico"
+    },
+    {
+        "id_ploy": 216,
+        "faction": "murderwing",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "",
+        "description": "",
+        "typename":"Ardid Táctico"
+    },
+    {
+        "id_ploy": 217,
+        "faction": "murderwing",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "NARCISISMO MALICIOSO",
+        "description": "",
+        "typename":"Ardid Táctico"
+    },
+    {
+        "id_ploy": 218,
+        "faction": "murderwing",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "DESCENSO ASESINO",
+        "description": "",
+        "typename":"Ardid Táctico"
+    },
+    {
+        "id_ploy": 222,
+        "faction": "murderwing",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "LUCHAR SIN HONOR",
+        "description": "",
+        "typename":"Ardid Táctico"
     }
 ]

@@ -1,0 +1,115 @@
+{
+    "secure": {
+        "id": "1",
+        "name_es": "Asegurar",
+        "action_mission": [
+            {
+                "action_mission_name": "Asegurar",
+                "action_mission_cost": "1 LPA",
+                "action_mission_yes": "Un marcador de objetivo que controla el agente activo está asegurado por tu comando hasta que el comando enemigo asegure ese marcador de objetivo.",
+                "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo."
+            }
+        ],
+        "victoy_points": "Al final de cada punto de inflexión después del primero: <ul><li>Si algún marcador objetivo es asegurado por tu comando, obtienes 1 PV.</li></ul> <ul><li>Si tu comando asegura más marcadores objetivos que el de tu oponente, obtienes 1 PV.</li></ul>"
+    },
+    "loot": {
+        "id": "2",
+        "name_es": "Saquear",
+        "action_mission": [
+            {
+                "action_mission_name": "Saquear",
+                "action_mission_cost": "1 LPA",
+                "action_mission_yes": "Un marcador objetivo que controla el agente activo es saqueado.",
+                "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del alcance de control de un agente enemigo o si ese marcador de objetivo ya ha sido saqueado durante este punto de inflexión."
+            }
+        ],
+        "victoy_points": "Cada vez que un agente amigo realiza la acción de <b>Saqueo</b>, obtienes 1 PV (hasta un máximo de 2 PV por punto de inflexión)."
+    },
+    "transmission": {
+        "id": "3",
+        "name_es": "Transmisión",
+        "action_mission": [
+            {
+                "action_mission_name": "Iniciar transmisión",
+                "action_mission_cost": "1 LPA",
+                "action_mission_yes": "Un marcador objetivo que controla el agente activo se transmite hasta el inicio del siguiente punto de inflexión.",
+                "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo."
+            }
+        ],
+        "victoy_points": "Al final de cada punto de inflexión después del primero: <ul><li>Si los agentes amigos controlan algún marcador de objetivo transmisor, obtienes 1 PV.</li></ul> <ul><li>Si los agentes amigos controlan más marcadores de objetivo transmisores que los agentes enemigos, obtienes 1 PV.</li></ul>"
+    },
+    "orb": {
+        "id": "4",
+        "name_es": "Orbe",
+        "action_mission": [
+            {
+                "action_mission_name": "Mover orbe",
+                "action_mission_cost": "1 LPA",
+                "action_mission_yes": "Si el agente activo controla el marcador de objetivo que tiene la ficha de Orbe, mueve esa ficha de la siguiente manera: <ul><li>Si el marcador de objetivo central lo tiene, muévelo al marcador de objetivo de cualquier jugador (a tu elección).</li></ul> <ul><li>Si el marcador de objetivo de un jugador lo tiene, muévelo al marcador de objetivo central.</li></ul>",
+                "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo o si no controla el marcador de objetivo que tiene la ficha de Orbe."
+            }
+        ],
+        "aditional_rules": "Al comienzo de la batalla, el marcador de objetivo central tiene la ficha de Orbe.",
+        "victoy_points": "Al final de cada punto de inflexión después del primero, por cada marcador de objetivo que controlen los operativos amigos que no tenga la ficha de Orbe, obtienes 1 PV."
+    },
+    "stake_claim": {
+        "id": "5",
+        "name_es": "Reclamo de participación",
+        "action_mission": [],
+        "aditional_rules": "<li>Al comienzo de la fase de <b>Gambitos estratégicos</b> después de la primera, comenzando con el jugador con la iniciativa, cada jugador debe seleccionar un marcador de objetivo y una de las siguientes reclamaciones para ese punto de inflexión:</li> <ul><li>Los agentes amigos controlarán ese marcador objetivo al final de este punto de inflexión.</li></ul> <ul><li>Los agentes enemigos no disputarán ese marcador objetivo al final de este punto de inflexión.</li></ul> <li>Cada jugador no puede seleccionar cada marcador de objetivo más de una vez por batalla (por lo que debe seleccionar cada marcador de objetivo una vez durante la batalla).</li>",
+        "victoy_points": "Al final de cada punto de inflexión, después del primero: <ul><li>Si los agentes amigos controlan más marcadores de objetivo que los agentes enemigos, obtienes 1 PV.</li></ul> <ul><li>Si la afirmación seleccionada es verdadera, obtendrás 1 PV.</li></ul>"
+    },
+    "energy_cells": {
+        "id": "6",
+        "name_es": "Celdas de energia",
+        "action_mission": [],
+        "aditional_rules": "<li>Los agentes pueden realizar la acción <b>Recoger marcador</b> en cada marcador de objetivo en los siguientes puntos de inflexión:</li> <ul><li><b>2</b>, pero debes gastar <b>2PA adicionales</b> (esa acción no puede ser gratuita y su PA no se puede reducir).</li></ul> <ul><li><b>3</b>, pero debes gastar <b>1PA adicional</b> (esa acción no puede ser gratuita y su PA no se puede reducir).</li></ul> <ul><li><b>4</b> (como de costumbre).</li></ul> <li>Siempre que un agente lleve un marcador de objetivo, dicho agente no podrá ser retirado y colocado nuevamente a más de 6\" de distancia.</li>",
+        "victoy_points": "<ul><li>Al final de cada punto de inflexión después del primero, si los agentes amigos controlan más marcadores de objetivo que los agentes enemigos, obtienes 1 PV.</li></ul> <ul><li>Al final de la batalla, por cada marcador de objetivo que lleven los agentes amigos, obtienes 1 PV.</li></ul>"
+    },
+    "download": {
+        "id": "7",
+        "name_es": "Descarga",
+        "action_mission": [
+            {
+                "action_mission_name": "Descargar",
+                "action_mission_cost": "1 LPA",
+                "action_mission_yes": "Se descarga un marcador central o de objetivo del oponente que controla el agente activo.",
+                "action_mission_no": "Un agente no puede realizar esta acción durante el primer o segundo punto de inflexión, mientras esté dentro del alcance de control de un agente enemigo o si ese marcador de objetivo ya se ha descargado durante la batalla."
+            }
+        ],
+        "victoy_points": "<ul><li>Al final de cada punto de inflexión después del primero, si los agentes aliados controlan más marcadores de objetivo que los enemigos, obtienes 1 PV. Ignora los marcadores de objetivo descargados al determinar esto.</li></ul> <ul><li>Siempre que un agente amigo realice la acción <b>Descargar</b> durante el tercer punto de inflexión, obtendrás 1 PV.</li></ul> <ul><li>Siempre que un operativo amigo realice la acción <b>Descargar</b> durante el cuarto punto de inflexión, obtendrás 2 PV.</li></ul>"
+    },
+    "data": {
+        "id": "8",
+        "name_es": "Datos",
+        "action_mission": [
+            {
+                "action_mission_name": "Recopilar datos",
+                "action_mission_cost": "1 LPA",
+                "action_mission_yes": "Un marcador de objetivo controlado por el agente activo obtiene 1 punto de datos. Usa un dado como ficha para llevar la cuenta de los puntos de datos en ese marcador de objetivo.",
+                "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del alcance de control de un agente enemigo o si ese marcador de objetivo ya ha obtenido un punto de datos durante este punto de inflexión."
+            },
+            {
+                "action_mission_name": "Enviar datos",
+                "action_mission_cost": "1 LPA",
+                "action_mission_yes": "Eliminar todos los puntos de datos de un marcador de objetivo que controla el agente activo.",
+                "action_mission_no": "Un agente no puede realizar esta acción durante el primer, segundo o tercer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo o si ese marcador de objetivo no tiene puntos de datos para eliminar."
+            }
+        ],
+        "victoy_points": "<ul><li>Al final del segundo y tercer punto de inflexión, si los agentes amigos han realizado más acciones de <b>Recopilar datos</b> durante ese punto de inflexión que los agentes enemigos, obtienes 1 PV.</li></ul> <ul><li>Siempre que un agente amigo realiza la acción <b>Enviar datos</b>, obtienes una cantidad de PV igual a la cantidad de puntos de datos eliminados.</li></ul>"
+    },
+    "reboot": {
+        "id": "9",
+        "name_es": "Reinicio",
+        "action_mission": [
+            {
+                "action_mission_name": "Reiniciar",
+                "action_mission_cost": "2 LPA",
+                "action_mission_yes": "Un marcador objetivo inerte que los agentes activos controlan ya no es inerte.",
+                "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión o mientras esté dentro del rango de control de un agente enemigo."
+            }
+        ],
+        "aditional_rules": "<li>Al preparar la batalla, después de colocar los marcadores de objetivo, numere cada marcador de objetivo. <b>1-3</b>.</li> <li>Al comienzo de la fase de <b>Gambito estratégico</b>, cada jugador selecciona en secreto un marcador objetivo colocando en su mano una cantidad de dados que coincida con el número de ese marcador y luego revela simultáneamente:</li> <ul><li>Si ambos jugadores seleccionaron el mismo, <b>ese</b> marcador de objetivo estará <b>inerte</b> durante este punto de inflexión.</li></ul> <ul><li>En caso contrario, el marcador objetivo que <b>ningún</b> jugador seleccionó queda <b>inerte</b> durante este punto de inflexión.</li></ul>",
+        "victoy_points": "<ul><li>Al final de cada punto de inflexión posterior al primero, por cada marcador de objetivo controlado por agentes aliados, obtienes 1 PV. <b>Ignora los marcadores de objetivo inertes</b> al determinar esto.</li></ul>"
+    }
+}

@@ -3092,7 +3092,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "DEPREDADORES AÉREOS",
-        "description": "",
+        "description": "Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo se encuentre al menos 2\" más alto que el suelo de la zona de aniquilación, sus armas tienen la regla de armas Equilibrada. Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo use un <b>IMPULSO</b>, sus armas tienen la regla de armas Equilibrada hasta el final de esa activación.",
         "typename":"Ardid Estratégico"
     },
     {
@@ -3101,7 +3101,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "MASACRAR A LOS DÉBILES",
-        "description": "",
+        "description": "Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo dispare o combata, sus armas tienen la regla de armas Castigadora si el agente contra el que ese agente amigo está disparando o combatiendo cumple cualquiera de las siguientes condiciones: <ul><li> Se encuentra al menos 2\" más bajo que el agente amigo.</li></ul> <ul><li>Su LPA es menor de lo normal</li></ul> <ul><li> Estaba herido al inicio de la activación/reacción.</li></ul>",
         "typename":"Ardid Estratégico"
     },
     {
@@ -3110,7 +3110,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "PESADILLA EN LAS ALTURAS",
-        "description": "",
+        "description": "Cuando un agente dispare contra un agente <span class=\"faction\">ALA ASESINA</span> amigo que se encuentre al menos 2\" más alto que el suelo de la zona de aniquilación, o que realizara un <b>IMPULSO</b> durante este punto de inflexión, puedes repetir uno de tus dados de defensa.",
         "typename":"Ardid Estratégico"
     },
     {
@@ -3119,7 +3119,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "INSTILAR MIEDO",
-        "description": "",
+        "description": "Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo combata, el Daño normal de 3 o más le inflige 1 daño menos.",
         "typename":"Ardid Estratégico"
     },
     {
@@ -3127,8 +3127,8 @@
         "faction": "murderwing",
         "type": "tactical",
         "cps": "1PM",
-        "name": "",
-        "description": "",
+        "name": "NARCISISMO MALICIOSO",
+        "description": "Usa este ardid de tiroteo cuando sea tu turno para activar un agente amigo, si solo hay apostado un único agente <span class=\"faction\">ALA ASESINA</span> amigo. Hasta el final del punto de inflexión, mientras haya algún agente enemigo apostado en la zona de aniquilación, puedes saltarte tus activaciones (es decir, puedes retrasar la activación de ese agente <span class=\"faction\">ALA ASESINA</span> amigo). Ten en cuenta que no puedes reaccionar hasta que ese agente <span class=\"faction\">ALA ASESINA</span> amigo haya sido usado.",
         "typename":"Ardid Táctico"
     },
     {
@@ -3136,8 +3136,8 @@
         "faction": "murderwing",
         "type": "tactical",
         "cps": "1PM",
-        "name": "NARCISISMO MALICIOSO",
-        "description": "",
+        "name": "DESCENSO ASESINO",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo termine la acción de <b>Cragar</b>, <b>Correr</b>, <b>Retroceder</b> o <b>Reposicionarse</b> a 3\" o menos en horizontal de un agente <span class=\"faction\">ALA ASESINA</span> amigo (o, en combate cerrado, a 2\" o menos, y ese agente enemigo debe estar en una estancia distinta a aquella en la que empezó esa acción). Interrumpe la activación/reacción de ese agente enemigo y realiza inmediatamente una acción libre de <b>Cargar</b> con ese agente amigo. Debe terminar esa acción en la zona de control de ese agente enemigo. Si esto no es posible, la interrupción se cancela y esta regla no ha sido usada.",
         "typename":"Ardid Táctico"
     },
     {
@@ -3145,8 +3145,8 @@
         "faction": "murderwing",
         "type": "tactical",
         "cps": "1PM",
-        "name": "DESCENSO ASESINO",
-        "description": "",
+        "name": "LUCHAR SIN HONOR",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo combata o contraataque, al resolver un éxito crítico. En lugar de golpear o bloquear, termina esa secuencia (cualquier dado de ataque restante se descarta) y realiza inmediatamente con ese agente una acción libre de <b>Retroceder</b> de hasta 3\" (y entonces la acción de <b>Combatir</b> termina). Ese agente puede hacerlo aunque haya realizado una acción que le impida realizar la acción de <b>Retroceder</b>.",
         "typename":"Ardid Táctico"
     },
     {
@@ -3154,8 +3154,8 @@
         "faction": "murderwing",
         "type": "tactical",
         "cps": "1PM",
-        "name": "LUCHAR SIN HONOR",
-        "description": "",
+        "name": "ALAS DE OSCURIDAD",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo realice la acción de <b>Retroceder</b> o <b>Reposicionarse</b>, cuando aplique un <b>IMPULSO</b>. Ese agente puede desplegarse a 3\" adicionales de distancia durante ese <b>IMPULSO</b> (añadiéndolos a la distancia de movimiento permitida), pero no puede realizar acciones de <b>Disparar</b>, <b>Combatir</b> o <b>Golpe cercenador</b> (ver agente <b>DEPREDADOR</b>) hasta el siguiente punto de inflexión. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename":"Ardid Táctico"
     }
 ]

@@ -416,7 +416,7 @@ function renderOperatives(factionKey) {
                         ${actionsHtml}
                     </div>
                 
-                    <!-- NUEVA PARTE INFERIOR: Peana y Keywords -->
+                    <!-- PARTE INFERIOR: Peana y Keywords -->
                     <div class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center">
                         <div class="peana-box bg-dark text-white px-2 py-1 rounded small fw-bold" style="font-size: 0.75rem;">
                             ${op.peana || 'N/A'}

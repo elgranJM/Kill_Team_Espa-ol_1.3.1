@@ -23787,65 +23787,99 @@
     ],
     "murderwing":[
         {
-            "id": "voidsman-rotor-cannon",
-            "name": "INFANTE DEL VACÍO",
+            "id": "lord-chaos",
+            "name": "SEÑOR DEL CAOS DEL ALA ASESINA",
             "stats": {
-                "LPA": "2",
+                "LPA": "3",
                 "MOVER": "6\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "7"
+                "SALVACIÓN": "3+",
+                "HERIDAS": "15"
             },
             "weapons": [
                 {
-                    "name": "Rifle láser",
+                    "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "2/3",
-                        "RA": "-"
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcabce 8\""
                     }
                 },
                 {
-                    "name": "Cañón rotatorio (concentrado)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>)"
-                    }
-                },
-                {
-                    "name": "Cañón rotatorio (barrido)",
+                    "name": "Pistola de plasma (normal)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Alcance 8\", Penetración 1"
                     }
                 },
                 {
-                    "name": "Culata",
+                    "name": "Pistola de plasma (sobrecarga)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Alcance 8\", Letal 5+, Penetración 1, Sobrecalentamiento"
+                    }
+                },
+                {
+                    "name": "Arma de energía",
                     "type": "melee",
                     "stats": {
-                        "A": "3",
-                        "HP/HA": "4+",
-                        "Dñ": "2/3",
-                        "RA": "-"
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Letal 5+"
+                    }
+                },
+                {
+                    "name": "Garra relámpago",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Desgarradora, Letal 5+"
+                    }
+                },
+                {
+                    "name": "Garras relámpago reliquia",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Desgarradora, Incesante, Letal 5+"
+                    }
+                },
+                {
+                    "name": "Puño de energía",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "5/7",
+                        "RA": "Brutal, Choque"
                     }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Tripulación",
-                    "description": "Una vez por punto de inflexión, cuando fueras a reaccionar, si no has usado un <b>ACTIVO DE <b>APOYO</b> PRIVADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, puedes reaccionar con un agente <b>INFANTE DEL VACÍO</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo que tenga una orden de ocultarse, pero durante esa reacción solo puedes realizar acciones de <b>Disparar</b>, y debes usar un <b>ACTIVO DE APOYO PRIVADO</b> para ello."
+                    "name": "Senda hacia la condenación",
+                    "description": "<p>Este agente empieza la batalla con 1 punto de Condenación. Una vez por acción, puedes intentar usar un Don de Condenación cuando se especifique (ver a la derecha). Si lo haces, tira 1D6 y compara el resultado con el número de puntos de Condenación que tenga este agente; si el resultado es:</p> <p><ul><li><b>Mayor:</b> Resuelve la regla, y a continuación este agente gana 1 punto de Condenación.</li></ul> <ul><li><b>Igual:</b> No resuelvas la regla.</li></ul> <ul><li><b>Menor:</b> Inflige a este agente tantos daños como su número de puntos de Condenación y no resuelvas la regla.</li></ul></p> <p>Si este agente tiene 6 puntos de Condenación, resuelve la regla sin tirar. Ten en cuenta que no puedes hacer un intento más de una vez por acción, con independencia del resultado del D6.</p>"
+                },
+                {
+                    "name": "Dones de Condenación",
+                    "description": "Los Dones de Condenación son los siguientes (se resuelven tirando 1D6; ver a la izquierda): <ul><li>Cuando un dado de ataque inflija 3 o más daños a este agente, puedes ignorar tantos daños como los puntos de Condenación de este agente</li></ul> <ul><li>Cuando este agente combata o contraataque y golpees, puedes infligir tantos daños adicionales como los puntos de Condenación de este agente.</li></ul>"
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, ARMADA, <b>INFANTE DEL VACÍO</b>",
-            "peana": "25"
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, LÍDER, SEÑOR",
+            "peana": "40"
         }
     ]
 }

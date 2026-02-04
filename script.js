@@ -616,45 +616,83 @@ function renderOperatives(factionKey) {
                 </div>`;
             }
 
-            // Acciones de Equipamiento (si tiene action_cost)
-            let actionHtml = '';
-            if (item.action_cost) {
-                actionHtml = `
-                <div class="equip-action-box mt-3">
-                    <div class="equip-action-header d-flex justify-content-between align-items-center">
-                        <span class="fw-bold text-uppercase">${item.action_name}</span>
-                        <span class="badge bg-light text-dark">${item.action_cost}</span>
-                    </div>
-                    <div class="equip-action-content p-2">
-                        <div class="equip-action-yes mb-2 p-2 rounded">
-                            ${item.action_yes}
-                        </div>
-                        <div class="equip-action-no p-2 rounded">
-                            ${item.action_no}
-                        </div>
-                    </div>
-                </div>`;
-            }
+        //    // Acciones de Equipamiento (si tiene action_cost)
+        //    let actionHtml = '';
+        //    if (item.action_cost) {
+        //        actionHtml = `
+        //        <div class="equip-action-box mt-3">
+        //            <div class="equip-action-header d-flex justify-content-between align-items-center">
+        //                <span class="fw-bold text-uppercase">${item.action_name}</span>
+        //                <span class="badge bg-light text-dark">${item.action_cost}</span>
+        //            </div>
+        //            <div class="equip-action-content p-2">
+        //                <div class="equip-action-yes mb-2 p-2 rounded">
+        //                    ${item.action_yes}
+        //                </div>
+        //                <div class="equip-action-no p-2 rounded">
+        //                    ${item.action_no}
+        //                </div>
+        //            </div>
+        //        </div>`;
+        //    }
 
-            // Estructura de la Tarjeta con clases CSS
-            return `
-            <div class="col-12 col-md-6 mb-4">
-                <div class="equipment-card h-100 shadow-sm border-danger"> 
-                    <div class="equipment-header p-2 bg-danger">
-                        <h5 class="mb-0 text-warning text-center fw-bold text-uppercase">${item.name}</h5>
+        //    // Estructura de la Tarjeta con clases CSS
+        //    return `
+        //    <div class="col-12 col-md-6 mb-4">
+        //        <div class="equipment-card h-100 shadow-sm border-danger"> 
+        //            <div class="equipment-header p-2 bg-danger">
+        //                <h5 class="mb-0 text-warning text-center fw-bold text-uppercase">${item.name}</h5>
+        //            </div>
+        //            <div class="equipment-body p-3 bg-light text-dark">
+        //                <div class="equipment-description small">
+        //                    ${descHtml}
+        //                </div>
+        //                ${weaponHtml}
+        //                ${actionHtml}
+        //            </div>
+        //        </div>
+        //    </div>`;
+        //}).join('');
+
+        //containers.equipment.innerHTML = `<div class="row">${html}</div>`;
+
+            const missionAction = op.action_name ? `
+                <div class="mt-3 p-2 bg-light rounded border">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <strong>${op.action_name}</strong>
+                        <span class="badge bg-secondary">${op.action_cost}</span>
                     </div>
-                    <div class="equipment-body p-3 bg-light text-dark">
-                        <div class="equipment-description small">
-                            ${descHtml}
+                    <ul class="mb-0 ps-3 small">
+                        ${op.action_yes ? `<li class="text-success">${op.action_yes}</li>` : ''}
+                        ${op.action_no ? `<li class="text-danger">${op.action_no}</li>` : ''}
+                    </ul>
+                </div>` : '';
+            return `
+
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm tacop-card">
+                    <div class="card-header text-white d-flex justify-content-between align-items-center" style="background-color: ${archData.color};">
+                        <span class="fw-bold">${op.action_name}</span>
+                        <img src="./resources/game_rules_files/${archData.icon}" width="24" style="filter: brightness(0) invert(1);">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-2 small"><strong>Revelar:</strong> ${op.Reveal}</div>
+                        ${additionalRulesHtml}
+                        ${specialImage}
+                        ${missionAction}
+                        <div class="mt-auto pt-3 border-top">
+                            <strong class="text-primary">Puntos de Victoria:</strong>
+                            <div class="small">${vpHtml}</div>
                         </div>
-                        ${weaponHtml}
-                        ${actionHtml}
+                    </div>
+                    <div class="card-footer text-center py-1 text-white small" style="background-color: ${archData.color}; opacity: 0.9;">
+                        ${archData.action_name}
                     </div>
                 </div>
             </div>`;
         }).join('');
 
-        containers.equipment.innerHTML = `<div class="row">${html}</div>`;
+        containers.equipment.innerHTML = `<div class="row justify-content-center">${html}</div>`;
     }
 
     init();

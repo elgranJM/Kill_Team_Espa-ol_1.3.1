@@ -656,34 +656,6 @@ function renderOperatives(factionKey) {
 
         //containers.equipment.innerHTML = `<div class="row">${html}</div>`;
 
-        const actionHtml = op.action?.length ? 
-            `<div class="mt-2 p-2 border rounded">
-                <strong>Acciones:</strong>
-                ${op.action.map(a => {
-                    // Mapeo de la lista de descripciones positivas (yes.svg)
-                    const descYes = Array.isArray(a.action_yes) 
-                        ? a.action_yes.map(line => `
-                            <div class="d-flex align-items-start mb-1">
-                                <img src="./resources/game_rules_files/yes.svg" width="14" class="me-2 mt-1" alt="yes">
-                                <span>${line}</span>
-                            </div>`).join('')
-                        : `<div class="mb-1">${a.action_yes}</div>`;
-
-                    // Mapeo de la descripción negativa (no.svg)
-                    const descNo = a.action_no ? `
-                        <div class="d-flex align-items-start mt-2 border-top pt-1">
-                            <img src="./resources/game_rules_files/no.svg" width="14" class="me-2 mt-1" alt="no">
-                            <span class="text-muted fst-italic">${a.action_no}</span>
-                        </div>` : '';
-
-                    return `
-                    <div class="mb-3">
-                        <span class="fw-bold text-primary">${a.action_name} (${a.action_cost}):</span>
-                        <div class="ps-2 mt-1">${descYes}${descNo}</div>
-                    </div>`;
-                }).join('')}
-            </div>` : '';
-
         //    return `
         //    <div class="flex-grow-1">
         //        ${actionsHtml}
@@ -691,21 +663,50 @@ function renderOperatives(factionKey) {
         //    }).join('');
         //    containers.equipment.innerHTML = `<div class="row">${html}</div>`;
 
-        return `
-            <div class="col-12 col-md-6 mb-4">
-                <div class="equipment-card h-100 shadow-sm border-danger"> 
-                    <div class="equipment-header p-2 bg-danger">
-                        <h5 class="mb-0 text-warning text-center fw-bold text-uppercase">${item.name}</h5>
-                    </div>
-                    <div class="equipment-body p-3 bg-light text-dark">
-                        <div class="equipment-description small">
-                            ${descHtml}
-                        </div>
-                        ${weaponHtml}
-                        ${actionHtml}
-                    </div>
+
+        // 3. Manejo de acciones (usando 'item' consistentemente)
+        const actionHtml = item.action?.length ? `
+            <div class="mt-2 p-2 border border-primary rounded bg-white">
+                <strong class="small text-primary text-uppercase">Acciones:</strong>
+                ${item.action.map(a => {
+                    const descYes = Array.isArray(a.action_yes) 
+                        ? a.action_yes.map(line => `
+                            <div class="d-flex align-items-start mb-1">
+                                <img src="./resources/game_rules_files/yes.svg" width="12" class="me-2 mt-1">
+                                <span>${line}</span>
+                            </div>`).join('')
+                        : `<div class="mb-1">${a.action_yes}</div>`;
+
+                    const descNo = a.action_no ? `
+                        <div class="d-flex align-items-start mt-2 border-top pt-1 text-muted fst-italic">
+                            <img src="./resources/game_rules_files/no.svg" width="12" class="me-2 mt-1">
+                            <span>${a.action_no}</span>
+                        </div>` : '';
+
+                    return `
+                    <div class="mt-2">
+                        <span class="fw-bold">${a.action_name} (${a.action_cost}):</span>
+                        <div class="ps-2 small">${descYes}${descNo}</div>
+                    </div>`;
+        }).join('')}
+    </div>` : '';
+
+// Retorno del componente
+return `
+    <div class="col-12 col-md-6 mb-4">
+        <div class="equipment-card h-100 shadow-sm border border-danger rounded overflow-hidden"> 
+            <div class="p-2 bg-danger text-white text-center">
+                <h6 class="mb-0 fw-bold text-uppercase">${item.name}</h6>
+            </div>
+            <div class="p-3 bg-light text-dark">
+                <div class="equipment-description small">
+                    ${descHtml}
                 </div>
-            </div>`;
+                ${weaponHtml}
+                ${actionHtml}
+            </div>
+        </div>
+    </div>`;
         }).join('');
 
         containers.equipment.innerHTML = `<div class="row">${html}</div>`;

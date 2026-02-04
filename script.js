@@ -656,7 +656,7 @@ function renderOperatives(factionKey) {
 
         //containers.equipment.innerHTML = `<div class="row">${html}</div>`;
 
-        const actionsHtml = op.action?.length ? 
+        const actionHtml = op.action?.length ? 
             `<div class="mt-2 p-2 border rounded">
                 <strong>Acciones:</strong>
                 ${op.action.map(a => {
@@ -684,13 +684,31 @@ function renderOperatives(factionKey) {
                 }).join('')}
             </div>` : '';
 
-            return `
-            <div class="flex-grow-1">
-                ${actionsHtml}
-            </div>`;
-            }).join('');
+        //    return `
+        //    <div class="flex-grow-1">
+        //        ${actionsHtml}
+        //    </div>`;
+        //    }).join('');
+        //    containers.equipment.innerHTML = `<div class="row">${html}</div>`;
 
-            containers.equipment.innerHTML = `<div class="row">${html}</div>`;
+        return `
+            <div class="col-12 col-md-6 mb-4">
+                <div class="equipment-card h-100 shadow-sm border-danger"> 
+                    <div class="equipment-header p-2 bg-danger">
+                        <h5 class="mb-0 text-warning text-center fw-bold text-uppercase">${item.name}</h5>
+                    </div>
+                    <div class="equipment-body p-3 bg-light text-dark">
+                        <div class="equipment-description small">
+                            ${descHtml}
+                        </div>
+                        ${weaponHtml}
+                        ${actionHtml}
+                    </div>
+                </div>
+            </div>`;
+        }).join('');
+
+        containers.equipment.innerHTML = `<div class="row">${html}</div>`;
     }
 
     init();

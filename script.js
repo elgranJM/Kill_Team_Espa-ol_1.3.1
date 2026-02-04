@@ -656,24 +656,41 @@ function renderOperatives(factionKey) {
 
         //containers.equipment.innerHTML = `<div class="row">${html}</div>`;
 
-            const missionAction = op.action_name ? `
-                <div class="mt-3 p-2 bg-light rounded border">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <strong>${op.action_name}</strong>
-                        <span class="badge bg-secondary">${op.action_cost}</span>
-                    </div>
-                    <ul class="mb-0 ps-3 small">
-                        ${op.action_yes ? `<li class="text-success">${op.action_yes}</li>` : ''}
-                        ${op.action_no ? `<li class="text-danger">${op.action_no}</li>` : ''}
-                    </ul>
-                </div>` : '';
-            return `
-                <div class="card-body d-flex flex-column">
-                        ${missionAction}
-                </div>`;
-        }).join('');
+        const actionsHtml = op.action?.length ? 
+            `<div class="mt-2 p-2 border rounded">
+                <strong>Acciones:</strong>
+                ${op.action.map(a => {
+                    // Mapeo de la lista de descripciones positivas (yes.svg)
+                    const descYes = Array.isArray(a.action_yes) 
+                        ? a.action_yes.map(line => `
+                            <div class="d-flex align-items-start mb-1">
+                                <img src="./resources/game_rules_files/yes.svg" width="14" class="me-2 mt-1" alt="yes">
+                                <span>${line}</span>
+                            </div>`).join('')
+                        : `<div class="mb-1">${a.action_yes}</div>`;
 
-        containers.equipment.innerHTML = `<div class="row justify-content-center">${html}</div>`;
+                    // Mapeo de la descripción negativa (no.svg)
+                    const descNo = a.action_no ? `
+                        <div class="d-flex align-items-start mt-2 border-top pt-1">
+                            <img src="./resources/game_rules_files/no.svg" width="14" class="me-2 mt-1" alt="no">
+                            <span class="text-muted fst-italic">${a.action_no}</span>
+                        </div>` : '';
+
+                    return `
+                    <div class="mb-3">
+                        <span class="fw-bold text-primary">${a.action_name} (${a.action_cost}):</span>
+                        <div class="ps-2 mt-1">${descYes}${descNo}</div>
+                    </div>`;
+                }).join('')}
+            </div>` : '';
+
+            return `
+            <div class="flex-grow-1">
+                ${actionsHtml}
+            </div>`;
+            }).join('');
+
+            containers.equipment.innerHTML = `<div class="row">${html}</div>`;
     }
 
     init();

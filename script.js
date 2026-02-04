@@ -668,28 +668,9 @@ function renderOperatives(factionKey) {
                     </ul>
                 </div>` : '';
             return `
-
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 border-0 shadow-sm tacop-card">
-                    <div class="card-header text-white d-flex justify-content-between align-items-center" style="background-color: ${archData.color};">
-                        <span class="fw-bold">${op.action_name}</span>
-                        <img src="./resources/game_rules_files/${archData.icon}" width="24" style="filter: brightness(0) invert(1);">
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-2 small"><strong>Revelar:</strong> ${op.Reveal}</div>
-                        ${additionalRulesHtml}
-                        ${specialImage}
+                <div class="card-body d-flex flex-column">
                         ${missionAction}
-                        <div class="mt-auto pt-3 border-top">
-                            <strong class="text-primary">Puntos de Victoria:</strong>
-                            <div class="small">${vpHtml}</div>
-                        </div>
-                    </div>
-                    <div class="card-footer text-center py-1 text-white small" style="background-color: ${archData.color}; opacity: 0.9;">
-                        ${archData.action_name}
-                    </div>
-                </div>
-            </div>`;
+                </div>`;
         }).join('');
 
         containers.equipment.innerHTML = `<div class="row justify-content-center">${html}</div>`;

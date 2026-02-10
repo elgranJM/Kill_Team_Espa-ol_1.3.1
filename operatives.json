@@ -197,7 +197,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo <b>Correr</b>)"
+                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -369,7 +369,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/4",
-                        "RA": "Buscadora (Ligero), Pesada (solo <b>Correr</b>), Saturación, Silenciosa"
+                        "RA": "Buscadora (Ligero), Pesada (solo Correr), Saturación, Silenciosa"
                     }
                 },
                 {
@@ -379,7 +379,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "2/4",
-                        "RA": "Área 1\", Pesada (solo <b>Correr</b>), Silenciosa"
+                        "RA": "Área 1\", Pesada (solo Correr), Silenciosa"
                     }
                 },
                 {
@@ -389,7 +389,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 3, Penetración 1, Pesada (solo <b>Correr</b>), Silenciosa"
+                        "RA": "Devastadora 3, Penetración 1, Pesada (solo Correr), Silenciosa"
                     }
                 },
                 {
@@ -535,7 +535,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo <b>Correr</b>)"
+                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -601,7 +601,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo <b>Correr</b>)"
+                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -850,7 +850,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/6",
-                        "RA": "Aturdidora, Penetración 1, Pesada (solo <b>Correr</b>)"
+                        "RA": "Aturdidora, Penetración 1, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -860,7 +860,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>)"
+                        "RA": "Críticos de penetración 1, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -870,7 +870,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "RA": "Críticos de penetración 1, Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {
@@ -1403,7 +1403,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "2/2",
-                        "RA": "Alcance 4\", Área 2\", Devastadora 1, Letal 4+, Limitada 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
+                        "RA": "Alcance 4\", Área 2\", Devastadora 1, Letal 4+, Limitada 1, Pesada (solo Reposicionarse), Saturación"
                     }
                 },
                 {
@@ -1481,7 +1481,7 @@
             "abilities": [
                 {
                     "name": "Dron",
-                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Lanzador de granada de fotones</b>. <b>Reposicionarse</b> y <b>Disparar</b></li></ul> <ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Este agente no puede usar armas que no aparezcan en su tarjeta de datos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li>Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para las condiciones de victoria y la obtención de PV si requieren que los agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc).</li></ul>"
+                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Lanzador de granada de fotones</b>. <b>Reposicionarse</b> y <b>Disparar</b></li></ul> <ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Este agente no puede usar armas que no aparezcan en su tarjeta de datos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li>Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para las condiciones de victoria y la obtención de PV si requieren que los agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc).</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -1521,7 +1521,7 @@
             "abilities": [
                 {
                     "name": "Dron",
-                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Reposicionarse</b> y <b>Disparar</b>.</li></ul> <ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Este agente no puede usar armas que no aparezcan en su tarjeta de datos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li> Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para las condiciones de victoria y la obtención de PV si requieren que los agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc).</li></ul>"
+                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Reposicionarse</b> y <b>Disparar</b>.</li></ul> <ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Este agente no puede usar armas que no aparezcan en su tarjeta de datos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li> Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para las condiciones de victoria y la obtención de PV si requieren que los agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc).</li></ul>"
                 },
                 {
                     "name": "Marcador telemétrico",
@@ -1790,7 +1790,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 3, Pesada (solo <b>Correr</b>), Silenciosa"
+                        "RA": "Devastadora 3, Pesada (solo Correr), Silenciosa"
                     }
                 },
                 {
@@ -1957,7 +1957,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Pesada (solo <b>Correr</b>)"
+                        "RA": "Pesada (solo Correr)"
                     }
                 },
                 {
@@ -1967,7 +1967,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "RA": "Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {
@@ -1977,7 +1977,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "5/6",
-                        "RA": "Penetración 1, Pesada (solo <b>Correr</b>)"
+                        "RA": "Penetración 1, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -1987,7 +1987,7 @@
                         "A": "6",
                         "HP/HA": "4+",
                         "Dñ": "2/2",
-                        "RA": "Área 1\", Aturdidora, Pesada (solo <b>Correr</b>)"
+                        "RA": "Área 1\", Aturdidora, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -1997,7 +1997,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/4",
-                        "RA": "Alcance 6\", Aturdidora, Críticos de penetración 1, Pesada (solo <b>Correr</b>)"
+                        "RA": "Alcance 6\", Aturdidora, Críticos de penetración 1, Pesada (solo Correr)"
                     }
                 }
             ],
@@ -2230,7 +2230,7 @@
                 },
                 {
                     "name": "Prescindible",
-                    "description": "Este agente se ignora en las operaciones de asesinato/eliminación del oponente (cuando esté incapacitado y a la hora de determinar el número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si huye/sobrevive/queda incapacitado, al determinar cuántos agentes deben huir/sobrevivir/quedar incapacitados, etc.)"
+                    "description": "Este agente se ignora en las operaciones de asesinato/eliminación del oponente (cuando esté incapacitado y a la hora de determinar el número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si huye/sobrevive/queda incapacitado, al determinar cuántos agentes deben huir/sobrevivir/quedar incapacitados, etc.)"
                 }
             ],
             "uniqueActions": [],
@@ -2379,7 +2379,7 @@
                         "A": "6",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Area 1\", Pesada (solo <b>Correr</b>)"
+                        "RA": "Area 1\", Pesada (solo Correr)"
                     }
                 },
                 {
@@ -2420,7 +2420,7 @@
                         "A": "6",
                         "HP/HA": "5+",
                         "Dñ": "-",
-                        "RA": "Pesada (solo <b>Reposicionarse</b>), Limitada 1, Indukzión<span class=\"faction\">*</span>"
+                        "RA": "Pesada (solo Reposicionarse), Limitada 1, Indukzión<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -2440,7 +2440,7 @@
                         "A": "6",
                         "HP/HA": "5+",
                         "Dñ": "4/5",
-                        "RA": "Área 2\", Pesada (solo <b>Reposicionarse</b>), Limitada 1, Implacable"
+                        "RA": "Área 2\", Pesada (solo Reposicionarse), Limitada 1, Implacable"
                     }
                 },
                 {
@@ -2729,7 +2729,7 @@
                 },
                 {
                     "name": "Mina de proximidad",
-                    "description": "La primera vez que tu marcador de Mina de disrupción quede dentro de la zona de control de otro agente, retira ese marcador, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación, e inflígele 2D3+3 daños (o 1D3+6 si ese marcador está a 6” o menos horizontalmente de tu marcador de Tormenta); si no resulta incapacitado, termina su acción (si está realizando una), aunque los efectos de la misma no se hayan completado. Si no puede ser colocado, muévelo la distancia mínima hasta que pueda. Este agente se ignora de cara a esos efectos (no puede activar ese marcador ni sufrir daños debido al mismo)."
+                    "description": "La primera vez que tu marcador de Mina de disrupción quede dentro de la zona de control de otro agente, retira ese marcador, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación, e inflígele 2D3+3 daños (o 1D3+6 si ese marcador está a 6\" o menos horizontalmente de tu marcador de Tormenta); si no resulta incapacitado, termina su acción (si está realizando una), aunque los efectos de la misma no se hayan completado. Si no puede ser colocado, muévelo la distancia mínima hasta que pueda. Este agente se ignora de cara a esos efectos (no puede activar ese marcador ni sufrir daños debido al mismo)."
                 }
             ],
             "uniqueActions": [],
@@ -2804,7 +2804,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>), Silenciosa"
+                        "RA": "Críticos de penetración 1, Pesada (solo Correr), Silenciosa"
                     }
                 },
                 {
@@ -3604,7 +3604,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Reposicionarse</b>), Crueldad humillante<span class=\"faction\">*</span>"
+                        "RA": "Desgarradora, Pesada (solo Reposicionarse), Crueldad humillante<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -3614,7 +3614,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 2\", Crueldad humillante<span class=\"faction\">*</span>"
+                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 2\", Crueldad humillante<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -3924,7 +3924,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/4",
-                        "RA": "Devastadora 2, Letal 5+, Pesada (solo <b>Correr</b>), Fragmento de neutrones<span class=\"faction\">*</span>"
+                        "RA": "Devastadora 2, Letal 5+, Pesada (solo Correr), Fragmento de neutrones<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -4268,7 +4268,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "5/3",
-                        "RA": "Alcance 3\", Devastadora 3, Limitada 1, Penetración 2, Pesada (solo <b>Reposicionarse</b>)"
+                        "RA": "Alcance 3\", Devastadora 3, Limitada 1, Penetración 2, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -6387,7 +6387,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "4/4",
-            "RA": "Devastadora 1, Pesada (solo <b>Correr</b>), Penetración 1"
+            "RA": "Devastadora 1, Pesada (solo Correr), Penetración 1"
           }
         },
         {
@@ -6433,7 +6433,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Alcance 3\", Área 1\", Pesada (solo <b>Reposicionarse</b>), Limitada 1, Penetración 1, Saturación"
+            "RA": "Alcance 3\", Área 1\", Pesada (solo Reposicionarse), Limitada 1, Penetración 1, Saturación"
           }
         },
         {
@@ -8378,7 +8378,7 @@
             "A": "5",
             "HP/HA": "4+",
             "Dñ": "3/4",
-            "RA": "Castigadora, Incesante, Pesada (solo <b>Reposicionarse</b>)"
+            "RA": "Castigadora, Incesante, Pesada (solo Reposicionarse)"
           }
         },
         {
@@ -8388,7 +8388,7 @@
             "A": "4",
             "HP/HA": "4+",
             "Dñ": "3/4",
-            "RA": "Castigadora, Incesante, Pesada (solo <b>Reposicionarse</b>), Ráfaga 1\""
+            "RA": "Castigadora, Incesante, Pesada (solo Reposicionarse), Ráfaga 1\""
           }
         },
         {
@@ -9503,7 +9503,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
+            "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
           }
         },
         {
@@ -9513,7 +9513,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>), Ráfaga 1\""
+            "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse), Ráfaga 1\""
           }
         },
         {
@@ -9523,7 +9523,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "3/5",
-            "RA": "Area 2\", Pesada (solo <b>Reposicionarse</b>)"
+            "RA": "Area 2\", Pesada (solo Reposicionarse)"
           }
         },
         {
@@ -9533,7 +9533,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "5/7",
-            "RA": "Penetración 1, Pesada (solo <b>Reposicionarse</b>)"
+            "RA": "Penetración 1, Pesada (solo Reposicionarse)"
           }
         },
         {
@@ -11040,7 +11040,7 @@
                         "A": "6",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Área 1\", Incesante, Pesada (solo <b>Correr</b>)"
+                        "RA": "Área 1\", Incesante, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -11147,7 +11147,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "RA": "Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {
@@ -11749,7 +11749,7 @@
                 },
                 {
                     "name": "Prescindible",
-                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si escapa/sobrevive/es incapacitado, al determinar cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.)."
+                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/es incapacitado, al determinar cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.)."
                 },
                 {
                     "name": "Activación en grupo",
@@ -12180,7 +12180,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>)"
+                        "RA": "Críticos de penetración 1, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -12190,7 +12190,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "RA": "Críticos de penetración 1, Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {
@@ -12200,7 +12200,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "6/3",
-                        "RA": "Devastadora 4, Penetración 2, Pesada (solo <b>Correr</b>)"
+                        "RA": "Devastadora 4, Penetración 2, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -12210,7 +12210,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/6",
-                        "RA": "Área 2\", Penetración 1, Pesada (solo <b>Correr</b>)"
+                        "RA": "Área 2\", Penetración 1, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -12220,7 +12220,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "5/6",
-                        "RA": "Área 2\", Letal 5+, Penetración 1, Pesada (solo <b>Correr</b>), Sobrecalentamiento"
+                        "RA": "Área 2\", Letal 5+, Penetración 1, Pesada (solo Correr), Sobrecalentamiento"
                     }
                 },
                 {
@@ -12612,13 +12612,23 @@
             },
             "weapons": [
                 {
-                    "name": "Pistola bólter",
+                    "name": "Escopeta de la Armada (corto alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\""
+                        "HP/HA": "3+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 6\""
+                    }
+                },
+                {
+                    "name": "Escopeta de la Armada (largo alcance)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "5+",
+                        "Dñ": "1/2",
+                        "RA": "-"
                     }
                 },
                 {
@@ -12632,23 +12642,23 @@
                     }
                 },
                 {
-                    "name": "Escopeta de la ARMADA (corto alcance)",
+                    "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/3",
-                        "RA": "Alcance 6\""
+                        "HP/HA": "4+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
                     }
                 },
                 {
-                    "name": "Escopeta de la ARMADA (largo alcance)",
-                    "type": "ranged",
+                    "name": "Arma de energía",
+                    "type": "melee",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "5+",
-                        "Dñ": "1/2",
-                        "RA": "-"
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Letal 5+"
                     }
                 },
                 {
@@ -12662,7 +12672,7 @@
                     }
                 },
                 {
-                    "name": "Hacha de la ARMADA",
+                    "name": "Hacha de la Armada",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -12670,22 +12680,12 @@
                         "Dñ": "3/4",
                         "RA": "-"
                     }
-                },
-                {
-                    "name": "Arma de energía",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "4/6",
-                        "RA": "Letal 5+"
-                    }
                 }
             ],
             "abilities": [
                 {
                     "name": "Liderar abordaje",
-                    "description": "Siempre que vayas a usar los ardides de estrategia Orden de ataque u Orden de defensa, si este agente está en la zona de aniquilación, dicho ardid te cuesta 0PM. Una vez durante cada una de las activaciones de este agente, antes o después de que realice una acción, si tu marcador de Orden de ataque u Orden de defensa se encuentra en la zona de aniquilación, puedes elegir una de las siguientes opciones (únicamente una): <ul><li>Retira ese marcador y colócalo de nuevo</li></ul> <ul><li>Cambia el ardid elegido al otro(es decir, Orden de ataque a Orden de defensa o viceversa). Este cambio no cuesta PM.</li></ul>"
+                    "description": "Siempre que vayas a usar los ardides de estrategia Orden de ataque u Orden de defensa, si este agente está en la zona de aniquilación, dicho ardid te cuesta 0PM. Una vez durante cada una de las activaciones de este agente, antes o después de que realice una acción, si tu marcador de Orden de ataque u Orden de defensa se encuentra en la zona de aniquilación (ver los ardides de estrategia relevantes), puedes elegir una de las siguientes opciones (únicamente una): <ul><li>Retira ese marcador y colócalo de nuevo</li></ul> <ul><li>Cambia el ardid elegido al otro (es decir, Orden de ataque a Orden de defensa o viceversa). Este cambio no cuesta PM.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -12703,7 +12703,7 @@
             },
             "weapons": [
                 {
-                    "name": "Escopeta de la ARMADA (corto alcance)",
+                    "name": "Escopeta de la Armada (corto alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12713,7 +12713,7 @@
                     }
                 },
                 {
-                    "name": "Escopeta de la ARMADA (largo alcance)",
+                    "name": "Escopeta de la Armada (largo alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12723,7 +12723,7 @@
                     }
                 },
                 {
-                    "name": "Hacha de la ARMADA",
+                    "name": "Hacha de la Armada",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -12736,7 +12736,7 @@
             "abilities": [
                 {
                     "name": "Activación de grupo",
-                    "description": " Siempre que este agente quede usado, a continuación debes activar otro agente <b>INFANTE</b> <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo apostado (si puedes) antes de que tu oponente se active. Una vez que ese otro oponente quede usado, tu oponente se activa de manera normal (en otras palabras, no puedes activar a más de dos agentes seguidos mediante esta regla). Ignora esta regla cuando estés usando la regla de facción Penetrar y limpiar."
+                    "description": "Siempre que este agente quede usado, a continuación debes activar otro agente <b>INFANTE</b> <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo apostado (si puedes) antes de que tu oponente se active. Una vez que ese otro oponente quede usado, tu oponente se activa de manera normal (en otras palabras, no puedes activar a más de dos agentes seguidos mediante esta regla). Ignora esta regla cuando estés usando la regla de facción Penetrar y limpiar."
                 }
             ],
             "uniqueActions": [],
@@ -12797,11 +12797,11 @@
             "abilities": [
                 {
                     "name": "Máquina",
-                    "description": "<ul><li>Este agente no puede ser activado o realizar acciones si se encuentra en la zona de control de un agente enemigo, o si un agente PROSPECTOR <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo ha sido incapacitado. El punto de inflexión puede terminar aunque este agente se encuentre aún apostado </li></ul> <ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Reposicionarse</b> y <b>Avistar</b></li></ul> <ul><li>No puede <b>Contraatacar</b>, asistir en un combate, trepar ni saltar</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y está tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, traza la línea desde cualquier parte de la miniatura.</li></ul>"
+                    "description": "<ul><li>Este agente no puede ser activado o realizar acciones si se encuentra en la zona de control de un agente enemigo, o si un agente <b>PROSPECTOR</b> <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo ha sido incapacitado. El punto de inflexión puede terminar aunque este agente se encuentre aún apostado </li></ul> <ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Reposicionarse</b> y <b>Avistar</b></li></ul> <ul><li>No puede Contraatacar, asistir en un combate, trepar ni saltar</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y está tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, traza la línea desde cualquier parte de la miniatura.</li></ul>"
                 },
                 {
                     "name": "Prescindible",
-                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, al determinar cuántos agentes deben escapar/ sobrevivir/quedar incapacitados, etc.)."
+                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, al determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc.)."
                 }
             ],
             "uniqueActions": [
@@ -12828,7 +12828,7 @@
             },
             "weapons": [
                 {
-                    "name": "Escopeta pesada de la ARMADA (corto alcance)",
+                    "name": "Escopeta pesada de la Armada (corto alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12838,7 +12838,7 @@
                     }
                 },
                 {
-                    "name": "Escopeta pesada de la ARMADA (largo alcance)",
+                    "name": "Escopeta pesada de la Armada (largo alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12874,7 +12874,7 @@
             ],
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span>, IMPERIUM, DEFENSOR",
-            "peana": "25"
+            "peana": "28"
         },
         {
             "id": "navis-gheistskull",
@@ -12889,16 +12889,16 @@
             "abilities": [
                 {
                     "name": "Máquina",
-                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Reposicionarse</b> y Avistar</li></ul> <ul><li>No puede <b>Contraatacar</b>, asistir en un combate, trepar ni saltar</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y está tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Al determinar qué es visible para este agente, traza la línea desde cualquier parte de la miniatura.</li></ul>"
+                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Acelerón</b>, <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b> y <b>Reposicionarse</b>.</li></ul> <ul><li>No puede Contraatacar ni asistir en un combate.</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y está tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado), salvo estar a 2\" o menos.</li></ul>"
                 },
                 {
                     "name": "Prescindible",
-                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, al determinar cuántos agentes deben escapar/ sobrevivir/quedar incapacitados, etc.)."
+                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, al determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc.)."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "ACELERON",
+                    "name": "ACELERÓN",
                     "cost": "1 PA",
                     "description": [
                         "Hasta el final de la activación, suma 6\" al atributo Movimiento de este agente."
@@ -12926,11 +12926,11 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Alcance 3\", Área 2\", Limitada 1, Penetración 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
+                        "RA": "Alcance 3\", Área 2\", Limitada 1, Penetración 1, Pesada (solo Reposicionarse), Saturación"
                     }
                 },
                 {
-                    "name": "Escopeta de la ARMADA (corto alcance)",
+                    "name": "Escopeta de la Armada (corto alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12940,7 +12940,7 @@
                     }
                 },
                 {
-                    "name": "Escopeta de la ARMADA (largo alcance)",
+                    "name": "Escopeta de la Armada (largo alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12950,7 +12950,7 @@
                     }
                 },
                 {
-                    "name": "Hacha de la ARMADA",
+                    "name": "Hacha de la Armada",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -12963,7 +12963,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, Penetracións y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, Perforantes y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o Perforante, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -12981,23 +12981,23 @@
             },
             "weapons": [
                 {
-                    "name": "Repetidor láser de la ARMADA (concentrado)",
+                    "name": "Repetidor láser de la Armada (concentrado)",
                     "type": "ranged",
                     "stats": {
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>)"
+                        "RA": "Desgarradora, Pesada (solo Correr)"
                     }
                 },
                 {
-                    "name": "Repetidor láser de la ARMADA (barrido)",
+                    "name": "Repetidor láser de la Armada (barrido)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {
@@ -13083,7 +13083,7 @@
                     "name": "SOLDAR",
                     "cost": "1 PA",
                     "description": [
-                        "Elige una escotilla cerrada (p. ej. Zona de aniquilación: Horcasombría) en la zona de control de este agente. Los demás agentes deben gastar 1 PA adicional para realizar una acción de Operar portillo para abrir esa escotilla. Este efecto termina cuando se abre dicha escotilla. Este agente no se ve afectado por este efecto."
+                        "Elige una escotilla cerrada (p. ej. Zona de aniquilación: Mundo Necrópolis) en la zona de control de este agente. Los demás agentes deben gastar 1 PA adicional para realizar una acción de <b>Operar portillo</b> para abrir esa escotilla. Este efecto termina cuando se abre dicha escotilla. Este agente no se ve afectado por este efecto."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si no se encuentra a 1\" o menos de una escotilla cerrada."
                 },
@@ -13110,7 +13110,7 @@
             },
             "weapons": [
                 {
-                    "name": "Escopeta de la ARMADA (corto alcance)",
+                    "name": "Escopeta de la Armada (corto alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -13120,7 +13120,7 @@
                     }
                 },
                 {
-                    "name": "Escopeta de la ARMADA (largo alcance)",
+                    "name": "Escopeta de la Armada (largo alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -13130,7 +13130,7 @@
                     }
                 },
                 {
-                    "name": "Hacha de la ARMADA",
+                    "name": "Hacha de la Armada",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -13146,7 +13146,7 @@
                     "name": "ORIENTAR",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo (que no sea UNIDAD G.A.T.O. ni ESPECTROCRÁNEO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de un agente UNIDAD G.A.T.O. <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo y visible para el mismo. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA. A efectos de la pieza de equipo universal Aparato de comunicaciones, el agente desde el que se está determinando la distancia debe controlar dicho marcador."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo (que no sea UNIDAD G.A.T.O. ni ESPECTROCRÁNEO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de un agente <b>UNIDAD G.A.T.O.</b> <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo y visible para el mismo. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA. A efectos de la pieza de equipo universal Aparato de comunicaciones, el agente desde el que se está determinando la distancia debe controlar dicho marcador."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -13154,9 +13154,9 @@
                     "name": "CONTROL REMOTO",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente UNIDAD G.A.T.O. amigo. Ese agente puede realizar inmediatamente una acción libre, pero no puede mover más de 3\" durante esa acción."
+                        "Elige un agente <b>UNIDAD G.A.T.O.</b> <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo. Ese agente puede realizar inmediatamente una acción libre, pero no puede mover más de 3\" durante esa acción."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si no hay un agente UNIDAD G.A.T.O. amigo en la zona de aniquilación."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si no hay un agente <b>UNIDAD G.A.T.O.</b> amigo en la zona de aniquilación."
                 }
             ],
             "keywords": "<span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span>, IMPERIUM, PROSPECTOR",
@@ -13183,7 +13183,7 @@
                     }
                 },
                 {
-                    "name": "Escopeta de la ARMADA (corto alcance)",
+                    "name": "Escopeta de la Armada (corto alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -13193,7 +13193,7 @@
                     }
                 },
                 {
-                    "name": "Escopeta de la ARMADA (largo alcance)",
+                    "name": "Escopeta de la Armada (largo alcance)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -13203,7 +13203,7 @@
                     }
                 },
                 {
-                    "name": "Hacha de la ARMADA",
+                    "name": "Hacha de la Armada",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -13216,7 +13216,7 @@
             "abilities": [
               {
                     "name": "<span class=\"faction\">*</span>Detonar",
-                    "description": "No elijas un blanco válido. En lugar de eso, el blanco principal es siempre un agente ESPECTROCRÁNEO <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo, y no puede estar a cubierto u ofuscado. Si ese agente no se encuentra en la zona de aniquilación, no puedes elegir esta arma."
+                    "description": "No elijas un blanco válido. En lugar de eso, el blanco principal es siempre un agente <b>ESPECTROCRÁNEO</b> <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo, y no puede estar a cubierto u ofuscado. Si ese agente no se encuentra en la zona de aniquilación, no puedes elegir esta arma."
               }
             ],
             "uniqueActions": [
@@ -13224,9 +13224,9 @@
                     "name": "PULSO DE INTERFERENCIA",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo a 8\" o menos de un agente ESPECTROCRÁNEO amigo y visible para el mismo. Tira 1D6, sumando 1 al resultado si ese agente enemigo es un blanco válido para ese agente ESPECTROCRÁNEO amigo: con 3+, resta 1 al atributo LPA de ese agente enemigo hasta el final de su siguiente activación."
+                        "Elige un agente enemigo a 8\" o menos de un agente <b>ESPECTROCRÁNEO</b> amigo y visible para el mismo. Tira 1D6, sumando 1 al resultado si ese agente enemigo es un blanco válido para ese agente <b>ESPECTROCRÁNEO</b> amigo: con 3+, resta 1 al atributo LPA de ese agente enemigo hasta el final de su siguiente activación."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si no hay un agente ESPECTROCRÁNEO amigo en la zona de aniquilación."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si no hay un agente <b>ESPECTROCRÁNEO</b> amigo en la zona de aniquilación."
                 }
             ],
             "keywords": "<span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span>, IMPERIUM, INTERFERIDOR",
@@ -13261,7 +13261,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
+                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -13603,7 +13603,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/3",
-                        "RA": "Devastadora 2, Pesada (solo <b>Correr</b>), Penetración 1"
+                        "RA": "Devastadora 2, Pesada (solo Correr), Penetración 1"
                     }
                 },
                 {
@@ -13684,7 +13684,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/3",
-                        "RA": "Devastadora 2, Pesada (solo <b>Correr</b>), Penetración 1"
+                        "RA": "Devastadora 2, Pesada (solo Correr), Penetración 1"
                     }
                 },
                 {
@@ -13735,7 +13735,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
+                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -13835,7 +13835,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
+                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -13935,7 +13935,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo <b>Reposicionarse</b>)"
+                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -14497,7 +14497,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "4/3",
-                        "RA": "Devastadora 2, Penetración 1, Pesada (solo <b>Correr</b>), Severa"
+                        "RA": "Devastadora 2, Penetración 1, Pesada (solo Correr), Severa"
                     }
                 },
                 {
@@ -14804,7 +14804,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Penetración 1, Pesada (solo <b>Reposicionarse</b>), Bípode<span class=\"faction\">*</span>"
+                        "RA": "Penetración 1, Pesada (solo Reposicionarse), Bípode<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -14814,7 +14814,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "3/5",
-                        "RA": "Área 2\", Pesada (solo <b>Reposicionarse</b>), Bípode<span class=\"faction\">*</span>"
+                        "RA": "Área 2\", Pesada (solo Reposicionarse), Bípode<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -14824,7 +14824,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "2/4",
-                        "RA": "Área 3\", Pesada (solo <b>Reposicionarse</b>), Bípode<span class=\"faction\">*</span>"
+                        "RA": "Área 3\", Pesada (solo Reposicionarse), Bípode<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -14920,7 +14920,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Penetración 1, Pesada (solo <b>Reposicionarse</b>)"
+                        "RA": "Penetración 1, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -15318,7 +15318,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Alcance 4\", Área 1\", Limitada 1, Penetración 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
+                        "RA": "Alcance 4\", Área 1\", Limitada 1, Penetración 1, Pesada (solo Reposicionarse), Saturación"
                     }
                 },
                 {
@@ -15389,7 +15389,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Incesante, Pesada (solo <b>Reposicionarse</b>), Saturación"
+                        "RA": "Incesante, Pesada (solo Reposicionarse), Saturación"
                     }
                 },
                 {
@@ -15409,7 +15409,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/2",
-                        "RA": "Devastadora 3, Pesada (solo <b>Correr</b>), Penetración 2"
+                        "RA": "Devastadora 3, Pesada (solo Correr), Penetración 2"
                     }
                 },
                 {
@@ -16164,7 +16164,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "6/7",
-                        "RA": "Penetración 2, Pesada (solo <b>Correr</b>)"
+                        "RA": "Penetración 2, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -16174,7 +16174,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Letal 5+, Pesada (solo <b>Correr</b>)"
+                        "RA": "Letal 5+, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -16184,7 +16184,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Letal 5+, Pesada (solo <b>Correr</b>), Rafaga 1\""
+                        "RA": "Letal 5+, Pesada (solo Correr), Rafaga 1\""
                     }
                 },
                 {
@@ -17075,7 +17075,7 @@
             "abilities": [
                 {
                     "name": "¡Al ataque!",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente no tiene ninguna de tus fichas de furia asesina. Elige un agente EXPOLIAGOR IMPÍO amigo a 6” o menos de este agente y visible para él. Ese agente elegido y cada otro agente EXPOLIAGOR IMPÍO amigo a 2” o menos de este agente y visible para él pueden realizar, inmediatamente, una acción libre de <b>Correr</b> en el orden que elijas"
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente no tiene ninguna de tus fichas de furia asesina. Elige un agente EXPOLIAGOR IMPÍO amigo a 6\" o menos de este agente y visible para él. Ese agente elegido y cada otro agente EXPOLIAGOR IMPÍO amigo a 2\" o menos de este agente y visible para él pueden realizar, inmediatamente, una acción libre de <b>Correr</b> en el orden que elijas"
                 }
             ],
             "uniqueActions": [],
@@ -17786,7 +17786,7 @@
             "A": "5",
             "HP/HA": "2+",
             "Dñ": "3/3",
-            "RA": "Alcance 6\", Penetración 2, Pesada (solo <b>Reposicionarse</b>), Ráfaga 2\""
+            "RA": "Alcance 6\", Penetración 2, Pesada (solo Reposicionarse), Ráfaga 2\""
           }
         },
         {
@@ -17796,7 +17796,7 @@
             "A": "5",
             "HP/HA": "4+",
             "Dñ": "4/5",
-            "RA": "Desgarradora, Penetración 1, Pesada (solo <b>Reposicionarse</b>)"
+            "RA": "Desgarradora, Penetración 1, Pesada (solo Reposicionarse)"
           }
         },
         {
@@ -18268,7 +18268,7 @@
             "abilities": [
                 {
                     "name": "¡Sanitario!",
-                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo vaya a resultar incapacitado estando a 3” o menos de este agente y visible para él, puedes usar esta regla, siempre que ninguno de los dos agentes amigos implicados estén en la zona de control de un agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le queda 1 herida, y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de agente. Resta 1 al LPA de ambos agentes hasta el final de sus siguientes activaciones respectivas, y si esta regla se usó durante la activación del otro agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
+                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo vaya a resultar incapacitado estando a 3\" o menos de este agente y visible para él, puedes usar esta regla, siempre que ninguno de los dos agentes amigos implicados estén en la zona de control de un agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le queda 1 herida, y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de agente. Resta 1 al LPA de ambos agentes hasta el final de sus siguientes activaciones respectivas, y si esta regla se usó durante la activación del otro agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
                 }
             ],
             "uniqueActions": [
@@ -18483,7 +18483,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Pesada (solo <b>Correr</b>)"
+                        "RA": "Pesada (solo Correr)"
                     }
                 },
                 {
@@ -18493,7 +18493,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "RA": "Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {
@@ -19119,7 +19119,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "5/3",
-                        "RA": "Alcance 3\", Devastadora 3, Pesada (solo <b>Reposicionarse</b>), Limitada 1, Penetración 2"
+                        "RA": "Alcance 3\", Devastadora 3, Pesada (solo Reposicionarse), Limitada 1, Penetración 2"
                     }
                 },
                 {
@@ -19422,7 +19422,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/5",
-                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo <b>Correr</b>)"
+                        "RA": "Críticos de penetración 1, Letal 5+, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -19806,7 +19806,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "5/6",
-                        "RA": "Limitada 1, Penetración 1, Pesada (solo <b>Correr</b>), Silenciosa, Detonar<span class=\"faction\">*</span>"
+                        "RA": "Limitada 1, Penetración 1, Pesada (solo Correr), Silenciosa, Detonar<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -19922,7 +19922,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "3/5",
-                        "RA": "Área 2\", Pesada (solo <b>Correr</b>), Silenciosa"
+                        "RA": "Área 2\", Pesada (solo Correr), Silenciosa"
                     }
                 },
                 {
@@ -20364,7 +20364,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "6/3",
-                        "RA": "Devastadora 4, Penetración 2, Pesada (solo <b>Correr</b>)"
+                        "RA": "Devastadora 4, Penetración 2, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -20374,7 +20374,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {
@@ -20384,7 +20384,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>)"
+                        "RA": "Desgarradora, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -21379,7 +21379,7 @@
                 },
                 {
                     "name": "Constructo prescindible",
-                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y para obtener PV que requieran (en ambos casos) que agentes “escapen”, “sobrevivan” o sean incapacitados por agentes enemigos (si escapa/sobrevive/es incapacitado, al determinar cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.)."
+                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y para obtener PV que requieran (en ambos casos) que agentes \"escapen\", \"sobrevivan\" o sean incapacitados por agentes enemigos (si escapa/sobrevive/es incapacitado, al determinar cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.)."
                 },
                 {
                     "name": "Escabullirse incesantemente",
@@ -21810,7 +21810,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Alcance 3\", Área 2\", Limitada 1, Penetración 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
+                        "RA": "Alcance 3\", Área 2\", Limitada 1, Penetración 1, Pesada (solo Reposicionarse), Saturación"
                     }
                 },
                 {
@@ -22435,7 +22435,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/3",
-                        "RA": "Alcance 6\", Área 2\", Devastadora 2, Limitada 1, Penetración 1, Pesada (solo <b>Reposicionarse</b>), Saturación"
+                        "RA": "Alcance 6\", Área 2\", Devastadora 2, Limitada 1, Penetración 1, Pesada (solo Reposicionarse), Saturación"
                     }
                 },
                 {
@@ -22856,7 +22856,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 1, Pesada (solo <b>Correr</b>), Silenciosa"
+                        "RA": "Devastadora 1, Pesada (solo Correr), Silenciosa"
                     }
                 },
                 {
@@ -23629,7 +23629,7 @@
             "abilities": [
                 {
                     "name": "¡Sanitario!",
-                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo vaya a resultar incapacitado estando a 3” o menos de este agente y visible para él, puedes usar esta regla, siempre que ninguno de los dos agentes amigos implicados estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le quedan 3 heridas restantes y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Si esta regla se usó durante la activación del otro agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado , o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
+                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo vaya a resultar incapacitado estando a 3\" o menos de este agente y visible para él, puedes usar esta regla, siempre que ninguno de los dos agentes amigos implicados estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le quedan 3 heridas restantes y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Si esta regla se usó durante la activación del otro agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado , o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
                 },
                 {
                     "name": "Yelmo normalizador",
@@ -23703,7 +23703,7 @@
             "abilities": [
                 {
                     "name": "Imponer disciplina",
-                    "description": "<b>APOYO</b>. Mientras un agente ARMADA <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo distinto esté a 3\" o menos de este agente, las armas a distancia de ese agente amigo (salvo armas <b>ACTIVO DE <b>APOYO</b> PRIVADO</b>) tienen la regla de arma Equilibrada; si un arma ya tiene esa regla de arma, tiene la regla de arma Incesante en lugar de Equilibrada."
+                    "description": "<b>APOYO</b>. Mientras un agente Armada <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo distinto esté a 3\" o menos de este agente, las armas a distancia de ese agente amigo (salvo armas <b>ACTIVO DE <b>APOYO</b> PRIVADO</b>) tienen la regla de arma Equilibrada; si un arma ya tiene esa regla de arma, tiene la regla de arma Incesante en lugar de Equilibrada."
                 },
                 {
                     "name": "Robusto",
@@ -23750,7 +23750,7 @@
                         "A": "5",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>)"
+                        "RA": "Desgarradora, Pesada (solo Correr)"
                     }
                 },
                 {
@@ -23760,7 +23760,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora, Pesada (solo <b>Correr</b>), Ráfaga 1\""
+                        "RA": "Desgarradora, Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {

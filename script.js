@@ -616,55 +616,6 @@ function renderOperatives(factionKey) {
                 </div>`;
             }
 
-        //    // Acciones de Equipamiento (si tiene action_cost)
-        //    let actionHtml = '';
-        //    if (item.action_cost) {
-        //        actionHtml = `
-        //        <div class="equip-action-box mt-3">
-        //            <div class="equip-action-header d-flex justify-content-between align-items-center">
-        //                <span class="fw-bold text-uppercase">${item.action_name}</span>
-        //                <span class="badge bg-light text-dark">${item.action_cost}</span>
-        //            </div>
-        //            <div class="equip-action-content p-2">
-        //                <div class="equip-action-yes mb-2 p-2 rounded">
-        //                    ${item.action_yes}
-        //                </div>
-        //                <div class="equip-action-no p-2 rounded">
-        //                    ${item.action_no}
-        //                </div>
-        //            </div>
-        //        </div>`;
-        //    }
-
-        //    // Estructura de la Tarjeta con clases CSS
-        //    return `
-        //    <div class="col-12 col-md-6 mb-4">
-        //        <div class="equipment-card h-100 shadow-sm border-danger"> 
-        //            <div class="equipment-header p-2 bg-danger">
-        //                <h5 class="mb-0 text-warning text-center fw-bold text-uppercase">${item.name}</h5>
-        //            </div>
-        //            <div class="equipment-body p-3 bg-light text-dark">
-        //                <div class="equipment-description small">
-        //                    ${descHtml}
-        //                </div>
-        //                ${weaponHtml}
-        //                ${actionHtml}
-        //            </div>
-        //        </div>
-        //    </div>`;
-        //}).join('');
-
-        //containers.equipment.innerHTML = `<div class="row">${html}</div>`;
-
-        //    return `
-        //    <div class="flex-grow-1">
-        //        ${actionsHtml}
-        //    </div>`;
-        //    }).join('');
-        //    containers.equipment.innerHTML = `<div class="row">${html}</div>`;
-
-
-        // 3. Manejo de acciones (usando 'item' consistentemente)
         const actionHtml = item.action?.length ? `
             <div class="mt-2 p-2 border border-primary rounded bg-white">
                 <strong class="small text-primary text-uppercase">Acciones:</strong>
@@ -688,7 +639,7 @@ function renderOperatives(factionKey) {
                         <span class="fw-bold">${a.action_name} (${a.action_cost}):</span>
                         <div class="ps-2 small">${descYes}${descNo}</div>
                     </div>`;
-        }).join('')}
+                }).join('')}
     </div>` : '';
 
 // Retorno del componente

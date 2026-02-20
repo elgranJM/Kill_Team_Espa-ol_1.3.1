@@ -17,14 +17,14 @@
     "id_equip": 3,
     "faction": "wolf-scouts",
     "name": "Collares de Dientes de Lobo",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">EXPLORADORES LOBO</span amigo (excluyendo FENRISIAN WOLF) esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">EXPLORADORES LOBO</span amigo (excluyendo FENRISIAN WOLF) esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
     "action": []
   },
   {
     "id_equip": 4,
     "faction": "wolf-scouts",
     "name": "Trofeos Talismánicos",
-    "description": "Siempre que un agente <span class=\"faction\">EXPLORADORES LOBO</span amigo (excluyendo FENRISIAN WOLF) esté combatiendo o tomando represalias, en el paso de Resolver Dados de Ataque, puedes restar 1 al daño infligido sobre él por un éxito.",
+    "description": "Siempre que un agente <span class=\"faction\">EXPLORADORES LOBO</span amigo (excluyendo FENRISIAN WOLF) esté combatiendo o contraataque, en el paso de Resolver Dados de Ataque, puedes restar 1 al daño infligido sobre él por un éxito.",
     "action": []
   },
   {
@@ -170,7 +170,7 @@
     "id_equip": 22,
     "faction": "phobos",
     "name": "Sellos de Pureza",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTES PHOBOS</span amigo esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTES PHOBOS</span amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
     "action": []
   },
   {
@@ -205,7 +205,7 @@
     "id_ploy": 27,
     "faction": "novitiates",
     "name": "Auto-Castigador",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">NOVICIA</span amigo esté disparando, combatiendo o tomando represalias, en el paso de Tirar Dados de Ataque, puedes infligir 1-3 de daño a ese agente amigo (pero no lo suficiente para incapacitarlo). Si lo haces, puedes usar un ACTO DE FE gratis durante esa secuencia con un coste de Puntos de Fe no mayor al daño que infligiste con esta regla.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">NOVICIA</span amigo esté disparando, combatiendo o contraataque, en el paso de Tirar Dados de Ataque, puedes infligir 1-3 de daño a ese agente amigo (pero no lo suficiente para incapacitarlo). Si lo haces, puedes usar un ACTO DE FE gratis durante esa secuencia con un coste de Puntos de Fe no mayor al daño que infligiste con esta regla.",
     "action": []
   },
   {
@@ -243,7 +243,7 @@
     "id_equip": 32,
     "faction": "kasrkin",
     "name": "Reliquias de Cadia",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">KASRKIN</span amigo esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">KASRKIN</span amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
     "action": []
   },
   {
@@ -362,7 +362,7 @@
     "id_equip": 48,
     "faction": "exaction-squad",
     "name": "Fósforo-Lumen Estroboscópico",
-    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra o tomando represalias contra un agente EXACTION SQUAD amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
+    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente EXACTION SQUAD amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
     "action": []
   },
   {
@@ -482,7 +482,7 @@
     "id_equip": 72,
     "faction": "battleclade",
     "name": "Condensadores Electrománticos",
-    "description": "Las armas cuerpo a cuerpo de los agentes BATTLECLADE amigos tienen la regla de armas Choque. Siempre que un agente BATTLECLADE amigo preparado esté tomando represalias, sus armas cuerpo a cuerpo también tienen la regla de armas Severa.",
+    "description": "Las armas cuerpo a cuerpo de los agentes BATTLECLADE amigos tienen la regla de armas Choque. Siempre que un agente BATTLECLADE amigo preparado esté contraataque, sus armas cuerpo a cuerpo también tienen la regla de armas Severa.",
     "action": []
   },
   {
@@ -496,14 +496,7 @@
     "id_equip": 74,
     "faction": "intercessors",
     "name": "Sellos de Pureza",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGELES DE LA MUERTE</span> amigo esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
-    "action": []
-  },
-  {
-    "id_equip": 75,
-    "faction": "intercessors",
-    "name": "Escudos Inclinables",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGELES DE LA MUERTE</span> amigo esté combatiendo o tomando represalias, después de que tu adversario lance sus dados de ataque, puedes usar esta regla. Si lo haces, tu adversario no puede retener resultados de dados de ataque de menos de 6 como éxitos críticos durante esa secuencia (P. ej., como resultado de las reglas de arma Letal, Desgarradora o Severa).",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo dispare, combata o contraataque, si sacas dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.",
     "action": []
   },
   {
@@ -514,10 +507,17 @@
     "action": []
   },
   {
+    "id_equip": 75,
+    "faction": "intercessors",
+    "name": "Escudos Decorativos",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo combate o contraataca, después de que tu oponente tire sus dados de ataque, pero antes de que se repitan tiradas, puedes usar esta regla. Si lo haces, tu oponente no puede guardar dados de ataque con un resultado menor que 6 como éxitos críticos durante esa secuencia (por ejemplo, debido a las reglas de arma Letal, Desgarradora o Severa).",
+    "action": []
+  },
+  {
     "id_equip": 77,
     "faction": "intercessors",
     "name": "Auspex",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGELES DE LA MUERTE</span> amigo realiza la acción de <b>Disparar</b> y estás seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de la activación/contraacción, los agentes enemigos a 8\" o menos de ese agente amigo no pueden estar Ofuscados.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo realiza una acción de <b>Disparar</b> y estás eligiendo Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de la activación (o reacción), los agentes enemigos a 8\" o menos de ese agente amigo no pueden estar Ofuscados.",
     "action": []
   },
   {
@@ -531,7 +531,7 @@
     "id_equip": 79,
     "faction": "warpcoven",
     "name": "Armas Fauces de Demonio",
-    "description": "Añade 1 al atributo de Atq de las armas cuerpo a cuerpo de los agentes WARPCOVEN RUBRIC MARINE amigos. Siempre que un agente WARPCOVEN RUBRIC MARINE amigo esté tomando represalias, sus armas cuerpo a cuerpo tienen la regla de armas Precisa 1.",
+    "description": "Añade 1 al atributo de Atq de las armas cuerpo a cuerpo de los agentes WARPCOVEN RUBRIC MARINE amigos. Siempre que un agente WARPCOVEN RUBRIC MARINE amigo esté contraataque, sus armas cuerpo a cuerpo tienen la regla de armas Precisa 1.",
     "action": []
   },
   {
@@ -583,7 +583,7 @@
     "id_equip": 86,
     "faction": "nemesis-claw",
     "name": "Piel Desollada",
-    "description": "Piel Desollada: Siempre que un agente enemigo esté disparando contra, combatiendo contra o tomando represalias contra un agente NEMESIS CLAW amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
+    "description": "Piel Desollada: Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente NEMESIS CLAW amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
     "action": []
   },
   {
@@ -638,7 +638,7 @@
     "faction": "legionary",
     "name": "Talismanes del Caos",
     "description": [
-      "Gambito Estratégico. Selecciona una clave de Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un agente LEGIONARY amigo que tenga esa clave esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes infligir D3 de daño a ese agente amigo para descartar uno de ellos y retener el otro como un éxito normal en su lugar.",
+      "Gambito Estratégico. Selecciona una clave de Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un agente LEGIONARY amigo que tenga esa clave esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes infligir D3 de daño a ese agente amigo para descartar uno de ellos y retener el otro como un éxito normal en su lugar.",
       "Ten en cuenta que si es la acción de <b>Disparar</b> y ese daño incapacita a ese agente amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos)."
     ]
   },
@@ -646,7 +646,7 @@
     "id_equip": 94,
     "faction": "goremongers",
     "name": "Tótem Sangriento",
-    "description": "Antes de la batalla, puedes colocar uno de tus marcadores de Tótem Sangriento totalmente dentro de tu territorio y a más de 2\" de otros marcadores (excluyendo tu marcador de Cadáver Sangriento). Siempre que un agente enemigo a 3\" o menos de tu marcador de Tótem Sangriento esté disparando, combatiendo o tomando represalias, tu adversario no puede repetir sus dados de ataque.",
+    "description": "Antes de la batalla, puedes colocar uno de tus marcadores de Tótem Sangriento totalmente dentro de tu territorio y a más de 2\" de otros marcadores (excluyendo tu marcador de Cadáver Sangriento). Siempre que un agente enemigo a 3\" o menos de tu marcador de Tótem Sangriento esté disparando, combatiendo o contraataque, tu adversario no puede repetir sus dados de ataque.",
     "action": []
   },
   {
@@ -716,7 +716,7 @@
     "id_equip": 104,
     "faction": "fellgor-ravagers",
     "name": "Marcas de Sangre",
-    "description": "Una vez por Punto de Inflexión, cuando un agente FELLGOR RAVAGER amigo esté combatiendo o tomando represalias, puedes usar esta regla. Si lo haces, inflige 1 de daño a ese agente amigo y repite uno de tus dados de ataque. Si el resultado es un fallo, inflige 1 de daño adicional a ese agente amigo.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente FELLGOR RAVAGER amigo esté combatiendo o contraataque, puedes usar esta regla. Si lo haces, inflige 1 de daño a ese agente amigo y repite uno de tus dados de ataque. Si el resultado es un fallo, inflige 1 de daño adicional a ese agente amigo.",
     "action": []
   },
   {
@@ -765,7 +765,7 @@
     "id_equip": 111,
     "faction": "blooded",
     "name": "Trofeos Siniestros",
-    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra, o tomando represalias contra un agente BLOODED amigo que tenga una de tus fichas de Sangriento y esté a 2” o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
+    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra, o contraataque contra un agente BLOODED amigo que tenga una de tus fichas de Sangriento y esté a 2” o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
     "action": []
   },
   {
@@ -876,7 +876,7 @@
     "id_equip": 126,
     "faction": "void-dancer-troupe",
     "name": "Talismán de Hueso Espectral",
-    "description": "Una vez por Punto de Inflexión, cuando un agente VOID-DANCER TROUPE amigo esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente VOID-DANCER TROUPE amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
     "action": []
   },
   {
@@ -946,7 +946,7 @@
     "id_equip": 136,
     "faction": "raveners",
     "name": "Sangre Ácida",
-    "description": "Siempre que un agente RAVENER amigo esté combatiendo o tomando represalias, siempre que un dado de ataque le inflija daño, lanza un D6: con un 5+, inflige 1 de daño al agente enemigo en esa secuencia.",
+    "description": "Siempre que un agente RAVENER amigo esté combatiendo o contraataque, siempre que un dado de ataque le inflija daño, lanza un D6: con un 5+, inflige 1 de daño al agente enemigo en esa secuencia.",
     "action": []
   },
   {
@@ -1175,7 +1175,7 @@
     "id_equip": 164,
     "faction": "kabalite",
     "name": "Recubrimiento de Toxinas",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté combatiendo o tomando represalias y estés seleccionando un arma cuerpo a cuerpo, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia, el arma cuerpo a cuerpo de ese agente tiene la regla de armas Letal 5+.",
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté combatiendo o contraataque y estés seleccionando un arma cuerpo a cuerpo, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia, el arma cuerpo a cuerpo de ese agente tiene la regla de armas Letal 5+.",
     "action": []
   },
   {
@@ -1325,7 +1325,7 @@
     "id_equip": 185,
     "faction": "blades-of-khaine",
     "name": "Talismán de Hueso Espectral",
-    "description": "Una vez por Punto de Inflexión, cuando un agente BLADES OF KHAINE amigo esté disparando, combatiendo o tomando represalias, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente BLADES OF KHAINE amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
     "action": []
   },
   {

@@ -5,7 +5,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Doctrina de Combate",
-        "description": "<p>Selecciona una <b>DOCTRINA DE COMBATE</b> de las siguientes:</p><ul><li><b>Doctrina Devastador:</b> Disparar a un agente a más de 6\" de él.</li><li><b>Doctrina Táctica:</b> Disparar a un agente a 6\" de él.</li><li><b>Doctrina Asalto:</b> Combatir o Contraatacar.</li></ul><p>Siempre que un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo esté x, sus armas tienen la regla de armas Equilibrada -X, donde X es la <b>DOCTRINA DE COMBATE</b> que seleccionaste.</p>",
+        "description": "<p>Elige una <b>DOCTRINA DE COMBATE</b> de las siguientes. Siempre que un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo haga X, sus armas tienen la regla de arma Equilibrada. X depende de la <b>DOCTRINA DE COMBATE</b> que hayas elegido.</p><ul><li><b>Doctrina Devastadora:</b> Disparar contra un agente a más de 6\" de él.</li><li><b>Doctrina Táctica:</b> Disparar contra un agente a 6\" o menos de él.</li><li><b>Doctrina de Asalto:</b> Combatir o Contraatacar.</li></ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -14,7 +14,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Y No Conocerán el Miedo",
-        "description": "<p>Puedes ignorar cualquier cambio en los atributos de los agentes <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigos por estar lesionados (incluyendo los atributos de sus armas).</p>",
+        "description": "<p>Puedes ignorar cualquier cambio en los atributos de agentes <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigos debido a estar lesionados (incluyendo los atributos de sus armas).</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -22,8 +22,8 @@
         "faction": "intercessors",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Tácticas Adaptables",
-        "description": "<p>Cambia tu <b>TÁCTICA DE CAPÍTULO</b> secundaria. Este ardid solo dura hasta el final del punto de inflexión, momento en el cual regresa tu <b>TÁCTICA DE CAPÍTULO</b> secundaria original.</p>",
+        "name": "Tácticas Flexibles",
+        "description": "<p>Cambia tu <b>TÁCTICA DE CAPÍTULO</b> secundaria. Ten en cuenta que este ardid solo dura hasta el final del punto de inflexión, tras lo cual recuperas tu <b>TÁCTICA DE CAPÍTULO</b> secundaria original.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -32,7 +32,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Indomitus",
-        "description": "<p>Siempre que un agente dispare contra un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo, si sacas dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.</p>",
+        "description": "<p>Siempre que un agente dispare contra un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo, si sacas dos o más fallos, puedes descartar uno de ellos para guardar el otro como éxito normal en su lugar.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -41,7 +41,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Ajustar Doctrina",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo, antes o después de que realice una acción. Si has usado el ardid de estrategia Doctrina de Combate durante este punto de inflexión, cambia la <b>DOCTRINA DE COMBATE</b> que seleccionaste.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo, antes o después de que realice una acción. Si has usado el ardid de estrategia Doctrina de Combate durante este punto de inflexión, cambia la <b>DOCTRINA DE COMBATE</b> que hayas elegido.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -50,7 +50,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Fisiología Transhumana",
-        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo, en el paso Tirar Dados de Defensa. Puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo, en el paso tirar dados de defensa. Puedes guardar uno de tus éxitos normales como un éxito crítico en su lugar.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -59,7 +59,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Asalto de Choque",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo esté realizando la acción <b>Combatir</b> durante una activación en la que realizó la acción <b>Cargar</b>, al inicio del paso Resolver Dados de Ataque. Hasta el final de esa acción:<ul><li>Su arma cuerpo a cuerpo tiene la regla de armas Choque.</li><li>La primera vez que golpees durante esa secuencia, inflige 1 de daño adicional (hasta un máximo de 7).</li></ul>",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo realiza una acción de <b>Combatir</b> durante una activación en la que haya realizado una acción de <b>Cargar</b>, al inicio del paso resolver dados de ataque. Hasta el final de esa acción:<ul><li>Su arma de combate tiene la regla de armas Choque.</li><li>La primera vez que golpees durante esa secuencia, inflige 1 de daño adicional (hasta un máximo de 7).</li></ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -68,7 +68,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Ira de Venganza",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo esté contraatacando. Puede realizar una acción adicional de 1PA gratis durante ese contraataque, pero ambas acciones deben ser diferentes.",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo reaccione. Puede realizar una acción de 1PA adicional gratis durante esa reacción, pero ambas acciones deben ser distintas.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -3083,7 +3083,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Asalto de Choque",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> amigo esté realizando la acción <b>Combatir</b> durante una activación en la que realizó la acción <b>Cargar</b>, al inicio del paso Resolver Dados de Ataque. Hasta el final de esa acción:<ul><li>Su arma cuerpo a cuerpo tiene la regla de armas Choque.</li><li>La primera vez que golpees durante esa secuencia, inflige 1 de daño adicional.</li></ul>",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> amigo esté realizando la acción <b>Combatir</b> durante una activación en la que realizó la acción <b>Cargar</b>, al inicio del paso Resolver Dados de Ataque. Hasta el final de esa acción:<ul><li>Su arma de combate tiene la regla de armas Choque.</li><li>La primera vez que golpees durante esa secuencia, inflige 1 de daño adicional.</li></ul>",
         "typename": "Ardid de Tiroteo"
     },
     {

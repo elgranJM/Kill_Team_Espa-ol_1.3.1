@@ -904,28 +904,28 @@
     "id_equip": 130,
     "faction": "vespid-stingwings",
     "name": "Neuroestimulante",
-    "description": "En el paso de Preparación de cada Fase de Estrategia, al determinar cuántos puntos de Comunión ganar, puedes lanzar dos D3 y seleccionar un D3 para usar.",
-    "action": []
-  },
-  {
-    "id_equip": 131,
-    "faction": "vespid-stingwings",
-    "name": "Estimulante Acelerador",
-    "description": "Siempre que un agente VESPID STINGWING amigo (excluyendo OVERSIGHT DRONE) realice la acción de Cargar o Moverse con Cuidado, puede mover 1\" adicional. Si usa VOLAR para esta acción, puedes volver a colocarlo 1\" más lejos.",
+    "description": "En el paso de Preparación de cada Fase de Estrategia, al determinar cuántos puntos de Comunión ganar, puedes tirar 2D3 y elegir cúal de los dos usar.",
     "action": []
   },
   {
     "id_equip": 132,
     "faction": "vespid-stingwings",
     "name": "Estimulante de Convergencia",
-    "description": "Una vez por Punto de Inflexión, un agente VESPID STINGWING amigo puede realizar la acción de Recoger Marcador o una acción de misión sin que gastes un punto de Comunión.",
+    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo puede realizar una acción <b>Recoger Marcador</b> o una acción de misión sin que tengas que gastar un punto de Comunión.",
+    "action": []
+  },
+  {
+    "id_equip": 131,
+    "faction": "vespid-stingwings",
+    "name": "Estimulante Acelerador",
+    "description": "Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo (salvo <b>DRON DE VIGILANCIA</b>) realiza una acción de <b>Cargar</b> o <b>Correr</b>, puede moverse 1\" adicional. Si utiliza <b>VOLAR</b> para esta acción, puedes redesplegarlo a 1\" más de distancia.",
     "action": []
   },
   {
     "id_equip": 133,
     "faction": "vespid-stingwings",
     "name": "Estimulante de Agresión",
-    "description": "Siempre que un agente VESPID STINGWING amigo (excluyendo OVERSIGHT DRONE) esté combatiendo, sus armas cuerpo a cuerpo tienen la regla de armas Incesante.",
+    "description": "Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo (salvo <b>DRON DE VIGILANCIA</b>) combata, sus armas de combate tienen la regla de arma Incesante.",
     "action": []
   },
   {

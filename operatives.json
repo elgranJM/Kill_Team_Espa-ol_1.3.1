@@ -3889,12 +3889,12 @@
                     "name": "GUÍA AÉREA",
                     "cost": "1PA",
                     "description": [
-                        "<b>APOYO</b>. Hasta el inicio de la siguiente activación de este agente, cuando otro agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo a 6\" o menos de este agente y visible para él dispare contra un agente enemigo visible para este agente, las armas a distancia de dicho agente amigo tienen las reglas de armas Saturación y Letal 5+. Esto no tiene efecto si este agente está en la zona de control de un agente enemigo."
+                        "<b>APOYO</b>. Hasta el inicio de la siguiente activación de este agente, cuando otro agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo a 6\" o menos de este agente y visible para él dispare contra un agente enemigo y visible para este agente, las armas a distancia de dicho agente amigo tienen las reglas de armas Saturación y Letal 5+. Esto no tiene efecto si este agente está en la zona de control de un agente enemigo."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO TAU, DRON DE VIGILANCIA, DRON",
+            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO T'AU, DRON DE VIGILANCIA, DRON",
             "peana": "25"
         },
         {
@@ -3945,7 +3945,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO TAU, AGULJÓNLARGO",
+            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO T'AU, AGULJÓNLARGO",
             "peana": "28"
         },
         {
@@ -4000,7 +4000,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO T'AU, CEPASOMBRIA",
+            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO T'AU, CEPASOMBRÍA",
             "peana": "28"
         },
         {
@@ -4041,7 +4041,7 @@
                 },
                 {
                     "name": "Lluvia de neutrones",
-                    "description": "Una vez durante cada activación de un agente enemigo, tan pronto como dicho agente enemigo se encuentre a 2\" o menos de uno de tus marcadores de lluvia de neutrones, inflígele 103 daños (este efecto no se acumula con más de un marcador)."
+                    "description": "Una vez durante cada activación de un agente enemigo, tan pronto como dicho agente enemigo se encuentre a 2\" o menos de uno de tus marcadores de lluvia de neutrones, inflígele 1D3 daños (este efecto no se acumula con más de un marcador)."
                 }
             ],
             "uniqueActions": [],
@@ -4092,7 +4092,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Antorcha celeste",
-                    "description": "Un agente solo puede usar esta arma durante la acción de Asalto con antorcha celeste (ver reverso de esta tarjeta). Si lo hace, no elijas un blanco válido. En su lugar, dispara contra cada agente dentro de su zona de achicharramiento (excepto agentes que estén completamente bajo terreno Aventajado); no se consideran a cubierto ni ofuscados. Tira cada secuencia por separado en orden desde el agente más lejano al más cercano. La zona de achicharramiento es el área entre la posición actual y previa del agente. Se puede colocar temporalmente bajo este agente un marcador redondo de Antorcha celeste de 28 mm antes de moverlo, como ayuda a la hora de determinar esto."
+                    "description": "Un agente solo puede usar esta arma durante la acción de Asalto con antorcha celeste (ver reglas de acción <b>ASALTO CON ANTORCHA CELESTE</b>). Si lo hace, no elijas un blanco válido. En su lugar, dispara contra cada agente dentro de su zona de achicharramiento (excepto agentes que estén completamente bajo terreno Aventajado); no se consideran a cubierto ni ofuscados. Tira cada secuencia por separado en orden desde el agente más lejano al más cercano. La zona de achicharramiento es el área entre la posición actual y previa del agente. Se puede colocar temporalmente bajo este agente un marcador redondo de Antorcha celeste de 28 mm antes de moverlo, como ayuda a la hora de determinar esto."
                 }
             ],
             "uniqueActions": [
@@ -4100,7 +4100,7 @@
                     "name": "ASALTO CON ANTORCHA CELESTE",
                     "cost": "2PA",
                     "description": [
-                        "Realiza una acción libre de <b>Reposicionarse</b> con este agente. Durante esa acción, este debe VOLAR y puede mover 2\" adicionales. A continuación, realiza una acción libre de <b>Disparar</b>. Solo puedes elegie un lanzallamas (antorcha celeste) para dicha acción de <b>Disparar</b>."
+                        "Realiza una acción libre de <b>Reposicionarse</b> con este agente. Durante esa acción, este debe <b>VOLAR</b> y puede mover 2\" adicionales. A continuación, realiza una acción libre de <b>Disparar</b>. Solo puedes elegir un lanzallamas (antorcha celeste) para dicha acción de <b>Disparar</b>."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si tiene una orden de ocultarse, o si está en la zona de control de un agente enemigo."
                 }
@@ -4146,7 +4146,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO TAU, COMBATIENTE",
+            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO T'AU, COMBATIENTE",
             "peana": "28"
         }
     ],

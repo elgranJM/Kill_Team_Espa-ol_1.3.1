@@ -44,7 +44,7 @@
             "abilities": [
                 {
                     "name": "Líder heroico",
-                    "description": "Una vez por punto de inflexión, puedes elegir una de las siguientes opciones: <ul><li>Usar un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> especificado (excepto repetición de mando).</li></ul> <ul><li>Usa el ardid de estrategia Doctrina de combate cuando actives un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> si este agente está en la zona de aniquilación y no está en la zona de control de ningún agente enemigo (pagando su coste en PM de manera normal). Ten en cuenta que no puedes hacer si ya has usado ese ardida durante este punto de inflexión.</li></ul> <ul><li>Usa el ardid de tiroteo Ajustar doctrina por 0PM si este agente está en la zona de aniquilación y fuera de la zona de control de todos los agentes enemigos.</li></ul>"
+                    "description": "Una vez por punto de inflexión, puedes elegir una de las siguientes opciones: <ul><li>Usar un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> especificado (excepto repetición de mando).</li></ul> <ul><li>Usa el ardid de estrategia Doctrina de combate cuando actives un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> si este agente está en la zona de aniquilación y no está en la zona de control de ningún agente enemigo (pagando su coste en PM de manera normal). Ten en cuenta que no puedes hacer si ya has usado ese ardid durante este punto de inflexión.</li></ul> <ul><li>Usa el ardid de tiroteo Ajustar doctrina por 0PM si este agente está en la zona de aniquilación y fuera de la zona de control de todos los agentes enemigos.</li></ul>"
                 },
                 {
                     "name": "Aura de hierro",
@@ -65,16 +65,6 @@
                 "HERIDAS": "15"
             },
             "weapons": [
-                {
-                    "name": "Pistola lanzallamas",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/3",
-                        "RA": "Alcance 6\", Ráfaga 1\", Saturación"
-                    }
-                },
                 {
                     "name": "Pistola bólter pesada",
                     "type": "ranged",
@@ -106,23 +96,13 @@
                     }
                 },
                 {
-                    "name": "Espada sierra",
-                    "type": "melee",
+                    "name": "Pistola lanzallamas",
+                    "type": "ranged",
                     "stats": {
-                        "A": "5",
-                        "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "-"
-                    }
-                },
-                {
-                    "name": "Puño de energía",
-                    "type": "melee",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "5/7",
-                        "RA": "Brutal"
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 6\", Ráfaga 1\", Saturación"
                     }
                 },
                 {
@@ -136,6 +116,16 @@
                     }
                 },
                 {
+                    "name": "Espada sierra",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                },
+                {
                     "name": "Martillo de trueno",
                     "type": "melee",
                     "stats": {
@@ -143,6 +133,16 @@
                         "HP/HA": "4+",
                         "Dñ": "5/6",
                         "RA": "Aturdidora, Choque"
+                    }
+                },
+                {
+                    "name": "Puño de energía",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "4+",
+                        "Dñ": "5/7",
+                        "RA": "Brutal"
                     }
                 }
             ],
@@ -191,7 +191,7 @@
                     }
                 },
                 {
-                    "name": "Rifle bólter silencio (pesado)",
+                    "name": "Rifle bólter silencioso (pesado)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -211,6 +211,16 @@
                     }
                 },
                 {
+                    "name": "Arma de energía",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Letal 5+"
+                    }
+                },
+                {
                     "name": "Espada sierra",
                     "type": "melee",
                     "stats": {
@@ -221,13 +231,13 @@
                     }
                 },
                 {
-                    "name": "Arma de energía",
+                    "name": "Martillo de trueno",
                     "type": "melee",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "4/6",
-                        "RA": "Letal 5+"
+                        "HP/HA": "4+",
+                        "Dñ": "5/6",
+                        "RA": "Aturdidora, Choque"
                     }
                 },
                 {
@@ -248,16 +258,6 @@
                         "HP/HA": "3+",
                         "Dñ": "3/4",
                         "RA": "-"
-                    }
-                },
-                {
-                    "name": "Martillo de trueno",
-                    "type": "melee",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "4+",
-                        "Dñ": "5/6",
-                        "RA": "Aturdidora, Choque"
                     }
                 }
             ],
@@ -309,7 +309,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y Penetracións (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando lo hace, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando lo hace, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -353,86 +353,6 @@
             "peana": "32"
         },
         {
-            "id": "eliminator-sniper",
-            "name": "FRANCOTIRADOR ELIMINADOR",
-            "stats": {
-                "LPA": "3",
-                "MOVER": "7\"",
-                "SALVACIÓN": "3+",
-                "HERIDAS": "12"
-            },
-            "weapons": [
-                {
-                    "name": "Rifle bólter de francotirador (ejecutor)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/4",
-                        "RA": "Buscadora (Ligero), Pesada (solo Correr), Saturación, Silenciosa"
-                    }
-                },
-                {
-                    "name": "Rifle bólter de francotirador (hiperfrag)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "2/4",
-                        "RA": "Área 1\", Pesada (solo Correr), Silenciosa"
-                    }
-                },
-                {
-                    "name": "Rifle bólter de francotirador (mortis)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/3",
-                        "RA": "Devastadora 3, Penetración 1, Pesada (solo Correr), Silenciosa"
-                    }
-                },
-                {
-                    "name": "Pistola bólter",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\""
-                    }
-                },
-                {
-                    "name": "Puños",
-                    "type": "melee",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "-"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Capa de camuflaje",
-                    "description": "Siempre que un agente dispare contra este agente, ignora la regla de arma Saturación. Este agente tiene la <b>TÁCTICA DE CAPÍTULO</b> Sigilosos. Si ya habías elegido esa <b>TÁCTICA DE CAPÍTULO</b>, puedes hacer sus dos opciones (es decir, guardar dos salvaciones por cobertura; un éxito normal y uno crítico)."
-                }
-            ],
-            "uniqueActions": [
-                {
-                    "name": "Óptica",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Hasta el inicio de la siguiente activación de este agente, siempre que dispare, los agentes enemigos no pueden estar ofuscados."
-                    ],
-                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
-                }
-            ],
-            "keywords": "<span class=\"faction\">ÁNGEL DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, ELIMINADOR, FRANCOTIRADOR",
-            "peana": "40"
-        },
-        {
             "id": "heavy-intercessor-gunner",
             "name": "TIRADOR INTERCESOR PESADO",
             "stats": {
@@ -460,6 +380,16 @@
                         "HP/HA": "3+",
                         "Dñ": "4/5",
                         "RA": "Críticos de penetración 1, Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
                     }
                 },
                 {
@@ -575,16 +505,6 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle bólter",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1"
-                    }
-                },
-                {
                     "name": "Rifle bólter automático",
                     "type": "ranged",
                     "stats": {
@@ -592,6 +512,16 @@
                         "HP/HA": "3+",
                         "Dñ": "3/4",
                         "RA": "Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Rifle bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Críticos de penetración 1"
                     }
                 },
                 {
@@ -629,6 +559,86 @@
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">ÁNGEL DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, INTERCESOR, COMBATIENTE",
             "peana": "32"
+        },
+        {
+            "id": "eliminator-sniper",
+            "name": "FRANCOTIRADOR ELIMINADOR",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "7\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "12"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Rifle bólter de francotirador (ejecutor)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/4",
+                        "RA": "Buscadora (Ligero), Pesada (solo Correr), Saturación, Silenciosa"
+                    }
+                },
+                {
+                    "name": "Rifle bólter de francotirador (hiperfrag)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "2/4",
+                        "RA": "Área 1\", Pesada (solo Correr), Silenciosa"
+                    }
+                },
+                {
+                    "name": "Rifle bólter de francotirador (mortis)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 3, Penetración 1, Pesada (solo Correr), Silenciosa"
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Capa de camuflaje",
+                    "description": "Siempre que un agente dispare contra este agente, ignora la regla de arma Saturación. Este agente tiene la <b>TÁCTICA DE CAPÍTULO</b> Sigilosos. Si ya habías elegido esa <b>TÁCTICA DE CAPÍTULO</b>, puedes hacer sus dos opciones (es decir, guardar dos salvaciones por cobertura; un éxito normal y uno crítico)."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "Óptica",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Hasta el inicio de la siguiente activación de este agente, siempre que dispare, los agentes enemigos no pueden estar ofuscados."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ÁNGEL DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, ELIMINADOR, FRANCOTIRADOR",
+            "peana": "40"
         }
     ],
     "battleclade": [

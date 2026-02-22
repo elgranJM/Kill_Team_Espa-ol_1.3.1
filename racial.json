@@ -628,35 +628,35 @@
             "faction": "phobos",
             "type": "team",
             "name": "Agentes",
-            "description": "1 agente de <span class=\"faction\">ASALTANTES PHOBOS</span> Eligedo de la siguiente lista:<ul><li><b>SARGENTO INFILTRADOR</b></li><li><b>SARGENTO INCURSOR</b></li><li><b>SARGENTO SAQUEADOR</b> con una de las siguientes opciones:<ul><li>Pistola bólter especial; filoarma</li><li>Carabina bólter; puños</li></ul></li></ul>5 agentes de <span class=\"faction\">ASALTANTES PHOBOS</span> elegido de la siguiente lista:<ul><li><b>COMUNICADOR INFILTRADOR</b></li><li><b>ADEPTO HELIX INFILTRADOR</b></li><li><b>ZAPADOR INFILTRADOR</b></li><li><b>VETERANO INFILTRADOR</b></li><li><b>VOCOPIRATA INFILTRADOR</b></li><li><b>COMBATIENTE INFILTRADOR</b></li><li><b>OJO Certero INCURSOR</b></li><li><b>MINADOR INCURSOR</b></li><li><b>COMBATIENTE INCURSOR</b></li><li><b>COMBATIENTE SAQUEADOR</b> con una de las siguientes opciones:<ul><li>Pistola bólter especial; filoarma</li><li>Carabina bólter; puños</li></ul></li></ul><p>Salvo agentes <b>COMBATIENTE</b>, tu comando solo puede incluir cada agente en esta lista una vez.</p>"
+            "description": "1 agente de <span class=\"faction\">ASALTANTE PHOBOS</span> Eligedo de la siguiente lista:<ul><li><b>SARGENTO INFILTRADOR</b></li><li><b>SARGENTO INCURSOR</b></li><li><b>SARGENTO SAQUEADOR</b> con una de las siguientes opciones:<ul><li>Pistola bólter especial; filoarma</li><li>Carabina bólter; puños</li></ul></li></ul>5 agentes de <span class=\"faction\">ASALTANTE PHOBOS</span> elegidos de la siguiente lista:<ul><li><b>COMUNICADOR INFILTRADOR</b></li><li><b>ADEPTO HELIX INFILTRADOR</b></li><li><b>ZAPADOR INFILTRADOR</b></li><li><b>VETERANO INFILTRADOR</b></li><li><b>VOCOPIRATA INFILTRADOR</b></li><li><b>COMBATIENTE INFILTRADOR</b></li><li><b>OJO PRECISO INCURSOR</b></li><li><b>MINADOR INCURSOR</b></li><li><b>COMBATIENTE INCURSOR</b></li><li><b>COMBATIENTE SAQUEADOR</b> con una de las siguientes opciones:<ul><li>Pistola bólter especial; filoarma</li><li>Carabina bólter; puños</li></ul></li></ul><p>Salvo agentes <b>COMBATIENTE</b>, tu comando solo puede incluir uno de cada uno de los agentes de esta lista.</p>"
         },
         {
-            "id_racial": 83,
+            "id_racial": 85,
             "faction": "phobos",
             "type": "racial",
-            "name": "Astartes",
-            "description": "<p>Durante la activación de cada agente de <span class=\"faction\">ASALTANTES PHOBOS</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b>, se debe elegir un arma bólter para al menos una de ellas. Un arma bólter es cualquier arma a distancia que incluya 'bólter' en su nombre, p. ej. carabina bólter de tirador, pistola bólter de munición especial, etc.</p>\n\n<p>Cada agente de <span class=\"faction\">ASALTANTES PHOBOS</span> amigo puede contraatacar independientemente de su orden.</p>"
+            "name": "OmniTerferidor",
+            "description": "<p><b>GAMBITO ESTRATÉGICO</b> si en la zona de aniquilación hay un agente <b>INFILTRADOR</b> amigo. Elige un agente enemigo visible para un agente <b>INFILTRADOR</b> amigo, o a 6\" de un agente <b>VOCOPIRATA</b> amigo. En la fase de Tiroteo de este punto de inflexión, dicho agente enemigo no podrá ser activado ni realizar acciones a menos que se cumpla una de las siguientes condiciones:</p>\n\n<ul>\n<li>Tu oponente ha activado un número de agentes enemigos\nigual al número de agentes <b>INFILTRADOR</b> amigos en\nla zona de aniquilación cuando se usó este <b>GAMBITO ESTRATÉGICO</b>.</li>\n<li>Es el último agente enemigo en ser activado.</li>\n</ul>"
         },
         {
             "id_racial": 84,
             "faction": "phobos",
             "type": "racial",
             "name": "Terror",
-            "description": "<p>Siempre que un agente enemigo esté a 3\" de agentes <b>REIVER</b> amigos, tu oponente debe gastar 1 PA adicional para que ese agente enemigo realice la acción <b>Recoger Marcador</b> y acciones de misión.</p>\n\n<p>Siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menor si al menos uno de esos agentes enemigos está a 3\" de agentes <b>REIVER</b> amigos. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.</p>"
+            "description": "<p>Cuando un agente enemigo esté a 3\" o menos de algun agente <b>SAQUEADOR</b> amigo, tu oponente debe gastar 1 PA adicional para que ese agente enemigo realice la acción <b>Recoger Marcador</b> o de misión.</p>\n\n<p>Al determinar el control de un marcador, considera el atributo LPA total de los agentes enemigos que lo estén disputando como si fuera 1 menos si al menos uno de esos agentes enemigos se encuentra a 3\" o menos de algún agente <b>SAQUEADOR</b> amigos. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulable con esto.</p>"
         },
         {
-            "id_racial": 85,
+            "id_racial": 83,
             "faction": "phobos",
             "type": "racial",
-            "name": "Omni-Perturbador",
-            "description": "<p><b>GAMBITO ESTRATÉGICO</b> si un agente <b>INFILTRADOR</b> amigo está en la zona de aniquilación. Elige un agente enemigo visible para un agente <b>INFILTRADOR</b> amigo, o a 6\" de un agente <b>ROMPEVOX</b> amigo. En la siguiente fase de Tiroteo, ese agente enemigo no puede ser activado ni realizar acciones hasta que una de las siguientes condiciones sea verdadera:</p>\n\n<ul>\n<li>Tu oponente ha activado un número de agentes enemigos\nigual al número de agentes <b>INFILTRADOR</b> amigos en\nla zona de aniquilación cuando se usó este <b>GAMBITO ESTRATÉGICO</b>.</li>\n<li>Es el último agente enemigo en ser activado.</li>\n</ul>"
+            "name": "Astartes",
+            "description": "<p>Durante la activación de cada agente de <span class=\"faction\">ASALTANTE PHOBOS</span> amigo, puede realizar o bien dos acciones de <b>Combatir</b> o bien dos acciones de <b>Disparar</b>. Si son dos acciones de <b>Disparar</b>, debe seleccionarse un arma bólter al menos para una de ellas. Un arma bólter es cualquier arma a distancia que incluya \"bólter\" en el nombre, como por ejemplo \"carabina bólter de tirador\", \"pistola bólter especial\", etc.</p>\n\n<p>Cada agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo puede reaccionar sin importar cual sea su orden.</p>"
         },
         {
             "id_racial": 86,
             "faction": "phobos",
             "type": "racial",
-            "name": "Matriz Multiespectro",
-            "description": "Siempre que un agente <b>INCURSOR</b> amigo esté disparando, los agentes enemigos no pueden estar ofuscados."
+            "name": "Sistema Multiespectro",
+            "description": "Siempre que un agente <b>INCURSOR</b> amigo dispara, los agentes enemigos no pueden estar ofuscados."
         }
     ],
     "plague-marines": [

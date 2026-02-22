@@ -792,12 +792,21 @@
         "typename": "Ardid de Tiroteo"
     },
     {
+        "id_ploy": 151,
+        "faction": "phobos",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Guerra de Guerrillas",
+        "description": "<p>Los agentes <span class=\"faction\">ASALTANTE PHOBOS</span> amigos pueden realizar la siguiente acción única:</p>\n\n<div class=\"crit-op border border-0\" data-type=\"action\">\n<div class=\"header\"><div>Guerra de Guerrillas</div><div class=\"ap-box\">1LPA</div></div>\n<div class=\"content\"><ul>\n        <li>\n            <span class=\"icon-yes\"><img src=\"./resources/game_rules_files/yes.svg\" class=\"figure-img img-fluid rounded mx-auto d-block\"></img></span>\n            Cambia la orden de este agente.\n        </li>\n        <li>\n            <span class=\"icon-no\"><img src=\"./resources/game_rules_files/no.svg\" class=\"figure-img img-fluid rounded mx-auto d-block\"></img></span>\n            Un agente no puede realizar esta acción mientras esté dentro del rango de control de un agente enemigo.\n        </li>\n    </ul>\n</div>\n</div>",
+        "typename": "Ardid de Estrategia"
+    },
+    {
         "id_ploy": 147,
         "faction": "phobos",
         "type": "strategic",
         "cps": "1PM",
         "name": "Y No Conocerán el Miedo",
-        "description": "Puedes ignorar cualquier cambio en los atributos de los agentes de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigos por estar lesionados (incluyendo los atributos de sus armas).",
+        "description": "Puedes ignorar cualquier cambio en los atributos de los agentes de la <span class=\"faction\">ASALTANTE PHOBOS</span> amigos por estar lesionados (incluyendo los atributos de sus armas).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -806,7 +815,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Disparos Mortales",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigo dispare durante una activación en la que no haya realizado la acción <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, o contra un agente que no esté en cobertura <span class=\"text-warning-emphasis\">y esté a más de 6” de él</span>, o contra un agente que no esté en cobertura, las armas a distancia de ese agente amigo tienen la regla de armas Equilibrada. Ten en cuenta que para el primer requisito, ese agente no tiene restringido realizar esas acciones después de disparar.",
+        "description": "Siempre que un agente de la <span class=\"faction\">ASALTANTE PHOBOS</span> amigo dispare durante una activación en la que no haya realizado la acción <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, o contra un agente que no esté en cobertura <span class=\"text-warning-emphasis\">y esté a más de 6” de él</span>, o contra un agente que no esté en cobertura, las armas a distancia de ese agente amigo tienen la regla de armas Equilibrada. Ten en cuenta que para el primer requisito, ese agente no tiene restringido realizar esas acciones después de disparar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -815,16 +824,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Asaltos Letales",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigo esté combatiendo, sus armas de combate tienen la regla de armas Equilibrada. Si ese agente amigo lo está haciendo durante una activación en la que realizó la acción <b>Cargar</b>, sus armas de combate también tienen la regla de armas Letal 5+.",
-        "typename": "Ardid de Estrategia"
-    },
-    {
-        "id_ploy": 151,
-        "faction": "phobos",
-        "type": "strategic",
-        "cps": "1PM",
-        "name": "Guerra de Guerrillas",
-        "description": "<p>Los agentes de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigos pueden realizar la siguiente acción única:</p>\n\n<div class=\"crit-op border border-0\" data-type=\"action\">\n<div class=\"header\"><div>Guerra de Guerrillas</div><div class=\"ap-box\">1LPA</div></div>\n<div class=\"content\"><ul>\n        <li>\n            <span class=\"icon-yes\"></span>\n            Cambia la orden de este agente.\n        </li>\n        <li>\n            <span class=\"icon-no\"></span>\n            Un agente no puede realizar esta acción mientras esté dentro del rango de control de un agente enemigo.\n        </li>\n    </ul>\n</div>\n</div>",
+        "description": "Siempre que un agente de la <span class=\"faction\">ASALTANTE PHOBOS</span> amigo esté combatiendo, sus armas de combate tienen la regla de armas Equilibrada. Si ese agente amigo lo está haciendo durante una activación en la que realizó la acción <b>Cargar</b>, sus armas de combate también tienen la regla de armas Letal 5+.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -842,16 +842,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Disparo Crítico",
-        "description": "Usa este ardid de tiroteo cuando resuelvas un éxito crítico para un agente de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigo que dispare con un arma bólter. Inflige 1D3 de daño adicional.",
-        "typename": "Ardid de Tiroteo"
-    },
-    {
-        "id_ploy": 154,
-        "faction": "phobos",
-        "type": "tactical",
-        "cps": "1PM",
-        "name": "Asalto Sigiloso",
-        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigo que tenga una orden de Ocultación sea activado, se le dé una orden de Trabarse, realice la acción <b>Cargar</b> y luego la acción <b>Combatir</b>, y estés resolviendo tu primer dado de ataque de esta activación. Después de hacerlo, puedes resolver inmediatamente otro de tus dados de ataque (antes que tu oponente). El agente no puede haber realizado ninguna otra acción durante esta activación (pero puede hacerlo después de resolver este ardid).",
+        "description": "Usa este ardid de tiroteo cuando resuelvas un éxito crítico para un agente de la <span class=\"faction\">ASALTANTE PHOBOS</span> amigo que dispare con un arma bólter. Inflige 1D3 de daño adicional.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -860,7 +851,16 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Fisiología Transhumana",
-        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigo, en el paso Tirar Dados de Defensa. Puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente de la <span class=\"faction\">ASALTANTE PHOBOS</span> amigo, en el paso Tirar Dados de Defensa. Puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 154,
+        "faction": "phobos",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Asalto Sigiloso",
+        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">ASALTANTE PHOBOS</span> amigo que tenga una orden de Ocultación sea activado, se le dé una orden de Trabarse, realice la acción <b>Cargar</b> y luego la acción <b>Combatir</b>, y estés resolviendo tu primer dado de ataque de esta activación. Después de hacerlo, puedes resolver inmediatamente otro de tus dados de ataque (antes que tu oponente). El agente no puede haber realizado ninguna otra acción durante esta activación (pero puede hacerlo después de resolver este ardid).",
         "typename": "Ardid de Tiroteo"
     },
     {

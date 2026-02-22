@@ -10,7 +10,7 @@
     "id_equip": 2,
     "faction": "wolf-scouts",
     "name": "Amuletos Rúnicos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">EXPLORADORES LOBO</span amigo (excluyendo FENRISIAN WOLF), al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Perforante 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">EXPLORADORES LOBO</span amigo (excluyendo FENRISIAN WOLF), al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },
   {
@@ -31,7 +31,7 @@
     "id_equip": 5,
     "faction": "tempestus-aquilons",
     "name": "Daga Tempestus",
-    "description": "Los agentes <span class=\"faction\">TEMPESTUS AQUILON</span amigos (excluyendo SERVO-SENTRY) tienen la siguiente arma cuerpo a cuerpo:",
+    "description": "Los agentes <span class=\"faction\">TEMPESTUS AQUILON</span amigos (excluyendo SERVO-SENTRY) tienen la siguiente arma de combate:",
     "ATK": "3",
     "HIT": "4+",
     "DMG": "3/4",
@@ -62,7 +62,7 @@
     "id_equip": 9,
     "faction": "scouts",
     "name": "Filopuñales",
-    "description": "Los agentes <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigos tienen la siguiente arma cuerpo a cuerpo. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
+    "description": "Los agentes <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigos tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
     "ATK": "3",
     "HIT": "3+",
     "DMG": "4/5",
@@ -157,34 +157,34 @@
     "action": []
   },
   {
+    "id_equip": 22,
+    "faction": "phobos",
+    "name": "Sellos de Pureza",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo dispare o combata, si sacas dos o más fallos, puedes descartar uno de ellos para guardar otro como éxito normal en su lugar.",
+    "action": []
+  },
+  {
+    "id_equip": 23,
+    "faction": "phobos",
+    "name": "Granadas Especiales Adicionales",
+    "description": "Este equipamiento te permite seleccionar cuatro granadas especiales adicionales del equipo de granadas especiales (ver equipo universal). No puedes ademas elegir ese equipo de forma normal (y por tamto tener cinco o seis).",
+    "action": []
+  },
+  {
     "id_equip": 21,
     "faction": "phobos",
-    "name": "Hoja de Combate",
-    "description": "Los agentes <span class=\"faction\">ASALTANTES PHOBOS</span amigos tienen la siguiente arma cuerpo a cuerpo:",
+    "name": "Filopuñales",
+    "description": "Los Agentes <span class=\"faction\">ASALTANTE PHOBOS</span> amigos tienen la siguiente arma de combate:",
     "ATK": "5",
     "HIT": "3+",
     "DMG": "3/4",
     "action": []
   },
   {
-    "id_equip": 22,
-    "faction": "phobos",
-    "name": "Sellos de Pureza",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTES PHOBOS</span amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
-    "action": []
-  },
-  {
-    "id_equip": 23,
-    "faction": "phobos",
-    "name": "Granadas de Utilidad Adicionales",
-    "description": "Este equipamiento te permite seleccionar cuatro granadas de utilidad del equipamiento granadas de utilidad (ver equipamiento universal). No puedes seleccionar también ese equipamiento de forma normal (es decir, para tener seis).",
-    "action": []
-  },
-  {
     "id_equip": 24,
     "faction": "phobos",
     "name": "Munición Especial",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTES PHOBOS</span amigo esté realizando la acción de <b>Disparar</b> y selecciones una carabina bólter, carabina bólter de tirador o carabina bólter occulus, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, esa arma tiene la regla de armas Perforante 1.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo realice la acción <b>Disparar</b> y elijas una carabina bólter, una carabina bólter de tirador o carabina bólter occulus, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, dicha arma tendra la regla Penetración 1.",
     "action": []
   },
   {
@@ -219,7 +219,7 @@
     "id_equip": 29,
     "faction": "kasrkin",
     "name": "Dagas de Combate",
-    "description": "Los agentes <span class=\"faction\">KASRKIN</span amigos tienen la siguiente arma cuerpo a cuerpo:",
+    "description": "Los agentes <span class=\"faction\">KASRKIN</span amigos tienen la siguiente arma de combate:",
     "ATK": "3",
     "HIT": "4+",
     "DMG": "3/4",
@@ -250,7 +250,7 @@
     "id_equip": 33,
     "faction": "inquisitorial-agent",
     "name": "Dagas de Combate",
-    "description": "Los agentes INQUISITORIAL AGENT amigos tienen la siguiente arma cuerpo a cuerpo. Siempre que un agente SISTER OF SILENCE amigo la esté usando, añade 1 a su atributo de Atq.",
+    "description": "Los agentes INQUISITORIAL AGENT amigos tienen la siguiente arma de combate. Siempre que un agente SISTER OF SILENCE amigo la esté usando, añade 1 a su atributo de Atq.",
     "ATK": "3",
     "HIT": "4+",
     "DMG": "3/4",
@@ -316,7 +316,7 @@
     "id_equip": 42,
     "faction": "hunter-clade",
     "name": "Campo Refractor",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente HUNTER CLADE amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Perforante 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente HUNTER CLADE amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },
   {
@@ -340,7 +340,7 @@
     "description": [
       "Hasta dos veces por Punto de Inflexión, cuando un agente EXACTION SQUAD amigo esté realizando la acción de <b>Disparar</b> y selecciones una escopeta de combate, escopeta verdugo, pistola escopeta con mira o pistola escopeta, puedes usar esta regla. Si lo haces, selecciona una de las siguientes reglas de arma para que esa arma la tenga hasta el final de esa acción:",
       "   - Saturación.",
-      "   - Perforante 1, pero solo si el objetivo tiene un atributo de Salvación de 3+ o mejor.",
+      "   - Penetración 1, pero solo si el objetivo tiene un atributo de Salvación de 3+ o mejor.",
       "   - Torrente 1\", pero no puedes seleccionar más de un objetivo secundario."
     ]
   },
@@ -431,7 +431,7 @@
     "id_equip": 57,
     "faction": "veteran-guardsmen",
     "name": "Hacha de Mano",
-    "description": "Los agentes DEATH KORPS amigos tienen la siguiente arma cuerpo a cuerpo:",
+    "description": "Los agentes DEATH KORPS amigos tienen la siguiente arma de combate:",
     "ATK": "3",
     "HIT": "4+",
     "DMG": "3/4",
@@ -611,7 +611,7 @@
     "id_equip": 90,
     "faction": "legionary",
     "name": "Hojas Maléficas",
-    "description": "Los agentes LEGIONARY amigos tienen la siguiente arma cuerpo a cuerpo para la batalla:",
+    "description": "Los agentes LEGIONARY amigos tienen la siguiente arma de combate para la batalla:",
     "ATK": "5",
     "HIT": "3+",
     "DMG": "3/4",
@@ -660,7 +660,7 @@
     "id_equip": 96,
     "faction": "goremongers",
     "name": "Sigilo del Caos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente GOREMONGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Perforante 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente GOREMONGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },
   {
@@ -709,7 +709,7 @@
     "id_equip": 103,
     "faction": "fellgor-ravagers",
     "name": "Sigilo del Caos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente FELLGOR RAVAGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Perforante 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente FELLGOR RAVAGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },
   {
@@ -824,7 +824,7 @@
     "id_equip": 119,
     "faction": "wyrmblade",
     "name": "Cuchillos de Culto",
-    "description": "Los agentes WYRMBLADE NEOPHYTE amigos tienen la siguiente arma cuerpo a cuerpo:",
+    "description": "Los agentes WYRMBLADE NEOPHYTE amigos tienen la siguiente arma de combate:",
     "ATK": "3",
     "HIT": "4+",
     "DMG": "3/4",
@@ -848,7 +848,7 @@
     "id_equip": 122,
     "faction": "wrecka-krew",
     "name": "Kohetes Taladradores",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo esté realizando la acción de <b>Disparar</b> y selecciones un lanzakohetez o lanzakohetez pezado, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma pierde la regla de armas Explosión pero tiene la regla de armas Perforante 1.",
+    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo esté realizando la acción de <b>Disparar</b> y selecciones un lanzakohetez o lanzakohetez pezado, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma pierde la regla de armas Explosión pero tiene la regla de armas Penetración 1.",
     "action": []
   },
   {
@@ -1027,7 +1027,7 @@
     "id_equip": 146,
     "faction": "kommandos",
     "name": "Rebanadora",
-    "description": "Los agentes KOMMANDO amigos (excluyendo BOMB SQUIG y GROT) tienen la siguiente arma cuerpo a cuerpo. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
+    "description": "Los agentes KOMMANDO amigos (excluyendo BOMB SQUIG y GROT) tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
     "ATK": "3",
     "HIT": "3+",
     "DMG": "4/5",
@@ -1090,14 +1090,14 @@
     "id_equip": 153,
     "faction": "hierotek",
     "name": "Desfasador",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CRYPTEK amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Perforante 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CRYPTEK amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },
   {
     "id_equip": 154,
     "faction": "yaegirs",
     "name": "Cuchillo de Plasma",
-    "description": "Los agentes HERNKYN YAEGIR amigos tienen la siguiente arma cuerpo a cuerpo: Cuchillo de Plasma. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión, y esa arma tiene la regla de armas Equilibrada para la batalla.",
+    "description": "Los agentes HERNKYN YAEGIR amigos tienen la siguiente arma de combate: Cuchillo de Plasma. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión, y esa arma tiene la regla de armas Equilibrada para la batalla.",
     "ATK": "3",
     "HIT": "4+",
     "DMG": "3/5",
@@ -1129,7 +1129,7 @@
     "id_equip": 158,
     "faction": "hearthkyn-salvager",
     "name": "Cuchillo de Plasma",
-    "description": "Los agentes HEARTHKYN SALVAGER amigos tienen la siguiente arma cuerpo a cuerpo. Ten en cuenta que el agente FIELD MEDIC ya tiene esta arma pero con mejores atributos; en ese caso, usa la mejor versión:",
+    "description": "Los agentes HEARTHKYN SALVAGER amigos tienen la siguiente arma de combate. Ten en cuenta que el agente FIELD MEDIC ya tiene esta arma pero con mejores atributos; en ese caso, usa la mejor versión:",
     "ATK": "3",
     "HIT": "4+",
     "DMG": "3/5",
@@ -1175,7 +1175,7 @@
     "id_equip": 164,
     "faction": "kabalite",
     "name": "Recubrimiento de Toxinas",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté combatiendo o contraataque y estés seleccionando un arma cuerpo a cuerpo, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia, el arma cuerpo a cuerpo de ese agente tiene la regla de armas Letal 5+.",
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté combatiendo o contraataque y estés seleccionando un arma de combate, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia, el arma de combate de ese agente tiene la regla de armas Letal 5+.",
     "action": []
   },
   {
@@ -1189,7 +1189,7 @@
     "id_equip": 166,
     "faction": "farstalker-kinband",
     "name": "Disparo Perforante",
-    "description": "Una vez por Punto de Inflexión, cuando un agente FARSTALKER KINBAND amigo esté realizando la acción de <b>Disparar</b> y selecciones un rifle Kroot, escopeta de dispersión Kroot o pistolas Kroot duales (enfocadas), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Perforante 1. No puedes usar la regla Disparo Perforante y Disparo Tóxico durante la misma acción.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente FARSTALKER KINBAND amigo esté realizando la acción de <b>Disparar</b> y selecciones un rifle Kroot, escopeta de dispersión Kroot o pistolas Kroot duales (enfocadas), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Penetración 1. No puedes usar la regla Disparo Perforante y Disparo Tóxico durante la misma acción.",
     "action": []
   },
   {
@@ -1231,7 +1231,7 @@
     "id_equip": 172,
     "faction": "corsair-voidscarred",
     "name": "Campo de Niebla",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CORSAIR VOIDSCARRED amigo a más de 3\" de distancia, durante el paso de Tirar Dados de Defensa, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Esto puede causar que Perforante 1 sea ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CORSAIR VOIDSCARRED amigo a más de 3\" de distancia, durante el paso de Tirar Dados de Defensa, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Esto puede causar que Penetración 1 sea ignorada.",
     "action": []
   },
   {
@@ -1266,14 +1266,14 @@
     "id_equip": 177,
     "faction": "canoptek",
     "name": "DESFASADOR",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CANOPTEK CIRCLE GEOMANCER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Perforante 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CANOPTEK CIRCLE GEOMANCER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },
   {
     "id_equip": 178,
     "faction": "brood-brothers",
     "name": "Cuchillo de Culto",
-    "description": "Los agentes BROOD BROTHER BROODGUARD amigos tienen la siguiente arma cuerpo a cuerpo:",
+    "description": "Los agentes BROOD BROTHER BROODGUARD amigos tienen la siguiente arma de combate:",
     "ATK": "3",
     "HIT": "4+",
     "DMG": "3/4",

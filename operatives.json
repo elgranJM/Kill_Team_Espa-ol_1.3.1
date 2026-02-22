@@ -2977,7 +2977,7 @@
                     "name": "PROTECCIÓN DEL DESTINO",
                     "cost": "1PA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Elige un agente <span class=\"faction\">AQUELARRE DISFORME</span> amigo visible para este agente. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice de nuevo esta acción (lo que ocurra antes), siempre que un agente dispare contra ese agente elegido, puedes repetir cualesquiera de tus dados de defensa."
+                        "<b>PSÍQUICA.</b>. Elige un agente <span class=\"faction\">AQUELARRE DISFORME</span> amigo visible para este agente. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice de nuevo esta acción (lo que ocurra antes), siempre que un agente dispare contra ese agente elegido, puedes repetir cualesquiera de tus dados de defensa."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -2985,7 +2985,7 @@
                     "name": "SABOTEAR DESTINO",
                     "cost": "1PA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Elige un agente enemigo a 9\" o menos de este agente y visible para él. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice de nuevo esta acción (lo que ocurra antes), siempre que ese agente enemigo dispare, combata o contraataque, tu oponente debe repetir sus dados de ataque con un resultado de 6, y al determinar el control de un marcador, el atributo LPA del agente enemigo se considera 1 menos de lo que es. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto.r cambio es acumulable con esto."
+                        "<b>PSÍQUICA.</b>. Elige un agente enemigo a 9\" o menos de este agente y visible para él. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice de nuevo esta acción (lo que ocurra antes), siempre que ese agente enemigo dispare, combata o contraataque, tu oponente debe repetir sus dados de ataque con un resultado de 6, y al determinar el control de un marcador, el atributo LPA del agente enemigo se considera 1 menos de lo que es. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -3074,7 +3074,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tu marcador de Flujo temporal está actualmente en la zona de aniquilación."
                 }
             ],
-            "keywords": "<span class=\"faction\">AQUELARRE DISFORME</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, HECHICERO, TEMPIREO",
+            "keywords": "<span class=\"faction\">AQUELARRE DISFORME</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, HECHICERO, TEMPÍREO",
             "peana": "32"
         },
         {
@@ -3483,7 +3483,7 @@
             "abilities": [
                 {
                     "name": "Cazadores de reliquias",
-                    "description": "Una vez por batalla, un agente <b>COMBATIENTE TZAANGOR</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo puede realizar una acción de Recoger marcador, Colocar marcador o acción de misión por 1 PA menos si dicho agente amigo está en el territorio de tu oponente."
+                    "description": "Una vez por batalla, un agente <b>COMBATIENTE TZAANGOR</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo puede realizar una acción de <b>Recoger marcador</b>, <b>Colocar marcador</b> o acción de misión por 1 PA menos si dicho agente amigo está en el territorio de tu oponente."
                 },
                 {
                     "name": "<span class=\"faction\">*</span>Escudo",

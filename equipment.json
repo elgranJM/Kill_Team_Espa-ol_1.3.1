@@ -229,7 +229,7 @@
     "id_equip": 30,
     "faction": "kasrkin",
     "name": "Empuñadura Delantera",
-    "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span amigo esté disparando a un agente a 3\" o menos de él, las armas a distancia en su tarjeta de datos (excluyendo armas que incluyan ‘pistola’ en su nombre, P. ej. pistola láser sobrecargada, todos los perfiles de una pistola de plasma, etc.) tienen la regla de armas Precisa 1.",
+    "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span amigo esté disparando a un agente a 3\" o menos de él, las armas a distancia en su tarjeta de datos (excluyendo armas que incluyan ‘pistola’ en su nombre, P. ej. pistola láser sobrecargada, todos los perfiles de una pistola de plasma, etc.) tienen la regla de armas Certera 1.",
     "action": []
   },
   {
@@ -482,7 +482,7 @@
     "id_equip": 72,
     "faction": "battleclade",
     "name": "Condensadores Electrománticos",
-    "description": "Las armas cuerpo a cuerpo de los agentes BATTLECLADE amigos tienen la regla de armas Choque. Siempre que un agente BATTLECLADE amigo preparado esté contraataque, sus armas cuerpo a cuerpo también tienen la regla de armas Severa.",
+    "description": "Las armas de combate de los agentes BATTLECLADE amigos tienen la regla de armas Choque. Siempre que un agente BATTLECLADE amigo preparado esté contraataque, sus armas de combate también tienen la regla de armas Severa.",
     "action": []
   },
   {
@@ -523,29 +523,29 @@
   {
     "id_equip": 78,
     "faction": "warpcoven",
-    "name": "Proyectiles Hechizados",
-    "description": "Los bólteres inferno, pistolas bólter inferno y autopistolas de los agentes WARPCOVEN amigos tienen la regla de armas Devastadora 1.",
+    "name": "Balas Hechizadas",
+    "description": "Los bólteres infierno, pistolas bólter infierno y pistolas automáticas de los agentes <span class=\"faction\">AQUELARRE DISFORME</span> amigos tienen la regla de armas Devastadora 1.",
     "action": []
   },
   {
     "id_equip": 79,
     "faction": "warpcoven",
-    "name": "Armas Fauces de Demonio",
-    "description": "Añade 1 al atributo de Atq de las armas cuerpo a cuerpo de los agentes WARPCOVEN RUBRIC MARINE amigos. Siempre que un agente WARPCOVEN RUBRIC MARINE amigo esté contraataque, sus armas cuerpo a cuerpo tienen la regla de armas Precisa 1.",
+    "name": "Armas FaucesDaemónicas",
+    "description": "Suma 1 al atributo de Ataque de las armas de combate de los agentes <b>MARINE RÚBRICA</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigos. Cuando un agente <b>MARINE RÚBRICA</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo contraataca, sus armas de combate tienen la regla de armas Certera 1.",
     "action": []
   },
   {
     "id_equip": 80,
     "faction": "warpcoven",
     "name": "Túnicas Arcanas",
-    "description": "Una vez por Punto de Inflexión, siempre que un dado de ataque fuera a infligir Daño Crítico a un agente WARPCOVEN SORCERER amigo, puedes usar esta regla. Si lo haces, ese dado de ataque inflige Daño Normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un dado de ataque vaya a infligir Daño Crítico a un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo, puedes decidir que ese dado inflinja Daño Normal en su lugar. No puedes usar esta regla más de una vez por punto de inflexión para cada agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo.",
     "action": []
   },
   {
     "id_equip": 81,
     "faction": "warpcoven",
-    "name": "Pergaminos Hechiceros",
-    "description": "Una vez por batalla, cuando un agente WARPCOVEN SORCERER amigo es activado o contraactúa, puedes seleccionar una BENDICIÓN DE TZEENTCH diferente para que la tenga hasta el final de la batalla (pierde cualquiera que tuviera previamente). No puede ser la misma BENDICIÓN DE TZEENTCH que tenga cualquier otro agente amigo.",
+    "name": "Pergaminos de Hechicería",
+    "description": "Una vez por batalla, cuando un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo sea activado o reaccione, puedes elegir un <b>DON DE TZEENTCH</b> diferente al que tenga. Dicho agente lo tendrá hasta el final de la batalla (pierde el que tenía previamente). No puedes elegir un <b>DON DE TZEENTCH</b> que tenga otro agente amigo. Ten en cuenta que si usas esta regla cuando un agente amigo reacciona y seleccionas Ecos de la Disformidad, puede usarse inmediatamente para cambiar la orden del agente y que este realice una acción libre durante la reacción.",
     "action": []
   },
   {
@@ -667,7 +667,7 @@
     "id_equip": 97,
     "faction": "goremongers",
     "name": "Cadenas de Muñeca",
-    "description": "Una vez por Punto de Inflexión, cuando un agente GOREMONGER amigo realice la acción de <b>Disparar</b> y estés seleccionando un arma a distancia, puedes usar esta regla. Si lo haces, hasta el final de esa acción, las siguientes armas cuerpo a cuerpo se tratan como armas a distancia con la regla de armas Alcance 2\": espada sierra, guja sierra, gran hacha sierra (ignora su regla de armas Brutal), desgarradores de pico.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente GOREMONGER amigo realice la acción de <b>Disparar</b> y estés seleccionando un arma a distancia, puedes usar esta regla. Si lo haces, hasta el final de esa acción, las siguientes armas de combate se tratan como armas a distancia con la regla de armas Alcance 2\": espada sierra, guja sierra, gran hacha sierra (ignora su regla de armas Brutal), desgarradores de pico.",
     "action": []
   },
   {

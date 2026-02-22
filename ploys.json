@@ -77,7 +77,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Posesión Noosférica",
-        "description": "<p><b>Apoyo.</b> Siempre que un agente <b>SERVIDOR</b> del <span class=\"faction\">CLADO DE BATALLA</span> amigo esté a 6\" de un agente <b>SERVIDOR AUTO-PROXY</b> del <span class=\"faction\">CLADO DE BATALLA</span> o <b>SUPERVISOR DE SERVIDORES</b> del <span class=\"faction\">CLADO DE BATALLA</span> amigo, las armas de ese agente <b>SERVIDOR</b> amigo tienen la regla de armas <b>Precisa 1</b>.</p>\n\n<p>Para los propósitos de esta regla de <b>Apoyo</b> y el equipamiento Dispositivo de Comunicaciones, el agente <b>AUTO-PROXY</b> o <b>SUPERVISOR DE SERVIDORES</b> debe controlar tu marcador de Dispositivo de Comunicaciones para sumar 3\" a su requisito de distancia para esta regla.</p>\n",
+        "description": "<p><b>Apoyo.</b> Siempre que un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo esté a 6\" de un agente <b>SERVIDOR AUTO-PROXY</b> <span class=\"faction\">CLADO DE BATALLA</span> o <b>SUPERVISOR DE SERVIDORES</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo, las armas de ese agente <b>SERVIDOR</b> amigo tienen la regla de armas <b>Certera 1</b>.</p>\n\n<p>Para los propósitos de esta regla de <b>Apoyo</b> y el equipamiento Dispositivo de Comunicaciones, el agente <b>AUTO-PROXY</b> o <b>SUPERVISOR DE SERVIDORES</b> debe controlar tu marcador de Dispositivo de Comunicaciones para sumar 3\" a su requisito de distancia para esta regla.</p>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -95,7 +95,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Adquisición Prioritaria",
-        "description": "<p>Selecciona un marcador de objetivo o uno de tus marcadores de misión.</p>\n\n<p>Siempre que se determine el control de ese marcador, trata el atributo de <b>LPA</b> total de los agentes del <span class=\"faction\">CLADO DE BATALLA</span> amigos que lo disputan como 1 mayor si al menos un agente del <b>CLADO DE BATALLA</b> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo de <b>LPA</b>, por lo que cualquier cambio es acumulativo con esto.</p>\n\n<p>Siempre que un agente del <span class=\"faction\">CLADO DE BATALLA</span> amigo esté a 3\" de ese marcador, suma 1 al atributo de <b>Atq</b> de sus armas cuerpo a cuerpo (hasta un máximo de 4).</p>\n",
+        "description": "<p>Selecciona un marcador de objetivo o uno de tus marcadores de misión.</p>\n\n<p>Siempre que se determine el control de ese marcador, trata el atributo de <b>LPA</b> total de los agentes del <span class=\"faction\">CLADO DE BATALLA</span> amigos que lo disputan como 1 mayor si al menos un agente del <b>CLADO DE BATALLA</b> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo de <b>LPA</b>, por lo que cualquier cambio es acumulativo con esto.</p>\n\n<p>Siempre que un agente del <span class=\"faction\">CLADO DE BATALLA</span> amigo esté a 3\" de ese marcador, suma 1 al atributo de <b>Atq</b> de sus armas de combate (hasta un máximo de 4).</p>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -113,7 +113,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Exorcismo del Sistema",
-        "description": "<p>Usa este ardid de tiroteo cuando fueras a activar un <b>AGENTE</b> del <span class=\"faction\">CLADO DE BATALLA</span> amigo. Elimina un efecto de reglas o cambio de atributo que tu oponente le haya aplicado (p. ej. ficha de Veneno, -1LPA, no puede ser activado o realizar acciones, etc.), luego actívalo. Este ardid no puede permitirle recuperar heridas perdidas, ignorar los efectos de estar lesionado o eliminar -1LPA que tú le hayas aplicado (es decir, de <b>TRANSFERIR ENERGÍA</b>).</p>\n",
+        "description": "<p>Usa este ardid de tiroteo cuando fueras a activar un <b>AGENTE</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo. Elimina un efecto de reglas o cambio de atributo que tu oponente le haya aplicado (p. ej. ficha de Veneno, -1LPA, no puede ser activado o realizar acciones, etc.), luego actívalo. Este ardid no puede permitirle recuperar heridas perdidas, ignorar los efectos de estar lesionado o eliminar -1LPA que tú le hayas aplicado (es decir, de <b>TRANSFERIR ENERGÍA</b>).</p>\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -122,7 +122,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Acceso Remoto",
-        "description": "<p>Usa este ardid de tiroteo durante la activación de un agente <b>TECNO-SACERDOTE</b> del <span class=\"faction\">CLADO DE BATALLA</span> amigo. Una vez durante esa activación, puedes usar una de las siguientes reglas:</p>\n<ul>\n<li>Ese agente no requiere que un marcador esté dentro de su rango de control para realizar una acción de misión que generalmente lo requiere (teniendo precedencia sobre las condiciones de esa acción). En su lugar, el marcador debe estar a 4\" de él y ningún agente enemigo puede disputar ese marcador. Sin embargo, puedes ignorar a los agentes enemigos dentro del rango de control de otros agentes del <span class=\"faction\">CLADO DE BATALLA</span> amigos al determinar esto.</li>\n<li>Ese agente no requiere que el punto de acceso de una compuerta esté dentro de su rango de control para realizar una acción <b>Operar Compuerta</b>. En su lugar, ese punto de acceso debe estar a 4\" de él.</li>\n</ul>\n",
+        "description": "<p>Usa este ardid de tiroteo durante la activación de un agente <b>TECNO-SACERDOTE</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo. Una vez durante esa activación, puedes usar una de las siguientes reglas:</p>\n<ul>\n<li>Ese agente no requiere que un marcador esté dentro de su rango de control para realizar una acción de misión que generalmente lo requiere (teniendo precedencia sobre las condiciones de esa acción). En su lugar, el marcador debe estar a 4\" de él y ningún agente enemigo puede disputar ese marcador. Sin embargo, puedes ignorar a los agentes enemigos dentro del rango de control de otros agentes del <span class=\"faction\">CLADO DE BATALLA</span> amigos al determinar esto.</li>\n<li>Ese agente no requiere que el punto de acceso de una compuerta esté dentro de su rango de control para realizar una acción <b>Operar Compuerta</b>. En su lugar, ese punto de acceso debe estar a 4\" de él.</li>\n</ul>\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -131,7 +131,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Súplica Auto-Férrica",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente dispare contra un agente <b>TECNO-SACERDOTE</b> del <span class=\"faction\">CLADO DE BATALLA</span> amigo, al inicio del paso <b>Tirar Dados de Ataque</b>. Hasta el final de la secuencia, ignora la regla de armas <b>Perforante</b>.</p>\n",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente dispare contra un agente <b>TECNO-SACERDOTE</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo, al inicio del paso <b>Tirar Dados de Ataque</b>. Hasta el final de la secuencia, ignora la regla de armas <b>Perforante</b>.</p>\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -140,7 +140,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Sustitución Servil",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <b>TECNO-SACERDOTE</b> del <span class=\"faction\">CLADO DE BATALLA</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige un agente <b>SERVIDOR</b> del <span class=\"faction\">CLADO DE BATALLA</span> amigo visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese agente <b>SERVIDOR</b> como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. <span class=\"text-warning-emphasis\">Si es la acción <b>Disparar</b>, ese agente <b>SERVIDOR</b> solo está en cobertura u ofuscado si el objetivo original lo estaba.</span></p>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas <b>Estallido</b> o <b>Torrente</b>.</p>\n",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <b>TECNO-SACERDOTE</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese agente <b>SERVIDOR</b> como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. <span class=\"text-warning-emphasis\">Si es la acción <b>Disparar</b>, ese agente <b>SERVIDOR</b> solo está en cobertura u ofuscado si el objetivo original lo estaba.</span></p>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas <b>Estallido</b> o <b>Torrente</b>.</p>\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -149,7 +149,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Guerra de Asedio",
-        "description": "Las armas a distancia de los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos ganan las reglas de arma Saturar <span class=\"text-info-emphasis\">y Precisa 1</span>.",
+        "description": "Las armas a distancia de los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos ganan las reglas de arma Saturar <span class=\"text-info-emphasis\">y Certera 1</span>.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -167,7 +167,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Despejar la Línea",
-        "description": "<span class=\"text-info-emphasis\">Las armas cuerpo a cuerpo de los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos tienen la regla de armas Precisa 1. Siempre que un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo esté combatiendo totalmente dentro de tu territorio, o siempre que esté contraataque, sus armas cuerpo a cuerpo también tienen la regla de armas Severa.</span>\n",
+        "description": "<span class=\"text-info-emphasis\">Las armas de combate de los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos tienen la regla de armas Certera 1. Siempre que un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo esté combatiendo totalmente dentro de tu territorio, o siempre que esté contraataque, sus armas de combate también tienen la regla de armas Severa.</span>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -302,7 +302,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Reclamar Zona",
-        "description": "Coloca tu marcador de Reclamo en la zona de aniquilación. Siempre que un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo dispare, combatiendo o contraataque contra un agente enemigo que esté a 3\" de ese marcador, las armas de ese agente amigo tienen la regla de armas Precisa 1. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador.",
+        "description": "Coloca tu marcador de Reclamo en la zona de aniquilación. Siempre que un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo dispare, combatiendo o contraataque contra un agente enemigo que esté a 3\" de ese marcador, las armas de ese agente amigo tienen la regla de armas Certera 1. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -365,7 +365,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Dispensar Justicia",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté combatiendo o contraataque, si no se ha movido más que su atributo de Movimiento durante la activación, o si es un contraataque, sus armas cuerpo a cuerpo tienen la regla de armas Incesante.",
+        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté combatiendo o contraataque, si no se ha movido más que su atributo de Movimiento durante la activación, o si es un contraataque, sus armas de combate tienen la regla de armas Incesante.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -653,7 +653,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Patrón de Eliminación",
-        "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare con un arma hot-shot contra un agente que no está en cobertura <span class=\"text-info-emphasis\">o está siendo escaneado (ver <b>SOLDADO DE RECONOCIMIENTO</b>)</span>, ese arma tiene la regla de armas Perforante Críticos 1, o Perforante 1 en su lugar si es un cañón de volea hot-shot.",
+        "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare con un arma hot-shot contra un agente que no está en cobertura <span class=\"text-info-emphasis\">o está siendo escaneado (ver <b>SOLDADO DE RECONOCIMIENTO</b>)</span>, ese arma tiene la regla de armas Críticos de penetración 1, o Penetración 1 en su lugar si es un cañón de volea hot-shot.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -815,7 +815,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Asaltos Letales",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigo esté combatiendo, sus armas cuerpo a cuerpo tienen la regla de armas Equilibrada. Si ese agente amigo lo está haciendo durante una activación en la que realizó la acción <b>Cargar</b>, sus armas cuerpo a cuerpo también tienen la regla de armas Letal 5+.",
+        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE ASALTO PHOBOS</span> amigo esté combatiendo, sus armas de combate tienen la regla de armas Equilibrada. Si ese agente amigo lo está haciendo durante una activación en la que realizó la acción <b>Cargar</b>, sus armas de combate también tienen la regla de armas Letal 5+.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -950,7 +950,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Pelea Ferviente",
-        "description": "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b> esté combatiendo o contraataque, sus armas cuerpo a cuerpo tienen la regla de armas Incesante.\n",
+        "description": "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b> esté combatiendo o contraataque, sus armas de combate tienen la regla de armas Incesante.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -959,7 +959,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Persecución Celosa",
-        "description": "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté combatiendo durante una activación en la que ha realizado la acción <b>Cargar</b>, sus armas cuerpo a cuerpo tienen la regla de armas Letal 5+.\n",
+        "description": "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté combatiendo durante una activación en la que ha realizado la acción <b>Cargar</b>, sus armas de combate tienen la regla de armas Letal 5+.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1031,7 +1031,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Emboscada de Cuchillas",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté combatiendo durante su activación, si su orden cambió de Ocultación a Trabarse al inicio de esa activación, o no era visible para agentes enemigos al inicio de esa activación: <ul><li>Sus armas cuerpo a cuerpo tienen la regla de armas Incesante.</li><li>Si el objetivo está agotado, sus armas cuerpo a cuerpo también tienen la regla de armas Desgarradora.</li></ul>",
+        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté combatiendo durante su activación, si su orden cambió de Ocultación a Trabarse al inicio de esa activación, o no era visible para agentes enemigos al inicio de esa activación: <ul><li>Sus armas de combate tienen la regla de armas Incesante.</li><li>Si el objetivo está agotado, sus armas de combate también tienen la regla de armas Desgarradora.</li></ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1112,7 +1112,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Desplegar y Asegurar",
-        "description": "Selecciona un marcador. <span class=\"text-info-emphasis\">Hasta el paso de Preparar del próximo punto de inflexión, al</span> determinar el control de ese marcador, trata el atributo de LPA total de los agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> amigos que lo disputan como 1 mayor, siempre y cuando al menos un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo realmente lo dispute. Siempre que un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo esté a 3” de ese marcador, suma 1 al atributo de Atq de sus armas cuerpo a cuerpo (hasta un máximo de 4).",
+        "description": "Selecciona un marcador. <span class=\"text-info-emphasis\">Hasta el paso de Preparar del próximo punto de inflexión, al</span> determinar el control de ese marcador, trata el atributo de LPA total de los agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> amigos que lo disputan como 1 mayor, siempre y cuando al menos un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo realmente lo dispute. Siempre que un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo esté a 3” de ese marcador, suma 1 al atributo de Atq de sus armas de combate (hasta un máximo de 4).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1166,7 +1166,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Aspirante Temerario",
-        "description": "Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que esté totalmente dentro del territorio de tu oponente y no tenga una de tus fichas de Ensangrentado dispare o combatiendo, sus armas tienen la regla de armas Precisa 1. <p>Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que tenga una de tus fichas de Ensangrentado esté totalmente dentro del territorio de tu oponente, sus armas tienen la regla de armas Castigadora.</p>",
+        "description": "Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que esté totalmente dentro del territorio de tu oponente y no tenga una de tus fichas de Ensangrentado dispare o combatiendo, sus armas tienen la regla de armas Certera 1. <p>Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que tenga una de tus fichas de Ensangrentado esté totalmente dentro del territorio de tu oponente, sus armas tienen la regla de armas Castigadora.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1238,7 +1238,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Embestida Ferviente",
-        "description": "Las armas cuerpo a cuerpo de los agentes de la <span class='faction'>SECTA DEL CAOS</span> amigos tienen la regla de armas Precisa 1<span class=\"text-info-emphasis\">, o la regla de armas Precisa 2 si ese agente amigo es un agente <b>MUTANTE</b> o <b>TORMENTO</b>.</span>\n",
+        "description": "Las armas de combate de los agentes de la <span class='faction'>SECTA DEL CAOS</span> amigos tienen la regla de armas Certera 1<span class=\"text-info-emphasis\">, o la regla de armas Precisa 2 si ese agente amigo es un agente <b>MUTANTE</b> o <b>TORMENTO</b>.</span>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1445,7 +1445,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "VIOLENCIA MEJORADA",
-        "description": "Siempre que el <b>TANQUE DE SANGRE</b> de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo esté:\n<ul>\n    <li>A la mitad, sus armas cuerpo a cuerpo tienen la regla de armas <b>Equilibrada</b>.</li>\n    <li>Lleno, sus armas cuerpo a cuerpo tienen la regla de armas <b>Implacable</b>.</li>\n</ul>",
+        "description": "Siempre que el <b>TANQUE DE SANGRE</b> de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo esté:\n<ul>\n    <li>A la mitad, sus armas de combate tienen la regla de armas <b>Equilibrada</b>.</li>\n    <li>Lleno, sus armas de combate tienen la regla de armas <b>Implacable</b>.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1481,7 +1481,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "AGRESIÓN DESENFRENADA",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo esté combatiendo durante una activación en la que realizó la acción <b>Cargar</b>, al final del paso Tirar Dados de Ataque. Hasta el final de esa secuencia, las armas cuerpo a cuerpo de ese agente tienen la regla de armas <b>Severa</b>.",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo esté combatiendo durante una activación en la que realizó la acción <b>Cargar</b>, al final del paso Tirar Dados de Ataque. Hasta el final de esa secuencia, las armas de combate de ese agente tienen la regla de armas <b>Severa</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1517,7 +1517,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Sangre para el Dios de la Sangre",
-        "description": "<p>Siempre que un agente <span class=\"faction\">LEGIONARIO</span> amigo (excluyendo <b>KHORNE</b>) esté combatiendo, la primera vez que golpees durante esa secuencia, inflige 1 de daño adicional <span class=\"text-warning-emphasis\">(hasta un máximo de 7)</span>.</p>\n<p>Suma 1 a ambos atributos de Daño de las armas cuerpo a cuerpo de los agentes <span class=\"faction\">LEGIONARIO</span> <b>KHORNE</b> amigos <span class=\"text-warning-emphasis\">(hasta un máximo de 7)</span>.</p>",
+        "description": "<p>Siempre que un agente <span class=\"faction\">LEGIONARIO</span> amigo (excluyendo <b>KHORNE</b>) esté combatiendo, la primera vez que golpees durante esa secuencia, inflige 1 de daño adicional <span class=\"text-warning-emphasis\">(hasta un máximo de 7)</span>.</p>\n<p>Suma 1 a ambos atributos de Daño de las armas de combate de los agentes <span class=\"faction\">LEGIONARIO</span> <b>KHORNE</b> amigos <span class=\"text-warning-emphasis\">(hasta un máximo de 7)</span>.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1526,7 +1526,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Implacable",
-        "description": "<p>Siempre que un agente dispare contra un agente <span class=\"faction\">LEGIONARIO</span> amigo, <span class=\"text-info-emphasis\">las armas con la regla de armas Perforante 1 tienen la regla de armas Perforante Críticos 1 en su lugar.</span></p>\n<p>Puedes ignorar cualquier cambio en los atributos de los agentes <span class=\"faction\">LEGIONARIO</span> <b>NURGLE</b> amigos por estar lesionados. </p>\n",
+        "description": "<p>Siempre que un agente dispare contra un agente <span class=\"faction\">LEGIONARIO</span> amigo, <span class=\"text-info-emphasis\">las armas con la regla de armas Penetración 1 tienen la regla de armas Críticos de penetración 1 en su lugar.</span></p>\n<p>Puedes ignorar cualquier cambio en los atributos de los agentes <span class=\"faction\">LEGIONARIO</span> <b>NURGLE</b> amigos por estar lesionados. </p>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1535,7 +1535,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Velocidad de Azogue",
-        "description": "<p>Siempre que un agente <span class=\"faction\">LEGIONARIO</span> amigo <span class=\"text-info-emphasis\">que realizó una acción en la que se movió durante este punto de inflexión</span> esté combatiendo <span class=\"text-info-emphasis text-decoration-line-through\">o contraataque</span>, empeora el atributo de Impacto de las armas cuerpo a cuerpo del agente enemigo en 1. </p>\n<p>Siempre que un agente dispare contra un agente <span class=\"faction\">LEGIONARIO</span> <b>SLAANESH</b> amigo <span class=\"text-info-emphasis\">a más de 6\" de él</span> que realizó una acción en la que se movió durante este punto de inflexión, empeora el atributo de Impacto de las armas del agente enemigo en 1. </p>\n<p>En todos los casos para este ardid, esto no es acumulativo con estar lesionado.</p>",
+        "description": "<p>Siempre que un agente <span class=\"faction\">LEGIONARIO</span> amigo <span class=\"text-info-emphasis\">que realizó una acción en la que se movió durante este punto de inflexión</span> esté combatiendo <span class=\"text-info-emphasis text-decoration-line-through\">o contraataque</span>, empeora el atributo de Impacto de las armas de combate del agente enemigo en 1. </p>\n<p>Siempre que un agente dispare contra un agente <span class=\"faction\">LEGIONARIO</span> <b>SLAANESH</b> amigo <span class=\"text-info-emphasis\">a más de 6\" de él</span> que realizó una acción en la que se movió durante este punto de inflexión, empeora el atributo de Impacto de las armas del agente enemigo en 1. </p>\n<p>En todos los casos para este ardid, esto no es acumulativo con estar lesionado.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1571,7 +1571,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Aura Maligna",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">LEGIONARIO</span> <b>NURGLE</b> amigo esté realizando la acción Disparar, cuando selecciones un blanco válido.</p> <p>Hasta el final de esa acción, siempre que ese agente dispare contra un agente enemigo a 3\" de él (es decir, incluyendo objetivos secundarios, si los hay), sus armas a distancia tienen la regla de armas Perforante 1.</p>",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">LEGIONARIO</span> <b>NURGLE</b> amigo esté realizando la acción Disparar, cuando selecciones un blanco válido.</p> <p>Hasta el final de esa acción, siempre que ese agente dispare contra un agente enemigo a 3\" de él (es decir, incluyendo objetivos secundarios, si los hay), sus armas a distancia tienen la regla de armas Penetración 1.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1733,7 +1733,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Protección Etérea",
-        "description": "Siempre que un agente dispare contra un agente del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo, <span class=\"text-info-emphasis\">las armas con la regla de armas Perforante 1 tienen la regla de armas Perforante Críticos 1 en su lugar.</span>",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">AQUELARRE DISFORME</span> amigo, <span class=\"text-info-emphasis\">las armas con la regla de armas Penetración 1 tienen, en su lugar, la regla Críticos de penetración 1.</span>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1741,8 +1741,8 @@
         "faction": "warpcoven",
         "type": "strategic",
         "cps": "1PM",
-        "name": "El Destino Mismo Es Mi Arma",
-        "description": "Tira dos D6 y resérvalos (ponlos a un lado). En la siguiente Fase de Tiroteo, siempre que un agente dispare, combatiendo o contraataque, después de que tú o tu oponente tiren sus dados de ataque, pero antes de repetir, puedes usar uno de tus dados reservados para reemplazar uno de los D6 tirados para esa secuencia (tuyo o de tu oponente); ese dado de reemplazo no puede ser <span class=\"text-info-emphasis text-decoration-line-through\">cambiado o</span> vuelto a tirar <span class=\"text-info-emphasis\">o retenido como un éxito o éxito crítico si no lo es,</span> y se descarta al final de esa secuencia. Luego, si el resultado combinado de ambos dados reservados fue menor de 9, descarta el otro dado. No puedes usar más de un dado reservado por secuencia. Descarta cualquier dado reservado restante al final del punto de inflexión.",
+        "name": "El Destino Es Mi Arma",
+        "description": "Tira dos D6 y guárdalos (déjalos a un lado). En la siguiente Fase de Tiroteo de este punto de inflexión, cuando un agente dispare, combata o contraataque, después de que tú o tu oponente tiréis dados de ataque, pero antes de repetir tiradas, puedes usar uno de tus dados guardados para reemplazar uno de los D6 tirados para esa secuencia (tuyo o de tu oponente); esos dados de reemplazo no pueden repetirse y se descarta al final de la secuencia. A continuacion, si el resultado combinado de ambos dados guardados era menor que 9, descarta el otro dado. No puedes usar más de un dado guardado por secuencia. Descarta los dados guardados restantes al final del punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1751,7 +1751,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Hermandad de Hechiceros",
-        "description": "Las armas <b>PSÍQUICAS</b> de los agentes <b>HECHICERO</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigos tienen la regla de armas Equilibrada,<span class=\"text-decoration-line-through text-warning-emphasis\">o Incesante en su lugar</span> si otro agente <b>HECHICERO</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo está a 9\" de ese agente.",
+        "description": "Las armas <b>PSÍQUICAS</b> de los agentes <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigos tienen la regla de armas Equilibrada, o Incesante en su lugar si hay otro <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo a 9\" o menos de ese agente.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1759,9 +1759,18 @@
         "faction": "warpcoven",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Manada Salvaje",
-        "description": "Las armas cuerpo a cuerpo de los agentes <b>TZAANGOR</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigos tienen la regla de armas Precisa 1. Siempre que un agente <b>TZAANGOR</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo sea asistido por un\nagente del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo, o esté combatiendo mientras es visible para y a 6\" de un agente <b>HECHICERO</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo, las armas cuerpo a cuerpo de ese agente <b>TZAANGOR</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo también tienen la regla de armas Severa.",
+        "name": "Rebaño Salvaje",
+        "description": "Las armas de combate de los agentes <b>TZAANGOR</b> <span class=\"faction\">AQUELARRE DISFORME</span> tienen la regla de armas Certera 1. Cuando un agente <b>TZAANGOR</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo es asistido por un\nagente <span class=\"faction\">AQUELARRE DISFORME</span> amigo, o combate estando a 6\" o menos de un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo y siendo visible para él, las armas de combate de ese agente <b>TZAANGOR</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo tienen también la regla de armas Severa.",
         "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 226,
+        "faction": "warpcoven",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Todo es Polvo",
+        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflige Daño Normal a un agente <b>MARINE RÚBRICA</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo. Reduce en 1 el daño que inflinge ese dado.",
+        "typename": "Ardid de Tiroteo"
     },
     {
         "id_ploy": 223,
@@ -1769,16 +1778,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Plan Caprichoso",
-        "description": "Usa este ardid de tiroteo al final de la activación de un agente <b>HECHICERO</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo. Ese agente amigo puede realizar inmediatamente una acción gratuita de <b>Correr</b> (incluso si ha realizado una acción que le impide realizar la acción de <b>Correr</b>), <span class=\"text-decoration-line-through text-info-emphasis\">y/o</span><span class=\"text-info-emphasis\"> o</span> puedes cambiar su orden.",
-        "typename": "Ardid de Tiroteo"
-    },
-    {
-        "id_ploy": 224,
-        "faction": "warpcoven",
-        "type": "tactical",
-        "cps": "1PM",
-        "name": "Manada Mutante",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>TZAANGOR</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo sea activado. Elige otro agente <b>TZAANGOR</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo preparado visible para y a 2\" de él para activarlo al mismo tiempo. Completa sus activaciones acción por acción en cualquier orden.",
+        "description": "Usa este ardid de tiroteo al final de la activación de un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo. Ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b> (aunque haya realizado una acción que le impide realizar la acción de <b>Correr</b>), o en lugar de eso puedes cambiarle la orden.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1787,16 +1787,16 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Cábala Psíquica",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>HECHICERO</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo sea activado. Elige otro agente <b>HECHICERO</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo visible para y a 9\" de ese agente, luego selecciona una de las acciones únicas <b>PSÍQUICAS</b> o armas a distancia <b>PSÍQUICAS</b> de ese otro agente amigo para que ese primer agente amigo la tenga hasta el final de su activación. <span class=\"text-info-emphasis\">No puedes seleccionar un arma a distancia <b>PSÍQUICA</b> que haya sido usada por ese otro agente amigo durante este punto de inflexión, y ese otro agente amigo no puede usar el arma seleccionada durante este punto de inflexión.</span>",
+        "description": "Usa este ardid de tiroteo cuando se activa un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo. Elige otro agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo a 9\" o menos del primero y visible para él, luego elige una de las acciones únicas <b>PSÍQUICAS</b> o armas a distancia <b>PSÍQUICAS</b> de ese segundo agente amigo; el primer agente amigo tiene dicha acción única o arma a distancia hasta el final de su activación. <span class=\"text-info-emphasis\">No puedes elegir un arma a distancia <b>PSÍQUICA</b> que haya usado ese otro agente amigo durante este punto de inflexión, y ese otro agente amigo no puede usar el arma elegida durante este punto de inflexión.</span>",
         "typename": "Ardid de Tiroteo"
     },
     {
-        "id_ploy": 226,
+        "id_ploy": 224,
         "faction": "warpcoven",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Todo es Polvo",
-        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflija Daño Normal a un agente <b>MARINE RÚBRICA</b> del <span class=\"faction\">AQUELARRE DE DISFORMIDAD</span> amigo. Ese dado de ataque inflige 1 de daño en su lugar.",
+        "name": "Rebaño Mutante",
+        "description": "Usa este ardid de tiroteo cuando actives un agente <b>TZAANGOR</b> <span class=\"faction\">AQUELARRE DISFORME</span>. Elige otro agente <b>TZAANGOR</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo apostado a 2\" o menos de ese agente y visible para él para que se active al mismo tiempo. Completa sus activaciones una acción tras otra, en cualquier orden.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1814,7 +1814,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Postura Implacable",
-        "description": "Siempre que un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo esté combatiendo contra un agente enemigo preparado, las armas cuerpo a cuerpo de ese agente amigo tienen la regla de armas Incesante.",
+        "description": "Siempre que un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo esté combatiendo contra un agente enemigo preparado, las armas de combate de ese agente amigo tienen la regla de armas Incesante.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1976,7 +1976,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "DRENAJE DE ALMA",
-        "description": "Siempre que un agente enemigo esté dentro de tu <b>MATRIZ DE NODOS OBELISCO</b>, o siempre que esté combatiendo o contraataque contra un agente del <span class=\"faction\">CÍRCULO CANOPTEK</span> amigo que esté dentro de tu <b>MATRIZ DE NODOS OBELISCO</b>, resta 1 de ambos atributos de Daño de las armas cuerpo a cuerpo de ese agente enemigo (hasta un mínimo de 2) hasta el final de la activación/contraataque. Ten en cuenta que esto significa que si el agente enemigo se mueve a través de tu <b>MATRIZ DE NODOS OBELISCO</b>, aplica este cambio al final de esa acción de movimiento hasta el final de la activación/contraataque.\n",
+        "description": "Siempre que un agente enemigo esté dentro de tu <b>MATRIZ DE NODOS OBELISCO</b>, o siempre que esté combatiendo o contraataque contra un agente del <span class=\"faction\">CÍRCULO CANOPTEK</span> amigo que esté dentro de tu <b>MATRIZ DE NODOS OBELISCO</b>, resta 1 de ambos atributos de Daño de las armas de combate de ese agente enemigo (hasta un mínimo de 2) hasta el final de la activación/contraataque. Ten en cuenta que esto significa que si el agente enemigo se mueve a través de tu <b>MATRIZ DE NODOS OBELISCO</b>, aplica este cambio al final de esa acción de movimiento hasta el final de la activación/contraataque.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2012,7 +2012,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "ESCLAVO DE SACRIFICIO",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>GEOMANTE</b> del <b>CÍRCULO CANOPTEK</b> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <b>CANOPTEK</b> del <span class=\"faction\">CÍRCULO CANOPTEK</span> amigo visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. Si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas <b>Estallido</b> o <b>Torrente</b>.</p>",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>GEOMANTE</b> del <b>CÍRCULO CANOPTEK</b> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <b>CANOPTEK</b> <span class=\"faction\">CÍRCULO CANOPTEK</span> amigo visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. Si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas <b>Estallido</b> o <b>Torrente</b>.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2102,7 +2102,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Degolladores",
-        "description": "<span class=\"text-info-emphasis\">Suma 1 al atributo de Atq de las armas cuerpo a cuerpo de los agentes de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigos</span> (hasta un máximo de 5).",
+        "description": "<span class=\"text-info-emphasis\">Suma 1 al atributo de Atq de las armas de combate de los agentes de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigos</span> (hasta un máximo de 5).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2165,7 +2165,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Artistas de la Espada",
-        "description": "Las armas cuerpo a cuerpo de los agentes <span class=\"faction\">MANO DEL ARCONTE</span> amigos tienen la regla de armas Desgarradora.",
+        "description": "Las armas de combate de los agentes <span class=\"faction\">MANO DEL ARCONTE</span> amigos tienen la regla de armas Desgarradora.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2237,7 +2237,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "La Necesidad Guarda",
-        "description": "Selecciona un marcador de objetivo o uno de tus marcadores de misión.<ul>\n<li>Siempre que se determine el control de ese marcador, trata el atributo de LPA total de los agentes <span class=\"faction\">SALVADOR HEARTHKYN</span> amigos que lo disputan como 1 mayor si al menos un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.</li>\n<li>Siempre que un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo esté a 3\" de ese marcador, suma 1 al atributo de Atq de sus armas cuerpo a cuerpo (hasta un máximo de 4).</li>\n</ul>",
+        "description": "Selecciona un marcador de objetivo o uno de tus marcadores de misión.<ul>\n<li>Siempre que se determine el control de ese marcador, trata el atributo de LPA total de los agentes <span class=\"faction\">SALVADOR HEARTHKYN</span> amigos que lo disputan como 1 mayor si al menos un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.</li>\n<li>Siempre que un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo esté a 3\" de ese marcador, suma 1 al atributo de Atq de sus armas de combate (hasta un máximo de 4).</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2318,7 +2318,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Manejo de la Espada Magistral",
-        "description": "Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo esté combatiendo, o tenga una orden de Ocultación y esté contraataque,<span class=\"text-info-emphasis\"> suma 1 al atributo de Atq\nde sus armas cuerpo a cuerpo (hasta un máximo de 4) y tienen</span> la regla de armas Equilibrada<span class=\"text-info-emphasis\">; si el arma ya tiene esa regla de arma\n, tiene la regla de armas Incesante en lugar de Equilibrada.</span>",
+        "description": "Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo esté combatiendo, o tenga una orden de Ocultación y esté contraataque,<span class=\"text-info-emphasis\"> suma 1 al atributo de Atq\nde sus armas de combate (hasta un máximo de 4) y tienen</span> la regla de armas Equilibrada<span class=\"text-info-emphasis\">; si el arma ya tiene esa regla de arma\n, tiene la regla de armas Incesante en lugar de Equilibrada.</span>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2399,7 +2399,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Eliminación Metódica",
-        "description": "Las armas cuerpo a cuerpo de los agentes del <span class=\"faction\">CÍRCULO HIEROTEK</span> amigos tienen la regla de armas Precisa 1. Siempre que un agente del <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo esté combatiendo durante una activación en la que no se haya movido más que su atributo de Movimiento, o siempre que esté contraataque, sus armas cuerpo a cuerpo tienen la regla de armas Precisa 2 en su lugar.",
+        "description": "Las armas de combate de los agentes del <span class=\"faction\">CÍRCULO HIEROTEK</span> amigos tienen la regla de armas Certera 1. Siempre que un agente del <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo esté combatiendo durante una activación en la que no se haya movido más que su atributo de Movimiento, o siempre que esté contraataque, sus armas de combate tienen la regla de armas Precisa 2 en su lugar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2417,7 +2417,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Control Cortical",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>APRENTEK</b> del <span class=\"faction\">CÍRCULO HIEROTEK</span> o <b>CRIPTECNÓLOGO</b> del <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo realice una acción única de <b>APOYO</b>. Hasta el final de esa acción, para los propósitos de seleccionar otro agente amigo, ignora el requisito de distancia (solo la visibilidad es un requisito).",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>APRENTEK</b> <span class=\"faction\">CÍRCULO HIEROTEK</span> o <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo realice una acción única de <b>APOYO</b>. Hasta el final de esa acción, para los propósitos de seleccionar otro agente amigo, ignora el requisito de distancia (solo la visibilidad es un requisito).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2435,7 +2435,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Rayo Viviente",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>INMORTAL</b> del <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo esté realizando la acción <b>Disparar</b> y selecciones una carabina tesla. Hasta el final de esa acción, ese arma no tiene las 2\" de su regla de armas Devastadora pero tiene la regla de armas Estallido 2\".",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>INMORTAL</b> <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo esté realizando la acción <b>Disparar</b> y selecciones una carabina tesla. Hasta el final de esa acción, ese arma no tiene las 2\" de su regla de armas Devastadora pero tiene la regla de armas Estallido 2\".",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2444,7 +2444,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Emboscada Dimensional",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MARCA DE MUERTE</b> del <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo, si tiene una orden de Ocultación. Durante esa activación, ese agente puede realizar la acción de <b>Guardia</b> (ver reglas de combate cerrado, Libro Básico de Kill Team) en cualquier zona de aniquilación y mientras tiene una orden de Ocultación, pero cuando interrumpes para la acción gratuita de <b>Combatir</b> o <b>Disparar</b> durante la interrupción, debes cambiar su orden a Trabarse.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MARCA DE MUERTE</b> <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo, si tiene una orden de Ocultación. Durante esa activación, ese agente puede realizar la acción de <b>Guardia</b> (ver reglas de combate cerrado, Libro Básico de Kill Team) en cualquier zona de aniquilación y mientras tiene una orden de Ocultación, pero cuando interrumpes para la acción gratuita de <b>Combatir</b> o <b>Disparar</b> durante la interrupción, debes cambiar su orden a Trabarse.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2480,7 +2480,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "¡Waaagh!",
-        "description": "Las armas cuerpo a cuerpo de los agentes <span class=\"faction\">KOMANDO</span> amigos tienen la regla de armas Equilibrada.",
+        "description": "Las armas de combate de los agentes <span class=\"faction\">KOMANDO</span> amigos tienen la regla de armas Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2615,7 +2615,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Vinculados",
-        "description": "Siempre que un agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>) dispare o contraataque con un arma a distancia (ver ardid de tiroteo Fusilamiento a Quemarropa), si está a 3\" de otro agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>), las armas a distancia de ese primer agente amigo tienen la regla de armas Precisa 1.",
+        "description": "Siempre que un agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>) dispare o contraataque con un arma a distancia (ver ardid de tiroteo Fusilamiento a Quemarropa), si está a 3\" de otro agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>), las armas a distancia de ese primer agente amigo tienen la regla de armas Certera 1.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2669,7 +2669,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "MUERTE DESDE ABAJO",
-        "description": "<p>Siempre que un agente <span class=\"faction\">MANTIFEX</span> amigo esté combatiendo:</p>\n<ul>\n  <li><span class=\"icon icon-yes\"></span> Si ha realizado la acción <b>Excavar</b> durante esa activación/contraataque, sus armas cuerpo a cuerpo tienen la regla de armas <b>Equilibrada</b>.</li>\n  <li><span class=\"icon icon-yes\"></span> Si está en tu <b>TÚNEL</b>, sus armas cuerpo a cuerpo tienen la regla de armas <b>Incesante</b>.</li>\n</ul>",
+        "description": "<p>Siempre que un agente <span class=\"faction\">MANTIFEX</span> amigo esté combatiendo:</p>\n<ul>\n  <li><span class=\"icon icon-yes\"></span> Si ha realizado la acción <b>Excavar</b> durante esa activación/contraataque, sus armas de combate tienen la regla de armas <b>Equilibrada</b>.</li>\n  <li><span class=\"icon icon-yes\"></span> Si está en tu <b>TÚNEL</b>, sus armas de combate tienen la regla de armas <b>Incesante</b>.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2912,7 +2912,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "¡WAAAGH!",
-        "description": "Las armas cuerpo a cuerpo de los agentes del <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigos tienen la regla de armas Equilibrada.",
+        "description": "Las armas de combate de los agentes del <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigos tienen la regla de armas Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2948,7 +2948,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "PELEA DE VERDAD",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>CHIKO ROMPEDOR</b> del <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> o <b>JEFASO NOBLE</b> del <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>CHIKO ROMPEDOR</b> <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> o <b>JEFASO NOBLE</b> <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2957,7 +2957,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Fuego Cruzado",
-        "description": "Siempre que un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo dispare contra un agente que otro agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo ya ha disparado durante este punto de inflexión, las armas a distancia de ese primer agente amigo tienen la regla de armas Precisa 1.",
+        "description": "Siempre que un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo dispare contra un agente que otro agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo ya ha disparado durante este punto de inflexión, las armas a distancia de ese primer agente amigo tienen la regla de armas Certera 1.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2966,7 +2966,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "El Día Está Cerca",
-        "description": "Siempre que un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo sea activado, si su orden se cambia de Ocultación a Trabarse, hasta el final de esa activación:\n<ul>\n\t<li>Sus armas a distancia tienen la regla de armas Desgarradora.</li>\n\t<li>Suma 1 al atributo de Atq de sus armas cuerpo a cuerpo (hasta un máximo de 5).</li>\n</ul>\n",
+        "description": "Siempre que un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo sea activado, si su orden se cambia de Ocultación a Trabarse, hasta el final de esa activación:\n<ul>\n\t<li>Sus armas a distancia tienen la regla de armas Desgarradora.</li>\n\t<li>Suma 1 al atributo de Atq de sus armas de combate (hasta un máximo de 5).</li>\n</ul>\n",
         "typename": "Ardid de Estrategia"
     },
     {

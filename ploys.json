@@ -2088,21 +2088,12 @@
         "typename": "Ardid de Tiroteo"
     },
     {
-        "id_ploy": 182,
-        "faction": "farstalker-kinband",
-        "type": "strategic",
-        "cps": "1PM",
-        "name": "Presa",
-        "description": "Siempre que un agente de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo dispare durante una activación en la que no ha realizado la acción <b>Cargar</b>, <b>Retroceder</b>, o <b>Reposicionarse</b>, sus armas a distancia tienen las reglas de arma Equilibrada y Severa<span class=\"text-info-emphasis\">; si el arma ya tiene la regla de armas Equilibrada, tiene las reglas de arma Incesante y Severa en su lugar.</span>. Ten en cuenta que ese agente no tiene restringido realizar esas acciones después de disparar.",
-        "typename": "Ardid de Estrategia"
-    },
-    {
         "id_ploy": 183,
         "faction": "farstalker-kinband",
         "type": "strategic",
         "cps": "1PM",
         "name": "Degolladores",
-        "description": "<span class=\"text-info-emphasis\">Suma 1 al atributo de Atq de las armas de combate de los agentes de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigos</span> (hasta un máximo de 5).",
+        "description": "<span class=\"text-info-emphasis\">Suma 1 al atributo de Ataques de las armas de combate de los agentes <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigos</span> (hasta un máximo de 5).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2110,8 +2101,17 @@
         "faction": "farstalker-kinband",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Renegado",
-        "description": "Siempre que un agente dispare contra un agente de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo:\n<ul>\n  <li>Ignora la regla de armas Saturar.</li>\n  <li>Si puedes retener alguna salvación por cobertura, puedes retener una salvación por cobertura adicional, o puedes retener una salvación por cobertura como un éxito crítico en su lugar. Esto no es acumulativo con salvaciones por cobertura mejoradas de terreno de Ventaja.</li>\n</ul>",
+        "name": "Pícaro",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo:\n<ul>\n  <li>Ignora la regla de armas Saturación.</li>\n  <li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o en su lugar, puedes guardar una salvación por cobertura como un éxito crítico. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno de Aventajado.</li>\n</ul>",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 182,
+        "faction": "farstalker-kinband",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Tomar Como Presa",
+        "description": "Siempre que un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo dispare durante una activación en la que no haya realizado una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, sus armas a distancia tienen las reglas de arma Equilibrada y Severa<span class=\"text-info-emphasis\">, salvo si el arma ya tenía la regla de armas Equilibrada, en cuyo caso tiene las reglas de arma Incesante y Severa.</span>. Ten en cuenta que ese agente no tiene restringido realizar esas acciones después de disparar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2119,8 +2119,8 @@
         "faction": "farstalker-kinband",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Salto",
-        "description": "Durante la activación de cada agente de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo, puedes ignorar la primera distancia vertical de 2\" que mueven durante una escalada <span class=\"text-info-emphasis\">hacia arriba</span>.",
+        "name": "Brincar",
+        "description": "Durante la activación de cada agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo, puedes ignorar la primera distancia vertical de 2\" que recorra al trepar hacia arriba.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2129,7 +2129,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Emboscada Salvaje",
-        "description": "Usa este ardid de tiroteo durante la acción <b>Combatir</b> cuando un agente de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo preparado que tiene terreno Ligero o Pesado dentro de su rango de control sea seleccionado para combatir. En el paso Resolver Dados de Ataque de esa secuencia, tú resuelves el primer dado de ataque (es decir, defensor en lugar de atacante).\n",
+        "description": "Usa este ardid de tiroteo durante la acción <b>Combatir</b>, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo apostado que tenga terreno Ligero o Pesado en su zona de control sea elegido para combatir contra él. En el paso de Resolver Dados de Ataque de esa secuencia, tú resuelves el primer dado de ataque (es decir, el defensor antes que el atacante).\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2138,7 +2138,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Escabullirse",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo<span class=\"text-info-emphasis\">, antes o después de que realice\nuna acción</span>. Durante esa activación, ese agente puede realizar la acción <b>Retroceder</b> por 1 PA menos.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo<span class=\"text-info-emphasis\">, antes o después de que realice\nuna acción</span>. Durante esa activación, dicho agente puede realizar una acción de <b>Retroceder</b> por 1 PA menos.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2146,8 +2146,8 @@
         "faction": "farstalker-kinband",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Cazar Furtivamente",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo. Hasta el final de esa activación, ese agente no tiene que controlar un marcador para realizar la acción <b>Recoger Marcador</b> o acciones de misión que generalmente lo requieren (teniendo precedencia sobre las condiciones de esa acción – solo necesita disputar el marcador).",
+        "name": "Hurtar",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo. Hasta el final de esa activación, no hara falta que dicho agente controle un marcador para realizar una acción de <b>Recoger Marcador</b> o acciones de misión que normalmente lo requieran (lo cual tiene preferencia sobre las condiciones de esa acción; solo tiene que disputar el marcador).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2155,8 +2155,8 @@
         "faction": "farstalker-kinband",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Venganza por la Bandaestirpe",
-        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo sea incapacitado por un agente enemigo. Hasta el final de la batalla, siempre que otro agente de la <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo dispare, combatiendo o contraataque contra ese agente enemigo, las armas de ese otro agente amigo tienen la regla de armas Implacable. No puedes usar este ardid de nuevo durante la batalla hasta que ese agente enemigo sea incapacitado.",
+        "name": "Vengar la Bandaestirpe",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo resulte incapacitado por un agente enemigo. Hasta el final de la batalla, siempre que otro agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo dispare, combata o contraataque contra ese agente enemigo, las armas de ese otro agente amigo tienen la regla de armas Implacable. No puedes usar este ardid otra vez durante la batalla hasta que ese agente enemigo resulte incapacitado.",
         "typename": "Ardid de Tiroteo"
     },
     {

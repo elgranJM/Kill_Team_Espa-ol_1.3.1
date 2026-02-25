@@ -1188,29 +1188,29 @@
   {
     "id_equip": 166,
     "faction": "farstalker-kinband",
-    "name": "Disparo Perforante",
-    "description": "Una vez por Punto de Inflexión, cuando un agente FARSTALKER KINBAND amigo esté realizando la acción de <b>Disparar</b> y selecciones un rifle Kroot, escopeta de dispersión Kroot o pistolas Kroot duales (enfocadas), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Penetración 1. No puedes usar la regla Disparo Perforante y Disparo Tóxico durante la misma acción.",
+    "name": "Bala Perforante",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo realice una acción de <b>Disparar</b> y elijas un rifle Kroot, un Trabuco Kroot o el perfil concentrado de unas pistolas Kroot dobles, puedes usar esta regla. Si lo haces, hasta el final de esa acción dicha arma tiene la regla de armas Penetración 1. <p>No puedes usar la Bala Perforante y la Bala de Tóxinas durante la misma acción.</p>",
     "action": []
   },
   {
     "id_equip": 167,
     "faction": "farstalker-kinband",
-    "name": "Disparo Tóxico",
-    "description": "Una vez por Punto de Inflexión, cuando un agente FARSTALKER KINBAND amigo esté realizando la acción de <b>Disparar</b> y selecciones un rifle Kroot, escopeta de dispersión Kroot o pistolas Kroot duales (enfocadas), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene las reglas de arma Letal 5+ y Aturdir. No puedes usar la regla Disparo Perforante y Disparo Tóxico durante la misma acción.",
+    "name": "Balas de Toxinas",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo realice una acción de <b>Disparar</b> y elijas un rifle Kroot, un Trabuco Kroot o el perfil concentrado de unas pistolas Kroot dobles, puedes usar esta regla. Si lo haces, hasta el final de esa acción dicha arma tiene las reglas de arma Letal 5+ y Aturdidora, pero resta 1 a sus atributos de Daño. <p>No puedes usar la Bala Perforante y la Bala de Toxinas durante la misma acción.</p>",
     "action": []
   },
   {
     "id_equip": 168,
     "faction": "farstalker-kinband",
     "name": "Carne",
-    "description": "Una vez por Punto de Inflexión, cuando un agente FARSTALKER KINBAND amigo (excluyendo HOUND) sea activado, si no está dentro del área de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera D3+1 heridas perdidas.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo (salvo <b>MASTÍN DE GUERRA</b>) sea activado, si no se encuentra en la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta 1D3+1 heridas perdidas.",
     "action": []
   },
   {
     "id_equip": 169,
     "faction": "farstalker-kinband",
     "name": "Trofeo",
-    "description": "Una vez por batalla, durante la activación de un agente FARSTALKER KINBAND amigo (excluyendo HOUND), antes o después de que realice una acción, si no está dentro del área de control de agentes enemigos, puedes usar esta regla. Si lo haces, añade 1 al atributo de LPA de ese agente amigo hasta el final de su activación.",
+    "description": "Una vez por batalla, durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo (salvo <b>MASTÍN DE GUERRA</b>), antes o después de que realice una acción, si no se encuentra en la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, suma 1 al atributo de LPA de ese agente amigo hasta el final de su activación.",
     "action": []
   },
   {

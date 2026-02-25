@@ -7238,112 +7238,6 @@
       "peana": "32"
     },
     {
-      "id": "incursor-sergeant",
-      "name": "SARGENTO INCURSOR",
-      "stats": {
-        "LPA": "3",
-        "MOVER": "7\"",
-        "SALVACIÓN": "3+",
-        "HERIDAS": "13"
-      },
-      "weapons": [
-        {
-          "name": "Carabina bólter occulus",
-          "type": "ranged",
-          "stats": {
-            "A": "4",
-            "HP/HA": "3+",
-            "Dñ": "3/4",
-            "RA": "Saturación"
-          }
-        },
-        {
-          "name": "Puños",
-          "type": "melee",
-          "stats": {
-            "A": "4",
-            "HP/HA": "3+",
-            "Dñ": "3/4",
-            "RA": "-"
-          }
-        }
-      ],
-      "abilities": [
-        {
-          "name": "Ventaja táctica",
-          "description": "Puedes realizar cada una de las siguientes opciones una vez por batalla: <ul><li>Tras desempatar para decidir la iniciativa, si este agente se encuentra en la zona de aniquilación, puedes repetir tu D6.</li></ul> <ul><li>Puedes usar un ardid de tiroteo por 0 PM si este es el agente <span class=\"faction\">ASALTANTE PHOBOS</span> especificado (incluyendo Repetición de mando si los dados de ataque o de defensa se tiraban para este agente), o el ardid de tiroteo Emboscada paciente por 0 PM si este agente está apostado y fuera de la zona de control de todo agente enemigo.</li></ul>"
-        }
-      ],
-      "uniqueActions": [],
-      "keywords": "<span class=\"faction\">ASALTANTE PHOBOS</span>, IMPERIUM, ADEPTUS ASTARTES, LÍDER, INCURSOR, SARGENTO",
-      "peana": "32"
-    },
-    {
-      "id": "reiver-sergeant",
-      "name": "SARGENTO SAQUEADOR",
-      "stats": {
-        "LPA": "3",
-        "MOVER": "7\"",
-        "SALVACIÓN": "3+",
-        "HERIDAS": "13"
-      },
-      "weapons": [
-        {
-          "name": "Carabina bólter",
-          "type": "ranged",
-          "stats": {
-            "A": "4",
-            "HP/HA": "3+",
-            "Dñ": "3/4",
-            "RA": "Certera 1"
-          }
-        },
-        {
-          "name": "Pistola bólter especial",
-          "type": "ranged",
-          "stats": {
-            "A": "4",
-            "HP/HA": "3+",
-            "Dñ": "3/4",
-            "RA": "Alcance 8\", Penetración 1"
-          }
-        },
-        {
-          "name": "Filoarma",
-          "type": "melee",
-          "stats": {
-            "A": "5",
-            "HP/HA": "3+",
-            "Dñ": "4/5",
-            "RA": "-"
-          }
-        },
-        {
-          "name": "Puños",
-          "type": "melee",
-          "stats": {
-            "A": "4",
-            "HP/HA": "3+",
-            "Dñ": "3/4",
-            "RA": "-"
-          }
-        }
-      ],
-      "abilities": [
-        {
-          "name": "Ventaja táctica",
-          "description": "Puedes realizar cada una de las siguientes opciones una vez por batalla: <ul><li>Tras desempatar para decidir la iniciativa, si este agente se encuentra en la zona de aniquilación, puedes repetir tu D6.</li></ul> <ul><li>Puedes usar un ardid de tiroteo por 0 PM si este es el agente <span class=\"faction\">ASALTANTE PHOBOS</span> especificado (incluyendo Repetición de mando si los dados de ataque o de defensa se tiraban para este agente), o el ardid de tiroteo Emboscada paciente por 0 PM si este agente está apostado y fuera de la zona de control de todo agente enemigo.</li></ul>"
-        },
-        {
-          "name": "Paracaídas gravítico y lanzagarfios",
-          "description": "Siempre que este agente trepe, puedes tratar la distancia vertical como 2\" (sin importar lo lejos que se mueva verticalmente el agente en realidad). Cuando este agente se deje caer, ignora la distancia vertical."
-        }
-      ],
-      "uniqueActions": [],
-      "keywords": "<span class=\"faction\">ASALTANTE PHOBOS</span>, IMPERIUM, ADEPTUS ASTARTES, LÍDER, SAQUEADOR, SARGENTO",
-      "peana": "32"
-    },
-    {
       "id": "infiltrator-commsman",
       "name": "COMUNICADOR INFILTRADOR",
       "stats": {
@@ -7422,7 +7316,7 @@
       "abilities": [
         {
           "name": "¡Sanitario!",
-          "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo vaya a resultar incapacitado mientras era visible para este agente y estaba a 3\" o menos de él, puedes usar esta regla siempre que ni este ni ese agente estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no queda incapacitado, le quedan 1D3 heridas y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Resta 1 a los atributos LPA de ambos hasta el final de sus próximas activaciones."
+          "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo vaya a resultar incapacitado mientras era visible para este agente y estaba a 3\" o menos de él, puedes usar esta regla siempre que ni este ni ese agente estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no queda incapacitado, le quedan 1 herida y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Resta 1 a los atributos LPA de este y de ese agente hasta el final de sus próximas activaciones respectivamente, y si esta regla fue usada durante la activación de ese agente amigo, esa activación termina. No puedes usar esta regla si este agente está incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
         }
       ],
       "uniqueActions": [
@@ -7465,7 +7359,7 @@
             "A": "4",
             "HP/HA": "2+",
             "Dñ": "5/6",
-            "RA": "Limitada 1, Penetración 1, Pesada, Silenciosa, Detonar"
+            "RA": "Limitada 1, Penetración 1, Pesada (solo Correr), Silenciosa, Detonar<span class=\"faction\">*</span>"
           }
         },
         {
@@ -7481,12 +7375,12 @@
       ],
       "abilities": [
         {
-          "name": "Poner explosivos",
-          "description": "Este agente lleva tu marcador de Explosivos. Puede realizar la acción de <b>Recoger marcador</b> sobre ese marcador, y cuando realiza la acción de <b>Colocar marcador</b> sobre ese marcador, puede realizar de inmediato una acción libre de <b>Correr</b>."
+          "name": "<span class=\"faction\">*</span>Detonar",
+          "description": "No elijas un blanco válido. En su lugar, dispara contra cada agente a 2\" o menos de tu marcador de Explosivos, salvo que haya terreno Pesado completamente interpuesto entre ese agente y ese marcador. Ninguno de esos agentes puede estar a cubierto u ofuscado. Tira cada secuencia por separado en el orden que elijas. No puedes elegir esta arma si tu marcador de Explosivos no está en la zona de aniquilación. Al final de la acción, retira tu marcador de Explosivos de la zona de aniquilación. En una zona de aniquilación que use las reglas de combate cerrado (p. ej., Zona de aniquilación: Mundo Necrópolis), esta arma tiene la regla de armas Letal 5+."
         },
         {
-          "name": "<span class=\"faction\">*</span>Detonar",
-          "description": "Regla especial del Detonador remoto: Dispara contra cada agente a 2\" o menos de tu marcador de Explosivos (excepto si hay terreno Pesado interpuesto). Ninguno de esos agentes puede estar a cubierto u ofuscado. Al final de la acción, retira el marcador. En combate cerrado tiene Letal 5+."
+          "name": "Poner explosivos",
+          "description": "Este agente lleva tu marcador de Explosivos. Puede realizar la acción de <b>Recoger marcador</b> sobre ese marcador, y cuando realiza la acción de <b>Colocar marcador</b> sobre ese marcador, puede realizar de inmediato una acción libre de <b>Correr</b>."
         }
       ],
       "uniqueActions": [],
@@ -7576,7 +7470,7 @@
           "name": "Escaneo Auspex",
           "cost": "1 LPA",
           "description": [
-            "Hasta el inicio de la siguiente activación de este agente, siempre que un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; Si ese agente amigo es un INCURSOR, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
+            "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), siempre que un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; Si ese agente amigo es un <b>INCURSOR</b>, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
@@ -7626,6 +7520,47 @@
       "peana": "32"
     },
     {
+      "id": "incursor-sergeant",
+      "name": "SARGENTO INCURSOR",
+      "stats": {
+        "LPA": "3",
+        "MOVER": "7\"",
+        "SALVACIÓN": "3+",
+        "HERIDAS": "13"
+      },
+      "weapons": [
+        {
+          "name": "Carabina bólter occulus",
+          "type": "ranged",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "Saturación"
+          }
+        },
+        {
+          "name": "Puños",
+          "type": "melee",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "-"
+          }
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Ventaja táctica",
+          "description": "Puedes realizar cada una de las siguientes opciones una vez por batalla: <ul><li>Tras desempatar para decidir la iniciativa, si este agente se encuentra en la zona de aniquilación, puedes repetir tu D6.</li></ul> <ul><li>Puedes usar un ardid de tiroteo por 0 PM si este es el agente <span class=\"faction\">ASALTANTE PHOBOS</span> especificado (incluyendo Repetición de mando si los dados de ataque o de defensa se tiraban para este agente), o el ardid de tiroteo Emboscada paciente por 0 PM si este agente está apostado y fuera de la zona de control de todo agente enemigo.</li></ul>"
+        }
+      ],
+      "uniqueActions": [],
+      "keywords": "<span class=\"faction\">ASALTANTE PHOBOS</span>, IMPERIUM, ADEPTUS ASTARTES, LÍDER, INCURSOR, SARGENTO",
+      "peana": "32"
+    },
+    {
       "id": "incursor-marksman",
       "name": "OJO PRECISO INCURSOR",
       "stats": {
@@ -7659,7 +7594,7 @@
       "abilities": [
         {
           "name": "Rastrear blanco",
-          "description": "Este agente puede realizar la acción de Ponerse en guardia durante su activación en cualquier zona de aniquilación. Puede realizar la acción de Ponerse en guardia aún teniendo una orden de ocultarse, pero cuando realices la acción libre de <b>Combatir</b> o <b>Disparar</b> durante la interrupción, debes cambiar su orden por trabarse."
+          "description": "Este agente puede realizar la acción de <b>Ponerse en guardia</b> durante su activación (ver las reglas de combate cerrado, en el Reglamento básico de Kill Team) en cualquier zona de aniquilación. Puede realizar la acción de <b>Ponerse en guardia</b> aún teniendo una orden de ocultarse, pero cuando realices la acción libre de <b>Combatir</b> o <b>Disparar</b> durante la interrupción, debes cambiar su orden por trabarse."
         }
       ],
       "uniqueActions": [],
@@ -7700,11 +7635,11 @@
       "abilities": [
         {
           "name": "Mina de disrupción",
-          "description": "Este agente lleva tu marcador de Mina de disrupción. Puede realizar la acción de <b>Recoger marcador</b> sobre ese marcador, pero ese marcador no puede ser colocado en la zona de control de un agente enemigo."
+          "description": "Este agente lleva tu marcador de Mina de disrupción. Puede realizar la acción de <b>Recoger marcador</b> sobre ese marcador, pero ese marcador no puede ser colocado en la zona de control de un agente enemigo (si este agente queda incapacitado mientras lleva el marcador en cuestión y el marcador no puede ser colocado, es retirado junto con este agente)."
         },
         {
           "name": "Mina de proximidad",
-          "description": "La primera vez que tu marcador de Mina de disrupción quede dentro de la zona de control de otro agente, retira ese marcador, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación, e inflígele 2D3-3 daños."
+          "description": "La primera vez que tu marcador de Mina de disrupción quede dentro de la zona de control de otro agente, retira ese marcador, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación, e inflígele 2D3-3 daños; si no resulta incapacitado, termina su acción (si está realizando una), aunque los efectos de la misma no se hayan completado. Si no puede ser colocado, muévelo la distancia mínima hasta que pueda. Este agente se ignora de cara a esos efectos (no puede activar ese marcador ni sufrir daños debido al mismo)."
         }
       ],
       "uniqueActions": [],
@@ -7750,6 +7685,71 @@
       ],
       "uniqueActions": [],
       "keywords": "<span class=\"faction\">ASALTANTE PHOBOS</span>, IMPERIUM, ADEPTUS ASTARTES, INCURSOR, COMBATIENTE",
+      "peana": "32"
+    },
+    {
+      "id": "reiver-sergeant",
+      "name": "SARGENTO SAQUEADOR",
+      "stats": {
+        "LPA": "3",
+        "MOVER": "7\"",
+        "SALVACIÓN": "3+",
+        "HERIDAS": "13"
+      },
+      "weapons": [
+        {
+          "name": "Carabina bólter",
+          "type": "ranged",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "Certera 1"
+          }
+        },
+        {
+          "name": "Pistola bólter especial",
+          "type": "ranged",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "Alcance 8\", Penetración 1"
+          }
+        },
+        {
+          "name": "Filoarma",
+          "type": "melee",
+          "stats": {
+            "A": "5",
+            "HP/HA": "3+",
+            "Dñ": "4/5",
+            "RA": "-"
+          }
+        },
+        {
+          "name": "Puños",
+          "type": "melee",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "-"
+          }
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Ventaja táctica",
+          "description": "Puedes realizar cada una de las siguientes opciones una vez por batalla: <ul><li>Tras desempatar para decidir la iniciativa, si este agente se encuentra en la zona de aniquilación, puedes repetir tu D6.</li></ul> <ul><li>Puedes usar un ardid de tiroteo por 0 PM si este es el agente <span class=\"faction\">ASALTANTE PHOBOS</span> especificado (incluyendo Repetición de mando si los dados de ataque o de defensa se tiraban para este agente), o el ardid de tiroteo Emboscada paciente por 0 PM si este agente está apostado y fuera de la zona de control de todo agente enemigo.</li></ul>"
+        },
+        {
+          "name": "Paracaídas gravítico y lanzagarfios",
+          "description": "Siempre que este agente trepe, puedes tratar la distancia vertical como 2\" (sin importar lo lejos que se mueva verticalmente el agente en realidad). Cuando este agente se deje caer, ignora la distancia vertical."
+        }
+      ],
+      "uniqueActions": [],
+      "keywords": "<span class=\"faction\">ASALTANTE PHOBOS</span>, IMPERIUM, ADEPTUS ASTARTES, LÍDER, SAQUEADOR, SARGENTO",
       "peana": "32"
     },
     {

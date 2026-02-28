@@ -17623,11 +17623,11 @@
             "abilities": [
                 {
                     "name": "Ordenar la muerte",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Elige un agente enemigo para que sea tu presa marcada durante ese punto de inflexión. Siempre que un agente BANDAESTIRPE ACECHANTE amigo dispare, combata o contraataque contra tu presa marcada, las armas de ese agente amigo tienen la regia de armas Equilibrada. Si tu presa marcada resulta incapacitada, puedes elegir un nuevo agente enemigo para que sea tu presa marcada durante ese punto de inflexión (y puedes hacer esto varias veces durante dicho punto de inflexión)."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Elige un agente enemigo para que sea tu presa marcada durante ese punto de inflexión. Siempre que un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo dispare, combata o contraataque contra tu presa marcada, las armas de ese agente amigo tienen la regia de armas Equilibrada. Si tu presa marcada resulta incapacitada, puedes elegir un nuevo agente enemigo para que sea tu presa marcada durante ese punto de inflexión (y puedes hacer esto varias veces durante dicho punto de inflexión)."
                 },
                 {
                     "name": "Chillido de victoria",
-                    "description": "Siempre que tu presa marcada quede incapacitada, puedes elegir un agente BANDAESTIRPE ACECHANTE amigo a 6\" o menos de este agente. Hasta el final de la batalla, las armas de ese agente tienen la regla de armas Equilibrada. Cada agente amigo solo puede ser elegido para esta regla una vez por batalla."
+                    "description": "Siempre que tu presa marcada quede incapacitada, puedes elegir un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo a 6\" o menos de este agente. Hasta el final de la batalla, las armas de ese agente tienen la regla de armas Equilibrada. Cada agente amigo solo puede ser elegido para esta regla una vez por batalla."
                 }
             ],
             "uniqueActions": [],
@@ -17772,7 +17772,7 @@
                 },
                 {
                     "name": "Asalto salvaje",
-                    "description": "La primera vez que este agente realice una acción de <b>Combatir</b> durante cada una de sus activaciones, si ni él ni el agente enemigo resultan incapacitados en esa secuencia, este agente puede realizar inmediatamente a continuación una acción libre de <b>Combatir</b>, pero solo puede <b>Combatir</b> contra ese agente enemigo (y solo si sigue siendo válido para<b>Combatir</b> contra él). Esto tiene preferencia sobre las restricciones de acciones."
+                    "description": "La primera vez que este agente realice una acción de <b>Combatir</b> durante cada una de sus activaciones, si ni él ni el agente enemigo resultan incapacitados en esa secuencia, este agente puede realizar inmediatamente a continuación una acción libre de <b>Combatir</b>, pero solo puede <b>Combatir</b> contra ese agente enemigo (y solo si sigue siendo válido para <b>Combatir</b> contra él). Esto tiene preferencia sobre las restricciones de acciones."
                 }
             ],
             "uniqueActions": [],
@@ -17849,11 +17849,11 @@
       "abilities": [
         {
           "name": "Bestia",
-          "description": "Este agente no puede realizar ninguna acción que no sea <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Traer, Ponerse en guardia, <b>Reposicionarse</b>, <b>Recoger marcador</b> y <b>Colocar marcador</b>. No puede usar ninguna arma que no figure en su tarjeta de datos."
+          "description": "Este agente no puede realizar ninguna acción que no sea <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, <b>Traer</b>, <b>Ponerse en guardia</b>, <b>Reposicionarse</b>, <b>Recoger marcador</b> y <b>Colocar marcador</b>. No puede usar ninguna arma que no figure en su tarjeta de datos."
         },
         {
           "name": "Malhumorado",
-          "description": "Siempre que un agente enemigo realiza la acción de <b>Combatir</b>, si este agente es un agente válido contra el que<b>Combatir</b>, puedes obligarle a elegir a este agente para<b>Combatir</b> contra él. Siempre que un agente enemigo termina la acción de <b>Cargar</b> en la zona de control de otro agente BANDAESTIRPE ACECHANTE amigo a 3\" o menos de este agente, si este agente se encuentra fuera de la zona de control de todos los agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b>, pero debe terminar dicho movimiento en la zona de control de ese agente enemigo."
+          "description": "Siempre que un agente enemigo realiza la acción de <b>Combatir</b>, si este agente es un agente válido contra el que <b>Combatir</b>, puedes obligarle a elegir a este agente para <b>Combatir</b> contra él. Siempre que un agente enemigo termina la acción de <b>Cargar</b> en la zona de control de otro agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo a 3\" o menos de este agente, si este agente se encuentra fuera de la zona de control de todos los agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b>, pero debe terminar dicho movimiento en la zona de control de ese agente enemigo."
         }
       ],
       "uniqueActions": [
@@ -17861,7 +17861,7 @@
           "name": "TRAER",
           "cost": "1PA",
           "description": [
-            "Realiza una acción libre de <b>Correr</b> o <b>Reposicionarse</b> con este agente. Durante ese movimiento, puedes realizar una acción libre de <b>Recoger marcador</b> o <b>Colocar marcador</b> con este agente (puedes determinar el control durante esa acción para ello), y tras hacer tal cosa puede usar la distancia de movimiento que le quedase de la acción de <b>Correr</b> o <b>Reposicionarse</b>."
+            "Realiza una acción libre de <b>Correr</b> o <b>Reposicionarse</b> con este agente. Durante ese movimiento, puedes realizar una acción libre de <b>Recoger marcador</b> o <b>Colocar marcador</b> (puedes determinar el control durante esa acción para ello), y tras hacer tal cosa puede usar la distancia de movimiento que le quedase de la acción de <b>Correr</b> o <b>Reposicionarse</b>."
           ]
         }
       ],
@@ -17930,7 +17930,7 @@
           "name": "LARGA VISTA",
           "cost": "1PA",
           "description": [
-            "Hasta el inicio de la siguiente activación de este agente: <ul><li>Los perfiles oculto e inmóvil de su rifle de caza Kroot tienen la regia de armas Letal 5+.</li></ul> <ul><li>Cuando dispare con su rifle de caza Kroot, los agentes enemigos no pueden quedar ofuscados.</li></ul>"
+            "Hasta el inicio de la siguiente activación de este agente: <ul><li>Los perfiles oculto e inmóvil de su rifle de caza Kroot tienen la regla de armas Letal 5+.</li></ul> <ul><li>Cuando dispare con su rifle de caza Kroot, los agentes enemigos no pueden quedar ofuscados.</li></ul>"
           ],
           "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
         }
@@ -17982,7 +17982,7 @@
       "abilities": [
         {
           "name": "Desenfundado rápido",
-          "description": "Una vez por punto de inflexión, cuando un agente enemigo realice la acción de <b>Disparar</b> y este agente sea elegido como el blanco válido (o si sería un blanco secundario de la regla de armas Area), en caso de que este agente se encuentre apostado puedes interrumpir dicha acción para usar esta regla. Si lo haces, este agente puede realizar inmediatamente una acción libre de <b>Disparar</b> con sus pistolas Kroot dobles (concentradas) contra ese agente enemigo (puedes cambiar su orden a trabarse para ello), pero ese agente enemigo debe ser un blanco válido."
+          "description": "Una vez por punto de inflexión, cuando un agente enemigo realice la acción de <b>Disparar</b> y este agente sea elegido como el blanco válido (o si sería un blanco secundario de la regla de armas Área), en caso de que este agente se encuentre apostado puedes interrumpir dicha acción para usar esta regla. Si lo haces, este agente puede realizar inmediatamente una acción libre de <b>Disparar</b> con sus pistolas Kroot dobles (concentradas) contra ese agente enemigo (puedes cambiar su orden a trabarse para ello), pero ese agente enemigo debe ser un blanco válido."
         },
         {
             "name": "<span class=\"faction\">*</span>Salva",
@@ -18080,7 +18080,7 @@
           "name": "MARCADO PARA LA CAZA",
           "cost": "1PA",
           "description": [
-            "Retira tu marcador de Pech’ra de la zona de aniquilación (si lo hay). A continuación coloca tu marcador de Pech’ra visible para este agente, o en terreno Aventajado de un elemento de terreno que sea visible para este agente. Siempre que un agente BANDAESTIRPE ACECHANTE amigo dispare contra un agente enemigo que tenga ese marcador en su zona de control, las armas a distancia de ese agente amigo tienen la regla de armas Buscadora (ligera).",
+            "Retira tu marcador de Pech’ra de la zona de aniquilación (si lo hay). A continuación coloca tu marcador de Pech’ra visible para este agente, o en terreno Aventajado de un elemento de terreno que sea visible para este agente. Siempre que un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo dispare contra un agente enemigo que tenga ese marcador en su zona de control, las armas a distancia de ese agente amigo tienen la regla de armas Buscadora (ligera).",
             "Al inicio de la siguiente activación de este agente, o si es retirado de la zona de aniquilación (lo que ocurra antes), retira tu marcador de Pech’ra de la zona de aniquilación."
           ],
           "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
@@ -18089,7 +18089,7 @@
           "name": "OJOS EN LAS ALTURAS",
           "cost": "1PA",
           "description": [
-            "<b>APOYO</b>. Elige un agente BANDAESTIRPE ACECHANTE amigo distinto, a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+            "<b>APOYO</b>. Elige un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo distinto, a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
           ],
           "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
         }
@@ -18141,7 +18141,7 @@
             "abilities": [
                 {
                     "name": "Listo para cualquier cosa",
-                    "description": "Una vez por punto de inflexión, durante la activación de un agente COMBATIENTE amigo, puedes usar las reglas Carne, Bala Penetración o Bala de toxinas (ver equipo de facción) para ese agente. Hacer eso no cuenta para su límite de una vez por punto de inflexión."
+                    "description": "Una vez por punto de inflexión, durante la activación de un agente <b>COMBATIENTE</b> amigo, puedes usar las reglas Carne, Bala Perforante o Bala de toxinas (ver equipo de facción) para ese agente. Hacer eso no cuenta para su límite de una vez por punto de inflexión."
                 }
             ],
             "uniqueActions": [],

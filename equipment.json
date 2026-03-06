@@ -355,7 +355,7 @@
     "id_equip": 47,
     "faction": "exaction-squad",
     "name": "Esposas",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente EXACTION SQUAD amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o contraacción (no se gastan PA en ella).",
+    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente EXACTION SQUAD amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).",
     "action": []
   },
   {
@@ -590,7 +590,7 @@
     "id_equip": 87,
     "faction": "nemesis-claw",
     "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente NEMESIS CLAW amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o contraacción (no se gastan PA en ella).",
+    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente NEMESIS CLAW amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).",
     "action": []
   },
   {
@@ -1020,7 +1020,7 @@
     "id_equip": 145,
     "faction": "mandrakes",
     "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente MANDRAKE amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación/contraacción (no se gastan PA en ella).",
+    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente MANDRAKE amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación/reacción (no se gastan PA en ella).",
     "action": []
   },
   {
@@ -1161,7 +1161,7 @@
     "id_equip": 162,
     "faction": "kabalite",
     "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente HAND OF THE ARCHON amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o contraacción (no se gastan PA en ella).",
+    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente HAND OF THE ARCHON amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).",
     "action": []
   },
   {
@@ -1245,28 +1245,28 @@
     "id_equip": 174,
     "faction": "canoptek",
     "name": "MANIPULADOR DE MATRIZ",
-    "description": "Una vez por batalla, durante la activación o contraacción de un agente CANOPTEK CIRCLE amigo, puedes usar esta regla. Si lo haces, hasta el final de esa activación/contraacción, un agente CANOPTEK CIRCLE GEOMANCER amigo se trata como tu cuarto marcador de NODO OBELISCO.",
+    "description": "Una vez por batalla, durante la activación o reacción de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, puedes usar esta regla. Si lo haces, hasta el final de esa activación/reacción, un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se trata como si fuera tu cuarto marcador de <b>NODO DE OBELISCOS</b>.",
     "action": []
   },
   {
     "id_equip": 175,
     "faction": "canoptek",
-    "name": "NODOS OBELISCO DESPERTADOS",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Puedes usar el ardid de tiroteo Animar Nodos Obelisco por 0PM un número de veces durante la batalla igual al resultado.",
+    "name": "NODOS OBELISCO DESPIERTOS",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Durante la batalla, por 0 PM puedes usar el ardid de tiroteo Animar Nodos de obeliscos tantas veces como el resultado de la tirada.",
     "action": []
   },
   {
     "id_equip": 176,
     "faction": "canoptek",
     "name": "ATAÚDES DE NANOESCARABAJOS",
-    "description": "Siempre que un agente CANOPTEK CIRCLE amigo sea activado, recupera D3 heridas perdidas.",
+    "description": "Siempre que un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se active, recupera 1D3 heridas perdidas.",
     "action": []
   },
   {
     "id_equip": 177,
     "faction": "canoptek",
-    "name": "DESFASADOR",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CANOPTEK CIRCLE GEOMANCER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "name": "CAMBIAFASES",
+    "description": "Una vez por Punto de Inflexión, cuando un agente dispare contra un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia empeora en 1 la x de la regla de armas Penetración (si la hay). Eso significa que Penetración 1 se ignoraría.",
     "action": []
   },
   {

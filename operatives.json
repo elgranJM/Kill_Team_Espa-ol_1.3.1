@@ -6224,7 +6224,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\"><span class=\"faction\">RÁTIDOS</span>S</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, CONSEGUIDOR",
+      "keywords": "<span class=\"faction\">RÁTIDOS</span>S</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, CONSEGUIDOR",
       "peana": "25"
     },
     {
@@ -14175,7 +14175,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRON, LÍDER, CRIPTECNÓLOGO, TECNOMANTE",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNÓLOGO, TECNOMANTE",
             "peana": "50"
         },
         {
@@ -14264,7 +14264,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRON, LÍDER, CRIPTECNOLOGO, CRONOMANTE",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNOLOGO, CRONOMANTE",
             "peana": "40"
         },
         {
@@ -14376,7 +14376,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRON, APRENTECNOLOGO",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, APRENTECNOLOGO",
             "peana": "32"
         },
         {
@@ -14436,7 +14436,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRON, INMORTAL, DESPOTECNOLOGO",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, DESPOTECNOLOGO",
             "peana": "32"
         },
         {
@@ -14487,7 +14487,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRON, INMORTAL, GUARDIAN",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, GUARDIAN",
             "peana": "32"
         },
         {
@@ -14537,7 +14537,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRON, OMNICIDA",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, OMNICIDA",
             "peana": "32"
         },
         {
@@ -14587,7 +14587,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRON, PLASMACITA, ACELERADOR",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, PLASMACITA, ACELERADOR",
             "peana": "25"
         },
         {
@@ -14637,7 +14637,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRON, MÉDICO, PLASMACITA, REANIMADOR",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, MÉDICO, PLASMACITA, REANIMADOR",
             "peana": "25"
         }
     ],
@@ -21195,7 +21195,7 @@
             "abilities": [
                 {
                     "name": "Control de Nodo de obeliscos",
-                    "description": "Siempre que este agente fuera a llevar a cabo una acción de misión, si dicha acción requiere que este agente controle un marcador de objetivo, en su lugar puedes determinar el control desde uno de tus marcadores de NODO DE OBELISCOS (ver la regla de facción Matriz de Nodos de obeliscos). Siempre que este agente vaya a realizar la acción Operar portillo, en su lugar puedes abrir o cerrar una escotilla cuyo punto de acceso se encuentre a 1\" o menos de uno de tus marcadores de NODO DE OBELISCOS. Ten en cuenta aún así deberás cumplir las condiciones de la acción Operar portillo."
+                    "description": "Siempre que este agente fuera a llevar a cabo una acción de misión, si dicha acción requiere que este agente controle un marcador de objetivo, en su lugar puedes determinar el control desde uno de tus marcadores de <b>NODO DE OBELISCOS</b> (ver la regla de facción <b>MATRIZ DE NODOS DE OBELISCOS</b>). Siempre que este agente vaya a realizar la acción <b>Operar portillo</b>, en su lugar puedes abrir o cerrar una escotilla cuyo punto de acceso se encuentre a 1\" o menos de uno de tus marcadores de <b>NODO DE OBELISCOS</b>. Ten en cuenta aún así deberás cumplir las condiciones de la acción <b>Operar portillo</b>."
                 }
             ],
             "uniqueActions": [
@@ -21211,21 +21211,21 @@
                     "name": "CONTROL CANÓPTICO",
                     "cost": "1 LPA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente CANÓPTICO CÍRCULO CANÓPTICO amigo a 6\" o menos de este agente y visible para él. Como alternativa, puedes elegir un agente CANÓPTICOS CÍRCULO CANÓPTICO amigo que sea visible para este agente y se encuentre en tu MATRIZ DE NODOS DE OBELISCOS (<b>APOYO</b> no se aplica a esta selección). El agente elegido puede realizar de inmediato una acción libre de 1PA; no puede moverse más de 2\" durante dicha acción."
+                        "<b>APOYO</b>. Elige un agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo a 6\" o menos de este agente y visible para él. Como alternativa, puedes elegir un agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo que sea visible para este agente y se encuentre en tu <b>MATRIZ DE NODOS DE OBELISCOS</b> (<b>APOYO</b> no se aplica a esta selección). El agente elegido puede realizar de inmediato una acción libre de 1PA; durante esa acción, no puede moverse más de 2\", y si es retirado y desplegado de nuevo debe situarse \"2 o menos de distancia."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o como reacción."
                 },
                 {
                     "name": "BRECHA MOLECULAR",
                     "cost": "1 LPA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente CÍRCULO CANÓPTICO a 6\" o menos de este agente y visible para él. Como alternativa, puedes elegir un agente CÍRCULO CANÓPTICO amigo que sea visible para este agente y se encuentre dentro de tu MATRIZ DE NODOS DE OBELISCOS (<b>APOYO</b> no se aplica a esta selección).",
-                        "La próxima vez que este agente realice una acción en la que se mueva, no lo muevas. En su lugar, retíralo de la zona de aniquilación y vuelve a desplegarlo completamente a una distancia de su ubicación original igual o menor que su atributo Movimiento (o a 3\" o menos si la acción era de <b>Correr</b>) en horizontal. Ten en cuenta que el agente no gana distancia adicional al realizar la acción de <b>Cargar</b>. Debe ser desplegado en una ubicación en la que pueda ser colocado y, a menos que la acción fuera de <b>Cargar</b>, no puede desplegarse dentro de la zona de control de un agente enemigo."
+                        "<b>APOYO</b>. Elige un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> a 6\" o menos de este agente y visible para él. Como alternativa, puedes elegir un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo que sea visible para este agente y se encuentre dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b> (<b>APOYO</b> no se aplica a esta selección).",
+                        "La próxima vez que este agente realice una acción en la que se mueva, no lo muevas. En su lugar, retíralo de la zona de aniquilación y vuelve a desplegarlo completamente a una distancia de su ubicación original igual o menor que su atributo Movimiento (o a 3\" o menos si la acción era de <b>Correr</b>) en horizontal  (en una zona de aniquilación que utilice las reglas de combate cerrado, como por ejemplo Zona de aniquilación: Mundo Necrópolis, esta distancia puede medirse por encima y a través de terreno de Muro y el agente puede ser desplegado en el otro lado). Ten en cuenta que el agente no gana distancia adicional al realizar la acción de <b>Cargar</b>. Debe ser desplegado en una ubicación en la que pueda ser colocado y, a menos que la acción fuera de <b>Cargar</b>, no puede desplegarse dentro de la zona de control de un agente enemigo."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRON, LÍDER, CRIPTECNOLOGO, GEOMANTE",
+            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRÓN, LÍDER, CRIPTECNÓLOGO, GEOMANTE",
             "peana": "50"
         },
         {
@@ -21265,7 +21265,7 @@
                     "name": "SOBRECARGA",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente CANÓPTICO CÍRCULO CANÓPTICO a 3\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu MATRIZ DE NODOS DE OBELISCOS, puedes elegir a otro agente CANÓPTICO CÍRCULO CANÓPTICO amigo en tu MATRIZ DE NODOS DE OBELISCOS. Hasta el final de la siguiente activación del agente elegido, suma 1 a su atributo LPA."
+                        "Elige un agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> a 3\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes elegir a otro agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>. Hasta el final de la siguiente activación del agente elegido, suma 1 a su atributo LPA."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -21273,12 +21273,12 @@
                     "name": "SOBRECARGA CRANEAL",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente enemigo a 3\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu MATRIZ DE NODOS DE OBELISCOS, puedes elegir un agente enemigo en tu MATRIZ DE NODOS DE OBELISCOS. Hasta el final de la siguiente activación de ese agente enemigo, resta 1 a su atributo LPA."
+                        "Elige un agente enemigo a 3\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes elegir un agente enemigo en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>. Hasta el final de la siguiente activación de ese agente enemigo, resta 1 a su atributo LPA."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\"><span class=\"faction\">CÍRCULO CANÓPTICO</span></span>, NECRON, CANÓPTICO, MACROCITO, ACELERADOR",
+            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRÓN, CANÓPTICO, MACROCITO, ACELERADOR",
             "peana": "28"
         },
         {
@@ -21315,7 +21315,7 @@
             "abilities": [
                 {
                     "name": "Reanimar",
-                    "description": "Una vez por punto de inflexión, cuando otro agente CÍRCULO CANÓPTICO amigo vaya a quedar incapacitado, si está a 6\" o menos de este agente y visible para él, o si este agente y ese otro agente amigo están en tu MATRIZ DE NODOS DE OBELISCOS, puedes usar esta regla, siempre que ninguno de los dos agentes implicados estén en la zona de control de un agente enemigo. Si lo haces, ese otro agente amigo no queda incapacitado y tiene 1 herida restante y no puede quedar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar de inmediato una acción libre de <b>Correr</b>. Si esta regla ha sido usada durante la activación del otro agente amigo, dicha activación termina. No puedes usar esta regla si este agente está incapacitado, o si es una acción de <b>Disparar</b> y este agente sería un blanco primario o secundario.."
+                    "description": "Una vez por punto de inflexión, cuando otro agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo vaya a quedar incapacitado, si está a 6\" o menos de este agente y visible para él, o si este agente y ese otro agente amigo están en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes usar esta regla, siempre que ni este ni ese agente estén en la zona de control de un agente enemigo. Si lo haces, ese otro agente amigo no resulta incapacitado, le queda 1 herida restante y no puede quedar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar de inmediato una acción libre de <b>Correr</b>, pero debe terminar esa acción en la zona de control de este agente o dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>. Resta 1 a los atributos LPA de este agente y ese otro agente hasta el final de sus siguientes activaciones respectivas, y si esta regla se usó durante la activación de ese agente amigo, dicha activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente sería un blanco primario o secundario."
                 }
             ],
             "uniqueActions": [
@@ -21323,12 +21323,12 @@
                     "name": "HAZ DE NANOESCARABAJOS",
                     "cost": "1 LPA",
                     "description": [
-                        "Elige un agente CÍRCULO CANÓPTICO a 6\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu MATRIZ DE NODOS DE OBELISCOS, puedes elegir otro agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo distinto en tu MATRIZ DE NODOS DE OBELISCOS. El agente elegido recupera hasta 3D3 heridas perdidas. No puede ser un agente sobre el que se haya usado la regla Reanimar durante este punto de inflexión."
+                        "Elige un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> a 6\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes elegir otro agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo distinto en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>. El agente elegido recupera hasta 3D3 heridas perdidas. No puede ser un agente sobre el que se haya usado la regla Reanimar durante este punto de inflexión."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de algún agente enemigo, ni más de 1 vez por punto de inflexión."
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo, ni más de 1 vez por punto de inflexión"
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRON, CANÓPTICO, MACROCITO, REANIMADOR",
+            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRÓN, CANÓPTICO, MACROCITO, REANIMADOR",
             "peana": "28"
         },
         {
@@ -21347,7 +21347,7 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "4+",
-                        "Dñ": "3/4",
+                        "Dñ": "2/3",
                         "RA": "Penetración 1"
                     }
                 },
@@ -21355,7 +21355,7 @@
                     "name": "Lanzapartículas tesla (concentrado)",
                     "type": "ranged",
                     "stats": {
-                        "A": "5",
+                        "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "2/3",
                         "RA": "-"
@@ -21365,7 +21365,7 @@
                     "name": "Lanzapartículas tesla (relámpago viviente)",
                     "type": "ranged",
                     "stats": {
-                        "A": "5",
+                        "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "2/3",
                         "RA": "Área 2\""
@@ -21375,7 +21375,7 @@
                     "name": "Garras y cola",
                     "type": "melee",
                     "stats": {
-                        "A": "4",
+                        "A": "3",
                         "HP/HA": "4+",
                         "Dñ": "3/4",
                         "RA": "-"
@@ -21385,7 +21385,7 @@
             "abilities": [
                 {
                     "name": "Defensa agresiva",
-                    "description": "Si este agente resulta incapacitado por un agente enemigo que está a 2\" o menos, tira 1D3 antes de retirar este agente de la zona de aniquilación: con 2+, inflige a ese agente enemigo una cantidad de daño igual al resultado."
+                    "description": "Si este agente resulta incapacitado por un agente enemigo que está a 2\" o menos, tira 1D3 antes de retirar este agente de la zona de aniquilación: con 2+, inflinge a ese agente enemigo una cantidad de daño igual al resultado."
                 },
                 {
                     "name": "Constructo prescindible",
@@ -21393,11 +21393,11 @@
                 },
                 {
                     "name": "Escabullirse incesantemente",
-                    "description": "Como <b>GAMBITO ESTRATÉGICO</b> en cada punto de inflexión tras el primero, si tienes menos de tres agentes COMBATIENTECÍRCULO CANÓPTICO amigos no incapacitados, puedes desplegar en tu zona de descenso a otro más apostado y con una orden de ocultarse (puedes elegir sus opciones de armas de manera normal)."
+                    "description": "Como <b>GAMBITO ESTRATÉGICO</b> en cada punto de inflexión tras el primero, si tienes menos de tres agentes <b>COMBATIENTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigos no incapacitados, puedes desplegar en tu zona de descenso a otro más apostado y con una orden de ocultarse (puedes elegir sus opciones de armas de manera normal)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRON, CANÓPTICO, MACROCITO, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRÓN, CANÓPTICO, MACROCITO, COMBATIENTE",
             "peana": "28"
         },
         {
@@ -21454,7 +21454,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Destierro dimensional",
-                    "description": "Después de que este agente use su arma, si has infligido daño o guardado uno o más éxitos críticos y el blanco no está incapacitado, tira 2D6: con un resultado mayor que las heridas restantes del blanco, dicho blanco queda incapacitado (esto tiene preferencia frente a reglas que impiden quedar incapacitado, como ¡Sanitario!, o Furia asesina de EXPOLIAGORES IMPÍOS ) y, si iba a hacerlo, tu oponente no puede poner marcadores de reanimación (<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> ) para ese agente."
+                    "description": "Después de que este agente use su arma, si has infligido daño o guardado uno o más éxitos críticos y el blanco no está incapacitado, tira 2D6: con un resultado mayor que las heridas restantes del blanco, dicho blanco queda incapacitado (esto tiene preferencia frente a reglas que impiden quedar incapacitado, como ¡Sanitario!, o Furia asesina de <span class=\"faction\">EXPOLIAGORES IMPÍOS</span> ) y, si iba a hacerlo, tu oponente no puede poner marcadores de reanimación (<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> ) para ese agente."
                 },
                 {
                     "name": "Centinela armado",
@@ -21466,7 +21466,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRON, CANÓPTICO, TREPATUMBAS",
+            "keywords": "<span class=\"faction\">CÍRCULO CANÓPTICO</span>, NECRÓN, CANÓPTICO, TREPATUMBAS",
             "peana": "50"
         }
     ],

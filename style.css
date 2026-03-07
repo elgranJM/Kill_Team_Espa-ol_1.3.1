@@ -550,20 +550,6 @@ body.dark-mode .tacop.card {
 .tacop.infiltration { background-color: #f7e9c3; border-color: #af8d3b; }
 .infiltration .archetype { background-color: #af8d3b; }
 
-/* Dark Mode */
-body.dark-mode .tacop.recon { background-color: #3a4c41; border-color: #588169; }
-body.dark-mode .recon .archetype { background-color: #588169; }
-
-body.dark-mode .tacop.seek-destroy { background-color: #5b3f43; border-color: #8c3b45; }
-body.dark-mode .seek-destroy .archetype { background-color: #8c3b45; }
-
-body.dark-mode .tacop.security { background-color: #425264; border-color: #4a7ebb; }
-body.dark-mode .security .archetype { background-color: #4a7ebb; }
-
-body.dark-mode .tacop.infiltration { background-color: #635841; border-color: #af8d3b; }
-body.dark-mode .infiltration .archetype { background-color: #af8d3b; }
-
-
 .tacop .archetype .bi-heart {
     right: 0;
     top: 50%;
@@ -602,10 +588,6 @@ body.dark-mode .infiltration .archetype { background-color: #af8d3b; }
     text-transform: uppercase;
 }
 
-body.dark-mode .tacop .mission-container .sub-header {
-    border-color: #555;
-}
-
 .tacop .mission-container .header {
     display: flex;
     justify-content: space-between;
@@ -615,20 +597,12 @@ body.dark-mode .tacop .mission-container .sub-header {
     font-weight: bold;
 }
 
-body.dark-mode .tacop .mission-container .header {
-    background-color: #495057;
-}
-
 .tacop .ap-box {
     background-color: #343a40;
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.9em;
-}
-
-body.dark-mode .tacop .ap-box {
-    background-color: #212529;
 }
 
 .tacop .content ul {
@@ -644,8 +618,8 @@ body.dark-mode .tacop .ap-box {
 
 .icon-yes, .icon-no {
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 10em;
+    height: 10em;
     background-repeat: no-repeat;
     background-size: contain;
     vertical-align: middle;

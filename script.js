@@ -150,6 +150,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function setupDarkMode() {
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) body.classList.add('dark-mode');
+        
+        toggleDarkModeButton?.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+    }
+
     async function loadData() {
         const files = {
             ploys: 'ploys.json',
@@ -530,7 +540,7 @@ function renderOperatives(factionKey) {
         const html = ploys.map(ploy => {
             const isStrategic = ploy.type === 'strategic';
             const headerColor = isStrategic ? 'bg-dark' : 'bg-secondary';
-            const typeLabel = isStrategic ? 'Ardid de Estrategia' : 'Ardid de Tiroteo';
+            const typeLabel = isStrategic ? 'Estratégico' : 'Táctico';
             
             return `
             <div class="col-12 col-md-6 mb-3">

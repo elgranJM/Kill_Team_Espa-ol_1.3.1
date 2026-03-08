@@ -608,39 +608,33 @@
     "action": []
   },
   {
-    "id_equip": 90,
-    "faction": "legionary",
-    "name": "Hojas Maléficas",
-    "description": "Los agentes LEGIONARY amigos tienen la siguiente arma de combate para la batalla:",
-    "ATK": "5",
-    "HIT": "3+",
-    "DMG": "3/4",
-    "action": []
-  },
-  {
     "id_equip": 91,
     "faction": "legionary",
-    "name": "Armadura Protegida",
-    "description": "Gambito Estratégico. Selecciona un agente LEGIONARY amigo. Hasta el paso de Preparación de la siguiente Fase de Estrategia, cambia el atributo de Salvación de ese agente a 2+.",
+    "name": "Armadura con Salvaguardas",
+    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente <span class=\"faction\">LEGIONARIO</span> amigo. Hasta el paso de Preparación de la siguiente Fase de Estrategia, el atributo Salvación de ese agente cambia a 2+.",
     "action": []
   },
   {
     "id_equip": 92,
     "faction": "legionary",
-    "name": "Proyectiles Corruptos",
-    "description": [
-      "Una vez por Punto de Inflexión, cuando un agente LEGIONARY amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola bólter o bólter, puedes usar esta regla.",
-      "Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Desgarradora."
-    ]
+    "name": "Balas Corrompidas",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo realice una acción de <b>Disparar</b> y elijas un bólter o una pistola bólter, puedes usar esta regla. Si lo haces, hasta el final de esa acción el arma en cuestion tiene la regla de armas Desgarradora."
   },
   {
     "id_equip": 93,
     "faction": "legionary",
     "name": "Talismanes del Caos",
-    "description": [
-      "Gambito Estratégico. Selecciona una clave de Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un agente LEGIONARY amigo que tenga esa clave esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes infligir D3 de daño a ese agente amigo para descartar uno de ellos y retener el otro como un éxito normal en su lugar.",
-      "Ten en cuenta que si es la acción de <b>Disparar</b> y ese daño incapacita a ese agente amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos)."
-    ]
+    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige una clave Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo que tenga esa clave dispare, combata o contraataque y saques o más fallos, puedes infligir 1D3 daños a ese agente amigo para descartar uno de ellos y guardar el otro como un éxito normal en su lugar. \nTen en cuenta que, si era la acción de <b>Disparar</b> y ese daño incapacita a ese agente amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos)."
+  },
+  {
+    "id_equip": 90,
+    "faction": "legionary",
+    "name": "Filos Maléficos",
+    "description": "Los agentes <span class=\"faction\">LEGIONARIO</span> amigos tienen la siguiente arma de combate:",
+    "ATK": "5",
+    "HIT": "3+",
+    "DMG": "3/4",
+    "action": []
   },
   {
     "id_equip": 94,

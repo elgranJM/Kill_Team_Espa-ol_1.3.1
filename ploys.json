@@ -1517,7 +1517,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Sangre para el Dios de la Sangre",
-        "description": "<p>Siempre que un agente <span class=\"faction\">LEGIONARIO</span> amigo (excluyendo <b>KHORNE</b>) esté combatiendo, la primera vez que golpees durante esa secuencia, inflige 1 de daño adicional <span class=\"text-warning-emphasis\">(hasta un máximo de 7)</span>.</p>\n<p>Suma 1 a ambos atributos de Daño de las armas de combate de los agentes <span class=\"faction\">LEGIONARIO</span> <b>KHORNE</b> amigos <span class=\"text-warning-emphasis\">(hasta un máximo de 7)</span>.</p>",
+        "description": "<p>Siempre que un agente <span class=\"faction\">LEGIONARIO</span> amigo (salvo <b>KHORNE</b>) combata, la primera vez que golpees durante esa secuencia inflige 1 daño adicional <span class=\"text-warning-emphasis\">(hasta un máximo de 7)</span>.</p>\n<p>Suma 1 a ambos atributos Daño de las armas de combate de los agentes <span class=\"faction\">LEGIONARIO</span> <b>KHORNE</b> amigos <span class=\"text-warning-emphasis\">(hasta un máximo de 7)</span>.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1526,7 +1526,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Implacable",
-        "description": "<p>Siempre que un agente dispare contra un agente <span class=\"faction\">LEGIONARIO</span> amigo, <span class=\"text-info-emphasis\">las armas con la regla de armas Penetración 1 tienen la regla de armas Críticos de penetración 1 en su lugar.</span></p>\n<p>Puedes ignorar cualquier cambio en los atributos de los agentes <span class=\"faction\">LEGIONARIO</span> <b>NURGLE</b> amigos por estar lesionados. </p>\n",
+        "description": "<p>Siempre que un agente dispare a un agente <span class=\"faction\">LEGIONARIO</span> amigo, <span class=\"text-info-emphasis\">las armas con la regla de arma Penetración 1 tienen en su lugar la regla de arma Críticos de penetración 1.</span></p>\n<p>Siempre que un agente dispare contra un agente <span class=\"faction\">LEGIONARIO</span> <b>NURGLE</b> amigo, las armas con la regla de arma Penetración 1 tienen la regla de arma Críticos de Penetración 1 en su lugar. </p>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1534,8 +1534,8 @@
         "faction": "legionary",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Velocidad de Azogue",
-        "description": "<p>Siempre que un agente <span class=\"faction\">LEGIONARIO</span> amigo <span class=\"text-info-emphasis\">que realizó una acción en la que se movió durante este punto de inflexión</span> esté combatiendo <span class=\"text-info-emphasis text-decoration-line-through\">o contraataque</span>, empeora el atributo de Impacto de las armas de combate del agente enemigo en 1. </p>\n<p>Siempre que un agente dispare contra un agente <span class=\"faction\">LEGIONARIO</span> <b>SLAANESH</b> amigo <span class=\"text-info-emphasis\">a más de 6\" de él</span> que realizó una acción en la que se movió durante este punto de inflexión, empeora el atributo de Impacto de las armas del agente enemigo en 1. </p>\n<p>En todos los casos para este ardid, esto no es acumulativo con estar lesionado.</p>",
+        "name": "Velocidad Mercurial",
+        "description": "<p>Cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo <span class=\"text-info-emphasis\">que realizó durante este punto de inflexión una acción en la que se movió</span> combata o contraataque, empeora en 1 el atributo Impactar de las armas de combate del agente enemigo. </p>\n<p>Siempre que un agente dispare a un agente <span class=\"faction\">LEGIONARIO</span> <b>SLAANESH</b> amigo <span class=\"text-info-emphasis\">a más de 6\" de él</span> que haya realizado una acción en la que se moviera durante este punto de inflexión, empeora en 1 el atributo Impactar de las armas del agente enemigo. </p>\n<p>En todos los casos para este ardid, esto no se acumula con estar lesionado.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1543,8 +1543,8 @@
         "faction": "legionary",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Destinos Inconstantes",
-        "description": "<p>Siempre que un agente <span class=\"faction\">LEGIONARIO</span> amigo dispare contra un agente enemigo preparado, las armas a distancia de ese agente amigo tienen la <span class=\"text-info-emphasis\"><span class=\"text-warning-emphasis\">Equilibrada</span></span> <span class=\"text-decoration-line-through text-warning-emphasis\">regla de arma; si el arma ya tiene esa regla de armas (p. ej., cañón segador), tiene la regla de armas Implacable</span>. </p>\n<p>Siempre que un agente dispare contra un agente <span class=\"faction\">LEGIONARIO</span> <b>TZEENTCH</b> amigo preparado, en el paso Tirar Dados de Defensa, si retienes algún éxito crítico, puedes retener uno de tus fallos como un éxito normal en lugar de descartarlo.</p>",
+        "name": "Hados Caprichosos",
+        "description": "<p>Cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo dispare contra un agente enemigo apostado, las armas a distancia de ese agente amigo tienen la regla de arma <span class=\"text-info-emphasis\"><span class=\"text-warning-emphasis\">Equilibrada</span></span>. </p>\n<p>Cuando un agente dispara contra un agente <span class=\"faction\">LEGIONARIO</span> <b>TZEENTCH</b> amigo apostado, en el paso de Tirar Dados de Defensa, si guardas algún éxito crítico, puedes guardar uno de tus fallos como un éxito normal, en lugar de descartarlo.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1552,8 +1552,8 @@
         "faction": "legionary",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Derramamiento de Sangre Interminable",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">LEGIONARIO</span> <b>KHORNE</b> amigo sea incapacitado mientras combate o toma represalias.</p> <p>Puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos no resueltos antes de que sea retirado de la zona de aniquilación.</p>",
+        "name": "Masacre Sin Fin",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">LEGIONARIO</span> <b>KHORNE</b> amigo resulte incapacitado mientras combate o contraataca.</p> <p>En esa secuencia puedes golpear al agente enemigo con uno de tus éxitos sin resolver, antes de retirarlo de la zona de aniquilación.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1562,7 +1562,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Mutabilidad y Cambio",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">LEGIONARIO</span> <b>TZEENTCH</b> amigo sea activado.</p> <p>Hasta el final de la activación de ese agente, suma 1 a su atributo de LPA. <span class=\"text-info-emphasis\">Si es un agente <b>GUERRERO</b>, la clave Marcas del Caos de ese agente no se puede cambiar durante este punto de inflexión (ver regla adicional Pacto Infernal).</span></p>",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">LEGIONARIO</span> <b>TZEENTCH</b> amigo sea activado. \nHasta el final de la activación de ese agente, suma 1 a su atributo de LPA, pero no puede realizar la misma acción más de 1 vez durante esa activación.</p> <p>Si es un agente combatiente, la clave Marcas del Caos de ese agente no puede cambiar durante este punto de inflexión (ver la regla adicional Pacto infernal).</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1571,7 +1571,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Aura Maligna",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">LEGIONARIO</span> <b>NURGLE</b> amigo esté realizando la acción Disparar, cuando selecciones un blanco válido.</p> <p>Hasta el final de esa acción, siempre que ese agente dispare contra un agente enemigo a 3\" de él (es decir, incluyendo objetivos secundarios, si los hay), sus armas a distancia tienen la regla de armas Penetración 1.</p>",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">LEGIONARIO</span> <b>NURGLE</b> amigo realice una acción de <b>Disparar</b>, al elegir un blanco válido. Hasta el final de esa acción, si ese agente dispara contra un agente enemigo a 3\" o menos de él (incluyendo posibles blancos secundarios), las armas a distancia de ese agente amigo tienen la regla de arma Penetración 1.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1579,8 +1579,8 @@
         "faction": "legionary",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Cautivación Enfermiza",
-        "description": "<p>Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">LEGIONARIO</span> <b>SLAANESH</b> amigo, antes o después de que realice una acción.</p> <p>Selecciona un agente enemigo visible para y a 4\" de ese agente amigo. Hasta el final de la próxima activación de ese agente enemigo, resta 1 de su atributo de LPA.</p>",
+        "name": "Fascinación  Enfermiza",
+        "description": "<p>Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">LEGIONARIO</span> <b>SLAANESH</b> amigo, antes o después de que realice una acción.</p> <p>Elige un agente enemigo a 4\" o menos de ese agente amigo y visible para él. Hasta el final de la siguiente activación de ese agente enemigo, resta 1 de su atributo LPA.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {

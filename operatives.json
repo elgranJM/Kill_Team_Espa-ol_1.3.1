@@ -10146,7 +10146,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, LÍDER, CAMPEÓN ASPIRANTE",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, LÍDER, CAMPEÓN ASPIRANTE",
             "peana": "32"
         },
         {
@@ -10211,7 +10211,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, LÍDER, ELEGIDO",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, LÍDER, ELEGIDO",
             "peana": "32"
         },
         {
@@ -10248,11 +10248,11 @@
             "abilities": [
                 {
                     "name": "Liberar daemon",
-                    "description": "Una vez por batalla, cuando este agente sea activado, puedes usar esta regla. Hasta el final de la batalla: No puede realizar <b>Recoger marcador</b> o acciones de misión (salvo Operar portillo). Los Daños normales y críticos de 4 o más infligen 1 daño menos. Su garra daemónica gana Incesante y Letal 5+."
+                    "description": "Una vez por batalla, cuando este agente sea activado, puedes usar esta regla. Hasta el final de la batalla: <ul><li>No puede realizar <b>Recoger marcador</b> o acciones de misión (salvo <b>Operar portillo</b>). Si esta llevando un marcador, debe realizar inmediatamente una acción de <b>Colocar marcador</b> por 0PA (esto tiene preferencia sobre todas las demás reglas).</li></ul> <ul><li>Los Daños normales y críticos de 4 o más infligen 1 daño menos a este agente. Si este agente tiene la clave <b>NURGLE</b>, no puedes reducir el daño de un dado de ataque en más de 1. Es decir, no puedes usar ambas reglas para reducir un Daño Normal de 4 o más en 2 puntos.</li></ul> <ul><li>Su garra daemónica tiene las reglas de armas Incesante y Letal 5+.</li></ul>"
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, UNGIDO",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, UNGIDO",
             "peana": "32"
         },
         {
@@ -10308,12 +10308,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Drenar vida",
-                    "description": "Al inicio del paso de Resolver dados de ataque, puedes elegir un agente <span class=\"faction\">LEGIONARIOS</span> amigo a 6\" o menos y visible. Por cada dado de ataque que inflija daño, el amigo recupera 1 herida (o 1D3 si fue crítico). Máximo una vez por punto de inflexión."
+                    "name": "<span class=\"faction\">*</span>Drenar vida",
+                    "description": "Cuando elijas esta arma, puedes usar esta regla. Si lo haces, al inicio del paso de Resolver dados de ataque, puedes elegir un agente <span class=\"faction\">LEGIONARIO</span> amigo a 6\" o menos y visible para él. Por cada dado de ataque que resuelvas en ese paso e inflinja daño, el agente amigo elegido recupera 1 herida perdida, o 1D3 heridas perdidas si era un exito crítico- No puedes usar esta regla de arma más de una vez por punto de inflexión."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, ACÓLITO FUEGOIMPÍO",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, ACÓLITO FUEGOIMPÍO",
             "peana": "32"
         },
         {
@@ -10350,11 +10350,11 @@
             "abilities": [
                 {
                     "name": "Acometida devastadora",
-                    "description": "Los enemigos no pueden apoyar contra este agente. Al final de la activación enemiga, puede realizar una carga gratuita de hasta 2\" si termina en zona de control enemiga."
+                    "description": "<ul><li>Siempre que este agente combata o contraataque, los agentes enemigos no pueden apoyar</li></ul> <ul><li>Al final de la activación o reacción de cada agente enemigo, puedes elegir a un agente enemigo a 2\" o menos de este agente. Este agente puede realizar una acción libre de <b>Cargar</b> (para ello, puedes cambiar su orden a Trabarse), pero no puede moverse más de 2\" y debe terminar dicho movimiento en la zona de control del agente enemigo elegido.</li></ul>"
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, CARNICERO",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, CARNICERO",
             "peana": "32"
         },
         {
@@ -10420,7 +10420,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, TIRADOR",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, TIRADOR",
             "peana": "32"
         },
         {
@@ -10440,7 +10440,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada"
+                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -10450,7 +10450,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Críticos de penetración 1, Pesada, Ráfaga 1\""
+                        "RA": "Críticos de penetración 1, Pesada (solo Reposicionarse), Ráfaga 1\""
                     }
                 },
                 {
@@ -10460,7 +10460,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Área 2\", Pesada"
+                        "RA": "Área 2\", Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -10470,7 +10470,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "5/7",
-                        "RA": "Penetración 1, Pesada"
+                        "RA": "Penetración 1, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -10480,7 +10480,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Castigadora, Incesante, Pesada"
+                        "RA": "Castigadora, Incesante, Pesada (solo Reposicionarse)"
                     }
                 },
                 {
@@ -10490,7 +10490,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Castigadora, Incesante, Pesada, Ráfaga 2\""
+                        "RA": "Castigadora, Incesante, Pesada (solo Reposicionarse), Ráfaga 2\""
                     }
                 },
                 {
@@ -10506,7 +10506,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, TIRADOR PESADO",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, TIRADOR PESADO",
             "peana": "32"
         },
         {
@@ -10519,6 +10519,16 @@
                 "HERIDAS": "14"
             },
             "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
                 {
                     "name": "Bólter",
                     "type": "ranged",
@@ -10538,20 +10548,30 @@
                         "Dñ": "4/5",
                         "RA": "-"
                     }
+                },
+                {
+                    "name": "Espada sierra",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
                 }
             ],
             "abilities": [
                 {
                     "name": "Portador del icono",
-                    "description": "Al determinar el control de un marcador, trata el atributo LPA como si fuese 1 mayor. No es un cambio al atributo, es acumulativo."
+                    "description": "Al determinar el control de un marcador, trata el atributo LPA como si fuese 1 mayor de lo que es. Ten en cuenta que esto no es un cambio al atributo LPA, por lo que cualquier cambio es acumulativo con esto."
                 },
                 {
                     "name": "Favor de los Dioses Oscuros",
-                    "description": "En el paso de Preparación, si controla un marcador no mancillado, este se considera mancillado y ganas 1 PM."
+                    "description": "En el paso de Preparación de cada fase de estrategia, si este agente controla un marcador de objetivo que no ha sido mancillado, ese marcador se considera mancillado durante la batalla y ganas 1 PM. Si algún agente (amigo o enemigo) ha mancillado un marcador de objetivo, no puedes mancillar dicho marcador de objetivo."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, PORTADOR DEL ICONO",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, PORTADOR DEL ICONO",
             "peana": "32"
         },
         {
@@ -10564,6 +10584,16 @@
                 "HERIDAS": "16"
             },
             "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
                 {
                     "name": "Filos de desollar",
                     "type": "melee",
@@ -10578,11 +10608,11 @@
             "abilities": [
                 {
                     "name": "Reflejos feroces",
-                    "description": "Siempre que este agente contraataque, tú resuelves el primer dado de ataque (el defensor antes que el atacante)."
+                    "description": "Siempre que este agente contraataque, tú resuelves el primer dado de ataque (es decir, el defensor antes que el atacante)."
                 },
                 {
                     "name": "Desmembramiento horripilante",
-                    "description": "Si incapacita a un enemigo al<b>Combatir</b>, resta 1 al LPA de otro enemigo a 3\" o menos hasta el final de su siguiente activación."
+                    "description": "Siempre que este agente incapacite a un agente enemigo al combatir o contraatacar, elige otro agente enemigo distinto a 3\" o menos de él y visible para él, o a 3\" o menos del agente enemigo incapacitado. Resta 1 al atributo LPA de ese agente enemigo hasta el final de su siguiente activación."
                 }
             ],
             "uniqueActions": [
@@ -10590,12 +10620,12 @@
                     "name": "MARCA MACABRA",
                     "cost": "2 PA",
                     "description": [
-                        "Coloca tu marcador Macabro en la zona de control de este agente. <ul><li>Enemigos a 3\" del marcador deben gastar 1 PA adicional para <b>Recoger marcador</b> o acciones de misión.</li></ul><ul><li>El LPA total de enemigos que disputan un marcador a 3\" del marcador Macabro se considera 1 menos.</li></ul>"
+                        "Coloca tu marcador Macabro en la zona de control de este agente. <ul><li>Siempre que un agente enemigo a 3\" o menos de tu marcador Macabro, tu oponente debe gastar 1 PA adicional para que ese agente enemigo realice la acción de <b>Recoger marcador</b> o acciones de misión.</li></ul> <ul><li>Al determinar el control de un marcador, el atributo LPA total de los agentes enemigos que lo disputan se considera como si fuese 1 menos, si al menos uno de esos agentes enemigos se encuentra a 3\" o menos de tu marcador Macabro. Ten en cuenta que esto no es un cambio al atributo LPA, por lo que cualquier cambio es acumulativo con esto.</li></ul>"
                     ],
-                    "description_no": "Este agente solo puede realizar esta acción una vez por batalla, y no puede realizarla si está en zona de control enemiga."
+                    "description_no": "Este agente solo puede realizar esta acción una vez por batalla, y no puede realizarla si está en zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, LACERADOR",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, LACERADOR",
             "peana": "32"
         },
         {
@@ -10608,6 +10638,16 @@
                 "HERIDAS": "14"
             },
             "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance \"8"
+                    }
+                },
                 {
                     "name": "Bólter",
                     "type": "ranged",
@@ -10627,16 +10667,26 @@
                         "Dñ": "4/5",
                         "RA": "-"
                     }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
                 }
             ],
             "abilities": [
                 {
                     "name": "Pacto infernal",
-                    "description": "Una vez por batalla, cuando se active, puedes cambiar su clave Marcas del Caos."
+                    "description": "Una vez por batalla, cuando un agente <b>COMBATIENTE</b> <span class=\"faction\">LEGIONARIO</span> amigo se active, puedes usar esta regla. Si lo haces, cambia su clave Marcas del Caos."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">LEGIONARIOS</span>, CAOS, ASTARTES HEREJES, COMBATIENTE",
+            "keywords": "<span class=\"faction\">LEGIONARIO</span>, CAOS, ASTARTES HEREJES, COMBATIENTE",
             "peana": "32"
         }
     ],
@@ -12015,7 +12065,7 @@
         },
         {
             "id": "inquisitorial-agent-penal-legionnaire",
-            "name": "OPERATIVO <span class=\"faction\">LEGIONARIOS</span> PENAL",
+            "name": "OPERATIVO <span class=\"faction\">LEGIONARIO</span> PENAL",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -12055,7 +12105,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">OPERATIVO INQUISITORIAL</span>, IMPERIUM, INQUISICIÓN, <span class=\"faction\">LEGIONARIOS</span> PENAL",
+            "keywords": "<span class=\"faction\">OPERATIVO INQUISITORIAL</span>, IMPERIUM, INQUISICIÓN, <span class=\"faction\">LEGIONARIO</span> PENAL",
             "peana": "25"
         },
         {

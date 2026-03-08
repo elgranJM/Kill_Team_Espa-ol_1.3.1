@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const containers = {
         racial: document.getElementById('faction-info-pane'),
         operatives: document.getElementById('datacards-container'),
+        critops: document.getElementById('critops-pane'),
         tacops: document.getElementById('faction-tacops-pane'),
         ploys: document.getElementById('ploys-pane'),
         equipment: document.getElementById('equipment-pane')
@@ -147,16 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
             populateFactionSelector(e.target.value);
             // Limpiamos los paneles al cambiar de tipo de filtro para evitar confusión
             clearPanes();
-        });
-    }
-
-    function setupDarkMode() {
-        const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        if (isDarkMode) body.classList.add('dark-mode');
-        
-        toggleDarkModeButton?.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
         });
     }
 
@@ -540,7 +531,7 @@ function renderOperatives(factionKey) {
         const html = ploys.map(ploy => {
             const isStrategic = ploy.type === 'strategic';
             const headerColor = isStrategic ? 'bg-dark' : 'bg-secondary';
-            const typeLabel = isStrategic ? 'Estratégico' : 'Táctico';
+            const typeLabel = isStrategic ? 'Ardid de Estrategia' : 'Ardid de Tiroteo';
             
             return `
             <div class="col-12 col-md-6 mb-3">

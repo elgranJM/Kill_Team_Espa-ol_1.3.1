@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const containers = {
         racial: document.getElementById('faction-info-pane'),
         operatives: document.getElementById('datacards-container'),
-        critops: document.getElementById('critops-pane'),
         tacops: document.getElementById('faction-tacops-pane'),
         ploys: document.getElementById('ploys-pane'),
         equipment: document.getElementById('equipment-pane')

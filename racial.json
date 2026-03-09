@@ -665,28 +665,28 @@
             "faction": "plague-marines",
             "type": "team",
             "name": "Agentes",
-            "description": "<p>1 agente <b>CAMPEÓN</b> <span class=\"faction\">MARINE DE PLAGA</span></p>\n<p>5 agentes <span class=\"faction\">MARINES DE PLAGA</span> elegido de la siguiente lista:</p>\n<ul>\n    <li><b>BOMBARDIER</b></li>\n    <li><b>LUCHADOR</b></li>\n    <li><b>TIRADOR PESADO</b></li>\n    <li><b>PORTAICONO</b></li>\n    <li><b>LANZAPLAGAS MALIGNO</b></li>\n    <li><b>COMBATIENTE</b></li>\n</ul>\n<p>Tu comando solo puede incluir cada agente en esta lista una vez.</p>"
-        },
-        {
-            "id_racial": 88,
-            "faction": "plague-marines",
-            "type": "racial",
-            "name": "Veneno",
-            "description": "Algunas armas en las reglas de este equipo tienen la regla de armas <b>Veneno</b>.\n\n<p><span class=\"faction\">*</span><b>Veneno</b>: En el paso Resolver Dados de Ataque, si infliges daño con cualquier éxito, el agente contra el que se está usando este arma <span class=\"text-info-emphasis\">(excluyendo agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos)</span> gana una de tus fichas de Veneno (si no tiene ya una). Siempre que un agente que tenga una de tus fichas de Veneno sea activado, inflige 1 de daño a él.</p>\n\n"
-        },
-        {
-            "id_racial": 89,
-            "faction": "plague-marines",
-            "type": "racial",
-            "name": "Asquerosamente Resistentes",
-            "description": "Siempre que un dado de ataque inflija daño de 3 o más a un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, tira un D6: con un 4+, resta 1 de ese daño infligido."
+            "description": "<p>1 agente <b>CAMPEÓN</b> <span class=\"faction\">MARINE DE PLAGA</span></p>\n<p>5 agentes <span class=\"faction\">MARINE DE PLAGA</span> elegidos de la siguiente lista:</p>\n<ul>\n    <li><b>BOMBARDERO</b></li>\n    <li><b>LUCHADOR</b></li>\n    <li><b>TIRADOR PESADO</b></li>\n    <li><b>PORTAICONO</b></li>\n    <li><b>CONJURAPLAGAS MALIGNO</b></li>\n    <li><b>COMBATIENTE</b></li>\n</ul>\n<p>Tu comando solo puede incluir uno de cada uno de los agentes de esta lista.</p>"
         },
         {
             "id_racial": 90,
             "faction": "plague-marines",
             "type": "racial",
             "name": "Astartes",
-            "description": "Durante la activación de cada agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b>, se debe elegir una pistola bólter, bólter o arma <b>PSÍQUICA</b> para al menos una de ellas. No puedes elegir la misma arma <b>PSÍQUICA</b> <span class=\"text-info-emphasis\">a distancia</span> más de una vez por activación.\n\n<p>Cada agente <span class=\"faction\">MARINE DE PLAGA</span> amigo puede contraatacar independientemente de su orden.</p>"
+            "description": "Durante la activación de cada agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, este puede realizar o bien dos acciones de <b>Combatir</b>, o bien dos acciones de <b>Disparar</b>. Si son dos acciones de <b>Disparar</b>, debe seleccionarse una pistola bólter, un bólter o un arma <b>PSÍQUICA</b> para al menos una de ellas. No puedes elegir la misma arma a distancia <b>PSÍQUICA</b> más de una vez por activación.\n\n<p>Cada agente <span class=\"faction\">MARINE DE PLAGA</span> amigo puede reaccionar sin importar cual sea su orden.</p>"
+        },
+        {
+            "id_racial": 88,
+            "faction": "plague-marines",
+            "type": "racial",
+            "name": "Veneno",
+            "description": "Algunas armas que aparecen en las reglas de este comando tienen la regla de armas Veneno.\n\n<p><span class=\"faction\">*</span><b>Veneno</b>: En el paso Resolver Dados de Ataque, si infliges algun daño con éxito, el agente contra el que se usa esta arma <span class=\"text-info-emphasis\">(salvo agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos)</span> recibe 1 de tus fichas de Veneno (si no tiene una ya). Siempre que un agente que tenga una de tus fichas de Veneno sea activado, inflíngele 1 daño.</p>\n\n"
+        },
+        {
+            "id_racial": 89,
+            "faction": "plague-marines",
+            "type": "racial",
+            "name": "Asquerosamente Resistentes",
+            "description": "Siempre que un dado de ataque inflinja un daño de 3 o más a un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, tira un 1D6: con 4+, resta 1 al daño inflingido."
         }
     ],
     "ratling": [

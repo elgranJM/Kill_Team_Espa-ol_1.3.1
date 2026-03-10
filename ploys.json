@@ -122,7 +122,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Acceso Remoto",
-        "description": "<p>Usa este ardid de tiroteo durante la activación de un agente <b>TECNO-SACERDOTE</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo. Una vez durante esa activación, puedes usar una de las siguientes reglas:</p>\n<ul>\n<li>Ese agente no requiere que un marcador esté dentro de su rango de control para realizar una acción de misión que generalmente lo requiere (teniendo precedencia sobre las condiciones de esa acción). En su lugar, el marcador debe estar a 4\" de él y ningún agente enemigo puede disputar ese marcador. Sin embargo, puedes ignorar a los agentes enemigos dentro del rango de control de otros agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos al determinar esto.</li>\n<li>Ese agente no requiere que el punto de acceso de una compuerta esté dentro de su rango de control para realizar una acción <b>Operar Compuerta</b>. En su lugar, ese punto de acceso debe estar a 4\" de él.</li>\n</ul>\n",
+        "description": "<p>Usa este ardid de tiroteo durante la activación de un agente <b>TECNO-SACERDOTE</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo. Una vez durante esa activación, puedes usar una de las siguientes reglas:</p>\n<ul>\n<li>Ese agente no requiere que un marcador esté dentro de su zona de control para realizar una acción de misión que generalmente lo requiere (teniendo precedencia sobre las condiciones de esa acción). En su lugar, el marcador debe estar a 4\" de él y ningún agente enemigo puede disputar ese marcador. Sin embargo, puedes ignorar a los agentes enemigos dentro del rango de control de otros agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos al determinar esto.</li>\n<li>Ese agente no requiere que el punto de acceso de una compuerta esté dentro de su zona de control para realizar una acción <b>Operar Compuerta</b>. En su lugar, ese punto de acceso debe estar a 4\" de él.</li>\n</ul>\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -401,7 +401,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Refuerzo Brutal",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, antes o después de que realice una acción. Elige un agente enemigo dentro de su rango de control. Otro agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo puede realizar inmediatamente una acción de <b>Combatir</b> gratuita, pero solo puede combatir contra ese agente enemigo.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, antes o después de que realice una acción. Elige un agente enemigo dentro de su zona de control. Otro agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo puede realizar inmediatamente una acción de <b>Combatir</b> gratuita, pero solo puede combatir contra ese agente enemigo.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -923,7 +923,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "LADRÓN",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">RÁTIDO</span> amigo (excluyendo <b>OGRYN</b> o <b>BULLGRYN</b>). Hasta el final de esa activación, ese agente no tiene que controlar un marcador para realizar la acción <b>Recoger Marcador</b> o acciones de misión que generalmente lo requieren (teniendo precedencia sobre las condiciones de esa acción — solo necesita disputar el marcador), y tener un agente enemigo dentro de su rango de control no le impide hacerlo.\n",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">RÁTIDO</span> amigo (excluyendo <b>OGRYN</b> o <b>BULLGRYN</b>). Hasta el final de esa activación, ese agente no tiene que controlar un marcador para realizar la acción <b>Recoger Marcador</b> o acciones de misión que generalmente lo requieren (teniendo precedencia sobre las condiciones de esa acción — solo necesita disputar el marcador), y tener un agente enemigo dentro de su zona de control no le impide hacerlo.\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1364,7 +1364,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Sentido de la Sangre",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo, cuando incapacite a un agente enemigo dentro de su rango de control. Elige otro agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo preparado que sea visible para y esté a 3\" del agente enemigo incapacitado. Cuando ese primer agente amigo esté agotado, puedes activar a ese otro agente amigo antes de que active tu oponente.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo, cuando incapacite a un agente enemigo dentro de su zona de control. Elige otro agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo preparado que sea visible para y esté a 3\" del agente enemigo incapacitado. Cuando ese primer agente amigo esté agotado, puedes activar a ese otro agente amigo antes de que active tu oponente.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1418,7 +1418,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Embestida",
-        "description": "Usa este ardid de tiroteo durante la activación o \ncontraataque de un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigo, antes o después de que realice una acción. Durante esa activación/contraataque:<ul>\n<li>Puede moverse a través de agentes enemigos y dentro de su rango de control.</li>\n<li>Puede realizar las acciones <b>Cargar</b> y <b>Reposicionarse</b> mientras está dentro del rango de control de un agente enemigo, y puede salir del rango de control de ese agente para hacerlo (pero luego se aplican los requisitos normales para ese movimiento).</li></ul>",
+        "description": "Usa este ardid de tiroteo durante la activación o \ncontraataque de un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigo, antes o después de que realice una acción. Durante esa activación/contraataque:<ul>\n<li>Puede moverse a través de agentes enemigos y dentro de su zona de control.</li>\n<li>Puede realizar las acciones <b>Cargar</b> y <b>Reposicionarse</b> mientras está dentro del rango de control de un agente enemigo, y puede salir del rango de control de ese agente para hacerlo (pero luego se aplican los requisitos normales para ese movimiento).</li></ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1589,7 +1589,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Venimos a por Vosotros",
-        "description": "Siempre que un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo sea activado, si la primera acción que realiza durante esa activación es la acción <b>Cargar</b>, cuando termine su movimiento durante esa acción, puedes infligir 1D3 de daño a un agente enemigo dentro de su rango de control.",
+        "description": "Siempre que un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo sea activado, si la primera acción que realiza durante esa activación es la acción <b>Cargar</b>, cuando termine su movimiento durante esa acción, puedes infligir 1D3 de daño a un agente enemigo dentro de su zona de control.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1616,7 +1616,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Regreso a la Oscuridad",
-        "description": "Un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo puede realizar inmediatamente una acción gratuita de <b>Retroceder</b> o <b>Reposicionarse</b>, pero debe terminar ese movimiento con terreno Pesado dentro de su rango de control, o cualquier parte de su peana debajo de terreno de Ventaja. Además, <span class=\"text-warning-emphasis\">no puede moverse más de 4\" durante esa acción y</span> no puede terminar ese movimiento más cerca de agentes enemigos <span class=\"text-info-emphasis\">(en una zona de aniquilación que usa las reglas de combate cerrado, p. ej. zona de aniquilación: Gallowdark, ignora terreno de Muro al determinar esto).</span>\n",
+        "description": "Un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo puede realizar inmediatamente una acción gratuita de <b>Retroceder</b> o <b>Reposicionarse</b>, pero debe terminar ese movimiento con terreno Pesado dentro de su zona de control, o cualquier parte de su peana debajo de terreno de Ventaja. Además, <span class=\"text-warning-emphasis\">no puede moverse más de 4\" durante esa acción y</span> no puede terminar ese movimiento más cerca de agentes enemigos <span class=\"text-info-emphasis\">(en una zona de aniquilación que usa las reglas de combate cerrado, p. ej. zona de aniquilación: Gallowdark, ignora terreno de Muro al determinar esto).</span>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1643,7 +1643,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Proclividad para el Asesinato",
-        "description": "Usa este ardid de tiroteo después de que un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo incapacite a un agente enemigo dentro de su rango de control. Ese agente amigo puede realizar inmediatamente una acción gratuita de <b>Cargar</b> o <b>Correr</b> (para la primera, no puede moverse más de 3\"), incluso si ha realizado una acción que le impide realizar esas acciones.",
+        "description": "Usa este ardid de tiroteo después de que un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo incapacite a un agente enemigo dentro de su zona de control. Ese agente amigo puede realizar inmediatamente una acción gratuita de <b>Cargar</b> o <b>Correr</b> (para la primera, no puede moverse más de 3\"), incluso si ha realizado una acción que le impide realizar esas acciones.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2057,7 +2057,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Luchadores Oportunistas",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo realice la acción <b>Retroceder</b>. Antes de que se mueva, inflige 2D3 de daño a ese agente por cada agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo dentro de su rango de control.",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo realice la acción <b>Retroceder</b>. Antes de que se mueva, inflige 2D3 de daño a ese agente por cada agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo dentro de su zona de control.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2066,7 +2066,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Dedos Ligeros",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo. Hasta el final de esa activación, tener un agente enemigo dentro de su rango de control no impide que ese agente amigo realice la acción <b>Recoger Marcador</b> o <b>Acciones de Misión</b>.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo. Hasta el final de esa activación, tener un agente enemigo dentro de su zona de control no impide que ese agente amigo realice la acción <b>Recoger Marcador</b> o <b>Acciones de Misión</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2669,7 +2669,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "MUERTE DESDE ABAJO",
-        "description": "<p>Siempre que un agente <span class=\"faction\">MANTIFEX</span> amigo esté combatiendo:</p>\n<ul>\n  <li><span class=\"icon icon-yes\"></span> Si ha realizado la acción <b>Excavar</b> durante esa activación/contraataque, sus armas de combate tienen la regla de armas <b>Equilibrada</b>.</li>\n  <li><span class=\"icon icon-yes\"></span> Si está en tu <b>TÚNEL</b>, sus armas de combate tienen la regla de armas <b>Incesante</b>.</li>\n</ul>",
+        "description": "<p>Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo combata:</p>\n<ul>\n  <li>Si ha realizado la acción <b>Excavar</b> durante esa activación o reacción, sus armas de combate tienen la regla de armas Equilibrada.</li>\n  <li>Si está en tu <b>TÚNEL</b>, sus armas de combate tienen la regla de armas Incesante.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2677,8 +2677,8 @@
         "faction": "raveners",
         "type": "strategic",
         "cps": "1PM",
-        "name": "EMERGENCIA DE LATIGAZO",
-        "description": "<p>Siempre que un agente dispare contra un agente <span class=\"faction\">MANTIFEX</span> amigo:</p>\n<ul>\n  <li>Si ese agente amigo ha realizado la acción <b>Excavar</b> durante ese punto de inflexión, puedes repetir uno de tus dados de defensa.</li>\n  <li>Si ese agente amigo está en tu <b>TÚNEL</b>, puedes repetir cualquiera de tus dados de defensa.</li>\n</ul>",
+        "name": "EMERGENCIA ENTRELAZADA",
+        "description": "<p>Siempre que un agente dispare contra un agente <span class=\"faction\">MÁNTIFEX</span> amigo:</p>\n<ul>\n  <li>Si ese agente amigo ha realizado la acción <b>Excavar</b> durante ese punto de inflexión, puedes repetir la tirada de uno de tus dados de defensa.</li>\n  <li>Si ese agente amigo está en tu <b>TÚNEL</b>, puedes repetir la tirada de cualquiera de tus dados de defensa.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2686,8 +2686,8 @@
         "faction": "raveners",
         "type": "strategic",
         "cps": "1PM",
-        "name": "RETORCERSE FUERA DE LA VISTA",
-        "description": "<p>Selecciona un agente <span class=\"faction\">MANTIFEX</span> amigo. Ese agente amigo puede realizar inmediatamente una acción gratuita de <b>Excavar</b>.</p>\n<ul>\n  <li>Si está a 2\" de tu <b>TÚNEL</b>, puede realizar inmediatamente una acción gratuita de <b>Retroceder</b> o <b>Reposicionarse</b> antes de hacerlo.</li>\n</ul>",
+        "name": "DESAPARICIÓN SIBILINA",
+        "description": "<p>Elige un agente <span class=\"faction\">MÁNTIFEX</span> amigo en la zona de aniquilación. Puedes realizar de inmediato una acción libre de <b>Excavar</b> con ese agente.</p>\n<ul>\n  <li>Si se encuentra a 2\" o menos de tu <b>TÚNEL</b>, puedes realizar de inmediato una acción libre de <b>Retroceder</b> o <b>Reposicionarse</b> antes de que lo haga.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2695,8 +2695,8 @@
         "faction": "raveners",
         "type": "strategic",
         "cps": "1PM",
-        "name": "ACECHADORES DE TÚNELES",
-        "description": "<p>Siempre que un agente <span class=\"faction\">MANTIFEX</span> amigo esté en tu <b>TÚNEL</b> está en cobertura, a menos que esté a 2\" del agente activo. Trata esto como cobertura proporcionada por <b>terreno Ligero</b> (por lo tanto, se ve afectado por las reglas que evitan esto, p. ej. <b>Buscadora Ligera</b> y terreno de <b>Ventaja</b>).</p>\n",
+        "name": "ACECHADORES DESDE EL TÚNELES",
+        "description": "<p>Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo se encuentre en tu <b>TÚNEL</b> estará tras cobertura, a menos que se encuentre a 2\" o menos del agente activo. Considera esto como una cobertura brindada por terreno Ligero (y a la que, por tanto, le afectan las reglas que evitan esto, como Buscadora (Ligero) y terreno de Aventajado).</p>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2704,8 +2704,8 @@
         "faction": "raveners",
         "type": "tactical",
         "cps": "1PM",
-        "name": "EVASIÓN DESLIZANTE",
-        "description": "<p>Usa este ardid de tiroteo durante la activación o contraataque de un agente <span class=\"faction\">MANTIFEX</span> amigo<span class=\"text-warning-emphasis\">, antes o después de que realice una acción.</span>. Durante esa activación/contraataque, ese agente puede:</p>\n<ul>\n  <li>Realizar la acción <b>Retroceder</b> por 1 PA menos.</li>\n  <li>Realizar la acción <b>Cargar</b> mientras esté dentro del rango de control de un agente enemigo, y puede salir del rango de control de ese agente para hacerlo (pero luego se aplican los requisitos normales para ese movimiento).</li>\n</ul>",
+        "name": "EVASIÓN SERPENTEANTE",
+        "description": "<p>Usa este ardid de tiroteo durante la activación o reacción de un agente <span class=\"faction\">MÁNTIFEX</span> amigo. Durante esa activación o reacción, ese agente puede:</p>\n<ul>\n  <li>Realizar la acción <b>Retroceder</b> por 1 PA menos.</li>\n  <li>Realizar la acción <b>Cargar</b> aún estando en la zona de control de un agente enemigo. Ademas, al realizarla puede abandonar la zona de control de dicho agente (aunque por lo demás se seguirán aplicando los requisitos normales para ese movimiento).</li>\n</ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2714,7 +2714,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "HORROR SUBTERRÁNEO",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente enemigo esté realizando la acción <b>Combatir</b> y seleccione a un agente <span class=\"faction\">MANTIFEX</span> amigo en tu <b>TÚNEL</b> para combatir contra él. En el paso Resolver Dados de Ataque de esa secuencia, tú resuelves el primer dado de ataque (es decir, defensor en lugar de atacante).</p>\n",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente enemigo realice la acción <b>Combatir</b> y tome como blanco a un agente <span class=\"faction\">MÁNTIFEX</span> amigo en tu <b>TÚNEL</b>. En el paso Resolver Dados de Ataque de esa secuencia, tú resuelves el primer dado de ataque (es decir, el defensor en lugar del atacante).</p>\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2723,7 +2723,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "GOLPE EXCAVADOR",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MANTIFEX</span> amigo realice la acción <b>Excavar</b>. Antes de que ese agente sea retirado de la zona de aniquilación, o después de colocarlo en tu <b>TÚNEL</b>, inflige 1D3+1 de daño a cada agente enemigo dentro de su rango de control. No puedes usar este ardid en la fase de Estrategia, o durante la activación o contraataque de un agente <b>GARRA FEROZ</b> si realiza la acción <b>Embestida Tóxica</b> (y viceversa).</p>\n",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MÁNTIFEX</span> amigo realice la acción <b>Excavar</b>. Antes de que ese agente sea retirado de la zona de aniquilación, o después de desplegarlo en tu <b>TÚNEL</b>, inflinge 1D3+1 de daño a cada agente enemigo dentro de su zona de control (tira por separado para cada uno). No puedes usar este ardid en la fase de Estrategia, durante la activación o la reacción de un agente <b>GARRAVIL</b> si realiza la acción <b>Embestida Tóxica</b> (y viceversa).</p>\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2732,7 +2732,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "FRENESÍ DE MUERTE",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MANTIFEX</span> amigo sea incapacitado. Antes de que ese agente sea retirado de la zona de aniquilación, inflige 1D3 de daño a cada agente enemigo en su rango de control. Si ese agente es un <b>ESCUPIDOR DE VENENO</b> y tiene los efectos de su acción <b>Sacos Distendidos</b>, inflige 2D3 de daño en su lugar.</p>\n",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MÁNTIFEX</span> amigo está incapacitado. Antes de que ese agente sea retirado de la zona de aniquilación, inflinge 1D3 daños a cada agente enemigo en su zona de control (tira por separado para cada uno). Si ese agente es un <b>ESCUPEVENENO</b> que actualmente se esté beneficiando de los efectos de su acción <b>Saco dorsal distendido</b>, en su lugar inflinge 2D3 daños.</p>\n",
         "typename": "Ardid de Tiroteo"
     },
     {

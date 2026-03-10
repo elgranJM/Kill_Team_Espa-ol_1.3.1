@@ -5953,49 +5953,99 @@
             "abilities": [
                 {
                     "name": "Cresta neurodepredadora",
-                    "description": "Al determinar el control de un marcador, considera el atributo LPA total de los agentes enemigos que lo estén disputando como si fuera 1 menos si al menos uno de esos agentes enemigos se encuentra a 3\" o menos de este agente. Además, el oponente debe gastar 1 PA adicional para que esos enemigos realicen acciones de <b>Recoger marcador</b> o de misión."
+                    "description": "Al determinar el control de un marcador, considera el atributo LPA total de los agentes enemigos que lo estén disputando como si fuera 1 menos si al menos uno de esos agentes enemigos se encuentra a 3\" o menos de este agente. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto. Siempre que un agente enemigo se encuentre a 3\" o menos de este agente: <ul><li>Tu oponente debe gastar 1 PA adicional para que ese agente enemigo pueda realizar una acción de <b>Recoger marcador</b> y acciones de misión</li></ul> <ul><li>Tu oponente no puede repetir la tirada de sus dados de ataque o de defensa para ese agente.</li></ul>"
                 },
                 {
                     "name": "Enlace sináptico",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Tira 1D6: Con un resultado del doble o más que el punto de inflexión actual, ganas 1 PM. Si es menor que el punto de inflexión, este agente sufre tanto daño como el resultado."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente no esta incapacitado. Tira 1D6 y compara el resultado con el número del punto de inflexión actual; si el resultado es: <ul><li>El doble o más alto, ganas 1PM</li></ul> <ul><li>Menor, inflige tanto daño a este agente como el resultado</li></ul> <ul><li>Cualquier otro resultado, no ocurre nada.</li></ul>"
                 }
             ],
-            "uniqueActions": [
-                {
-                    "name": "Excavar",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Si el agente está bajo tierra, despliégalo en tu TÚNEL en una ubicación donde pueda ser colocado (puede ser dentro de zona de control enemiga). Resta 2\" a su Movimiento el resto del turno.",
-                        "Si está en la zona de aniquilación y en tu TÚNEL, retíralo: ahora está bajo tierra."
-                    ],
-                    "description_no": "No se puede realizar si el agente transporta un marcador o si no está en tu TÚNEL/bajo tierra."
-                }
-            ],
+            "uniqueActions": [],
             "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, LÍDER, PRIMUS",
             "peana": "40"
         },
         {
-            "id": "tremor-scythe",
-            "name": "MÁNTIFEX GUADAÑA TRÉMULA",
+            "id": "felltalon",
+            "name": "MÁNTIFEX GARRAVIL",
             "stats": {
-                "LPA": "2",
+                "LPA": "3",
                 "MOVER": "7\"",
                 "SALVACIÓN": "5+",
                 "HERIDAS": "20"
             },
             "weapons": [
                 {
-                    "name": "Hoja de cola",
+                    "name": "Pinza de cola",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Alcance 3\", Desgarradora, Silenciosa"
+                        "RA": "Alcance 3\", Silenciosa"
                     }
                 },
                 {
-                    "name": "Garras afiladas y garras aceradas",
+                    "name": "Glándulas tóxicas",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 6\", Silenciosa, Veneno<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Guadañas tóxicas",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Choque, Letal 5+, Veneno<span class=\"faction\">*</span>"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "<span class=\"faction\">*</span>Veneno",
+                    "description": "En el paso de Resolver dados de ataque, si infliges algún daño con éxito, el agente contra el que se usa esta arma obtiene una de tus fichas de Veneno (si no tiene una ya). Siempre que un agente que tenga una de tus fichas de Veneno sea activado, inflígele 1D3 daños."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "Embestida Tóxica",
+                    "cost": "1 LPA",
+                    "description": [
+                        "Elige un agente enemigo a 2\" o menos de este agente. Como alternativa, si este agente se encuentra bajo tierra, elige un agente enemigo en tu <b>TÚNEL</b>. Inflígele a ese agente enemigo 1D3+2 daños y ese agente gana dos de tus fichas de Veneno (si no tenía ya una)."
+                    ],
+                    "description_no": "Este agente puede realizar esta acción bajo tierra (esto tiene prioridad sobre las reglas de Excavar normales)."
+                }
+            ],
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, GARRAVIL",
+            "peana": "40"
+        },
+        {
+            "id": "tremorscythe",
+            "name": "MÁNTIFEX GUADAÑA TRÉMULA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "7\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "20"
+            },
+            "weapons": [
+                {
+                    "name": "Pinza de cola",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 3\", Silenciosa"
+                    }
+                },
+                {
+                    "name": "Espolones afilados y garras aceradas",
                     "type": "melee",
                     "stats": {
                         "A": "5",
@@ -6008,156 +6058,170 @@
             "abilities": [
                 {
                     "name": "Emboscadores subterráneos",
-                    "description": "Siempre que este agente sea desplegado desde bajo tierra mediante la acción Excavar, puede realizar de inmediato una acción libre de <b>Combatir</b> o <b>Disparar</b>."
-                }
-            ],
-            "uniqueActions": [
-                {
-                    "name": "Excavar",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Si el agente está bajo tierra, despliégalo en tu TÚNEL en una ubicación donde pueda ser colocado.",
-                        "Si está en la zona de aniquilación y en tu TÚNEL, retíralo: ahora está bajo tierra."
-                    ],
-                    "description_no": "No se puede realizar si el agente transporta un marcador o si no está en tu TÚNEL/bajo tierra."
-                }
-            ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, GUADAÑA TRÉMULA",
-            "peana": "40"
-        },
-        {
-            "id": "ravager",
-            "name": "MÁNTIFEX DEMOLEDOR",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "7\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "20"
-            },
-            "weapons": [
-                {
-                    "name": "Garras afiladas",
-                    "type": "melee",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "Desgarradora"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Machacar",
-                    "description": "Siempre que este agente combata o contraataque, sus armas de combate tienen la regla de arma Castigadora."
-                }
-            ],
-            "uniqueActions": [
-                {
-                    "name": "Excavar",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Si el agente está bajo tierra, despliégalo en tu TÚNEL en una ubicación donde pueda ser colocado.",
-                        "Si está en la zona de aniquilación y en tu TÚNEL, retíralo: ahora está bajo tierra."
-                    ],
-                    "description_no": "No se puede realizar si el agente transporta un marcador."
-                }
-            ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, DEMOLEDOR",
-            "peana": "40"
-        },
-        {
-            "id": "vile-claw",
-            "name": "MÁNTIFEX GARRAVIL",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "7\"",
-                "SALVACIÓN": "5+",
-                "HERIDAS": "20"
-            },
-            "weapons": [
-                {
-                    "name": "Garras afiladas y garras aceradas",
-                    "type": "melee",
-                    "stats": {
-                        "A": "5",
-                        "HP/HA": "3+",
-                        "Dñ": "4/5",
-                        "RA": "Desgarradora"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Cazador hipersensorial",
-                    "description": "Este agente puede realizar la acción <b>Cargar</b> mientras tiene una orden de Ocultarse si realizó la acción Excavar durante la misma activación."
-                }
-            ],
-            "uniqueActions": [
-                {
-                    "name": "Embestida <span class=\"faction\">*</span>Tóxica",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Elige un agente enemigo visible para este agente y a 3\" o menos. Ese agente sufre inmediatamente 1D3 daños mortales."
-                    ],
-                    "description_no": "No se puede realizar si este agente está bajo tierra."
+                    "description": "<p>Una vez por punto de inflexión en la fase de tiroteo, después de que un agente enemigo realice una acción en la que se mueva más de 2\" y termine a 2\" o menos de tu <b>TÚNEL</b>, si este agente está bajo tierra y se encuentra apostado o no ha reaccionado durante este punto de inflexión, puedes interrumpir para usar esta regla.</p> <p>Si lo haces, activa o reacciona con este agente (lo que sea apropiado), pero durante su activación/reacción debe combatir o disparar contra ese agente enemigo, y hasta que lo haga no podrá combatir ni disparar contra ningún otro agente enemigo (si no le es posible hacerlo, se cancelará la activación/reacción de este agente y esta regla se considerará no usada). Tras completar la activación/reacción de este agente, continúa con la activación/reacción de ese agente enemigo (de ser posible).</p>"
                 },
                 {
-                    "name": "Excavar",
-                    "cost": "1 LPA",
-                    "description": [
-                        "Si el agente está bajo tierra, despliégalo en tu TÚNEL.",
-                        "Si está en la zona de aniquilación y en tu TÚNEL, retíralo: ahora está bajo tierra."
-                    ],
-                    "description_no": "No se puede realizar si el agente transporta un marcador."
+                    "name": "Cazador hipersensorial",
+                    "description": "Este agente puede realizar la acción <b>Cargar</b> mientras tenga una orden de ocultarse si ha realizado la acción <b>Excacar</b> durante la misma activación/reacción."
                 }
             ],
-            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, GARRAVIL",
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, GUADAÑA TRÉMULA",
             "peana": "40"
         },
         {
             "id": "venomspitter",
             "name": "MÁNTIFEX ESCUPEVENENO",
             "stats": {
-                "LPA": "2",
+                "LPA": "3",
                 "MOVER": "7\"",
                 "SALVACIÓN": "5+",
                 "HERIDAS": "20"
             },
             "weapons": [
                 {
-                    "name": "Escupitajo biliar",
+                    "name": "Pinza de cola",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Alcance 12\", Letal 5+, Saturación"
+                        "RA": "Alcance 3\", Silenciosa"
                     }
                 },
                 {
-                    "name": "Garras afiladas",
-                    "type": "melee",
+                    "name": "Proyectil venenoso (área)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Alcance 8\", Área 2\", Veneno<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Proyectil venenoso (concentrado)",
+                    "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Desgarradora"
+                        "RA": "Alcance 8\", Penetración 1, Veneno<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Espolones afilados",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "-"
                     }
                 }
             ],
-            "abilities": [],
+            "abilities": [
+                {
+                    "name": "<span class=\"faction\">*</span>Veneno",
+                    "description": "En el paso de Resolver dados de ataque, si infliges algún daño con éxito, el agente contra el que se usa esta arma obtiene una de tus fichas de Veneno (si no tiene una ya). Siempre que un agente que tenga una de tus fichas de Veneno sea activado, inflígele 1D3 daños."
+                }
+            ],
             "uniqueActions": [
                 {
-                    "name": "Excavar",
+                    "name": "Saco Dorsal Distendido",
                     "cost": "1 LPA",
                     "description": [
-                        "Acción estándar de movimiento subterráneo mediante el TÚNEL."
-                    ],
-                    "description_no": "No se puede realizar si el agente transporta un marcador."
+                        "Hasta que este agente haya disparado con su proyectil venenoso, realice esta acción de nuevo o realice la acción <b>Excavar</b> (lo que ocurra antes), todos los perfiles de su proyectil venenoso tienen la regla de armas Letal 5+, suman 1 a su atributo Atq y se elimina la regla de armas Alcance 8\"."
+                    ]
                 }
             ],
             "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, ESCUPEVENENO",
+            "peana": "40"
+        },
+        {
+            "id": "warrior",
+            "name": "MÁNTIFEX COMBATIENTE",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "7\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "20"
+            },
+            "weapons": [
+                {
+                    "name": "Pinza de cola",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 3\", Silenciosa"
+                    }
+                },
+                {
+                    "name": "Espolones afilados",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Comportamiento instintivo",
+                    "description": "Siempre que este agente dispare, combata o contraataque contra un agente enemigo herido, o un agente enemigo que haya realizado la acción <b>Retroceder</b> durante este punto de inflexión, sus armas tienen la regla de armas Letal 5+."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, COMBATIENTE",
+            "peana": "40"
+        },
+        {
+            "id": "wrecker",
+            "name": "MÁNTIFEX DEMOLEDOR",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "7\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "20"
+            },
+            "weapons": [
+                {
+                    "name": "Mazahueso",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 3\", Penetración 1, Silenciosa"
+                    }
+                },
+                {
+                    "name": "Espolones afilados y garras aplastadoras",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/5",
+                        "RA": "Machacar<span class=\"faction\">*</span>"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Cascarón reforzado",
+                    "description": "Los Daños normales y críticos de 4 o más infligen 1 daño menos a este agente."
+                },
+                {
+                    "name": "<span class=\"faction\">*</span>Machacar",
+                    "description": "Siempre que golpees, desempata con tu oponente y suma 1 al resultado si este agente contra el que se usa esta arma tiene un atributo Heridas de 9 o menos. Si ganas, inflige tanto daño adicional a ese agente como la diferencia entre los resultados (hasta un máximo de 3 daños adicionales)."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">MÁNTIFEX</span>, GRAN DEVORADOR, TIRÁNIDOS, DEMOLEDOR",
             "peana": "40"
         }
     ],

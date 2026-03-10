@@ -925,29 +925,29 @@
   {
     "id_equip": 134,
     "faction": "raveners",
-    "name": "Camuflaje de Cromatosporas",
-    "description": "Siempre que un agente esté disparando a un agente RAVENER amigo, si puedes retener alguna salvación por cobertura, puedes retener una salvación por cobertura adicional. Esto no es acumulativo con salvaciones por cobertura mejoradas por terreno Elevado.",
-    "action": []
-  },
-  {
-    "id_equip": 135,
-    "faction": "raveners",
-    "name": "Carne Metamórfica",
-    "description": "Siempre que un agente RAVENER amigo sea activado, recupera D3 heridas perdidas.",
+    "name": "Camuflaje de Cromatoesporas",
+    "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">MÁNTIFEX</span> amigo, si puedes guardar cualquier salvación por cobertura, puedes guardar una salvación por cobertura adicional. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.",
     "action": []
   },
   {
     "id_equip": 136,
     "faction": "raveners",
     "name": "Sangre Ácida",
-    "description": "Siempre que un agente RAVENER amigo esté combatiendo o contraataque, siempre que un dado de ataque le inflija daño, lanza un D6: con un 5+, inflige 1 de daño al agente enemigo en esa secuencia.",
+    "description": "Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo esté combatiendo o contraatacando, siempre que un dado de ataque le inflinja daño, tira 1D6: con un 5+, inflige 1 de daño al agente enemigo en esa secuencia.",
+    "action": []
+  },
+  {
+    "id_equip": 135,
+    "faction": "raveners",
+    "name": "Carne Metamórfica",
+    "description": "Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo se active, recupera 1D3 heridas perdidas.",
     "action": []
   },
   {
     "id_equip": 137,
     "faction": "raveners",
     "name": "Sentidos Agudizados",
-    "description": "Una vez por batalla, al tirar para decidir la iniciativa, si un agente RAVENER amigo está bajo tierra y un agente enemigo está a 5\" o menos de tu TÚNEL, puedes repetir tu dado.",
+    "description": "Una vez por batalla, despues de desempatar para decidir la iniciativa, si un agente <span class=\"faction\">MÁNTIFEX</span> amigo está bajo tierra y un agente enemigo se encuentra a 5\" o menos de tu <b>TÚNEL</b>, puedes repetir la tirada.",
     "action": []
   },
   {

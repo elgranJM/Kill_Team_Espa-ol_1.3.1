@@ -549,34 +549,35 @@
     "action": []
   },
   {
+    "id_equip": 85,
+    "faction": "plague-marines",
+    "name": "CAMPANAS DE LA PLAGA",
+    "description": "Puedes ignorar cualquier cambio a los atributos de agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos por estar lesionados (incluyendo los atributos de sus armas).",
+    "action": []
+  },
+  {
     "id_equip": 82,
     "faction": "plague-marines",
     "name": "GRANADAS DE PLAGA",
-    "description": "Los agentes PLAGUE MARINE amigos tienen la siguiente arma a distancia (no puedes seleccionarla para su uso más de dos veces durante la batalla):",
+    "description": "Los agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos tienen la siguiente arma a distancia (no puedes elegirla para su uso más de dos veces durante la batalla):",
     "ATK": "4",
     "HIT": "4+",
     "DMG": "2/4",
+    "special_rules": "Alcance 6\", Área 2\", Saturación, Severa, Veneno<span class=\"faction\">*</span>",
+    "action": []
+  },
+  {
+    "id_equip": 84,
+    "faction": "plague-marines",
+    "name": "MUNICIÓN DE PLAGA",
+    "description": "Los bólteres y pistolas bólter de los agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos tienen las reglas de armas Severa y Veneno.",
     "action": []
   },
   {
     "id_equip": 83,
     "faction": "plague-marines",
     "name": "VENTILACIONES DE VENENO",
-    "description": "Siempre que un agente enemigo que tenga una de tus fichas de Veneno se active a 3\" o menos de un agente PLAGUE MARINE amigo, inflige D3 de daño en él (en lugar del 1 normal).",
-    "action": []
-  },
-  {
-    "id_equip": 84,
-    "faction": "plague-marines",
-    "name": "PROYECTILES DE PLAGA",
-    "description": "Los bólteres y pistolas bólter de los agentes PLAGUE MARINE amigos tienen las reglas de arma Veneno y Severa.",
-    "action": []
-  },
-  {
-    "id_equip": 85,
-    "faction": "plague-marines",
-    "name": "CAMPANAS DE PLAGA",
-    "description": "Puedes ignorar cualquier cambio en los atributos de los agentes PLAGUE MARINE amigos por estar lesionados.",
+    "description": "Siempre que un agente enemigo que no tenga una de tus fichas de Veneno sea activado estando a 3\" o menos de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, tira 1D3: con un 3, ese agente recibe una de tus fichas de Veneno.",
     "action": []
   },
   {

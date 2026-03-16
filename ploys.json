@@ -1661,16 +1661,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Contagio",
-        "description": "<p>Resta 2\" del atributo de Movimiento de un agente enemigo y empeora el atributo de Impacto de sus armas en 1 (esto no es acumulativo con estar lesionado) siempre que alguna de las siguientes sea verdadera:</p>\n<ul>\n    <li><span class=\"text-decoration-line-through text-warning-emphasis\">Está dentro del rango de control de agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos.</span> </li>\n    <li>Tiene una de tus fichas de Veneno y es visible para (o viceversa) y a 3\" de agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos.</li>\n    <li>Es visible para (o viceversa) y a 3\" de un agente <b>PORTAICONO</b> <span class=\"faction\">MARINE DE PLAGA</span> amigo.</li>\n</ul>\n",
-        "typename": "Ardid de Estrategia"
-    },
-    {
-        "id_ploy": 390,
-        "faction": "plague-marines",
-        "type": "strategic",
-        "cps": "1PM",
-        "name": "Nube de Moscas",
-        "description": "<p>Coloca uno de tus marcadores de Nube de Moscas en la zona de aniquilación. Siempre que un agente dispare contra un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo que esté a más de 3\" de él, si ese agente amigo está totalmente a <span class=\"text-decoration-line-through text-info-emphasis\">3</span> <span class=\"text-info-emphasis\">1</span>\" de ese marcador, ese agente amigo está ofuscado. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador.</p>\n",
+        "description": "<p>Resta 2\" del atributo Movimiento de un agente enemigo y empeora el atributo Impactar de sus armas en 1 (esto no se puede compaginar con estar herido) cuando se cumpla una de las siguientes condiciones:</p>\n<ul>\n    <li><span class=\"text-decoration-line-through text-warning-emphasis\">Tiene una de tus fichas de Veneno y está a 3\" o menos de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo y es visible para él (o viceversa).</span> </li>\n    <li>Está a 3\" o menos de un agente <b>PORTAICONO</b> <span class=\"faction\">MARINE DE PLAGA</span> amigos y es visible para él (o viceversa).</li>\n    </ul>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1679,7 +1670,16 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Muerte Torpe",
-        "description": "<p>Siempre que un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo dispare o combatiendo durante una activación en la que no se ha movido más de 3\", o siempre que esté contraataque, sus armas tienen la regla de armas Incesante.</p>\n",
+        "description": "<p>Siempre que un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo dispara o combate durante una activación en la que no ha movido más de 3\", o siempre que contraataca, sus armas tienen la regla de arma Incesante.</p>\n",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 390,
+        "faction": "plague-marines",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Nube de Moscas",
+        "description": "<p>Coloca uno de tus marcadores de Nube de Moscas en la zona de aniquilación. Siempre que un agente dispara contra un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo que esté a más de 3\" de él, ese agente amigo está ofuscado si está completamente a 1\" o menos de dicho marcador. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador.</p>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1687,36 +1687,9 @@
         "faction": "plague-marines",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Nurglings",
-        "description": "<p>Selecciona un agente enemigo a 3\" de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, o un agente enemigo que tenga una de tus fichas de Veneno y esté a 7\" de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo. Hasta el final de la próxima activación del agente seleccionado, resta 1 de su atributo de LPA.</p>\n",
+        "name": "Nurgletes",
+        "description": "<p>Elige un agente enemigo a 3\" o menos de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, o un agente enemigo que tenga una de tus fichas de Veneno y esté a 7\" o menos de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo. Hasta el final de la siguiente activación del agente elegido, resta 1 a su atributo LPA.</p>\n",
         "typename": "Ardid de Estrategia"
-    },
-    {
-        "id_ploy": 394,
-        "faction": "plague-marines",
-        "type": "tactical",
-        "cps": "1PM",
-        "name": "Maldición de la Putrefacción",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo esté combatiendo o disparando contra un agente enemigo a 3\" de él (o a 7\" de él si ese agente enemigo tiene una de tus fichas de Veneno), después de que tu oponente tire sus dados de ataque o defensa. Por cada resultado de 3 que tiren, inflige 1 de daño a ese agente enemigo, ese resultado se trata como un fallo y no pueden repetirlo.</p>",
-        "typename": "Ardid de Tiroteo"
-    },
-    {
-        "id_ploy": 395,
-        "faction": "plague-marines",
-        "type": "tactical",
-        "cps": "1PM",
-        "name": "Desaparición Venenosa",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo sea incapacitado<span class=\"text-info-emphasis\">, antes de que sea retirado de la zona de aniquilación</span>. Cada agente enemigo visible para y a 3\" de ese agente gana una de tus fichas de Veneno (si no tienen ya una); por cada uno de esos agentes enemigos que ya tenga una de tus fichas de Veneno (incluyendo si ganaron una durante esta acción), inflige 1 de daño en ellos en su lugar.</p>",
-        "typename": "Ardid de Tiroteo"
-    },
-    {
-        "id_ploy": 393,
-        "faction": "plague-marines",
-        "type": "tactical",
-        "cps": "1PM",
-        "name": "Resistencia Enfermiza",
-        "description": "<p>Usa este ardid de tiroteo cuando un dado de ataque inflija daño a un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo. Hasta el final de la activación o contraataque, para los propósitos de la regla Asquerosamente Resistentes para ese agente, resta siempre 1 del daño infligido (hasta un mínimo de 2) — no necesitas tirar.</p>",
-        "typename": "Ardid de Tiroteo"
     },
     {
         "id_ploy": 392,
@@ -1724,7 +1697,34 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Veneno Virulento",
-        "description": "<p>Usa este ardid de tiroteo durante la activación o contraataque de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, antes o después de que realice una acción. Elige uno de los siguientes:</p>\n  <ul>\n    <li>Un agente enemigo a 3\" de ese agente gana una de tus fichas de Veneno (si no tiene ya una).</li>\n    <li>Tira 2D6: si el resultado es 7+, un agente enemigo a 7\" de ese agente gana una de tus fichas de Veneno (si no tiene ya una).</li>\n  </ul>",
+        "description": "<p>Usa este ardid de tiroteo durante la activación o reacción de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, antes o después de que realice una acción. Un agente enemigo a 3\" o menos de ese agente, o a 7\" o menos de ese agente y visible para él, recibe una de tus fichas de Veneno (si no tiene ya una).</p>",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 395,
+        "faction": "plague-marines",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Final Ponzoñoso",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo resulte incapacitado<span class=\"text-info-emphasis\">, antes de retirarlo de la zona de aniquilación</span>. Cada agente enemigo a 3\" o menos de ese agente y visible para él obtiene una de tus fichas de Veneno (si no tiene una ya una); inflige 1 daño en su lugar a cada uno de esos agentes enemigos que tuviera ya una de tus fichas de Veneno (incluyendo si han la obtenido durante esa misma acción).</p>",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 393,
+        "faction": "plague-marines",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Robustez Enfermiza",
+        "description": "<p>Usa este ardid de tiroteo cuando un dado de ataque inflinge daño a un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo. Hasta el final de la activación o reacción, a efectos de la regla Asquerosamente Resistentes de ese agente, resta siempre 1 al daño inflingido (hasta un mínimo de 2); no hace falta que tires.</p>",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 394,
+        "faction": "plague-marines",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Maldición de la Podredumbre",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo combate o dispara contra un agente enemigo a 3\" o menos de él (o a 7\" o menos de él si ese agente enemigo tiene una de tus fichas de Veneno), después de que tu oponente tire sus dados de ataque o defensa. Por cada resultado de 3 que saque, inflinge 1 daño a ese agente enemigo, ese resultado no se puede guardar como exito y no lo puede repetir.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {

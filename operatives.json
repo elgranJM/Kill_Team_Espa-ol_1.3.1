@@ -6970,7 +6970,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Severa, <span class=\"faction\">*</span>Tóxica, Veneno"
+            "RA": "Severa, Tóxica<span class=\"faction\">*</span>, Veneno<span class=\"faction\">*</span>"
           }
         }
       ],
@@ -6986,69 +6986,6 @@
       ],
       "uniqueActions": [],
       "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, LÍDER, CAMPEÓN",
-      "peana": "32"
-    },
-    {
-      "id": "malignant-plaguecaster",
-      "name": "CONJURAPLAGAS MALIGNO",
-      "stats": {
-        "LPA": "3",
-        "MOVER": "5\"",
-        "SALVACIÓN": "3+",
-        "HERIDAS": "14"
-      },
-      "weapons": [
-        {
-          "name": "Entropía",
-          "type": "ranged",
-          "stats": {
-            "A": "4",
-            "HP/HA": "3+",
-            "Dñ": "3/7",
-            "RA": "<b>PSÍQUICA</b>, Alcance 7\", Saturación, Severa, Veneno"
-          }
-        },
-        {
-          "name": "Viento de plaga",
-          "type": "ranged",
-          "stats": {
-            "A": "6",
-            "HP/HA": "3+",
-            "Dñ": "2/3",
-            "RA": "<b>PSÍQUICA</b>, Ráfaga 1\", Saturación, Severa, Veneno"
-          }
-        },
-        {
-          "name": "Báculo corrompido",
-          "type": "melee",
-          "stats": {
-            "A": "4",
-            "HP/HA": "3+",
-            "Dñ": "3/4",
-            "RA": "<b>PSÍQUICA</b>, Aturdidora, Choque, Severa, Veneno"
-          }
-        }
-      ],
-      "abilities": [],
-      "uniqueActions": [
-        {
-          "name": "MIASMA VENENOSO",
-          "cost": "1 LPA",
-          "description": [
-            "<b>PSÍQUICA.</b> Elige un agente enemigo a 7\" o menos de este agente y visible para él, o un agente enemigo que sea un blanco válido para este agente. Ese agente enemigo obtiene una de tus fichas de Veneno (si no tiene una ya). Si ya tiene una, en su lugar inflige 3 daños a ese agente enemigo."
-          ],
-          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
-        },
-        {
-          "name": "VITALIDAD PÚTRIDA",
-          "cost": "1 LPA",
-          "description": [
-            "<b>PSÍQUICA.</b> Elige un agente amigo a 3\" o menos de este agente y visible para él, y luego tira 2D6. Si el resultado es 7, el agente elegido recupera 7 heridas perdidas. En caso contrario, el agente elegido recupera tantas heridas perdidas como el resultado más elevado entre ambos D6."
-          ],
-          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
-        }
-      ],
-      "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, CONJURAPLAGAS MALIGNO",
       "peana": "32"
     },
     {
@@ -7085,7 +7022,7 @@
       "abilities": [
         {
           "name": "Granadero",
-          "description": "Este agente puede usar granadas de plaga y Penetracións (ver equipo de facción y universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma y las granadas de plaga tienen la regla de arma <span class=\"faction\">*</span>Tóxica."
+          "description": "Este agente puede usar granadas de plaga y perforantes (ver equipo de facción y universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma y las granadas de plaga tienen la regla de arma Tóxica (ver debajo)"
         },
         {
           "name": "<span class=\"faction\">*</span>Tóxica",
@@ -7113,7 +7050,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Brutal, Choque, Severa, Veneno"
+            "RA": "Brutal, Choque, Severa, Veneno<span class=\"faction\">*</span>"
           }
         }
       ],
@@ -7123,13 +7060,48 @@
           "name": "MAYAL GIRATORIO",
           "cost": "1 LPA",
           "description": [
-            "Inflige 1D3-2 daños a cada otro agente que esté a 2\" o menos de este agente y sea visible para él.",
-            "Tira por separado por cada uno: si se trata de un agente enemigo y el resultado del D3 es 3, ese agente enemigo obtiene además una de tus fichas de Veneno (si no tiene una ya)."
+            "Inflige 1D3+2 daños a cada otro agente que esté a 2\" o menos de este agente y sea visible para él. Tira por separado por cada uno: si se trata de un agente enemigo y el resultado del D3 es 3, ese agente enemigo obtiene además una de tus fichas de Veneno (si no tiene una ya)."
           ],
-          "description_no": "Este agente no puede realizar esta acción mientras tiene una orden de ocultarse, o durante una activación en la que ha realizado más de una acción de <b>Combatir</b>, y no puede realizar más de una acción de <b>Combatir</b> durante una activación en la que realice esta acción."
+          "description_no": "A efectos de las restricciones de acciones y la regla de facción Astartes, esta acción se trata como una acción de <b>Combatir</b>. Este agente no puede realizar esta acción mientras tenga una orden de ocultarse."
         }
       ],
       "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, LUCHADOR",
+      "peana": "32"
+    },
+    {
+      "id": "plague-marine-heavy-gunner",
+      "name": "TIRADOR PESADO MARINE DE PLAGA",
+      "stats": {
+        "LPA": "3",
+        "MOVER": "5\"",
+        "SALVACIÓN": "3+",
+        "HERIDAS": "14"
+      },
+      "weapons": [
+        {
+          "name": "Regurgitador de plaga",
+          "type": "ranged",
+          "stats": {
+            "A": "5",
+            "HP/HA": "2+",
+            "Dñ": "3/3",
+            "RA": "Alcance 7\", Ráfaga 2\", Saturación, Severa, Veneno<span class=\"faction\">*</span>"
+          }
+        },
+        {
+          "name": "Puños",
+          "type": "melee",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "-"
+          }
+        }
+      ],
+      "abilities": [],
+      "uniqueActions": [],
+      "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, TIRADOR PESADO",
       "peana": "32"
     },
     {
@@ -7159,7 +7131,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "3/4",
-            "RA": "Severa, Veneno"
+            "RA": "Severa, Veneno<span class=\"faction\">*</span>"
           }
         }
       ],
@@ -7170,11 +7142,74 @@
         },
         {
           "name": "Icono del contagio",
-          "description": "Si este agente está en el territorio del oponente, el ardid de estrategia Contagio te cuesta OPM."
+          "description": "Si este agente está en el territorio del oponente, el ardid de estrategia Contagio te cuesta 0PM."
         }
       ],
       "uniqueActions": [],
       "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, PORTAICONO",
+      "peana": "32"
+    },
+    {
+      "id": "malignant-plaguecaster",
+      "name": "CONJURAPLAGAS MALIGNO",
+      "stats": {
+        "LPA": "3",
+        "MOVER": "5\"",
+        "SALVACIÓN": "3+",
+        "HERIDAS": "14"
+      },
+      "weapons": [
+        {
+          "name": "Entropía",
+          "type": "ranged",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/7",
+            "RA": "<b>PSÍQUICA</b>, Alcance 7\", Saturación, Severa, Veneno<span class=\"faction\">*</span>"
+          }
+        },
+        {
+          "name": "Viento de plaga",
+          "type": "ranged",
+          "stats": {
+            "A": "6",
+            "HP/HA": "3+",
+            "Dñ": "2/3",
+            "RA": "<b>PSÍQUICA</b>, Ráfaga 1\", Saturación, Severa, Veneno<span class=\"faction\">*</span>"
+          }
+        },
+        {
+          "name": "Báculo corrompido",
+          "type": "melee",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "<b>PSÍQUICA</b>, Aturdidora, Choque, Severa, Veneno<span class=\"faction\">*</span>"
+          }
+        }
+      ],
+      "abilities": [],
+      "uniqueActions": [
+        {
+          "name": "MIASMA VENENOSO",
+          "cost": "1 LPA",
+          "description": [
+            "<b>PSÍQUICA.</b> Elige un agente enemigo a 7\" o menos de este agente y visible para él, o un agente enemigo que sea un blanco válido para este agente. Ese agente enemigo obtiene una de tus fichas de Veneno (si no tiene una ya). Si ya tiene una, en su lugar inflige 3 daños a ese agente enemigo."
+          ],
+          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
+        },
+        {
+          "name": "VITALIDAD PÚTRIDA",
+          "cost": "1 LPA",
+          "description": [
+            "<b>PSÍQUICA.</b> Elige un agente amigo a 3\" o menos de este agente y visible para él, y luego tira 2D6. Si el resultado es 7, el agente elegido recupera 7 heridas perdidas; En caso contrario, el agente elegido recupera tantas heridas perdidas como el resultado más elevado entre ambos D6."
+          ],
+          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
+        }
+      ],
+      "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, CONJURAPLAGAS MALIGNO",
       "peana": "32"
     },
     {
@@ -7194,7 +7229,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "3/4",
-            "RA": "<span class=\"faction\">*</span>Tóxica"
+            "RA": "Tóxica<span class=\"faction\">*</span>"
           }
         },
         {
@@ -7204,7 +7239,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "3/4",
-            "RA": "Severa, Veneno"
+            "RA": "Severa, Veneno<span class=\"faction\">*</span>"
           }
         }
       ],
@@ -7220,42 +7255,6 @@
       ],
       "uniqueActions": [],
       "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, COMBATIENTE",
-      "peana": "32"
-    },
-    {
-      "id": "plague-marine-heavy-gunner",
-      "name": "TIRADOR PESADO MARINE DE PLAGA",
-      "stats": {
-        "LPA": "3",
-        "MOVER": "5\"",
-        "SALVACIÓN": "3+",
-        "HERIDAS": "14"
-      },
-      "weapons": [
-        {
-          "name": "Regurgitador de plaga",
-          "type": "ranged",
-          "stats": {
-            "A": "5",
-            "HP/HA": "2+",
-            "Dñ": "3/3",
-            "RA": "Alcance 7\", Ráfaga 2\", Saturación, Severa, Veneno"
-          }
-        },
-        {
-          "name": "Puños",
-          "type": "melee",
-          "stats": {
-            "A": "4",
-            "HP/HA": "3+",
-            "Dñ": "3/4",
-            "RA": "-"
-          }
-        }
-      ],
-      "abilities": [],
-      "uniqueActions": [],
-      "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, TIRADOR PESADO",
       "peana": "32"
     }
   ],

@@ -1661,7 +1661,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Contagio",
-        "description": "<p>Resta 2\" del atributo Movimiento de un agente enemigo y empeora el atributo Impactar de sus armas en 1 (esto no se puede compaginar con estar herido) cuando se cumpla una de las siguientes condiciones:</p>\n<ul>\n    <li><span class=\"text-decoration-line-through text-warning-emphasis\">Tiene una de tus fichas de Veneno y está a 3\" o menos de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo y es visible para él (o viceversa).</span> </li>\n    <li>Está a 3\" o menos de un agente <b>PORTAICONO</b> <span class=\"faction\">MARINE DE PLAGA</span> amigos y es visible para él (o viceversa).</li>\n    </ul>\n",
+        "description": "<p>Resta 2\" del atributo Movimiento de un agente enemigo y empeora el atributo Impactar de sus armas en 1 (esto no se puede compaginar con estar herido) cuando se cumpla una de las siguientes condiciones:</p>\n<ul>\n    <li>Tiene una de tus fichas de Veneno y está a 3\" o menos de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo y es visible para él (o viceversa).</li>\n    <li>Está a 3\" o menos de un agente <b>PORTAICONO</b> <span class=\"faction\">MARINE DE PLAGA</span> amigos y es visible para él (o viceversa).</li>\n    </ul>\n",
         "typename": "Ardid de Estrategia"
     },
     {

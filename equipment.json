@@ -191,28 +191,28 @@
     "id_equip": 25,
     "faction": "novitiates",
     "name": "Icono de Fe",
-    "description": "Una vez por Punto de Inflexión, puedes usar hasta dos ACTOS DE FE durante una secuencia, pero cada uno debe ser diferente. Esto tiene prioridad sobre las reglas normales de ACTOS DE FE.",
+    "description": "Una vez por Punto de Inflexión, puedes usar hasta dos <b>ACTOS DE FE</b> durante una secuencia, pero cada uno debe ser distinto. Esto tiene prioridad sobre las reglas normales de <b>ACTOS DE FE</b>.",
     "action": []
   },
   {
     "id_ploy": 26,
     "faction": "novitiates",
-    "name": "Rondas Santificadas",
-    "description": "Siempre que un agente <span class=\"faction\">NOVICIA</span amigo esté disparando con un autocañón, autopistola, pistola bólter reliquia o bólter reliquia, si gastas un Punto de Fe, esa arma tiene la regla de armas Críticos Perforantes 1 hasta el final de esa secuencia.",
+    "name": "Proyectiles Santificados",
+    "description": "Siempre que una agente <span class=\"faction\">NOVICIA</span amiga dispare con un bólter reliquia, una pistola automática, una pistola bólter reliquia o un rifle automático, si gastas un Punto de Fe, esa arma tiene la regla de armas Críticos de Penetración 1 hasta el final de esa secuencia.",
     "action": []
   },
   {
     "id_ploy": 27,
     "faction": "novitiates",
-    "name": "Auto-Castigador",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">NOVICIA</span amigo esté disparando, combatiendo o contraataque, en el paso de Tirar Dados de Ataque, puedes infligir 1-3 de daño a ese agente amigo (pero no lo suficiente para incapacitarlo). Si lo haces, puedes usar un ACTO DE FE gratis durante esa secuencia con un coste de Puntos de Fe no mayor al daño que infligiste con esta regla.",
+    "name": "Autocastigador",
+    "description": "Una vez por Punto de Inflexión, cuando una agente <span class=\"faction\">NOVICIA</span amiga dispare, combata o contraataque, en el paso de Tirar Dados de Ataque, puedes inflingir 1-3 de daño a ese agente amiga (pero no lo suficiente para incapacitarla). Si lo haces, durante esa secuencia puedes usar gratis un <b>ACTO DE FE</b> cuyo coste en Puntos de Fe no sea mayor que el daño que has inflingido mediante esta regla.",
     "action": []
   },
   {
     "id_ploy": 28,
     "faction": "novitiates",
-    "name": "Embrocaciones Sagradas",
-    "description": "Puedes ignorar cualquier cambio en el atributo de Movimiento de los agentes <span class=\"faction\">NOVICIA</span amigos por estar lesionados.",
+    "name": "Émbrocas Sagradas",
+    "description": "Puedes ignorar cualquier cambio al atributo Movimiento de las agentes <span class=\"faction\">NOVICIA</span amigas por estar lesionadas.",
     "action": []
   },
   {
@@ -376,7 +376,7 @@
     "id_equip": 50,
     "faction": "elucidian-starstrider",
     "name": "Condensadores Sobrecargados",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente ELUCIDIAN STARSTRIDER amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola láser o rifle láser, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, añade 1 a ambos atributos de Daño de esa arma y tiene las reglas de arma Caliente y Críticos Perforantes 1. Ten en cuenta que las pistolas láser reliquia están excluidas de esta regla.",
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente ELUCIDIAN STARSTRIDER amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola láser o rifle láser, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, añade 1 a ambos atributos de Daño de esa arma y tiene las reglas de arma Caliente y Críticos de Penetración 1. Ten en cuenta que las pistolas láser reliquia están excluidas de esta regla.",
     "action": []
   },
   {

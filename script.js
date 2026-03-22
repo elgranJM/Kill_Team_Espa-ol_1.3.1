@@ -150,16 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function setupDarkMode() {
-        const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        if (isDarkMode) body.classList.add('dark-mode');
-        
-        toggleDarkModeButton?.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-        });
-    }
-
     async function loadData() {
         const files = {
             ploys: 'ploys.json',
@@ -350,7 +340,7 @@ function renderOperatives(factionKey) {
         const abilitiesHtml = op.abilities?.length ? 
             `<div class="mt-2 p-2 bg-light rounded"><strong>Habilidades:</strong>${op.abilities.map(a => `<div class="mb-1"><span class="fw-bold">${a.name}:</span> ${a.description}</div>`).join('')}</div>` : '';
 
-        // NUEVO: Generación de HTML para Acciones Únicas (Sistema de Yes/No)
+        // Generación de HTML para Acciones Únicas (Sistema de Yes/No)
         const actionsHtml = op.uniqueActions?.length ? 
             `<div class="mt-2 p-2 border rounded">
                 <strong>Acciones:</strong>
@@ -540,7 +530,7 @@ function renderOperatives(factionKey) {
         const html = ploys.map(ploy => {
             const isStrategic = ploy.type === 'strategic';
             const headerColor = isStrategic ? 'bg-dark' : 'bg-secondary';
-            const typeLabel = isStrategic ? 'Estratégico' : 'Táctico';
+            const typeLabel = isStrategic ? 'Ardid de Estrategia' : 'Ardid de Tiroteo';
             
             return `
             <div class="col-12 col-md-6 mb-3">

@@ -320,7 +320,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Marcha Rápida",
-        "description": "Siempre que un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo realice la acción Reposicionarse durante su activación, puedes usar esta regla. Si lo haces, suma 1\" a su atributo de Movimiento hasta el final de esa activación, pero debe terminar ese movimiento más cerca de la zona de desembarco de tu oponente y no puede usar un <b>RECURSO DE APOYO CORSARIO</b> durante esa activación.",
+        "description": "Siempre que un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo realice la acción Reposicionarse durante su activación, puedes usar esta regla. Si lo haces, suma 1\" a su atributo de Movimiento hasta el final de esa activación, pero debe terminar ese movimiento más cerca de la zona de descenso de tu oponente y no puede usar un <b>RECURSO DE APOYO CORSARIO</b> durante esa activación.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -724,8 +724,8 @@
         "faction": "novitiates",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Venganza Ardiente",
-        "description": "Siempre que un agente <span class=\"faction\">NOVICIA</span> amigo dispare, combatiendo o contraataque contra un agente enemigo agotado, las armas de ese agente amigo tienen la regla de armas Castigadora.",
+        "name": "Venganza Ferviente",
+        "description": "Siempre que una agente <span class=\"faction\">NOVICIA</span> amiga dispare, combata o contraataque contra un agente enemigo usado, las armas de esa agente amiga tienen la regla de armas Castigadora.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -734,7 +734,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Defensoras de la Fe",
-        "description": "Siempre que un agente dispare, combatiendo o contraataque contra un agente <span class=\"faction\">NOVICIA</span> amigo que disputa un marcador de objetivo <span class=\"text-info-emphasis text-decoration-line-through\">o uno de tus marcadores de misión</span>, en el paso Resolver Dados de Ataque de esa secuencia, puedes reducir a la mitad el daño infligido (redondeando hacia arriba <span class=\"text-info-emphasis\">y hasta un mínimo de 2</span>) a ese agente amigo de un éxito <span class=\"text-info-emphasis\">normal</span>.",
+        "description": "Siempre que un agente dispare, combata o contraataque contra una agente <span class=\"faction\">NOVICIA</span> amiga que dispute un marcador de objetivo, en el paso de Resolver Dados de Ataque de esa secuencia, puedes reducir a la mitad (redondeando a un mínimo de 2) el daño infligido a esa agente amiga por un éxito normal.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -743,7 +743,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Rejuvenecimiento Bendito",
-        "description": "Siempre que gastes Puntos de Fe, al final de esa acción, el agente amigo en el que los gastaste <span class=\"text-info-emphasis\">puede recuperar hasta 1D3 heridas perdidas</span>. Ten en cuenta que este ardid no tiene efecto si el <b>ACTO DE FE</b> no cuesta ningún Punto de Fe, p. ej. equipo Auto-castigadores.",
+        "description": "Siempre que gastes Puntos de Fe, al final de esa acción, la agente amiga en la que los gastaste puede recuperar hasta 1D3 heridas perdidas. Ten en cuenta que este ardid no tiene ningun efecto si esa agente amiga quedó incapacitada durante esa acción, o si el <b>ACTO DE FE</b> no cuesta ningún Punto de Fe, p. ej. gracias al equipo Autocastigadores.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -751,8 +751,8 @@
         "faction": "novitiates",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Avance Justo",
-        "description": "Hasta un tercio de los agentes <span class=\"faction\">NOVICIA</span> amigos en la zona de aniquilación (redondeando hacia abajo, hasta un mínimo de 1) pueden realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección, pero cada uno que lo haga debe terminar ese movimiento más cerca de su agente enemigo más cercano, su marcador de objetivo más cercano o la zona de desembarco de tu oponente (puedes elegir por separado para cada uno).\nNo puedes usar este ardid durante el primer punto de inflexión.",
+        "name": "Avance de las Justas",
+        "description": "Hasta un tercio de las agentes <span class=\"faction\">NOVICIA</span> amigas en la zona de aniquilación (redondeando a la baja, hasta un mínimo de 1) pueden realizar inmediatamente una acción libre de <b>Correr</b> en el orden que elijas, pero todas las que lo hagan deberan terminar ese movimiento más cerca de lo que estaban del agente enemigo más cercano a ella, del marcador de objetivo más cercano a ella o de la zona de descenso de tu oponente (puedes elegir por separado para cada una).\nNo puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -761,7 +761,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Martirio Glorioso",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">NOVICIA</span> amigo sea incapacitado<span class=\"text-info-emphasis\">, antes de que sea retirado de la zona de aniquilación.</span>. Por cada agente enemigo visible para y a 2\" de él, ganas 1 Punto de Fe e infliges 1D3 de daño a ese agente enemigo (tira por separado para cada uno).",
+        "description": "Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga resulte incapacitada. Por cada agente enemigo a 2\" o menos de ella y visible para ella, ganas 1 Punto de Fe e infliges 1D3 daños a dicho agente enemigo (tira por cada uno por separado).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -769,8 +769,8 @@
         "faction": "novitiates",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Infierno Ardiente",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente <span class=\"faction\">NOVICIA</span> amigo dispare con un lanzallamas del Ministorum y <span class=\"text-warning-emphasis\">inflijas daño con</span> cualquier éxito crítico. El objetivo gana una de tus fichas de Llamarada (si no tiene ya una). Siempre que un agente que tenga una de tus fichas de Llamarada sea activado:</p>\n\n<ul>\n  <li>Inflige 1D3 de daño a él.</li>\n  <li>Su jugador controlador puede restar 1 del atributo de LPA de ese agente hasta el final de esa activación para retirar esa ficha. Ten en cuenta que esto debe hacerse antes de que ese agente realice cualquier acción durante esa activación.</li>\n</ul>",
+        "name": "Inmolación Ardiente",
+        "description": "<p>Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un lanzallamas del Ministorum e inflinjas daño con algun éxito crítico. El blanco recibe una de tus fichas de Inmolación (si no tenía ya una). Siempre que un agente con una de tus fichas de Inmolación sea activado:</p>\n\n<ul>\n  <li>Inflingele 1D3 daños.</li>\n  <li>Su jugador controlador puede restar 1 al LPA de dicho agente hasta el final de esa activación para retirar esa ficha. Esto debe hacerse antes de que el agente con la ficcha de Inmolación realice ninguna acción durante esa activación.</li>\n</ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -779,7 +779,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Aura Cegadora",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo esté realizando la acción <b>Disparar</b> y seleccione a un agente <span class=\"faction\">NOVICIA</span> amigo como el blanco válido. Hasta el final de esa activación/contraataque, mientras ese agente amigo esté a más de 2\" de ese agente enemigo, tu oponente no puede seleccionarlo como un blanco válido. Si no hay otros blancos válidos que tu oponente pueda seleccionar, esa acción termina (no se cancela, por lo que ese agente aún la ha realizado). Ten en cuenta que este ardid no tiene efecto si no es el agente seleccionado, p. ej. si es un objetivo secundario de la regla de armas Estallido.",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo realice una acción <b>Disparar</b> y tome como blanco válido una agente <span class=\"faction\">NOVICIA</span> amiga. Hasta el final de esa activación o reacción, si la agente amiga tomada como blanco se encuentra a más de 2\" del agente enemigo en cuestión, tu oponente no puede tomarla como blanco válido. Si no hay otros blancos válidos que tu oponente pueda elegir, esa acción termina (ten en cuenta que no se cancela, por lo que ese agente sigue habiéndola realizado). Este ardid no tiene ningún efecto si la agente no es un blanco elegido (p.ej., si es un blanco secundario de un arma de Área).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -788,7 +788,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Guiada por la Fe",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">NOVICIA</span> amigo esté realizando la acción <b>Disparar</b> y estés seleccionando un arma a distancia. Hasta el final de esa acción, siempre que ese agente dispare contra un agente a 6\" de él, esa arma tiene la regla de armas Buscadora Ligera",
+        "description": "Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga realice una acción de <b>Disparar</b> y estés eligiendo arma a distancia. Hasta el final de esa acción, cuando la agente en cuestión dispare contra un agente a 6\" o menos de ella, su arma tiene la regla de armas Buscadora (Ligero).",
         "typename": "Ardid de Tiroteo"
     },
     {

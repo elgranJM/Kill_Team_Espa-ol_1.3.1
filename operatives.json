@@ -8768,11 +8768,11 @@
       "abilities": [
         {
           "name": "Ejemplo inspirador",
-          "description": "Siempre que esta agente incapacite a un agente enemigo, ganas 1 punto de fe, o 2 puntos de fe si ese agente enemigo tenía un atributo Heridas de 12 o más. Esta regla no tiene efecto cuando se usa el ardid de tiroteo Martirio glorioso."
+          "description": "Siempre que esta agente incapacite a un agente enemigo, ganas 1 Punto de Fe, o 2 Puntos de Fe si ese agente enemigo tenía un atributo Heridas de 12 o más. Esta regla no tiene efecto cuando se usa el ardid de tiroteo Martirio glorioso."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, LÍDER, SUPERIORA",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, LÍDER, SUPERIORA",
       "peana": "32"
     },
     {
@@ -8792,7 +8792,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "3/3",
-            "RA": "AntiPSÍQUICO, Críticos de penetración 1, Devastadora 2, Silenciosa"
+            "RA": "Anti<b>PSÍQUICO<span class=\"faction\">*</span></b>, Críticos de penetración 1, Devastadora 2, Silenciosa"
           }
         },
         {
@@ -8802,22 +8802,22 @@
             "A": "4",
             "HP/HA": "4+",
             "Dñ": "3/3",
-            "RA": "AntiPSÍQUICO, Choque"
+            "RA": "Anti<b>PSÍQUICO<span class=\"faction\">*</span></b>, Choque"
           }
         }
       ],
       "abilities": [
         {
           "name": "Vara nulificadora",
-          "description": "Las armas a distancia PSÍQUICAS no pueden infligir daños a esta agente. Mientras un agente esté a 6\" o menos de esta agente: ese agente no puede realizar acciones PSÍQUICAS ni usar armas a distancia PSÍQUICAS. Las armas de combate PSÍQUICAS no tienen reglas de armas y no pueden tener atributos Daño mayores que 3/4."
+          "description": "Las armas a distancia <b>PSÍQUICAS</b> no pueden infligir daños a esta agente. A efectos de acciones <b>PSÍQUICAS</b>, esta agente no puede ser elegida y nunca se considera que esta dentro de la distancia requerida de esas acciones. Mientras un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones <b>PSÍQUICAS</b> ni usar reglas adicionales <b>PSÍQUICAS</b>.</li></ul> <ul><li>Ese agente no puede usar armas a distancia <b>PSÍQUICAS</b>.</li></ul> <ul><li>Las armas de combate <b>PSÍQUICAS</b> no tienen reglas de armas y no pueden tener atributos Daño mayores que 3/4</li></ul>"
         },
         {
-          "name": "AntiPSÍQUICO",
-          "description": "Cuando esta arma se use contra un agente que tiene la clave PSÍQUICO, suma 1 a ambos atributos Daño de esta arma y además tiene la regla de arma Letal 5+."
+          "name": "<span class=\"faction\">*</span>Anti<b>PSÍQUICO</b>",
+          "description": "Cuando esta arma se use contra un agente que tiene la clave <b>PSÍQUICO</b>, suma 1 a ambos atributos Daño de esta arma y además tiene la regla de arma Letal 5+."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, CONDENADORA",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, CONDENADORA",
       "peana": "28"
     },
     {
@@ -8857,7 +8857,7 @@
           "name": "Retórica estimulante",
           "cost": "1 LPA",
           "description": [
-            "<b>APOYO</b>. Elige una agente NOVICIA amiga distinta a 6\" o menos de esta agente y visible para ella, o a 6\" o menos de tu marcador de Autotransmisora. Hasta el final de la siguiente activación de esa agente, suma 1 a su atributo LPA (hasta un máximo de 3 después de haber calculado todos los cambios al atributo LPA)."
+            "<b>APOYO</b>. Elige una agente <span class=\"faction\">NOVICIA</span> amiga distinta a 6\" o menos de esta agente y visible para ella, o a 6\" o menos de tu marcador de Autotransmisora. Hasta el final de la siguiente activación de esa agente, suma 1 a su atributo LPA (hasta un máximo de 3 después de haber calculado todos los cambios al atributo LPA)."
           ],
           "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         },
@@ -8865,13 +8865,13 @@
           "name": "Autotransmisora",
           "cost": "0 LPA",
           "description": [
-            "Si tu marcador de Autotransmisora no se encuentra en la zona de aniquilación, colócalo a 8\" o menos en horizontal de esta agente; en caso contrario, muévelo hasta 8\" en horizontal.",
+            "Si tu marcador de Autotransmisora no se encuentra en la zona de aniquilación, colócalo a 8\" o menos en horizontal de esta agente; en caso contrario, muéve tu marcador de Autotransmisora hasta 8\" en horizontal. Si esta agente es retirada de la zona de aniquilación, retira tu marcador de Autotransmisora de la zona de aniquilación.",
             "Siempre que un agente enemigo a 3\" o menos de tu marcador de Autotransmisora dispare, combata o contraataque, tu oponente no puede repetir sus dados de ataque."
           ],
           "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, DIALOGANTE",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, DIALOGANTE",
       "peana": "28"
     },
     {
@@ -8901,18 +8901,18 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Incesante, Parada y contraataque"
+            "RA": "Incesante, Parada y contraataque<span class=\"faction\">*</span>"
           }
         }
       ],
       "abilities": [
         {
-          "name": "Parada y contraataque",
+          "name": "<span class=\"faction\">*</span>Parada y contraataque",
           "description": "Siempre que bloquees con un éxito crítico, puedes también infligir al agente enemigo en esa secuencia tantos daños como el atributo Daño crítico del arma."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, DUELISTA",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, DUELISTA",
       "peana": "28"
     },
     {
@@ -8952,12 +8952,12 @@
           "name": "Inculcar a latigazos",
           "cost": "1 LPA",
           "description": [
-            "Elige una agente NOVICIA amiga distinta (salvo SUPERIORA) a 3\" o menos de esta agente, visible para ella y que no estuviera ya beneficiándose de los efectos de esta acción. Hasta el final de la siguiente activación de esa agente, suma 1\" a su atributo Movimiento y puede realizar dos acciones de <b>Combatir</b> durante dicha activación, una de las cuales puede ser libre."
+            "Elige una agente <span class=\"faction\">NOVICIA</span> amiga distinta (salvo <b>SUPERIORA</b>) a 3\" o menos de esta agente, visible para ella y que no estuviera ya beneficiándose de los efectos de esta acción. Hasta el final de la siguiente activación de esa agente, suma 1\" a su atributo Movimiento y puede realizar dos acciones de <b>Combatir</b> durante dicha activación, una de las cuales puede ser libre."
           ],
           "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, EXACTORA",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, EXACTORA",
       "peana": "28"
     },
     {
@@ -8994,7 +8994,7 @@
       "abilities": [
         {
           "name": "¡Sanitaria!",
-          "description": "La primera vez durante cada punto de inflexión que otra agente NOVICIA amiga vaya a resultar incapacitada mientras era visible para esta agente y estaba a 3\" o menos de ella, puedes usar esta regla. Si lo haces, esa agente amiga no queda incapacitada, le queda 1 herida y no puede resultar incapacitada durante el resto de la acción. Resta 1 a los atributos LPA de ambas hasta el final de sus próximas activaciones."
+          "description": "La primera vez durante cada punto de inflexión que otra agente <span class=\"faction\">NOVICIA</span> amiga vaya a resultar incapacitada mientras era visible para esta agente y estaba a 3\" o menos de ella, puedes usar esta regla siempre que ni esta ni esa agente estén en la zona de control de algún agente enemigo. Si lo haces, esa agente amiga no queda incapacitada, le queda 1 herida y no puede resultar incapacitada durante el resto de la acción. Después de esa acción, esa agente amiga puede entonces realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de esta agente. Resta 1 a los atributos LPA de esta y de esa agente hasta el final de sus próximas activaciones respectivamente, y si esta regla fue usada durante la activación de esa agente amiga, esa activación termina. No puedes usar esta regla si esta agente resulta incapacitada, o si es una acción de <b>Disparar</b> y esta agente sería un blanco primario o secundario."
         }
       ],
       "uniqueActions": [
@@ -9002,12 +9002,73 @@
           "name": "Herramientas de cirujana",
           "cost": "1 LPA",
           "description": [
-            "Elige una agente NOVICIA amiga en la zona de control de esta agente para que recupere hasta 2D3 heridas perdidas. No puede ser una agente en la que se haya usado la regla ¡Sanitaria! durante este punto de inflexión."
+            "Elige una agente <span class=\"faction\">NOVICIA</span> amiga en la zona de control de esta agente para que recupere hasta 2D3 heridas perdidas. No puede ser una agente en la que se haya usado la regla ¡Sanitaria! durante este punto de inflexión."
           ],
           "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, MÉDICO, HOSPITALARIA",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, MÉDICO, HOSPITALARIA",
+      "peana": "28"
+    },
+    {
+      "id": "militant",
+      "name": "NOVICIA MILITANTE",
+      "stats": {
+        "LPA": "2",
+        "MOVER": "6\"",
+        "SALVACIÓN": "4+",
+        "HERIDAS": "7"
+      },
+      "weapons": [
+        {
+          "name": "Rifle automático",
+          "type": "ranged",
+          "stats": {
+            "A": "4",
+            "HP/HA": "4+",
+            "Dñ": "2/3",
+            "RA": "-"
+          }
+        },
+        {
+          "name": "Pistola automática",
+          "type": "ranged",
+          "stats": {
+            "A": "4",
+            "HP/HA": "4+",
+            "Dñ": "2/3",
+            "RA": "Alcance 8\""
+          }
+        },
+        {
+          "name": "Culata",
+          "type": "melee",
+          "stats": {
+            "A": "3",
+            "HP/HA": "4+",
+            "Dñ": "2/3",
+            "RA": "-"
+          }
+        },
+        {
+          "name": "Espada de Novicia",
+          "type": "melee",
+          "stats": {
+            "A": "4",
+            "HP/HA": "4+",
+            "Dñ": "4/5",
+            "RA": "-"
+          }
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Fe militante",
+          "description": " Siempre que esta agente dispare, combata o contraataque, si usas un <b>ACTO DE FE</b> durante esa secuencia y un agente enemigo resulta incapacitado, recuperas los puntos de fe que has gastado en ese <b>ACTO DE FE</b>. Si usas el equipo Icono de la fe, solo recuperas los puntos de fe por uno de esos <b>ACTO DE FE</b> (a tu elección)."
+        }
+      ],
+      "uniqueActions": [],
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, MILITANTE",
       "peana": "28"
     },
     {
@@ -9037,22 +9098,22 @@
             "A": "4",
             "HP/HA": "4+",
             "Dñ": "5/6",
-            "RA": "Brutal, Furia fanática"
+            "RA": "Brutal, Furia fanática<span class=\"faction\">*</span>"
           }
         }
       ],
       "abilities": [
         {
-          "name": "Furia fanática",
+          "name": "<span class=\"faction\">*</span>Furia fanática",
           "description": "Siempre que esta agente combate con esta arma, tiene la regla de armas Incesante."
         },
         {
           "name": "Absolución mediante la destrucción",
-          "description": "Siempre que esta agente realiza una acción de <b>Combatir</b>, si no resulta incapacitada, puede realizar inmediatamente a continuación una acción libre de <b>Combatir</b>. No puedes realizar más de dos acciones sucesivas de <b>Combatir</b> gracias a esta regla."
+          "description": "Siempre que esta agente realiza una acción de <b>Combatir</b>, si no resulta incapacitada, puede realizar inmediatamente a continuación una acción libre de <b>Combatir</b>. Esto tiene preferencia sobre las restricciones de acciones, pero no puedes realizar más de dos acciones sucesivas de <b>Combatir</b> gracias a esta regla. Si esta agente se está beneficiando de los efectos de la acción <b>Inculcar a latigazos</b> (ver <b>EXACTORA</b>), esto se aplica a cada una de las acciones de <b>Combatir</b> debidas a dicho efecto."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, PENITENTE",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, PENITENTE",
       "peana": "28"
     },
     {
@@ -9074,16 +9135,6 @@
             "Dñ": "5/5",
             "RA": "Brutal, Severa"
           }
-        },
-        {
-          "name": "Pistola automática",
-          "type": "ranged",
-          "stats": {
-            "A": "4",
-            "HP/HA": "4+",
-            "Dñ": "2/3",
-            "RA": "Alcance 8\""
-          }
         }
       ],
       "abilities": [
@@ -9093,11 +9144,11 @@
         },
         {
           "name": "Himnos gloriosos",
-          "description": "<b>APOYO</b>. Mientras una agente NOVICIA amiga se encuentre a 3\" o menos de esta agente, las armas de esa agente amiga tienen la regla de armas Severa."
+          "description": "<b>APOYO</b>. Mientras una agente <span class=\"faction\">NOVICIA</span> amiga se encuentre a 3\" o menos de esta agente, las armas de esa agente amiga tienen la regla de armas Severa."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, PRECEPTORA",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, PRECEPTORA",
       "peana": "28"
     },
     {
@@ -9142,7 +9193,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, PRONATUS",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, PRONATUS",
       "peana": "28"
     },
     {
@@ -9179,11 +9230,11 @@
       "abilities": [
         {
           "name": "Purgar con llamas",
-          "description": "Una vez por punto de inflexión, puedes usar el ardid de tiroteo Inmolación por OPM si esta es la agente NOVICIA amiga especificada."
+          "description": "Una vez por punto de inflexión, puedes usar el ardid de tiroteo Inmolación por OPM si esta es la agente <span class=\"faction\">NOVICIA</span> amiga especificada."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, PURGATUS",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, PURGATUS",
       "peana": "28"
     },
     {
@@ -9220,7 +9271,7 @@
       "abilities": [
         {
           "name": "Portaicono",
-          "description": "Al determinar el control de un marcador, trata el atributo LPA de esta agente como si fuera 1 mayor de lo que es."
+          "description": "Al determinar el control de un marcador, trata el atributo LPA de esta agente como si fuera 1 mayor de lo que es. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto."
         }
       ],
       "uniqueActions": [
@@ -9233,68 +9284,7 @@
           "description_no": "Esta agente solo puede realizar esta acción una vez por punto de inflexión, y no puede realizarla si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, RELICARIA",
-      "peana": "28"
-    },
-    {
-      "id": "militant",
-      "name": "NOVICIA MILITANTE",
-      "stats": {
-        "LPA": "2",
-        "MOVER": "6\"",
-        "SALVACIÓN": "4+",
-        "HERIDAS": "7"
-      },
-      "weapons": [
-        {
-          "name": "Rifle automático",
-          "type": "ranged",
-          "stats": {
-            "A": "4",
-            "HP/HA": "4+",
-            "Dñ": "2/3",
-            "RA": "-"
-          }
-        },
-        {
-          "name": "Pistola automática",
-          "type": "ranged",
-          "stats": {
-            "A": "4",
-            "HP/HA": "4+",
-            "Dñ": "2/3",
-            "RA": "Alcance 8\""
-          }
-        },
-        {
-          "name": "Espada de Novicia",
-          "type": "melee",
-          "stats": {
-            "A": "4",
-            "HP/HA": "4+",
-            "Dñ": "4/5",
-            "RA": "-"
-          }
-        },
-        {
-          "name": "Culata",
-          "type": "melee",
-          "stats": {
-            "A": "3",
-            "HP/HA": "4+",
-            "Dñ": "2/3",
-            "RA": "-"
-          }
-        }
-      ],
-      "abilities": [
-        {
-          "name": "Fe militante",
-          "description": "Siempre que esta agente dispare, combata o contraataque, si usas un ACTO DE FE durante esa secuencia y un agente enemigo resulta incapacitado, recuperas los puntos de fe que has gastado en ese ACTO DE FE."
-        }
-      ],
-      "uniqueActions": [],
-      "keywords": "<span class=\"faction\">NOVICIAS</span>, IMPERIUM, ADEPTA SORORITAS, MILITANTE",
+      "keywords": "<span class=\"faction\">NOVICIA</span>, IMPERIUM, ADEPTA SORORITAS, RELICARIA",
       "peana": "28"
     }
   ],

@@ -617,7 +617,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Autoridad Absoluta",
-        "description": "Usa este ardid de tiroteo durante la batalla, cuando un oponente use un ardid estratégico o de tiroteo (excluyendo Repetición de Mando o uno que cueste 0PM). Su ardid no se usa, los PM gastados en él se reembolsan y no pueden usar ese ardid de nuevo durante su punto de inflexión. Este ardid no se puede usar para detener el mismo ardid más de una vez por batalla.",
+        "description": "Usa este ardid de tiroteo durante la batalla, cuando un oponente use un Ardid de Estrategia o de tiroteo (excluyendo Repetición de Mando o uno que cueste 0PM). Su ardid no se usa, los PM gastados en él se reembolsan y no pueden usar ese ardid de nuevo durante su punto de inflexión. Este ardid no se puede usar para detener el mismo ardid más de una vez por batalla.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -752,7 +752,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Avance de las Justas",
-        "description": "Hasta un tercio de las agentes <span class=\"faction\">NOVICIA</span> amigas en la zona de aniquilación (redondeando a la baja, hasta un mínimo de 1) pueden realizar inmediatamente una acción libre de <b>Correr</b> en el orden que elijas, pero todas las que lo hagan deberan terminar ese movimiento más cerca de lo que estaban del agente enemigo más cercano a ella, del marcador de objetivo más cercano a ella o de la zona de descenso de tu oponente (puedes elegir por separado para cada una).\nNo puedes usar este ardid durante el primer punto de inflexión.",
+        "description": "Hasta un tercio de las agentes <span class=\"faction\">NOVICIA</span> amigas en la zona de aniquilación (redondeando a la baja, hasta un mínimo de 1) pueden realizar inmediatamente una acción libre de <b>Correr</b> en el orden que elijas, pero todas las que lo hagan deberán terminar ese movimiento más cerca de lo que estaban del agente enemigo más cercano a ella, del marcador de objetivo más cercano a ella o de la zona de descenso de tu oponente (puedes elegir por separado para cada una).\nNo puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -770,7 +770,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Inmolación Ardiente",
-        "description": "<p>Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un lanzallamas del Ministorum e inflinjas daño con algun éxito crítico. El blanco recibe una de tus fichas de Inmolación (si no tenía ya una). Siempre que un agente con una de tus fichas de Inmolación sea activado:</p>\n\n<ul>\n  <li>Inflingele 1D3 daños.</li>\n  <li>Su jugador controlador puede restar 1 al LPA de dicho agente hasta el final de esa activación para retirar esa ficha. Esto debe hacerse antes de que el agente con la ficcha de Inmolación realice ninguna acción durante esa activación.</li>\n</ul>",
+        "description": "<p>Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un lanzallamas del Ministorum e inflinjas daño con algun éxito crítico. El blanco recibe una de tus fichas de Inmolación (si no tenía ya una). Siempre que un agente con una de tus fichas de Inmolación sea activado:</p>\n\n<ul>\n  <li>Inflingele 1D3 daños.</li>\n  <li>Su jugador controlador puede restar 1 al LPA de dicho agente hasta el final de esa activación para retirar esa ficha. Esto debe hacerse antes de que el agente con la ficha de Inmolación realice ninguna acción durante esa activación.</li>\n</ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -797,7 +797,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Guerra de Guerrillas",
-        "description": "<p>Los agentes <span class=\"faction\">ASALTANTE PHOBOS</span> amigos pueden realizar la siguiente acción única:</p>\n\n<div class=\"crit-op border border-0\" data-type=\"action\">\n<div class=\"header\"><div>Guerra de Guerrillas</div><div class=\"ap-box\">1LPA</div></div>\n<div class=\"content\"><ul>\n        <li>\n            <span class=\"icon-yes\"><img src=\"./resources/game_rules_files/yes.svg\" class=\"figure-img img-fluid rounded mx-auto d-block\"></img></span>\nCambia la orden de este agente.\n        </li>\n        <li>\n            <span class=\"icon-no\"><img src=\"./resources/game_rules_files/no.svg\" class=\"figure-img img-fluid rounded mx-auto d-block\"></img></span>\nUn agente no puede realizar esta acción si esta en la zona de control de un agente enemigo.\n        </li>\n    </ul>\n</div>\n</div>",
+        "description": "<p>Los agentes <span class=\"faction\">ASALTANTE PHOBOS</span> amigos pueden realizar la siguiente acción única:</p>\n\n<div class=\"crit-op border border-0\" data-type=\"action\">\n<div class=\"header\"><div>Guerra de Guerrillas</div><div class=\"ap-box\">1LPA</div></div>\n<div class=\"content\"><ul>\n        <li>\n            <span class=\"icon-yes\"><img src=\"./resources/game_rules_files/yes.svg\" class=\"figure-img img-fluid rounded mx-auto d-block\"></img></span>\nCambia la orden de este agente.\n        </li>\n        <li>\n            <span class=\"icon-no\"><img src=\"./resources/game_rules_files/no.svg\" class=\"figure-img img-fluid rounded mx-auto d-block\"></img></span>\nUn agente no puede realizar esta acción si está en la zona de control de un agente enemigo.\n        </li>\n    </ul>\n</div>\n</div>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -887,7 +887,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "ESCURRIDIZO",
-        "description": "Siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo (excluyendo <b>OGRYN</b> o <b>BULLGRYN</b>) tenga una orden de Ocultación y esté en cobertura, no puede ser seleccionado como un blanco válido, teniendo precedencia sobre todas las demás reglas (p. ej. terreno de Ventaja), teniendo precedencia sobre todas las demás reglas (p. ej. terreno de Ventaja), excepto estar a 2\" o menos.",
+        "description": "Siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo (excluyendo <b>OGRYN</b> o <b>BULLGRYN</b>) tenga una orden de Ocultación y esté en cobertura, no puede ser seleccionado como un blanco válido, teniendo precedencia sobre todas las demás reglas (p. ej. terreno de Ventaja), excepto estar a 2\" o menos.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1040,7 +1040,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Reubicación Sigilosa",
-        "description": "Selecciona un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo a más de 6\" de agentes enemigos. Puedes realizar inmediatamente una acción gratuita de <b>Correr</b> con ese agente y/o cambiar su orden. No puedes usar este Ardid Estratégico en el primer Punto de Inflexión.",
+        "description": "Selecciona un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo a más de 6\" de agentes enemigos. Puedes realizar inmediatamente una acción gratuita de <b>Correr</b> con ese agente y/o cambiar su orden. No puedes usar este Ardid de Estrategia en el primer Punto de Inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1067,7 +1067,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Aspirante Envalentonado",
-        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo realice la acción <b>Combatir</b> o <b>Disparar</b>, <span class=\"text-decoration-line-through text-warning-emphasis\">al final del paso Tirar Dados de Ataque</span> <span class=\"text-warning-emphasis\">después de cualquier repetición de tirada.</span>. Si es el primer agente amigo en realizar cualquiera de esas acciones durante este punto de inflexión, o si el agente enemigo en esa acción (objetivo primario, si es relevante) tiene un atributo de Heridas mayor que ese agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo, <span class=\"text-info-emphasis\">puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.\n",
+        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo realice la acción <b>Combatir</b> o <b>Disparar</b>, <span class=\"text-decoration-line-through text-warning-emphasis\">al final del paso Tirar Dados de Ataque</span> <span class=\"text-warning-emphasis\">después de cualquier repetición de tirada.</span>. Si es el primer agente amigo en realizar cualquiera de esas acciones durante este punto de inflexión, o si el agente enemigo en esa acción (objetivo primario, si es relevante) tiene un atributo de Heridas mayor que ese agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1229,7 +1229,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Exaltación en el Dolor",
-        "description": "Puedes ignorar cualquier cambio en el <span class=\"text-warning-emphasis\">atributo de Impacto</span> de las armas de los agentes de la <span class='faction'>SECTA DEL CAOS</span> amigos <span class=\"text-warning-emphasis\">’ armas</span> por estar lesionados <span class=\"text-decoration-line-through text-warning-emphasis\">(incluyendo los atributos de sus armas)</span>\nSiempre que un agente dispare contra un agente de la <span class='faction'>SECTA DEL CAOS</span> amigo que esté herido, puedes repetir uno de tus dados de defensa.\n",
+        "description": "Puedes ignorar cualquier cambio en el <span class=\"text-warning-emphasis\">atributo de Impacto</span> de las armas de los agentes de la <span class=\"faction\">SECTA DEL CAOS</span> amigos <span class=\"text-warning-emphasis\"> armas</span> por estar lesionados <span class=\"text-decoration-line-through text-warning-emphasis\">(incluyendo los atributos de sus armas)</span>\nSiempre que un agente dispare contra un agente de la <span class='faction'>SECTA DEL CAOS</span> amigo que esté herido, puedes repetir uno de tus dados de defensa.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1382,7 +1382,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Bendiciones de Infección",
-        "description": "Siempre que un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo esté combatiendo o contraataque, <span class=\"text-info-emphasis\">puedes hacer una de las siguientes:</span>\n\n<br />• <span class=\"text-info-emphasis\">Si</span> sacas tres o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.\n<br />• <span class=\"text-info-emphasis\">Si sacas tres o más éxitos, puedes descartar uno de tus fallos para retener uno de tus éxitos normales como un éxito crítico en su lugar.’</span>",
+        "description": "Siempre que un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo esté combatiendo o contraataque, <span class=\"text-info-emphasis\">puedes hacer una de las siguientes:</span>\n\n<br />• <span class=\"text-info-emphasis\">Si</span> sacas tres o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.\n<br />• <span class=\"text-info-emphasis\">Si sacas tres o más éxitos, puedes descartar uno de tus fallos para retener uno de tus éxitos normales como un éxito crítico en su lugar.</span>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1841,7 +1841,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Viento de Hojas",
-        "description": "Usa este Ardid Táctico durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo. Hasta el final de su activación, ese agente puede realizar dos acciones de Combatir.",
+        "description": "Usa este Ardid de Tiroteo durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo. Hasta el final de su activación, ese agente puede realizar dos acciones de Combatir.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1850,7 +1850,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Luz Evanescente",
-        "description": "Usa este Ardid Táctico durante <span class=\"text-decoration-line-through text-info-emphasis\">se activa un agente</span> la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo <span class=\"text-info-emphasis\">, antes o después de que realice una acción</span>. Hasta el final de su activación, ese agente puede realizar la acción Retirarse por un punto de acción menos (hasta un mínimo de 0PA).",
+        "description": "Usa este Ardid de Tiroteo durante <span class=\"text-decoration-line-through text-info-emphasis\">se activa un agente</span> la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo <span class=\"text-info-emphasis\">, antes o después de que realice una acción</span>. Hasta el final de su activación, ese agente puede realizar la acción Retirarse por un punto de acción menos (hasta un mínimo de 0PA).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1859,7 +1859,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Lluvia de Estrellas",
-        "description": "Usa este Ardid Táctico durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo. Hasta el final de su activación, ese agente puede realizar dos acciones de Disparar.",
+        "description": "Usa este Ardid de Tiroteo durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo. Hasta el final de su activación, ese agente puede realizar dos acciones de Disparar.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1913,7 +1913,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Coordinación Implacable",
-        "description": "Usa este Ardid Táctico al seleccionar un blanco válido para un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo. Hasta el final de la acción, determina la visibilidad de manera normal, pero puedes determinar la interposición (para cobertura y ofuscado) desde otro agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo al que tanto ese agente amigo como el blanco válido potencial sean visibles, pero que no esté en sí mismo dentro del rango de control de agentes enemigos. <p><b>Nota del Diseñador:</b> El agente amigo no gana los beneficios adicionales de terreno de Ventaja si el otro agente amigo está en él (p. ej. para apuntar a un agente enemigo que tiene una orden de Ocultación que está en cobertura proporcionada solo por terreno Ligero).</p>",
+        "description": "Usa este Ardid de Tiroteo al seleccionar un blanco válido para un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo. Hasta el final de la acción, determina la visibilidad de manera normal, pero puedes determinar la interposición (para cobertura y ofuscado) desde otro agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo al que tanto ese agente amigo como el blanco válido potencial sean visibles, pero que no esté en sí mismo dentro del rango de control de agentes enemigos. <p><b>Nota del Diseñador:</b> El agente amigo no gana los beneficios adicionales de terreno de Ventaja si el otro agente amigo está en él (p. ej. para apuntar a un agente enemigo que tiene una orden de Ocultación que está en cobertura proporcionada solo por terreno Ligero).</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1931,7 +1931,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Idolatría",
-        "description": "Usa este Ardid Táctico cuando un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (excluyendo <b>LÍDER</b>) a 6\" de un agente <b>LÍDER</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> o <b>PORTAICONO</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo dispare, combatiendo o contraataque, en el paso Tirar Dados de Ataque. Puedes retener uno de tus fallos como un éxito normal en lugar de descartarlo, o retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+        "description": "Usa este Ardid de Tiroteo cuando un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (excluyendo <b>LÍDER</b>) a 6\" de un agente <b>LÍDER</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> o <b>PORTAICONO</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo dispare, combatiendo o contraataque, en el paso Tirar Dados de Ataque. Puedes retener uno de tus fallos como un éxito normal en lugar de descartarlo, o retener uno de tus éxitos normales como un éxito crítico en su lugar.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1940,7 +1940,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Insidioso",
-        "description": "Usa este Ardid Táctico después de una activación. Antes de la siguiente activación, puedes realizar una acción gratuita de <b>Correr</b> con un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo, siempre que no sea un blanco válido para un agente enemigo cuando comienza y termina esa acción. <span class=\"text-warning-emphasis\">No puedes usar este ardid durante el primer punto de inflexión.</span>",
+        "description": "Usa este Ardid de Tiroteo después de una activación. Antes de la siguiente activación, puedes realizar una acción gratuita de <b>Correr</b> con un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo, siempre que no sea un blanco válido para un agente enemigo cuando comienza y termina esa acción. <span class=\"text-warning-emphasis\">No puedes usar este ardid durante el primer punto de inflexión.</span>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2003,7 +2003,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "RESPUESTA NODAL",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, antes o después de que realice una acción. Puedes o bien cambiar uno de los ardides de estratégia que has usado durante este punto de inflexión (pagando solo los PM adicionales, si ese ardid cuesta más), o bien usar ahora un ardid de estratégia (pagando su coste en PM de manera normal).\n",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, antes o después de que realice una acción. Puedes o bien cambiar uno de los ardides de estrategia que has usado durante este punto de inflexión (pagando solo los PM adicionales, si ese ardid cuesta más), o bien usar ahora un ardid de estratégia (pagando su coste en PM de manera normal).\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2660,7 +2660,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Fusilamiento a Quemarropa",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>) esté contraataque, si no estaba dentro del rango de control de agentes enemigos al inicio de esa activación/contraataque. Puedes usar una de sus armas a distancia como un arma cuerpo a cuerpo (excluyendo un arma que tenga la palabra 'granada' en su nombre) durante esa secuencia. Si lo haces, no puedes bloquear durante esa secuencia, y las siguientes reglas de arma no tienen efecto en sus armas hasta el final de esa secuencia: Devastadora, Perforante, Torrente.\n<span class=\"text-info-emphasis\"> Si ese agente amigo está preparado, tiene una orden de Trabarse y\nestá contraataque con un arma de pulso, tú resuelves el primer dado de ataque\n(es decir, defensor en lugar de atacante)</span>",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>) esté contraatacando, si no estaba dentro del rango de control de agentes enemigos al inicio de esa activación/contraataque. Puedes usar una de sus armas a distancia como un arma cuerpo a cuerpo (excluyendo un arma que tenga la palabra 'granada' en su nombre) durante esa secuencia. Si lo haces, no puedes bloquear durante esa secuencia, y las siguientes reglas de arma no tienen efecto en sus armas hasta el final de esa secuencia: Devastadora, Perforante, Torrente.\n<span class=\"text-info-emphasis\"> Si ese agente amigo está preparado, tiene una orden de Trabarse y\nestá contraataque con un arma de pulso, tú resuelves el primer dado de ataque\n(es decir, defensor en lugar de atacante)</span>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2695,7 +2695,7 @@
         "faction": "raveners",
         "type": "strategic",
         "cps": "1PM",
-        "name": "ACECHADORES DESDE EL TÚNELES",
+        "name": "ACECHADORES DESDE EL TÚNEL",
         "description": "<p>Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo se encuentre en tu <b>TÚNEL</b> estará tras cobertura, a menos que se encuentre a 2\" o menos del agente activo. Considera esto como una cobertura brindada por terreno Ligero (y a la que, por tanto, le afectan las reglas que evitan esto, como Buscadora (Ligero) y terreno de Aventajado).</p>\n",
         "typename": "Ardid de Estrategia"
     },
@@ -2768,7 +2768,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Aguijón",
-        "description": "<span class=\"text-info-emphasis\">Mejora en 1 el atributo de Imp de las garras de los agentes</span> <span class=\"faction\">AGUIJONES ALADOS VÉSPID</span> amigos, <span class=\"text-info-emphasis\">y esas armas</span> tienen las reglas de armas Letal 5+ y Choque.",
+        "description": "<span class=\"text-info-emphasis\">Mejora en 1 el atributo de Impactar de las garras de los agentes</span> <span class=\"faction\">AGUIJONES ALADOS VÉSPID</span> amigos, <span class=\"text-info-emphasis\">y esas armas</span> tienen las reglas de armas Letal 5+ y Choque.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2786,7 +2786,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Vuelo Raudo",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo realiza una acción de <b>Reposicionarse</b>. Hasta el final de esa acción, puede moverse 1D3\" adicionales, o ser desplegarse a 1D3\" adicionales de distancia si usa <b>VOLAR</b>. En cualquier caso, durante el resto del punto de inflexion no podra realizar acciones de <b>Combatir</b> ni de <b>Disparar</b>.",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo realiza una acción de <b>Reposicionarse</b>. Hasta el final de esa acción, puede moverse 1D3\" adicionales, o ser desplegarse a 1D3\" adicionales de distancia si usa <b>VOLAR</b>. En cualquier caso, durante el resto del punto de inflexión no podrá realizar acciones de <b>Combatir</b> ni de <b>Disparar</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -3038,7 +3038,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Resolución sombría",
-        "description": "<p>Siempre que se determine el control de un marcador, considere la estadística total de APL del jugador amigo <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> con un valor superior en 1, solo si los agentes aliados controlaban ese marcador al inicio de la fase de Tiroteo. Tenga en cuenta que esto no afecta a la estadística de APL, por lo que cualquier cambio es acumulativo.</p>",
+        "description": "<p>Siempre que se determine el control de un marcador, considere la estadística total de LPA del jugador amigo <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> con un valor superior en 1, solo si los agentes aliados controlaban ese marcador al inicio de la fase de Tiroteo. Tenga en cuenta que esto no afecta a la estadística de LPA, por lo que cualquier cambio es acumulativo.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -3093,7 +3093,7 @@
         "cps": "1PM",
         "name": "DEPREDADORES AÉREOS",
         "description": "Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo se encuentre al menos 2\" más alto que el suelo de la zona de aniquilación, sus armas tienen la regla de armas Equilibrada. Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo use un <b>IMPULSO</b>, sus armas tienen la regla de armas Equilibrada hasta el final de esa activación.",
-        "typename":"Ardid Estratégico"
+        "typename":"Ardid de Estrategia"
     },
     {
         "id_ploy": 213,
@@ -3102,7 +3102,7 @@
         "cps": "1PM",
         "name": "MASACRAR A LOS DÉBILES",
         "description": "Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo dispare o combata, sus armas tienen la regla de armas Castigadora si el agente contra el que ese agente amigo está disparando o combatiendo cumple cualquiera de las siguientes condiciones: <ul><li> Se encuentra al menos 2\" más bajo que el agente amigo.</li></ul> <ul><li>Su LPA es menor de lo normal</li></ul> <ul><li> Estaba herido al inicio de la activación/reacción.</li></ul>",
-        "typename":"Ardid Estratégico"
+        "typename":"Ardid de Estrategia"
     },
     {
         "id_ploy": 214,
@@ -3111,7 +3111,7 @@
         "cps": "1PM",
         "name": "PESADILLA EN LAS ALTURAS",
         "description": "Cuando un agente dispare contra un agente <span class=\"faction\">ALA ASESINA</span> amigo que se encuentre al menos 2\" más alto que el suelo de la zona de aniquilación, o que realizara un <b>IMPULSO</b> durante este punto de inflexión, puedes repetir uno de tus dados de defensa.",
-        "typename":"Ardid Estratégico"
+        "typename":"Ardid de Estrategia"
     },
     {
         "id_ploy": 215,
@@ -3120,7 +3120,7 @@
         "cps": "1PM",
         "name": "INSTILAR MIEDO",
         "description": "Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo combata, el Daño normal de 3 o más le inflige 1 daño menos.",
-        "typename":"Ardid Estratégico"
+        "typename":"Ardid de Estrategia"
     },
     {
         "id_ploy": 216,
@@ -3129,7 +3129,7 @@
         "cps": "1PM",
         "name": "NARCISISMO MALICIOSO",
         "description": "Usa este ardid de tiroteo cuando sea tu turno para activar un agente amigo, si solo hay apostado un único agente <span class=\"faction\">ALA ASESINA</span> amigo. Hasta el final del punto de inflexión, mientras haya algún agente enemigo apostado en la zona de aniquilación, puedes saltarte tus activaciones (es decir, puedes retrasar la activación de ese agente <span class=\"faction\">ALA ASESINA</span> amigo). Ten en cuenta que no puedes reaccionar hasta que ese agente <span class=\"faction\">ALA ASESINA</span> amigo haya sido usado.",
-        "typename":"Ardid Táctico"
+        "typename":"Ardid de Tiroteo"
     },
     {
         "id_ploy": 217,
@@ -3137,8 +3137,8 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "DESCENSO ASESINO",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo termine la acción de <b>Cragar</b>, <b>Correr</b>, <b>Retroceder</b> o <b>Reposicionarse</b> a 3\" o menos en horizontal de un agente <span class=\"faction\">ALA ASESINA</span> amigo (o, en combate cerrado, a 2\" o menos, y ese agente enemigo debe estar en una estancia distinta a aquella en la que empezó esa acción). Interrumpe la activación/reacción de ese agente enemigo y realiza inmediatamente una acción libre de <b>Cargar</b> con ese agente amigo. Debe terminar esa acción en la zona de control de ese agente enemigo. Si esto no es posible, la interrupción se cancela y esta regla no ha sido usada.",
-        "typename":"Ardid Táctico"
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo termine la acción de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b> o <b>Reposicionarse</b> a 3\" o menos en horizontal de un agente <span class=\"faction\">ALA ASESINA</span> amigo (o, en combate cerrado, a 2\" o menos, y ese agente enemigo debe estar en una estancia distinta a aquella en la que empezó esa acción). Interrumpe la activación/reacción de ese agente enemigo y realiza inmediatamente una acción libre de <b>Cargar</b> con ese agente amigo. Debe terminar esa acción en la zona de control de ese agente enemigo. Si esto no es posible, la interrupción se cancela y esta regla no ha sido usada.",
+        "typename":"Ardid de Tiroteo"
     },
     {
         "id_ploy": 218,
@@ -3147,15 +3147,15 @@
         "cps": "1PM",
         "name": "LUCHAR SIN HONOR",
         "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo combata o contraataque, al resolver un éxito crítico. En lugar de golpear o bloquear, termina esa secuencia (cualquier dado de ataque restante se descarta) y realiza inmediatamente con ese agente una acción libre de <b>Retroceder</b> de hasta 3\" (y entonces la acción de <b>Combatir</b> termina). Ese agente puede hacerlo aunque haya realizado una acción que le impida realizar la acción de <b>Retroceder</b>.",
-        "typename":"Ardid Táctico"
+        "typename":"Ardid de Tiroteo"
     },
     {
-        "id_ploy": 222,
+        "id_ploy": 243,
         "faction": "murderwing",
         "type": "tactical",
         "cps": "1PM",
         "name": "ALAS DE OSCURIDAD",
         "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo realice la acción de <b>Retroceder</b> o <b>Reposicionarse</b>, cuando aplique un <b>IMPULSO</b>. Ese agente puede desplegarse a 3\" adicionales de distancia durante ese <b>IMPULSO</b> (añadiéndolos a la distancia de movimiento permitida), pero no puede realizar acciones de <b>Disparar</b>, <b>Combatir</b> o <b>Golpe cercenador</b> (ver agente <b>DEPREDADOR</b>) hasta el siguiente punto de inflexión. No puedes usar este ardid durante el primer punto de inflexión.",
-        "typename":"Ardid Táctico"
+        "typename":"Ardid de Tiroteo"
     }
 ]

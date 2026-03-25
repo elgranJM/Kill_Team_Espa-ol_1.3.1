@@ -93,14 +93,18 @@
     "id_equip": 13,
     "faction": "sanctifiers",
     "name": "Orbes de Santificación",
-    "description": [
-      "Una vez por Punto de Inflexión, un agente <span class=\"faction\">SANTIFICADOR</span amigo (excluyendo CHERUB, DEATH CULT ASSASSIN y MIRACULIST) puede realizar la siguiente acción única:",
-      "Orbe de Santificación",
-      "1 LPA",
-      "   - Selecciona un agente enemigo visible y a 6\" o menos de este agente. Ese agente y cada otro agente enemigo a 1\" o menos de él realiza una prueba de empapado. Para realizar una prueba de empapado, lanza un D6: con un 3+, gana una de tus fichas de Empapado.",
-      "   - Siempre que un agente <span class=\"faction\">SANTIFICADOR</span amigo esté disparando contra un agente que tenga una de tus fichas de Empapado con un arma que tenga la regla de armas Fuego, esa arma también tiene la regla de armas Búsqueda.",
-      "   - Después de que un agente <span class=\"faction\">SANTIFICADOR</span amigo use un arma que tenga la regla de armas Fuego contra un agente enemigo que tenga una de tus fichas de Empapado, retira esa ficha (incluso si la regla de armas Búsqueda no fue usada).",
-      "   - Este agente no puede realizar esta acción mientras esté dentro del área de control de un agente enemigo."
+    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">SANTIFICADOR</span amigo (excluyendo CHERUB, DEATH CULT ASSASSIN y MIRACULIST) puede realizar la siguiente acción única:",
+    "action": [
+      {
+      "action_name": "Orbe de Santificación",
+      "action_cost": "1 LPA",
+      "action_yes": [
+        "Selecciona un agente enemigo visible y a 6\" o menos de este agente. Ese agente y cada otro agente enemigo a 1\" o menos de él realiza una prueba de empapado. Para realizar una prueba de empapado, lanza un D6: con un 3+, gana una de tus fichas de Empapado.",
+        "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span amigo esté disparando contra un agente que tenga una de tus fichas de Empapado con un arma que tenga la regla de armas Fuego, esa arma también tiene la regla de armas Búsqueda.",
+        "Después de que un agente <span class=\"faction\">SANTIFICADOR</span amigo use un arma que tenga la regla de armas Fuego contra un agente enemigo que tenga una de tus fichas de Empapado, retira esa ficha (incluso si la regla de armas Búsqueda no fue usada)."
+      ],
+      "action_no": "Este agente no puede realizar esta acción mientras esté dentro del área de control de un agente enemigo."
+      }
     ]
   },
   {

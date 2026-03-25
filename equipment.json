@@ -132,12 +132,8 @@
     "id_equip": 17,
     "faction": "ratling",
     "name": "Orbes de Santificación",
-    "description": [
-      "Al final del paso de Seleccionar agentes, lanza un D3. Si el resultado es:",
-      "   1. Pierdes 1PM.",
-      "   2. Ganas 1PM.",
-      "   3. Tu adversario pierde 1PM."
-    ]
+    "description": "Al final del paso de Seleccionar agentes, lanza un D3. Si el resultado es: <ul><li>1. Pierdes 1PM.</li></ul> <ul><li>2. Ganas 1PM.</li></ul> <ul><li>3. Tu adversario pierde 1PM.</li></ul>",
+    "action": []
   },
   {
     "id_equip": 18,
@@ -171,7 +167,7 @@
     "id_equip": 23,
     "faction": "phobos",
     "name": "Granadas Especiales Adicionales",
-    "description": "Este equipamiento te permite seleccionar cuatro granadas especiales adicionales del equipo de granadas especiales (ver equipo universal). No puedes ademas elegir ese equipo de forma normal (y por tamto tener cinco o seis).",
+    "description": "Este equipamiento te permite seleccionar cuatro granadas especiales adicionales del equipo de granadas especiales (ver equipo universal). No puedes ademas elegir ese equipo de forma normal (y por tanto tener cinco o seis).",
     "action": []
   },
   {
@@ -341,12 +337,7 @@
     "id_equip": 45,
     "faction": "exaction-squad",
     "name": "Cartuchos de Edición Especial",
-    "description": [
-      "Hasta dos veces por Punto de Inflexión, cuando un agente EXACTION SQUAD amigo esté realizando la acción de <b>Disparar</b> y selecciones una escopeta de combate, escopeta verdugo, pistola escopeta con mira o pistola escopeta, puedes usar esta regla. Si lo haces, selecciona una de las siguientes reglas de arma para que esa arma la tenga hasta el final de esa acción:",
-      "   - Saturación.",
-      "   - Penetración 1, pero solo si el objetivo tiene un atributo de Salvación de 3+ o mejor.",
-      "   - Torrente 1\", pero no puedes seleccionar más de un objetivo secundario."
-    ]
+    "description": "Hasta dos veces por Punto de Inflexión, cuando un agente EXACTION SQUAD amigo esté realizando la acción de <b>Disparar</b> y selecciones una escopeta de combate, escopeta verdugo, pistola escopeta con mira o pistola escopeta, puedes usar esta regla. Si lo haces, selecciona una de las siguientes reglas de arma para que esa arma la tenga hasta el final de esa acción: <ul><li>Saturación.</li></ul> <ul><li>Penetración 1, pero solo si el objetivo tiene un atributo de Salvación de 3+ o mejor.</li></ul> <ul><li>Torrente 1\", pero no puedes seleccionar más de un objetivo secundario.</li></ul>"
   },
   {
     "id_equip": 46,
@@ -401,21 +392,13 @@
     "id_equip": 53,
     "faction": "deathwatch",
     "name": "ESPOSAS DE BIODETECCIÓN SANCTUS-V",
-    "description": [
-      "Una vez durante la activación de cada agente DEATHWATCH amigo, antes o después de que realice una acción, si no está dentro del área de control de agentes enemigos puedes usar esta regla. Si lo haces, selecciona uno de los siguientes:",
-      "   - Ese agente amigo recupera D3 heridas perdidas.",
-      "   - Elimina cualquier cambio en el atributo de LPA de ese agente amigo.",
-      "   - Elimina una de las siguientes fichas que tenga ese agente amigo (antes de que se resuelvan los efectos de activación de esa ficha, si es relevante): Fragmento de Neutrones, Veneno, Terrorquímica."
-    ]
+    "description": "Una vez durante la activación de cada agente DEATHWATCH amigo, antes o después de que realice una acción, si no está dentro del área de control de agentes enemigos puedes usar esta regla. Si lo haces, selecciona uno de los siguientes: <ul><li>Ese agente amigo recupera D3 heridas perdidas.</li></ul> <ul><li>Elimina cualquier cambio en el atributo de LPA de ese agente amigo.</li></ul> <ul><li>Elimina una de las siguientes fichas que tenga ese agente amigo (antes de que se resuelvan los efectos de activación de esa ficha, si es relevante): Fragmento de Neutrones, Veneno, Terrorquímica.</li></ul>"
   },
   {
     "id_equip": 54,
     "faction": "deathwatch",
     "name": "SERVO-ESCLAVO ESCRUTADOR",
-    "description": [
-      "Una vez por Punto de Inflexión, durante la activación de un agente DEATHWATCH amigo, puedes usar esta regla. Si lo haces, durante esa activación, ese agente puede realizar una acción de misión por 1 PA menos.",
-      "Tener un agente enemigo dentro de su área de control no impide que ese agente amigo realice esa acción de misión. Sin embargo, después de hacerlo, tú y tu adversario tiráis un dado; si tu adversario gana, no puedes usar este equipamiento por el resto de la batalla."
-    ]
+    "description": "<p>Una vez por Punto de Inflexión, durante la activación de un agente DEATHWATCH amigo, puedes usar esta regla. Si lo haces, durante esa activación, ese agente puede realizar una acción de misión por 1 PA menos.</p> <p>Tener un agente enemigo dentro de su área de control no impide que ese agente amigo realice esa acción de misión. Sin embargo, después de hacerlo, tú y tu adversario tiráis un dado; si tu adversario gana, no puedes usar este equipamiento por el resto de la batalla.</p>"
   },
   {
     "id_equip": 55,
@@ -445,10 +428,8 @@
     "id_equip": 58,
     "faction": "veteran-guardsmen",
     "name": "Cronómetro",
-    "description": [
-      "GAMBITO ESTRATÉGICO una vez por batalla, en el primer o segundo Punto de Inflexión. Cada agente DEATH KORPS amigo totalmente dentro de tu territorio puede realizar inmediatamente una acción de Moverse con Cuidado (Dash) gratuita en un orden de tu elección pero debe terminar ese movimiento más cerca de la zona de despliegue de un adversario o del borde de la zona de aniquilación.",
-      "No puedes usar este GAMBITO ESTRATÉGICO y el ardid estratégico Reagruparse durante el mismo Punto de Inflexión."
-    ]
+    "description": "<p>GAMBITO ESTRATÉGICO una vez por batalla, en el primer o segundo Punto de Inflexión. Cada agente DEATH KORPS amigo totalmente dentro de tu territorio puede realizar inmediatamente una acción de Moverse con Cuidado (Dash) gratuita en un orden de tu elección pero debe terminar ese movimiento más cerca de la zona de despliegue de un adversario o del borde de la zona de aniquilación.</p> <p>No puedes usar este GAMBITO ESTRATÉGICO y el ardid estratégico Reagruparse durante el mismo Punto de Inflexión.</p>",
+    "action":[]
   },
   {
     "id_equip": 59,
@@ -468,12 +449,8 @@
     "id_equip": 70,
     "faction": "battleclade",
     "name": "Aparato Oculto",
-    "description": [
-      "GAMBITO ESTRATÉGICO en el segundo Punto de Inflexión. Puedes intercambiar las ubicaciones de cualquier número de agentes BATTLECLADE SERVITOR amigos entre sí (excluyendo GUN SERVITOR), y puedes intercambiar las ubicaciones de agentes BATTLECLADE GUN SERVITOR amigos entre sí (retíralos de la zona de aniquilación y vuelve a colocarlos). No puedes intercambiar ningún agente que haya hecho alguna de las siguientes cosas durante la batalla:",
-      "   - Usado armas de su tarjeta de datos.",
-      "   - Realizado acciones de su tarjeta de datos.",
-      "   - Usado la regla Matriz de Mecanosutura (ver TECHNOMEDIC)."
-    ]
+    "description": "GAMBITO ESTRATÉGICO en el segundo Punto de Inflexión. Puedes intercambiar las ubicaciones de cualquier número de agentes BATTLECLADE SERVITOR amigos entre sí (excluyendo GUN SERVITOR), y puedes intercambiar las ubicaciones de agentes BATTLECLADE GUN SERVITOR amigos entre sí (retíralos de la zona de aniquilación y vuelve a colocarlos). No puedes intercambiar ningún agente que haya hecho alguna de las siguientes cosas durante la batalla: <ul><li>Usado armas de su tarjeta de datos.</li></ul> <ul><li>Realizado acciones de su tarjeta de datos.</li></ul> <ul><li>Usado la regla Matriz de Mecanosutura (ver TECHNOMEDIC).</li></ul>",
+    "action":[]
   },
   {
     "id_equip": 71,
@@ -630,7 +607,7 @@
     "id_equip": 93,
     "faction": "legionary",
     "name": "Talismanes del Caos",
-    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige una clave Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo que tenga esa clave dispare, combata o contraataque y saques o más fallos, puedes infligir 1D3 daños a ese agente amigo para descartar uno de ellos y guardar el otro como un éxito normal en su lugar. \nTen en cuenta que, si era la acción de <b>Disparar</b> y ese daño incapacita a ese agente amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos).",
+    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige una clave Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo que tenga esa clave dispare, combata o contraataque y saques dos o más fallos, puedes infligir 1D3 daños a ese agente amigo para descartar uno de ellos y guardar el otro como un éxito normal en su lugar. \nTen en cuenta que, si era la acción de <b>Disparar</b> y ese daño incapacita a ese agente amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos).",
     "action":[]
   },
   {
@@ -1193,7 +1170,7 @@
   {
     "id_equip": 167,
     "faction": "farstalker-kinband",
-    "name": "Balas de Toxinas",
+    "name": "Balas de Tóxinas",
     "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo realice una acción de <b>Disparar</b> y elijas un rifle Kroot, un Trabuco Kroot o el perfil concentrado de unas pistolas Kroot dobles, puedes usar esta regla. Si lo haces, hasta el final de esa acción dicha arma tiene las reglas de arma Letal 5+ y Aturdidora, pero resta 1 a sus atributos de Daño. <p>No puedes usar la Bala Perforante y la Bala de Toxinas durante la misma acción.</p>",
     "action": []
   },

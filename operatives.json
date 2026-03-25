@@ -10796,12 +10796,12 @@
                     "name": "¡MANOZ A LA OBRA!",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente <span class=\"faction\">orkomandos</span> amigo distinto (salvo <b>GARRAPATO BOMBA</b>) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                        "<b>APOYO</b>. Elige un agente <span class=\"faction\">ORKOMANDO</span> amigo distinto (salvo <b>GARRAPATO BOMBA</b>) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o como reacción."
                 }
             ],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, LÍDER, NOBLE",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, LÍDER, NOBLE",
             "peana": "32"
         },
         {
@@ -10821,11 +10821,11 @@
                         "A": "6",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Área 1\", Limitada 1, Explosiva"
+                        "RA": "Área 1\", Limitada 1, Explosiva<span class=\"faction\">*</span>"
                     }
                 },
                 {
-                    "name": "-Mordizquitoz",
+                    "name": "Mordizquitoz",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -10837,20 +10837,24 @@
             ],
             "abilities": [
                 {
+                    "name": "<span class=\"faction\">*</span>Explosiva",
+                    "description": "Este agente puede realizar la acción de <b>Disparar</b> con esta arma estando en la zona de control de un agente enemigo. No elijas un blanco válido. En lugar de eso, este agente es siempre el blanco principal y no puede estar a cubierto u ofuscado."
+                },
+                {
                     "name": "¡Bum!",
-                    "description": "Si este agente resulta incapacitado sin haber usado sus explozivoz, tira un D6 (o dos si quieres). Con 4+, realiza una acción libre de <b>Disparar</b> con sus explozivoz antes de ser retirado."
+                    "description": "Si este agente resulta incapacitado durante la batalla sin haber usado sus explozivoz, tira un D6, o dos D6 si quieres. Si algún dado saca 4+, este agente realiza una acción libre de <b>Disparar</b> con sus explozivoz antes de ser retirado de la zona de aniquilación."
                 },
                 {
                     "name": "Eztúpido",
-                    "description": "No puede elegir ocultarse. Solo puede realizar <b>Cargar</b>,<b>Combatir</b>, <b>Correr</b>, <b>Disparar</b> o <b>Reposicionarse</b>."
+                    "description": "Durante la fase de tiroteo, al determinar la orden de este agente, no puedes elegir ocultarse. Este agente no puede realizar otras acciones que no sean <b>Cargar</b>,<b>Combatir</b>, <b>Correr</b>, <b>Disparar</b> o <b>Reposicionarse</b>, ni usar armas que no figuren en su tarjeta de datos."
                 },
                 {
                     "name": "Prescindible",
-                    "description": "Se ignora para operaciones de asesinato/eliminación y para condiciones de victoria que requieran que agentes escapen o sobrevivan."
+                    "description": "Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y puntuar PV si esto requiere que agentes “escapen”, “sobrevivan” o queden incapacitados por agentes enemigos (si escapa/sobrevive/es incapacitado, al determinar cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, GARRAPATO BOMBA",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, GARRAPATO BOMBA",
             "peana": "25"
         },
         {
@@ -10887,11 +10891,11 @@
             "abilities": [
                 {
                     "name": "Kachivachez taktikoz",
-                    "description": "Una vez por punto de inflexión, un agente ORKORRASO amigo puede realizar la acción <b>Granada de humo</b> o Granada aturdidora gratuitamente (no cuenta para el límite de equipo)."
+                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p> <p><ul><li>Un agente <b>ORKORRASO</b> <span class=\"faction\">ORKOMANDO</span> amigo puede realizar la acción <b>Granada de humo</b>.</li></ul> <ul><li>Un agente <b>ORKORRASO</b> <span class=\"faction\">ORKOMANDO</span> amigo puede realizar la acción <b>Granada aturdidora</b>.</li></ul></p> <p>Las reglas para esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acciones (es decir, si también eliges esas granadas como equipo).</p>"
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, ORKORRASO",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, ORKORRASO",
             "peana": "32"
         },
         {
@@ -10937,7 +10941,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si no hay un elemento de terreno en su zona de control."
                 }
             ],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, ORKORIETE",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, ORKORIETE",
             "peana": "32"
         },
         {
@@ -10983,12 +10987,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Recuerda que Ráfaga 0\":",
-                    "description": "significa que no puedes elegir blancos secundarios, pero esta arma sigue teniendo la regla de arma Ráfaga a efectos de todas las demás reglas, p.ej., la regla de Fortaleza Condensada (ver Zona de aniquilación: Volkus, Libro Básico de Kill Team)."
+                    "name": "<span class=\"faction\">*</span>",
+                    "description": "Recuerda que Ráfaga 0\" significa que no puedes elegir blancos secundarios, pero esta arma sigue teniendo la regla de arma Ráfaga a efectos de todas las demás reglas, p.ej., la regla de Fortaleza Condensada (ver Zona de aniquilación: Volkus, Libro Básico de Kill Team)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, ACHICHARRADOR",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, ACHICHARRADOR",
             "peana": "32"
         },
         {
@@ -11025,7 +11029,7 @@
             "abilities": [
                 {
                     "name": "Tengo un plan, chavalez",
-                    "description": "Una vez por activación, puede realizar <b>Colocar marcador</b>, <b>Recoger marcador</b> o acción de misión por 1 PA menos."
+                    "description": "Una vez por activación de este agente, puede realizar una acción de <b>Colocar marcador</b>, <b>Recoger marcador</b> o acción de misión por 1 PA menos."
                 }
             ],
             "uniqueActions": [
@@ -11033,12 +11037,12 @@
                     "name": "EZKUCHADME",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente <span class=\"faction\">ORKOMANDOS</span> amigo distinto (salvo <b>GARRAPATO BOMBA</b>) a 6\" o menos y visible. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                        "<b>APOYO</b>. Elige un agente <span class=\"faction\">ORKOMANDO</span> amigo distinto (salvo <b>GARRAPATO BOMBA</b>) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, TELEKO",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, TELEKO",
             "peana": "32"
         },
         {
@@ -11093,7 +11097,7 @@
                     "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo, o mientras tenga una orden de ocultarse."
                 }
             ],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, ZUELTADAKKA",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, ZUELTADAKKA",
             "peana": "32"
         },
         {
@@ -11120,7 +11124,7 @@
             "abilities": [
                 {
                     "name": "Ezkurridizo",
-                    "description": "No puede tener orden de trabarse. Si está tras cobertura, no puede ser elegido como blanco válido (salvo a 2\" o menos)."
+                    "description": "Este agente no puede tener orden de trabarse. Si está tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej. Buscadora, terreno Aventajado) salvo estar a 2\" o menos."
                 }
             ],
             "uniqueActions": [
@@ -11128,12 +11132,12 @@
                     "name": "GANCHO PA TREPAR",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un punto visible en un elemento de terreno para este agente. Retira a este agente de la zona de aniquilación y despliégalo de nuevo a 1\" o menos en horizontal de ese punto, en una localización donde ser desplegado, fuera de la zona de control de todo agente enemigo y con el punto elegido visible para él. Este agente no puede realizar la acción Operar portillo durante esta acción."
+                        "Elige un punto visible en un elemento de terreno para este agente. Retira a este agente de la zona de aniquilación y despliégalo de nuevo a 1\" o menos en horizontal de ese punto, en una localización donde ser desplegado, fuera de la zona de control de todo agente enemigo y con el punto elegido visible para él. Este agente no puede realizar la acción <b>Operar portillo</b> durante esta acción."
                     ],
                     "description_no": "Esta acción se considera una acción de <b>Reposicionarse</b>. Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, ni durante una activación en la que haya realizado una acción de <b>Cargar</b> o <b>Retroceder</b> (o viceversa)."
                 }
             ],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, GROT",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, GROT",
             "peana": "25"
         },
         {
@@ -11179,7 +11183,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, CHIKO KOBETE",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, CHIKO KOBETE",
             "peana": "32"
         },
         {
@@ -11216,11 +11220,11 @@
             "abilities": [
                 {
                     "name": "¿Ez lo mejor ke zabez hazer?",
-                    "description": "Después de <b>Combatir</b> o <b>contraatacar</b>, si no resulta incapacitado puede infligir 1D3 daños al enemigo."
+                    "description": "Después de que este agente combata o contraataque, si no resulta incapacitado puedes infligir 1D3 daños al agente enemigo en dicha secuencia."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, RAJADOR",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, RAJADOR",
             "peana": "32"
         },
         {
@@ -11240,7 +11244,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 2, Pesada, Silenciosa, Posición oculta"
+                        "RA": "Devastadora 2, Pesada, Silenciosa, Posición oculta<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -11276,12 +11280,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Posición oculta",
+                    "name": "<span class=\"faction\">*</span>Posición oculta",
                     "description": "Solo puede usar esta arma la primera vez que realice la acción de <b>Disparar</b> durante la batalla."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">ORKOMANDOS</span>, ORKO, FRANCOTIRADORK",
+            "keywords": "<span class=\"faction\">ORKOMANDO</span>, ORKO, FRANCOTIRADORK",
             "peana": "32"
         }
     ],

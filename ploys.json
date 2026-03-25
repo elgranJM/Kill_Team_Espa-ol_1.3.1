@@ -176,7 +176,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Reagruparse",
-        "description": "<b>APOYO</b>. Elige un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo que esté a más de 3” de agentes enemigos. Cada otro agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo a 5” de ese agente y no dentro del rango de control de agentes enemigos puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección, pero cada uno que lo haga debe terminar ese movimiento más cerca de ese agente. Ten en cuenta que un Dispositivo de Comunicaciones del equipamiento universal solo afecta la segunda distancia de esta regla.<p>No puedes usar este ardid y el <b>GAMBITO ESTRATÉGICO</b> del equipamiento de facción Cronómetro durante el mismo punto de inflexión.</p>",
+        "description": "<b>APOYO</b>. Elige un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo que esté a más de 3\" de agentes enemigos. Cada otro agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo a 5\" de ese agente y no dentro del rango de control de agentes enemigos puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección, pero cada uno que lo haga debe terminar ese movimiento más cerca de ese agente. Ten en cuenta que un Dispositivo de Comunicaciones del equipamiento universal solo afecta la segunda distancia de esta regla.<p>No puedes usar este ardid y el <b>GAMBITO ESTRATÉGICO</b> del equipamiento de facción Cronómetro durante el mismo punto de inflexión.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -869,7 +869,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "POSICIONES DE FRANCOTIRADOR",
-        "description": "Siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo esté a más de 6\" de agentes enemigos <span class=\"text-warning-emphasis\">y a 1” de terreno Pesado</span>, el perfil estacionario de su rifle (si tiene) tiene la regla de armas Silenciosa.",
+        "description": "Siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo esté a más de 6\" de agentes enemigos <span class=\"text-warning-emphasis\">y a 1\" de terreno Pesado</span>, el perfil estacionario de su rifle (si tiene) tiene la regla de armas Silenciosa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1004,7 +1004,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Devoción Inquebrantable",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>ORADOR</b> <span class=\"faction\">SANTIFICADOR</span> o <b>MILAGRERO</b> <span class=\"faction\">SANTIFICADOR</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige un agente <span class=\"faction\">SANTIFICADOR</span> amigo (excluyendo <b>CONFESOR, MILAGRERO</b> y <b>ORADOR</b>) visible para y a 3” de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción.\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas <b>Estallido</b> o <b>Torrente</b>.</p>",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>ORADOR</b> <span class=\"faction\">SANTIFICADOR</span> o <b>MILAGRERO</b> <span class=\"faction\">SANTIFICADOR</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige un agente <span class=\"faction\">SANTIFICADOR</span> amigo (excluyendo <b>CONFESOR, MILAGRERO</b> y <b>ORADOR</b>) visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción.\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas <b>Estallido</b> o <b>Torrente</b>.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1103,7 +1103,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Ojo Arriba",
-        "description": "Selecciona un agente enemigo. Ese agente y todos los demás agentes enemigos a 3” de él ganan una de tus fichas de <b>Detectado</b> hasta el final del punto de inflexión. Siempre que un agente enemigo con una ficha de Detectado dispare contra un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo, puedes repetir uno de tus dados de defensa. Si está combatiendo o contraataque contra un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo, uno de tus bloqueos puede asignarse para bloquear dos éxitos no resueltos (en lugar de uno).",
+        "description": "Selecciona un agente enemigo. Ese agente y todos los demás agentes enemigos a 3\" de él ganan una de tus fichas de <b>Detectado</b> hasta el final del punto de inflexión. Siempre que un agente enemigo con una ficha de Detectado dispare contra un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo, puedes repetir uno de tus dados de defensa. Si está combatiendo o contraataque contra un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo, uno de tus bloqueos puede asignarse para bloquear dos éxitos no resueltos (en lugar de uno).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1112,7 +1112,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Desplegar y Asegurar",
-        "description": "Selecciona un marcador. <span class=\"text-info-emphasis\">Hasta el paso de Preparar del próximo punto de inflexión, al</span> determinar el control de ese marcador, trata el atributo de LPA total de los agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> amigos que lo disputan como 1 mayor, siempre y cuando al menos un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo realmente lo dispute. Siempre que un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo esté a 3” de ese marcador, suma 1 al atributo de Atq de sus armas de combate (hasta un máximo de 4).",
+        "description": "Selecciona un marcador. <span class=\"text-info-emphasis\">Hasta el paso de Preparar del próximo punto de inflexión, al</span> determinar el control de ese marcador, trata el atributo de LPA total de los agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> amigos que lo disputan como 1 mayor, siempre y cuando al menos un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo realmente lo dispute. Siempre que un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo esté a 3\" de ese marcador, suma 1 al atributo de Atq de sus armas de combate (hasta un máximo de 4).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1184,7 +1184,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Desaparición Amarga",
-        "description": "Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo sea incapacitado <span class=\"text-info-emphasis\">, antes de que sea retirado de la zona de aniquilación, </span> tira un 1D3: con un 3 (o 2+ si ese agente amigo tiene una de tus fichas de Ensangrentado), inflige daño igual al resultado a un agente enemigo visible para y a 2” de ese agente amigo.",
+        "description": "Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo sea incapacitado <span class=\"text-info-emphasis\">, antes de que sea retirado de la zona de aniquilación, </span> tira un 1D3: con un 3 (o 2+ si ese agente amigo tiene una de tus fichas de Ensangrentado), inflige daño igual al resultado a un agente enemigo visible para y a 2\" de ese agente amigo.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1202,7 +1202,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Favor Oscuro",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que tiene una de tus fichas de Ensangrentado sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <span class=\"faction\">ENSANGRENTADO</span> amigo visible para y a 3” de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar. Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n<p> Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas Estallido o Torrente.</p>",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que tiene una de tus fichas de Ensangrentado sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <span class=\"faction\">ENSANGRENTADO</span> amigo visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar. Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n<p> Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas Estallido o Torrente.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1805,7 +1805,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Danza de la Muerte",
-        "description": "Selecciona dos agentes <span class=\"faction\">FILOS DE KHAINE</span> amigos visibles y a 6” el uno del otro. Retira a ambos de la zona de aniquilación y colócalos de nuevo en las ubicaciones anteriores del otro (en otras palabras, intercambia sus posiciones).",
+        "description": "Selecciona dos agentes <span class=\"faction\">FILOS DE KHAINE</span> amigos visibles y a 6\" el uno del otro. Retira a ambos de la zona de aniquilación y colócalos de nuevo en las ubicaciones anteriores del otro (en otras palabras, intercambia sus posiciones).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1931,7 +1931,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Idolatría",
-        "description": "Usa este Ardid Táctico cuando un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (excluyendo <b>LÍDER</b>) a 6” de un agente <b>LÍDER</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> o <b>PORTAICONO</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo dispare, combatiendo o contraataque, en el paso Tirar Dados de Ataque. Puedes retener uno de tus fallos como un éxito normal en lugar de descartarlo, o retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+        "description": "Usa este Ardid Táctico cuando un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (excluyendo <b>LÍDER</b>) a 6\" de un agente <b>LÍDER</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> o <b>PORTAICONO</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo dispare, combatiendo o contraataque, en el paso Tirar Dados de Ataque. Puedes retener uno de tus fallos como un éxito normal en lugar de descartarlo, o retener uno de tus éxitos normales como un éxito crítico en su lugar.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2453,25 +2453,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "¡Dakka! ¡Dakka! ¡Dakka!",
-        "description": "Las armas a distancia de los agentes <span class=\"faction\">KOMANDO</span> amigos tienen la regla de armas Castigadora.",
-        "typename": "Ardid de Estrategia"
-    },
-    {
-        "id_ploy": 176,
-        "faction": "kommandos",
-        "type": "strategic",
-        "cps": "1PM",
-        "name": "Merodear",
-        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">KOMANDO</span> amigo que tiene una orden de Ocultación, puedes retener uno de tus dados de defensa como un éxito normal sin tirarlo (además de una salvación por cobertura, si la hay).",
-        "typename": "Ardid de Estrategia"
-    },
-    {
-        "id_ploy": 177,
-        "faction": "kommandos",
-        "type": "strategic",
-        "cps": "1PM",
-        "name": "¡CHIST!",
-        "description": "Cada agente <span class=\"faction\">KOMANDO</span> amigo que no sea un blanco válido para agentes enemigos, o tenga una orden de Ocultación y esté a más de 6” de agentes enemigos, puede realizar inmediatamente una acción gratuita de <b>Correr</b>. No puedes usar este ardid durante el primer punto de inflexión.",
+        "description": "Las armas a distancia de los agentes <span class=\"faction\">ORKOMANDO</span> amigos tienen la regla de arma Castigadora.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2479,8 +2461,26 @@
         "faction": "kommandos",
         "type": "strategic",
         "cps": "1PM",
-        "name": "¡Waaagh!",
-        "description": "Las armas de combate de los agentes <span class=\"faction\">KOMANDO</span> amigos tienen la regla de armas Equilibrada.",
+        "name": "¡WAAAGH!",
+        "description": "Las armas de combate de los agentes <span class=\"faction\">ORKOMANDO</span> amigos tienen la regla de arma Equilibrada.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 176,
+        "faction": "kommandos",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Ezcondidoz",
+        "description": "Cada vez que un agente enemigo dispara a un agente <span class=\"faction\">ORKOMANDO</span> amigo que tiene una orden de Ocultarse, puedes guardar uno de tus dados de defensa como éxito normal sin tirarlo (además de la salvación por cobertura, si dispones de ella).",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 177,
+        "faction": "kommandos",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "¡SSSSHHHH!",
+        "description": "Cada agente <span class=\"faction\">ORKOMANDO</span> amigo que no sea un blanco válido para los agentes enemigos, o que tenga una orden de Ocultarse y se encuentre a más de 6\" de todo agente enemigo, puede realizar inmediatamente una acción libre de <b>Correr</b>. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2488,8 +2488,8 @@
         "faction": "kommandos",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Solo un Rasguño",
-        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflija Daño Normal a un agente <span class=\"faction\">KOMANDO</span> amigo (excluyendo <b>GARRAPATO BOMBA</b> y <b>GROT</b>). Ignora ese daño infligido.",
+        "name": "Zolo ez un Razguño",
+        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflinge Daño Normal a un agente <span class=\"faction\">ORKOMANDO</span> amigo (que no sea <b>GARRAPATO BOMBA</b> o <b>GROT</b>). Ignora ese daño inflingido.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2497,17 +2497,8 @@
         "faction": "kommandos",
         "type": "tactical",
         "cps": "1PM",
-        "name": "¡Aplástalos!",
-        "description": "Usa este ardid de tiroteo al final de la Fase de Tiroteo. Elige un agente <span class=\"faction\">KOMANDO</span> amigo. Puede realizar inmediatamente una acción gratuita de <b>Combatir</b>.",
-        "typename": "Ardid de Tiroteo"
-    },
-    {
-        "id_ploy": 181,
-        "faction": "kommandos",
-        "type": "tactical",
-        "cps": "1PM",
-        "name": "Sacúdetelo",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KOMANDO</span> amigo sea activado, o cuando su atributo de LPA sea cambiado. Hasta el inicio del siguiente punto de inflexión, puedes ignorar cualquier cambio en su atributo de LPA.",
+        "name": "¡MACHAKALOZ!",
+        "description": "Usa este ardid de tiroteo al final de la Fase de Tiroteo. Elige un agente <span class=\"faction\">ORKOMANDO</span> amigo. Puede realizar inmediatamente una acción libre de <b>Combatir</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2515,8 +2506,17 @@
         "faction": "kommandos",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Astuto Pero Brutal",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KOMANDO</span> amigo que tiene una orden de Ocultación esté combatiendo durante una activación en la que realizó la acción <b>Cargar</b>, estés resolviendo el primer dado de ataque, y sea un golpe con un éxito normal. Trata ese éxito normal como un éxito crítico en su lugar.",
+        "name": "Aztutoz pero Brutoz",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ORKOMANDO</span> amigo que tenga una orden de Ocultarse esté combatiendo durante una activación en la que realizó la acción <b>Cargar</b>, al resolver el primer dado de ataque, si este golpea con un éxito normal. ese éxito normal se considera un éxito crítico en su lugar.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 181,
+        "faction": "kommandos",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "No Te Parez",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ORKOMANDO</span> amigo es activado, o cuando su atributo de LPA cambia. Hasta el inicio del siguiente punto de inflexión, puedes ignorar cualquier cambio a su atributo LPA.",
         "typename": "Ardid de Tiroteo"
     },
     {

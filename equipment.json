@@ -850,14 +850,14 @@
     "id_equip": 123,
     "faction": "wrecka-krew",
     "name": "Blindaje Adicional",
-    "description": "Resta 1\" del atributo de Movimiento de los agentes WRECKA KREW amigos y mejora su atributo de Salvación en 1. Esto excluye a los agentes BOMB SQUIG y no es acumulativo con la regla Protección de una Barricada Portátil del equipamiento universal.",
+    "description": "Resta 1\" del atributo de Movimiento de los agentes WRECKA KREW amigos y mejora su atributo de Salvación en 1. Esto excluye a los agentes <b>GARRAPATO BOMBA</b> y no es acumulativo con la regla Protección de una Barricada Portátil del equipamiento universal.",
     "action": []
   },
   {
     "id_equip": 124,
     "faction": "wrecka-krew",
     "name": "Aceite de Motor",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo (excluyendo BOMB SQUIG) sea activado, puedes usar esta regla. Si lo haces, hasta el final de esa activación, puedes ignorar cualquier cambio en los atributos de ese agente por estar herido (incluyendo los atributos de sus armas).",
+    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo (excluyendo <b>GARRAPATO BOMBA</b>) sea activado, puedes usar esta regla. Si lo haces, hasta el final de esa activación, puedes ignorar cualquier cambio en los atributos de ese agente por estar herido (incluyendo los atributos de sus armas).",
     "action": []
   },
   {
@@ -1022,43 +1022,39 @@
     "id_equip": 146,
     "faction": "kommandos",
     "name": "Rebanadora",
-    "description": "Los agentes KOMMANDO amigos (excluyendo BOMB SQUIG y GROT) tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
+    "description": "Los agentes <span class=\"faction\">ORKOMANDO</span> amigos (salvo <b>GARRAPATO BOMBA</b> o <b>GROT</b>) tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la versión que sea mejor.",
     "ATK": "3",
     "HIT": "3+",
     "DMG": "4/5",
     "action": []
   },
   {
-    "id_equip": 147,
-    "faction": "kommandos",
-    "name": "Arpón",
-    "description": "Una vez por Punto de Inflexión, un agente KOMMANDO amigo (excluyendo BOMB SQUIG y GROT) puede usar la siguiente arma a distancia.",
-    "ATK": "4",
-    "HIT": "4+",
-    "DMG": "4/5",
-    "special_rules": "Alcance 8\", Letal 5+, Aturdir",
-    "action": []
-  },
-  {
     "id_equip": 148,
     "faction": "kommandos",
     "name": "Dinamita",
-    "description": "Una vez por batalla, un agente KOMMANDO amigo (excluyendo BOMB SQUIG y GROT) puede usar la siguiente arma a distancia.",
+    "description": "Una vez por batalla, un agente <span class=\"faction\">ORKOMANDO</span> amigo (que no sea <b>GARRAPATO BOMBA</b> o <b>GROT</b>) puede usar la siguiente arma a distancia.",
     "ATK": "5",
     "HIT": "4+",
     "DMG": "4/5",
-    "special_rules": "Alcance 4\", Explosión 1\", Pesada (Solo reposicionarse), Saturación",
+    "special_rules": "Alcance 4\", Explosión 1\", Pesada (Solo Reposicionarse), Saturación",
+    "action": []
+  },
+  {
+    "id_equip": 147,
+    "faction": "kommandos",
+    "name": "Arpón",
+    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">ORKOMANDO</span> amigo (salvo <b>GARRAPATO BOMBA</b> o <b>GROT</b>) puede usar la siguiente arma a distancia.",
+    "ATK": "4",
+    "HIT": "4+",
+    "DMG": "4/5",
+    "special_rules": "Alcance 8\", Aturdidora, Letal 5+",
     "action": []
   },
   {
     "id_equip": 149,
     "faction": "kommandos",
-    "name": "Culatas Plegables",
-    "description": [
-      "Retira la regla de armas Alcance de las siguientes armas a distancia que tienen los agentes KOMMANDO amigos:",
-      "Pistola de Choque",
-      "Pistola Automática"
-    ]
+    "name": "Culata Plegable",
+    "description": "Elimina la regla de arma Alcance de las siguientes armas a distancia que tengan los agentes <span class=\"faction\">ORKOMANDO</span> amigos: <ul><li>Piztola kalambrazo</li></ul> <ul><li>Piztola</li></ul>"
   },
   {
     "id_equip": 150,

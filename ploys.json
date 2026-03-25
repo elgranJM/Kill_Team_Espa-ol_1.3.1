@@ -1085,7 +1085,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Ofensiva Repentina",
-        "description": "Cuenta el número de agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> amigos que no están incapacitados, luego divide el resultado a la mitad (redondeando hacia arriba) para obtener x. Hasta el final de su activación, las armas de los agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> amigos tienen la regla de armas <b>Equilibrada</b> si son los primeros agentes amigos activados en este punto de inflexión igual a x. Por ejemplo, si tienes cinco agentes, los primeros tres agentes amigos activados se beneficiarán.",
+        "description": "Cuenta el número de agentes <span class=\"faction\">AQUILON TEMPESTUS</span> amigos que no están incapacitados, luego divide el resultado a la mitad (redondeando hacia arriba) para obtener x. Hasta el final de su activación, las armas de los agentes <span class=\"faction\">AQUILON TEMPESTUS</span> amigos tienen la regla de armas <b>Equilibrada</b> si son los primeros agentes amigos activados en este punto de inflexión igual a x. Por ejemplo, si tienes cinco agentes, los primeros tres agentes amigos activados se beneficiarán.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1229,7 +1229,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Exaltación en el Dolor",
-        "description": "Puedes ignorar cualquier cambio en el <span class=\"text-warning-emphasis\">atributo de Impacto</span> de las armas de los agentes de la <span class=\"faction\">SECTA DEL CAOS</span> amigos <span class=\"text-warning-emphasis\"> armas</span> por estar lesionados <span class=\"text-decoration-line-through text-warning-emphasis\">(incluyendo los atributos de sus armas)</span>\nSiempre que un agente dispare contra un agente de la <span class='faction'>SECTA DEL CAOS</span> amigo que esté herido, puedes repetir uno de tus dados de defensa.\n",
+        "description": "Puedes ignorar cualquier cambio en el <span class=\"text-warning-emphasis\">atributo de Impacto</span> de las armas de los agentes de la <span class=\"faction\">SECTA DEL CAOS</span> amigos <span class=\"text-warning-emphasis\"> armas</span> por estar lesionados <span class=\"text-decoration-line-through text-warning-emphasis\">(incluyendo los atributos de sus armas)</span>\nSiempre que un agente dispare contra un agente de la <span class=\"faction\">SECTA DEL CAOS</span> amigo que esté herido, puedes repetir uno de tus dados de defensa.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -3056,7 +3056,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Doctrina de Combate",
-        "description": "<p>Selecciona una <b>DOCTRINA DE COMBATE</b> de las siguientes:</p><ul><li><b>Doctrina Devastador:</b> Disparar a un agente a más de 6\" de él.</li><li><b>Doctrina Táctica:</b> Disparar a un agente a 6\" o menos de él.</li><li><b>Doctrina Asalto:</b> Combatir o Contraatacar.</li></ul><p>Siempre que un agente <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> amigo esté x, sus armas tienen la regla de armas Equilibrada -X, donde X es la <b>DOCTRINA DE COMBATE</b> que seleccionaste.</p>",
+        "description": "<p>Selecciona una <b>DOCTRINA DE COMBATE</b> de las siguientes:</p><ul><li><b>Doctrina Devastador:</b> Disparar a un agente a más de 6\" de él.</li><li><b>Doctrina Táctica:</b> Disparar a un agente a 6\" o menos de él.</li><li><b>Doctrina Asalto:</b> Combatir o Contraatacar.</li></ul><p>Siempre que un agente <span class=\"faction\">FUERZA DE ATAQUE VARIEL</span> amigo esté x, sus armas tienen la regla de armas Equilibrada, donde X es la <b>DOCTRINA DE COMBATE</b> que seleccionaste.</p>",
         "typename": "Ardid de Estrategia"
     },
     {

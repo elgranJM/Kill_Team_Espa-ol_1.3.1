@@ -44,7 +44,7 @@
             "abilities": [
                 {
                     "name": "Líder heroico",
-                    "description": "Una vez por punto de inflexión, puedes elegir una de las siguientes opciones: <ul><li>Usar un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> especificado (excepto repetición de mando).</li></ul> <ul><li>Usa el ardid de estrategia Doctrina de combate cuando actives un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> si este agente está en la zona de aniquilación y no está en la zona de control de ningún agente enemigo (pagando su coste en PM de manera normal). Ten en cuenta que no puedes hacer si ya has usado ese ardid durante este punto de inflexión.</li></ul> <ul><li>Usa el ardid de tiroteo Ajustar doctrina por 0PM si este agente está en la zona de aniquilación y fuera de la zona de control de todos los agentes enemigos.</li></ul>"
+                    "description": "Una vez por punto de inflexión, puedes elegir una de las siguientes opciones: <ul><li>Usar un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> especificado (excepto repetición de mando).</li></ul> <ul><li>Usa el ardid de estrategia Doctrina de combate cuando actives un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> si este agente está en la zona de aniquilación y no está en la zona de control de ningún agente enemigo (pagando su coste en PM de manera normal). Ten en cuenta que no puedes hacerlo si ya has usado ese ardid durante este punto de inflexión.</li></ul> <ul><li>Usa el ardid de tiroteo Ajustar doctrina por 0PM si este agente está en la zona de aniquilación y fuera de la zona de control de todos los agentes enemigos.</li></ul>"
                 },
                 {
                     "name": "Aura de hierro",
@@ -201,7 +201,7 @@
                     }
                 },
                 {
-                    "name": "Rifle bólter silencioso (movil)",
+                    "name": "Rifle bólter silencioso (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -469,7 +469,7 @@
                     }
                 },
                 {
-                    "name": "Rifle bólter silencioso (movil)",
+                    "name": "Rifle bólter silencioso (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -535,7 +535,7 @@
                     }
                 },
                 {
-                    "name": "Rifle bólter silencioso (movil)",
+                    "name": "Rifle bólter silencioso (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -689,7 +689,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE BATALLAS</span>, IMPERIUM, ADEPTUS MECHANICUS, TECNOSACERDOTE, LÍDER, TECNOARQUEÓLOGO",
+            "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, TECNOSACERDOTE, LÍDER, TECNOARQUEÓLOGO",
             "peana": "32"
         },
         {
@@ -729,7 +729,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE BATALLAS</span>, IMPERIUM, ADEPTUS MECHANICUS, AUTOTRANSMISOR, SERVIDOR",
+            "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, AUTOTRANSMISOR, SERVIDOR",
             "peana": "25"
         },
         {
@@ -784,7 +784,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si no hay un elemento de terreno en su zona de control."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE BATALLAS</span>, IMPERIUM, ADEPTUS MECHANICUS, IRRUPTOR, SERVIDOR",
+            "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, IRRUPTOR, SERVIDOR",
             "peana": "25"
         },
         {
@@ -840,7 +840,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE BATALLAS</span>, IMPERIUM, ADEPTUS MECHANICUS, COMBATE, SERVIDOR",
+            "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, COMBATE, SERVIDOR",
             "peana": "25"
         },
         {
@@ -896,7 +896,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE BATALLAS</span>, IMPERIUM, ADEPTUS MECHANICUS, ARMAMENTO, SERVIDOR",
+            "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, ARMAMENTO, SERVIDOR",
             "peana": "25"
         },
         {
@@ -923,7 +923,7 @@
             "abilities": [
                 {
                     "name": "Matriz de mecanosutura",
-                    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo distinto vaya a resultar incapacitado estando a 3\" o menos de este agente y siendo visible para él, puedes usar esta regla siempre que ni este ni el otro agente estén en la zona de control de algún agente enemigo Si lo haces, ese agente amigo no resulta incapacitado, le queda 1 herida restante y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede entonces realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Si esta regla fue usada durante la activación de ese agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco principal o secundario."
+                    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo distinto vaya a resultar incapacitado estando a 3\" o menos de este agente y siendo visible para él, puedes usar esta regla siempre que ni este ni el otro agente estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le queda 1 herida restante y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede entonces realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Si esta regla fue usada durante la activación de ese agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco principal o secundario."
                 }
             ],
             "uniqueActions": [
@@ -936,7 +936,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE BATALLAS</span>, IMPERIUM, ADEPTUS MECHANICUS, MÉDICO, TECNOMÉDICO, SERVIDOR",
+            "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, MÉDICO, TECNOMÉDICO, SERVIDOR",
             "peana": "25"
         },
         {
@@ -989,7 +989,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE BATALLAS</span>, IMPERIUM, ADEPTUS MECHANICUS, TECNOSACERDOTE, SUPERVISOR DE SERVIDORES",
+            "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, TECNOSACERDOTE, SUPERVISOR DE SERVIDORES",
             "peana": "32"
         }
     ],
@@ -1365,7 +1365,7 @@
             "abilities": [
                 {
                     "name": "Lanzador de electrobengalas",
-                    "description": "Una vez por punto de inflexión, cuando un agente enemigo realice la acción <b>Disparar</b> y tu oponente elija un blanco válido (salvo <b>DRON</b>), puedes usar esta regla, siempre y cuando este agente no esté en la zona de control de agentes enemigos. Si lo haces, hasta el final de esa acción, siempre que un agente enemigo dispare a un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo que sea visible para este agente, se encuentre a 3\" o menos de él y a más de 2\" de ese agente enemigo: <ul><li>Ignora la reglas de armas Penetración.</li></ul> <ul><li>Ese agente amigo está ofuscado.</li></ul>"
+                    "description": "Una vez por punto de inflexión, cuando un agente enemigo realice la acción <b>Disparar</b> y tu oponente elija un blanco válido (salvo <b>DRON</b>), puedes usar esta regla, siempre y cuando este agente no esté en la zona de control de agentes enemigos. Si lo haces, hasta el final de esa acción, siempre que un agente enemigo dispare a un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo que sea visible para este agente, se encuentre a 3\" o menos de él y a más de 2\" de ese agente enemigo: <ul><li>Ignora las reglas de armas Penetración.</li></ul> <ul><li>Ese agente amigo está ofuscado.</li></ul>"
                 },
                 {
                     "name": "Baliza",
@@ -1423,7 +1423,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "3/4",
-                        "RA": "Incesante, Rafaga 1\""
+                        "RA": "Incesante, Ráfaga 1\""
                     }
                 },
                 {
@@ -1941,7 +1941,7 @@
                         "A": "3",
                         "HP/HA": "4+",
                         "Dñ": "3/4",
-                        "RA": "Alcance 12\", Severa, Aturdidora"
+                        "RA": "-"
                     }
                 }
             ],
@@ -2110,7 +2110,7 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": " Cuando este agente quede usado, debes activar a continuación otro agente <b>COMBATIENTE</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+                    "description": "Cuando este agente quede usado, debes activar a continuación otro agente <b>COMBATIENTE</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
                 }
             ],
             "uniqueActions": [],
@@ -2444,7 +2444,7 @@
                     }
                 },
                 {
-                    "name": "Bateria de kobetez",
+                    "name": "Batería de kobetez",
                     "type": "ranged",
                     "stats": {
                         "A": "6",
@@ -2559,7 +2559,7 @@
             "abilities": [
                 {
                     "name": "Depredador instintivo",
-                    "description": "Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, <Ponerse en guardia</b> y <b>Reposicionarse</b>. No puede usar armas que no estén en su hoja de datos. Este agente puede realizar la acción de <b>Cargar</b> mientras tenga una orden de ocultarse."
+                    "description": "Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, <b>Ponerse en guardia</b> y <b>Reposicionarse</b>. No puede usar armas que no estén en su hoja de datos. Este agente puede realizar la acción de <b>Cargar</b> mientras tenga una orden de ocultarse."
                 },
                 {
                     "name": "Sin parar",
@@ -2790,7 +2790,7 @@
             "abilities": [
                 {
                     "name": "Furia de la tempestad",
-                    "description": "Siempre que este agente esté dentro de tu <b>TORMENTA<b>: <ul><li>Todos los perfiles de su rifle de plasma tienen la regla de armas Castigadora.</li></ul> <ul><li>Su rifle de plasma (sobrecarga) no tiene la regla de armas Sobrecalentamiento.</li></ul>"
+                    "description": "Siempre que este agente esté dentro de tu <b>TORMENTA</b>: <ul><li>Todos los perfiles de su rifle de plasma tienen la regla de armas Castigadora.</li></ul> <ul><li>Su rifle de plasma (sobrecarga) no tiene la regla de armas Sobrecalentamiento.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -3505,7 +3505,7 @@
                 "SALVACIÓN": "4+",
                 "HERIDAS": "9"
             },
-            "weapons ": [
+            "weapons": [
                 {
                     "name": "Pistola fundidora",
                     "type": "ranged",
@@ -3640,7 +3640,7 @@
             ],
             "abilities": [
                 {
-                    "name": "<span class\"faction\">*</span>Crueldad humillante",
+                    "name": "<span class=\"faction\">*</span>Crueldad humillante",
                     "description": "Si el blanco de esta arma no resulta incapacitado pero alguno de tus dados de ataque inflige daño, el blanco obtiene una de tus fichas de Crueldad humillante (si no tiene una ya). Mientras un enemigo tenga una de tus fichas de Crueldad humillante, empeora en 1 el atributo Impactar de sus armas y resta 2\" a su atributo Movimiento. Esto no se acumula con estar lesionado. Al final de la próxima activación de ese agente enemigo, retira su ficha de Crueldad humillante."
                 }
             ],
@@ -3860,7 +3860,7 @@
                 },
                 {
                     "name": "Entrar en comunión",
-                    "description": "Al elegir tus agentes para la batalla, elige también un ardid de estrategia <span class=\"faction\">AGULJÓN ALADO VÉSPID</span>. Si este agente está en la zona de aniquilación y fuera de la zona de control de todo agente enemigo, dicho ardid te cuesta OPM"
+                    "description": "Al elegir tus agentes para la batalla, elige también un ardid de estrategia <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>. Si este agente está en la zona de aniquilación y fuera de la zona de control de todo agente enemigo, dicho ardid te cuesta OPM"
                 }
             ],
             "uniqueActions": [],
@@ -3955,7 +3955,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO T'AU, AGULJÓNLARGO",
+            "keywords": "<span class=\"faction\">AGUIJÓN ALADO VÉSPID</span>, IMPERIO T'AU, AGUIJÓNLARGO",
             "peana": "28"
         },
         {
@@ -4295,7 +4295,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, Penetracións, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente use una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, Penetración, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente use una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -4354,7 +4354,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">TEMPESTUS AQUILONS</span>, IMPERIUM, PISTOLERO",
+            "keywords": "<span class=\"faction\">TEMPESTUS AQUILON</span>, IMPERIUM, PISTOLERO",
             "peana": "28"
         },
         {
@@ -4687,7 +4687,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, TENIENTE VARIEL",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIUM, ADEPTUS ASTARTES, TENIENTE VARIEL",
             "peana": "40"
         },
         {
@@ -4707,7 +4707,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Rafaga 1\""
+                        "RA": "Ráfaga 1\""
                     }
                 },
                 {
@@ -4742,7 +4742,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, SARGENTO VETERANO RAMUS",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIUM, ADEPTUS ASTARTES, SARGENTO VETERANO RAMUS",
             "peana": "32"
         },
         {
@@ -4783,11 +4783,11 @@
                 },
                 {
                     "name": "Omni-Scrambler",
-                    "description": "como <b>GAMBITO ESTRATÉGICO</b>. Selecciona un operativo enemigo visible para este operativo y tira 1D3. En la siguiente fase de Tiroteo, ese operativo enemigo no podrá activarse ni realizar acciones hasta que se cumpla una de las siguientes condiciones: <ul><li>Tu oponente ha activado un número de operativos enemigos igual al resultado del D3.</li></ul> <ul><li>Es el último operativo enemigo en ser activado.</li>"
+                    "description": "como <b>GAMBITO ESTRATÉGICO</b>. Selecciona un operativo enemigo visible para este operativo y tira 1D3. En la siguiente fase de Tiroteo, ese operativo enemigo no podrá activarse ni realizar acciones hasta que se cumpla una de las siguientes condiciones: <ul><li>Tu oponente ha activado un número de operativos enemigos igual al resultado del D3.</li></ul> <ul><li>Es el último operativo enemigo en ser activado.</li></ul>"
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO BELATH",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIUM, ADEPTUS ASTARTES, HERMANO BELATH",
             "peana": "32"
         },
         {
@@ -4836,7 +4836,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO NAHRDEN",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIUM, ADEPTUS ASTARTES, HERMANO NAHRDEN",
             "peana": "32"
         },
         {
@@ -4877,7 +4877,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO MAPHAEL",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIUM, ADEPTUS ASTARTES, HERMANO MAPHAEL",
             "peana": "32"
         },
         {
@@ -4918,7 +4918,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO ZERADIM",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIUM, ADEPTUS ASTARTES, HERMANO ZERADIM",
             "peana": "32"
         },
         {
@@ -4948,7 +4948,7 @@
                         "A": "5",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Alcance 8\", Saturación, Rafaga 2\""
+                        "RA": "Alcance 8\", Saturación, Ráfaga 2\""
                     }
                 },
                 {
@@ -4975,11 +4975,11 @@
             "abilities": [
                 {
                     "name": "Astartes",
-                    "description": "Durante la activacion de este agente, puede realizar dos acciones de <b>Disparar</b> o dos de <b>Combatir</b>. Si se trata de dos acciones de <b>Disparar</b> y se selecciona un <b>Pirobláster</b> para ambas, se debe gastar 1 PA adicional para la segunda acción. Este agente puede reaccionar independientemente de su orden."
+                    "description": "Durante la activación de este agente, puede realizar dos acciones de <b>Disparar</b> o dos de <b>Combatir</b>. Si se trata de dos acciones de <b>Disparar</b> y se selecciona un <b>Pirobláster</b> para ambas, se debe gastar 1 PA adicional para la segunda acción. Este agente puede reaccionar independientemente de su orden."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIO, ADEPTUS ASTARTES, HERMANO HAROTH",
+            "keywords": "<span class=\"faction\">FUERZA DE ATAQUE VARIEL</span>, IMPERIUM, ADEPTUS ASTARTES, HERMANO HAROTH",
             "peana": "32"
         }
     ],
@@ -5146,7 +5146,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de francotirador (movil)",
+                    "name": "Rifle de francotirador (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -5156,7 +5156,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de francotirador (inmovil)",
+                    "name": "Rifle de francotirador (inmóvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -5179,7 +5179,7 @@
             "abilities": [
                 {
                     "name": "Capa de camuflaje",
-                    "description": "Cuando un agente dispare contra este agente: <ul><li>Ignora la regla de arma Saturación. </li></ul> <ul><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li>"
+                    "description": "Cuando un agente dispare contra este agente: <ul><li>Ignora la regla de arma Saturación. </li></ul> <ul><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -5610,7 +5610,7 @@
             "abilities": [
                 {
                     "name": "Castigo inmisericorde",
-                    "description": "La primera vez que este agente realice la acció <b>Combatir</b> durante cada una de sus activaciones, si ni él ni el agente enemigo resultan incapacitados, este agente puede realizar inmediatamente después una acción libre de <b>Combatir</b>, pero no puedes elegir otro agente enemigo para combatir contra él (y solo si sigue siendo válido combatir contra ese agente enemigo). Esto tiene preferencia sobre las restricciones de acciones."
+                    "description": "La primera vez que este agente realice la acción <b>Combatir</b> durante cada una de sus activaciones, si ni él ni el agente enemigo resultan incapacitados, este agente puede realizar inmediatamente después una acción libre de <b>Combatir</b>, pero no puedes elegir otro agente enemigo para combatir contra él (y solo si sigue siendo válido combatir contra ese agente enemigo). Esto tiene preferencia sobre las restricciones de acciones."
                 },
                 {
                     "name": "Represalia fanática",
@@ -5674,7 +5674,7 @@
             ],
             "abilities": [
                 {
-                    "name": "<span class=\"faction\"><sup>1</sup></span>Encuelto",
+                    "name": "<span class=\"faction\"><sup>1</sup></span>Envuelto",
                     "description": "Este agente puede realizar la acción de <b>Disparar</b> con esta arma aún estando en la zona de control de un agente enemigo. No selecciones un blanco válido. En lugar de eso, este agente es siempre el blanco principal, pero dispara solo contra los blancos secundarios y estos no pueden estar a cubierto ni ofuscados (en otras palabras, determina el Área desde este agente, pero este agente no se ve afectado)."
                 },
                 {
@@ -6062,7 +6062,7 @@
                 },
                 {
                     "name": "Cazador hipersensorial",
-                    "description": "Este agente puede realizar la acción <b>Cargar</b> mientras tenga una orden de ocultarse si ha realizado la acción <b>Excacar</b> durante la misma activación/reacción."
+                    "description": "Este agente puede realizar la acción <b>Cargar</b> mientras tenga una orden de ocultarse si ha realizado la acción <b>Excavar</b> durante la misma activación/reacción."
                 }
             ],
             "uniqueActions": [],
@@ -6288,7 +6288,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RÁTIDOS</span>S</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, CONSEGUIDOR",
+      "keywords": "<span class=\"faction\">RÁTIDOS</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, CONSEGUIDOR",
       "peana": "25"
     },
     {
@@ -6392,7 +6392,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, TOROGRETE",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, TOROGRETE",
       "peana": "40"
     },
     {
@@ -6441,7 +6441,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, OGRETE",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, OGRETE",
       "peana": "40"
     },
     {
@@ -6487,7 +6487,7 @@
       ],
       "abilities": [],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, PEZ GORDO",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, PEZ GORDO",
       "peana": "28"
     },
     {
@@ -6552,7 +6552,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, DINAMITERO",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, DINAMITERO",
       "peana": "25"
     },
     {
@@ -6597,7 +6597,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, PELLEJODURO",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, PELLEJODURO",
       "peana": "25"
     },
     {
@@ -6657,7 +6657,7 @@
           "description_no": "Esta acción se considera de <b>Reposicionarse</b>. Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo, o durante una activación en la que haya realizado la acción de Carga, <b>Retroceder</b> o <b>Disparar</b> (o viceversa)."
         }
       ],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, INCURSOR",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, INCURSOR",
       "peana": "25"
     },
     {
@@ -6717,7 +6717,7 @@
           "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, SIGILOSO",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, SIGILOSO",
       "peana": "25"
     },
     {
@@ -6763,7 +6763,7 @@
       ],
       "abilities": [],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, FRANCOTIRADOR",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, FRANCOTIRADOR",
       "peana": "25"
     },
     {
@@ -6818,7 +6818,7 @@
           "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, OJEADOR",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, OJEADOR",
       "peana": "25"
     },
     {
@@ -6873,7 +6873,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, FURRIEL",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, FURRIEL",
       "peana": "25"
     },
     {
@@ -6928,7 +6928,7 @@
           "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">RATIDOS</span>, IMPERIUM, ASTRA MILITARUM, VOCOLADRÓN",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, VOCOLADRÓN",
       "peana": "25"
     }
   ],
@@ -7634,7 +7634,7 @@
       },
       "weapons": [
         {
-          "name": "Carabina bólter de tirador silencio",
+          "name": "Carabina bólter de tirador silenciosa",
           "type": "ranged",
           "stats": {
             "A": "4",
@@ -7702,7 +7702,7 @@
         },
         {
           "name": "Mina de proximidad",
-          "description": "La primera vez que tu marcador de Mina de disrupción quede dentro de la zona de control de otro agente, retira ese marcador, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación, e inflígele 2D3-3 daños; si no resulta incapacitado, termina su acción (si está realizando una), aunque los efectos de la misma no se hayan completado. Si no puede ser colocado, muévelo la distancia mínima hasta que pueda. Este agente se ignora de cara a esos efectos (no puede activar ese marcador ni sufrir daños debido al mismo)."
+          "description": "La primera vez que tu marcador de Mina de disrupción quede dentro de la zona de control de otro agente, retira ese marcador, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación, e inflígele 2D3+3 daños; si no resulta incapacitado, termina su acción (si está realizando una), aunque los efectos de la misma no se hayan completado. Si no puede ser colocado, muévelo la distancia mínima hasta que pueda. Este agente se ignora de cara a esos efectos (no puede activar ese marcador ni sufrir daños debido al mismo)."
         }
       ],
       "uniqueActions": [],
@@ -8143,7 +8143,7 @@
       "abilities": [
         {
           "name": "Especialista granadero",
-          "description": "Este agente puede usar granadas frag y Penetracións (ver equipo universal). Eso no cuenta para su límite de usos. Cuando haga tal cosa, mejora en 1 el atributo Impactar de esa arma."
+          "description": "Este agente puede usar granadas frag y Penetración (ver equipo universal). Eso no cuenta para su límite de usos. Cuando haga tal cosa, mejora en 1 el atributo Impactar de esa arma."
         }
       ],
       "uniqueActions": [
@@ -11311,26 +11311,6 @@
                     }
                 },
                 {
-                    "name": "Rifle láser potenciado",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "-"
-                    }
-                },
-                {
-                    "name": "Pistola láser potenciada",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "Alcance 8\""
-                    }
-                },
-                {
                     "name": "Pistola de plasma (normal)",
                     "type": "ranged",
                     "stats": {
@@ -11351,12 +11331,42 @@
                     }
                 },
                 {
+                    "name": "Pistola láser potenciada",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Rifle láser potenciado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                },
+                {
                     "name": "Espada sierra",
                     "type": "melee",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
                         "RA": "-"
                     }
                 },
@@ -11369,26 +11379,21 @@
                         "Dñ": "4/6",
                         "RA": "Letal 5+"
                     }
-                },
-                {
-                    "name": "Culata",
-                    "type": "melee",
-                    "stats": {
-                        "A": "3",
-                        "HP/HA": "3+",
-                        "Dñ": "2/3",
-                        "RA": "-"
-                    }
                 }
             ],
-            "abilities": [],
+            "abilities": [
+                {
+                    "name": "Liderazgo veterano",
+                    "description": " Siempre que este agente esté en la zona de aniquilación y uses el <b>GAMBITO ESTRATÉGICO HABILIDAD CON ARMAS</b>, puedes elegir una <b>HABILIDADCON ARMAS</b> adicional."
+                }
+            ],
             "uniqueActions": [
                 {
                     "name": "ORDEN TÁCTICA",
                     "cost": "0 PA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">KASRKIN</span> amigo. A continuación elige una HABILIDAD CON ARMAS para que la tenga ese agente hasta el paso de preparación de la siguiente fase de estrategia. Esto es además de cualquier Habilidad con armas que tenga, pero no puedes elegir una que tenga ya.",
-                        "Alternativamente, si tu marcador de Barrer área se encuentra en la zona de aniquilación, puedes retirarlo y volver a colocarlo."
+                        "Elige un agente <span class=\"faction\">KASRKIN</span> amigo. A continuación elige una <b>HABILIDAD CON ARMAS</b> para que la tenga ese agente hasta el paso de preparación de la siguiente fase de estrategia. Esto es además de cualquier Habilidad con armas que tenga, pero no puedes elegir una que tenga ya.",
+                        "Alternativamente, en lugar de resolver el efecto de arriba, si tu marcador de Barrer área se encuentra en la zona de aniquilación, puedes retirarlo y volver a colocarlo."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -11430,7 +11435,7 @@
             "abilities": [
                 {
                     "name": "¡Sanitario!",
-                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">KASRKIN</span> amigo vaya a resultar incapacitado a 3\" o menos y visible, ese agente no queda incapacitado, le queda 1 herida y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente puede realizar una acción libre de <b>Correr</b> hacia este agente. Ambos restan 1 a sus LPA hasta el final de sus próximas activaciones."
+                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">KASRKIN</span> amigo vaya a resultar incapacitado mientras era visible para este agente y estaba a 3\" o menos de él, puedes usar esta regla siempre que ni este ni ese agente estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no queda incapacitado, le queda 1 herida y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede entonces realizar inmediatamente una acción libre de <b>Correr</b>,  pero debe terminar ese movimiento en la zona de control de este agente. Resta 1 a los atributos LPA de este y de ese agente hasta el final de sus próximas activaciones respectivamente, y si esta regla fue usada durante la activación de ese agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
                 }
             ],
             "uniqueActions": [
@@ -11438,9 +11443,9 @@
                     "name": "BOTIQUÍN",
                     "cost": "0 PA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">KASRKIN</span> amigo en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas."
+                        "Elige un agente <span class=\"faction\">KASRKIN</span> amigo en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas. No puede ser un agente con el que se haya usado la regla ¡Sanitario! durante este punto de inflexión."
                     ],
-                    "description_no": "No puede ser un agente con el que se haya usado la regla ¡Sanitario! durante este punto de inflexión. No puede realizarse en zona de control enemiga."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
             "keywords": "<span class=\"faction\">KASRKIN</span>, IMPERIUM, ASTRA MILITARUM, MÉDICO, MÉDICO DE COMBATE",
@@ -11480,15 +11485,15 @@
             "abilities": [
                 {
                     "name": "Mina de fusión",
-                    "description": "Este agente lleva tu marcador de Mina de fusión. Puede realizar la acción de <b>Recoger marcador</b> con ese marcador, y cuando realiza la acción de <b>Colocar marcador</b> con ese marcador, puede realizar inmediatamente una acción libre de <b>Correr</b>."
+                    "description": "Este agente lleva tu marcador de Mina de fusión. Puede realizar la acción de <b>Recoger marcador</b> con ese marcador, y cuando realiza la acción de <b>Colocar marcador</b> con ese marcador, puede realizar inmediatamente una acción libre de <b>Correr</b>.  Ese marcador no puede colocarse en la zona de control de un agente enemigo (si este agente queda incapacitado mientras lleva ese marcador y el marcador no puede colocarse, se retira junto a este agente)."
                 },
                 {
                     "name": "Mina de proximidad",
-                    "description": "La primera vez que tu marcador de Mina de fusión quede en la zona de control de otro agente, retira ese marcador e inflige 2D6+3 daños a ese agente; si no resulta incapacitado, termina su acción."
+                    "description": "La primera vez que tu marcador de Mina de fusión quede en la zona de control de otro agente, retira ese marcador e inflinge 2D6+3 daños a ese agente; si no resulta incapacitado, termina su acción (si estaba realizando una), aunque los efectos de la misma no se hayan completado. Si no puede ser colocado, muévelo la distancia mínima hasta que se pueda. Ten en cuenta que este agente se ignora en lo que respecta a estos efectos (no puede activar el marcador ni sufrir daño debido a él)."
                 },
                 {
                     "name": "Blindaje antiexplosiones",
-                    "description": "Siempre que un agente dispare contra este agente con un arma Área o Ráfaga, puedes repetir uno de tus dados de defensa. No se ve afectado por la regla Devastadora con distancia."
+                    "description": "Siempre que un agente dispare contra este agente con un arma Área o Ráfaga (salvo armas que tengan un perfil de barrido), puedes repetir uno de tus dados de defensa. Ademas, este agente no se ve afectado por la regla de arma x\" Devastadora x (es decir, devastadora con una distancia) a menos que sea el blanco en esa secuencia."
                 }
             ],
             "uniqueActions": [],
@@ -11602,6 +11607,56 @@
             "peana": "28"
         },
         {
+            "id": "kasrkin-recon-trooper",
+            "name": "SOLDADO DE RECONOCIMIENTO KASRKIN",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "4+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Rifle láser potenciado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Reconocer zona de aniquilación",
+                    "description": "El ardid de estrategia Reubicarse cuesta 0 PM si este agente es el agente <span class=\"faction\">KASRKIN</span> amigo elegido."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "ESCANEO AUSPEX",
+                    "cost": "1 PA",
+                    "description": [
+                        "Hasta el inicio de la siguiente activación de este agente o hasta que sea incapacitado (lo que ocurra antes), siempre que un agente enemigo esté a 8\" o menos de este agente, ese agente están siendo escaneado. Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare contra un agente enemigo que esta siendo escaneado, ese agente no puede estar Ofuscado."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">KASRKIN</span>, IMPERIUM, ASTRA MILITARUM, SOLDADO DE RECONOCIMIENTO",
+            "peana": "28"
+        },
+        {
             "id": "kasrkin-sharpshooter",
             "name": "FRANCOTIRADOR KASRKIN",
             "stats": {
@@ -11618,7 +11673,7 @@
                         "A": "4",
                         "HP/HA": "2+",
                         "Dñ": "3/3",
-                        "RA": "Devastadora 3, Pesada, Silenciosa, Posición oculta"
+                        "RA": "Devastadora 3, Pesada, Silenciosa, Posición oculta<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -11655,11 +11710,11 @@
             "abilities": [
                 {
                     "name": "Capa de camuflaje",
-                    "description": "Ignora la regla Saturación cuando le disparan. Si guarda salvación por cobertura, puede guardar una adicional o guardar una como éxito crítico."
+                    "description": "Cuando un agente dispara contra este agente: <ul><li>Ignora la regla de arma Saturación.</li></ul> <ul><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li></ul>"
                 },
                 {
                     "name": "<span class=\"faction\">*</span>Posición oculta",
-                    "description": "Solo puede usar el perfil oculto la primera vez que realice una acción de <b>Disparar</b> durante la batalla."
+                    "description": "Este agente solo puede usar esta arma la primera vez que realice una acción de <b>Disparar</b> durante la batalla."
                 }
             ],
             "uniqueActions": [],
@@ -11667,8 +11722,8 @@
             "peana": "28"
         },
         {
-            "id": "kasrkin-recon-trooper",
-            "name": "SOLDADO DE RECONOCIMIENTO KASRKIN",
+            "id": "kasrkin-trooper",
+            "name": "SOLDADO KASRKIN",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -11699,21 +11754,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Reconocer zona de aniquilación",
-                    "description": "El ardid de estrategia Reubicarse cuesta 0 PM si este agente es el elegido."
+                    "name": "Equipo adaptable",
+                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p> <p><ul><li>Un agente <b>SOLDADO</b> <span class=\"faction\">KASRKIN</span> amigo puede realizar la acción <b>Granada de humo</b>.</li></ul> <ul><li>Un agente <b>SOLDADO</b> <span class=\"faction\">KASRKIN</span> amigo puede realizar la acción <b>Granada aturdidora</b>.</li></ul></p> <p>Las reglas para esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acciones (es decir, si también eliges esas granadas como equipo).</p>"
                 }
             ],
-            "uniqueActions": [
-                {
-                    "name": "ESCANEO AUSPEX",
-                    "cost": "1 PA",
-                    "description": [
-                        "Hasta el inicio de la siguiente activación, enemigos a 8\" o menos están siendo escaneados. Siempre que un agentes <span class=\"faction\">KASRKIN</span> amigo dispare a enemigos escaneados ignoran la regla Ofuscado."
-                    ],
-                    "description_no": "No puede realizarse en zona de control enemiga."
-                }
-            ],
-            "keywords": "<span class=\"faction\">KASRKIN</span>, IMPERIUM, ASTRA MILITARUM, SOLDADO DE RECONOCIMIENTO",
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">KASRKIN</span>, IMPERIUM, ASTRA MILITARUM, SOLDADO",
             "peana": "28"
         },
         {
@@ -11753,53 +11799,12 @@
                     "name": "COMUNICACIONES DE BATALLA",
                     "cost": "1 PA",
                     "description": [
-                        "Elige otro agente <span class=\"faction\">KASRKIN</span> amigo distinto. Hasta el final de su siguiente activación, suma 1 a su atributo LPA (máximo 3 tras sumar todos los cambios a su LPA)."
+                        "Elige otro agente <span class=\"faction\">KASRKIN</span> amigo distinto. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA (hasta un máximo de 3 tras sumar todos los cambios a su LPA)."
                     ],
                     "description_no": "Este agente puede realizar esta acción dos veces durante su activación, pero no puede realizarla si está en la zona de control de un agente enemigo."
                 }
             ],
             "keywords": "<span class=\"faction\">KASRKIN</span>, IMPERIUM, ASTRA MILITARUM, VOCOSOLDADO",
-            "peana": "28"
-        },
-        {
-            "id": "kasrkin-trooper",
-            "name": "SOLDADO KASRKIN",
-            "stats": {
-                "LPA": "2",
-                "MOVER": "6\"",
-                "SALVACIÓN": "4+",
-                "HERIDAS": "8"
-            },
-            "weapons": [
-                {
-                    "name": "Rifle láser potenciado",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "3+",
-                        "Dñ": "3/4",
-                        "RA": "-"
-                    }
-                },
-                {
-                    "name": "Culata",
-                    "type": "melee",
-                    "stats": {
-                        "A": "3",
-                        "HP/HA": "4+",
-                        "Dñ": "2/3",
-                        "RA": "-"
-                    }
-                }
-            ],
-            "abilities": [
-                {
-                    "name": "Equipo adaptable",
-                    "description": "Una vez por punto de inflexión, un agente SOLDADO <span class=\"faction\">KASRKIN</span> amigo puede realizar la acción <b>Granada de humo</b> o Granada aturdidora gratuitamente sin gastar equipo."
-                }
-            ],
-            "uniqueActions": [],
-            "keywords": "<span class=\"faction\">KASRKIN</span>, IMPERIUM, ASTRA MILITARUM, SOLDADO",
             "peana": "28"
         }
     ],
@@ -15452,7 +15457,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, Penetracións, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, Penetración, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [
@@ -16301,7 +16306,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
-                        "RA": "Letal 5+, Pesada (solo Correr), Rafaga 1\""
+                        "RA": "Letal 5+, Pesada (solo Correr), Ráfaga 1\""
                     }
                 },
                 {
@@ -21948,7 +21953,7 @@
                 },
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y Penetracións (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y Penetración (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [
@@ -22569,7 +22574,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y Penetracións (ver equipo universal). Eso no cuenta para su limite de usos. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y Penetración (ver equipo universal). Eso no cuenta para su limite de usos. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
                 },
                 {
                     "name": "Deceso Explosivo",
@@ -23111,7 +23116,7 @@
             "abilities": [
                 {
                     "name": "Activación en Grupo",
-                    "description": " Cuando este agente quede usado, debes activar a continuación otro agente SOLDADO UNGIDO amigo apostado (si es posible) antes de que active tu oponente. Cuando ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+                    "description": "Cuando este agente quede usado, debes activar a continuación otro agente SOLDADO UNGIDO amigo apostado (si es posible) antes de que active tu oponente. Cuando ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
                 }
             ],
             "uniqueActions": [],

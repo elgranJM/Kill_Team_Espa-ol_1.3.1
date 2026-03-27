@@ -704,7 +704,7 @@ transform: translateX(26px);
 }
 
 .crit-op[data-type="action"] .header, .tacop .header, .unique-actions-section .header {
-    background-color: var(--bs-orange);
+    background-color: orangered;
     color: white;
     padding: 6px 10px 6px 6px;
     text-transform: uppercase;

@@ -128,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Inicialización ---
     async function init() {
         console.log('Iniciando Kill Team BattleKit...');
-        setupDarkMode();
         
         try {
             await loadData();

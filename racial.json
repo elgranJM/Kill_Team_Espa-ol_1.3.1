@@ -481,7 +481,14 @@
             "faction": "kasrkin",
             "type": "racial",
             "name": "Habilidad con las armas",
-            "description": "Arreglar esto mas tarde"
+            "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige una <b>HABILIDAD CON ARMAS</b> para que la tengan los agentes <span class=\"faction\">KASRKIN</span> amigos hasta el paso de Preparación de la siguiente fase de estrategia. <div class=\"crit-op\" data-type=\"action\"><div class=\"header\"><div>Acribilladlos</div><div class=\"content\">Las armas a distancia de los agentes <span class=\"faction\">KASRKIN</span> amigos tienen la regla de arma Severa.</div></div> <div class=\"crit-op\" data-type=\"action\"><div class=\"header\"><div>Golpead deprisa</div><div class=\"content\">Cuando un agente <span class=\"faction\">KASRKIN</span> amigo realice una acción de <b>Reposicionarse</b>, suma 1\" a su atributo Movimiento</div></div> <div class=\"crit-op\" data-type=\"action\"><div class=\"header\"><div>Fríos como el hielo</div><div class=\"content\">Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo combate o contraataca, o que un agente dispara contra él, la primera vez que un dado de ataque inflija Daño normal de 3 o más a este agente durante esa secuencia, reduce en 1 el daño que le inflige ese dado.</div></div> <div class=\"crit-op\" data-type=\"action\"><div class=\"header\"><div>¡Por Cadia!</div><div class=\"content\">Suma 1 al atributo Ataque de las armas de combate de los agentes <span class=\"faction\">KASRKIN</span> amigos (hasta un máximo de 4). Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo combata, la primera vez que golpees durante esa secuencia, inflige 1 daño adicional.</div></div>"
+        },
+        {
+            "id_racial":  140,
+            "faction": "kasrkin",
+            "type": "racial",
+            "name": "Fuego Rápido",
+            "description": "Cada agente <span class=\"faction\">KASRKIN</span> amigo que no realice una acción en la que se mueva durante su activación puede realizar dos acciones de <b>Disparar</b> (que no sean <b>Ponerse en guardia</b>) durante esa activación, pero debe elegir una pistola bólter, una pistola láser potenciada o un rifle láser potenciado para ambas acciones."
         }
     ],
     "kommandos": [
@@ -1064,7 +1071,7 @@
             "description": "En este ejemplo, el agente de arriba (C) se encuentra en la <b>ZONA DE IMPULSO</b> del agente <span class=\"faction\">ALA ASESINA</span> (A). El agente de abajo (B) no, ya que su peana está bajo terreno Aventajado. <figure class=\"figure\"><img src=\"./resources/boost-action-example.png\" class=\"figure-img img-fluid rounded mx-auto d-block\">"
         },
         {
-            "id_racial": 140,
+            "id_racial": 141,
             "faction": "murderwing",
             "type": "racial",
             "name": "ASTARTES",

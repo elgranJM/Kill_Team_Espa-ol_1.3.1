@@ -652,8 +652,8 @@
         "faction": "kasrkin",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Patrón de Eliminación",
-        "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare con un arma hot-shot contra un agente que no está en cobertura <span class=\"text-info-emphasis\">o está siendo escaneado (ver <b>SOLDADO DE RECONOCIMIENTO</b>)</span>, ese arma tiene la regla de armas Críticos de penetración 1, o Penetración 1 en su lugar si es un cañón de volea hot-shot.",
+        "name": "Pauta de Eliminación",
+        "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare con un arma potenciada contra un agente que no puede guardar salvaciones por cobertura o que está siendo escaneado (ver <b>SOLDADO DE RECONOCIMIENTO</b>), esa arma tiene la regla de armas Críticos de penetración 1, o Penetración 1 si es un fusil repetidor potenciado.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -661,8 +661,8 @@
         "faction": "kasrkin",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Atacar desde Cobertura",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">KASRKIN</span> amigo que está en cobertura, puedes repetir uno de tus dados de defensa.",
+        "name": "Pelear a Cubierto",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">KASRKIN</span> amigo que esté a cubierto, puedes repetir uno de tus dados de defensa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -670,8 +670,8 @@
         "faction": "kasrkin",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Barrido de Limpieza",
-        "description": "Coloca tu marcador de Barrido de Limpieza en la zona de aniquilación. Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo a 5\" horizontalmente de ese marcador dispare contra un agente también a 5\" horizontalmente de ese marcador, las armas de ese agente amigo tienen la regla de armas <span class=\"text-info-emphasis\">Incesante</span>. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador.",
+        "name": "Barrer Área",
+        "description": "Coloca tu marcador de Barrer área en la zona de aniquilación. Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo a 5\" o menos en horizontal de ese marcador dispare contra un agente también esté a 5\" o menos en horizontal de ese marcador, las armas de ese agente amigo tienen la regla de arma Incesante. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -680,7 +680,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Reubicarse",
-        "description": "Selecciona un agente <span class=\"faction\">KASRKIN</span> amigo que esté a más de 3\" de cada agente enemigo. Ese agente, y cada otro agente <span class=\"faction\">KASRKIN</span> amigo que esté tanto a 3\" de ese agente como a más de 3\" de agentes enemigos, pueden realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección. No puedes usar este ardid durante el primer punto de inflexión.",
+        "description": "Elige un agente <span class=\"faction\">KASRKIN</span> amigo que esté a más de 3\" de todo agente enemigo. Ese agente, y todos los demas agente <span class=\"faction\">KASRKIN</span> amigo que esté tanto a 3\" o menos de ese agente como a más de 3\" de todos los agentes enemigos, pueden realizar inmediatamente una acción libre de <b>Correr</b> en el orden que elijas. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -689,7 +689,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Tomar la Iniciativa",
-        "description": "Usa este ardid de tiroteo al final de la fase de tiroteo (excluyendo la fase de Tiroteo final). En el paso de Iniciativa de la próxima fase de Estrategia, al tirar para decidir la iniciativa, puedes hacer una de las siguientes:<ul>\n<li>repetir tu dado.</li>\n<li>Forzar a tu oponente a repetir su dado.</li></ul>",
+        "description": "Usa este ardid de tiroteo al inicio de la fase de tiroteo. 1 agente <span class=\"faction\">KASRKIN</span> amigo puede realizar inmediatamente una acción de 1PA como acción libre, pero no puede mover durante esa acción. No puedes usar este ardid si eres el jugador con la iniciativa.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -697,8 +697,8 @@
         "faction": "kasrkin",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Retirada Cubierta",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KASRKIN</span> amigo realice la acción <b>Retroceder</b> mientras es visible para y está a 6\" de otro agente <span class=\"faction\">KASRKIN</span> amigo preparado que no esté dentro del rango de control de agentes enemigos. Después de que ese agente amigo haya terminado de moverse, pero antes de que termine esa acción <b>Retroceder</b>, ese otro agente amigo puede realizar inmediatamente una acción gratuita de <b>Disparar</b>.",
+        "name": "Cubrir la Retirada",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KASRKIN</span> amigo realice una acción de <b>Retroceder</b> a 6\" o menos de otro agente <span class=\"faction\">KASRKIN</span> amigo que esté fuera de la zona de control de todos los agentes enemigos. Después de que ese agente amigo termine de moverse, pero antes de que termine la acción de <b>Retroceder</b>, ese otro agente amigo puede realizar inmediatamente una acción libre de <b>Disparar</b> (para ello, puedes cambiar su orden a Trabarse).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -706,8 +706,8 @@
         "faction": "kasrkin",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Neutralizar Objetivo",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KASRKIN</span> amigo dispare contra un agente que está agotado y <span class=\"text-info-emphasis\">no está en cobertura o está siendo escaneado (ver <b>SOLDADO DE RECONOCIMIENTO</b>)</span>. Puedes repetir cualquiera de tus dados de ataque.",
+        "name": "Neutralizar Blanco",
+        "description": "Usa este ardid de tiroteo después de tirar los dados de ataque de un agente <span class=\"faction\">KASRKIN</span> amigo si está disparando contra un agente que no puede guardar salvaciones por cobertura o que está siendo escaneado (ver <b>SOLDADO DE RECONOCIMIENTO</b>). Puedes repetir cualquiera de tus dados de ataque.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -715,8 +715,8 @@
         "faction": "kasrkin",
         "type": "tactical",
         "cps": "1PM",
-        "name": "No Ceder Terreno",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">KASRKIN</span> amigo, o al final de la Fase de Tiroteo. Elige uno de tus marcadores de misión o un marcador de objetivo. Hasta el final de esa activación o hasta el inicio del próximo punto de inflexión respectivamente, si el LPA total de los agentes <span class=\"faction\">KASRKIN</span> amigos que disputan ese marcador es 2, y el LPA total de los agentes enemigos que lo disputan es el mismo, los agentes <span class=\"faction\">KASRKIN</span> amigos controlan ese marcador.",
+        "name": "No Cedáis Terreno",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">KASRKIN</span> amigo, o al final de la Fase de Tiroteo. Elige uno de tus marcadores de misión o un marcador de objetivo. Hasta el final de la activación o hasta el inicio del siguiente punto de inflexión respectivamente, si el LPA total de los agentes <span class=\"faction\">KASRKIN</span> amigos que disputan ese marcador es 2, y el LPA total de los agentes enemigos que lo disputan es el igual, los agentes <span class=\"faction\">KASRKIN</span> amigos controlan dicho marcador.",
         "typename": "Ardid de Tiroteo"
     },
     {

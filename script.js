@@ -341,32 +341,36 @@ function renderOperatives(factionKey) {
 
         // Generación de HTML para Acciones Únicas (Sistema de Yes/No)
         const actionsHtml = op.uniqueActions?.length ? 
-            `<div class="mt-2 p-2 border rounded">
-                <strong>Acciones:</strong>
-                ${op.uniqueActions.map(a => {
-                    // Mapeo de la lista de descripciones positivas (yes.svg)
-                    const descYes = Array.isArray(a.description) 
-                        ? a.description.map(line => `
-                            <div class="d-flex align-items-start mb-1">
-                                <img src="./resources/game_rules_files/yes.svg" width="14" class="me-2 mt-1" alt="yes">
-                                <span>${line}</span>
-                            </div>`).join('')
-                        : `<div class="mb-1">${a.description}</div>`;
+            op.uniqueActions.map(a => {
+                // Mapeo de la lista de descripciones positivas (icon-yes)
+                const descYes = Array.isArray(a.description) 
+                    ? a.description.map(line => `
+                        <p>
+                            <span class="icon icon-yes"></span> 
+                            <span>${line}</span>
+                        </p>`).join('')
+                    : `<p>${a.description}</p>`;
 
-                    // Mapeo de la descripción negativa (no.svg)
-                    const descNo = a.description_no ? `
-                        <div class="d-flex align-items-start mt-2 border-top pt-1">
-                            <img src="./resources/game_rules_files/no.svg" width="14" class="me-2 mt-1" alt="no">
-                            <span class="text-muted fst-italic">${a.description_no}</span>
-                        </div>` : '';
+                // Mapeo de la descripción negativa (icon-no)
+                const descNo = a.description_no ? `
+                    <p>
+                        <span class="icon icon-no"></span> 
+                        <em>${a.description_no}</em>
+                    </p>` : '';
 
-                    return `
-                    <div class="mb-3">
-                        <span class="fw-bold text-primary">${a.name} (${a.cost}):</span>
-                        <div class="ps-2 mt-1">${descYes}${descNo}</div>
-                    </div>`;
-                }).join('')}
-            </div>` : '';
+                // Estructura final de la tarjeta de Acción Única
+                return `
+                <div class="unique-actions-section">
+                    <div class="header">
+                        <div>${a.name}</div>
+                        <div class="ap-box">${a.cost}</div>
+                    </div>
+                    <div class="content">
+                        ${descYes}
+                        ${descNo}
+                    </div>
+                </div>`;
+            }).join('') : '';
 
         return `
         <div class="card-container col-12 col-lg-11 mt-4 mb-3 mx-auto shadow bg-white border rounded overflow-hidden">

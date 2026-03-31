@@ -477,15 +477,23 @@ function renderOperatives(factionKey) {
             }
 
             const missionAction = op.action_mission_name ? `
-                <div class="mt-3 p-2 bg-light rounded border">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <strong>${op.action_mission_name}</strong>
-                        <span class="badge bg-secondary">${op.action_mission_cost}</span>
+                <div class="crit-op" data-type="action">
+                    <div class="header">
+                        <div>${op.action_mission_name}</div>
+                        <div class="ap-box">${op.action_mission_cost}</div>
                     </div>
-                    <ul class="mb-0 ps-3 small">
-                        ${op.action_mission_yes ? `<li class="text-success">${op.action_mission_yes}</li>` : ''}
-                        ${op.action_mission_no ? `<li class="text-danger">${op.action_mission_no}</li>` : ''}
-                    </ul>
+                    <div class="content">
+                        ${op.action_mission_yes ? `
+                            <p>
+                                <span class="icon icon-yes"></span> 
+                                ${op.action_mission_yes}
+                            </p>` : ''}
+                        ${op.action_mission_no ? `
+                            <p>
+                                <span class="icon icon-no"></span> 
+                                ${op.action_mission_no}
+                            </p>` : ''}
+                    </div>
                 </div>` : '';
             return `
 

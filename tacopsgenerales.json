@@ -93,8 +93,8 @@
         "Reveal": "La primera vez que obtengas PV de esta op.",
         "additional_rules": "Un agente enemigo está siendo localizado si es un Blanco Valido para un agente amigo a menos de 6\" de él. Ese agente amigo debe tener una orden de Ocultación, no puede ser un Blanco Valido para el agente enemigo que está intentando localizar, y no puede estar dentro del rango de control de agentes enemigos.",
         "victoy_points": ["Al final de cada punto de inflexión después del primero:",
-                        "   - Al final de cada punto de inflexión después del primero, si los agentes amigos controlan algún marcador de objetivo que tenga una de tus fichas de <b>Revisado</b>, obtienes 1PV.",
-                        "   - Si dos o más agentes enemigos están siendo localizados, obtienes 2PV.",
+                        "Al final de cada punto de inflexión después del primero, si los agentes amigos controlan algún marcador de objetivo que tenga una de tus fichas de <b>Revisado</b>, obtienes 1PV.",
+                        "Si dos o más agentes enemigos están siendo localizados, obtienes 2PV.",
                         "No puedes obtener más de 2PV de esta op por punto de inflexión."]
     },
     "Colocar Dispositivos": {
@@ -106,8 +106,8 @@
         "action_mission_yes": "Un marcador de objetivo que controla el agente activo gana una de tus fichas de Dispositivo.",
         "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo, o si ese marcador de objetivo ya tiene una de tus fichas de Dispositivo.",
         "victoy_points": ["Al final de cada punto de inflexión después del primero:",
-                        "   - Si el marcador de objetivo de tu oponente tiene una de tus fichas de Dispositivo, obtienes 1PV.",
-                        "   - Por cada otro marcador de objetivo que disputen los agentes enemigos que tenga una de tus fichas de Dispositivo, obtienes 1PV.",
+                        "Si el marcador de objetivo de tu oponente tiene una de tus fichas de Dispositivo, obtienes 1PV.",
+                        "Por cada otro marcador de objetivo que disputen los agentes enemigos que tenga una de tus fichas de Dispositivo, obtienes 1PV.",
                         "No puedes obtener más de 2PV de esta op por punto de inflexión."]
     },
     "Robar Información": {

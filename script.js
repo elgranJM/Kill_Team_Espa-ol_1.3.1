@@ -617,48 +617,54 @@ function renderOperatives(factionKey) {
                 </div>`;
             }
 
-        const actionHtml = item.action?.length ? `
-            <div class="mt-2 p-2 border border-primary rounded bg-white">
-                <strong class="small text-primary text-uppercase">Acciones:</strong>
-                ${item.action.map(a => {
-                    const descYes = Array.isArray(a.action_yes) 
-                        ? a.action_yes.map(line => `
-                            <div class="d-flex align-items-start mb-1">
-                                <img src="./resources/game_rules_files/yes.svg" width="12" class="me-2 mt-1">
-                                <span>${line}</span>
-                            </div>`).join('')
-                        : `<div class="mb-1">${a.action_yes}</div>`;
+        const actionHtml = item.action?.length ? 
+            item.action.map(a => {
+                // Mapeo de descripciones positivas (icon-yes)
+                const descYes = Array.isArray(a.action_yes) 
+                    ? a.action_yes.map(line => `
+                        <p>
+                            <span class="icon icon-yes"></span> 
+                            <span>${line}</span>
+                        </p>`).join('')
+                    : `<p><span class="icon icon-yes"></span> ${a.action_yes}</p>`;
 
-                    const descNo = a.action_no ? `
-                        <div class="d-flex align-items-start mt-2 border-top pt-1 text-muted fst-italic">
-                            <img src="./resources/game_rules_files/no.svg" width="12" class="me-2 mt-1">
-                            <span>${a.action_no}</span>
-                        </div>` : '';
+                // Mapeo de descripción negativa (icon-no)
+                const descNo = a.action_no ? `
+                    <p>
+                        <span class="icon icon-no"></span> 
+                        ${a.action_no}
+                    </p>` : '';
 
-                    return `
-                    <div class="mt-2">
-                        <span class="fw-bold">${a.action_name} (${a.action_cost}):</span>
-                        <div class="ps-2 small">${descYes}${descNo}</div>
-                    </div>`;
-                }).join('')}
-    </div>` : '';
+                // Estructura de tarjeta consistente
+                return `
+                <div class="crit-op" data-type="action">
+                    <div class="header">
+                        <div>${a.action_name}</div>
+                        <div class="ap-box">${a.action_cost}</div>
+                    </div>
+                    <div class="content">
+                        ${descYes}
+                        ${descNo}
+                    </div>
+                </div>`;
+            }).join('') : '';
 
-// Retorno del componente
-return `
-    <div class="col-12 col-md-6 mb-4">
-        <div class="equipment-card h-100 shadow-sm border border-danger rounded overflow-hidden"> 
-            <div class="p-2 bg-danger text-white text-center">
-                <h6 class="mb-0 fw-bold text-uppercase">${item.name}</h6>
-            </div>
-            <div class="p-3 bg-light text-dark">
-                <div class="equipment-description small">
-                    ${descHtml}
+    // Retorno del componente
+    return `
+        <div class="col-12 col-md-6 mb-4">
+            <div class="equipment-card h-100 shadow-sm border border-danger rounded overflow-hidden"> 
+                <div class="p-2 bg-danger text-white text-center">
+                    <h6 class="mb-0 fw-bold text-uppercase">${item.name}</h6>
                 </div>
-                ${weaponHtml}
-                ${actionHtml}
+                <div class="p-3 bg-light text-dark">
+                    <div class="equipment-description small">
+                        ${descHtml}
+                    </div>
+                    ${weaponHtml}
+                    ${actionHtml}
+                </div>
             </div>
-        </div>
-    </div>`;
+        </div>`;
         }).join('');
 
         containers.equipment.innerHTML = `<div class="row">${html}</div>`;

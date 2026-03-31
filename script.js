@@ -355,7 +355,7 @@ function renderOperatives(factionKey) {
                 const descNo = a.description_no ? `
                     <p>
                         <span class="icon icon-no"></span> 
-                        <em>${a.description_no}</em>
+                        ${a.description_no}
                     </p>` : '';
 
                 // Estructura final de la tarjeta de Acción Única

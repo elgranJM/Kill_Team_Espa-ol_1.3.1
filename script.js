@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ploys: document.getElementById('ploys-pane'),
         equipment: document.getElementById('equipment-pane')
     };
-
-    const toggleDarkModeButton = document.getElementById('toggleDarkMode');
     const body = document.body;
 
     // --- Almacén de Datos ---

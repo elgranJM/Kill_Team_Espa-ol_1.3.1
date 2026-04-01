@@ -630,7 +630,7 @@
             "uniqueActions": [
                 {
                     "name": "Óptica",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Hasta el inicio de la siguiente activación de este agente, siempre que dispare, los agentes enemigos no pueden estar ofuscados."
                     ],
@@ -682,7 +682,7 @@
             "uniqueActions": [
                 {
                     "name": "Omniescáner",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo a 8\" o menos de este agente o visible para él. El agente enemigo elegido obtiene uno de tus marcadores de Omniescáner. Siempre que un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo dispare, combata o contraataque contra un agente enemigo que tenga uno de tus marcadores de Omniescáner, las armas de ese agente amigo tienen la regla de armas Incesante."
                     ],
@@ -722,7 +722,7 @@
             "uniqueActions": [
                 {
                     "name": "Mirada del Omnissiah",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de armas Buscadora (Ligero)</li></ul> <ul><li> Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
@@ -777,7 +777,7 @@
             "uniqueActions": [
                 {
                     "name": "Abrir brecha",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Coloca uno de tus marcadores de Brecha dentro de la zona de control de este agente y tan cerca como sea posible de un elemento de terreno en su zona de control. Cuando un agente se encuentre a 1\" o menos de ese marcador, las partes de ese elemento de terreno que no tengan más de 1\" de grosor se considerarán terreno Accesible para él."
                     ],
@@ -929,7 +929,7 @@
             "uniqueActions": [
                 {
                     "name": "Reparación conveniente",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo en la zona de control de este agente para que recupere hasta 1D3+3 heridas perdidas. No puede ser un agente con el que se haya usado la regla Matriz de mecanosutura durante este punto de inflexión."
                     ],
@@ -974,7 +974,7 @@
             "uniqueActions": [
                 {
                     "name": "Incentivo noosférico",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo para realizar de inmediato una acción libre de <b>Correr</b>. Solo puedes elegir a cada agente <b>SERVIDOR</b> amigo para esta regla una vez por punto de inflexión. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se determina la distancia debe controlar ese marcador."
                     ],
@@ -982,7 +982,7 @@
                 },
                 {
                     "name": "Anulación de red",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo para <b>REACCIONAR EN RED</b> inmediatamente (no tienes que <b>TRANSFERIR POTENCIA</b> para ello). Continúa la activación de este agente tras hacerlo. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se determina la distancia debe controlar ese marcador."
                     ],
@@ -1818,7 +1818,7 @@
             "uniqueActions": [
                 {
                     "name": "Apuntar a punto débil",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Hasta el final de la activación de este agente, el perfil inmóvil de su rifle de francotirador de Sanctus tiene la regla de armas Letal 5+."
                     ],
@@ -1826,7 +1826,7 @@
                 },
                 {
                     "name": "Familiar escrutaalmas",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final de la batalla, o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), ese agente enemigo obtiene una de tus fichas de Escrutaalmas. Cuando este agente dispara contra un agente enemigo que tenga una de tus fichas de Escrutaalmas, todos los perfiles del rifle de francotirador de Sanctus de este agente tienen la regla de armas Saturación y ese agente enemigo no puede estar ofuscado."
                     ],
@@ -1874,7 +1874,7 @@
                 },
                 {
                     "name": "Familiar escrutaalmas",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final de la batalla, o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), ese agente enemigo obtiene una de tus fichas de Escrutaalmas. Cuando este agente combate o contraataca contra un agente enemigo que tenga una de tus fichas de Escrutaalmas, su biodaga de Sanctus tiene las reglas de armas Brutal y Equilibrada."
                     ],
@@ -2317,7 +2317,7 @@
             "uniqueActions": [
                 {
                     "name": "ROMPER KOZAZ",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Selecciona un elemento de terreno en la zona de control de este agente. Si es terreno equipo, retíralo. Si no, sitúa una de tus fichas de Brecha en la zona de control de este agente, lo más cerca posible de ese terreno. Cuando un agente esté a 1\" o menos de esa ficha, considera como terreno Accesible las partes de ese elemento de terreno que no tengan más de 1\" de grosor."
                     ],
@@ -2610,7 +2610,7 @@
             "uniqueActions": [
                 {
                     "name": "BÁLSAMOS CURATIVOS",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo en la zona de control de este agente. Ese agente recupera hasta 1D3+3 heridas perdidas."
                     ],
@@ -2680,7 +2680,7 @@
             "uniqueActions": [
                 {
                     "name": "Llamar a la tormenta",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA</b>. Retira tu marcador de Tormenta de la zona de aniquilación (si lo hay). A continuación, colócalo en la zona de aniquilación.",
                         "<b>PSÍQUICA</b>. Alternativamente, en lugar de resolver el efecto anterior, elige 1 agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado, o hasta que realice esta acción de nuevo (lo que ocurra antes), siempre que ese agente amigo esté en tu <b>TORMENTA</b> y a más de 3\" del agente activo, estará ofuscado."
@@ -2847,7 +2847,7 @@
             "uniqueActions": [
                 {
                     "name": "SENTIDOS DE CAZADOR",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige 1 de las siguientes reglas para todos los perfiles de la carabina bólter instigador de este agente. La tendrán hasta el inicio de su siguiente activación: <ul><li>Severa.</li></ul> <ul><li>Saturación, y siempre que este agente dispare con esa arma, los agentes enemigos no pueden estar ofuscados.</li></ul>"
                     ],
@@ -3703,7 +3703,7 @@
             "uniqueActions": [
                 {
                     "name": "Niebla de sueños",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA.</b>. Elige un agente enemigo apostado visible para este agente y tira 1D6. Hasta el final del punto de inflexión, dicho agente enemigo no podrá ser activado ni realizar acciones hasta que sea el último agente enemigo en ser activado, o hasta que el oponente haya activado tantos agentes enemigos tras esta acción como el resultado del D6 (lo que ocurra antes)."
                     ],
@@ -3711,7 +3711,7 @@
                 },
                 {
                     "name": "Espejo de mentes",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA.</b> Elige un agente enemigo que sea un blanco válido para este agente y que esté a 8\" o menos de él. Ambos jugadores tiran cinco dados. Empareja tus dados con los de tu oponente que hayan obtenido el mismo resultado. Por cada pareja, inflige 1D3 daños a ese agente enemigo (hasta un máximo de 8). Por ejemplo, si has sacado <b>6, 5, 5, 2, 1</b> y tu oponente a sacado <b>6, 5, 4, 3, 1</b>, infligirías 3D3 daños a ese agente enemigo."
                     ],
@@ -3719,7 +3719,7 @@
                 },
                 {
                     "name": "Velo de lágrimas",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA.</b> Hasta el inicio de la siguiente activación de este agente, siempre que un enemigo dispare contra un aliado visible para este agente y a 6\" o menos de él, el tirador debe restar 1 a su atributo Impactar."
                     ],
@@ -4241,7 +4241,7 @@
             "uniqueActions": [
                 {
                     "name": "Mando",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo distinto (salvo <b>SERVOCENTINELA</b>) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
@@ -5185,7 +5185,7 @@
             "uniqueActions": [
                 {
                     "name": "OPTICA",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Hasta el inicio de la siguiente activación de este agente, siempre que dispare, los agentes enemigos no pueden estar ofuscados."
                     ],
@@ -5275,7 +5275,7 @@
             "uniqueActions": [
                 {
                     "name": "RASTREAR ENEMIGO",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo usado a 8\" o menos de este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a ese agente enemigo, las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero)."
                     ],
@@ -5283,7 +5283,7 @@
                 },
                 {
                     "name": "ESCANEO AUSPEX",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; si ese agente amigo es un <b>FRANCOTIRADOR</b> bajo el efecto de su acción de <b>Óptica</b>, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
                     ],
@@ -5531,7 +5531,7 @@
             "uniqueActions": [
                 {
                     "name": "ASESINO ENTRENADO",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Cambia la orden de este agente."
                     ],
@@ -5907,7 +5907,7 @@
             "uniqueActions": [
                 {
                     "name": "BOTIQUÍN",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente <span class=\"faction\">SANTIFICADORES</span> amigo en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas."
                     ],
@@ -6014,7 +6014,7 @@
             "uniqueActions": [
                 {
                     "name": "Embestida Tóxica",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo a 2\" o menos de este agente. Como alternativa, si este agente se encuentra bajo tierra, elige un agente enemigo en tu <b>TÚNEL</b>. Inflígele a ese agente enemigo 1D3+2 daños y ese agente gana dos de tus fichas de Veneno (si no tenía ya una)."
                     ],
@@ -6129,7 +6129,7 @@
             "uniqueActions": [
                 {
                     "name": "Saco Dorsal Distendido",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Hasta que este agente haya disparado con su proyectil venenoso, realice esta acción de nuevo o realice la acción <b>Excavar</b> (lo que ocurra antes), todos los perfiles de su proyectil venenoso tienen la regla de armas Letal 5+, suman 1 a su atributo Atq y se elimina la regla de armas Alcance 8\"."
                     ]
@@ -6650,7 +6650,7 @@
       "uniqueActions": [
         {
           "name": "HONDAZO",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Selecciona un punto en un elemento de terreno visible para este agente, y a 6\" o menos de él. Retira a este agente de la zona de aniquilación y devuélvelo en una ubicación donde pueda colocarse, completamente a 6\" o menos horizontalmente de ese punto, pero no en la zona de control de un agente enemigo, y con ese punto visible para él."
           ],
@@ -6710,7 +6710,7 @@
       "uniqueActions": [
         {
           "name": "ÓPTICA",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Cuando este agente dispare, los agentes enemigos no pueden estar ofuscados y el perfil inmóvil del rifle de francotirador de este agente tiene la regla de arma Letal 5+."
           ],
@@ -6811,7 +6811,7 @@
       "uniqueActions": [
         {
           "name": "AVISTAR",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "<b>APOYO</b>. Selecciona un agente enemigo visible para este agente. Una vez durante este punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDOS</span> amigo a 3\" o menos de este agente dispare a ese agente enemigo, puedes usar este efecto: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul><ul><li>Ese agente enemigo no está ofuscado.</li></ul>"
           ],
@@ -6921,7 +6921,7 @@
       "uniqueActions": [
         {
           "name": "INTERCEPTAR COMUNICACIONES",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "<b>APOYO</b>. Selecciona otro agente <span class=\"faction\">RÁTIDOS</span> amigo visible y a 6\" o menos de este agente. Hasta el final de su próxima activación, suma 1 al atributo LPA de ese agente."
           ],
@@ -7058,7 +7058,7 @@
       "uniqueActions": [
         {
           "name": "MAYAL GIRATORIO",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Inflige 1D3+2 daños a cada otro agente que esté a 2\" o menos de este agente y sea visible para él. Tira por separado por cada uno: si se trata de un agente enemigo y el resultado del D3 es 3, ese agente enemigo obtiene además una de tus fichas de Veneno (si no tiene una ya)."
           ],
@@ -7194,7 +7194,7 @@
       "uniqueActions": [
         {
           "name": "MIASMA VENENOSO",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "<b>PSÍQUICA.</b> Elige un agente enemigo a 7\" o menos de este agente y visible para él, o un agente enemigo que sea un blanco válido para este agente. Ese agente enemigo obtiene una de tus fichas de Veneno (si no tiene una ya). Si ya tiene una, en su lugar inflige 3 daños a ese agente enemigo."
           ],
@@ -7202,7 +7202,7 @@
         },
         {
           "name": "VITALIDAD PÚTRIDA",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "<b>PSÍQUICA.</b> Elige un agente amigo a 3\" o menos de este agente y visible para él, y luego tira 2D6. Si el resultado es 7, el agente elegido recupera 7 heridas perdidas; En caso contrario, el agente elegido recupera tantas heridas perdidas como el resultado más elevado entre ambos D6."
           ],
@@ -7385,7 +7385,7 @@
       "uniqueActions": [
         {
           "name": "Guantelete Helix",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo en la zona de control de este agente para que recupere hasta 1D3+3 heridas perdidas. No puede ser un agente en el que se haya utilizado la regla ¡Sanitario! durante este punto de inflexión."
           ],
@@ -7531,7 +7531,7 @@
       "uniqueActions": [
         {
           "name": "Escaneo Auspex",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), siempre que un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo dispare a un agente enemigo a 8\" o menos de este agente, dicho agente enemigo no puede estar ofuscado; Si ese agente amigo es un <b>INCURSOR</b>, sus armas a distancia tienen además la regla de arma Buscadora (Ligero)."
           ],
@@ -7922,7 +7922,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
@@ -7972,7 +7972,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
@@ -8017,7 +8017,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
@@ -8025,7 +8025,7 @@
         },
         {
           "name": "Visión multidimensional",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Hasta el inicio de la siguiente activación de este agente, cuando dispare, los agentes enemigos no pueden estar ofuscados."
           ],
@@ -8033,7 +8033,7 @@
         },
         {
           "name": "Interferir sistemas",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Hasta el final de la siguiente activación de ese agente, resta 1 a su atributo LPA."
           ],
@@ -8149,7 +8149,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
@@ -8245,7 +8245,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
@@ -8253,7 +8253,7 @@
         },
         {
           "name": "Señal",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "<b>APOYO</b>. Elige un agente RASTREADOR amigo distinto a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
           ],
@@ -8303,7 +8303,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
@@ -8311,7 +8311,7 @@
         },
         {
           "name": "Botiquín",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente RASTREADOR amigo (salvo DRON) en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas.",
             "No puede ser un agente con el que se haya usado la regla ¡Sanitario! durante este punto de inflexión."
@@ -8362,7 +8362,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
@@ -8370,7 +8370,7 @@
         },
         {
           "name": "Pilotaje remoto",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Un agente DRON RASTREADOR amigo puede realizar de inmediato una acción libre, pero no puede mover más de 2\" durante esa acción. Esa acción puede ser una que normalmente esté restringida por su regla de dron.",
             "Este agente puede realizar esta acción más de una vez durante su activación pero, si lo hace, el mismo agente DRON no podrá realizar la misma acción libre más de una vez por activación."
@@ -8425,7 +8425,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ]
@@ -8488,7 +8488,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro)."
           ],
@@ -8608,7 +8608,7 @@
       "uniqueActions": [
         {
           "name": "Marcador telemétrico",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro)."
           ],
@@ -8648,7 +8648,7 @@
       "uniqueActions": [
         {
           "name": "Acelerador de inducción",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado, cuando otro agente RASTREADOR amigo dispare con un arma de inducción a 3\" o menos de este agente, dicha arma tiene Letal 5+ y Severa."
           ]
@@ -8855,7 +8855,7 @@
       "uniqueActions": [
         {
           "name": "Retórica estimulante",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "<b>APOYO</b>. Elige una agente <span class=\"faction\">NOVICIA</span> amiga distinta a 6\" o menos de esta agente y visible para ella, o a 6\" o menos de tu marcador de Autotransmisora. Hasta el final de la siguiente activación de esa agente, suma 1 a su atributo LPA (hasta un máximo de 3 después de haber calculado todos los cambios al atributo LPA)."
           ],
@@ -8950,7 +8950,7 @@
       "uniqueActions": [
         {
           "name": "Inculcar a latigazos",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige una agente <span class=\"faction\">NOVICIA</span> amiga distinta (salvo <b>SUPERIORA</b>) a 3\" o menos de esta agente, visible para ella y que no estuviera ya beneficiándose de los efectos de esta acción. Hasta el final de la siguiente activación de esa agente, suma 1\" a su atributo Movimiento y puede realizar dos acciones de <b>Combatir</b> durante dicha activación, una de las cuales puede ser libre."
           ],
@@ -9000,7 +9000,7 @@
       "uniqueActions": [
         {
           "name": "Herramientas de cirujana",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige una agente <span class=\"faction\">NOVICIA</span> amiga en la zona de control de esta agente para que recupere hasta 2D3 heridas perdidas. No puede ser una agente en la que se haya usado la regla ¡Sanitaria! durante este punto de inflexión."
           ],
@@ -9277,7 +9277,7 @@
       "uniqueActions": [
         {
           "name": "Alzar Icono",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Ganas 1 punto de fe. Si esta agente controla un marcador de objetivo, además ganas tantos puntos de fe como el número del punto de inflexión actual."
           ],
@@ -9379,7 +9379,7 @@
       "uniqueActions": [
         {
           "name": "Premonición",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "<b>PSÍQUICA.</b> Gasta 1 de tus puntos de Clarividencia para ganar 1 PM."
           ],
@@ -9453,7 +9453,7 @@
       "uniqueActions": [
         {
           "name": "Envenenar Objetivo",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "Elige un marcador de objetivo que controle este agente; este gana una de tus fichas de Terrortoxinas. La primera vez que ese marcador de objetivo esté en la zona de control de un agente enemigo que no tenga una de tus fichas de Terrortoxinas, ese agente gana esa ficha de Terrortoxinas, y a continuación inflígele 2D3 daños."
           ],
@@ -9735,7 +9735,7 @@
       "uniqueActions": [
         {
           "name": "IMITACIÓN DESCONCERTANTE",
-          "cost": "1 LPA",
+          "cost": "1 PA",
           "description": [
             "<b>PSÍQUICA.</b> Elige un agente enemigo a 6\" o menos de este agente, y elige una opción (una vez por batalla cada una): <ul><li>Resta 1 a su atributo LPA hasta el final de su siguiente activación.</li></ul> <ul><li>Cambia su orden.</li></ul> <ul><li>Realiza una acción libre de <b>Correr</b> con él (tú indicas dónde se mueve).</li></ul>"
           ],
@@ -13880,7 +13880,7 @@
             "uniqueActions": [
                 {
                     "name": "AVISTAR",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZAS</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
@@ -13930,7 +13930,7 @@
             "uniqueActions": [
                 {
                     "name": "AVISTAR",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZAS</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
@@ -13980,7 +13980,7 @@
             "uniqueActions": [
                 {
                     "name": "SEÑAL",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente CLADO DE CAZA amigo distinto a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
@@ -14030,7 +14030,7 @@
             "uniqueActions": [
                 {
                     "name": "SEÑAL",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente CLADO DE CAZA amigo distinto a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
@@ -20721,7 +20721,7 @@
             "uniqueActions": [
                 {
                     "name": "CANALIZACIÓN DE ALMAS",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA.</b> Elige un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo distinto, a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
@@ -20729,7 +20729,7 @@
                 },
                 {
                     "name": "CURACIÓN DE ALMAS",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA.</b> Elige a un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo a 6\" o menos de este agente y visible para él. Dicho agente recupera 2D3 heridas perdidas."
                     ],
@@ -20789,7 +20789,7 @@
             "uniqueActions": [
                 {
                     "name": "RÁFAGA CON PISTOLAS",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Realiza dos acciones libres de <b>Disparar</b> con este agente (esto tiene preferencia sobre las restricciones a las acciones). Debes elegir su pistola fundidora para una acción y su pistola shuriken para la otra (en cualquier orden)."
                     ],
@@ -20854,7 +20854,7 @@
             "uniqueActions": [
                 {
                     "name": "DOBLAR LA DISFORMIDAD",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA.</b> Elige dos agentes <span class=\"faction\">CORSARIO DEL VACÍO</span> amigos a 5\" o menos de este agente y visibles para él. Retíralos a ambos de la zona de aniquilación y despliégalos de nuevo a cada uno en la ubicación anterior del otro (o, dicho de otro modo, intercámbialos de lugar). Si uno de los agentes ha realizado una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> durante este punto de inflexión y el otro agente está apostado, ese otro agente no podrá realizar ninguna de dichas acciones en su activación durante este punto de inflexión."
                     ],
@@ -20862,7 +20862,7 @@
                 },
                 {
                     "name": "ESCUDO PROTECTOR",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA.</b> Elige un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo a 6\" o menos de este agente y visible para él. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que realice de nuevo esta acción (lo que ocurra antes), la primera vez que un dado de ataque inflija daño normal a ese agente amigo, ignora ese daño infligido."
                     ],
@@ -21313,7 +21313,7 @@
             "uniqueActions": [
                 {
                     "name": "PERTURBACIÓN GEOMÁNTICA",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un punto en un elemento de terreno; ese punto debe encontrarse a 8\" o menos de este agente y ser visible para él. Tira por separado 2D6 por cada agente a 2\" o menos de ese punto. Si el resultado es mayor que las heridas restantes de ese agente, inflígele una cantidad de daño igual a la diferencia."
                     ],
@@ -21321,7 +21321,7 @@
                 },
                 {
                     "name": "CONTROL CANÓPTICO",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo a 6\" o menos de este agente y visible para él. Como alternativa, puedes elegir un agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo que sea visible para este agente y se encuentre en tu <b>MATRIZ DE NODOS DE OBELISCOS</b> (<b>APOYO</b> no se aplica a esta selección). El agente elegido puede realizar de inmediato una acción libre de 1PA; durante esa acción, no puede moverse más de 2\", y si es retirado y desplegado de nuevo debe situarse \"2 o menos de distancia."
                     ],
@@ -21329,7 +21329,7 @@
                 },
                 {
                     "name": "BRECHA MOLECULAR",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> a 6\" o menos de este agente y visible para él. Como alternativa, puedes elegir un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo que sea visible para este agente y se encuentre dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b> (<b>APOYO</b> no se aplica a esta selección).",
                         "La próxima vez que este agente realice una acción en la que se mueva, no lo muevas. En su lugar, retíralo de la zona de aniquilación y vuelve a desplegarlo completamente a una distancia de su ubicación original igual o menor que su atributo Movimiento (o a 3\" o menos si la acción era de <b>Correr</b>) en horizontal  (en una zona de aniquilación que utilice las reglas de combate cerrado, como por ejemplo Zona de aniquilación: Mundo Necrópolis, esta distancia puede medirse por encima y a través de terreno de Muro y el agente puede ser desplegado en el otro lado). Ten en cuenta que el agente no gana distancia adicional al realizar la acción de <b>Cargar</b>. Debe ser desplegado en una ubicación en la que pueda ser colocado y, a menos que la acción fuera de <b>Cargar</b>, no puede desplegarse dentro de la zona de control de un agente enemigo."
@@ -21375,7 +21375,7 @@
             "uniqueActions": [
                 {
                     "name": "SOBRECARGA",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> a 3\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes elegir a otro agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>. Hasta el final de la siguiente activación del agente elegido, suma 1 a su atributo LPA."
                     ],
@@ -21383,7 +21383,7 @@
                 },
                 {
                     "name": "SOBRECARGA CRANEAL",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo a 3\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes elegir un agente enemigo en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>. Hasta el final de la siguiente activación de ese agente enemigo, resta 1 a su atributo LPA."
                     ],
@@ -21433,7 +21433,7 @@
             "uniqueActions": [
                 {
                     "name": "HAZ DE NANOESCARABAJOS",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> a 6\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes elegir otro agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo distinto en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>. El agente elegido recupera hasta 3D3 heridas perdidas. No puede ser un agente sobre el que se haya usado la regla Reanimar durante este punto de inflexión."
                     ],
@@ -22674,7 +22674,7 @@
             "uniqueActions": [
                 {
                     "name": "ESTIMULANTES",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente UNGIDO amigo en la zona de control de este agente, a continuación elige la regla de ESTIMULANTES Revitalizado, o una regla distinta de ESTIMULANTES, para que dicho agente la obtenga en esta batalla."
                     ],
@@ -22719,7 +22719,7 @@
             "uniqueActions": [
                 {
                     "name": "SEÑAL",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente UNGIDO amigo distinto (salvo OGRETE) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
@@ -22727,7 +22727,7 @@
                 },
                 {
                     "name": "ACTUACIÓN SACRÍLEGA",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Obtienes una ficha de Ungido."
                     ],
@@ -22777,7 +22777,7 @@
             "uniqueActions": [
                 {
                     "name": "IMPONER ORDEN",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige otro agente UNGIDO amigo a 3\" o menos de este agente y visible para él. Ese agente puede realizar inmediatamente una acción de 1PA gratis, pero no puede moverse más de 2\" durante esa acción. Si el agente amigo elegido es un COMUNICADOR, no puede realizar las acciones Actuación sacrílega ni Señal."
                     ],
@@ -23596,7 +23596,7 @@
             "uniqueActions": [
                 {
                     "name": "TRAER",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Realiza una acción libre de <b>Correr</b> o <b>Reposicionarse</b> con este agente. Durante ese movimiento, puedes realizar una acción libre de <b>Recoger marcador</b> o <b>Colocar marcador</b> con este agente (puedes determinar el control durante esa acción para ello), y tras hacer tal cosa puede usar la distancia de movimiento que le quedase de la acción de <b>Correr</b> o <b>Reposicionarse</b>."
                     ]
@@ -23653,7 +23653,7 @@
             "uniqueActions": [
                 {
                     "name": "ASESINA ENTRENADA",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Cambia la orden de este agente."
                     ],
@@ -23761,7 +23761,7 @@
             "uniqueActions": [
                 {
                     "name": "SUERO CURATIVO",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo en la zona de control de este agente para que recupere hasta 1D3+3 heridas perdidas. No puede ser un agente en el que se haya utilizado la regla ¡Sanitario! durante este punto de inflexión."
                     ],
@@ -23835,7 +23835,7 @@
             "uniqueActions": [
                 {
                     "name": "FUEGO SIN CUARTEL",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Realiza dos acciones libres de <b>Disparar</b> con este agente (esto tiene prioridad sobre restricciones de acción). Debes elegir su pistola láser reliquia para una acción y su escopeta de artífice (corto alcance) para la otra (en cualquier orden)."
                     ],
@@ -24118,14 +24118,14 @@
             "uniqueActions": [
                 {
                     "name": "ATRAPAR",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Acción de <b>IMPULSO</b>. Elige un agente enemigo en la <b>ZONA DE IMPULSO</b> de este agente. Ambos jugadores tiran 1D6 y suman a su resultado el atributo Heridas de su respectivo agente. Si tu resultado es mayor, retira de la zona de aniquilación a ese agente enemigo y vuelve a desplegarlo en la <b>ZONA DE IMPULSO</b> o la zona de control de este agente. Debe desplegarse en una ubicación en la que pueda colocarse y no puede desplegarse más lejos de lo que estaba de este agente. Si ese agente enemigo se despliega en la zona de control de este agente, la acción de <b>Retroceder</b> o <b>Reposicionarse</b> termina (permitiendo a este agente terminar esa acción en la zona de control de agentes enemigos)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción de manera normal. En lugar de ello, la realiza durante una acción de <b>Retroceder</b> o <b>Reposicionarse</b>, tras desplegarse debido a un <b>IMPULSO</b>."
                 }
             ],
-            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, CAMPEÓN",
+            "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, GARRAMALDITA",
             "peana": "32"
         },
         {
@@ -24168,7 +24168,7 @@
             "uniqueActions": [
                 {
                     "name": "GOLPE CERCENADOR",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Inflige 2D3 daños a cada otro agente visible para este agente y a 2\" o menos de él en el orden que elijas (tira por separado para cada uno)."
                     ],
@@ -24218,7 +24218,7 @@
             "uniqueActions": [
                 {
                     "name": "GOLPEAR DESDE LO ALTO",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
                         "Acción de <b>IMPULSO</b>. Inflige 2D3+1 daños a un agente enemigo en la <b>ZONA DE IMPULSO</b> de este agente."
                     ],
@@ -24329,9 +24329,9 @@
             "uniqueActions": [
                 {
                     "name": "ALARIDO",
-                    "cost": "1 LPA",
+                    "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo a 6\" o menos de este agente y visible para él. Como alternativa, elige a un agente enemigo en la <b>ZONA DE IMPULSO</b>. de este agente (con lo cual esta acción se convierte en una acción de <b>IMPULSO</b>). Si hay agentes enemigos en la zona de control de este agente, no puedes elegir a un agente enemigo que no lo esté. Inflige 1D3 daños al agente elegido y resta 1 a su atributo LPA hasta el final de su siguiente activación."
+                        "Elige un agente enemigo a 6\" o menos de este agente y visible para él. Como alternativa, elige a un agente enemigo en la <b>ZONA DE IMPULSO</b> de este agente (con lo cual esta acción se convierte en una acción de <b>IMPULSO</b>). Si hay agentes enemigos en la zona de control de este agente, no puedes elegir a un agente enemigo que no lo esté. Inflige 1D3 daños al agente elegido y resta 1 a su atributo LPA hasta el final de su siguiente activación."
                     ],
                     "description_no": "Este agente no puede realizar esta acción mientras tenga una orden de ocultarse. Si estás eligiendo a un agente enemigo en la <b>ZONA DE IMPULSO</b> de este agente, este agente no puede realizar esta acción de manera normal. En lugar de ello, la realiza durante una acción de <b>Retroceder</b> o <b>Reposicionarse</b> tras desplegarse debido a un <b>IMPULSO</b>."
                 }

@@ -24446,5 +24446,412 @@
             "keywords": "<span class=\"faction\">ALA ASESINA</span>, CAOS, ASTARTES HEREJES, ESPOLÓN DE LA DISFORMIDAD",
             "peana": "32"
         }
+    ],
+    "celestian-insidiants": [
+        {
+            "id": "insidiant-superior",
+            "name": "INSIDIADORA SUPERIORA",
+            "stats": {
+                "LPA": "3",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "10"
+            },
+            "weapons": [
+                {
+                    "name": "Lanzaestacas condenación reliquia",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/2",
+                        "RA": "AntiPSÍQUICO<span class=\"faction\">*</span>,  Críticos de penetración 1, Devastadora 2, Letal 5+, Silenciosa"
+                    }
+                },
+                {
+                    "name": "Pistola bólter reliquia",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Alcance 8\", Letal 5+"
+                    }
+                },
+                {
+                    "name": "Pistola infierno",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/2",
+                        "RA": "Alcance 3\", Devastadora 3, Penetración 2"
+                    }
+                },
+                {
+                    "name": "Maza nulificadora",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/4",
+                        "RA": "AntiPSÍQUICO<span class=\"faction\">*</span>, Choque"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Ejemplo santo",
+                    "description": "Una vez por punto de inflexión, si esta agente es <b>INSPIRADORA</b>, puedes usar un ardid de tiroteo por 0PM si esta es la agente <span class=\"faction\">INSIDIADORA CELESTE</span> especificada (incluyendo Repetición de mando si se tiró el dado de ataque o defensa para esta agente)."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "MENTORA ESPIRITUAL",
+                    "cost": "1 PA",
+                    "description": [
+                        "<b>APOYO</b>. Elige una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga a 6” o menos de esta agente y visible para ella. Esa agente se vuelve <b>INSPIRADORA</b>."
+                    ],
+                    "description_no": "Esta agente no puede realizar esta acción sin está en la zona de control de algún agente enemigo, ni más de una vez por punto de inflexión."
+                }
+            ],
+            "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, LÍDER, SUPERIORA",
+            "peana": "32"
+        },
+        {
+            "id": "insidiant-abjuror",
+            "name": "INSIDIADORA ABJURADORA",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "2+",
+                "HERIDAS": "11"
+            },
+            "weapons": [
+                {
+                    "name": "Espada bendita y praesidium protectiva (defensiva)",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Escudo<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Espada bendita y praesidium protectiva (ofensiva)",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Letal 5+"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "<span class=\"faction\">*</span>Escudo",
+                    "description": "Cuando esta agente combate o contraataca con este perfil de arma, cada uno de tus bloqueos puede asignarse para bloquear dos éxitos sin resolver (en lugar de uno)."
+                },
+                {
+                    "name": "Defensora santa",
+                    "description": "<p>Una vez por punto de inflexión, puedes usar esta regla cuando una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga a 2\" o menos de esta agente y visible para ella sea elegida como blanco válido de una acción de <b>Disparar</b> o para combatir contra ella durante una acción de <b>Combatir</b>. Si lo haces, esta agente es tomada como blanco válido en su lugar (incluso si normalmente no sería válido). Si es una acción de <b>Combatir</b>, esta agente se considera que está en la zona de control del agente que combate mientras dure esa acción. Si es una acción de <b>Disparar</b>, esta agente solo está tras cobertura u ofuscada si lo estaba el blanco original.</p> <p>Esta regla no tiene efecto si es una acción de <b>Disparar</b> y el arma a distancia tiene la regla de armas Área o Ráfaga.</p>"
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, ABJURADORA",
+            "peana": "32"
+        },
+        {
+            "id": "insidiant-censor",
+            "name": "INSIDIADORA CENSORA",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "9"
+            },
+            "weapons": [
+                {
+                    "name": "Vara de monición",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "5/5",
+                        "RA": "AntiPSÍQUICO<span class=\"faction\">*</span>, Brutal, Choque"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Portadora de la vara de monición",
+                    "description": "Al determinar el control de un marcador, trata el atributo LPA de esta agente como si fuese 1 mayor de lo que es. Ten en cuenta que esto no es un cambio al atributo LPA, por lo que cualquier cambio es acumulativo con esto."
+                },
+                {
+                    "name": "Campo nulificador",
+                    "description": "Esta agente empieza la batalla con un alcance nulificador de 1\". Siempre que un agente enemigo esté en el alcance nulificador de esta agente, resta 2\" al atributo Movimiento de ese agente enemigo y empeora en 1 el atributo Impactar de sus armas (esto no se acumula con estar lesionado)."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "Ritual de Nulificación",
+                    "cost": "1 PA",
+                    "description": [
+                        "Suma 1\" al alcance nulificador de esta agente (hasta un máximo de 5\"). Las fichas de Nulificación de la guía de fichas y marcadores están numeradas, así que usa la ficha numerada que corresponda al alcance nulificador de esta agente"
+                    ],
+                    "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
+                }
+            ],
+            "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, CENSORA",
+            "peana": "32"
+        },
+        {
+            "id": "insidiant-cremator",
+            "name": "INSIDIADORA INCINERADORA",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "9"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola lanzallamas (normal)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 6\", Ráfaga 1\", Saturación"
+                    }
+                },
+                {
+                    "name": "Pistola lanzallamas (tromba)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Alcance 4\", Buscadora (Ligero), Ráfaga 0\"<span class=\"faction\"><sup>1</sup></span> , Saturación"
+                    }
+                },
+                {
+                    "name": "Maza nulificadora",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/4",
+                        "RA": "AntiPSÍQUICO<span class=\"faction\">*</span>, Choque"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Pira de inspiración",
+                    "description": "Una vez por punto de inflexión, puedes usar esta regla cuando esta agente inflija daño a un agente enemigo con cualquier perfil de su pistola lanzallamas pero no lo incapacite. Si lo haces, puedes elegir una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga a 6\" o menos de esta agente. Esa agente se vuelve <b>INSPIRADORA</b>"
+                },
+                {
+                    "name": "<span class=\"faction\"><sup>1</sup></span> Recuerda que Ráfaga 0\"",
+                    "description": "significa que no puedes elegir blancos secundarios, pero esta arma sigue teniendo la regla de armas Ráfaga a efectos de todas las demás reglas, p.ej., la regla de Fortaleza compacta (ver Zona de aniquilación: Volkus, Libro básico de Kill Team)."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, INCINERADORA",
+            "peana": "32"
+        },
+        {
+            "id": "insidiant-denuncia",
+            "name": "INSIDIADORA DENUNCIA",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "9"
+            },
+            "weapons": [
+                {
+                    "name": "Voz de condenación",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "1/1",
+                        "RA": "Alcance 6\", Aturdidora, Buscadora"
+                    }
+                },
+                {
+                    "name": "Báculo de declamación",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/3",
+                        "RA": "Choque"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Exorcista acusadora",
+                    "description": "Siempre que esta agente sea <b>INSPIRADORA</b>, el ardid de estrategia Sospechar y eliminar te cuesta 0PM si el agente enemigo o el marcador que elijas es visible para esta agente o está a 6\" o menos de ella."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "CONTAD SUS HAZAÑAS",
+                    "cost": "1 PA",
+                    "description": [
+                        "<b>APOYO</b>. Elige una agente <span class=\"faction\">INSIDIADORA CELESTE</span> <b>INSPIRADORA</b> amiga a 6\" o menos de esta agente y visible para ella. Esa agente ya no es <b>INSPIRADORA</b>. Después, elige otra agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga a 6\" o menos de esta agente y visible para ella. Resuelve una <b>EXALTACIÓN</b> de la regla de facción Martirio sobre esa agente (que no sea Exigencia)."
+                    ],
+                    "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, DENUNCIA",
+            "peana": "32"
+        },
+        {
+            "id": "insidiant-mortisanctus",
+            "name": "INSIDIADORA MORTISANCTUS",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "9"
+            },
+            "weapons": [
+                {
+                    "name": "Espadón bendito",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Brutal, Letal 5+"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Ultimátum fervoroso",
+                    "description": "<p><b>GAMBITO ESTRATÉGICO</b>. de una vez por batalla. Elige un agente enemigo a 8\" o menos de esta agente para lanzarle un ultimátum. Tu oponente debe aceptar o rechazar ese ultimátum (si es un agente no jugador, tira 1D6: con 4+, acepta el ultimátum; de lo contrario, lo rechaza).</p> <p>Si acepta el ultimátum, siempre que esta agente combate o contraataca contra ese agente enemigo, suma 1 al atributo Ataque del espadón bendito de esta agente. La primera vez durante la batalla que esta agente incapacite a ese agente enemigo mientras esté combatiendo o contraatacando, suma 1 al atributo Ataque del espadón bendito de esta agente hasta el final de la batalla. En cualquier caso, esto será hasta un máximo de 5.</p> <p>Si rechaza el ultimátum, siempre que ese agente enemigo combata o contraataque contra una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga, resta 1 al atributo Ataque de las armas de ese agente enemigo.</p>"
+                },
+                {
+                    "name": "Postura de esgrima",
+                    "description": "Cuando esta agente combata o contraataque, puedes resolver uno de tus éxitos antes del orden normal. Si lo haces, ese éxito debe usarse para bloquear"
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, MORTISANCTUS",
+            "peana": "32"
+        },
+        {
+            "id": "insidiant-reliquarius",
+            "name": "INSIDIADORA RELICARIA",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "9"
+            },
+            "weapons": [
+                {
+                    "name": "Lanzaestacas condenación",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/2",
+                        "RA": "AntiPSÍQUICO<span class=\"faction\">*</span>,  Críticos de penetración 1, Devastadora 1, Silenciosa"
+                    }
+                },
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Portadora del simulacrum nullificatus",
+                    "description": " Al determinar el control de un marcador, considera el atributo LPA total de los agentes enemigos que lo disputen como si fuera 1 menor si al menos uno de esos agentes enemigos está a 3\" o menos de esta agente. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto."
+                },
+                {
+                    "name": "Devoción",
+                    "description": "Al final de cada una de las activaciones de esta agente, si es <b>INSPIRADORA</b> y controla un marcador de objetivo o uno de tus marcadores de misión, una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga a 6\" o menos de ella y para la que esta agente sea visible se vuelve <b>INSPIRADORA</b>."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, RELICARIA",
+            "peana": "32"
+        },
+        {
+            "id": "insidiant-warrior",
+            "name": "INSIDIADORA COMBATIENTE",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "9"
+            },
+            "weapons": [
+                {
+                    "name": "Lanzaestacas condenación",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/2",
+                        "RA": "AntiPSÍQUICO<span class=\"faction\">*</span>,  Críticos de penetración 1, Devastadora 1, Silenciosa"
+                    }
+                },
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Maza nulificadora",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "AntiPSÍQUICO<span class=\"faction\">*</span>,  Choque"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Golpes inspirados",
+                    "description": "Siempre que esta agente sea <b>INSPIRADORA</b>, suma 1 al atributo Daño crítico de las armas de su tarjeta de datos."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, COMBATIENTE",
+            "peana": "32"
+        }
     ]
 }

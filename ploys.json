@@ -3101,7 +3101,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "MASACRAR A LOS DÉBILES",
-        "description": "Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo dispare o combata, sus armas tienen la regla de armas Castigadora si el agente contra el que ese agente amigo está disparando o combatiendo cumple cualquiera de las siguientes condiciones: <ul><li> Se encuentra al menos 2\" más bajo que el agente amigo.</li></ul> <ul><li>Su LPA es menor de lo normal</li></ul> <ul><li> Estaba herido al inicio de la activación/reacción.</li></ul>",
+        "description": "Cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo dispare o combata, sus armas tienen la regla de armas Castigadora si el agente contra el que ese agente amigo está disparando o combatiendo cumple cualquiera de las siguientes condiciones: <ul><li>Se encuentra al menos 2\" más bajo que el agente amigo.</li></ul> <ul><li>Su LPA es menor de lo normal</li></ul> <ul><li>Estaba herido al inicio de la activación/reacción.</li></ul>",
         "typename":"Ardid de Estrategia"
     },
     {

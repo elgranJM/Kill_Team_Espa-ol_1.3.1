@@ -97,7 +97,7 @@
     "action": [
       {
       "action_name": "Orbe de Santificación",
-      "action_cost": "1 LPA",
+      "action_cost": "1 PA",
       "action_yes": [
         "Selecciona un agente enemigo visible y a 6\" o menos de este agente. Ese agente y cada otro agente enemigo a 1\" o menos de él realiza una prueba de empapado. Para realizar una prueba de empapado, lanza un D6: con un 3+, gana una de tus fichas de Empapado.",
         "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté disparando contra un agente que tenga una de tus fichas de Empapado con un arma que tenga la regla de armas Fuego, esa arma también tiene la regla de armas Búsqueda.",
@@ -963,7 +963,7 @@
     "action": [
       {
         "action_name": "Granada de Fotones",
-        "action_cost": "1 LPA",
+        "action_cost": "1 PA",
         "action_yes": ["Selecciona un Blanco Válido para este agente y lanza un D6: con un 3+, hasta el final de la siguiente activación de ese agente, resta 2\" de su atributo de Movimiento y no puede realizar la acción de Moverse con Cuidado."],
         "action_no": "Un agente no puede realizar esta acción mientras esté dentro del área de control de un agente enemigo."
       }
@@ -1311,7 +1311,7 @@
     "action": [
       {
         "action_name": "REBANAR DESDE LO ALTO",
-        "action_cost": "1 LPA",
+        "action_cost": "1 PA",
         "action_yes": ["Acción de <b>IMPULSO</b>. Inflige 1D3+1 daños a un agente enemigo en la <b>ZONA DE IMPULSO</b> de este agente."],
         "action_no": "Un agente no puede realizar esta acción de manera normal. En lugar de ello, la realiza durante la acción de <b>Retroceder</b> o <b>Reposicionarse</b>, tras desplegarse debido a un <b>IMPULSO</b>. Un agente <b>DEPREDADOR</b> no puede realizar esta acción durante la misma activación en la que realizara la acción <b>Golpe cercenador</b> (o viceversa)."
       }
@@ -1325,7 +1325,7 @@
     "action": [
       {
         "action_name": "CARGAR CON GARRAS",
-        "action_cost": "0 LPA",
+        "action_cost": "0 PA",
         "action_yes": ["Acción de <b>IMPULSO</b>. Inflige 1 daño a un agente enemigo en la zona de control de este agente, y a continuación la acción de <b>Cargar</b> termina."],
         "action_no": "Un agente no puede realizar esta acción de manera normal. En lugar de ello, la realiza durante una acción de <b>Cargar</b>, tras desplegarse debido a un <b>IMPULSO</b>."
       }
@@ -1346,7 +1346,7 @@
     "action": [
       {
       "action_name": "VOCOGRITO",
-      "action_cost": "1 LPA",
+      "action_cost": "1 PA",
       "action_yes": ["Cada agente enemigo a 3\" o menos de este agente hace un chequeo de aturdimiento. Para ello, tira 1D6: con 3+, resta 1 a su atributo LPA hasta el final de su siguiente activación."],
       "action_no": "Un agente no puede realizar esta acción si tiene una orden de ocultarse."
       }

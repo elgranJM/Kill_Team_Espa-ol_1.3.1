@@ -1351,5 +1351,33 @@
       "action_no": "Un agente no puede realizar esta acción si tiene una orden de ocultarse."
       }
     ]
+  },
+  {
+    "id_equip": 190,
+    "faction": "celestian-insidiants",
+    "name": "GRANADAS ANTIPSÍQUICOS",
+    "description": "Este equipo te permite elegir dos granadas especiales del equipo de granadas especiales (ver equipo universal) y deben ser todas granadas aturdidoras. Si también eliges ese equipo como equipo normal, no puedes elegir granadas aturdidoras (para tener más de dos). Siempre que un agente realice un chequeo de aturdimiento como resultado de la acción <b>Granada aturdidora</b> de una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga, si el resultado es 3+, también infliges a ese primer agente tantos daños como la mitad del resultado (redondea al alza). Si ese primer agente tiene la clave <b>PSÍQUICO</b>, le infliges en su lugar tantos daños como el resultado de la tirada.",
+    "action":[]
+  },
+  {
+    "id_equip": 191,
+    "faction": "celestian-insidiants",
+    "name": "VOCIFERA MORTIS",
+    "description": "Una vez por batalla, puedes usar esta regla cuando una agente <span class=\"faction\">INSIDIADORA CELESTE</span> <b>INSPIRADORA</b> amiga quede incapacitada. Si lo haces, de cara a la regla de facción Martirio la otra agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga que elijas puede ser una que no sea visible para esa agente ni esté a 6\" o menos de ella.",
+    "action":[]
+  },
+  {
+    "id_equip": 192,
+    "faction": "celestian-insidiants",
+    "name": "RELIQUIAS SANTAS",
+    "description": "Puedes usar esta regla siempre que un dado de ataque vaya a infligir daño a una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga. Si lo haces, tira 1D6, o 2D6 si esa agente es <b>INSPIRADORA</b>: si sacas algún 6, ignora el daño infligido por ese dado de ataque. No puedes ignorar más de un dado de ataque por acción y dos dados de ataque por batalla con esta regla.",
+    "action":[]
+  },
+  {
+    "id_equip": 193,
+    "faction": "celestian-insidiants",
+    "name": "AUTOFLAGELANTE",
+    "description": "Puedes usar esta regla siempre que se active una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga. Si la usas, tira 1D6 e inflige a esa agente tantos daños como la mitad del resultado (redondea al alza); con 4+, además esa agente se vuelve <b>INSPIRADORA</b>. No puedes hacer <b>INSPIRADORA</b> con esta regla a más de una agente amiga en cada punto de inflexión.",
+    "action":[]
   }
 ]

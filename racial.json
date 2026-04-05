@@ -1076,7 +1076,9 @@
             "type": "racial",
             "name": "ASTARTES",
             "description": "<p>Durante la activación de cada agente <span class=\"faction\">ALA ASESINA</span> amigo, puede realizar o dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b>, debe seleccionarse una pistola bólter para al menos una de ellas.</p> <p>Cada agente <span class=\"faction\">ALA ASESINA</span> amigo puede reaccionar sin importar cuál sea su orden.</p>"
-        },
+        }
+    ],
+    "celestian-insidiants":[
         {
             "id_racial": 142,
             "faction": "celestian-insidiants",

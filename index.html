@@ -141,263 +141,43 @@
                     
                     <!--CritOps Filtro-->
                     <div class="tab-pane fade" id="critops-panel" role="tabpanel">
-                        <h3>Partidas</h3>
+                        <h3>Prueba</h3>
                     </div>
 
-                    <div class="tab-pane fade" id="tacops-pane" role="tabpanel">
-                        <!-- TacOps Filter Controls -->
-                        <div class="row">
-                            <div class="col text-center p-3">
-                                <div class="form-control text-center p-3 border-0 bg-transparent">
-                                    <span>Todos</span>
-                                    <input type="checkbox" id="FavTacops-switch" class="ms-1 me-1">
-                                    <label class="switch-label" for="FavTacops-switch"></label>
-                                    <span class="p-2">Favoritos</span>
+                    <div class="container mt-5">
+                        <div class="tab-pane fade show active" id="tacops-pane" role="tabpanel">
+        
+                            <!-- Controles de Filtro -->
+                            <div class="row">
+                                <div class="col text-center p-3">
+                                    <div class="form-control text-center p-3 border-0 bg-transparent text-white">
+                                        <span>Todos</span>
+                                        <input type="checkbox" id="FavTacops-switch" class="ms-1 me-1 form-check-input">
+                                        <label class="switch-label" for="FavTacops-switch"></label>
+                                        <span class="p-2">Favoritos</span>
+                                    </div>
                                 </div>
                             </div>
+        
+                            <div id="tacopsFilter" class="row ps-3 pe-3 mb-4">
+                                <div class="col-md-6 offset-md-3 text-center p-3">
+                                    <label for="tacopsFilterSelect" class="form-label text-white fw-bold">Filtrar por Arquetipo:</label>
+                                    <select id="tacopsFilterSelect" class="form-select bg-dark text-white border-secondary">
+                                        <option value="" selected="selected">Todos los Arquetipos</option>
+                                        <option value="security">Seguridad</option>
+                                        <option value="seek-destroy">Buscar y Destruir</option>
+                                        <option value="recon">Reconocimiento</option>
+                                        <option value="infiltration">Infiltración</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Contenedor donde se inyectarán las cartas dinámicamente -->
+                            <div id="tacopsCardsContainer" class="row justify-content-center">
+                                <!-- Las cartas se generan aquí via JavaScript -->
+                            </div>
+
                         </div>
-                        <div id="tacopsFilter" class="row ps-3 pe-3">
-                            <div class="col-md-6 offset-md-3 text-center p-3">
-                                <label for="tacopsFilterSelect" class="form-label">Filtrar por Arquetipo:</label>
-                                <select id="tacopsFilterSelect" class="form-select">
-                                    <option value="" selected="selected">Todos los Arquetipos</option>
-                                    <option value="security">Seguridad</option>
-                                    <option value="seek-destroy">Buscar y Destruir</option>
-                                    <option value="recon">Reconocimiento</option>
-                                    <option value="infiltration">Infiltración</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- TacOps Cards Container -->
-                        <div class="row justify-content-center">
-
-                            <!-- Recon Card (Flank) -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="flank" class="tacop card recon recon-icon">
-                                    <div class="archetype position-relative">Reconocimiento<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Flanco</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points">
-                                                <div class="sub-header">Revelar</div>
-                                                Como un <b>GAMBITO ESTRATÉGICO</b>.
-                                            </div>
-                                            <div class="victory-points">
-                                                <div class="sub-header">Reglas Adicionales</div>
-                                                <div class="row g-3 tacop-columns">
-                                                    <div class="col-12 col-md-6">
-                                                        <p>Divide la killzone en dos flancos (izquierdo y derecho) trazando una línea imaginaria igual que la línea central, excepto que va desde el centro del borde de la killzone de cada jugador. Un agente disputa un flanco mientras esté totalmente dentro de él y dentro del territorio de su oponente. Los agentes amigos controlan un flanco si el atributo LPA total de los que lo disputan es mayor que el de los agentes enemigos.</p>
-                                                    </div>
-                                                    <div class="col-12 col-md-6 text-center">
-                                                        <img src="./resources/tacops_files/flank_tacop-1.png" alt="Diagrama de Flanco (Reconocimiento)" class="img-fluid">
-                                                        <p class="small mt-2 mb-0">P. ej., el Jugador 1 controla este flanco ya que el LPA total de los agentes del jugador 1 totalmente dentro del territorio del jugador 2 es mayor que el de los agentes del jugador 2 totalmente dentro del territorio del jugador 1.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="victory-points">
-                                                <div class="sub-header">Puntos de Victoria</div>
-                                                <ul>
-                                                    <li>Después de revelar esta op, al final de cada punto de inflexión después del primero, por cada flanco que los agentes amigos controlen, obtienes 1PV.</li>
-                                                    <li>Si los agentes amigos también controlaron ese flanco al final del punto de inflexión anterior (excluyendo el primero), obtienes 2PV en su lugar.</li>
-                                                </ul>
-                                                <p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Retrieval Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="retrieval" class="tacop card recon recon-icon">
-                                    <div class="archetype position-relative">Reconocimiento<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Recuperación</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que obtengas PV de esta op.</div>
-                                            <div class="sub-header mt-3">Acción de Misión</div>
-                                            <div class="header"><div>Recuperar</div><div class="ap-box">1LPA</div></div>
-                                            <div class="content"><ul><li><span class="icon-yes"></span>Si el agente activo controla un marcador de objetivo que no ha sido buscado por agentes amigos, ese agente ahora lleva uno de tus marcadores de misión de Recuperación y ese marcador de objetivo ha sido buscado por agentes amigos. Los agentes amigos pueden realizar la acción "Recoger Marcador" en tus marcadores de misión de Recuperación.</li><li><span class="icon-no"></span>Un agente no puede realizar esta acción durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.</li></ul></div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p>La primera vez que se busca cada marcador de objetivo... obtienes 1PV.</p><p>Al final de la batalla, por cada uno de tus marcadores de misión de Recuperación... obtienes 1PV.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Scout Enemy Movement Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="scout-enemy-movement" class="tacop card recon recon-icon">
-                                    <div class="archetype position-relative">Reconocimiento<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Vigilar el Movimiento Enemigo</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente amigo realiza la acción <b>Vigilar</b>.</div>
-                                            <div class="sub-header mt-3">Acción de Misión</div>
-                                            <div class="header"><div>Vigilar</div><div class="ap-box">1LPA</div></div>
-                                            <div class="content"><ul><li><span class="icon-yes"></span>Selecciona un agente enemigo preparado, visible y a más de 6" del agente activo. Ese agente enemigo ahora está vigilado hasta el paso de Preparar de la próxima fase de Estrategia.</li><li><span class="icon-no"></span>Un agente no puede realizar esta acción mientras tiene una orden de Trabarse, durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.</li></ul></div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><ul><li>Al final de cada punto de inflexión después del primero, por cada agente enemigo vigilado... obtienes 1PV.</li></ul><p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Sweep & Clear Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="sweep-clear" class="tacop card seek-destroy seek-destroy-icon">
-                                    <div class="archetype position-relative">Buscar y Destruir<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Revisar y Purgar</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente enemigo es incapacitado mientras disputa un marcador de objetivo, o la primera vez que un agente amigo realiza la acción <b>Purgar</b> (lo que ocurra primero).</div>
-                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Cuando un agente enemigo que disputa un marcador de objetivo es incapacitado, ese marcador de objetivo gana una de tus fichas de <b>Revisado</b> (si aún no tiene una) hasta el paso de Preparar de la próxima fase de Estrategia.</div>
-                                            <div class="sub-header mt-3">Acción de Misión</div>
-                                            <div class="header"><div>Purgar</div><div class="ap-box">1LPA</div></div>
-                                            <div class="content"><ul><li><span class="icon-yes"></span> Un marcador de objetivo que controla el agente activo queda purgado para el punto de inflexión.</li><li><span class="icon-no"></span> Un agente no puede realizar esta acción durante el primer punto de inflexión, o mientras esté dentro del rango de control de un agente enemigo.</li></ul></div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><ul><li>Al final de cada punto de inflexión después del primero, si los agentes amigos controlan algún marcador de objetivo que tenga una de tus fichas de <b>Revisado</b>, obtienes 1PV.</li><li>Si esto es cierto y cualquiera de esos marcadores de objetivo también está <b>purgado</b>, obtienes 2PV en su lugar.</li></ul><p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Dominate Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="dominate" class="tacop card seek-destroy seek-destroy-icon">
-                                    <div class="archetype position-relative">Buscar y Destruir<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Dominar</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente enemigo es incapacitado por un agente amigo.</div>
-                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Cada vez que un agente amigo incapacita a un agente enemigo, ese agente amigo gana una de tus fichas de Dominación.</div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p><ul><li>Al final del tercer y cuarto punto de inflexión, puedes retirar fichas de Dominación de los agentes aliados que no estén incapacitados. Por cada ficha que elimines, obtienes 1 PV.</li></ul></p><p>No puedes obtener más de 3PV de esta op por punto de inflexión.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Rout Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="rout" class="tacop card seek-destroy seek-destroy-icon">
-                                    <div class="archetype position-relative">Buscar y Destruir<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Hacer Huir</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que obtengas PV de esta op.</div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><ul><li>Siempre que un agente amigo incapacite a un agente enemigo, si ese agente amigo está a 6" de la zona de caída de tu oponente, obtienes 1 PV.</li><li>Si su atributo de Heridas es de 12 o más, obtienes 2PV en su lugar.</li></ul><p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Plant Banner Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="plant-banner" class="tacop card security security-icon">
-                                    <div class="archetype position-relative">Seguridad<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Izar Bandera</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>Cuando realizas la acción <b>Izar Bandera</b>.</div>
-                                            <div class="sub-header mt-3">Acción de Misión</div>
-                                            <div class="header"><div>Izar Bandera</div><div class="ap-box">1LPA</div></div>
-                                            <div class="content"><ul><li><span class="icon-yes"></span> Coloca tu marcador de misión de Bandera dentro del rango de control del agente activo, totalmente dentro del territorio de tu oponente y a más de 5" de un borde de killzone neutral. Los agentes pueden realizar la acción "Recoger Marcador" en tu marcador de misión de Bandera.</li><li><span class="icon-no"></span> Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo, o si un agente amigo ya ha realizado esta acción durante la batalla.</li></ul></div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p>Al final de cada punto de inflexión después del primero, si tu marcador de misión de Bandera está totalmente dentro del territorio de tu oponente y los agentes amigos lo controlan, obtienes 1PV</p><p>Si eso es cierto y ningún agente enemigo lo disputa, obtienes 2PV en su lugar. Ten en cuenta que tu marcador de misión de Bandera debe estar en la killzone (no siendo transportado) para puntuar.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Martyrs Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="martyrs" class="tacop card security security-icon">
-                                    <div class="archetype position-relative">Seguridad<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Mártires</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente amigo es incapacitado mientras disputa un marcador de objetivo.</div>
-                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Siempre que un agente amigo es incapacitado mientras disputa un marcador de objetivo, ese marcador gana una de tus fichas de Mártir. Ten en cuenta que esto es solo la primera vez que cada agente es incapacitado, así que si un agente es incapacitado, se vuelve a desplegar (p. ej. Protocolos de Reanimación del <b>CÍRCULO HIEROTEK</b>) y luego es incapacitado de nuevo, no se puede ganar una segunda ficha de Mártir como resultado.</div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><ul><p><li>Al final de cada punto de inflexión después del primero, si los agentes amigos disputan un marcador de objetivo que tiene una o más de tus fichas de Mártir, puedes retirar cualquiera de esas fichas. Por cada ficha que retires, obtienes 1PV</li><li>Si los agentes amigos también controlan ese marcador, obtienes 2PV en su lugar.</li></p></ul><p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Envoy Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="envoy" class="tacop card security security-icon">
-                                    <div class="archetype position-relative">Seguridad<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Mensajero</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que seleccionas un mensajero.</div>
-                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Como un <b>GAMBITO ESTRATÉGICO</b> en cada punto de inflexión después del primero, selecciona un agente amigo para ser tu mensajero hasta el paso de Preparar de la próxima fase de Estrategia. No puedes seleccionar un agente que seleccionaste durante un punto de inflexión anterior o un agente que es ignorado para la kill op.</div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p>Al final de cada punto de inflexión... si tu mensajero está totalmente dentro del territorio enemigo... obtienes 1PV</p><p>Si esto es cierto y tu mensajero no ha perdido ninguna herida... obtienes 2PV en su lugar.</ul></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Track Enemy Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="track-enemy" class="tacop card infiltration infiltration-icon">
-                                    <div class="archetype position-relative">Infiltración<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Localizar Enemigo</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que obtengas PV de esta op.</div>
-                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div>Un agente enemigo está siendo localizado si es un Blanco Valido para un agente amigo a menos de 6" de él. Ese agente amigo debe tener una orden de Ocultación, no puede ser un Blanco Valido para el agente enemigo que está intentando localizar, y no puede estar dentro del rango de control de agentes enemigos.</div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div>
-                                                <p>Al final de cada punto de inflexión después del primero:</p>
-                                                <ul>
-                                                    <li>Si un agente enemigo está siendo localizado, obtienes 1PV, o 2PV en su lugar si es el cuarto punto de inflexión.</li>
-                                                    <li>Si dos o más agentes enemigos están siendo localizados, obtienes 2PV.</li>
-                                                </ul>
-                                                <p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Plant Devices Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="plant-devices" class="tacop card infiltration infiltration-icon">
-                                    <div class="archetype position-relative">Infiltración<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Colocar dispositivos</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente amigo realiza la acción <b>Colocar Dispositivo</b>.</div>
-                                            <div class="sub-header mt-3">Acción de Misión</div>
-                                            <div class="header"><div>Colocar Dispositivo</div><div class="ap-box">1LPA</div></div>
-                                            <div class="content"><ul><li><span class="icon-yes"></span> Un marcador de objetivo que controla el agente activo gana una de tus fichas de Dispositivo.</li><li><span class="icon-no"></span> Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo, o si ese marcador de objetivo ya tiene una de tus fichas de Dispositivo.</li></ul></div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div>
-                                                <p>Al final de cada punto de inflexión después del primero:</p>
-                                                <ul>
-                                                    <li>Si el marcador de objetivo de tu oponente tiene una de tus fichas de Dispositivo, obtienes 1PV.</li>
-                                                    <li>Por cada otro marcador de objetivo que disputen los agentes enemigos que tenga una de tus fichas de Dispositivo, obtienes 1PV.</li>
-                                                </ul>
-                                                <p>No puedes obtener más de 2PV de esta op por punto de inflexión.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Steal Intelligence Card -->
-                            <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container">
-                                <div id="steal-intelligence" class="tacop card infiltration infiltration-icon">
-                                    <div class="archetype position-relative">Infiltración<i class="gototacops bi bi-heart position-absolute"></i></div>
-                                    <div class="middle">
-                                        <h2 class="name">Robar Información</h2>
-                                        <div class="mission-container pt-0">
-                                            <div class="victory-points"><div class="sub-header">Revelar</div>La primera vez que un agente enemigo es incapacitado.</div>
-                                            <div class="victory-points"><div class="sub-header">Reglas Adicionales</div><p>Siempre que un agente enemigo es incapacitado, antes de que sea retirado de la killzone, coloca uno de tus marcadores de misión de Información dentro de su rango de control.</p><p>Los agentes amigos pueden realizar la acción <b>Recoger Marcador</b> en tus marcadores de misión de Información, y para los propósitos de las condiciones de esa acción, ignora el primer marcador de misión de Información que lleva el agente activo. En otras palabras, cada agente amigo puede llevar hasta dos marcadores de misión de Información, o uno y otro marcador.</p></div>
-                                            <div class="victory-points"><div class="sub-header">Puntos de Victoria</div><p>Al final de cada punto de inflexión después del primero, si algún agente amigo lleva alguno de tus marcadores de misión de Información, obtienes 1PV.</p><p>Al final de la batalla, por cada uno de tus marcadores de misión de Información que lleven los agentes amigos, obtienes 1PV.</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> <!-- End of TacOps Cards Container -->
                     </div>
 
                     <!-- Faction Rules Pane -->

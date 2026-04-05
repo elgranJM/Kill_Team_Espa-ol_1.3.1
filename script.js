@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'strike-force-variel': 'Fuerza de Ataque Variel',
         'exaction-squad': 'Escuadra de Exacción',
         'veteran-guardsmen': 'Korps de la Muerte',
-        'celestian-insidiants': 'Insisiadora Celeste',
+        'celestian-insidiants': 'Insidiadora Celeste',
 
         'blooded': 'Ungidos',
         'chaos-cult': 'Culto del Caos',

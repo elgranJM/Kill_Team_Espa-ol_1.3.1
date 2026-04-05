@@ -278,5 +278,11 @@
             "recon",
             "seek-destroy"
         ]
+    },
+    "celestian-insidiants":{
+        "archetypes":[
+            "security",
+            "seek-destroy"
+        ]
     }
 }

@@ -3157,5 +3157,77 @@
         "name": "ALAS DE OSCURIDAD",
         "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ALA ASESINA</span> amigo realice la acción de <b>Retroceder</b> o <b>Reposicionarse</b>, cuando aplique un <b>IMPULSO</b>. Ese agente puede desplegarse a 3\" adicionales de distancia durante ese <b>IMPULSO</b> (añadiéndolos a la distancia de movimiento permitida), pero no puede realizar acciones de <b>Disparar</b>, <b>Combatir</b> o <b>Golpe cercenador</b> (ver agente <b>DEPREDADOR</b>) hasta el siguiente punto de inflexión. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename":"Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 244,
+        "faction": "celestian-insidiants",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "SOSPECHAR Y ELIMINAR",
+        "description": "<p>Elige un agente enemigo o un marcador. Si eliges un agente enemigo, ese agente y todos los demás agentes enemigos visibles para él y a 2\" o menos de él obtienen una de tus fichas de Sospecha hasta el final del punto de inflexión. Si elegiste un marcador, cada agente enemigo que dispute ese marcador obtiene una de tus fichas de Sospecha hasta el final del punto de inflexión.</p> <p>Siempre que una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga dispare o combata contra un agente que tiene una de tus fichas de Sospecha, las armas de esa agente amiga tienen la regla de armas Castigadora.</p>",
+        "typename":"Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 245,
+        "faction": "celestian-insidiants",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "DETERMINACIÓN IRACUNDA",
+        "description": "Siempre que un agente dispare contra una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga que tenga una orden de trabarse, puedes repetir uno de tus dados de defensa.",
+        "typename":"Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 246,
+        "faction": "celestian-insidiants",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "SUFRIMIENTO Y SACRIFICIO",
+        "description": "Siempre que una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga herida dispare, combata o contraataque contra un agente enemigo, sus armas tienen la regla de armas Equilibrada.",
+        "typename":"Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 247,
+        "faction": "celestian-insidiants",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "RESILIENCIA SANTA",
+        "description": "Siempre que una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga esté combatiendo o contraatacando, los daños normales y críticos de 4 o más infligen 1 daño menos a esa agente amiga.",
+        "typename":"Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 248,
+        "faction": "celestian-insidiants",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "GLORIA A LAS MÁRTIRES",
+        "description": "Usa este ardid de tiroteo cuando una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga quede incapacitada al combatir o contraatacar. Puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de retirarla de la zona de aniquilación. Si, como resultado, ese agente enemigo queda incapacitado, esa agente amiga se vuelve <b>INSPIRADORA</b> antes de retirarla de la zona de aniquilación y puedes resolver la regla de facción Martirio.",
+        "typename":"Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 249,
+        "faction": "celestian-insidiants",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "FE Y FURIA",
+        "description": "Usa este ardid de tiroteo cuando una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga esté combatiendo y golpees al agente enemigo en esa secuencia con un éxito crítico. Tras resolver ese golpe, inflige 1D3 daños a cada otro agente enemigo a 2\" o menos de esa agente amiga y visible para ella en el orden que elijas (tira por separado para cada uno). Ten en cuenta que la agente amiga se volverá <b>INSPIRADORA</b> si algún agente enemigo con un atributo Heridas de 6 o más queda incapacitado como resultado de este daño.",
+        "typename":"Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 250,
+        "faction": "celestian-insidiants",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "PERSECUCIÓN INQUEBRANTABLE",
+        "description": "Usa este ardid de tiroteo durante la activación de una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga, antes o después de que realice una acción. Hasta el final de la activación de esa agente, puedes ignorar cualquier cambio a su atributo Movimiento. Si esa agente es <b>INSPIRADORA</b>, suma 1\" a su atributo Movimiento hasta el final de esa activación. Si esa agente se vuelve <b>INSPIRADORA</b> por realizar una acción de <b>Cargar</b>, puedes usar este ardid antes de que mueva para obtener el movimiento adicional (esto tiene prioridad sobre la regla de no cambiar atributos durante una acción).",
+        "typename":"Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 251,
+        "faction": "celestian-insidiants",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "ODIO ARDIENTE",
+        "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga si está disparando, combatiendo o contraatacando contra un agente enemigo que no tenga la clave <b>IMPERIUM</b>. Hasta el final de esa secuencia, las armas de esa agente amiga tienen la regla de armas Incesante; si ese agente enemigo tiene también las claves <b>CAOS</b> y/o <b>PSÍQUICO</b>, en su lugar, hasta el final de esa secuencia, las armas de esa agente amiga tienen la regla de armas Implacable.",
+        "typename":"Ardid de Tiroteo"
     }
 ]

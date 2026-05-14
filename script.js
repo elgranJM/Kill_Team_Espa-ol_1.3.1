@@ -596,11 +596,11 @@ function renderOperatives(factionKey) {
                     <table class="table table-sm table-dark table-bordered mb-0">
                         <thead>
                             <tr class="text-center">
-                                <th class="text-start">Arma</th>
-                                <th>A</th>
-                                <th>HA</th>
-                                <th>Dñ</th>
-                                <th class="text-start">Reglas adicionales</th>
+                                <th class="text-start">NOMBRE</th>
+                                <th>ATAQ.</th>
+                                <th>IMP.</th>
+                                <th>DAÑO</th>
+                                <th class="text-start">REGLAS DE ARMAS</th>
                             </tr>
                         </thead>
                         <tbody>

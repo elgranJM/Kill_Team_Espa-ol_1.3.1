@@ -618,8 +618,8 @@ body.dark-mode .tacop.card {
 
 .icon-yes, .icon-no {
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 1.2rem;
+    height: 1.2rem;
     background-repeat: no-repeat;
     background-size: contain;
     vertical-align: middle;
@@ -632,6 +632,9 @@ body.dark-mode .tacop.card {
 
 .icon-no {
     background-image: url('resources/game_rules_files/no.svg');
+}
+.svg-white {
+    filter: brightness(0) invert(1);
 }
 /*<img src="./resources/game_rules_files/no.svg" width="14" class="me-2 mt-1" alt="no">*/
 /* CSS for the two-column layout in the "Flank" card */

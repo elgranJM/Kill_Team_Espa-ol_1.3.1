@@ -194,7 +194,7 @@
                                         <li><strong>Movimiento (MOV):</strong> La distancia máxima que puede recorrer el agente al realizar una acción de Reposicionar o Retroceder.</li>
                                         <li><strong>LPA (Límite de Puntos de Acción):</strong> La cantidad de Puntos de Acción (PA) que el agente genera al activarse para realizar acciones.</li>
                                         <li><strong>Salvación (Salv.):</strong> El número objetivo que debe igualar o superar en los dados de defensa para salvar un impacto.</li>
-                                        <li><strong>Heridas:</strong> La cantidad de <span class="faction">daño</span> que puede soportar antes de quedar Incapacitado (retirado del juego). Si sus heridas actuales son menores a sus heridas máximas el agente se encuentra <em>Herido</em>. Si sus heridas se reducen a menos de la mitad de sus heridas maximas, el agente queda <em>Lesionado</em>.</li>
+                                        <li><strong>Heridas:</strong> La cantidad de <span class="faction">daño</span> que puede soportar antes de quedar Incapacitado (retirado del juego). Si sus heridas actuales son menores a sus heridas máximas el agente se encuentra <em>Herido</em>. Si sus heridas se reducen a menos de la mitad de sus heridas máximas, el agente queda <em>Lesionado</em>.</li>
                                     </ul>
 
                                     <h5 class="text-dark fw-bold"><i class="bi bi-caret-right-fill text-secondary"></i> Perfil de Armas</h5>
@@ -225,9 +225,9 @@
                                         </table>
                                     </div>
                                     <ul>
-                                        <li><strong>Nombre:</strong> El nombre que figura el arma en conjunto a el logotipo que señaliza su tipo.</li>
+                                        <li><strong>Nombre:</strong> El nombre que figura el arma en conjunto con el logotipo que señaliza su tipo.</li>
                                         <li><strong>Ataque (ATAQ):</strong> La cantidad de dados que tiras al atacar con esta arma.</li>
-                                        <li><strong>Impacto (IMP.):</strong> El número que debes igualar o superar para considerar el dado como un impacto éxitoso.</li>
+                                        <li><strong>Impacto (IMP.):</strong> El número que debes igualar o superar para considerar el dado como un impacto exitoso.</li>
                                         <li><strong>Daño:</strong> Se muestra como dos números (ej. 3/4). El primer número es el <span class="faction">daño</span> normal y el segundo es el <span class="faction">daño</span> crítico (cuando el dado es un 6 natural).</li>
                                         <li><strong>Reglas de Armas:</strong> Modificadores o condiciones que tiene el arma a la hora de utilizarse (ej. Letal 5+ hace que los resultados 5 se consideren éxitos críticos)</li>
                                     </ul>
@@ -250,12 +250,12 @@
                                         <div class="col-md-6">
                                             <div class="card h-100 border-danger shadow-sm">
                                                 <div class="card-header bg-danger text-white fw-bold">
-                                                    <img src="./resources/game_rules_files/order-engage.png" style="max-height: 100px; width: auto; margin-left: 10px;"> Orden: Trabarse (Engage)
+                                                    <figure class="figure"><img src="./resources/game_rules_files/order-engage.png" style="max-height: 100px; width: auto; margin-left: 10px;"></figure> Orden: Trabarse (Engage)
                                                 </div>
                                                 <div class="card-body">
                                                     <p class="card-text">El agente asume una postura agresiva, exponiéndose para realizar ataques.</p>
                                                     <ul class="small mb-0">
-                                                        <li><strong>Puede</strong> realizar acciones ofensivas como <em>Disparar</em> o <em>Cargar</em>.</li>
+                                                        <li><strong>Puede</strong> realizar acciones ofensivas como <em>Disparar</em>, <em>Cargar</em>, <em>Combatir</em> o <span class="faction">Reaccionar</span>.</li>
                                                         <li><strong class="text-danger">Desventaja:</strong> Incluso si está detrás de cobertura ligera válida, sigue siendo un objetivo legal para los disparos enemigos siempre que sea visible, ya que asoma para atacar.</li>
                                                     </ul>
                                                 </div>
@@ -264,7 +264,7 @@
                                         <div class="col-md-6">
                                             <div class="card h-100 border-secondary shadow-sm">
                                                 <div class="card-header bg-secondary text-white fw-bold">
-                                                    <img src="./resources/game_rules_files/order-conceal.png" style="max-height: 100px; width: auto; margin-left: 10px;"> Orden: Ocultarse (Conceal)
+                                                    <figure class="figure"><img src="./resources/game_rules_files/order-conceal.png" style="max-height: 100px; width: auto; margin-left: 10px;"></figure> Orden: Ocultarse (Conceal)
                                                 </div>
                                                 <div class="card-body">
                                                     <p class="card-text">El agente se agacha y utiliza el entorno para pasar desapercibido y protegerse.</p>
@@ -285,228 +285,118 @@
                             </div>
                         </div>
 
-                        <!-- 1.4 Línea de Visión -->
+                        <!-- 1.4 Agotado y Reacción-->
+                        <div class="accordion-item rule-item">
+                            <h2 class="accordion-header" id="headingAgotado">
+                                <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgotado" aria-expanded="false" aria-controls="collapseAgotado">
+                                    <i class="bi bi-record-circle text-danger me-3"></i> 1.4 Agotado y Reacción
+                                </button>
+                            </h2>
+                            <div id="collapseAgotado" class="accordion-collapse collapse" aria-labelledby="headingAgotado">
+                                <div class="accordion-body text-secondary">
+                                    <p>Cuando un agente ha terminado de utilizar sus acciones y de concluir su activación, se considera que está usado (agotado) y ya no puede ser seleccionado en este punto de inflexión como agente activo, con la excepción de:</p>
+                                    
+                                    <div class="card h-100 border-0 shadow-sm bg-light">                                                                                                    
+                                        <div class="card-body">
+                                            <div class="h6 fw-bold text-dark mb-2"><i class="bi bi-radar me-2 text-primary"></i>Reacción</div>
+                                            <p class="card-text small mb-0">Si todos tus agentes están usados pero los de tu oponente no, cuando te tocase activar un agente apostado, un agente amigo usado con una <span class="faction">orden de trabarse</span> puede reaccionar y realizar gratis una <span class="faction">acción</span> de 1PA. Cada agente solo puede reaccionar una vez por punto de inflexión, y no se puede mover más de 2" al hacerlo.</p>
+                                        </div>
+                                    </div>            
+
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- 1.5 Zona de Control -->
+                        <div class="accordion-item rule-item">
+                            <h2 class="accordion-header" id="headingZonaControl">
+                                <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZonaControl" aria-expanded="false" aria-controls="collapseZonaControl">
+                                    <i class="bi bi-record-circle text-danger me-3"></i> 1.5 Zona de Control
+                                </button>
+                            </h2>
+                            <div id="collapseZonaControl" class="accordion-collapse collapse" aria-labelledby="headingZonaControl">
+                                <div class="accordion-body text-secondary">
+                                    <p>El posicionamiento de las miniaturas en la killzone define cómo pueden interactuar con los enemigos y los objetivos.</p>
+                                    
+                                    <div class="card h-100 border-0 shadow-sm bg-light">                                                                                                    
+                                        <div class="card-body">
+                                            <div class="h6 fw-bold text-dark mb-2"><i class="bi bi-radar me-2 text-primary"></i>Zona de Control</div>
+                                            <p class="card-text small mb-0">La Zona de Control es el área de amenaza inmediata alrededor de un agente. Se extiende a <strong>1" o menos</strong> de distancia desde cualquier punto de la peana de la miniatura en todas las direcciones.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                                
+                        </div>
+
+                        <!-- 1.6 Blanco Válido -->
                         <div class="accordion-item rule-item">
                             <h2 class="accordion-header" id="headingLoS">
                                 <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLoS" aria-expanded="false" aria-controls="collapseLoS">
-                                    <i class="bi bi-eye-fill text-info me-3"></i> 1.4 Línea de Visión
+                                    <i class="bi bi-eye-fill text-info me-3"></i> 1.6 Blanco Válido y Línea de Visión
                                 </button>
                             </h2>
                             <div id="collapseLoS" class="accordion-collapse collapse" aria-labelledby="headingLoS">
                                 <div class="accordion-body text-secondary">
-                                    <p>Para que un agente activo pueda seleccionar a un objetivo enemigo (ya sea para Disparar o para algunas habilidades), el enemigo debe estar en su <strong>Línea de Visión</strong>. Este es un proceso estricto de comprobación de cuatro pasos.</p>
-                                    <p class="fw-bold text-dark">El objetivo está en la Línea de Visión SÍ Y SOLO SÍ cumple TODAS las siguientes 4 condiciones:</p>
+                                    <p>Para que un agente activo pueda seleccionar a un objetivo enemigo (ya sea para Disparar o para algunas habilidades a distancia), el enemigo debe ser un <strong>Blanco Válido</strong>.</p>
+                                    <p class="fw-bold text-dark">El objetivo es un Blanco Válido SÍ Y SOLO SÍ cumple con las siguientes condiciones:</p>
 
                                     <ul class="list-group list-group-flush mb-4 shadow-sm border rounded">
                                         <li class="list-group-item p-3">
                                             <h6 class="text-dark fw-bold mb-1">1. Debe ser Visible</h6>
-                                            <p class="small mb-0">Debes poder trazar una línea imaginaria e ininterrumpida de 1 milímetro de grosor desde la <strong>cabeza</strong> de la miniatura del atacante hasta <strong>cualquier parte</strong> de la miniatura objetivo.</p>
+                                            <p class="small mb-0">Para que algo sea visible, el atacante debe ser capaz de verlo. Traza una línea recta sin obstrucciones desde la cabeza del atacante hasta cualquier parte de la miniatura objetivo.</p>
                                         </li>
                                         <li class="list-group-item p-3">
-                                            <h6 class="text-dark fw-bold mb-1">2. NO debe estar en Cobertura Ligera Válida (si tiene orden Ocultarse)</h6>
-                                            <p class="small mb-0">Si el objetivo tiene una orden de <strong>Ocultarse</strong>, no puede ser blanco valido si está en cobertura. Un agente está en cobertura si las líneas de cobertura del atacante cruzan un elemento de terreno (ligero o pesado) y el objetivo se encuentra a <strong>1" o menos</strong> de ese terreno.</p>
-                                        </li>
-                                        <li class="list-group-item p-3">
-                                            <h6 class="text-dark fw-bold mb-1">3. NO debe tener agentes amigos en su zona de control</h6>
-                                            <p class="small mb-0">Si el objetivo se encuentra <b>Trabado en Combate</b>, no puede ser blanco valido. Un agente está <b>Trabado en Combate</b> si se encuentra a 1" o menos de un agente enemigo.</p>
-                                        </li>
-                                        <li class="list-group-item p-3">
-                                            <h6 class="text-dark fw-bold mb-1">4. NO debe estar Ofuscado (Obscured)</h6>
-                                            <p class="small mb-2">Para comprobar esto, traza las líneas de cobertura (un cono invisible desde cualquier punto de la peana del atacante a todos los puntos de la peana del objetivo). Si estas líneas cruzan un elemento de <strong>Terreno Pesado</strong> (Heavy), el objetivo está ofuscado siempre que la distancia desde ese terreno hasta el objetivo es <strong>mayor a 1"</strong>.</p>
-                                            <div class="alert alert-secondary py-2 mb-0 small border-0">
-                                                <em>Si el objetivo está a 1" o menos del terreno pesado que bloquea la visión, cuenta como asomado o interactuando con el terreno, por lo que NO está oscurecido.</em>
+                                            <h6 class="text-dark fw-bold mb-1">2. Comprobación de Órdenes y Cobertura</h6>
+                                            <p class="small mb-2">La validez de un blanco depende de su ficha de orden y del terreno a su alrededor:</p>
+                                            <ul class="small mb-2">
+                                                <li>Si el objetivo tiene la orden de <strong>Trabarse</strong>, es un blanco válido si es <strong>Visible</strong>.</li>
+                                                <li>Si el objetivo tiene la orden de <strong>Ocultarse</strong>, es un blanco válido <strong>SOLO SI es Visible y NO está a cubierto</strong>.</li>
+                                            </ul>
+                                            <div class="alert alert-secondary py-2 mb-3 small border-0 shadow-sm">
+                                                <i class="bi bi-info-circle me-1 text-primary"></i> <em><strong>Regla de Cobertura:</strong> Un agente está a cubierto si hay terreno interpuesto dentro de su Zona de Control (1" o menos). Sin embargo, no estará a cubierto si se encuentra a 2" o menos del atacante, ya que está demasiado cerca para esconderse.</em>
                                             </div>
-                                            <p class="small mb-2">
-                                                A diferencia de las otras 3 condiciones, es posible Disparar a un agente ofuscado, sin embargo el disparo del arma se vera modificada con las siguientes restricciones:
-                                                <div class="alert alert-secondary py-2 mb-0 small border-0">
-                                                    <p><em>Todos los críticos se consideran normales y no pueden cambiarse</em></p>
-                                                    <p><em>El atacante retira 1 de sus éxitos normales y se toma como un fallo (debiendo de haber por lo menos un exito normal para que esto suceda)</em></p>
+                                            <div class="row g-4 mt-2">
+                                                <div class="col-md-6">
+                                                    <div class="card h-100 border-danger shadow-sm">
+                                                        <div class="card-header bg-danger text-white fw-bold">
+                                                            <figure class="figure mb-0"><img src="./resources/game_rules_files/cover-example-1.png" style="max-height: 200px; width: auto; margin-left: 10px;" alt="Ejemplo de objetivo a cubierto"></figure>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </p>
+                                                <div class="col-md-6">
+                                                    <div class="card h-100 border-secondary shadow-sm">
+                                                        <div class="card-header bg-secondary text-white fw-bold">
+                                                            <figure class="figure mb-0"><img src="./resources/game_rules_files/cover-example-4.png" style="max-height: 200px; width: auto; margin-left: 10px;" alt="Ejemplo de objetivo sin cobertura"></figure>
+                                                        </div>                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item p-3">
+                                            <h6 class="text-dark fw-bold mb-1">3. Libre de Fuego Amigo (Condición de Disparo)</h6>
+                                            <p class="card-text small mb-0">Para poder seleccionarlo como objetivo de un ataque a distancia, el objetivo NO debe tener agentes amigos (del bando del atacante) en su <strong>Zona de Control</strong> (1" o menos). Es decir, no puedes dispararle a un enemigo si está peleando cuerpo a cuerpo con uno de tus propios agentes.</p>
+                                            <div class="alert alert-secondary py-2 mb-3 small border-0 shadow-sm">
+                                                <i class="bi bi-info-circle me-1 text-primary"></i> <em><strong>Situación de 3 o más jugadores:</strong> en caso de haber 3 jugadores o más, y el agente activo se encuentra eligiendo entre 2 o más agentes trabados en combate entre si de jugadores que no sean sus aliados, se les puede considerar como Blanco Valido a cualquiera de ellos siempre que se cumplan las condiciones anteriores.</em>
+                                            </div>
                                         </li>
                                     </ul>
 
                                     <div class="alert alert-info border-0 shadow-sm mb-0">
-                                        <h6 class="fw-bold"><i class="bi bi-lightbulb-fill text-primary me-2"></i> Beneficio Defensivo de la Cobertura</h6>
-                                        <p class="small mb-0">Incluso si un agente tiene la orden de <strong>Trabarse</strong> y es un blanco valido, la Cobertura (estar a 1" de un terreno intermedio) le permite al defensor <strong>retener automáticamente un dado de defensa como éxito normal</strong> sin necesidad de tirarlo durante un ataque a distancia.</p>
+                                        <h6 class="fw-bold"><i class="bi bi-shield-check text-primary me-2"></i> Beneficio Defensivo de la Cobertura</h6>
+                                        <p class="small mb-0">Incluso si un agente tiene la orden de <strong>Trabarse</strong> y es un blanco válido, la Cobertura le permite al defensor <strong>retener automáticamente un dado de defensa como éxito normal</strong> sin necesidad de tirarlo durante un ataque a distancia.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        
-                    </div>
-                    <!-- Título de Sección -->
-                    <h3 class="mb-3 mt-5 text-dark fw-bold border-start border-5 border-info ps-3">II. Definición de Conceptos</h3>
-
-                    <!-- Contenedor de Conceptos (Acordeón Independiente) -->
-                    <div class="bg-white p-4 rounded shadow-sm mb-4">
-                        <div class="accordion" id="conceptsAccordion">
-                        
-                            <!-- 2.1 Zona de Control y Combate -->
-                            <div class="accordion-item rule-item">
-                                <h2 class="accordion-header" id="headingZonaControl">
-                                    <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZonaControl" aria-expanded="false" aria-controls="collapseZonaControl">
-                                        <i class="bi bi-record-circle text-danger me-3"></i> 2.1 Zona de Control y Trabado en Combate
-                                    </button>
-                                </h2>
-                                <div id="collapseZonaControl" class="accordion-collapse collapse" aria-labelledby="headingZonaControl">
-                                    <div class="accordion-body text-secondary">
-                                        <p>El posicionamiento de las miniaturas en la killzone define cómo pueden interactuar con los enemigos y los objetivos.</p>
-                                    
-                                        <div class="row g-4 mt-2">
-                                            <div class="col-md-6">
-                                                <div class="card h-100 border-0 shadow-sm bg-light">                                                                                                    
-                                                    <div class="card-body">
-                                                        <div class="h6 fw-bold text-dark mb-2"><i class="bi bi-radar me-2 text-primary"></i>Zona de Control</div>
-                                                            <p class="card-text small mb-0">La Zona de Control es el área de amenaza inmediata alrededor de un agente. Se extiende a <strong>1" o menos</strong> de distancia desde cualquier punto de la peana de la miniatura en todas las direcciones.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            <div class="col-md-6">                                                
-                                                <div class="card h-100 border-0 shadow-sm bg-light">                                                                                                     
-                                                    <div class="card-body">
-                                                        <div class="h6 fw-bold text-dark mb-2"><i class="bi bi-people-fill me-2 text-danger"></i>Trabado en Combate</div>   
-                                                        <p class="card-text small mb-0">Un agente se considera <strong>Trabado en Combate</strong> cuando se encuenta en la <span class="faction">zona de control</span> de un agente enemigo visible. Estando en este estado, un agente no puede realizar acciones de <em>Reposicionar</em>, <em>Correr</em>, <em>Cargar</em> ni <em>Disparar</em>.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 2.2 Daño -->
-                            <div class="accordion-item rule-item">
-                                <h2 class="accordion-header" id="headingEstados">
-                                    <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEstados" aria-expanded="false" aria-controls="collapseEstados">
-                                        <i class="bi bi-heartbreak-fill text-danger me-3"></i> 2.2 Daño
-                                    </button>
-                                </h2>
-                                <div id="collapseEstados" class="accordion-collapse collapse" aria-labelledby="headingEstados">
-                                    <div class="accordion-body text-secondary">
-                                        <p>Los agentes tienen un atributo Heridas (el número de heridas que aguantan). El daño infligido reduce sus heridas en consecuencia.</p>
-
-                                        <ul class="list-group list-group-flush shadow-sm border rounded mb-3">
-                                            <li class="list-group-item p-3 bg-light">
-                                                <h6 class="text-dark fw-bold mb-1"><span class="badge bg-secondary me-2">Etiqueta</span>Herido (Injured)</h6>
-                                                <p class="small mb-0">"Herido" es simplemente una <strong>etiqueta condicional (tag)</strong>. Un agente está Herido desde el momento en que ha perdido al menos 1 Herida. Por sí solo no impone penalizadores, pero sirve como detonante para activar reglas especiales o tácticas de facciones específicas (p. ej., Ardid de Estrategia <b>LA CAZA NEGRA</b> de <span class="faction">GARRA NEMESIS</span>). En caso de que el agente recupere la totalidad de sus heridas perdidas, deja de considerarse "Herido"</p>
-                                            </li>
-                                            <li class="list-group-item p-3">
-                                                <h6 class="text-dark fw-bold mb-1"><span class="badge bg-warning text-dark me-2">Estado</span>Lesionado (Wounded)</h6>
-                                                <p class="small mb-2">Un agente adquiere este estado cuando sus <strong>Heridas actuales son iguales o inferiores a la mitad de su atributo de Heridas máximo</strong>. Este estado impone penalizadores universales inmediatos:</p>
-                                                <ul class="small text-danger fw-semibold">
-                                                    <li>Empeora el atributo de Impacto de todas sus armas (A Distancia y Cuerpo a Cuerpo) en 1 (p. ej., un impacto de 3+ se convierte en 4+).</li>
-                                                    <li>Resta 2" de su atributo de Movimiento (MOV.).</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 2.3 BLANCO VÁLIDO -->
-                            <div class="accordion-item rule-item">
-                                <h2 class="accordion-header" id="headingBlanco">
-                                    <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlanco" aria-expanded="false" aria-controls="collapseBlanco">
-                                        <i class="bi bi-heartbreak-fill text-danger me-3"></i> 2.3 Blanco Válido
-                                    </button>
-                                </h2>
-                                <div id="collapseBlanco" class="accordion-collapse collapse" aria-labelledby="headingBlanco">
-                                    <div class="accordion-body text-secondary">
-                                        <p>Alguna reglas, la de disparo la más habitual, requieren un blanco válido para un agente.</p>
-
-                                        <div class="row g-4 mt-2">
-                                            <div class="col-md-6">
-                                                <div class="card h-100 border-danger shadow-sm">
-                                                    <div class="card-header bg-danger text-white fw-bold">
-                                                        <img src="./resources/game_rules_files/order-engage.png" style="max-height: 100px; width: auto; margin-left: 10px;">
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <p class="card-text">Si el blanco elegido tiene una <span class="faction">orden de trabarse</span>, es un blanco válido si es <span class="faction">visible</span> para el agente.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="card h-100 border-secondary shadow-sm">
-                                                    <div class="card-header bg-secondary text-white fw-bold">
-                                                        <img src="./resources/game_rules_files/order-conceal.png" style="max-height: 100px; width: auto; margin-left: 10px;">
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <p class="card-text">Si el blanco elegido tiene una <span class="faction">orden de ocultarse</span>, es un blanco válido si es <span class="faction">visible</span> para el agente y no está <span class="faction">a cubierto</span>.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 2.4 Visibilidad y Cobertura -->
-                            <div class="accordion-item rule-item">
-                                <h2 class="accordion-header" id="headingVisible">
-                                    <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVisible" aria-expanded="false" aria-controls="collapseVisible">
-                                        <i class="bi bi-heartbreak-fill text-danger me-3"></i> 2.4 Visibilidad y Cobertura
-                                    </button>
-                                </h2>
-                                <div id="collapseVisible" class="accordion-collapse collapse" aria-labelledby="headingVisible">
-                                    <div class="accordion-body text-secondary">
-                                        <ul class="list-group list-group-flush shadow-sm border rounded mb-3">
-                                            <li class="list-group-item p-3 bg-light">
-                                                <h6 class="text-dark fw-bold mb-1">Visible</h6>
-                                                <p class="small mb-0">Para que algo sea visible, el agente debe ser capaz de verlo (mira desde detrás del agente y determina si puedes trazar una línea recta sin obstrucciones desde su cabeza hasta cualquier parte de lo que intenta ver ignorando las peanas).</p>
-                                            </li>
-                                            <li class="list-group-item p-3">
-                                                <h6 class="text-dark fw-bold mb-1">Cobertura</h6>
-                                                <p class="small mb-2">La cobertura se determina de un agente a otro. Un agente está a cubierto si hay terreno interpuesto dentro de su <span class="faction">zona de control</span>. Sin embargo, no estará a cubierto si se encuentra a 2" o menos del otro agente ya que está demasiado cerca para esconderse.</p>
-                                                <div class="row g-4 mt-2">
-                                                    <div class="col-md-6">
-                                                        <div class="card h-100 border-danger shadow-sm">
-                                                            <div class="card-header bg-danger text-white fw-bold">
-                                                                <img src="./resources/game_rules_files/cover-example-1.png" style="max-height: 200px; width: auto; margin-left: 10px;">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card h-100 border-secondary shadow-sm">
-                                                            <div class="card-header bg-secondary text-white fw-bold">
-                                                                <img src="./resources/game_rules_files/cover-example-4.png" style="max-height: 200px; width: auto; margin-left: 10px;">
-                                                            </div>                                                    
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 2.5 Terreno Aventajado -->
-                            <div class="accordion-item rule-item">
-                                <h2 class="accordion-header" id="headingVantage">
-                                    <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVantage" aria-expanded="false" aria-controls="collapseVantage">
-                                        <i class="bi bi-layers-half text-success me-3"></i> 2.5 Terreno Aventajado (Vantage Point)
-                                    </button>
-                                </h2>
-                                <div id="collapseVantage" class="accordion-collapse collapse" aria-labelledby="headingVantage">
-                                    <div class="accordion-body text-secondary">
-                                        <p>Los Terrenos Aventajados son posiciones elevadas estratégicas (generalmente a más de 2" de altura) que otorgan una superioridad táctica abrumadora sobre la killzone.</p>
-                                    
-                                        <div class="alert alert-success border-0 shadow-sm">
-                                            <h6 class="alert-heading fw-bold"><i class="bi bi-crosshair me-2"></i>Beneficio del Tirador Elevado</h6>
-                                            <p class="small mb-0">Si un agente se encuentra sobre un Terreno Aventajado y tiene una orden de <strong>Trabarse (Engage)</strong>, puede ignorar el beneficio de "Ocultarse" de los agentes enemigos que se encuentren en un nivel inferior, siempre que estos dependan de <strong>Cobertura Ligera</strong>. El objetivo será tratado como si tuviera una orden de Trabarse para propósitos de determinar si es un blanco válido.</p>
-                                            <p class="small mb-0">El agente ademas tendra la regla de armas Certera 1 mientras se mantenga en el Terreno Aventajado.</p>
-                                        </div>
-                                        <p class="small text-muted mb-0"><i class="bi bi-exclamation-triangle-fill text-warning me-1"></i> <em>Nota: El Terreno Aventajado NO anula el beneficio de Ocultarse si el enemigo está escondido detrás de Terreno Pesado (Heavy Terrain).</em></p>
-                                    </div>
-                                </div>
-                            </div>
                     </div>
 
                     <!-- ==========================================
-                    III. ACCIONES DE JUEGO (MÓDULO INDEPENDIENTE)
+                    II. ACCIONES DE JUEGO (MÓDULO INDEPENDIENTE)
                     ========================================== -->
-                    <h3 class="mb-3 mt-5 text-dark fw-bold border-start border-5 border-info ps-3"> III. Acciones de Juego</h2>
+                    <h3 class="mb-3 mt-5 text-dark fw-bold border-start border-5 border-info ps-3"> II. Acciones de Juego</h2>
 
                     <div class="accordion shadow-sm mb-5" id="accordionAcciones">
                         <div class="alert alert-warning shadow-sm border-start border-warning border-4" role="alert">
@@ -516,8 +406,8 @@
                         <!-- 1. Acciones de Movimiento -->
                         <div class="accordion-item rule-item">
                             <h2 class="accordion-header" id="headingMovimiento">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMovimiento" aria-expanded="false" aria-controls="collapseMovimiento">
-                                    <strong><i class="bi bi-arrows-move me-2"></i> 3.1 Acciones de Movimiento</strong>
+                                <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMovimiento" aria-expanded="false" aria-controls="collapseMovimiento">
+                                    <img src="./resources/game_rules_files/move.svg" class="weapon-icon" width="20">&nbsp&nbsp2.1 Acciones de Movimiento
                                 </button>
                             </h2>
                             <div id="collapseMovimiento" class="accordion-collapse collapse" aria-labelledby="headingMovimiento" data-bs-parent="#accordionAcciones">
@@ -527,7 +417,7 @@
                                         <div class="list-group-item">
                                             <h3 class="mb-1 text-primary"><i class="bi bi-arrow-up-right"></i> Reposicionar / Reposition(1 PA)</h5>
                                             <p class="mb-1 text-muted"><span class="icon icon-yes flex-shrink-0 mt-1"></span> Mueve el agente a un punto en que pueda colocarse y que no esté más allá del valor de su atributo Movimiento. No puede mover por la <span class="faction">zona de control</span> de agentes enemigos.</p>
-                                            <p class="mb-1 text-muted"><span class="icon icon-no flex-shrink-0 mt-1"></span> Un agente no puede realizar esta acción si está en la <span class="faction">zona de control</span> de un enemigo, durante la misma activación que ha realizado la acción de <strong>Cargar</strong> o <strong>Retroceder</strong>.</p>
+                                            <p class="mb-1 text-muted"><span class="icon icon-no flex-shrink-0 mt-1"></span> Un agente no puede realizar esta acción si está en la <span class="faction">zona de control</span> de un enemigo, durante la misma activación en la que ha realizado la acción de <strong>Cargar</strong> o <strong>Retroceder</strong>.</p>
                                         </div>
                                         <div class="list-group-item">
                                             <h3 class="mb-1 text-primary"><i class="bi bi-chevron-double-up"></i> Correr / Dash (1 PA)</h5>
@@ -552,13 +442,13 @@
                         <!-- 2. Acción: Disparar (Secuencia) -->
                         <div class="accordion-item rule-item">
                             <h2 class="accordion-header" id="headingDisparar">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDisparar" aria-expanded="false" aria-controls="collapseDisparar">
-                                    <strong><img src="./resources/game_rules_files/shoot.svg" class="weapon-icon" width="20">&nbsp&nbsp3.2 Secuencia de Disparo (1 PA)</strong>
+                                <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDisparar" aria-expanded="false" aria-controls="collapseDisparar">
+                                    <img src="./resources/game_rules_files/shoot.svg" class="weapon-icon" width="20">&nbsp&nbsp2.2 Secuencia de Disparo (1 PA)
                                 </button>
                             </h2>
                             <div id="collapseDisparar" class="accordion-collapse collapse" aria-labelledby="headingDisparar" data-bs-parent="#accordionAcciones">
                                 <div class="accordion-body">
-                                    <p><span class="icon icon-yes flex-shrink-0 mt-1"></span> Dispara con el agente como se explica a continuacion:</p>
+                                    <p><span class="icon icon-yes flex-shrink-0 mt-1"></span> Dispara con el agente como se explica a continuación:</p>
                                     <p>El jugador cuyo agente está realizando la <span class="faction">acción</span> es el atacante. El jugador que controla el agente objetivo es el defensor. Al tirar los dados de ataque/defensa, los resultados de 6 son siempre éxitos y son críticos. Todos los demás éxitos son normales y los resultados de 1 son siempre un fallo</p>
                 
                                     <div class="alert alert-secondary border-start border-4 mb-2">
@@ -592,13 +482,13 @@
                         <!-- 3. Acción: Combatir (Secuencia) -->
                         <div class="accordion-item rule-item">
                             <h2 class="accordion-header" id="headingCombatir">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatir" aria-expanded="false" aria-controls="collapseCombatir">
-                                    <strong><img src="./resources/game_rules_files/attack.svg" class="weapon-icon" width="20">&nbsp&nbsp3.3 Secuencia de Combate (1 PA)</strong>
+                                <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCombatir" aria-expanded="false" aria-controls="collapseCombatir">
+                                    <img src="./resources/game_rules_files/attack.svg" class="weapon-icon" width="20">&nbsp&nbsp2.3 Secuencia de Combate (1 PA)
                                 </button>
                             </h2>
                             <div id="collapseCombatir" class="accordion-collapse collapse" aria-labelledby="headingCombatir" data-bs-parent="#accordionAcciones">
                                 <div class="accordion-body">
-                                    <p><span class="icon icon-yes flex-shrink-0 mt-1"></span> Combate con el agente como se explica a continuacion:</p>
+                                    <p><span class="icon icon-yes flex-shrink-0 mt-1"></span> Combate con el agente como se explica a continuación:</p>
                                     <p>El jugador cuyo agente está realizando la <span class="faction">acción</span> es el atacante. El jugador que controla el agente objetivo es el defensor. Al tirar los dados de ataque, los resultados de 6 son siempre éxitos y son críticos. Todos los demás éxitos son normales y los resultados de 1 son siempre un fallo.</p>
 
                                     <div class="alert alert-danger border-start border-4 border-danger mb-2">
@@ -617,11 +507,125 @@
                                             <li>Bloqueo: Asigna ese dado a bloquear uno de los éxitos sin resolver de tu oponente. Un éxito normal puede bloquear un éxito normal. Un éxito crítico puede bloquear un éxito normal o un éxito crítico.</li>
                                         </ul>
                                     </div>
+                                    <p><span class="icon icon-no flex-shrink-0 mt-1"></span> Un agente no puede realizar esta acción a menos que haya un agente enemigo en su <span class="faction">zona de control</span>.</p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
+                    <!-- Título de Sección -->
+                    <h3 class="mb-3 mt-5 text-dark fw-bold border-start border-5 border-info ps-3">III. Definición de Conceptos</h3>
+
+                    <!-- Contenedor de Conceptos (Acordeón Independiente) -->
+                    <div class="bg-white p-4 rounded shadow-sm mb-4">
+                        <div class="accordion" id="conceptsAccordion">
+
+                            <!-- 3.1 Daño -->
+                            <div class="accordion-item rule-item">
+                                <h2 class="accordion-header" id="headingEstados">
+                                    <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEstados" aria-expanded="false" aria-controls="collapseEstados">
+                                        <img src="./resources/game_rules_files/wounds.svg" class="weapon-icon" width="20">&nbsp&nbsp3.1 Daño
+                                    </button>
+                                </h2>
+                                <div id="collapseEstados" class="accordion-collapse collapse" aria-labelledby="headingEstados">
+                                    <div class="accordion-body text-secondary">
+                                        <p>Los agentes tienen un atributo Heridas (el número de heridas que aguantan). El daño infligido reduce sus heridas en consecuencia.</p>
+
+                                        <ul class="list-group list-group-flush shadow-sm border rounded mb-3">
+                                            <li class="list-group-item p-3 bg-light">
+                                                <h6 class="text-dark fw-bold mb-1"><span class="badge bg-secondary me-2">Etiqueta</span>Herido (Injured)</h6>
+                                                <p class="small mb-0">"Herido" es simplemente una <strong>etiqueta condicional (tag)</strong>. Un agente está Herido desde el momento en que ha perdido al menos 1 Herida. Por sí solo no impone penalizadores, pero sirve como detonante para activar reglas especiales o tácticas de facciones específicas (p. ej., Ardid de Estrategia <b>LA CAZA NEGRA</b> de <span class="faction">GARRA NÉMESIS</span>). En caso de que el agente recupere la totalidad de sus heridas perdidas, deja de considerarse "Herido".</p>
+                                            </li>
+                                            <li class="list-group-item p-3">
+                                                <h6 class="text-dark fw-bold mb-1"><span class="badge bg-warning text-dark me-2">Estado</span>Lesionado (Wounded)</h6>
+                                                <p class="small mb-2">Un agente adquiere este estado cuando sus <strong>Heridas actuales son inferiores a la mitad de su atributo de Heridas máximo</strong>. Este estado impone penalizadores universales inmediatos:</p>
+                                                <ul class="small text-danger fw-semibold">
+                                                    <li>Empeora el atributo de Impacto de todas sus armas (A Distancia y Cuerpo a Cuerpo) en 1 (p. ej., un impacto de 3+ se convierte en 4+).</li>
+                                                    <li>Resta 2" de su atributo de Movimiento (MOV.).</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3.2 Terreno Aventajado -->
+                            <div class="accordion-item rule-item">
+                                <h2 class="accordion-header" id="headingVantage">
+                                    <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVantage" aria-expanded="false" aria-controls="collapseVantage">
+                                        <i class="bi bi-layers-half text-success me-3"></i> 3.2 Terreno Aventajado (Vantage Point)
+                                    </button>
+                                </h2>
+                                <div id="collapseVantage" class="accordion-collapse collapse" aria-labelledby="headingVantage">
+                                    <div class="accordion-body text-secondary">
+                                        <p>Los Terrenos Aventajados son posiciones elevadas estratégicas (generalmente a más de 2" de altura) que otorgan una superioridad táctica abrumadora sobre la killzone.</p>
+                                    
+                                        <div class="alert alert-success border-0 shadow-sm">
+                                            <h6 class="alert-heading fw-bold"><i class="bi bi-crosshair me-2"></i>Beneficio del Tirador Elevado</h6>
+                                            <p class="small mb-0">Si un agente se encuentra sobre un Terreno Aventajado y tiene una orden de <strong>Trabarse (Engage)</strong>, puede ignorar el beneficio de "Ocultarse" de los agentes enemigos que se encuentren en un nivel inferior, siempre que estos dependan de <strong>Cobertura Ligera</strong>. El objetivo será tratado como si tuviera una orden de Trabarse para propósitos de determinar si es un blanco válido.</p>
+                                            <p class="small mb-0">El agente además tendra la regla de armas Certera 1 mientras se mantenga en el Terreno Aventajado.</p>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <figure class="figure"><img src="./resources/game_rules_files/terrain-vantage-2.png" style="max-height: 400px; width: auto;"></figure>
+                                        </div>
+                                        <p class="small text-muted mb-0"><i class="bi bi-exclamation-triangle-fill text-warning me-1"></i> <em>Nota: El Terreno Aventajado NO anula el beneficio de Ocultarse si el enemigo está escondido detrás de Terreno Pesado (Heavy Terrain).</em></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3.3 Ofuscado -->
+                            <div class="accordion-item rule-item">
+                                <h2 class="accordion-header" id="headingOfuscado">
+                                    <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOfuscado" aria-expanded="false" aria-controls="collapseOfuscado">
+                                        <i class="bi bi-cloud-haze2-fill text-secondary me-3"></i> 3.3 Ofuscado (Obscured)
+                                    </button>
+                                </h2>
+                                <div id="collapseOfuscado" class="accordion-collapse collapse" aria-labelledby="headingOfuscado">
+                                    <div class="accordion-body text-secondary">
+                                        <p>Un objetivo que ya ha sido determinado como <strong>Blanco Válido</strong> puede encontrarse "Ofuscado" debido a la presencia de Terreno Pesado en la trayectoria del disparo, lo que penaliza severamente el ataque.</p>
+                                        
+                                        <h5 class="text-dark fw-bold mt-4"><i class="bi bi-caret-right-fill text-secondary"></i> Comprobación de Ofuscación</h5>
+                                        <p class="small mb-2">Para comprobar esto, traza las líneas de cobertura (un cono invisible desde cualquier punto de la peana del atacante a todos los puntos de la peana del objetivo). Si estas líneas cruzan un elemento de <strong>Terreno Pesado (Heavy)</strong>, el objetivo está ofuscado <strong>siempre que la distancia desde ese terreno hasta el objetivo sea mayor a 1"</strong>.</p>
+
+                                        <div class="alert alert-secondary py-2 mb-3 small border-0 shadow-sm">
+                                            <i class="bi bi-info-circle me-1 text-primary"></i> <em><strong>Excepción (Asomarse):</strong> Si el objetivo está a 1" o menos del terreno pesado que bloquea la visión, cuenta como si estuviera asomado o interactuando con el terreno, por lo que <strong>NO está ofuscado</strong>.</em>
+                                        </div>
+
+                                        <div class="row g-4 mt-2">
+                                            <div class="col-md-6">
+                                                <div class="card h-100 border-danger shadow-sm">
+                                                    <div class="card-header bg-danger text-white fw-bold">
+                                                        <figure class="figure mb-0"><img src="./resources/game_rules_files/obscured-example-1.png" style="max-height: 200px; width: auto; margin-left: 10px;" alt="Ejemplo de Terreno Ofuscando visión"></figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card h-100 border-secondary shadow-sm">
+                                                    <div class="card-header bg-secondary text-white fw-bold">
+                                                        <figure class="figure mb-0"><img src="./resources/game_rules_files/obscured-example-2.png" style="max-height: 200px; width: auto; margin-left: 10px;" alt="Ejemplo asomado sin ofuscación"></figure>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h5 class="text-dark fw-bold mt-4"><i class="bi bi-caret-right-fill text-secondary"></i> Penalizadores por Disparar Ofuscado</h5>
+                                        <p class="small mb-3">A diferencia de la cobertura, es perfectamente legal dispararle a un agente ofuscado, pero el disparo del arma sufrirá obligatoriamente las siguientes restricciones:</p>
+                                        
+                                        <ul class="list-group list-group-flush shadow-sm border rounded">
+                                            <li class="list-group-item p-3">
+                                                <strong class="text-danger">1. Degradación de Críticos:</strong> Todos los resultados Críticos (6s) del atacante se consideran éxitos normales y no pueden ser modificados o cambiados de nuevo a críticos por ninguna otra regla.
+                                            </li>
+                                            <li class="list-group-item p-3">
+                                                <strong class="text-danger">2. Descarte de Éxito:</strong> El atacante debe descartar 1 de sus éxitos normales como si fuera un fallo antes de que el defensor tire sus dados de defensa (debiendo haber por lo menos un éxito normal disponible para que esto suceda).
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    
                 </div>
                 </div>
                 

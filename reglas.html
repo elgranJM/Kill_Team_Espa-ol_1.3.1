@@ -566,40 +566,6 @@
                                     realizar la misma acción más de una vez por activación</u>, a menos que una regla
                                 especifique lo contrario (ej. "Acción Gratuita").
                             </div>
-                            <!-- ==========================================
-         Generación de HTML para Acciones Únicas (Sistema de Yes/No)
-        const actionsHtml = op.uniqueActions?.length ? 
-            op.uniqueActions.map(a => {
-                // Mapeo de la lista de descripciones positivas (icon-yes)
-                const descYes = Array.isArray(a.description) 
-                    ? a.description.map(line => `
-                        <p>
-                            <span class="icon icon-yes"></span> 
-                            <span>${line}</span>
-                        </p>`).join('')
-                    : `<p>${a.description}</p>`;
-
-                // Mapeo de la descripción negativa (icon-no)
-                const descNo = a.description_no ? `
-                    <p>
-                        <span class="icon icon-no"></span> 
-                        ${a.description_no}
-                    </p>` : '';
-
-                // Estructura final de la tarjeta de Acción Única
-                return `
-                <div class="unique-actions-section">
-                    <div class="header">
-                        <div>${a.name}</div>
-                        <div class="ap-box">${a.cost}</div>
-                    </div>
-                    <div class="content">
-                        ${descYes}
-                        ${descNo}
-                    </div>
-                </div>`;
-            }).join('') : '';
--->
 
                             <!-- 1. Acciones de Movimiento -->
                             <div class="accordion-item rule-item">
@@ -726,75 +692,95 @@
                                         data-bs-toggle="collapse" data-bs-target="#collapseDisparar"
                                         aria-expanded="false" aria-controls="collapseDisparar">
                                         <img src="./resources/game_rules_files/shoot.svg" class="weapon-icon"
-                                            width="20">&nbsp&nbsp2.2 Secuencia de Disparo (1 PA)
+                                            width="20">&nbsp&nbsp2.2 Secuencia de Disparo
                                     </button>
                                 </h2>
                                 <div id="collapseDisparar" class="accordion-collapse collapse"
                                     aria-labelledby="headingDisparar" data-bs-parent="#accordionAcciones">
                                     <div class="accordion-body">
-                                        <p><span class="icon icon-yes flex-shrink-0 mt-1"></span> Dispara con el agente
-                                            como se explica a continuación:</p>
-                                        <p>El jugador cuyo agente está realizando la <span class="faction">acción</span>
-                                            es el atacante. El jugador que controla el agente objetivo es el defensor.
-                                            Al tirar los dados de ataque/defensa, los resultados de 6 son siempre éxitos
-                                            y son críticos. Todos los demás éxitos son normales y los resultados de 1
-                                            son siempre un fallo</p>
 
-                                        <div class="alert alert-secondary border-start border-4 mb-2">
-                                            <strong>Paso 1:</strong> El atacante elige una de las armas a distancia de
-                                            su agente.
+                                        <div class="unique-actions-section">
+                                            <div class="header">
+                                                <div>Disparar</div>
+                                                <div class="ap-box">1 PA</div>
+                                            </div>
+                                            <div class="content">
+                                                <p>
+                                                    <span class="icon icon-yes"></span>
+                                                    <span>Dispara con el agente como se explica a continuación:</span>
+                                                </p>
+                                                <p>
+                                                    El jugador cuyo agente está realizando la <span
+                                                        class="faction">acción</span> es el atacante. El jugador que
+                                                    controla el agente objetivo es el defensor. Al tirar los dados de
+                                                    ataque/defensa, los resultados de 6 son siempre éxitos y son
+                                                    críticos. Todos los demás éxitos son normales y los resultados de 1
+                                                    son siempre un fallo.
+                                                </p>
+
+                                                <!-- Pasos de Disparo manteniendo tus clases de Bootstrap para destacarlos -->
+                                                <div class="alert alert-secondary border-start border-4 mb-2">
+                                                    <strong>Paso 1:</strong> El atacante elige una de las armas a
+                                                    distancia de su agente.
+                                                </div>
+
+                                                <div class="alert alert-secondary border-start border-4 mb-2">
+                                                    <strong>Paso 2:</strong> El atacante elige un agente enemigo que sea
+                                                    un <span class="faction">blanco válido</span> para el agente activo
+                                                    y que no tenga agentes amigos en su <span class="faction">zona de
+                                                        control</span>.
+                                                </div>
+
+                                                <div class="alert alert-secondary border-start border-4 mb-2">
+                                                    <strong>Paso 3:</strong> El atacante tira sus dados de ataque,
+                                                    tantos D6 como el atributo Ataques del arma. Cada resultado igual o
+                                                    superior al atributo Impactar del arma es un éxito y se guarda. Los
+                                                    resultados inferiores son fallos y se descartan.
+                                                </div>
+
+                                                <div class="alert alert-secondary border-start border-4 mb-2">
+                                                    <strong>Paso 4:</strong> El defensor tira tres dados de defensa,
+                                                    3D6. Cada resultado igual o superior al atributo Salvación del
+                                                    blanco es un éxito y se guarda. Los resultados inferiores son fallos
+                                                    y se descartan. Si el blanco está <span class="faction">a
+                                                        cubierto</span>, el defensor puede guardar un éxito normal sin
+                                                    tirarlo.
+                                                </div>
+
+                                                <div class="alert alert-secondary border-start border-4 mb-2">
+                                                    <strong>Paso 5:</strong> El defensor resuelve los dados de defensa
+                                                    con éxito, asignándolos para bloquear los dados de ataque con éxito.
+                                                    <ul class="mb-0 mt-2">
+                                                        <li>Un éxito normal puede bloquear un éxito normal.</li>
+                                                        <li>Dos éxitos normales pueden bloquear un éxito crítico.</li>
+                                                        <li>Un éxito crítico puede bloquear un éxito normal o un éxito
+                                                            crítico.</li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="alert alert-secondary border-start border-4 mb-3">
+                                                    <strong>Paso 6:</strong> El atacante resuelve cada dado de ataque no
+                                                    bloqueado (si los hay) para infligir <span
+                                                        class="faction">daño</span> al blanco.
+                                                    <ul class="mb-0 mt-2">
+                                                        <li>Un éxito normal inflige tanto <span
+                                                                class="faction">daño</span> como el atributo Daño normal
+                                                            del arma (1.<sup>er</sup> valor del atributo Daño).</li>
+                                                        <li>Un éxito crítico inflige tanto <span
+                                                                class="faction">daño</span> como el atributo Daño
+                                                            critico del arma (2º valor del atributo Daño).</li>
+                                                    </ul>
+                                                </div>
+
+                                                <p>
+                                                    <span class="icon icon-no"></span>
+                                                    <span>Un agente no puede realizar esta acción si está en la <span
+                                                            class="faction">zona de control</span> de un agente enemigo,
+                                                        o si tiene una <span class="faction">orden de
+                                                            ocultarse</span>.</span>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="alert alert-secondary border-start border-4 mb-2">
-                                            <strong>Paso 2:</strong> El atacante elige un agente enemigo que sea un
-                                            <span class="faction">blanco válido</span> para el agente activo y que no
-                                            tenga agentes amigos en su <span class="faction">zona de control</span>.
-                                        </div>
-                                        <div class="alert alert-secondary border-start border-4 mb-2">
-                                            <strong>Paso 3:</strong> El atacante tira sus dados de ataque, tantos D6
-                                            como el atributo Ataques del arma. Cada resultado igual o superior al
-                                            atributo Impactar del arma es un éxito y se guarda. Los resultados
-                                            inferiores son fallos y se descartan.
-                                        </div>
-                                        <div class="alert alert-secondary border-start border-4 mb-0">
-                                            <strong>Paso 4:</strong> El defensor tira tres dados de defensa, 3D6. Cada
-                                            resultado igual o superior al atributo Salvación del blanco es un éxito y se
-                                            guarda. Los resultados inferiores son fallos y se descartan. Si el blanco
-                                            está <span class="faction">a cubierto</span>, el defensor puede guardar un
-                                            éxito normal sin tirarlo.
-                                        </div>
-                                        <div class="alert alert-secondary border-start border-4 mb-0">
-                                            <strong>Paso 5:</strong> El defensor resuelve los dados de defensa con
-                                            éxito, asignándolos para bloquear los dados de ataque con éxito.
-                                            <ul>
-                                                <li>Un éxito normal puede bloquear un éxito normal.</li>
-                                            </ul>
-                                            <ul>
-                                                <li>Dos éxitos normales pueden bloquear un éxito crítico.</li>
-                                            </ul>
-                                            <ul>
-                                                <li>Un éxito crítico puede bloquear un éxito normal o un éxito crítico.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="alert alert-secondary border-start border-4 mb-0">
-                                            <strong>Paso 6:</strong> El atacante resuelve cada dado de ataque no
-                                            bloqueado (si los hay) para infligir <span class="faction">daño</span> al
-                                            blanco.
-                                            <ul>
-                                                <li>Un éxito normal inflige tanto <span class="faction">daño</span> como
-                                                    el atributo Daño normal del arma (1.<sup>er</sup> valor del atributo
-                                                    Daño).</li>
-                                            </ul>
-                                            <ul>
-                                                <li>Un éxito crítico inflige tanto <span class="faction">daño</span>
-                                                    como el atributo Daño critico del arma (2º valor del atributo Daño).
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <p><span class="icon icon-no flex-shrink-0 mt-1"></span> Un agente no puede
-                                            realizar esta acción si está en la <span class="faction">zona de
-                                                control</span> de un agente enemigo, o si tiene una <span
-                                                class="faction">orden de ocultarse</span>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -806,56 +792,84 @@
                                         data-bs-toggle="collapse" data-bs-target="#collapseCombatir"
                                         aria-expanded="false" aria-controls="collapseCombatir">
                                         <img src="./resources/game_rules_files/attack.svg" class="weapon-icon"
-                                            width="20">&nbsp&nbsp2.3 Secuencia de Combate (1 PA)
+                                            width="20">&nbsp&nbsp2.3 Secuencia de Combate
                                     </button>
                                 </h2>
                                 <div id="collapseCombatir" class="accordion-collapse collapse"
                                     aria-labelledby="headingCombatir" data-bs-parent="#accordionAcciones">
                                     <div class="accordion-body">
-                                        <p><span class="icon icon-yes flex-shrink-0 mt-1"></span> Combate con el agente
-                                            como se explica a continuación:</p>
-                                        <p>El jugador cuyo agente está realizando la <span class="faction">acción</span>
-                                            es el atacante. El jugador que controla el agente objetivo es el defensor.
-                                            Al tirar los dados de ataque, los resultados de 6 son siempre éxitos y son
-                                            críticos. Todos los demás éxitos son normales y los resultados de 1 son
-                                            siempre un fallo.</p>
 
-                                        <div class="alert alert-danger border-start border-4 border-danger mb-2">
-                                            <strong>Paso 1:</strong> El atacante elige un agente enemigo en la <span
-                                                class="faction">zona de control</span> del agente activo contra el que
-                                            combatir. Ese agente enemigo contraatacará.
+                                        <div class="unique-actions-section">
+                                            <div class="header">
+                                                <div>Secuencia de Combate</div>
+                                                <div class="ap-box">1 PA</div>
+                                            </div>
+                                            <div class="content">
+                                                <p>
+                                                    <span class="icon icon-yes"></span>
+                                                    <span>Combate con el agente como se explica a continuación:</span>
+                                                </p>
+                                                <p>
+                                                    El jugador cuyo agente está realizando la <span
+                                                        class="faction">acción</span> es el atacante. El jugador que
+                                                    controla el agente objetivo es el defensor. Al tirar los dados de
+                                                    ataque, los resultados de 6 son siempre éxitos y son críticos. Todos
+                                                    los demás éxitos son normales y los resultados de 1 son siempre un
+                                                    fallo.
+                                                </p>
+
+                                                <div
+                                                    class="alert alert-danger border-start border-4 border-danger mb-2">
+                                                    <strong>Paso 1:</strong> El atacante elige un agente enemigo en la
+                                                    <span class="faction">zona de control</span> del agente activo
+                                                    contra el que combatir. Ese agente enemigo contraatacará.
+                                                </div>
+
+                                                <div
+                                                    class="alert alert-danger border-start border-4 border-danger mb-2">
+                                                    <strong>Paso 2:</strong> Ambos jugadores eligen una de las armas de
+                                                    combate de su agente.
+                                                </div>
+
+                                                <div
+                                                    class="alert alert-danger border-start border-4 border-danger mb-2">
+                                                    <strong>Paso 3:</strong> Ambos jugadores tiran sus dados de ataque,
+                                                    un número de D6 equivalente al atributo Ataques del arma que escogió
+                                                    cada uno. Cada resultado igual o superior al atributo Impactar del
+                                                    arma es un éxito y se guarda. Los resultados inferiores son fallos y
+                                                    se descartan.
+                                                </div>
+
+                                                <div
+                                                    class="alert alert-danger border-start border-4 border-danger mb-3">
+                                                    <strong>Paso 4:</strong> Empezando por el atacante, los jugadores se
+                                                    turnan para resolver sus dados de ataque con éxito no bloqueados (o
+                                                    todos los que queden si al oponente no le queda ninguno). Para ello,
+                                                    el jugador decide si golpea o bloquea con él.
+                                                    <ul class="mb-0 mt-2">
+                                                        <li><strong>Golpe:</strong> Inflige <span
+                                                                class="faction">daño</span> al agente enemigo. Un éxito
+                                                            normal inflige tanto <span class="faction">daño</span> como
+                                                            el atributo Daño normal del arma (1<sup>er</sup> valor del
+                                                            atributo Daño). Un éxito crítico inflige tanto <span
+                                                                class="faction">daño</span> como el atributo Daño
+                                                            crítico del arma (2º valor del atributo Daño).</li>
+                                                        <li><strong>Bloqueo:</strong> Asigna ese dado a bloquear uno de
+                                                            los éxitos sin resolver de tu oponente. Un éxito normal
+                                                            puede bloquear un éxito normal. Un éxito crítico puede
+                                                            bloquear un éxito normal o un éxito crítico.</li>
+                                                    </ul>
+                                                </div>
+
+                                                <p>
+                                                    <span class="icon icon-no"></span>
+                                                    <span>Un agente no puede realizar esta acción a menos que haya un
+                                                        agente enemigo en su <span class="faction">zona de
+                                                            control</span>.</span>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="alert alert-danger border-start border-4 border-danger mb-0">
-                                            <strong>Paso 2:</strong> Ambos jugadores eligen una de las armas de combate
-                                            de su agente.
-                                        </div>
-                                        <div class="alert alert-danger border-start border-4 border-danger mb-0">
-                                            <strong>Paso 3:</strong> Ambos jugadores tiran sus dados de ataque, un
-                                            número de D6 equivalente al atributo Ataques del arma que escogió cada uno.
-                                            Cada resultado igual o superior al atributo Impactar del arma es un éxito y
-                                            se guarda. Los resultados inferiores son fallos y se descartan.
-                                        </div>
-                                        <div class="alert alert-danger border-start border-4 border-danger mb-0">
-                                            <strong>Paso 4:</strong> Empezando por el atacante, los jugadores se turnan
-                                            para resolver sus dados de ataque con éxito no bloqueados (o todos los que
-                                            queden si al oponente no le queda ninguno). Para ello, el jugador decide si
-                                            golpea o bloquea con él.
-                                            <ul>
-                                                <li>Golpe: Inflige <span class="faction">daño</span> al agente enemigo.
-                                                    Un éxito normal inflige tanto <span class="faction">daño</span> como
-                                                    el atributo Daño normal del arma (1<sup>er</sup> valor del atributo
-                                                    Daño). Un éxito crítico inflige tanto <span
-                                                        class="faction">daño</span> como el atributo Daño crítico del
-                                                    arma (2º valor del atributo Daño).</li>
-                                                <li>Bloqueo: Asigna ese dado a bloquear uno de los éxitos sin resolver
-                                                    de tu oponente. Un éxito normal puede bloquear un éxito normal. Un
-                                                    éxito crítico puede bloquear un éxito normal o un éxito crítico.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <p><span class="icon icon-no flex-shrink-0 mt-1"></span> Un agente no puede
-                                            realizar esta acción a menos que haya un agente enemigo en su <span
-                                                class="faction">zona de control</span>.</p>
+
                                     </div>
                                 </div>
                             </div>
@@ -1123,59 +1137,125 @@
                                     </div>
                                 </div>
 
-                                <!-- 3.4 Trepar -->
+                                <!-- 3.4 Trepar y Dejarse Caer -->
                                 <div class="accordion-item rule-item">
                                     <h2 class="accordion-header" id="headingTrepar">
                                         <button class="accordion-button collapsed fw-bold text-dark fs-5" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseTrepar"
                                             aria-expanded="false" aria-controls="collapseTrepar">
-                                            3.4 Trepar
+                                            3.4 Trepar, Dejarse caer y Saltar
                                         </button>
                                     </h2>
                                     <div id="collapseTrepar" class="accordion-collapse collapse"
                                         aria-labelledby="headingTrepar">
                                         <div class="accordion-body text-secondary">
-                                            <p>Los agentes tienen un atributo Heridas (el número de heridas que
-                                                aguantan). El daño infligido reduce sus heridas en consecuencia.</p>
+                                            <p>Los agentes no pueden atravesar terreno; deben rodearlo, trepar por
+                                                encima o saltar/dejarse caer.
+                                            </p>
 
                                             <ul class="list-group list-group-flush shadow-sm border rounded mb-3">
                                                 <li class="list-group-item p-3 bg-light">
-                                                    <h6 class="text-dark fw-bold mb-1"><span
-                                                            class="badge bg-secondary me-2">Etiqueta</span>Herido
-                                                        (Injured)</h6>
-                                                    <p class="small mb-0">"Herido" es simplemente una <strong>etiqueta
-                                                            condicional (tag)</strong>. Un agente está Herido desde el
-                                                        momento en que ha perdido al menos 1 Herida. Por sí solo no
-                                                        impone penalizadores, pero sirve como detonante para activar
-                                                        reglas especiales o tácticas de facciones específicas (p. ej.,
-                                                        Ardid de Estrategia <b>LA CAZA NEGRA</b> de <span
-                                                            class="faction">GARRA NÉMESIS</span>). En caso de que el
-                                                        agente recupere la totalidad de sus heridas perdidas, deja de
-                                                        considerarse "Herido".</p>
+                                                    <h6 class="text-dark fw-bold mb-1">Trepar</h6>
+                                                    <p class="small mb-0">Un agente debe estar a 1" o menos en
+                                                        horizontal y a 3" o menos en vertical de un terreno que
+                                                        es visible para él para poder treparlo. Trepar se considera un
+                                                        movimiento vertical de 2" como
+                                                        mínimo (es decir, una distancia de 1" se consideraría 2").</p>
+                                                    <div class="row g-4 mt-2">
+                                                        <!-- Primera Columna -->
+                                                        <div class="col-md-6">
+                                                            <div class="card h-100 border-secondary shadow-sm">
+                                                                <div class="card-header bg-danger text-white fw-bold">
+                                                                    <figure class="figure mb-0">
+                                                                        <img src="./resources/game_rules_files/jumping-1.png"
+                                                                            style="max-height: 200px; width: auto; margin-left: 10px;"
+                                                                            alt="Ejemplo de agente dejandose caer">
+                                                                    </figure>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <p class="card-text">El agente se mueve hasta 4"
+                                                                        hasta estar por encima del punto más alto sobre
+                                                                        el que debe trepar. Avanza 2" hasta que su peana
+                                                                        está completamente al otro lado de la almena, y
+                                                                        luego se deja caer 0" (pues la caída es menos de
+                                                                        2").</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Segunda Columna -->
+                                                        <div class="col-md-6">
+                                                            <div class="card h-100 border-secondary shadow-sm">
+                                                                <div class="card-header bg-danger text-white fw-bold">
+                                                                    <figure class="figure mb-0">
+                                                                        <img src="./resources/game_rules_files/jumping-3.png"
+                                                                            style="max-height: 200px; width: auto; margin-left: 10px;"
+                                                                            alt="Ejemplo de agente dejandose caer">
+                                                                    </figure>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <p class="card-text">El agente asciende 2" (una
+                                                                        distancia de 1", pero se considera 2", el
+                                                                        mínimo) hasta estar por encima del punto más
+                                                                        alto del que debe trepar. Avanza 3" hasta que su
+                                                                        peana ha rebasado del todo el elemento de
+                                                                        terreno, y luego se deja caer 0" (pues la caída
+                                                                        es inferior a 2").</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                                 <li class="list-group-item p-3">
-                                                    <h6 class="text-dark fw-bold mb-1"><span
-                                                            class="badge bg-warning text-dark me-2">Estado</span>Lesionado
-                                                        (Wounded)</h6>
-                                                    <p class="small mb-2">Un agente adquiere este estado cuando sus
-                                                        <strong>Heridas actuales son inferiores a la mitad de su
-                                                            atributo de Heridas máximo</strong>. Este estado impone
-                                                        penalizadores universales inmediatos:
+                                                    <h6 class="text-dark fw-bold mb-1">Dejarse caer </h6>
+                                                    <p class="small mb-2">Los agentes se dejan caer cuando se
+                                                        mueven fuera de un terreno o tras saltar. Ignora 2" de la
+                                                        distancia vertical por la que se caigan en cada acción. Por
+                                                        tanto, una caída vertical de 2" o menos
+                                                        se ignora. Si cae varias veces durante una acción, solo se
+                                                        ignoran 2" en total, no 2" por cada caída.
                                                     </p>
-                                                    <ul class="small text-danger fw-semibold">
-                                                        <li>Empeora el atributo de Impacto de todas sus armas (A
-                                                            Distancia y Cuerpo a Cuerpo) en 1 (p. ej., un impacto de 3+
-                                                            se convierte en 4+).</li>
-                                                        <li>Resta 2" de su atributo de Movimiento (MOV.).</li>
-                                                    </ul>
+                                                    <div class="card h-100 border-secondary shadow-sm">
+                                                        <div class="card-header bg-danger text-white fw-bold">
+                                                            <figure class="figure mb-0"><img
+                                                                    src="./resources/game_rules_files/jumping-2.png"
+                                                                    style="max-height: 200px; width: auto; margin-left: 10px;"
+                                                                    alt="Ejemplo de agente dejandose caer"></figure>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p class="card-text">El agente avanza 2" hasta estar
+                                                                completamente
+                                                                fuera de la estructura, luego se deja caer 2" (una
+                                                                distancia de
+                                                                4", pero los 2" se ignoran). El agente también podría
+                                                                saltar
+                                                                desde el borde del terreno, moviendo desde un borde 4"
+                                                                en
+                                                                horizontal antes de caer. </p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item p-3 bg-light">
+                                                    <h6 class="text-dark fw-bold mb-1">Saltar </h6>
+                                                    <p class="small mb-2">Los agentes pueden saltar del
+                                                        terreno cuando mueven fuera del mismo. Puedes moverlos hasta 4"
+                                                        desde el borde en horizontal cuando saltan, como si fuera
+                                                        cualquier otro movimiento, pero debe ser
+                                                        un solo incremento en linea recta. Luego el agente debe dejarse
+                                                        caer o trepar desde ahí. Al saltar hacia un elemento de terreno,
+                                                        puedes ignorar una diferencia de altura de 1" o menos, incluidas
+                                                        almenas
+                                                        o barandillas. Pero al saltar desde un elemento de terreno, si
+                                                        tiene almena debes treparla primero.
+                                                    </p>
                                                 </li>
                                             </ul>
+
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-
 
                         </div>
                 </div>

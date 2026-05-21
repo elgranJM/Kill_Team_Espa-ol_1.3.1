@@ -1,7 +1,7 @@
 /* Add these new styles to the end of your style.css file */
 
 #year-select {
-margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* --- Faction Page Specific Styles --- */
@@ -21,7 +21,7 @@ body.dark-mode .faction-pane-content {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
 }
 
@@ -62,7 +62,7 @@ body.dark-mode .card-header {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     color: white;
     padding: 1rem;
     font-size: 1.5rem;
@@ -110,6 +110,7 @@ body.dark-mode .stat-label {
     margin-right: 8px;
     filter: invert(30%);
 }
+
 body.dark-mode .stat-icon {
     filter: invert(80%);
 }
@@ -125,12 +126,15 @@ body.dark-mode .stat-icon {
     border-collapse: collapse;
 }
 
-.weapons-table th, .weapons-table td {
+.weapons-table th,
+.weapons-table td {
     padding: 0.75rem;
     text-align: left;
     border-bottom: 1px solid #dee2e6;
 }
-body.dark-mode .weapons-table th, body.dark-mode .weapons-table td {
+
+body.dark-mode .weapons-table th,
+body.dark-mode .weapons-table td {
     border-bottom-color: #495057;
 }
 
@@ -138,6 +142,7 @@ body.dark-mode .weapons-table th, body.dark-mode .weapons-table td {
     font-weight: bold;
     background-color: #f8f9fa;
 }
+
 body.dark-mode .weapons-table th {
     background-color: #343a40;
 }
@@ -153,32 +158,42 @@ body.dark-mode .weapons-table th {
 }
 
 /* --- Abilities & Actions Styles --- */
-.abilities-section, .unique-actions-section {
+.abilities-section,
+.unique-actions-section {
     padding: 1rem;
 }
-.ability-card, .ploy-card {
+
+.ability-card,
+.ploy-card {
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
     border-radius: 5px;
     padding: 1rem;
     margin-bottom: 1rem;
 }
-body.dark-mode .ability-card, body.dark-mode .ploy-card {
+
+body.dark-mode .ability-card,
+body.dark-mode .ploy-card {
     background-color: #212529;
     border-color: #495057;
 }
-.ability-card h5, .ploy-card h5 {
+
+.ability-card h5,
+.ploy-card h5 {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
+
 .ploy-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
 }
+
 .ploy-type-strategic {
     color: #0d6efd;
 }
+
 .ploy-type-tactical {
     color: #fd7e14;
 }
@@ -190,6 +205,7 @@ body.dark-mode .ability-card, body.dark-mode .ploy-card {
     font-style: italic;
     color: #6c757d;
 }
+
 body.dark-mode .card-footer {
     background-color: #495057;
     color: #adb5bd;
@@ -197,11 +213,14 @@ body.dark-mode .card-footer {
 
 .faction {
     font-weight: bold;
-    color: #d63384; /* Example color */
+    color: #ff5418;
+    /* Example color */
 }
+
 body.dark-mode .faction {
     color: #ff85c6;
 }
+
 .scoreboard {
     font-family: 'Courier New', monospace;
     font-weight: bold;
@@ -233,7 +252,7 @@ body.dark-mode .faction {
 }
 
 .card {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .gip-scoring-table th {
@@ -255,6 +274,7 @@ body.dark-mode .faction {
         padding: 0.2rem 0.4rem;
     }
 }
+
 :root {
     --player1-color: #ae0707;
     --player2-color: #103252;
@@ -380,7 +400,8 @@ body.dark-mode .faction {
     border-radius: 4px;
 }
 
-.primary-btn, .enemy-ops-select {
+.primary-btn,
+.enemy-ops-select {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -391,7 +412,8 @@ body.dark-mode .faction {
     transition: all 0.2s;
 }
 
-.primary-btn:hover, .enemy-ops-select:hover {
+.primary-btn:hover,
+.enemy-ops-select:hover {
     background: #f8f9fa;
 }
 
@@ -472,13 +494,15 @@ body.dark-mode .turning-point-header {
 .current-tp {
     background: #cfe2ff !important;
     border-color: #0d6efd !important;
-    color: #000000 !important; /* Black text for high contrast */
+    color: #000000 !important;
+    /* Black text for high contrast */
 }
 
 body.dark-mode .current-tp {
     background: #0d6efd !important;
     border-color: #0d6efd !important;
-    color: #ffffff !important; /* White text for high contrast */
+    color: #ffffff !important;
+    /* White text for high contrast */
 }
 
 body.dark-mode {
@@ -509,6 +533,7 @@ body.dark-mode .skull-grid.lit-p2 {
     background: var(--player2-color);
     border-color: var(--player2-color);
 }
+
 /* =================================================================== */
 /*  REVISED TacOps Card Styles (Replace the old block with this one)   */
 /* =================================================================== */
@@ -519,12 +544,14 @@ body.dark-mode .skull-grid.lit-p2 {
     text-align: left;
     color: #333;
     overflow: hidden;
-    border: 3px solid transparent; /* Border color will be set by archetype */
+    border: 3px solid transparent;
+    /* Border color will be set by archetype */
 }
 
 body.dark-mode .tacop.card {
     color: #ddd;
-    background-color: #343a40; /* Darker card background */
+    background-color: #343a40;
+    /* Darker card background */
 }
 
 .tacop .archetype {
@@ -538,17 +565,41 @@ body.dark-mode .tacop.card {
 
 /* --- Archetype Colors (from original source) --- */
 /* Light Mode */
-.tacop.recon { background-color: #cde2d6; border-color: #588169; }
-.recon .archetype { background-color: #588169; }
+.tacop.recon {
+    background-color: #cde2d6;
+    border-color: #588169;
+}
 
-.tacop.seek-destroy { background-color: #e5c3c6; border-color: #8c3b45; }
-.seek-destroy .archetype { background-color: #8c3b45; }
+.recon .archetype {
+    background-color: #588169;
+}
 
-.tacop.security { background-color: #ddebf8; border-color: #4a7ebb; }
-.security .archetype { background-color: #4a7ebb; }
+.tacop.seek-destroy {
+    background-color: #e5c3c6;
+    border-color: #8c3b45;
+}
 
-.tacop.infiltration { background-color: #f7e9c3; border-color: #af8d3b; }
-.infiltration .archetype { background-color: #af8d3b; }
+.seek-destroy .archetype {
+    background-color: #8c3b45;
+}
+
+.tacop.security {
+    background-color: #ddebf8;
+    border-color: #4a7ebb;
+}
+
+.security .archetype {
+    background-color: #4a7ebb;
+}
+
+.tacop.infiltration {
+    background-color: #f7e9c3;
+    border-color: #af8d3b;
+}
+
+.infiltration .archetype {
+    background-color: #af8d3b;
+}
 
 .tacop .archetype .bi-heart {
     right: 0;
@@ -557,14 +608,34 @@ body.dark-mode .tacop.card {
     font-size: 1.5rem;
     padding-right: 15px;
     cursor: pointer;
-    color: white; /* Ensure heart is visible */
+    color: white;
+    /* Ensure heart is visible */
 }
 
 /* --- Archetype Icons --- */
-.recon-icon .archetype::before { font-family: 'bootstrap-icons'; content: "\F52E"; padding-right: 10px; }
-.seek-destroy-icon .archetype::before { font-family: 'bootstrap-icons'; content: "\F28A"; padding-right: 10px; }
-.security-icon .archetype::before { font-family: 'bootstrap-icons'; content: "\F528"; padding-right: 10px; }
-.infiltration-icon .archetype::before { font-family: 'bootstrap-icons'; content: "\F4D4"; padding-right: 10px; }
+.recon-icon .archetype::before {
+    font-family: 'bootstrap-icons';
+    content: "\F52E";
+    padding-right: 10px;
+}
+
+.seek-destroy-icon .archetype::before {
+    font-family: 'bootstrap-icons';
+    content: "\F28A";
+    padding-right: 10px;
+}
+
+.security-icon .archetype::before {
+    font-family: 'bootstrap-icons';
+    content: "\F528";
+    padding-right: 10px;
+}
+
+.infiltration-icon .archetype::before {
+    font-family: 'bootstrap-icons';
+    content: "\F4D4";
+    padding-right: 10px;
+}
 
 
 .tacop .middle {
@@ -616,7 +687,8 @@ body.dark-mode .tacop.card {
     align-items: flex-start;
 }
 
-.icon-yes, .icon-no {
+.icon-yes,
+.icon-no {
     display: inline-block;
     width: 1.2rem;
     height: 1.2rem;
@@ -633,9 +705,11 @@ body.dark-mode .tacop.card {
 .icon-no {
     background-image: url('resources/game_rules_files/no.svg');
 }
+
 .svg-white {
     filter: brightness(0) invert(1);
 }
+
 /*<img src="./resources/game_rules_files/no.svg" width="14" class="me-2 mt-1" alt="no">*/
 /* CSS for the two-column layout in the "Flank" card */
 .tacop-columns {
@@ -653,12 +727,13 @@ body.dark-mode .tacop.card {
 
 /* Hide default checkbox */
 #FavTacops-switch {
-opacity: 0;
-width: 0;
-height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.switch-label::before { /* The track */
+.switch-label::before {
+    /* The track */
     content: '';
     position: absolute;
     cursor: pointer;
@@ -671,11 +746,12 @@ height: 0;
     border-radius: 34px;
 }
 
-#FavTacops-switch:checked + .switch-label::before {
-background-color: #0d6efd;
+#FavTacops-switch:checked+.switch-label::before {
+    background-color: #0d6efd;
 }
 
-.switch-label::after { /* The handle */
+.switch-label::after {
+    /* The handle */
     content: '';
     position: absolute;
     height: 26px;
@@ -687,9 +763,10 @@ background-color: #0d6efd;
     border-radius: 50%;
 }
 
-#FavTacops-switch:checked + .switch-label::after {
-transform: translateX(26px);
+#FavTacops-switch:checked+.switch-label::after {
+    transform: translateX(26px);
 }
+
 .section {
     font-weight: 500;
     font-size: 20px;
@@ -700,13 +777,17 @@ transform: translateX(26px);
     color: var(--bs-dark-orange);
 }
 
-.crit-op[data-type="action"], .tacop, .unique-actions-section {
+.crit-op[data-type="action"],
+.tacop,
+.unique-actions-section {
     border: 1px solid var(--bs-orange) !important;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
 
-.crit-op[data-type="action"] .header, .tacop .header, .unique-actions-section .header {
+.crit-op[data-type="action"] .header,
+.tacop .header,
+.unique-actions-section .header {
     background-color: orangered;
     color: white;
     padding: 6px 10px 6px 6px;
@@ -717,11 +798,15 @@ transform: translateX(26px);
     font-weight: 600;
 }
 
-.crit-op[data-type="action"] .content, .tacop .content, .unique-actions-section .content {
+.crit-op[data-type="action"] .content,
+.tacop .content,
+.unique-actions-section .content {
     padding: 1rem;
 }
 
-.crit-op[data-type="action"] .content em, .tacop .content em, .unique-actions-section .content em {
+.crit-op[data-type="action"] .content em,
+.tacop .content em,
+.unique-actions-section .content em {
     color: var(--bs-orange);
     font-style: italic;
 }
@@ -743,7 +828,8 @@ transform: translateX(26px);
 }
 
 .equipment-header {
-    background-color: black !important; /* Tu color personalizado */
+    background-color: black !important;
+    /* Tu color personalizado */
 }
 
 .equipment-card {
@@ -752,5 +838,5 @@ transform: translateX(26px);
 
 /* Cambia el color de la letra del título */
 .equipment-header h5 {
-    color: orangered; 
+    color: orangered;
 }

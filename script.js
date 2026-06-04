@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Función de Filtrado Actualizada ---
     function populateFactionSelector(filterType = "") {
-        factionSelect.innerHTML = '<option selected value="">Elige un Kill Team...</option>';
+        factionSelect.innerHTML = '<option selected value="">Elige un Comando...</option>';
 
         let filteredKeys = [];
 

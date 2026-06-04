@@ -75,12 +75,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="critops.html">
-                                <i class="bi bi-bookmark-star me-2"></i> CritOps
+                                <i class="bi bi-crosshair me-2"></i> CritOps
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="tacops.html">
-                                <i class="bi bi-bookmark-star-fill me-2"></i> TacOps
+                                <i class="bi bi-bookmark-star me-2"></i> TacOps
                             </a>
                         </li>
                         <li class="nav-item">
@@ -1858,7 +1858,8 @@
                                 <p class="small mb-0">Son atributos especiales (keywords) en el perfil del arma que
                                     alteran las reglas básicas de combate. Algunas te ayudan a impactar más, otras
                                     anulan la defensa del rival y otras permiten atacar a varios enemigos a la vez.
-                                    <strong>Un arma puede tener múltiples reglas operando al mismo tiempo.</strong></p>
+                                    <strong>Un arma puede tener múltiples reglas operando al mismo tiempo.</strong>
+                                </p>
                             </div>
 
                             <div class="bg-white p-4 rounded shadow-sm">
@@ -1869,189 +1870,407 @@
                                             <button class="accordion-button fw-bold text-dark fs-5" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapsePrecision"
                                                 aria-expanded="true" aria-controls="collapsePrecision">
-                                                <i class="bi bi-bullseye text-primary me-3"></i> 2.1 Precisión y
-                                                Consistencia (Repeticiones)
+                                                <i class="bi bi-crosshair text-primary me-3"></i> 1. Modificadores de
+                                                Precisión
                                             </button>
                                         </h3>
                                         <div id="collapsePrecision" class="accordion-collapse collapse show"
                                             aria-labelledby="headingPrecision">
                                             <div class="accordion-body text-secondary">
-                                                <p class="small mb-3">Estas reglas te ayudan a evitar fallos y a
-                                                    asegurar que más dados se conviertan en impactos exitosos.</p>
+                                                <p class="small mb-3">Estas reglas te ayudan a mejorar tus dados para
+                                                    asegurar impactos, convirtiendo fallos en éxitos o éxitos normales
+                                                    en críticos.</p>
 
                                                 <div class="row g-3">
+
                                                     <div class="col-md-6">
                                                         <div class="card h-100 border-light shadow-sm">
                                                             <div class="card-body">
-                                                                <h6 class="fw-bold text-dark">Incesante (Ceaseless)</h6>
-                                                                <p class="small mb-0">Puedes volver a tirar todos los
-                                                                    resultados de <strong>1</strong> de tus dados de
-                                                                    ataque.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card h-100 border-light shadow-sm">
-                                                            <div class="card-body">
-                                                                <h6 class="fw-bold text-dark">Equilibrada (Balanced)
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Letal x+
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Tirar
+                                                                        Dados</span>
                                                                 </h6>
-                                                                <p class="small mb-0">Puedes volver a tirar <strong>un
-                                                                        único dado</strong> de ataque de tu elección.
+                                                                <p class="small mb-1">
+                                                                    Tus éxitos iguales o superiores a x son <span
+                                                                        class="faction">éxitos críticos</span>.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Con Letal 5+, un resultado de 5 o 6 en el
+                                                                    dado cuenta como crítico.
                                                                 </p>
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-6">
                                                         <div class="card h-100 border-light shadow-sm">
                                                             <div class="card-body">
-                                                                <h6 class="fw-bold text-dark">Implacable (Relentless)
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Certera x
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Tirar
+                                                                        Dados</span>
                                                                 </h6>
-                                                                <p class="small mb-0">Puedes volver a tirar
-                                                                    <strong>cualquier cantidad</strong> de tus dados de
-                                                                    ataque.</p>
+                                                                <p class="small mb-1">
+                                                                    Puedes guardar hasta x dados de ataque como <span
+                                                                        class="faction">éxitos normales</span> sin
+                                                                    tirarlos.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Con Certera 1, apartas un dado como éxito
+                                                                    automático y tiras el resto de dados.
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-6">
                                                         <div class="card h-100 border-light shadow-sm">
                                                             <div class="card-body">
-                                                                <h6 class="fw-bold text-dark">Certera X (Accurate X)
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Desgarradora
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Guardar
+                                                                        Éxitos</span>
                                                                 </h6>
-                                                                <p class="small mb-0">Puedes apartar hasta <strong>X
-                                                                        dados y contarlos como éxitos normales
-                                                                        automáticamente</strong>, sin necesidad de
-                                                                    tirarlos.</p>
+                                                                <p class="small mb-1">
+                                                                    Si guardas algún <span class="faction">éxito
+                                                                        crítico</span>, puedes guardar uno de tus <span
+                                                                        class="faction">éxitos normales</span> como
+                                                                    <span class="faction">éxito crítico</span> en su
+                                                                    lugar.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Si sacas un 6 y un 4, la regla te permite
+                                                                    transformar el 4 en otro crítico.
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Severa
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Guardar
+                                                                        Éxitos</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Si no guardas ningún <span class="faction">éxito
+                                                                        crítico</span>, puedes cambiar uno de tus <span
+                                                                        class="faction">éxitos normales</span> a <span
+                                                                        class="faction">éxito crítico</span>. Las reglas
+                                                                    Devastadora y Críticos de penetración aún tienen
+                                                                    efecto; Castigadora y Desgarradora ya no.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Ideal para armas fiables; si no sacaste
+                                                                    ningún 6 natural, cambias un impacto bajo por uno
+                                                                    crítico.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Castigadora
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Guardar
+                                                                        Éxitos</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Si guardas algún <span class="faction">éxito
+                                                                        crítico</span>, puedes guardar uno de tus fallos
+                                                                    como un <span class="faction">éxito normal</span> en
+                                                                    lugar de descartarlo.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Un 6 natural te permite "rescatar" un dado
+                                                                    que había fallado, volviéndolo un impacto normal.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="alert alert-secondary border-0 mt-3 mb-0 small shadow-sm">
+                                                    <i class="bi bi-info-circle-fill text-primary me-1"></i>
+                                                    <strong>Nota Táctica:</strong> Las reglas que se aplican "Al Guardar
+                                                    Éxitos" ocurren después de que hayas usado repeticiones de dados,
+                                                    pero antes de que tu oponente tire sus dados de defensa.
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item rule-item">
+                                        <h3 class="accordion-header" id="headingRerolls">
+                                            <button class="accordion-button collapsed fw-bold text-dark fs-5"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseRerolls" aria-expanded="false"
+                                                aria-controls="collapseRerolls">
+                                                <i class="bi bi-arrow-clockwise text-primary me-3"></i> 2. Repeticiones
+                                                de Dados
+                                            </button>
+                                        </h3>
+                                        <div id="collapseRerolls" class="accordion-collapse collapse"
+                                            aria-labelledby="headingRerolls">
+                                            <div class="accordion-body text-secondary">
+                                                <p class="small mb-3">¿Qué dados fallidos puedo volver a tirar? Estas
+                                                    reglas te otorgan una segunda oportunidad para convertir fallos en
+                                                    impactos.</p>
+
+                                                <div class="row g-3">
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Equilibrada
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Tirar
+                                                                        Dados</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Puedes repetir 1 de tus dados de ataque.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Si tiras tus dados y fallas con uno de
+                                                                    ellos, puedes tomar ese único dado fallido y volver
+                                                                    a tirarlo.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Implacable
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Tirar
+                                                                        Dados</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Puedes repetir cualquiera de tus dados de
+                                                                    ataque.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Si de 4 dados de ataque fallas 3, puedes
+                                                                    tomar esos 3 dados fallidos y volver a tirarlos
+                                                                    todos.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Incesante
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Tirar
+                                                                        Dados</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Puedes repetir cualquiera de tus dados se ataque que
+                                                                    tengan un resultado concreto (p.ej., los que hayan
+                                                                    obtenido un resultado de 2).
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Si al atacar sacas dos "1", puedes decidir
+                                                                    repetir todos los dados que mostraron ese "1".
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
 
                                                 <div class="alert alert-secondary border-0 mt-3 mb-0 small shadow-sm">
                                                     <i class="bi bi-exclamation-triangle-fill text-warning me-1"></i>
-                                                    <strong>Recuerda:</strong> Nunca puedes volver a tirar un dado que
-                                                    ya ha sido repetido.
+                                                    <strong>Regla de Oro:</strong> Un dado nunca puede volver a tirarse
+                                                    más de una vez, independientemente de cuántas reglas de repetición
+                                                    tengas.
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="accordion-item rule-item">
-                                        <h3 class="accordion-header" id="headingCriticos">
+                                        <h3 class="accordion-header" id="headingAntiDefense">
                                             <button class="accordion-button collapsed fw-bold text-dark fs-5"
                                                 type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapseCriticos" aria-expanded="false"
-                                                aria-controls="collapseCriticos">
-                                                <i class="bi bi-lightning-charge-fill text-warning me-3"></i> 2.2 Daño,
-                                                Críticos y Penetración
+                                                data-bs-target="#collapseAntiDefense" aria-expanded="false"
+                                                aria-controls="collapseAntiDefense">
+                                                <i class="bi bi-shield-slash text-primary me-3"></i> 3. Penetración y
+                                                Anti-Defensa
                                             </button>
                                         </h3>
-                                        <div id="collapseCriticos" class="accordion-collapse collapse"
-                                            aria-labelledby="headingCriticos">
+                                        <div id="collapseAntiDefense" class="accordion-collapse collapse"
+                                            aria-labelledby="headingAntiDefense">
                                             <div class="accordion-body text-secondary">
-                                                <p class="small mb-3">Estas reglas dificultan que el enemigo se defienda
-                                                    o aumentan dramáticamente tu letalidad en combate.</p>
+                                                <p class="small mb-3">¿Cómo evito que mi oponente bloquee mi ataque o
+                                                    use su cobertura? Estas reglas interfieren directamente con las
+                                                    capacidades defensivas del enemigo.</p>
 
-                                                <ul class="list-group list-group-flush shadow-sm border rounded">
-                                                    <li class="list-group-item p-3 bg-light">
-                                                        <h6 class="text-dark fw-bold mb-1">Letal X+ (Lethal X+)</h6>
-                                                        <p class="small mb-0">Tus éxitos Críticos ocurren con resultados
-                                                            de <strong>X o más</strong>, en lugar de necesitar siempre
-                                                            un 6 natural. (Ej. <em>Letal 5+</em> significa que tanto los
-                                                            5s como los 6s son Críticos).</p>
-                                                    </li>
-                                                    <li class="list-group-item p-3">
-                                                        <h6 class="text-dark fw-bold mb-1">Perforante X / AP X (Piercing
-                                                            / Armour Penetration)</h6>
-                                                        <p class="small mb-1">Solo armas a distancia. Por cada punto de
-                                                            X, <strong>el enemigo debe tirar 1 dado de defensa
-                                                                menos</strong>. Refleja armas que atraviesan la
-                                                            armadura.</p>
-                                                        <em class="small text-muted">Ejemplo: Un arma con AP 1 hará que
-                                                            un operativo enemigo tire 2 dados de defensa en lugar de sus
-                                                            3 habituales.</em>
-                                                    </li>
-                                                    <li class="list-group-item p-3 bg-light">
-                                                        <h6 class="text-dark fw-bold mb-1">Brutal</h6>
-                                                        <p class="small mb-0">Solo armas cuerpo a cuerpo. Los golpes de
-                                                            esta arma son tan salvajes que tu oponente <strong>solo
-                                                                puede intentar bloquearlos usando éxitos
-                                                                Críticos</strong> (los éxitos normales no le sirven para
-                                                            bloquear).</p>
-                                                    </li>
-                                                    <li class="list-group-item p-3">
-                                                        <h6 class="text-dark fw-bold mb-1">Desgarradora (Rending)</h6>
-                                                        <p class="small mb-0">Si tu tirada de ataque tiene <strong>al
-                                                                menos un éxito Crítico</strong>, puedes tomar un éxito
-                                                            normal (si lo tienes) y convertirlo automáticamente en otro
-                                                            éxito Crítico.</p>
-                                                    </li>
-                                                    <li class="list-group-item p-3 bg-light">
-                                                        <h6 class="text-dark fw-bold mb-1">Severa (Severe)</h6>
-                                                        <p class="small mb-0">Si no has obtenido ningún éxito Crítico en
-                                                            tu tirada, pero sí tienes éxitos normales, puedes convertir
-                                                            <strong>uno de esos éxitos normales en un Crítico</strong>.
-                                                        </p>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                <div class="row g-3">
 
-                                    <div class="accordion-item rule-item">
-                                        <h3 class="accordion-header" id="headingArea">
-                                            <button class="accordion-button collapsed fw-bold text-dark fs-5"
-                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseArea"
-                                                aria-expanded="false" aria-controls="collapseArea">
-                                                <i class="bi bi-crosshair text-danger me-3"></i> 2.3 Área de Efecto
-                                            </button>
-                                        </h3>
-                                        <div id="collapseArea" class="accordion-collapse collapse"
-                                            aria-labelledby="headingArea">
-                                            <div class="accordion-body text-secondary">
-                                                <p class="small mb-3">Armas que controlan masas de enemigos.</p>
-
-                                                <div class="row g-4 mt-2">
-                                                    <div class="col-md-6">
-                                                        <div class="card h-100 border-danger shadow-sm">
-                                                            <div class="card-header bg-danger text-white fw-bold">
-                                                                Explosión X (Blast X)
-                                                            </div>
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
                                                             <div class="card-body">
-                                                                <p class="card-text small mb-2">Ideal contra grupos
-                                                                    agrupados (granadas, misiles).</p>
-                                                                <ul class="small mb-0 ps-3">
-                                                                    <li>Realizas el ataque inicial contra tu objetivo.
-                                                                    </li>
-                                                                    <li>Luego, realizas <strong>otro ataque completo e
-                                                                            independiente</strong> contra CADA operativo
-                                                                        visible que esté a una distancia igual o menor a
-                                                                        "X" del objetivo original.</li>
-                                                                    <li class="text-danger fw-bold">¡Cuidado! También
-                                                                        afecta a tus propios aliados si están en el
-                                                                        radio.</li>
-                                                                </ul>
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Buscadora
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Elegir
+                                                                        Blanco</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Al elegir un blanco válido, los agentes con una
+                                                                    orden de ocultarse no pueden usar el terreno para
+                                                                    estar a cubierto. Si la regla es
+                                                                    Buscadora (Ligero), no pueden usar el terreno ligero
+                                                                    para estar a cubierto. Aunque esto haga
+                                                                    que se pueda tomar como blanco a un agente (si es
+                                                                    que es visible), no le quita la salvación por
+                                                                    cobertura (si la tiene).
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Permite dispararle a un enemigo oculto
+                                                                    detrás de una barricada, pero él seguirá
+                                                                    beneficiándose de retener un dado de defensa por
+                                                                    estar a cubierto.
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card h-100 border-info shadow-sm">
-                                                            <div class="card-header bg-info text-white fw-bold">
-                                                                Torrente X (Torrent X)
-                                                            </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
                                                             <div class="card-body">
-                                                                <p class="card-text small mb-2">Representa lanzallamas o
-                                                                    fuego de barrido contínuo.</p>
-                                                                <ul class="small mb-0 ps-3">
-                                                                    <li>Eliges un objetivo principal.</li>
-                                                                    <li>Luego, puedes realizar ataques independientes
-                                                                        contra otros objetivos válidos a una distancia
-                                                                        de "X" o menos del <strong>objetivo original o
-                                                                            del último objetivo atacado con esta
-                                                                            regla.</strong></li>
-                                                                </ul>
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Saturación
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Defender</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    El defensor no puede guardar salvaciones por
+                                                                    cobertura.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: El objetivo tiene que tirar todos sus dados
+                                                                    de defensa obligatoriamente; no puede "apartar" uno
+                                                                    como éxito automático aunque esté a cubierto.
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Penetración x
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Defender</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    El defensor guarda x dados de defensa menos, p.ej.
+                                                                    Penetración 1. Si la regla es Críticos de
+                                                                    penetración x, solo tiene efecto al guardar <span
+                                                                        class="faction">éxitos críticos</span>.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Si un arma tiene Penetración 1, un agente
+                                                                    enemigo que normalmente tira 3 dados de defensa,
+                                                                    solo tirará 2.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Brutal
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Combate: Al
+                                                                        Bloquear</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Tu oponente solo puede bloquear con <span
+                                                                        class="faction">éxitos críticos</span>.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: En combate cuerpo a cuerpo, los impactos
+                                                                    normales de tu oponente no le servirán de nada para
+                                                                    frenar tus golpes.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Choque
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Combate: Al
+                                                                        Golpear</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    La primera vez que golpees con un <span
+                                                                        class="faction">éxito crítico</span> en cada
+                                                                    secuencia, descarta también uno de los <span
+                                                                        class="faction">éxitos normales</span> sin
+                                                                    resolver de tu oponente (o uno de sus <span
+                                                                        class="faction">éxitos críticos</span> si no hay
+                                                                    normales).
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Al asestar tu primer impacto crítico, le
+                                                                    "quitas" un dado de la reserva al enemigo, dejándolo
+                                                                    con menos opciones para golpearte o bloquearte.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="alert alert-secondary border-0 mt-3 mb-0 small shadow-sm">
+                                                    <i class="bi bi-info-circle-fill text-primary me-1"></i>
+                                                    <strong>Atención:</strong> Observa las etiquetas. Reglas
+                                                    como <em>Brutal</em> o <em>Choque</em> son exclusivas de la acción
+                                                    de <strong>Combatir</strong>, mientras que <em>Penetración</em> o
+                                                    <em>Buscadora</em> están pensadas para <strong>Disparar</strong>.
                                                 </div>
 
                                             </div>
@@ -2059,86 +2278,304 @@
                                     </div>
 
                                     <div class="accordion-item rule-item">
-                                        <h3 class="accordion-header" id="headingRestriccion">
+                                        <h3 class="accordion-header" id="headingDamageAoE">
                                             <button class="accordion-button collapsed fw-bold text-dark fs-5"
-                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseRestriccion"
-                                                aria-expanded="false" aria-controls="collapseRestriccion">
-                                                <i class="bi bi-crosshair text-danger me-3"></i> 2.4 Restricciones
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseDamageAoE" aria-expanded="false"
+                                                aria-controls="collapseDamageAoE">
+                                                <i class="bi bi-fire text-primary me-3"></i> 4. Daño Directo y Área de
+                                                Efecto
                                             </button>
                                         </h3>
-                                        <div id="collapseRestriccion" class="accordion-collapse collapse"
-                                            aria-labelledby="headingRestriccion">
+                                        <div id="collapseDamageAoE" class="accordion-collapse collapse"
+                                            aria-labelledby="headingDamageAoE">
                                             <div class="accordion-body text-secondary">
-                                                <p class="small mb-3">Armas que tienen condiciones de uso específicas.</p>
+                                                <p class="small mb-3">¿Cómo hago daño masivo o afecto a varios enemigos?
+                                                    Estas reglas te permiten castigar a operativos agrupados o infligir
+                                                    daño ineludible que ignora la defensa estándar.</p>
 
-                                                <div class="row g-4 mt-2">
-                                                    <div class="col-md-6">
-                                                        <div class="card h-100 border-danger shadow-sm">
-                                                            <div class="card-header bg-danger text-white fw-bold">
-                                                                Explosión X (Blast X)
-                                                            </div>
+                                                <div class="row g-3">
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
                                                             <div class="card-body">
-                                                                <p class="card-text small mb-2">Ideal contra grupos
-                                                                    agrupados (granadas, misiles).</p>
-                                                                <ul class="small mb-0 ps-3">
-                                                                    <li>Realizas el ataque inicial contra tu objetivo.
-                                                                    </li>
-                                                                    <li>Luego, realizas <strong>otro ataque completo e
-                                                                            independiente</strong> contra CADA operativo
-                                                                        visible que esté a una distancia igual o menor a
-                                                                        "X" del objetivo original.</li>
-                                                                    <li class="text-danger fw-bold">¡Cuidado! También
-                                                                        afecta a tus propios aliados si están en el
-                                                                        radio.</li>
-                                                                </ul>
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Devastadora x
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Guardar
+                                                                        Éxitos</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Cada <span class="faction">éxito crítico</span>
+                                                                    guardado inflige inmediatamente x daño al agente
+                                                                    blanco. Si la regla incluye una distancia
+                                                                    (p.ej. 1" Devastadora x), inflige x daño al blanco y
+                                                                    a cada otro agente visible para él a esa distancia o
+                                                                    menos. Los <span class="faction">éxitos
+                                                                        críticos</span> no se descartan tras causar este
+                                                                    daño y pueden resolverse más adelante.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Causas daño ineludible (splash damage) en
+                                                                    el momento en que sacas un 6, y además sigues
+                                                                    teniendo ese 6 para golpear durante el paso de
+                                                                    resolución normal.
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="card h-100 border-info shadow-sm">
-                                                            <div class="card-header bg-info text-white fw-bold">
-                                                                Torrente X (Torrent X)
-                                                            </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
                                                             <div class="card-body">
-                                                                <p class="card-text small mb-2">Representa lanzallamas o
-                                                                    fuego de barrido contínuo.</p>
-                                                                <ul class="small mb-0 ps-3">
-                                                                    <li>Eliges un objetivo principal.</li>
-                                                                    <li>Luego, puedes realizar ataques independientes
-                                                                        contra otros objetivos válidos a una distancia
-                                                                        de "X" o menos del <strong>objetivo original o
-                                                                            del último objetivo atacado con esta
-                                                                            regla.</strong></li>
-                                                                </ul>
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Área x
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Secuencia de
+                                                                        Disparo</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Tras disparar al blanco primario, dispara esta arma
+                                                                    contra cada blanco secundario (agentes visibles para
+                                                                    el primario y a x" o menos de él) en el orden que
+                                                                    quieras. Los blancos secundarios son
+                                                                    válidos aunque tengan orden de ocultarse.
+                                                                    Si el primario estaba a cubierto, los secundarios
+                                                                    también lo están.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Típico de granadas o misiles. Disparas al
+                                                                    primer objetivo y luego repites todo el ataque
+                                                                    contra cualquiera que esté en el radio de la
+                                                                    explosión (incluso aliados).
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Ráfaga x
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Secuencia de
+                                                                        Disparo</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Tras elegir un blanco primario válido, elige tantos
+                                                                    otros blancos válidos a x" o menos del primario como
+                                                                    blancos secundarios, pero que no estén en la zona de
+                                                                    control de agentes amigos. Dispara
+                                                                    esta arma contra todos ellos en el orden que quieras
+                                                                    (cada secuencia por separado).
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Típico de lanzallamas. Barres una zona
+                                                                    atacando al primario y a quienes estén cerca, pero a
+                                                                    diferencia de Área, los secundarios también deben
+                                                                    cumplir las reglas normales de visibilidad desde tu
+                                                                    tirador.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
 
-                                                <ul class="list-group list-group-flush shadow-sm border rounded mt-4">
-                                                    <li class="list-group-item p-3">
-                                                        <h6 class="text-dark fw-bold mb-1">Indirecta (Indirect)</h6>
-                                                        <p class="small mb-1">Las coberturas no sirven de nada contra
-                                                            esta arma (generalmente arcadas como morteros o que
-                                                            envuelven como fuego).</p>
-                                                        <ul class="small mb-0 text-dark">
-                                                            <li>Para determinar si el enemigo es un blanco válido, se
-                                                                considera que <strong>NO está a cubierto</strong> (por
-                                                                lo que la orden Ocultarse falla).</li>
-                                                            <li>El defensor <strong>NO puede guardar un éxito de
-                                                                    cobertura automático</strong> en la tirada de
-                                                                defensa.</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="list-group-item p-3 bg-light">
-                                                        <h6 class="text-dark fw-bold mb-1">Pesada (Heavy)</h6>
-                                                        <p class="small mb-0 text-danger">Un agente con un arma Pesada
-                                                            <strong>no puede mover más de un total de 3"</strong>
-                                                            durante su activación si desea realizar una acción de
-                                                            Disparar con ella. No es un arma apta para correr por la
-                                                            killzone.</p>
-                                                    </li>
-                                                </ul>
+                                                <div
+                                                    class="alert alert-danger border-0 mt-3 mb-0 small shadow-sm text-dark">
+                                                    <i class="bi bi-shield-exclamation text-danger me-1 fs-6"></i>
+                                                    <strong>Diferencia Crítica (Área vs Ráfaga):</strong> ¡Cuidado con
+                                                    el fuego amigo! Las reglas de <strong>Área</strong> afectan a
+                                                    cualquier miniatura cerca del blanco (incluyendo a tus propios
+                                                    agentes ocultos). <strong>Ráfaga</strong> no te permite designar
+                                                    objetivos si están en la zona de control de tus agentes.
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item rule-item">
+                                        <h3 class="accordion-header" id="headingRestrictions">
+                                            <button class="accordion-button collapsed fw-bold text-dark fs-5"
+                                                type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseRestrictions" aria-expanded="false"
+                                                aria-controls="collapseRestrictions">
+                                                <i class="bi bi-exclamation-octagon text-primary me-3"></i> 5.
+                                                Restricciones y Reglas Especiales
+                                            </button>
+                                        </h3>
+                                        <div id="collapseRestrictions" class="accordion-collapse collapse"
+                                            aria-labelledby="headingRestrictions">
+                                            <div class="accordion-body text-secondary">
+                                                <p class="small mb-3">¿Cuáles son las condiciones, penalizadores o
+                                                    permisos especiales de esta arma? Estas reglas determinan cómo y
+                                                    cuándo es legal realizar tu ataque.</p>
+
+                                                <div class="row g-3">
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Alcance x
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Elegir
+                                                                        Blanco</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Solo se pueden elegir blancos válidos que estén a x"
+                                                                    o menos del agente activo.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Las pistolas suelen tener Alcance 6", lo
+                                                                    que significa que no puedes disparar a enemigos más
+                                                                    allá de esa distancia, sin importar tu línea de
+                                                                    visión.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Limitada x
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Restricción
+                                                                        General</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Esta arma solo se puede usar x veces por batalla.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Una granada con Limitada 1 se descarta
+                                                                    inmediatamente tras resolver su único uso en toda la
+                                                                    partida.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Pesada
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Restricción de
+                                                                        Activación</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Un agente no puede usar esta arma en una
+                                                                    activación/reacción en la que haya movido, y no
+                                                                    puede mover si usó esta arma. Si dice Pesada (solo
+                                                                    x), solo limita esa acción específica (p.ej. Pesada
+                                                                    (solo Correr)). No impide Ponerse en guardia.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Un francotirador debe quedarse quieto para
+                                                                    poder disparar su rifle Pesado.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Silenciosa
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Permiso
+                                                                        Especial</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Un agente puede realizar la acción de Disparar con
+                                                                    esta arma aunque tenga una orden de ocultarse.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Ideal para operativos sigilosos que quieren
+                                                                    disparar sin exponerse a represalias inmediatas.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Sobrecalentamiento
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Tras Disparar</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Tira 1D6 después de que un agente use esta arma. Si
+                                                                    el resultado es inferior al atributo Impactar,
+                                                                    inflige tanto daño al tirador como el resultado
+                                                                    multiplicado por 2. Solo se tira 1D6 aunque se use
+                                                                    varias veces en la misma acción.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Las armas de plasma son poderosas, pero
+                                                                    corres el riesgo de freír a tu propio operativo si
+                                                                    fallas el dado de seguridad.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="card h-100 border-light shadow-sm">
+                                                            <div class="card-body">
+                                                                <h6
+                                                                    class="fw-bold text-dark d-flex justify-content-between align-items-center">
+                                                                    Aturdidora
+                                                                    <span class="badge bg-secondary text-light"
+                                                                        style="font-size: 0.65rem;">Al Guardar /
+                                                                        Golpear</span>
+                                                                </h6>
+                                                                <p class="small mb-1">
+                                                                    Al guardar éxitos en un ataque a distancia, si hay
+                                                                    algún <span class="faction">éxito crítico</span>,
+                                                                    resta 1 al atributo PA del blanco. En Combate, la
+                                                                    primera vez que golpees con un <span
+                                                                        class="faction">éxito crítico</span>, el enemigo
+                                                                    resta 1 a su PA, o (si las reglas de tu edición lo
+                                                                    especifican) descarta uno de sus éxitos normales sin
+                                                                    resolver.
+                                                                </p>
+                                                                <p class="small text-muted fst-italic mb-0">
+                                                                    Ejemplo: Excelente herramienta de control; si logras
+                                                                    un crítico, el enemigo perderá acciones en su
+                                                                    próximo turno o capacidad de defenderse.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="alert alert-dark border-0 mt-3 mb-0 small shadow-sm">
+                                                    <i class="bi bi-gear-fill text-secondary me-1"></i>
+                                                    <strong>Recordatorio Técnico:</strong> Las restricciones son reglas
+                                                    absolutas. Una regla como <em>Pesada</em> prevalece sobre el deseo
+                                                    del jugador de moverse, a menos que el agente tenga una regla
+                                                    especial en su tarjeta de datos que le permita ignorarla (como
+                                                    "Suspensores").
+                                                </div>
 
                                             </div>
                                         </div>
@@ -2149,11 +2586,12 @@
                         </div>
 
                         <div class="rule-subpage d-none" id="page-terrenos">
-                            <h3 class="mb-3 text-dark fw-bold border-start border-5 border-info ps-3">III. Terrenos
-                                Específicos</h3>
+                            <h3 class="mb-3 text-dark fw-bold border-start border-5 border-info ps-3">III. Mapas</h3>
                             <div class="bg-white p-4 rounded shadow-sm">
                                 <div class="accordion" id="terrainAccordion">
-                                    <p class="text-muted">Contenido de terrenos específicos en desarrollo...</p>
+                                    
+                                    
+
                                 </div>
                             </div>
                         </div>

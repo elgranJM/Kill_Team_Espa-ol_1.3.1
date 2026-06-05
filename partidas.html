@@ -697,13 +697,21 @@
             modalInstance.hide();
         }
 
+        // --- SISTEMA DE REVELADO DE PARTIDA ---
         function revealPrimaries() {
             if (!gameState.p1.primary || !gameState.p2.primary) {
-                alert("Atención: Ambos jugadores deben fijar su Operación Primaria secreta antes de finalizar y revelar.");
+                // Cambiamos el 'alert' molesto por la notificación integrada en la interfaz
+                mostrarNotificacion("Falta selección: Ambos jugadores deben fijar su Operación Primaria secreta antes de finalizar.");
                 return;
             }
-            if (!confirm("¿Están listos para terminar? Esto revelará las primarias de ambos y sumará los bonos al puntaje final.")) return;
 
+            // Abrir el modal de confirmación temático
+            const modal = new bootstrap.Modal(document.getElementById('revealConfirmModal'));
+            modal.show();
+        }
+
+        // Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal
+        function executeRevealPrimaries() {
             gameState.revealed = true;
 
             // Ocultar botones de selección y mostrar insignias
@@ -726,6 +734,141 @@
             document.getElementById('btn-reveal-global').classList.add('d-none');
 
             calculateTotals();
+
+            showMatchResult();
+        }
+
+        // --- SISTEMA DE DECLARACIÓN DE VICTORIA ---
+        function showMatchResult() {
+            // Extraer los puntos finales desde la interfaz (ya calculados)
+            const p1Score = parseInt(document.getElementById('p1-total-vp').innerText) || 0;
+            const p2Score = parseInt(document.getElementById('p2-total-vp').innerText) || 0;
+
+            // Extraer los nombres de los jugadores (Si está vacío, usamos nombres por defecto)
+            let p1Name = document.querySelector('.player-1 .name-input').value.trim() || "Jugador 1";
+            let p2Name = document.querySelector('.player-2 .name-input').value.trim() || "Jugador 2";
+
+            // Referencias a los elementos del Modal de Resultado
+            const modalHeader = document.getElementById('matchResultHeader');
+            const resultMessage = document.getElementById('matchResultMessage');
+            const resultScore = document.getElementById('matchResultScore');
+            const resultIcon = document.getElementById('matchResultIcon');
+
+            // Lógica de Victoria / Empate
+            if (p1Score > p2Score) {
+                // Gana Jugador 1 (Color Azul)
+                modalHeader.className = "modal-header bg-primary text-white";
+                resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-primary" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(11, 107, 225, 0.4);"></i>';
+                resultMessage.innerHTML = `¡Victoria para <span class="text-primary">${p1Name}</span>!`;
+                resultScore.innerHTML = `Con un total de <b>${p1Score}</b> PV frente a los ${p2Score} PV del enemigo.`;
+            } else if (p2Score > p1Score) {
+                // Gana Jugador 2 (Color Rojo)
+                modalHeader.className = "modal-header bg-danger text-white";
+                resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-danger" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(220, 53, 69, 0.4);"></i>';
+                resultMessage.innerHTML = `¡Victoria para <span class="text-danger">${p2Name}</span>!`;
+                resultScore.innerHTML = `Con un total de <b>${p2Score}</b> PV frente a los ${p1Score} PV del enemigo.`;
+            } else {
+                // Empate (Color Gris/Secundario)
+                modalHeader.className = "modal-header bg-secondary text-white";
+                resultIcon.innerHTML = '<i class="bi bi-shield-shaded text-secondary" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(108, 117, 125, 0.4);"></i>';
+                resultMessage.innerHTML = "¡La escaramuza termina en EMPATE!";
+                resultScore.innerHTML = `Ambos bandos lograron <b>${p1Score}</b> PV. ¡Una batalla reñida!`;
+            }
+
+            // Llamar a Bootstrap para mostrar el Modal
+            const resultModal = new bootstrap.Modal(document.getElementById('matchResultModal'));
+            resultModal.show();
+        }
+
+        // --- SISTEMA DE REINICIO DE PARTIDA ---
+        function resetGame() {
+            // Abrir el modal de confirmación temático
+            const modal = new bootstrap.Modal(document.getElementById('resetConfirmModal'));
+            modal.show();
+        }
+
+        // Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal de reinicio
+        function executeResetGame() {
+            // 1. Reset de Estado Lógico Interno
+            gameState.p1.primary = null;
+            gameState.p2.primary = null;
+            gameState.revealed = false;
+
+            // 2. Reset de Elementos de Jugadores (Nombres, Facciones, TacOps e Interfaz)
+            ['p1', 'p2'].forEach((p, index) => {
+                const playerNum = index === 0 ? '1' : '2';
+
+                // Reestablecer Nombres a vacío (o puedes poner 'Jugador 1' / 'Jugador 2')
+                document.querySelector(`.player-${playerNum} .name-input`).value = "";
+
+                // Reestablecer el selector de Facción al valor por defecto
+                const factionSelect = document.getElementById(`${p}-faction`);
+                if (factionSelect) factionSelect.value = "";
+
+                // Forzar la actualización de TacOps para limpiar el listado y ocultar imágenes de facción antiguas
+                if (typeof updateTacOps === 'function') {
+                    updateTacOps(p);
+                }
+
+                // Reestablecer el selector de TacOp al valor por defecto
+                const tacopSelect = document.getElementById(`${p}-tacop`);
+                if (tacopSelect) tacopSelect.value = "";
+
+                // Restaurar visibilidad del contenedor de TacOps (por si estaba oculto/bloqueado)
+                const tacopContainer = document.getElementById(`${p}-tacop-container`);
+                if (tacopContainer) {
+                    tacopContainer.classList.remove('d-none');
+                    tacopContainer.classList.add('d-flex');
+                }
+
+                // Ocultar la insignia de TacOp revelada
+                const revealedBadge = document.getElementById(`${p}-revealed-badge-container`);
+                if (revealedBadge) {
+                    revealedBadge.classList.add('d-none');
+                }
+
+                // Reset de los botones de Operación Primaria Secreta UI
+                let btnPrimary = document.getElementById(`${p}-btn-secret`);
+                if (btnPrimary) {
+                    btnPrimary.className = 'btn btn-warning btn-sm fw-bold shadow-sm';
+                    btnPrimary.innerHTML = 'Fijar en Secreto 🔒';
+                    btnPrimary.classList.remove('d-none');
+                }
+
+                document.getElementById(`${p}-revealed-primary`).classList.add('d-none');
+                document.getElementById(`${p}-primary-bonus-display`).classList.add('d-none');
+            });
+
+            // Mostrar el botón global de revelar primarias nuevamente
+            document.getElementById('btn-reveal-global').classList.remove('d-none');
+
+            // 3. Reset de Contadores Numéricos (Puntos de Victoria y Bajas)
+            const idsToReset = ['p1-crit-vp', 'p1-tac-vp', 'p1-kills', 'p2-crit-vp', 'p2-tac-vp', 'p2-kills'];
+            idsToReset.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.innerText = "0";
+            });
+
+            // Reset de Puntos de Mando (CP) iniciales
+            const p1Cp = document.getElementById('p1-cp');
+            const p2Cp = document.getElementById('p2-cp');
+            if (p1Cp) p1Cp.innerText = "2";
+            if (p2Cp) p2Cp.innerText = "2";
+
+            // Volver el Punto de Inflexión (Turno) al TP1
+            const tp1Radio = document.getElementById('tp1');
+            if (tp1Radio) tp1Radio.checked = true;
+
+            // Recalcular los totales para que la UI muestre 0 puntos globales
+            calculateTotals();
+
+            // Limpiar el autoguardado del LocalStorage para que no recuerde la partida anterior
+            if (typeof localStorage !== 'undefined') {
+                localStorage.removeItem('killTeamMatchState');
+            }
+
+            // Notificación flotante estética del sistema
+            mostrarNotificacion("Partida reiniciada por completo. Tablero limpio.");
         }
 
         // --- SISTEMA DE CÁLCULO GENERAL ---
@@ -812,41 +955,10 @@
 
             document.getElementById('p1-total-vp').innerText = p1GrandTotal;
             document.getElementById('p2-total-vp').innerText = p2GrandTotal;
+
+            saveGameState();
         }
 
-        // Reiniciar la partida a su estado original
-        function resetGame() {
-            if (!confirm("¿Estás seguro de que deseas reiniciar todos los puntajes a 0 y ocultar las primarias?")) return;
-
-            // Reset de Estado Lógico
-            gameState.p1.primary = null;
-            gameState.p2.primary = null;
-            gameState.revealed = false;
-
-            // Reset de Elementos Secretos UI
-            ['p1', 'p2'].forEach(p => {
-                let btn = document.getElementById(`${p}-btn-secret`);
-                btn.className = 'btn btn-warning btn-sm fw-bold shadow-sm';
-                btn.innerHTML = 'Fijar en Secreto 🔒';
-                btn.classList.remove('d-none');
-
-                document.getElementById(`${p}-revealed-primary`).classList.add('d-none');
-                document.getElementById(`${p}-primary-bonus-display`).classList.add('d-none');
-            });
-
-            document.getElementById('btn-reveal-global').classList.remove('d-none');
-
-            // Reset de Contadores Numéricos
-            const idsToReset = ['p1-crit-vp', 'p1-tac-vp', 'p1-kills', 'p2-crit-vp', 'p2-tac-vp', 'p2-kills'];
-            idsToReset.forEach(id => document.getElementById(id).innerText = "0");
-
-            document.getElementById('p1-cp').innerText = "2";
-            document.getElementById('p2-cp').innerText = "2";
-
-            document.getElementById('tp1').checked = true;
-
-            calculateTotals();
-        }
         function validateKills(playerPrefix) {
             // Obtenemos los elementos HTML según el jugador (p1 o p2)
             let enemySize = parseInt(document.getElementById(playerPrefix + '-enemy-size').value);
@@ -939,6 +1051,10 @@
 
                 populateFactions();
                 populateCritOps(); // Llamamos a la función para llenar el selector
+
+                loadGameState();
+                calculateTotals();
+
             } catch (error) {
                 console.error("Error cargando los datos del juego:", error);
             }
@@ -1214,11 +1330,11 @@
             let additionalRulesHtml = '';
             if (op.aditional_rules) {
                 additionalRulesHtml = `
-            <div class="victory-points mb-3">
-                <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
-                <div class="small text-start text-muted lh-sm">${op.aditional_rules}</div>
-            </div>
-        `;
+                    <div class="victory-points mb-3">
+                        <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
+                        <div class="small text-start text-muted lh-sm">${op.aditional_rules}</div>
+                    </div>
+                `;
             }
 
             // 2. Manejo de las Acciones de Misión
@@ -1228,27 +1344,27 @@
                 op.action_mission.forEach(am => {
                     if (am.action_mission_name) {
                         actionHtml += `
-                    <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-                    <div class="unique-actions-section mb-3 shadow-sm rounded">
-                        <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
-                            <div class="fw-bold">${am.action_mission_name}</div>
-                            <div class="ap-box bg-secondary px-2 rounded small">${am.action_mission_cost}</div>
-                        </div>
-                        <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
-                            ${am.action_mission_yes ? `
-                            <p class="mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
-                                <span>${am.action_mission_yes}</span>
-                            </p>` : ''}
+                            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+                            <div class="unique-actions-section mb-3 shadow-sm rounded">
+                                <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
+                                    <div class="fw-bold">${am.action_mission_name}</div>
+                                    <div class="ap-box bg-secondary px-2 rounded small">${am.action_mission_cost}</div>
+                                </div>
+                                <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
+                                    ${am.action_mission_yes ? `
+                                    <p class="mb-2 d-flex align-items-start">
+                                        <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
+                                        <span>${am.action_mission_yes}</span>
+                                    </p>` : ''}
             
-                            ${am.action_mission_no ? `
-                            <p class="mb-0 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1"></span> 
-                                <span>${am.action_mission_no}</span>
-                            </p>` : ''}
-                        </div>
-                    </div>
-                `;
+                                    ${am.action_mission_no ? `
+                                    <p class="mb-0 d-flex align-items-start">
+                                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                                        <span>${am.action_mission_no}</span>
+                                    </p>` : ''}
+                                </div>
+                            </div>
+                        `;
                     }
                 });
             }
@@ -1334,16 +1450,16 @@
             if (op.additional_rules) {
                 if (Array.isArray(op.additional_rules)) {
                     additionalRulesHtml = `
-                <div class="victory-points mb-3">
-                    <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
-                    <ul class="small text-start text-muted ps-3 mb-0">${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul>
-                </div>`;
+                        <div class="victory-points mb-3">
+                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
+                            <ul class="small text-start text-muted ps-3 mb-0">${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul>
+                        </div>`;
                 } else {
                     additionalRulesHtml = `
-                <div class="victory-points mb-3">
-                    <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
-                    <p class="text-muted small text-start mb-0">${op.additional_rules}</p>
-                </div>`;
+                        <div class="victory-points mb-3">
+                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
+                            <p class="text-muted small text-start mb-0">${op.additional_rules}</p>
+                        </div>`;
                 }
             }
 
@@ -1351,27 +1467,27 @@
             let actionHtml = '';
             if (op.action_mission_name) {
                 actionHtml = `
-            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-            <div class="unique-actions-section mb-3 shadow-sm rounded">
-                <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
-                    <div class="fw-bold">${op.action_mission_name}</div>
-                    <div class="ap-box bg-secondary px-2 rounded small">${op.action_mission_cost}</div>
-                </div>
-                <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
-                    ${op.action_mission_yes ? `
-                    <p class="mb-2 d-flex align-items-start">
-                        <span class="text-success me-2 fw-bold">✔</span> 
-                        <span>${op.action_mission_yes}</span>
-                    </p>` : ''}
+                    <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+                    <div class="unique-actions-section mb-3 shadow-sm rounded">
+                        <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
+                            <div class="fw-bold">${op.action_mission_name}</div>
+                            <div class="ap-box bg-secondary px-2 rounded small">${op.action_mission_cost}</div>
+                        </div>
+                        <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
+                            ${op.action_mission_yes ? `
+                            <p class="mb-2 d-flex align-items-start">
+                                <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
+                                <span>${op.action_mission_yes}</span>
+                            </p>` : ''}
     
-                    ${op.action_mission_no ? `
-                    <p class="mb-0 d-flex align-items-start">
-                        <span class="text-danger me-2 fw-bold">✖</span> 
-                        <span>${op.action_mission_no}</span>
-                    </p>` : ''}
-                </div>
-            </div>
-        `;
+                            ${op.action_mission_no ? `
+                            <p class="mb-0 d-flex align-items-start">
+                                <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                                <span>${op.action_mission_no}</span>
+                            </p>` : ''}
+                        </div>
+                    </div>
+                `;
             }
 
             // 3. Manejo de Puntos de Victoria (Soporta Arrays)
@@ -1385,52 +1501,187 @@
                         limitText = `<p class="fst-italic text-danger small mt-2 mb-0 text-start">${vpList.pop()}</p>`;
                     }
                     vpHtml = `
-                <div class="victory-points mt-auto">
-                    <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
-                    <ul class="text-start small mb-1 ps-3 text-muted">${vpList.map(vp => `<li>${vp}</li>`).join('')}</ul>
-                    ${limitText}
-                </div>`;
+                        <div class="victory-points mt-auto">
+                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
+                            <ul class="text-start small mb-1 ps-3 text-muted">${vpList.map(vp => `<li>${vp}</li>`).join('')}</ul>
+                            ${limitText}
+                        </div>`;
                 } else {
                     vpHtml = `
-                <div class="victory-points mt-auto">
-                    <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
-                    <p class="small mb-0 text-start text-muted">${op.victoy_points}</p>
-                </div>`;
+                        <div class="victory-points mt-auto">
+                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
+                            <p class="small mb-0 text-start text-muted">${op.victoy_points}</p>
+                        </div>`;
                 }
             }
 
             // 4. Armar Modal
             document.getElementById('tacOpModalTitle').innerHTML = `
-        <i class="bi bi-bookmark-star-fill text-primary me-2"></i>Detalles de TacOp
-    `;
+                <i class="bi bi-bookmark-star-fill text-primary me-2"></i>Detalles de TacOp
+            `;
 
             const bodyEl = document.getElementById('tacOpModalBody');
             bodyEl.innerHTML = `
-        <div class="card shadow border-0 bg-light mx-auto" style="max-width: 600px;">
-            <div class="position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center shadow-sm" style="background-color: ${getCustomColor(op.archetype)}; font-size: 1.1rem;">
-                <img src="${getArchetypeIcon(op.archetype)}" class="svg-white" alt="Icono" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
-                <span>${archName.toUpperCase()}</span>
-            </div>
-    
-            <div class="p-4 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom text-center">
-                <h4 class="name fw-bold text-dark mb-3 text-uppercase">${op.name}</h4>
-                <div class="mission-container pt-0 flex-grow-1 d-flex flex-column text-start">
-                    <div class="victory-points mb-3">
-                        <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Revelar</div>
-                        <div class="small text-start text-muted">${op.Reveal}</div>
+                <div class="card shadow border-0 bg-light mx-auto" style="max-width: 600px;">
+                    <div class="position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center shadow-sm" style="background-color: ${getCustomColor(op.archetype)}; font-size: 1.1rem;">
+                        <img src="${getArchetypeIcon(op.archetype)}" class="svg-white" alt="Icono" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
+                        <span>${archName.toUpperCase()}</span>
                     </div>
-                    ${additionalRulesHtml}
-                    ${actionHtml}
-                    ${vpHtml}
+    
+                    <div class="p-4 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom text-center">
+                        <h4 class="name fw-bold text-dark mb-3 text-uppercase">${op.name}</h4>
+                        <div class="mission-container pt-0 flex-grow-1 d-flex flex-column text-start">
+                            <div class="victory-points mb-3">
+                                <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Revelar</div>
+                                <div class="small text-start text-muted">${op.Reveal}</div>
+                            </div>
+                            ${additionalRulesHtml}
+                            ${actionHtml}
+                            ${vpHtml}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    `;
+            `;
 
             // 5. Mostrar Modal
             const modal = new bootstrap.Modal(document.getElementById('tacOpInfoModal'));
             modal.show();
         }
+
+        // --- SISTEMA DE AUTOGUARDADO (LOCALSTORAGE) ---
+
+        function saveGameState() {
+            // Si los datos aún no cargan de los JSON, no guardamos estados vacíos
+            if (Object.keys(dataFactions).length === 0) return;
+
+            const state = {
+                globalCritOp: document.getElementById('global-critop') ? document.getElementById('global-critop').value : "",
+                tp: document.querySelector('input[name="tpRadio"]:checked').id,
+                internalGameState: gameState,
+                p1: getPlayerState('p1'),
+                p2: getPlayerState('p2')
+            };
+
+            // Guardamos todo en formato JSON en el navegador
+            localStorage.setItem('killTeamMatchState', JSON.stringify(state));
+        }
+
+        function getPlayerState(p) {
+            // Para identificar si es Jugador 1 o Jugador 2 en la clase CSS del input
+            const playerClass = p === 'p1' ? '1' : '2';
+
+            return {
+                name: document.querySelector(`.player-${playerClass} .name-input`).value,
+                faction: document.getElementById(`${p}-faction`).value,
+                tacop: document.getElementById(`${p}-tacop`).value,
+                // Detectamos el estado de la TacOp leyendo la interfaz visual
+                tacopLocked: !document.getElementById(`${p}-tacop-container`).classList.contains('d-flex'),
+                tacopRevealed: !document.getElementById(`${p}-revealed-badge-container`).classList.contains('d-none'),
+                cp: document.getElementById(`${p}-cp`).innerText,
+                critVp: document.getElementById(`${p}-crit-vp`).innerText,
+                tacVp: document.getElementById(`${p}-tac-vp`).innerText,
+                enemySize: document.getElementById(`${p}-enemy-size`).value,
+                kills: document.getElementById(`${p}-kills`).innerText
+            };
+        }
+
+        function loadGameState() {
+            const savedStateStr = localStorage.getItem('killTeamMatchState');
+
+            // Si no hay partida guardada, no hacemos nada y dejamos que cargue normal
+            if (!savedStateStr) return;
+
+            try {
+                const state = JSON.parse(savedStateStr);
+
+                // 1. Restaurar Globals
+                if (state.globalCritOp) document.getElementById('global-critop').value = state.globalCritOp;
+                if (state.tp) document.getElementById(state.tp).checked = true;
+                if (state.internalGameState) gameState = state.internalGameState;
+
+                // 2. Restaurar Jugadores
+                restorePlayerState('p1', state.p1);
+                restorePlayerState('p2', state.p2);
+
+                // 3. Restaurar Interfaz de Operaciones Primarias Secretas
+                if (gameState.revealed) {
+                    document.getElementById('p1-btn-secret').classList.add('d-none');
+                    document.getElementById('p2-btn-secret').classList.add('d-none');
+                    document.getElementById('btn-reveal-global').classList.add('d-none');
+
+                    const mapNames = { 'critop': 'Crit Op', 'tacop': 'Tac Op', 'killop': 'Kill Op' };
+
+                    ['p1', 'p2'].forEach(p => {
+                        let pBadge = document.getElementById(`${p}-revealed-primary`);
+                        pBadge.innerText = mapNames[gameState[p].primary];
+                        pBadge.classList.remove('d-none');
+                        document.getElementById(`${p}-primary-bonus-display`).classList.remove('d-none');
+                    });
+                } else {
+                    // Si estaban fijadas pero no reveladas
+                    ['p1', 'p2'].forEach(p => {
+                        if (gameState[p].primary) {
+                            const btn = document.getElementById(`${p}-btn-secret`);
+                            btn.classList.remove('btn-warning');
+                            btn.classList.add('btn-success');
+                            btn.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Fijada 🔒';
+                        }
+                    });
+                }
+
+                // Mostrar notificación de éxito
+                mostrarNotificacion("Partida cargada exitosamente.");
+            } catch (e) {
+                console.error("Error cargando partida guardada:", e);
+                localStorage.removeItem('killTeamMatchState'); // Si hay un error, borramos el archivo corrupto
+            }
+        }
+
+        function restorePlayerState(p, pState) {
+            if (!pState) return;
+
+            const playerClass = p === 'p1' ? '1' : '2';
+            document.querySelector(`.player-${playerClass} .name-input`).value = pState.name || "";
+
+            if (pState.faction) {
+                document.getElementById(`${p}-faction`).value = pState.faction;
+                updateTacOps(p); // Reconstruye el selector y la imagen
+            }
+
+            if (pState.tacop) {
+                document.getElementById(`${p}-tacop`).value = pState.tacop;
+                enableTacOpLock(p);
+            }
+
+            // Restaurar los estados visuales que updateTacOps reseteó
+            if (pState.tacopRevealed) {
+                lockTacOp(p);
+                revealTacOp(p);
+            } else if (pState.tacopLocked) {
+                lockTacOp(p);
+            }
+
+            // Restaurar contadores
+            document.getElementById(`${p}-cp`).innerText = pState.cp || "2";
+            document.getElementById(`${p}-crit-vp`).innerText = pState.critVp || "0";
+            document.getElementById(`${p}-tac-vp`).innerText = pState.tacVp || "0";
+
+            if (pState.enemySize) {
+                document.getElementById(`${p}-enemy-size`).value = pState.enemySize;
+            }
+
+            document.getElementById(`${p}-kills`).innerText = pState.kills || "0";
+        }
+
+        // Ejecutar la carga cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeMatchData();
+
+            // Detectar cuando el usuario cambia su nombre para guardarlo
+            document.querySelectorAll('.name-input').forEach(input => {
+                input.addEventListener('blur', saveGameState);
+            });
+        });
 
         // Ejecutar la carga cuando el documento esté listo
         document.addEventListener('DOMContentLoaded', initializeMatchData);
@@ -1464,7 +1715,7 @@
                 </div>
                 <div class="modal-footer bg-white border-top justify-content-center py-2">
                     <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
-                        <i class="bi bi-arrow-return-left me-2"></i>Volver a la partida
+                        Cerrar
                     </button>
                 </div>
             </div>
@@ -1608,6 +1859,89 @@
                 <div class="modal-footer bg-white border-top justify-content-center py-2">
                     <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
                         <i class="bi bi-arrow-return-left me-2"></i>Volver a la partida
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="revealConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-warning border-3 shadow-lg">
+                <div class="modal-header bg-warning text-dark">
+                    <h5 class="modal-title fw-bold">
+                        <i class="bi bi-eye-fill me-2"></i>Finalizar y Revelar
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center py-4 bg-light">
+                    <i class="bi bi-exclamation-triangle-fill text-warning" style="font-size: 3rem;"></i>
+                    <p class="mt-3 fs-5 text-dark fw-bold">¿Están listos para terminar la partida?</p>
+                    <p class="text-muted">Esto revelará las Operaciones Primarias de ambos jugadores y sumará los bonos
+                        al puntaje final.</p>
+                </div>
+                <div class="modal-footer bg-light justify-content-center">
+                    <button type="button" class="btn btn-secondary fw-bold shadow-sm"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-warning fw-bold shadow-sm" data-bs-dismiss="modal"
+                        onclick="executeRevealPrimaries()">
+                        Confirmar y Revelar <i class="bi bi-check-lg ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="resetConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-secondary border-3 shadow-lg">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Reiniciar Partida
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center py-4 bg-light">
+                    <i class="bi bi-exclamation-circle-fill text-danger" style="font-size: 3rem;"></i>
+                    <p class="mt-3 fs-5 text-dark fw-bold">¿Estás seguro de que deseas reiniciar?</p>
+                    <p class="text-muted">Todos los puntajes volverán a 0 y se ocultarán las misiones. <strong>Esta
+                            acción no se puede deshacer.</strong></p>
+                </div>
+                <div class="modal-footer bg-light justify-content-center">
+                    <button type="button" class="btn btn-secondary fw-bold shadow-sm"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger fw-bold shadow-sm" data-bs-dismiss="modal"
+                        onclick="executeResetGame()">
+                        Confirmar y Reiniciar <i class="bi bi-trash-fill ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="matchResultModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg text-center overflow-hidden">
+                <div class="modal-header" id="matchResultHeader">
+                    <h4 class="modal-title fw-bold mx-auto text-white">
+                        <i class="bi bi-flag-fill me-2"></i>Reporte de Batalla
+                    </h4>
+                </div>
+                <div class="modal-body py-5 bg-light">
+                    <div id="matchResultIcon" class="mb-3">
+                        </div>
+                    <h2 class="fw-bold text-dark display-6" id="matchResultMessage">
+                        </h2>
+                    <p class="fs-4 mt-3 text-muted" id="matchResultScore">
+                        </p>
+                </div>
+                <div class="modal-footer bg-white justify-content-center py-3">
+                    <button type="button" class="btn btn-outline-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-search me-2"></i>Revisar Tablero
+                    </button>
+                    <button type="button" class="btn btn-danger fw-bold px-4 shadow-sm" data-bs-dismiss="modal" onclick="resetGame()">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Nueva Partida
                     </button>
                 </div>
             </div>

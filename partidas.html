@@ -794,6 +794,12 @@
             gameState.p2.primary = null;
             gameState.revealed = false;
 
+            // --- NUEVO: Reset de la Operación Crítica (CritOp) Global ---
+            const globalCritOp = document.getElementById('global-critop');
+            if (globalCritOp) {
+                globalCritOp.value = ""; // Devuelve el selector a la opción por defecto ("Selecciona una CritOp...")
+            }
+            
             // 2. Reset de Elementos de Jugadores (Nombres, Facciones, TacOps e Interfaz)
             ['p1', 'p2'].forEach((p, index) => {
                 const playerNum = index === 0 ? '1' : '2';

@@ -1850,7 +1850,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Luz Evanescente",
-        "description": "Usa este Ardid de Tiroteo durante <span class=\"text-decoration-line-through text-info-emphasis\">se activa un agente</span> la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo <span class=\"text-info-emphasis\">, antes o después de que realice una acción</span>. Hasta el final de su activación, ese agente puede realizar la acción Retirarse por un punto de acción menos (hasta un mínimo de 0PA).",
+        "description": "Usa este Ardid de Tiroteo durante <span class=\"text-decoration-line-through text-info-emphasis\">se activa un agente</span> la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo <span class=\"text-info-emphasis\">, antes o después de que realice una acción</span>. Hasta el final de su activación, ese agente puede realizar la acción <b>Retroceder</b> por un punto de acción menos (hasta un mínimo de 0PA).",
         "typename": "Ardid de Tiroteo"
     },
     {

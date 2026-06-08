@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td class="weapon-name fw-bold">${w.name}</td>
                 <td class="text-center">${w.stats.A || '-'}</td>
                 <td class="text-center">${w.stats['HP/HA'] || '-'}</td>
-                <td class="text-center">${w.stats['Daño'] || '-'}</td>
+                <td class="text-center">${w.stats['Dñ'] || '-'}</td>
                 <td class="small">${w.stats.RA || '-'}</td>
             </tr>`;
             }).join('');

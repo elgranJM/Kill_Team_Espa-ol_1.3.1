@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const factionSelect = document.getElementById('faction-select');
     // Actualizado: Referencia al nuevo selector de Tipo de Facción
     const factionTypeSelect = document.getElementById('faction-type-select');
-    
+
     // Contenedores de contenido
     const containers = {
         racial: document.getElementById('faction-info-pane'),
@@ -49,25 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Configuración Visual ---
     const archetypeConfig = {
-        'recon': { 
-            color: '#f05c22', 
-            name: 'Reconocimiento', 
-            icon: 'recon.svg' 
+        'recon': {
+            color: '#f05c22',
+            name: 'Reconocimiento',
+            icon: 'recon.svg'
         },
-        'security': { 
-            color: '#0b6be1', 
-            name: 'Seguridad', 
-            icon: 'security.svg' 
+        'security': {
+            color: '#0b6be1',
+            name: 'Seguridad',
+            icon: 'security.svg'
         },
-        'seek-destroy': { 
-            color: '#bd0003', 
-            name: 'Búsqueda y Destrucción', 
-            icon: 'seek-destroy.svg' 
+        'seek-destroy': {
+            color: '#bd0003',
+            name: 'Búsqueda y Destrucción',
+            icon: 'seek-destroy.svg'
         },
-        'infiltration': { 
-            color: '#5f5f5f', 
-            name: 'Infiltración', 
-            icon: 'infiltration.svg' 
+        'infiltration': {
+            color: '#5f5f5f',
+            name: 'Infiltración',
+            icon: 'infiltration.svg'
         }
     };
 
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Inicialización ---
     async function init() {
         console.log('Iniciando Kill Team BattleKit...');
-        
+
         try {
             await loadData();
             // Inicializamos el selector con el filtro vacío (o el seleccionado por defecto)
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         factionSelect.addEventListener('change', handleFactionSelection);
-        
+
         // Listener para el cambio de Tipo de Facción
         factionTypeSelect.addEventListener('change', (e) => {
             populateFactionSelector(e.target.value);
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ploys: 'ploys.json',
             racial: 'racial.json',
             factionTacops: 'tacops.json',
-            generalTacops: 'tacopsgenerales.json', 
+            generalTacops: 'tacopsgenerales.json',
             operatives: 'operatives.json',
             equipment: 'equipment.json'
         };
@@ -175,8 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Función de Filtrado Actualizada ---
     function populateFactionSelector(filterType = "") {
-        factionSelect.innerHTML = '<option selected value="">Elige un Kill Team...</option>';
-        
+        factionSelect.innerHTML = '<option selected value="">Elige un Comando...</option>';
+
         let filteredKeys = [];
 
         if (!filterType || filterType === "Todas las facciones") {
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Ordenamos alfabéticamente por el nombre visible
         filteredKeys.sort((a, b) => factionNames[a].localeCompare(factionNames[b]));
-        
+
         filteredKeys.forEach(key => {
             const option = document.createElement('option');
             option.value = key;
@@ -245,8 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="mb-3">Arquetipos</h3>
                     <div class="d-flex justify-content-center flex-wrap gap-3">
                         ${factionArchetypes.map(arch => {
-                            const config = archetypeConfig[arch] || { color: '#333', name: arch, icon: '' };
-                            return `
+                const config = archetypeConfig[arch] || { color: '#333', name: arch, icon: '' };
+                return `
                             <div class="archetype-box" style="
                                 background-color: ${config.color};
                                 width: 140px;
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                      style="width: 50px; height: 50px; filter: brightness(0) invert(1); margin-bottom: 10px;">
                                 <span style="font-weight: bold; font-size: 0.9em; text-transform: uppercase;">${config.name}</span>
                             </div>`;
-                        }).join('')}
+            }).join('')}
                     </div>
                 </div>
             </div>`;
@@ -292,10 +292,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const abilities = gameData.racial[factionKey] || [];
         let rulesHtml = '';
-        
+
         if (Array.isArray(abilities)) {
             rulesHtml = abilities
-                .filter(r => r.type === 'racial' && r.name !== 'Arquetipos') 
+                .filter(r => r.type === 'racial' && r.name !== 'Arquetipos')
                 .map(rule => `
                 <div class="col-12 col-lg-10 mx-auto mb-3">
                     <div class="ability-card">
@@ -309,56 +309,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. Agentes
-function renderOperatives(factionKey) {
-    const operatives = gameData.operatives[factionKey] || [];
+    function renderOperatives(factionKey) {
+        const operatives = gameData.operatives[factionKey] || [];
 
-    if (operatives.length === 0) {
-        containers.operatives.innerHTML = '<div class="alert alert-info">No hay datos de agentes disponibles para esta facción.</div>';
-        return;
-    }
+        if (operatives.length === 0) {
+            containers.operatives.innerHTML = '<div class="alert alert-info">No hay datos de agentes disponibles para esta facción.</div>';
+            return;
+        }
 
-    const html = operatives.map(op => {
-        const imgPath = `./resources/roster_images/${factionKey}/${op.id}.png`;
+        const html = operatives.map(op => {
+            const imgPath = `./resources/roster_images/${factionKey}/${op.id}.png`;
 
-        // Generación de HTML para Armas
-        const weaponsHtml = op.weapons.map(w => {
-            const icon = w.type === 'ranged' ? 'shoot.svg' : 'attack.svg';
-            return `
+            // Generación de HTML para Armas
+            const weaponsHtml = op.weapons.map(w => {
+                const icon = w.type === 'ranged' ? 'shoot.svg' : 'attack.svg';
+                return `
             <tr class="weapon-profile-row">
                 <td><img src="./resources/game_rules_files/${icon}" class="weapon-icon" width="20"></td>
                 <td class="weapon-name fw-bold">${w.name}</td>
                 <td class="text-center">${w.stats.A || '-'}</td>
                 <td class="text-center">${w.stats['HP/HA'] || '-'}</td>
-                <td class="text-center">${w.stats['Dñ'] || '-'}</td>
+                <td class="text-center">${w.stats['Daño'] || '-'}</td>
                 <td class="small">${w.stats.RA || '-'}</td>
             </tr>`;
-        }).join('');
+            }).join('');
 
-        // Generación de HTML para Habilidades
-        const abilitiesHtml = op.abilities?.length ? 
-            `<div class="mt-2 p-2 bg-light rounded"><strong>Habilidades:</strong>${op.abilities.map(a => `<div class="mb-1"><span class="fw-bold">${a.name}:</span> ${a.description}</div>`).join('')}</div>` : '';
+            // Generación de HTML para Habilidades
+            const abilitiesHtml = op.abilities?.length ?
+                `<div class="mt-2 p-2 bg-light rounded"><strong>Habilidades:</strong>${op.abilities.map(a => `<div class="mb-1"><span class="fw-bold">${a.name}:</span> ${a.description}</div>`).join('')}</div>` : '';
 
-        // Generación de HTML para Acciones Únicas (Sistema de Yes/No)
-        const actionsHtml = op.uniqueActions?.length ? 
-            op.uniqueActions.map(a => {
-                // Mapeo de la lista de descripciones positivas (icon-yes)
-                const descYes = Array.isArray(a.description) 
-                    ? a.description.map(line => `
+            // Generación de HTML para Acciones Únicas (Sistema de Yes/No)
+            const actionsHtml = op.uniqueActions?.length ?
+                op.uniqueActions.map(a => {
+                    // Mapeo de la lista de descripciones positivas (icon-yes)
+                    const descYes = Array.isArray(a.description)
+                        ? a.description.map(line => `
                         <p>
                             <span class="icon icon-yes"></span> 
                             <span>${line}</span>
                         </p>`).join('')
-                    : `<p>${a.description}</p>`;
+                        : `<p>${a.description}</p>`;
 
-                // Mapeo de la descripción negativa (icon-no)
-                const descNo = a.description_no ? `
+                    // Mapeo de la descripción negativa (icon-no)
+                    const descNo = a.description_no ? `
                     <p>
                         <span class="icon icon-no"></span> 
                         ${a.description_no}
                     </p>` : '';
 
-                // Estructura final de la tarjeta de Acción Única
-                return `
+                    // Estructura final de la tarjeta de Acción Única
+                    return `
                 <div class="unique-actions-section">
                     <div class="header">
                         <div>${a.name}</div>
@@ -369,9 +369,9 @@ function renderOperatives(factionKey) {
                         ${descNo}
                     </div>
                 </div>`;
-            }).join('') : '';
+                }).join('') : '';
 
-        return `
+            return `
         <div class="card-container col-12 col-lg-11 mt-4 mb-3 mx-auto shadow bg-white border rounded overflow-hidden">
             <div class="row g-0 align-items-stretch">
                 <!-- LADO IZQUIERDO: Información y Stats -->
@@ -382,9 +382,9 @@ function renderOperatives(factionKey) {
 
                     <div class="d-flex justify-content-between mb-3 text-center bg-light p-2 rounded">
                         <div><div class="small text-muted fw-bold">LPA</div><div class="fs-4">${op.stats.LPA}</div></div>
-                        <div><div class="small text-muted fw-bold">MOV</div><div class="fs-4">${op.stats.MOVER}</div></div>
-                        <div><div class="small text-muted fw-bold">SAL</div><div class="fs-4">${op.stats.SALVACIÓN}</div></div>
-                        <div><div class="small text-muted fw-bold">HER</div><div class="fs-4">${op.stats.HERIDAS}</div></div>
+                        <div><div class="small text-muted fw-bold">MOV.</div><div class="fs-4">${op.stats.MOVER}</div></div>
+                        <div><div class="small text-muted fw-bold">SALV.</div><div class="fs-4">${op.stats.SALVACIÓN}</div></div>
+                        <div><div class="small text-muted fw-bold">HERIDAS</div><div class="fs-4">${op.stats.HERIDAS}</div></div>
                     </div>
 
                     <div class="table-responsive mb-3">
@@ -392,11 +392,11 @@ function renderOperatives(factionKey) {
                             <thead class="table-dark">
                                 <tr>
                                     <th style="width:30px"></th>
-                                    <th>Arma</th>
-                                    <th class="text-center">A</th>
-                                    <th class="text-center">HA</th>
-                                    <th class="text-center">Dñ</th>
-                                    <th>Reglas adicionales</th>
+                                    <th>Nombre</th>
+                                    <th class="text-center">ATAQ.</th>
+                                    <th class="text-center">IMP.</th>
+                                    <th class="text-center">DAÑO</th>
+                                    <th>Reglas de armas</th>
                                 </tr>
                             </thead>
                             <tbody>${weaponsHtml}</tbody>
@@ -432,16 +432,16 @@ function renderOperatives(factionKey) {
                 </div>
             </div>
         </div>`;
-    }).join('');
+        }).join('');
 
-    containers.operatives.innerHTML = `<div class="row">${html}</div>`;
-}
+        containers.operatives.innerHTML = `<div class="row">${html}</div>`;
+    }
 
     // 4. TacOps Generales
     function renderTacops(factionKey) {
         const validArchetypes = gameData.factionTacops[factionKey]?.archetypes || [];
         const allOps = gameData.generalTacops;
-        
+
         const factionOpsKeys = Object.keys(allOps).filter(key => {
             const op = allOps[key];
             return validArchetypes.includes(op.archetype);
@@ -455,7 +455,7 @@ function renderOperatives(factionKey) {
         const html = factionOpsKeys.map(key => {
             const op = allOps[key];
             const archData = archetypeConfig[op.archetype] || { color: '#666', icon: '', name: op.archetype };
-            
+
             let specialImage = '';
             if (op.name === 'Flanco' || key === 'Flanco') {
                 specialImage = `<div class="text-center"><img src="./resources/game_rules_files/flank_tacop-1.png" class="img-fluid mt-2 mb-2 rounded border" alt="Diagrama de Flanco" style="max-height:150px;"></div>`;
@@ -541,7 +541,7 @@ function renderOperatives(factionKey) {
             const isStrategic = ploy.type === 'strategic';
             const headerColor = isStrategic ? 'bg-dark' : 'bg-secondary';
             const typeLabel = isStrategic ? 'Ardid de Estrategia' : 'Ardid de Tiroteo';
-            
+
             return `
             <div class="col-12 col-md-6 mb-3">
                 <div class="card h-100 shadow-sm">
@@ -596,11 +596,11 @@ function renderOperatives(factionKey) {
                     <table class="table table-sm table-dark table-bordered mb-0">
                         <thead>
                             <tr class="text-center">
-                                <th class="text-start">Arma</th>
-                                <th>A</th>
-                                <th>HA</th>
-                                <th>Dñ</th>
-                                <th class="text-start">Reglas adicionales</th>
+                                <th class="text-start">NOMBRE</th>
+                                <th>ATAQ.</th>
+                                <th>IMP.</th>
+                                <th>DAÑO</th>
+                                <th class="text-start">REGLAS DE ARMAS</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -616,26 +616,26 @@ function renderOperatives(factionKey) {
                 </div>`;
             }
 
-        const actionHtml = item.action?.length ? 
-            item.action.map(a => {
-                // Mapeo de descripciones positivas (icon-yes)
-                const descYes = Array.isArray(a.action_yes) 
-                    ? a.action_yes.map(line => `
+            const actionHtml = item.action?.length ?
+                item.action.map(a => {
+                    // Mapeo de descripciones positivas (icon-yes)
+                    const descYes = Array.isArray(a.action_yes)
+                        ? a.action_yes.map(line => `
                         <p>
                             <span class="icon icon-yes"></span> 
                             <span>${line}</span>
                         </p>`).join('')
-                    : `<p><span class="icon icon-yes"></span> ${a.action_yes}</p>`;
+                        : `<p><span class="icon icon-yes"></span> ${a.action_yes}</p>`;
 
-                // Mapeo de descripción negativa (icon-no)
-                const descNo = a.action_no ? `
+                    // Mapeo de descripción negativa (icon-no)
+                    const descNo = a.action_no ? `
                     <p>
                         <span class="icon icon-no"></span> 
                         ${a.action_no}
                     </p>` : '';
 
-                // Estructura de tarjeta consistente
-                return `
+                    // Estructura de tarjeta consistente
+                    return `
                 <div class="crit-op" data-type="action">
                     <div class="header">
                         <div>${a.action_name}</div>
@@ -646,10 +646,10 @@ function renderOperatives(factionKey) {
                         ${descNo}
                     </div>
                 </div>`;
-            }).join('') : '';
+                }).join('') : '';
 
-    // Retorno del componente
-    return `
+            // Retorno del componente
+            return `
         <div class="col-12 col-md-6 mb-4">
             <div class="equipment-card h-100 shadow-sm border border-danger rounded overflow-hidden"> 
                 <div class="p-2 bg-danger text-white text-center">

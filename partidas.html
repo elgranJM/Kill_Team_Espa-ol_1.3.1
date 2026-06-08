@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Partidas - Kill Team BattleKit</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Estilos específicos para el Score Tracker */
+        .player-card {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .player-1 {
+            border-color: #0b6be1;
+        }
+
+        .player-2 {
+            border-color: #dc3545;
+        }
+
+        .name-input {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            background: transparent;
+            width: 100%;
+            border-bottom: 2px dashed #ccc;
+            padding-bottom: 5px;
+        }
+
+        .name-input:focus {
+            outline: none;
+            border-bottom-color: #333;
+        }
+
+        .counter-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .score-display {
+            font-size: 1.8rem;
+            font-weight: bold;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .vp-total {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .op-section {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="index.html">
+            <i class="bi bi-shield-shaded me-2"></i>Kill Team BattleKit
+        </a>
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-md-none collapsed me-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse shadow-sm"
+                style="min-height: calc(100vh - 48px);">
+                <div class="position-sticky pt-3">
+                    <ul class="nav nav-pills flex-column" id="main-nav">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-dark" href="index.html">
+                                <i class="bi bi-house-door me-2"></i> Inicio (Portada)
+                            </a>
+                        </li>
+                        <hr class="my-2">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="secuencia.html">
+                                <i class="bi bi-sort-numeric-down me-2"></i> Secuencia de Juego
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="critops.html">
+                                <i class="bi bi-crosshair me-2"></i> CritOps
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="tacops.html">
+                                <i class="bi bi-bookmark-star me-2"></i> TacOps
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="facciones.html">
+                                <i class="bi bi-person-vcard me-2"></i> Reglas de Facción
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="reglas.html">
+                                <i class="bi bi-book me-2"></i> Reglas de Juego
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active shadow-sm" href="partidas.html">
+                                <i class="bi bi-list-ol me-2"></i> Partidas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 border-bottom">
+                    <h1 class="h2 text-dark"><i class="bi bi-list-ol me-3"></i>Gestor de Partida</h1>
+                    <p class="text-muted mb-0 d-none d-md-block">Calculadora automática de Puntos de Victoria</p>
+                </div>
+
+                <!-- Selector CritOp -->
+                <div class="mb-4 p-3 border border-warning border-2 border-opacity-50 rounded bg-light shadow-sm">
+                    <label class="form-label fw-bold text-dark"><i class="bi bi-globe-americas me-2"></i>Misión Crítica
+                        (CritOp) Global</label>
+                    <div class="input-group input-group-lg shadow-sm">
+                        <select class="form-select border-warning fw-bold text-center" id="global-critop"
+                            onchange="validateAllScores()">
+                            <option value="" selected disabled>Selecciona la misión crítica de la partida...</option>
+                        </select>
+                        <button class="btn btn-warning fw-bold px-4 border-warning" type="button"
+                            onclick="showCritOpDetails()" title="Ver detalles de la misión">
+                            <i class="bi bi-info-circle-fill fs-5 text-dark"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Rastreador de Puntos de Inflexión -->
+                <div class="row mb-4 text-center">
+                    <div class="col-12">
+                        <div class="bg-white p-3 rounded shadow-sm d-inline-block border">
+                            <h6 class="text-uppercase fw-bold text-muted mb-3"><i
+                                    class="bi bi-hourglass-split me-2"></i>Punto de Inflexión</h6>
+                            <div class="btn-group" role="group">
+                                <input type="radio" class="btn-check" name="tpRadio" id="tp1" autocomplete="off" checked
+                                    onchange="validateAllScores()">
+                                <label class="btn btn-outline-dark fw-bold px-4" for="tp1">1</label>
+
+                                <input type="radio" class="btn-check" name="tpRadio" id="tp2" autocomplete="off"
+                                    onchange="validateAllScores()">
+                                <label class="btn btn-outline-dark fw-bold px-4" for="tp2">2</label>
+
+                                <input type="radio" class="btn-check" name="tpRadio" id="tp3" autocomplete="off"
+                                    onchange="validateAllScores()">
+                                <label class="btn btn-outline-dark fw-bold px-4" for="tp3">3</label>
+
+                                <input type="radio" class="btn-check" name="tpRadio" id="tp4" autocomplete="off"
+                                    onchange="validateAllScores()">
+                                <label class="btn btn-outline-dark fw-bold px-4" for="tp4">4</label>
+                            </div>
+                            <button type="button" class="btn btn-outline-danger btn-sm ms-3 fw-bold shadow-sm"
+                                data-bs-toggle="modal" data-bs-target="#killOpModal">
+                                <i class="bi bi-table me-1"></i>Tabla Kill Op
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tableros de Jugadores -->
+                <div class="row g-4 mb-4">
+
+                    <!-- ==================== JUGADOR 1 ==================== -->
+                    <div class="col-12 col-xl-6">
+                        <div class="bg-white p-4 rounded shadow-sm player-card player-1 h-100">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <img id="p1-faction-img" src="./resources/facciones/blank.png" alt="Facción J1"
+                                    class="me-2 rounded-circle border border-secondary border-opacity-50"
+                                    style="width: 100px; height: 100px; object-fit: cover; background-color: white;">
+                                <input type="text" class="name-input text-primary mb-3" value="Atacante"
+                                    placeholder="Nombre Jugador 1">
+                            </div>
+
+
+                            <!-- seleccion de faccion-->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small text-muted mb-1"><i
+                                        class="bi bi-person-vcard me-1"></i>Facción</label>
+                                <select class="form-select form-select-sm border-dark fw-bold" id="p1-faction"
+                                    onchange="updateTacOps('p1')">
+                                    <option value="" selected disabled>Selecciona tu facción...</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="form-label fw-bold small text-muted mb-1"><i
+                                        class="bi bi-crosshair me-1"></i>Operación Táctica (1 Máximo)</label>
+                                <div id="p1-tacop-container" class="d-flex flex-column gap-2">
+                                    <div class="input-group input-group-sm shadow-sm">
+                                        <select class="form-select border-primary" id="p1-tacop" disabled
+                                            onchange="enableTacOpLock('p1')">
+                                            <option value="" selected disabled>Primero elige una facción...</option>
+                                        </select>
+                                        <button class="btn btn-outline-primary fw-bold px-3" type="button"
+                                            id="p1-btn-info-tacop" onclick="showTacOpDetails('p1')" disabled
+                                            title="Ver detalles de la TacOp">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-outline-secondary btn-sm fw-bold w-100 shadow-sm"
+                                        id="p1-btn-lock-tacop" onclick="lockTacOp('p1')" disabled>
+                                        Fijar TacOp en Secreto 🔒
+                                    </button>
+                                </div>
+
+                                <div id="p1-tacop-status" class="d-none flex-column gap-2 mt-2">
+                                    <div class="alert alert-secondary p-2 m-0 text-center fw-bold small border-secondary border-2 border-opacity-50"
+                                        id="p1-secret-badge">
+                                        TacOp Oculta 🔒
+                                    </div>
+                                    <div id="p1-revealed-badge-container"
+                                        class="d-none align-items-center justify-content-between alert alert-primary p-1 m-0 text-center fw-bold small shadow-sm gap-2 border-primary">
+                                        <span id="p1-revealed-badge" class="flex-grow-1 text-primary"></span>
+                                        <button class="btn btn-sm btn-primary fw-bold px-2 py-0 shadow-sm"
+                                            onclick="showTacOpDetails('p1')" title="Ver detalles de la TacOp">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm fw-bold w-100 shadow-sm"
+                                        id="p1-btn-reveal-tacop" onclick="revealTacOp('p1')">
+                                        Revelar TacOp 👁️
+                                    </button>
+                                </div>
+
+                                <small class="text-muted d-block mt-2" id="p1-archetypes-display"></small>
+                            </div>
+
+                            <!-- Puntos Totales y PM -->
+                            <div
+                                class="d-flex justify-content-between align-items-center mb-4 bg-light p-3 rounded border">
+                                <div class="text-center">
+                                    <div class="small text-muted fw-bold text-uppercase">Total PV</div>
+                                    <div class="vp-total text-primary" id="p1-total-vp">0</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="small text-muted fw-bold text-uppercase mb-2">Puntos de Mando</div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <button class="btn btn-danger counter-btn shadow-sm"
+                                            style="width: 40px; height: 40px;" onclick="updateCounter('p1-cp', -1)"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3" id="p1-cp">2</span>
+                                        <button class="btn btn-success counter-btn shadow-sm"
+                                            style="width: 40px; height: 40px;" onclick="updateCounter('p1-cp', 1)"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Selector de Operación Primaria (Secreta) -->
+                            <div
+                                class="mb-3 d-flex justify-content-between align-items-center bg-dark p-2 border rounded shadow-sm">
+                                <span class="fw-bold small text-white text-uppercase"><i
+                                        class="bi bi-star-fill text-warning me-2"></i>Primaria (Secreta):</span>
+                                <button id="p1-btn-secret" class="btn btn-warning btn-sm fw-bold shadow-sm"
+                                    onclick="openSecretModal(1)">Fijar en Secreto 🔒</button>
+                                <span id="p1-revealed-primary"
+                                    class="badge bg-warning text-dark fs-6 d-none px-3 py-2"></span>
+                            </div>
+                            <div class="text-end mb-3 small text-success fw-bold d-none" id="p1-primary-bonus-display">
+                                +0 PV (Bono Primaria)
+                            </div>
+
+                            <!-- Crit Op -->
+                            <div class="op-section">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-crosshair text-primary me-2"></i>Crit Op (Máx 6)</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p1-crit-vp', -1, 6); calculateTotals();"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3 text-dark" id="p1-crit-vp">0</span>
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p1-crit-vp', 1, 6); calculateTotals();"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tac Op -->
+                            <div class="op-section">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-bookmark-star text-primary me-2"></i>Tac Op (Máx 6)</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p1-tac-vp', -1, 6); calculateTotals();"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3 text-dark" id="p1-tac-vp">0</span>
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p1-tac-vp', 1, 6); calculateTotals();"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kill Op -->
+                            <div class="op-section border-primary border-2 border-opacity-25">
+                                <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-skull-fill text-danger me-2"></i>Kill Op</span>
+                                    <div class="d-flex align-items-center">
+                                        <span class="small text-muted me-2">Tamaño Rival:</span>
+                                        <select class="form-select form-select-sm w-auto fw-bold" id="p1-enemy-size"
+                                            onchange="validateKills('p1'); calculateTotals()">
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10" selected>10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="text-danger fw-bold small">Enemigos Eliminados</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p1-kills', -1, parseInt(document.getElementById('p1-enemy-size').value)); calculateTotals();"><i
+                                                class="bi bi-dash"></i></button>
+
+                                        <span class="score-display mx-3 text-danger" id="p1-kills">0</span>
+
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p1-kills', 1, parseInt(document.getElementById('p1-enemy-size').value)); calculateTotals();"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white p-2 rounded border text-center d-flex justify-content-between align-items-center">
+                                    <span class="small text-muted">PV Base: <strong id="p1-kill-base"
+                                            class="text-dark">0</strong></span>
+                                    <span id="p1-kill-bonus" class="badge bg-warning text-dark d-none shadow-sm"><i
+                                            class="bi bi-trophy-fill me-1"></i>+1 Bono Mayoría</span>
+                                    <span class="small fw-bold">Total Kill Op: <strong id="p1-kill-total"
+                                            class="text-primary fs-5">0</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== JUGADOR 2 ==================== -->
+                    <div class="col-12 col-xl-6">
+                        <div class="bg-white p-4 rounded shadow-sm player-card player-2 h-100">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <img id="p2-faction-img" src="./resources/facciones/blank.png" alt="Facción J2"
+                                    class="me-2 rounded-circle border border-secondary border-opacity-50"
+                                    style="width: 100px; height: 100px; object-fit: cover; background-color: white;">
+                                <input type="text" class="name-input text-danger mb-3" value="Defensor"
+                                    placeholder="Nombre Jugador 2">
+                            </div>
+
+                            <!-- seleccion de faccion-->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small text-muted mb-1"><i
+                                        class="bi bi-person-vcard me-1"></i>Facción</label>
+                                <select class="form-select form-select-sm border-dark fw-bold" id="p2-faction"
+                                    onchange="updateTacOps('p2')">
+                                    <option value="" selected disabled>Selecciona tu facción...</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="form-label fw-bold small text-muted mb-1"><i
+                                        class="bi bi-crosshair me-1"></i>Operación Táctica (1 Máximo)</label>
+                                <div id="p2-tacop-container" class="d-flex flex-column gap-2">
+                                    <div class="input-group input-group-sm shadow-sm">
+                                        <select class="form-select border-primary" id="p2-tacop" disabled
+                                            onchange="enableTacOpLock('p2')">
+                                            <option value="" selected disabled>Primero elige una facción...</option>
+                                        </select>
+                                        <button class="btn btn-outline-primary fw-bold px-3" type="button"
+                                            id="p2-btn-info-tacop" onclick="showTacOpDetails('p2')" disabled
+                                            title="Ver detalles de la TacOp">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-outline-secondary btn-sm fw-bold w-100 shadow-sm"
+                                        id="p2-btn-lock-tacop" onclick="lockTacOp('p2')" disabled>
+                                        Fijar TacOp en Secreto 🔒
+                                    </button>
+                                </div>
+
+                                <div id="p2-tacop-status" class="d-none flex-column gap-2 mt-2">
+                                    <div class="alert alert-secondary p-2 m-0 text-center fw-bold small border-secondary border-2 border-opacity-50"
+                                        id="p2-secret-badge">
+                                        TacOp Oculta 🔒
+                                    </div>
+                                    <div id="p2-revealed-badge-container"
+                                        class="d-none align-items-center justify-content-between alert alert-primary p-1 m-0 text-center fw-bold small shadow-sm gap-2 border-primary">
+                                        <span id="p2-revealed-badge" class="flex-grow-1 text-primary"></span>
+                                        <button class="btn btn-sm btn-primary fw-bold px-2 py-0 shadow-sm"
+                                            onclick="showTacOpDetails('p2')" title="Ver detalles de la TacOp">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                        </button>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm fw-bold w-100 shadow-sm"
+                                        id="p2-btn-reveal-tacop" onclick="revealTacOp('p2')">
+                                        Revelar TacOp 👁️
+                                    </button>
+                                </div>
+
+                                <small class="text-muted d-block mt-2" id="p2-archetypes-display"></small>
+                            </div>
+
+                            <!-- Puntos Totales y PM -->
+                            <div
+                                class="d-flex justify-content-between align-items-center mb-4 bg-light p-3 rounded border">
+                                <div class="text-center">
+                                    <div class="small text-muted fw-bold text-uppercase">Total PV</div>
+                                    <div class="vp-total text-danger" id="p2-total-vp">0</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="small text-muted fw-bold text-uppercase mb-2">Puntos de Mando</div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <button class="btn btn-danger counter-btn shadow-sm"
+                                            style="width: 40px; height: 40px;" onclick="updateCounter('p2-cp', -1)"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3" id="p2-cp">2</span>
+                                        <button class="btn btn-success counter-btn shadow-sm"
+                                            style="width: 40px; height: 40px;" onclick="updateCounter('p2-cp', 1)"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Selector de Operación Primaria (Secreta) -->
+                            <div
+                                class="mb-3 d-flex justify-content-between align-items-center bg-dark p-2 border rounded shadow-sm">
+                                <span class="fw-bold small text-white text-uppercase"><i
+                                        class="bi bi-star-fill text-warning me-2"></i>Primaria (Secreta):</span>
+                                <button id="p2-btn-secret" class="btn btn-warning btn-sm fw-bold shadow-sm"
+                                    onclick="openSecretModal(2)">Fijar en Secreto 🔒</button>
+                                <span id="p2-revealed-primary"
+                                    class="badge bg-warning text-dark fs-6 d-none px-3 py-2"></span>
+                            </div>
+                            <div class="text-end mb-3 small text-success fw-bold d-none" id="p2-primary-bonus-display">
+                                +0 PV (Bono Primaria)
+                            </div>
+
+                            <!-- Crit Op -->
+                            <div class="op-section">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fw-bold text-dark"><i class="bi bi-crosshair text-danger me-2"></i>Crit
+                                        Op (Máx 6)</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p2-crit-vp', -1, 6); calculateTotals();"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3 text-dark" id="p2-crit-vp">0</span>
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p2-crit-vp', 1, 6); calculateTotals();"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tac Op -->
+                            <div class="op-section">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-bookmark-star text-danger me-2"></i>Tac Op (Máx 6)</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p2-tac-vp', -1, 6); calculateTotals();"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3 text-dark" id="p2-tac-vp">0</span>
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p2-tac-vp', 1, 6); calculateTotals();"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kill Op -->
+                            <div class="op-section border-danger border-2 border-opacity-25">
+                                <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-skull-fill text-danger me-2"></i>Kill Op</span>
+                                    <div class="d-flex align-items-center">
+                                        <span class="small text-muted me-2">Tamaño Rival:</span>
+                                        <select class="form-select form-select-sm w-auto fw-bold" id="p2-enemy-size"
+                                            onchange="validateKills('p2'); calculateTotals()">
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10" selected>10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="text-danger fw-bold small">Enemigos Eliminados</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p2-kills', -1, parseInt(document.getElementById('p2-enemy-size').value)); calculateTotals();"><i
+                                                class="bi bi-dash"></i></button>
+
+                                        <span class="score-display mx-3 text-danger" id="p2-kills">0</span>
+
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p2-kills', 1, parseInt(document.getElementById('p2-enemy-size').value)); calculateTotals();"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white p-2 rounded border text-center d-flex justify-content-between align-items-center">
+                                    <span class="small text-muted">PV Base: <strong id="p2-kill-base"
+                                            class="text-dark">0</strong></span>
+                                    <span id="p2-kill-bonus" class="badge bg-warning text-dark d-none shadow-sm"><i
+                                            class="bi bi-trophy-fill me-1"></i>+1 Bono Mayoría</span>
+                                    <span class="small fw-bold">Total Kill Op: <strong id="p2-kill-total"
+                                            class="text-danger fs-5">0</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Row -->
+
+                <!-- Acciones Globales de la Partida -->
+                <div class="text-center p-4 bg-white rounded shadow-sm border">
+                    <h5 class="fw-bold mb-3">Acciones de Fin de Partida</h5>
+                    <button id="btn-reveal-global" class="btn btn-warning btn-lg shadow-sm fw-bold me-3"
+                        onclick="revealPrimaries()">
+                        <i class="bi bi-eye-fill me-2"></i>Revelar Primarias y Finalizar
+                    </button>
+                    <button class="btn btn-outline-secondary btn-lg shadow-sm" onclick="resetGame()">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Reiniciar Partida
+                    </button>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- MODAL DE SELECCIÓN SECRETA DE PRIMARIA -->
+    <div class="modal fade" id="secretModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold"><i class="bi bi-incognito me-2"></i>Selección Secreta - <span
+                            id="modal-player-name" class="text-warning"></span></h5>
+                </div>
+                <div class="modal-body text-center py-5 bg-light">
+                    <p class="text-muted mb-4 px-3">Asegúrate de que tu oponente no esté mirando la pantalla. Selecciona
+                        tu <strong>Operación Primaria</strong> estratégicamente:</p>
+                    <div class="btn-group-vertical w-75 shadow-sm" role="group">
+                        <input type="radio" class="btn-check" name="secretPrimary" id="sec-crit" value="critop"
+                            autocomplete="off">
+                        <label class="btn btn-outline-primary fw-bold p-3 fs-5" for="sec-crit"><i
+                                class="bi bi-crosshair me-2"></i>Crit Op</label>
+
+                        <input type="radio" class="btn-check" name="secretPrimary" id="sec-tac" value="tacop"
+                            autocomplete="off">
+                        <label class="btn btn-outline-primary fw-bold p-3 fs-5" for="sec-tac"><i
+                                class="bi bi-bookmark-star me-2"></i>Tac Op</label>
+
+                        <input type="radio" class="btn-check" name="secretPrimary" id="sec-kill" value="killop"
+                            autocomplete="off">
+                        <label class="btn btn-outline-primary fw-bold p-3 fs-5" for="sec-kill"><i
+                                class="bi bi-skull-fill me-2"></i>Kill Op</label>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center bg-light border-top-0 pb-4">
+                    <button type="button" class="btn btn-dark btn-lg px-5 shadow-sm fw-bold"
+                        onclick="saveSecretPrimary()">Confirmar y Ocultar 🔒</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lógica del Gestor de Partidas -->
+    <script>
+        // Estado del Juego (Para la Selección Secreta)
+        let gameState = {
+            p1: { primary: null },
+            p2: { primary: null },
+            revealed: false,
+            currentPlayerSelecting: 1
+        };
+
+        // Tabla de umbrales para Kill Op (100% fiel al reglamento entregado)
+        const killOpThresholds = {
+            5: [1, 2, 3, 4, 5],
+            6: [1, 2, 4, 5, 6],
+            7: [1, 3, 4, 6, 7],
+            8: [2, 3, 5, 6, 8],
+            9: [2, 4, 5, 7, 9],
+            10: [2, 4, 6, 8, 10],
+            11: [2, 4, 7, 9, 11],
+            12: [2, 5, 7, 10, 12],
+            13: [3, 5, 8, 10, 13],
+            14: [3, 6, 8, 11, 14]
+        };
+
+        // --- SISTEMA DE SELECCIÓN SECRETA ---
+        function openSecretModal(playerNum) {
+            if (gameState.revealed) {
+                alert("Las misiones ya fueron reveladas. Reinicia la partida para escoger nuevas.");
+                return;
+            }
+
+            gameState.currentPlayerSelecting = playerNum;
+            document.getElementById('modal-player-name').innerText = `Jugador ${playerNum}`;
+
+            // Limpiar selección visual del modal
+            document.querySelectorAll('input[name="secretPrimary"]').forEach(r => r.checked = false);
+
+            // Si ya había seleccionado algo antes de revelar, volver a marcarlo en el modal
+            let currentSelection = playerNum === 1 ? gameState.p1.primary : gameState.p2.primary;
+            if (currentSelection) {
+                document.querySelector(`input[name="secretPrimary"][value="${currentSelection}"]`).checked = true;
+            }
+
+            const modal = new bootstrap.Modal(document.getElementById('secretModal'));
+            modal.show();
+        }
+
+        function saveSecretPrimary() {
+            const selected = document.querySelector('input[name="secretPrimary"]:checked');
+            if (!selected) {
+                alert("Debes seleccionar una operación primaria antes de confirmar.");
+                return;
+            }
+
+            const playerNum = gameState.currentPlayerSelecting;
+            const btnId = `p${playerNum}-btn-secret`;
+            const btn = document.getElementById(btnId);
+
+            if (playerNum === 1) {
+                gameState.p1.primary = selected.value;
+            } else {
+                gameState.p2.primary = selected.value;
+            }
+
+            // Cambiar el botón a estado "Fijado"
+            btn.classList.remove('btn-warning');
+            btn.classList.add('btn-success');
+            btn.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Fijada 🔒';
+
+            // Cerrar el modal correctamente
+            const modalEl = document.getElementById('secretModal');
+            const modalInstance = bootstrap.Modal.getInstance(modalEl);
+            modalInstance.hide();
+        }
+
+        // --- SISTEMA DE REVELADO DE PARTIDA ---
+        function revealPrimaries() {
+            if (!gameState.p1.primary || !gameState.p2.primary) {
+                // Cambiamos el 'alert' molesto por la notificación integrada en la interfaz
+                mostrarNotificacion("Falta selección: Ambos jugadores deben fijar su Operación Primaria secreta antes de finalizar.");
+                return;
+            }
+
+            // Abrir el modal de confirmación temático
+            const modal = new bootstrap.Modal(document.getElementById('revealConfirmModal'));
+            modal.show();
+        }
+
+        // Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal
+        function executeRevealPrimaries() {
+            gameState.revealed = true;
+
+            // Ocultar botones de selección y mostrar insignias
+            document.getElementById('p1-btn-secret').classList.add('d-none');
+            document.getElementById('p2-btn-secret').classList.add('d-none');
+
+            const mapNames = { 'critop': 'Crit Op', 'tacop': 'Tac Op', 'killop': 'Kill Op' };
+
+            let p1Badge = document.getElementById('p1-revealed-primary');
+            p1Badge.innerText = mapNames[gameState.p1.primary];
+            p1Badge.classList.remove('d-none');
+            document.getElementById('p1-primary-bonus-display').classList.remove('d-none');
+
+            let p2Badge = document.getElementById('p2-revealed-primary');
+            p2Badge.innerText = mapNames[gameState.p2.primary];
+            p2Badge.classList.remove('d-none');
+            document.getElementById('p2-primary-bonus-display').classList.remove('d-none');
+
+            // Ocultar botón global de revelar
+            document.getElementById('btn-reveal-global').classList.add('d-none');
+
+            calculateTotals();
+
+            showMatchResult();
+        }
+
+        // --- SISTEMA DE DECLARACIÓN DE VICTORIA ---
+        function showMatchResult() {
+            // Extraer los puntos finales desde la interfaz (ya calculados)
+            const p1Score = parseInt(document.getElementById('p1-total-vp').innerText) || 0;
+            const p2Score = parseInt(document.getElementById('p2-total-vp').innerText) || 0;
+
+            // Extraer los nombres de los jugadores (Si está vacío, usamos nombres por defecto)
+            let p1Name = document.querySelector('.player-1 .name-input').value.trim() || "Jugador 1";
+            let p2Name = document.querySelector('.player-2 .name-input').value.trim() || "Jugador 2";
+
+            // Referencias a los elementos del Modal de Resultado
+            const modalHeader = document.getElementById('matchResultHeader');
+            const resultMessage = document.getElementById('matchResultMessage');
+            const resultScore = document.getElementById('matchResultScore');
+            const resultIcon = document.getElementById('matchResultIcon');
+
+            // Lógica de Victoria / Empate
+            if (p1Score > p2Score) {
+                // Gana Jugador 1 (Color Azul)
+                modalHeader.className = "modal-header bg-primary text-white";
+                resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-primary" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(11, 107, 225, 0.4);"></i>';
+                resultMessage.innerHTML = `¡Victoria para <span class="text-primary">${p1Name}</span>!`;
+                resultScore.innerHTML = `Con un total de <b>${p1Score}</b> PV frente a los ${p2Score} PV del enemigo.`;
+            } else if (p2Score > p1Score) {
+                // Gana Jugador 2 (Color Rojo)
+                modalHeader.className = "modal-header bg-danger text-white";
+                resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-danger" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(220, 53, 69, 0.4);"></i>';
+                resultMessage.innerHTML = `¡Victoria para <span class="text-danger">${p2Name}</span>!`;
+                resultScore.innerHTML = `Con un total de <b>${p2Score}</b> PV frente a los ${p1Score} PV del enemigo.`;
+            } else {
+                // Empate (Color Gris/Secundario)
+                modalHeader.className = "modal-header bg-secondary text-white";
+                resultIcon.innerHTML = '<i class="bi bi-shield-shaded text-secondary" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(108, 117, 125, 0.4);"></i>';
+                resultMessage.innerHTML = "¡La escaramuza termina en EMPATE!";
+                resultScore.innerHTML = `Ambos bandos lograron <b>${p1Score}</b> PV. ¡Una batalla reñida!`;
+            }
+
+            // Llamar a Bootstrap para mostrar el Modal
+            const resultModal = new bootstrap.Modal(document.getElementById('matchResultModal'));
+            resultModal.show();
+        }
+
+        // --- SISTEMA DE REINICIO DE PARTIDA ---
+        function resetGame() {
+            // Abrir el modal de confirmación temático
+            const modal = new bootstrap.Modal(document.getElementById('resetConfirmModal'));
+            modal.show();
+        }
+
+        // Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal de reinicio
+        function executeResetGame() {
+            // 1. Reset de Estado Lógico Interno
+            gameState.p1.primary = null;
+            gameState.p2.primary = null;
+            gameState.revealed = false;
+
+            // 2. Reset de Elementos de Jugadores (Nombres, Facciones, TacOps e Interfaz)
+            ['p1', 'p2'].forEach((p, index) => {
+                const playerNum = index === 0 ? '1' : '2';
+
+                // Reestablecer Nombres a vacío (o puedes poner 'Jugador 1' / 'Jugador 2')
+                document.querySelector(`.player-${playerNum} .name-input`).value = "";
+
+                // Reestablecer el selector de Facción al valor por defecto
+                const factionSelect = document.getElementById(`${p}-faction`);
+                if (factionSelect) factionSelect.value = "";
+
+                // Forzar la actualización de TacOps para limpiar el listado y ocultar imágenes de facción antiguas
+                if (typeof updateTacOps === 'function') {
+                    updateTacOps(p);
+                }
+
+                // Reestablecer el selector de TacOp al valor por defecto
+                const tacopSelect = document.getElementById(`${p}-tacop`);
+                if (tacopSelect) tacopSelect.value = "";
+
+                // Restaurar visibilidad del contenedor de TacOps (por si estaba oculto/bloqueado)
+                const tacopContainer = document.getElementById(`${p}-tacop-container`);
+                if (tacopContainer) {
+                    tacopContainer.classList.remove('d-none');
+                    tacopContainer.classList.add('d-flex');
+                }
+
+                // Ocultar la insignia de TacOp revelada
+                const revealedBadge = document.getElementById(`${p}-revealed-badge-container`);
+                if (revealedBadge) {
+                    revealedBadge.classList.add('d-none');
+                }
+
+                // Reset de los botones de Operación Primaria Secreta UI
+                let btnPrimary = document.getElementById(`${p}-btn-secret`);
+                if (btnPrimary) {
+                    btnPrimary.className = 'btn btn-warning btn-sm fw-bold shadow-sm';
+                    btnPrimary.innerHTML = 'Fijar en Secreto 🔒';
+                    btnPrimary.classList.remove('d-none');
+                }
+
+                document.getElementById(`${p}-revealed-primary`).classList.add('d-none');
+                document.getElementById(`${p}-primary-bonus-display`).classList.add('d-none');
+            });
+
+            // Mostrar el botón global de revelar primarias nuevamente
+            document.getElementById('btn-reveal-global').classList.remove('d-none');
+
+            // 3. Reset de Contadores Numéricos (Puntos de Victoria y Bajas)
+            const idsToReset = ['p1-crit-vp', 'p1-tac-vp', 'p1-kills', 'p2-crit-vp', 'p2-tac-vp', 'p2-kills'];
+            idsToReset.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.innerText = "0";
+            });
+
+            // Reset de Puntos de Mando (CP) iniciales
+            const p1Cp = document.getElementById('p1-cp');
+            const p2Cp = document.getElementById('p2-cp');
+            if (p1Cp) p1Cp.innerText = "2";
+            if (p2Cp) p2Cp.innerText = "2";
+
+            // Volver el Punto de Inflexión (Turno) al TP1
+            const tp1Radio = document.getElementById('tp1');
+            if (tp1Radio) tp1Radio.checked = true;
+
+            // Recalcular los totales para que la UI muestre 0 puntos globales
+            calculateTotals();
+
+            // Limpiar el autoguardado del LocalStorage para que no recuerde la partida anterior
+            if (typeof localStorage !== 'undefined') {
+                localStorage.removeItem('killTeamMatchState');
+            }
+
+            // Notificación flotante estética del sistema
+            mostrarNotificacion("Partida reiniciada por completo. Tablero limpio.");
+        }
+
+        // --- SISTEMA DE CÁLCULO GENERAL ---
+
+        function updateCounter(elementId, amount, max = 99) {
+            const el = document.getElementById(elementId);
+            let current = parseInt(el.innerText);
+            let newVal = current + amount;
+
+            if (newVal >= 0 && newVal <= max) {
+                el.innerText = newVal;
+            }
+        }
+
+        function calculatePlayerKillScore(kills, enemySize) {
+            const thresholds = killOpThresholds[enemySize];
+            let score = 0;
+            // Evaluamos la tabla: un punto por cada barrera superada
+            for (let i = 0; i < thresholds.length; i++) {
+                if (kills >= thresholds[i]) score++;
+            }
+            return score;
+        }
+
+        function calculateTotals() {
+            // 1. Obtener valores de J1
+            let p1Crit = parseInt(document.getElementById('p1-crit-vp').innerText);
+            let p1Tac = parseInt(document.getElementById('p1-tac-vp').innerText);
+            let p1EnemySize = parseInt(document.getElementById('p1-enemy-size').value);
+            let p1Kills = parseInt(document.getElementById('p1-kills').innerText);
+            let p1KillBase = calculatePlayerKillScore(p1Kills, p1EnemySize);
+
+            // 2. Obtener valores de J2
+            let p2Crit = parseInt(document.getElementById('p2-crit-vp').innerText);
+            let p2Tac = parseInt(document.getElementById('p2-tac-vp').innerText);
+            let p2EnemySize = parseInt(document.getElementById('p2-enemy-size').value);
+            let p2Kills = parseInt(document.getElementById('p2-kills').innerText);
+            let p2KillBase = calculatePlayerKillScore(p2Kills, p2EnemySize);
+
+            // 3. Evaluar el Bono de Mayoría en Kill Op (+1 PV extra)
+            let p1KillBonus = 0;
+            let p2KillBonus = 0;
+            document.getElementById('p1-kill-bonus').classList.add('d-none');
+            document.getElementById('p2-kill-bonus').classList.add('d-none');
+
+            if (p1KillBase > p2KillBase) {
+                p1KillBonus = 1;
+                document.getElementById('p1-kill-bonus').classList.remove('d-none');
+            } else if (p2KillBase > p1KillBase) {
+                p2KillBonus = 1;
+                document.getElementById('p2-kill-bonus').classList.remove('d-none');
+            }
+
+            let p1KillTotal = Math.min(6, p1KillBase + p1KillBonus);
+            let p2KillTotal = Math.min(6, p2KillBase + p2KillBonus);
+
+            document.getElementById('p1-kill-base').innerText = p1KillBase;
+            document.getElementById('p1-kill-total').innerText = p1KillTotal;
+            document.getElementById('p2-kill-base').innerText = p2KillBase;
+            document.getElementById('p2-kill-total').innerText = p2KillTotal;
+
+            // 4. Calcular el Bono de Operación Primaria (Solo si ya fue revelado)
+            let p1PrimaryBonus = 0;
+            let p2PrimaryBonus = 0;
+
+            if (gameState.revealed) {
+                let p1PrimaryType = gameState.p1.primary;
+                let p2PrimaryType = gameState.p2.primary;
+
+                let p1PrimaryScore = (p1PrimaryType === 'critop') ? p1Crit : (p1PrimaryType === 'tacop' ? p1Tac : p1KillTotal);
+                let p2PrimaryScore = (p2PrimaryType === 'critop') ? p2Crit : (p2PrimaryType === 'tacop' ? p2Tac : p2KillTotal);
+
+                // Mitad redondeada al alza (Math.ceil)
+                p1PrimaryBonus = Math.ceil(p1PrimaryScore / 2);
+                p2PrimaryBonus = Math.ceil(p2PrimaryScore / 2);
+
+                document.getElementById('p1-primary-bonus-display').innerText = `+${p1PrimaryBonus} PV (Bono Primaria)`;
+                document.getElementById('p2-primary-bonus-display').innerText = `+${p2PrimaryBonus} PV (Bono Primaria)`;
+            }
+
+            // 5. Total Final de Puntos de Victoria
+            let p1GrandTotal = p1Crit + p1Tac + p1KillTotal + p1PrimaryBonus;
+            let p2GrandTotal = p2Crit + p2Tac + p2KillTotal + p2PrimaryBonus;
+
+            document.getElementById('p1-total-vp').innerText = p1GrandTotal;
+            document.getElementById('p2-total-vp').innerText = p2GrandTotal;
+
+            saveGameState();
+        }
+
+        function validateKills(playerPrefix) {
+            // Obtenemos los elementos HTML según el jugador (p1 o p2)
+            let enemySize = parseInt(document.getElementById(playerPrefix + '-enemy-size').value);
+            let killsDisplay = document.getElementById(playerPrefix + '-kills');
+            let currentKills = parseInt(killsDisplay.innerText);
+
+            // Si las muertes actuales superan el nuevo tamaño rival, las reducimos al tope
+            if (currentKills > enemySize) {
+                killsDisplay.innerText = enemySize;
+            }
+        }
+
+        // 1. Diccionario de Traducciones de Facciones
+        const factionTranslations = {
+            'intercessors': 'Ángeles de la Muerte',
+            'battleclade': 'Clado de Batalla',
+            'deathwatch': 'Vigias de la Muerte',
+            'elucidian-starstrider': 'Recorrestrellas Elucidianos',
+            'hunter-clade': 'Clado de Caza',
+            'imperial-navy-breachers': 'Abordadores de la Armada Imperial',
+            'inquisitorial-agent': 'Operativos Inquisitoriales',
+            'kasrkin': 'Kasrkin',
+            'novitiates': 'Novicias',
+            'phobos': 'Asaltantes Phobos',
+            'ratling': 'Rátido',
+            'sanctifiers': 'Santificadores',
+            'scouts': 'Escuadra de Exploradores',
+            'tempestus-aquilons': 'Tempestus Aquilons',
+            'wolf-scouts': 'Exploradores Lobo',
+            'strike-force-variel': 'Fuerza de Ataque Variel',
+            'exaction-squad': 'Escuadra de Exacción',
+            'veteran-guardsmen': 'Korps de la Muerte',
+            'celestian-insidiants': 'Insidiadora Celeste',
+            'blooded': 'Ungidos',
+            'chaos-cult': 'Culto del Caos',
+            'fellgor-ravagers': 'Expoliagores Impíos',
+            'gellerpox': 'Infectados Geller',
+            'goremongers': 'Siembrasangres',
+            'legionary': 'Legionarios',
+            'nemesis-claw': 'Garra Némesis',
+            'plague-marines': 'Marines de Plaga',
+            'warpcoven': 'Aquelarre Disforme',
+            'murderwing': 'Ala Asesina',
+            'blades-of-khaine': 'Filos de Khaine',
+            'brood-brothers': 'Hermanos de Progenie',
+            'canoptek': 'Círculo Canóptico',
+            'corsair-voidscarred': 'Corsarios del Vacío',
+            'farstalker-kinband': 'Bandaestirpe Acechante',
+            'hearthkyn-salvager': 'Sucesores Recuperadores',
+            'hierotek': 'Círculo de Hierotecnólogos',
+            'kabalite': 'Mano del Arconte',
+            'kommandos': 'Orkomandos',
+            'mandrakes': 'Mandrágoras',
+            'pathfinders': 'Rastreadores T\'au',
+            'raveners': 'Mantifex',
+            'vespid-stingwings': 'Aguijones Alados Véspid',
+            'void-dancer-troupe': 'Compañia de Bailarines del Vacío',
+            'wrecka-krew': 'Demoledorez',
+            'wyrmblade': 'FiloSierpe',
+            'yaegirs': 'Yaegirs Hernkyn',
+            'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo'
+        };
+
+        // Traducciones visuales para los arquetipos
+        const archetypeTranslations = {
+            'recon': 'Reconocimiento',
+            'security': 'Seguridad',
+            'infiltration': 'Infiltración',
+            'seek-destroy': 'Búsqueda y Destrucción'
+        };
+
+        // Variables para almacenar los datos en memoria
+        let dataFactions = {};
+        let dataTacOps = {};
+        let dataCritOps = {};
+
+        // 2. Carga Asíncrona de ambos JSON
+        async function initializeMatchData() {
+            try {
+                // Agregamos CritsOps.json a nuestra promesa concurrente
+                const [factionsRes, tacopsRes, critopsRes] = await Promise.all([
+                    fetch('tacops.json'),
+                    fetch('tacopsgenerales.json'),
+                    fetch('CritsOps.json')
+                ]);
+
+                dataFactions = await factionsRes.json();
+                dataTacOps = await tacopsRes.json();
+                dataCritOps = await critopsRes.json(); // Cargamos el nuevo JSON
+
+                populateFactions();
+                populateCritOps(); // Llamamos a la función para llenar el selector
+
+                loadGameState();
+                calculateTotals();
+
+            } catch (error) {
+                console.error("Error cargando los datos del juego:", error);
+            }
+        }
+
+        // Función para llenar el selector global de CritOps
+        function populateCritOps() {
+            const select = document.getElementById('global-critop');
+            if (!select) return;
+
+            for (const [key, op] of Object.entries(dataCritOps)) {
+                const option = document.createElement('option');
+                option.value = key; // La llave (ej. "secure", "loot")
+                option.textContent = op.name_es || key; // El nombre en español
+                select.appendChild(option);
+            }
+        }
+
+        // 3. Llenar los selectores de facción ordenados alfabéticamente en español
+        function populateFactions() {
+            // Obtenemos las llaves del JSON y las ordenamos según su traducción
+            const sortedFactionKeys = Object.keys(dataFactions).sort((a, b) => {
+                const nameA = factionTranslations[a] || a;
+                const nameB = factionTranslations[b] || b;
+                return nameA.localeCompare(nameB);
+            });
+
+            ['p1', 'p2'].forEach(playerPrefix => {
+                const select = document.getElementById(`${playerPrefix}-faction`);
+                if (!select) return;
+
+                sortedFactionKeys.forEach(key => {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = factionTranslations[key] || key;
+                    select.appendChild(option);
+                });
+            });
+        }
+
+        // 4. Lógica de filtrado cuando se elige una facción
+        function updateTacOps(playerPrefix) {
+            const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
+            const tacopSelect = document.getElementById(`${playerPrefix}-tacop`);
+            const archetypesDisplay = document.getElementById(`${playerPrefix}-archetypes-display`);
+
+            // --- RESET DE SEGURIDAD PARA TACOPS SECRETAS ---
+            // Si el jugador cambia de facción, reiniciamos toda la UI de secretos a su estado original
+            document.getElementById(`${playerPrefix}-tacop-container`)?.classList.remove('d-none');
+            document.getElementById(`${playerPrefix}-tacop-container`)?.classList.add('d-flex');
+            document.getElementById(`${playerPrefix}-tacop-status`)?.classList.add('d-none');
+            document.getElementById(`${playerPrefix}-tacop-status`)?.classList.remove('d-flex');
+            document.getElementById(`${playerPrefix}-secret-badge`)?.classList.remove('d-none');
+            document.getElementById(`${playerPrefix}-btn-reveal-tacop`)?.classList.remove('d-none');
+            document.getElementById(`${playerPrefix}-revealed-badge`)?.classList.add('d-none');
+            let lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
+            if (lockBtn) {
+                lockBtn.disabled = true;
+            }
+            let infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
+            if (infoBtn) infoBtn.disabled = true;
+
+            document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.remove('d-flex');
+            document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.add('d-none');
+
+            if (!factionKey || !dataFactions[factionKey]) return;
+
+            // --- ¡NUEVO CÓDIGO! Actualización visual de la imagen ---
+            const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
+            if (imgEl) {
+                // En la web, siempre se usan barras normales (/) para las rutas, no contrabarras (\)
+                imgEl.src = `./resources/facciones/${factionKey}.png`;
+            }
+
+            // Obtener los arquetipos permitidos para esta facción
+            const allowedArchetypes = dataFactions[factionKey].archetypes;
+
+            // Mostrarle al usuario qué arquetipos tiene disponibles
+            const translatedArchs = allowedArchetypes.map(a => archetypeTranslations[a] || a).join(' / ');
+            archetypesDisplay.innerHTML = `Arquetipos permitidos: <strong>${translatedArchs}</strong>`;
+
+            // Limpiar el selector de TacOps
+            tacopSelect.innerHTML = '<option value="" selected disabled>Selecciona tu TacOp...</option>';
+
+            // Filtrar e inyectar solo las TacOps que coincidan con los arquetipos
+            for (const [tacopName, tacopData] of Object.entries(dataTacOps)) {
+                if (allowedArchetypes.includes(tacopData.archetype)) {
+                    const option = document.createElement('option');
+                    option.value = tacopName;
+                    // Mostramos el nombre de la misión y a qué arquetipo pertenece
+                    option.textContent = `${tacopName} (${archetypeTranslations[tacopData.archetype] || tacopData.archetype})`;
+                    tacopSelect.appendChild(option);
+                }
+            }
+
+            // Habilitar el selector
+            tacopSelect.disabled = false;
+        }
+
+        // 1. Detectar en qué turno estamos (Asumiendo que tus radio buttons de turnos tienen IDs tp1, tp2, tp3, tp4)
+        function getCurrentTurn() {
+            if (document.getElementById('tp4') && document.getElementById('tp4').checked) return 4;
+            if (document.getElementById('tp3') && document.getElementById('tp3').checked) return 3;
+            if (document.getElementById('tp2') && document.getElementById('tp2').checked) return 2;
+            return 1; // Por defecto es el turno 1
+        }
+
+        // 2. Calculadora de límites acumulativos
+        function calculateDynamicLimit(missionType, missionKey, currentTurn) {
+            let data = missionType === 'crit' ? dataCritOps[missionKey] : dataTacOps[missionKey];
+
+            // Si no hay datos o no hay límites, retornamos un máximo de seguridad (ej. 99)
+            if (!data || !data.limite_puntos || data.limite_puntos.length === 0) return 99;
+
+            let limites = data.limite_puntos[0];
+            let maxScore = 0;
+
+            // Sumamos los límites desde el turno 1 hasta el turno actual
+            for (let i = 1; i <= currentTurn; i++) {
+                maxScore += (limites[`ronda_${i}`] || 0);
+            }
+
+            return maxScore;
+        }
+
+        // 3. Modificar tu updateCounter para que use la lógica de límites dinámicos
+        function updateCounter(id, delta, defaultLimit = 14) {
+            let el = document.getElementById(id);
+            if (!el) return;
+
+            let currentVal = parseInt(el.innerText);
+            let limit = defaultLimit;
+
+            let isCrit = id.includes('crit-vp');
+            let isTac = id.includes('tac-vp');
+
+            // Obtenemos el turno actual al principio para usarlo en los mensajes
+            let currentTurn = getCurrentTurn();
+
+            // Interceptamos si es un puntaje de CritOp o TacOp
+            if (isCrit || isTac) {
+                let playerPrefix = id.split('-')[0]; // Extrae 'p1' o 'p2'
+
+                if (isCrit) {
+                    let critKey = document.getElementById('global-critop').value;
+                    if (!critKey) {
+                        // REEMPLAZO 1: Cambiamos alert() por mostrarNotificacion()
+                        mostrarNotificacion("Falta selección: Por favor, selecciona primero la Misión Crítica (CritOp) de la partida.");
+                        return;
+                    }
+                    limit = calculateDynamicLimit('crit', critKey, currentTurn);
+                } else if (isTac) {
+                    let tacKey = document.getElementById(`${playerPrefix}-tacop`).value;
+                    if (!tacKey) {
+                        // REEMPLAZO 2: Cambiamos alert() por mostrarNotificacion()
+                        mostrarNotificacion("Falta selección: Por favor, selecciona primero tu Operación Táctica (TacOp).");
+                        return;
+                    }
+                    limit = calculateDynamicLimit('tac', tacKey, currentTurn);
+                }
+            }
+
+            let newVal = currentVal + delta;
+
+            // --- NUEVA LÓGICA DE FEEDBACK AL USUARIO ---
+            // Si el usuario intenta sumar (delta > 0) y supera el límite dinámico
+            if (delta > 0 && newVal > limit) {
+                if (currentTurn === 1) {
+                    mostrarNotificacion("No permitido: Por regla general, no se pueden anotar puntos de TacOp o CritOp en el Punto de Inflexión 1.");
+                } else {
+                    mostrarNotificacion(`Límite alcanzado: El máximo de puntos permitidos para esta operación hasta el Punto de Inflexión ${currentTurn} es de ${limit} PV.`);
+                }
+                newVal = limit; // Bloqueamos el valor al límite máximo
+            }
+
+            // Restricciones finales de seguridad
+            if (newVal < 0) newVal = 0;
+            if (newVal > limit) newVal = limit;
+
+            el.innerText = newVal;
+            if (typeof calculateTotals === 'function') calculateTotals();
+        }
+
+        // 4. (Opcional pero recomendado) Función de validación masiva si el usuario cambia de turno hacia atrás
+        function validateAllScores() {
+            ['p1', 'p2'].forEach(playerPrefix => {
+                let currentTurn = getCurrentTurn();
+
+                // Revisar CritOp
+                let critEl = document.getElementById(`${playerPrefix}-crit-vp`);
+                let critKey = document.getElementById('global-critop').value;
+                if (critEl && critKey) {
+                    let limit = calculateDynamicLimit('crit', critKey, currentTurn);
+                    if (parseInt(critEl.innerText) > limit) critEl.innerText = limit;
+                }
+
+                // Revisar TacOp
+                let tacEl = document.getElementById(`${playerPrefix}-tac-vp`);
+                let tacKey = document.getElementById(`${playerPrefix}-tacop`)?.value;
+                if (tacEl && tacKey) {
+                    let limit = calculateDynamicLimit('tac', tacKey, currentTurn);
+                    if (parseInt(tacEl.innerText) > limit) tacEl.innerText = limit;
+                }
+            });
+            calculateTotals();
+        }
+
+        //tacops secretas
+        // 1. Habilita el botón de bloqueo e información al seleccionar TacOp
+        function enableTacOpLock(playerPrefix) {
+            const lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
+            const infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
+            if (lockBtn) lockBtn.disabled = false;
+            if (infoBtn) infoBtn.disabled = false;
+        }
+
+        // 2. Fija la TacOp en secreto (Oculta selectores y muestra estado)
+        function lockTacOp(playerPrefix) {
+            // Ocultar el contenedor de selección
+            document.getElementById(`${playerPrefix}-tacop-container`).classList.remove('d-flex');
+            document.getElementById(`${playerPrefix}-tacop-container`).classList.add('d-none');
+
+            // Mostrar el estado de TacOp fijada (secreta)
+            document.getElementById(`${playerPrefix}-tacop-status`).classList.remove('d-none');
+            document.getElementById(`${playerPrefix}-tacop-status`).classList.add('d-flex');
+        }
+
+        // 3. Transición del Estado 2 al Estado 3 (Revelar en la partida)
+        function revealTacOp(playerPrefix) {
+            const selectEl = document.getElementById(`${playerPrefix}-tacop`);
+            const selectedText = selectEl.options[selectEl.selectedIndex].text;
+
+            document.getElementById(`${playerPrefix}-secret-badge`).classList.add('d-none');
+            document.getElementById(`${playerPrefix}-btn-reveal-tacop`).classList.add('d-none');
+
+            // Ahora inyectamos el texto en el contenedor nuevo y lo mostramos como flexbox
+            const revealedBadge = document.getElementById(`${playerPrefix}-revealed-badge`);
+            revealedBadge.innerText = selectedText;
+
+            const revealedContainer = document.getElementById(`${playerPrefix}-revealed-badge-container`);
+            revealedContainer.classList.remove('d-none');
+            revealedContainer.classList.add('d-flex');
+        }
+
+        // --- SISTEMA DE NOTIFICACIONES ---
+        function mostrarNotificacion(mensaje) {
+            const toastEl = document.getElementById('limitToast');
+            const toastMessage = document.getElementById('toastMessage');
+
+            // Cambiamos el texto de la notificación
+            toastMessage.innerText = mensaje;
+
+            // Inicializamos y mostramos el Toast usando Bootstrap
+            const toast = new bootstrap.Toast(toastEl, { delay: 4000 }); // Desaparece en 4 segundos
+            toast.show();
+        }
+
+        // --- SISTEMA DE VISUALIZACIÓN DE REGLAS (TARJETA CRITOP) ---
+        function showCritOpDetails() {
+            const selectEl = document.getElementById('global-critop');
+            const critKey = selectEl.value;
+
+            // Si el jugador intenta ver info sin seleccionar misión
+            if (!critKey) {
+                mostrarNotificacion("Falta selección: Por favor, selecciona primero la Misión Crítica (CritOp) para leer sus detalles.");
+                return;
+            }
+
+            const op = dataCritOps[critKey];
+            if (!op) return;
+
+            // 1. Manejo de Reglas Adicionales (Opcional)
+            let additionalRulesHtml = '';
+            if (op.aditional_rules) {
+                additionalRulesHtml = `
+                    <div class="victory-points mb-3">
+                        <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
+                        <div class="small text-start text-muted lh-sm">${op.aditional_rules}</div>
+                    </div>
+                `;
+            }
+
+            // 2. Manejo de las Acciones de Misión
+            let actionHtml = '';
+            if (op.action_mission && op.action_mission.length > 0) {
+                // Iteramos por si hay más de una acción (como en la misión "Datos")
+                op.action_mission.forEach(am => {
+                    if (am.action_mission_name) {
+                        actionHtml += `
+                            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+                            <div class="unique-actions-section mb-3 shadow-sm rounded">
+                                <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
+                                    <div class="fw-bold">${am.action_mission_name}</div>
+                                    <div class="ap-box bg-secondary px-2 rounded small">${am.action_mission_cost}</div>
+                                </div>
+                                <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
+                                    ${am.action_mission_yes ? `
+                                    <p class="mb-2 d-flex align-items-start">
+                                        <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
+                                        <span>${am.action_mission_yes}</span>
+                                    </p>` : ''}
+            
+                                    ${am.action_mission_no ? `
+                                    <p class="mb-0 d-flex align-items-start">
+                                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                                        <span>${am.action_mission_no}</span>
+                                    </p>` : ''}
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+            }
+
+            // 3. Manejo de los Puntos de Victoria (Ojo con el nombre de la variable en tu JSON: victoy_points)
+            let vpHtml = '';
+            if (op.victoy_points) {
+                vpHtml = `
+                    <div class="victory-points mt-auto">
+                        <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
+                        <div class="small text-start lh-sm">${op.victoy_points}</div>
+                    </div>
+                `;
+            }
+
+            // 4. Armar el título del Modal (Simple, ya que la tarjeta lleva el título principal)
+            document.getElementById('critOpModalTitle').innerHTML = `
+                <i class="bi bi-info-circle-fill text-warning me-2"></i>Detalles de Misión
+            `;
+
+            // 5. Inyectar la Tarjeta idéntica a critops.html en el cuerpo del Modal
+            const bodyEl = document.getElementById('critOpModalBody');
+            bodyEl.innerHTML = `
+                <div class="card shadow border-0 bg-light mx-auto" style="max-width: 600px;">
+                    <div class="position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center shadow-sm" style="background-color: #ff5418; font-size: 1.1rem;">
+                        <span>CRIT OP</span>
+                    </div>
+            
+                    <div class="p-4 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom text-center">
+                        <h4 class="name fw-bold text-dark mb-4 text-uppercase">${op.name_es}</h4>
+                        <div class="mission-container pt-0 flex-grow-1 d-flex flex-column text-start">
+                            ${additionalRulesHtml}
+                            ${actionHtml}
+                            ${vpHtml}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // 6. Mostrar el Modal
+            const modal = new bootstrap.Modal(document.getElementById('critOpInfoModal'));
+            modal.show();
+        }
+
+        // --- SISTEMA DE VISUALIZACIÓN DE REGLAS (TARJETA TACOP) ---
+        function showTacOpDetails(playerPrefix) {
+            const selectEl = document.getElementById(`${playerPrefix}-tacop`);
+            const tacKey = selectEl.value;
+
+            if (!tacKey) {
+                mostrarNotificacion("Falta selección: Por favor, selecciona primero tu Operación Táctica.");
+                return;
+            }
+
+            const op = dataTacOps[tacKey];
+            if (!op) return;
+
+            // Colores e iconos por arquetipo (Misma lógica de tacops.html)
+            const archName = archetypeTranslations[op.archetype] || op.archetype;
+
+            function getCustomColor(archetype) {
+                switch (archetype) {
+                    case 'recon': return '#f05c22';
+                    case 'security': return '#0b6be1';
+                    case 'infiltration': return '#5f5f5f';
+                    case 'seek-destroy': return '#bd0003';
+                    default: return '#6c757d';
+                }
+            }
+
+            function getArchetypeIcon(archetype) {
+                switch (archetype) {
+                    case 'recon': return './resources/game_rules_files/recon.svg';
+                    case 'security': return './resources/game_rules_files/security.svg';
+                    case 'infiltration': return './resources/game_rules_files/infiltration.svg';
+                    case 'seek-destroy': return './resources/game_rules_files/seek-destroy.svg';
+                    default: return '';
+                }
+            }
+
+            // 1. Manejo de Reglas Adicionales
+            let additionalRulesHtml = '';
+            if (op.additional_rules) {
+                if (Array.isArray(op.additional_rules)) {
+                    additionalRulesHtml = `
+                        <div class="victory-points mb-3">
+                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
+                            <ul class="small text-start text-muted ps-3 mb-0">${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul>
+                        </div>`;
+                } else {
+                    additionalRulesHtml = `
+                        <div class="victory-points mb-3">
+                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
+                            <p class="text-muted small text-start mb-0">${op.additional_rules}</p>
+                        </div>`;
+                }
+            }
+
+            // 2. Manejo de Acción de Misión
+            let actionHtml = '';
+            if (op.action_mission_name) {
+                actionHtml = `
+                    <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+                    <div class="unique-actions-section mb-3 shadow-sm rounded">
+                        <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
+                            <div class="fw-bold">${op.action_mission_name}</div>
+                            <div class="ap-box bg-secondary px-2 rounded small">${op.action_mission_cost}</div>
+                        </div>
+                        <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
+                            ${op.action_mission_yes ? `
+                            <p class="mb-2 d-flex align-items-start">
+                                <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
+                                <span>${op.action_mission_yes}</span>
+                            </p>` : ''}
+    
+                            ${op.action_mission_no ? `
+                            <p class="mb-0 d-flex align-items-start">
+                                <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                                <span>${op.action_mission_no}</span>
+                            </p>` : ''}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // 3. Manejo de Puntos de Victoria (Soporta Arrays)
+            let vpHtml = '';
+            if (op.victoy_points) {
+                if (Array.isArray(op.victoy_points)) {
+                    const vpList = [...op.victoy_points];
+                    let limitText = '';
+                    // Si el último elemento es un límite de texto, lo separamos para pintarlo rojo
+                    if (vpList[vpList.length - 1] && vpList[vpList.length - 1].includes("No puedes obtener más de")) {
+                        limitText = `<p class="fst-italic text-danger small mt-2 mb-0 text-start">${vpList.pop()}</p>`;
+                    }
+                    vpHtml = `
+                        <div class="victory-points mt-auto">
+                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
+                            <ul class="text-start small mb-1 ps-3 text-muted">${vpList.map(vp => `<li>${vp}</li>`).join('')}</ul>
+                            ${limitText}
+                        </div>`;
+                } else {
+                    vpHtml = `
+                        <div class="victory-points mt-auto">
+                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
+                            <p class="small mb-0 text-start text-muted">${op.victoy_points}</p>
+                        </div>`;
+                }
+            }
+
+            // 4. Armar Modal
+            document.getElementById('tacOpModalTitle').innerHTML = `
+                <i class="bi bi-bookmark-star-fill text-primary me-2"></i>Detalles de TacOp
+            `;
+
+            const bodyEl = document.getElementById('tacOpModalBody');
+            bodyEl.innerHTML = `
+                <div class="card shadow border-0 bg-light mx-auto" style="max-width: 600px;">
+                    <div class="position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center shadow-sm" style="background-color: ${getCustomColor(op.archetype)}; font-size: 1.1rem;">
+                        <img src="${getArchetypeIcon(op.archetype)}" class="svg-white" alt="Icono" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
+                        <span>${archName.toUpperCase()}</span>
+                    </div>
+    
+                    <div class="p-4 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom text-center">
+                        <h4 class="name fw-bold text-dark mb-3 text-uppercase">${op.name}</h4>
+                        <div class="mission-container pt-0 flex-grow-1 d-flex flex-column text-start">
+                            <div class="victory-points mb-3">
+                                <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Revelar</div>
+                                <div class="small text-start text-muted">${op.Reveal}</div>
+                            </div>
+                            ${additionalRulesHtml}
+                            ${actionHtml}
+                            ${vpHtml}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // 5. Mostrar Modal
+            const modal = new bootstrap.Modal(document.getElementById('tacOpInfoModal'));
+            modal.show();
+        }
+
+        // --- SISTEMA DE AUTOGUARDADO (LOCALSTORAGE) ---
+
+        function saveGameState() {
+            // Si los datos aún no cargan de los JSON, no guardamos estados vacíos
+            if (Object.keys(dataFactions).length === 0) return;
+
+            const state = {
+                globalCritOp: document.getElementById('global-critop') ? document.getElementById('global-critop').value : "",
+                tp: document.querySelector('input[name="tpRadio"]:checked').id,
+                internalGameState: gameState,
+                p1: getPlayerState('p1'),
+                p2: getPlayerState('p2')
+            };
+
+            // Guardamos todo en formato JSON en el navegador
+            localStorage.setItem('killTeamMatchState', JSON.stringify(state));
+        }
+
+        function getPlayerState(p) {
+            // Para identificar si es Jugador 1 o Jugador 2 en la clase CSS del input
+            const playerClass = p === 'p1' ? '1' : '2';
+
+            return {
+                name: document.querySelector(`.player-${playerClass} .name-input`).value,
+                faction: document.getElementById(`${p}-faction`).value,
+                tacop: document.getElementById(`${p}-tacop`).value,
+                // Detectamos el estado de la TacOp leyendo la interfaz visual
+                tacopLocked: !document.getElementById(`${p}-tacop-container`).classList.contains('d-flex'),
+                tacopRevealed: !document.getElementById(`${p}-revealed-badge-container`).classList.contains('d-none'),
+                cp: document.getElementById(`${p}-cp`).innerText,
+                critVp: document.getElementById(`${p}-crit-vp`).innerText,
+                tacVp: document.getElementById(`${p}-tac-vp`).innerText,
+                enemySize: document.getElementById(`${p}-enemy-size`).value,
+                kills: document.getElementById(`${p}-kills`).innerText
+            };
+        }
+
+        function loadGameState() {
+            const savedStateStr = localStorage.getItem('killTeamMatchState');
+
+            // Si no hay partida guardada, no hacemos nada y dejamos que cargue normal
+            if (!savedStateStr) return;
+
+            try {
+                const state = JSON.parse(savedStateStr);
+
+                // 1. Restaurar Globals
+                if (state.globalCritOp) document.getElementById('global-critop').value = state.globalCritOp;
+                if (state.tp) document.getElementById(state.tp).checked = true;
+                if (state.internalGameState) gameState = state.internalGameState;
+
+                // 2. Restaurar Jugadores
+                restorePlayerState('p1', state.p1);
+                restorePlayerState('p2', state.p2);
+
+                // 3. Restaurar Interfaz de Operaciones Primarias Secretas
+                if (gameState.revealed) {
+                    document.getElementById('p1-btn-secret').classList.add('d-none');
+                    document.getElementById('p2-btn-secret').classList.add('d-none');
+                    document.getElementById('btn-reveal-global').classList.add('d-none');
+
+                    const mapNames = { 'critop': 'Crit Op', 'tacop': 'Tac Op', 'killop': 'Kill Op' };
+
+                    ['p1', 'p2'].forEach(p => {
+                        let pBadge = document.getElementById(`${p}-revealed-primary`);
+                        pBadge.innerText = mapNames[gameState[p].primary];
+                        pBadge.classList.remove('d-none');
+                        document.getElementById(`${p}-primary-bonus-display`).classList.remove('d-none');
+                    });
+                } else {
+                    // Si estaban fijadas pero no reveladas
+                    ['p1', 'p2'].forEach(p => {
+                        if (gameState[p].primary) {
+                            const btn = document.getElementById(`${p}-btn-secret`);
+                            btn.classList.remove('btn-warning');
+                            btn.classList.add('btn-success');
+                            btn.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Fijada 🔒';
+                        }
+                    });
+                }
+
+                // Mostrar notificación de éxito
+                mostrarNotificacion("Partida cargada exitosamente.");
+            } catch (e) {
+                console.error("Error cargando partida guardada:", e);
+                localStorage.removeItem('killTeamMatchState'); // Si hay un error, borramos el archivo corrupto
+            }
+        }
+
+        function restorePlayerState(p, pState) {
+            if (!pState) return;
+
+            const playerClass = p === 'p1' ? '1' : '2';
+            document.querySelector(`.player-${playerClass} .name-input`).value = pState.name || "";
+
+            if (pState.faction) {
+                document.getElementById(`${p}-faction`).value = pState.faction;
+                updateTacOps(p); // Reconstruye el selector y la imagen
+            }
+
+            if (pState.tacop) {
+                document.getElementById(`${p}-tacop`).value = pState.tacop;
+                enableTacOpLock(p);
+            }
+
+            // Restaurar los estados visuales que updateTacOps reseteó
+            if (pState.tacopRevealed) {
+                lockTacOp(p);
+                revealTacOp(p);
+            } else if (pState.tacopLocked) {
+                lockTacOp(p);
+            }
+
+            // Restaurar contadores
+            document.getElementById(`${p}-cp`).innerText = pState.cp || "2";
+            document.getElementById(`${p}-crit-vp`).innerText = pState.critVp || "0";
+            document.getElementById(`${p}-tac-vp`).innerText = pState.tacVp || "0";
+
+            if (pState.enemySize) {
+                document.getElementById(`${p}-enemy-size`).value = pState.enemySize;
+            }
+
+            document.getElementById(`${p}-kills`).innerText = pState.kills || "0";
+        }
+
+        // Ejecutar la carga cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeMatchData();
+
+            // Detectar cuando el usuario cambia su nombre para guardarlo
+            document.querySelectorAll('.name-input').forEach(input => {
+                input.addEventListener('blur', saveGameState);
+            });
+        });
+
+        // Ejecutar la carga cuando el documento esté listo
+        document.addEventListener('DOMContentLoaded', initializeMatchData);
+
+        // Primera carga
+        document.addEventListener('DOMContentLoaded', calculateTotals);
+
+    </script>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+        <div id="limitToast" class="toast align-items-center text-bg-warning border-0 shadow" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-bold text-dark">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i><span id="toastMessage">Mensaje de prueba</span>
+                </div>
+                <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="critOpInfoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg border-warning border-top border-4">
+                <div class="modal-header bg-light border-bottom-0 pb-0">
+                    <h4 class="modal-title fw-bold text-dark" id="critOpModalTitle">
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light pt-2" id="critOpModalBody">
+                </div>
+                <div class="modal-footer bg-white border-top justify-content-center py-2">
+                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="killOpModal" tabindex="-1" aria-labelledby="killOpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg border-danger border-2">
+
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title fw-bold" id="killOpModalLabel">
+                        <i class="bi bi-skull-fill me-2"></i>Puntuación Kill Op
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <table class="table table-bordered table-striped table-hover text-center m-0 align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th colspan="2" class="bg-dark"></th>
+                                <th colspan="5" class="bg-danger text-white fw-bold py-2">Puntos de KillOp</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="bg-dark"></th>
+                                <th class="table-secondary" style="width: 14%;">1</th>
+                                <th class="table-secondary" style="width: 14%;">2</th>
+                                <th class="table-secondary" style="width: 14%;">3</th>
+                                <th class="table-secondary" style="width: 14%;">4</th>
+                                <th class="table-secondary" style="width: 14%;">5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="10" class="fw-bold text-uppercase bg-dark text-white text-wrap px-2"
+                                    style="writing-mode: vertical-lr; transform: rotate(180deg); letter-spacing: 1px; font-size: 0.85rem;">
+                                    Tamaño del comando rival
+                                </td>
+                                <td class="table-dark"><strong>5</strong></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>6</strong></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>7</strong></td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>8</strong></td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>9</strong></td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>10</strong></td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>11</strong></td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>7</td>
+                                <td>9</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>12</strong></td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>10</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>13</strong></td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>8</td>
+                                <td>10</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>14</strong></td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>11</td>
+                                <td>14</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-footer bg-light py-1">
+                    <button type="button" class="btn btn-secondary btn-sm fw-bold"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="tacOpInfoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg border-primary border-top border-4">
+                <div class="modal-header bg-light border-bottom-0 pb-0">
+                    <h4 class="modal-title fw-bold text-dark" id="tacOpModalTitle"></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light pt-2" id="tacOpModalBody"></div>
+                <div class="modal-footer bg-white border-top justify-content-center py-2">
+                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-return-left me-2"></i>Volver a la partida
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="revealConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-warning border-3 shadow-lg">
+                <div class="modal-header bg-warning text-dark">
+                    <h5 class="modal-title fw-bold">
+                        <i class="bi bi-eye-fill me-2"></i>Finalizar y Revelar
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center py-4 bg-light">
+                    <i class="bi bi-exclamation-triangle-fill text-warning" style="font-size: 3rem;"></i>
+                    <p class="mt-3 fs-5 text-dark fw-bold">¿Están listos para terminar la partida?</p>
+                    <p class="text-muted">Esto revelará las Operaciones Primarias de ambos jugadores y sumará los bonos
+                        al puntaje final.</p>
+                </div>
+                <div class="modal-footer bg-light justify-content-center">
+                    <button type="button" class="btn btn-secondary fw-bold shadow-sm"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-warning fw-bold shadow-sm" data-bs-dismiss="modal"
+                        onclick="executeRevealPrimaries()">
+                        Confirmar y Revelar <i class="bi bi-check-lg ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="resetConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-secondary border-3 shadow-lg">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Reiniciar Partida
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center py-4 bg-light">
+                    <i class="bi bi-exclamation-circle-fill text-danger" style="font-size: 3rem;"></i>
+                    <p class="mt-3 fs-5 text-dark fw-bold">¿Estás seguro de que deseas reiniciar?</p>
+                    <p class="text-muted">Todos los puntajes volverán a 0 y se ocultarán las misiones. <strong>Esta
+                            acción no se puede deshacer.</strong></p>
+                </div>
+                <div class="modal-footer bg-light justify-content-center">
+                    <button type="button" class="btn btn-secondary fw-bold shadow-sm"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger fw-bold shadow-sm" data-bs-dismiss="modal"
+                        onclick="executeResetGame()">
+                        Confirmar y Reiniciar <i class="bi bi-trash-fill ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="matchResultModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg text-center overflow-hidden">
+                <div class="modal-header" id="matchResultHeader">
+                    <h4 class="modal-title fw-bold mx-auto text-white">
+                        <i class="bi bi-flag-fill me-2"></i>Reporte de Batalla
+                    </h4>
+                </div>
+                <div class="modal-body py-5 bg-light">
+                    <div id="matchResultIcon" class="mb-3">
+                        </div>
+                    <h2 class="fw-bold text-dark display-6" id="matchResultMessage">
+                        </h2>
+                    <p class="fs-4 mt-3 text-muted" id="matchResultScore">
+                        </p>
+                </div>
+                <div class="modal-footer bg-white justify-content-center py-3">
+                    <button type="button" class="btn btn-outline-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-search me-2"></i>Revisar Tablero
+                    </button>
+                    <button type="button" class="btn btn-danger fw-bold px-4 shadow-sm" data-bs-dismiss="modal" onclick="resetGame()">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Nueva Partida
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

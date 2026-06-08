@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secuencia de Juego - Kill Team BattleKit</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS (Heredado de tu proyecto) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timeline.css">
+</head>
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="index.html">
+            <i class="bi bi-shield-shaded me-2"></i>Kill Team BattleKit
+        </a>
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-md-none collapsed me-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar (Transformado para navegación multipágina) -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse shadow-sm" style="min-height: calc(100vh - 48px);">
+                <div class="position-sticky pt-3">
+                    <ul class="nav nav-pills flex-column" id="main-nav">
+                        <!-- Enlace de regreso a la futura portada -->
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-dark" href="index.html">
+                                <i class="bi bi-house-door me-2"></i> Inicio (Portada)
+                            </a>
+                        </li>
+                        <hr class="my-2">
+                        <!-- Sección Activa -->
+                        <li class="nav-item">
+                            <a class="nav-link active shadow-sm" href="secuencia.html">
+                                <i class="bi bi-sort-numeric-down me-2"></i> Secuencia de Juego
+                            </a>
+                        </li>
+                        <!-- Resto de enlaces preparados para futuras extracciones -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="critops.html">
+                                <i class="bi bi-bookmark-star me-2"></i> CritOps
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="tacops.html">
+                                <i class="bi bi-bookmark-star me-2"></i> TacOps
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="facciones.html">
+                                <i class="bi bi-person-vcard me-2"></i> Reglas de Facción
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="reglas.html">
+                                <i class="bi bi-book me-2"></i> Reglas de Juego
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="partidas.html">
+                                <i class="bi bi-list-ol me-2"></i> Partidas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                
+                <!-- Título de la página extraído -->
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 border-bottom">
+                    <h1 class="h2 text-primary"><i class="bi bi-sort-numeric-down me-3"></i>Secuencia de Juego</h1>
+                </div>
+
+                <!-- Contenido Timeline Original -->
+                <div class="bg-white p-4 rounded shadow-sm">
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-icon bg-primary text-white"><i class="bi bi-map-fill"></i></div>
+                            <div class="timeline-content">
+                                <h5 class="fw-bold text-primary">1. Preparar la Batalla</h5>
+                                <ul class="text-secondary">
+                                    <li>Cada jugador selecciona un kill team para la batalla.</li>
+                                    <li>Determinar la killzone y preparar los elementos de terreno. Asegúrate de especificar los tipos de terreno.</li>
+                                    <li>Determinar una crit op compartida y colocar los marcadores de objetivo. A excepción de Killzone: Bheta-Decima, todos los marcadores de objetivo deben colocarse en el suelo de la killzone.</li>
+                                    <li><b class="text-dark">Tirada de iniciativa:</b> el ganador decide quién tiene la iniciativa.</li>
+                                    <li>El jugador con la iniciativa selecciona una zona de despliegue. Su oponente obtiene la otra zona de despliegue y gana la carta <i class="text-dark">Repetir iniciativa</i> (explicado en el paso 4).</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-icon bg-danger text-white"><i class="bi bi-diagram-3-fill"></i></div>
+                            <div class="timeline-content">
+                                <h5 class="fw-bold text-danger">2. Seleccionar Agentes</h5>
+                                <ul class="text-secondary">
+                                    <li>Cada jugador selecciona en secreto sus agentes para la batalla, cumpliendo con los requisitos de selección en las reglas de su kill team. Luego revelan sus selecciones simultáneamente.</li>
+                                    <li>Cada jugador selecciona en secreto hasta cuatro opciones de equipamiento. Cada opción no puede ser seleccionada más de una vez por jugador. Luego revelan sus selecciones simultáneamente.</li>
+                                    <li>Cada jugador comienza con <b class="text-dark">2PM</b>.</li>
+                                    <li>Cada jugador selecciona en secreto una tac op de uno de los arquetipos de su kill team (Infiltración, Reconocimiento, Seguridad o Buscar y Destruir).</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-icon bg-success text-white"><i class="bi bi-signpost-2-fill"></i></div>
+                            <div class="timeline-content">
+                                <h5 class="fw-bold text-success">3. Desplegar Agentes</h5>
+                                <ul class="text-secondary">
+                                    <li>Cada jugador alterna la colocación de un elemento de equipamiento que se coloca antes de la batalla (escaleras, etc.), comenzando con el jugador con la iniciativa. Nota: es elemento por elemento, no opción por opción.</li>
+                                    <li>Cada jugador alterna el despliegue de un tercio de su kill team (redondeando hacia arriba), comenzando con el jugador con la iniciativa. Cuando un jugador despliega un agente, debe estar totalmente dentro de su zona de despliegue y debe dársele una orden de Ocultación.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-icon bg-warning text-dark"><i class="bi bi-rocket-takeoff-fill"></i></div>
+                            <div class="timeline-content">
+                                <h5 class="fw-bold text-warning">4. Jugar la batalla</h5>
+                                <ul class="text-secondary">
+                                    <li>Para determinar la iniciativa durante cada punto de inflexión (incluyendo el primero), los jugadores hacen una tirada (los empates no se repiten). Comenzando con el jugador que perdió la tirada, cada jugador alterna el uso de una carta de iniciativa.</li>
+                                    <li>Si un jugador usara las reglas de su kill team para afectar la tirada, debe hacerlo antes de jugar cartas de iniciativa.</li>
+                                    <li>La carta Repetir iniciativa permite al jugador volver a tirar su dado de iniciativa. Las cartas restantes cambian el resultado hacia arriba o hacia abajo.</li>
+                                    <li>El ganador de la tirada decide quién tiene la iniciativa. Excepto durante el cuarto punto de inflexión, el perdedor gana una carta de iniciativa con un valor igual al punto de inflexión.</li>
+                                    <li>Como un <b class="text-dark">Gambito Estratégico</b> durante el primer punto de inflexión, cada jugador selecciona en secreto una de sus tres operaciones (crítica, eliminación o táctica) como su operación primaria.</li>
+                                    <li>Cada jugador puede obtener un máximo de <b class="text-dark">6PV</b> por cada operación.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-icon bg-dark text-white"><i class="bi bi-sign-stop-fill"></i></div>
+                            <div class="timeline-content border-0">
+                                <h5 class="fw-bold text-dark">5. Terminar la Batalla</h5>
+                                <ul class="text-secondary">
+                                    <li>La batalla termina después de que se hayan completado cuatro puntos de inflexión.</li>
+                                    <li>Al final de la batalla, todos los jugadores revelan simultáneamente sus operaciones primarias. Obtienen PV adicionales iguales a la mitad de lo que obtuvieron para esa operación (redondeando hacia arriba).</li>
+                                    <li>El jugador con más PV es el ganador. Si los jugadores están empatados, la batalla es un empate.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1265,14 +1265,14 @@
     "id_equip": 180,
     "faction": "brood-brothers",
     "name": "Disfraz Encubierto",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un GAMBITO ESTRATÉGICO en el primer Punto de Inflexión, un número de agentes BROOD BROTHER BROODGUARD amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.",
+    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un <b>GAMBITO ESTRATÉGICO</b> en el primer Punto de Inflexión, un número de agentes BROOD BROTHER BROODGUARD amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.",
     "action": []
   },
   {
     "id_equip": 181,
     "faction": "brood-brothers",
     "name": "Vigía",
-    "description": "GAMBITO ESTRATÉGICO: Selecciona un agente enemigo visible para un agente BROOD BROTHER amigo para que gane una de tus fichas de Fuego Cruzado.",
+    "description": "<b>GAMBITO ESTRATÉGICO</b>: Selecciona un agente enemigo visible para un agente BROOD BROTHER amigo para que gane una de tus fichas de Fuego Cruzado.",
     "action": []
   },
   {

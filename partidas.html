@@ -228,7 +228,8 @@
                                         class="bi bi-crosshair me-1"></i>Operación Táctica (1 Máximo)</label>
                                 <div id="p1-tacop-container" class="d-flex flex-column gap-2">
                                     <div class="input-group input-group-sm shadow-sm">
-                                        <select class="form-select border-primary" id="p1-tacop" disabled
+                                        <select class="form-select border-primary" id="p1-tacop"
+                                            onmousedown="validarSeleccionFacciom(event, 'p1')"
                                             onchange="enableTacOpLock('p1')">
                                             <option value="" selected disabled>Primero elige una facción...</option>
                                         </select>
@@ -410,7 +411,8 @@
                                         class="bi bi-crosshair me-1"></i>Operación Táctica (1 Máximo)</label>
                                 <div id="p2-tacop-container" class="d-flex flex-column gap-2">
                                     <div class="input-group input-group-sm shadow-sm">
-                                        <select class="form-select border-primary" id="p2-tacop" disabled
+                                        <select class="form-select border-primary" id="p2-tacop"
+                                            onmousedown="validarSeleccionFacciom(event, 'p2')"
                                             onchange="enableTacOpLock('p2')">
                                             <option value="" selected disabled>Primero elige una facción...</option>
                                         </select>
@@ -649,7 +651,7 @@
         // --- SISTEMA DE SELECCIÓN SECRETA ---
         function openSecretModal(playerNum) {
             if (gameState.revealed) {
-                alert("Las misiones ya fueron reveladas. Reinicia la partida para escoger nuevas.");
+                mostrarNotificacion("Acción no permitida: Las misiones ya fueron reveladas. Reinicia la partida para escoger nuevas.");
                 return;
             }
 
@@ -672,7 +674,7 @@
         function saveSecretPrimary() {
             const selected = document.querySelector('input[name="secretPrimary"]:checked');
             if (!selected) {
-                alert("Debes seleccionar una operación primaria antes de confirmar.");
+                mostrarNotificacion("Falta selección: Debes seleccionar una operación primaria antes de confirmar.");
                 return;
             }
 
@@ -799,7 +801,7 @@
             if (globalCritOp) {
                 globalCritOp.value = ""; // Devuelve el selector a la opción por defecto ("Selecciona una CritOp...")
             }
-            
+
             // 2. Reset de Elementos de Jugadores (Nombres, Facciones, TacOps e Interfaz)
             ['p1', 'p2'].forEach((p, index) => {
                 const playerNum = index === 0 ? '1' : '2';
@@ -1155,9 +1157,6 @@
                     tacopSelect.appendChild(option);
                 }
             }
-
-            // Habilitar el selector
-            tacopSelect.disabled = false;
         }
 
         // 1. Detectar en qué turno estamos (Asumiendo que tus radio buttons de turnos tienen IDs tp1, tp2, tp3, tp4)
@@ -1215,10 +1214,22 @@
                 } else if (isTac) {
                     let tacKey = document.getElementById(`${playerPrefix}-tacop`).value;
                     if (!tacKey) {
-                        // REEMPLAZO 2: Cambiamos alert() por mostrarNotificacion()
                         mostrarNotificacion("Falta selección: Por favor, selecciona primero tu Operación Táctica (TacOp).");
                         return;
                     }
+
+                    // --- NUEVA VALIDACIÓN: ESTADO DE REVELACIÓN ---
+                    // Leemos el DOM para saber si el contenedor del badge "revelado" está visible
+                    let isRevealed = !document.getElementById(`${playerPrefix}-revealed-badge-container`).classList.contains('d-none');
+
+                    // Solo bloqueamos la acción si el jugador intenta sumar puntos (delta > 0)
+                    // Permitimos restar (delta < 0) por si el jugador cometió un error de clic previamente.
+                    if (delta > 0 && !isRevealed) {
+                        mostrarNotificacion("Acción no permitida: Debes revelar tu TacOp a tu oponente antes de poder anotar puntos en ella.");
+                        return;
+                    }
+                    // ----------------------------------------------
+
                     limit = calculateDynamicLimit('tac', tacKey, currentTurn);
                 }
             }
@@ -1689,6 +1700,16 @@
             });
         });
 
+        function validarSeleccionFacciom(event, playerPrefix) {
+            const factionSelect = document.getElementById(`${playerPrefix}-faction`);
+
+            // Si el valor está vacío (es decir, sigue en la opción por defecto)
+            if (!factionSelect.value) {
+                event.preventDefault(); // Evita que el <select> se despliegue
+                mostrarNotificacion("Debes elegir una facción para poder seleccionar una TacOp.");
+            }
+        }
+
         // Ejecutar la carga cuando el documento esté listo
         document.addEventListener('DOMContentLoaded', initializeMatchData);
 
@@ -1936,17 +1957,18 @@
                 </div>
                 <div class="modal-body py-5 bg-light">
                     <div id="matchResultIcon" class="mb-3">
-                        </div>
+                    </div>
                     <h2 class="fw-bold text-dark display-6" id="matchResultMessage">
-                        </h2>
+                    </h2>
                     <p class="fs-4 mt-3 text-muted" id="matchResultScore">
-                        </p>
+                    </p>
                 </div>
                 <div class="modal-footer bg-white justify-content-center py-3">
                     <button type="button" class="btn btn-outline-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
                         <i class="bi bi-search me-2"></i>Revisar Tablero
                     </button>
-                    <button type="button" class="btn btn-danger fw-bold px-4 shadow-sm" data-bs-dismiss="modal" onclick="resetGame()">
+                    <button type="button" class="btn btn-danger fw-bold px-4 shadow-sm" data-bs-dismiss="modal"
+                        onclick="resetGame()">
                         <i class="bi bi-arrow-counterclockwise me-2"></i>Nueva Partida
                     </button>
                 </div>

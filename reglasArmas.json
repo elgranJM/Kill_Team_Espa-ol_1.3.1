@@ -1,0 +1,181 @@
+{
+    "alcance": {
+        "name": "Alcance x",
+        "description": "Solo los agentes a x\" o menos del agente activo pueden ser blancos válidos.",
+        "description_corta": "",
+        "ejemplo": "Las pistolas suelen tener Alcance 6\", lo que significa que no puedes disparar a enemigos más allá de esa distancia, sin importar tu línea de visión.",
+        "type": "reglas-especiales",
+        "uso": "Al Elegir Blanco"
+    },
+    "area": {
+        "name": "Área x",
+        "description": "El blanco elegido es el blanco primario. Tras disparar al blanco primario, dispara esta arma contra cada blanco secundario en el orden que quieras (tira cada secuencia por separado). Los blancos secundarios son todos aquellos agentes visibles para el blanco primario y a x\" o menos de él. Recuerda que todos son blancos válidos aunque tengan una orden de ocultarse. Si el blanco primario estaba a cubierto, los secundarios también lo están.",
+        "description_corta": "",
+        "ejemplo": "Típico de granadas o misiles. Disparas al primer objetivo y luego repites todo el ataque contra cualquiera que esté en el radio de la explosión (incluso aliados).",
+        "type": "dano-area",
+        "uso": "Secuencia de Disparo"
+    },
+    "aturdidora": {
+        "name": "Aturdidora",
+        "description": "Si guardas algún <span class=\"faction\">éxitos críticos</span>, resta 1 al atributo LPA del agente contra el que se usa esta arma hasta el final de su siguiente activación.",
+        "description_corta": "",
+        "ejemplo": "Excelente herramienta de control; si logras un crítico, el enemigo perderá acciones en su próximo turno o capacidad de defenderse.",
+        "type": "reglas-especiales",
+        "uso": "Al Guardar / Golpear"
+    },
+    "brutal": {
+        "name": "Brutal",
+        "description": "Tu oponente solo puede bloquear con <span class=\"faction\">éxitos críticos</span>.",
+        "description_corta": "Tu oponente solo puede bloquear con <span class=\"faction\">éxitos críticos</span>.",
+        "ejemplo": "En combate cuerpo a cuerpo, los impactos normales de tu oponente no le servirán de nada para frenar tus golpes.",
+        "type": "antidefensa",
+        "uso": "Combate: Al Bloquear"
+    },
+    "buscadora": {
+        "name": "Buscadora",
+        "description": "Al elegir un blanco válido, los agentes con una orden de ocultarse no pueden usar el terreno para estar a cubierto. Si la regla es Buscadora (Ligero), no pueden usar el terreno ligero para estar a cubierto. Aunque esto haga que se pueda tomar como blanco a un agente (si es que es visible), no le quita la salvación por cobertura (si la tiene).",
+        "description_corta": "",
+        "ejemplo": "Permite dispararle a un enemigo oculto detrás de una barricada, pero él seguirá beneficiándose de retener un dado de defensa por estar a cubierto.",
+        "type": "antidefensa",
+        "uso": "Al Elegir Blanco"
+    },
+    "castigadora": {
+        "name": "Castigadora",
+        "description": "Si guardas algún <span class=\"faction\">éxitos críticos</span>, puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo.",
+        "description_corta": "",
+        "ejemplo": "Un 6 natural te permite \"rescatar\" un dado que había fallado, volviéndolo un impacto normal.",
+        "type": "precision",
+        "uso": "Al Guardar Éxitos"
+    },
+    "certera": {
+        "name": "Certera x",
+        "description": "Puedes guardar hasta x dados de ataque como <span class=\"faction\">éxitos normales</span> sin tirarlos.",
+        "description_corta": "",
+        "ejemplo": "Con Certera 1, apartas un dado como éxito automático y tiras el resto de dados.",
+        "type": "precision",
+        "uso": "Al tirar Dados"
+    },
+    "choque": {
+        "name": "Choque",
+        "description": "La primera vez que golpees con un <span class=\"faction\">éxitos críticos</span> en cada secuencia, descarta también uno de los <span class=\"faction\">éxitos normales</span> sin resolver de tu oponente (o uno de sus <span class=\"faction\">éxitos críticos</span> si no hay normales).",
+        "description_corta": "",
+        "ejemplo": "Al asestar tu primer impacto crítico, le \"quitas\" un dado de la reserva al enemigo, dejándolo con menos opciones para golpearte o bloquearte.",
+        "type": "antidefensa",
+        "uso": "Combate: Al Golpear"
+    },
+    "desgarradora": {
+        "name": "Desgarradora",
+        "description": "Si guardas algún <span class=\"faction\">éxitos críticos</span>, puedes guardas uno de tus <span class=\"faction\">éxitos normales</span> como <span class=\"faction\">éxitos críticos</span> en su lugar.",
+        "description_corta": "",
+        "ejemplo": "Si sacas un 6 y un 4, la regla te permite transformar el 4 en otro crítico.",
+        "type": "precision",
+        "uso": "Al Guardar Éxitos"
+    },
+    "devastadora": {
+        "name": "Devastadora x",
+        "description": "Cada <span class=\"faction\">éxitos críticos</span> guardado inflige inmediatamente x daño al agente contra el que se usa esta arma, p.ej. Devastadora 3. Si la regla incluye una distancia (p.ej. 1\" Devastadora x), inflige x daño a ese agente y a cada otro agente visible para él y a esa distancia o menos de él. Los éxitos no se descartan después de causar ese daño y pueden resolverse más adelante en la secuencia.",
+        "description_corta": "",
+        "ejemplo": "Causas daño ineludible (splash damage) en el momento en que sacas un 6, y además sigues teniendo ese 6 para golpear durante el paso de resolución normal.",
+        "type": "dano-area",
+        "uso": "Al Guardar Éxitos"
+    },
+    "equilibrada": {
+        "name": "Equilibrada",
+        "description": "Puedes repetir 1 de tus dados de ataque.",
+        "description_corta": "Puedes repetir 1 de tus dados de ataque.",
+        "ejemplo": "Si tiras tus dados y fallas con uno de ellos, puedes tomar ese único dado fallido y volver a tirarlo.",
+        "type": "repeticion",
+        "uso": "Al tirar Dados"
+    },
+    "implacable": {
+        "name": "Implacable",
+        "description": "Puedes repetir cualquiera de tus dados de ataque.",
+        "description_corta": "Puedes repetir cualquiera de tus dados de ataque.",
+        "ejemplo": "Si de 4 dados de ataque fallas 3, puedes tomar esos 3 dados fallidos y volver a tirarlos todos.",
+        "type": "repeticion",
+        "uso": "Al tirar Dados"
+    },
+    "incesante":
+    {
+        "name": "Incesante",
+        "description": "Puedes repetir cualquiera de tus dados de ataque que tengan un resultado concreto.",
+        "description_corta": "Puedes repetir cualquiera de tus dados de ataque que tengan un resultado concreto.",
+        "ejemplo": "Si al atacar sacas dos \"1\", puedes decidir repetir todos los dados que mostraron ese \"1\".",
+        "type": "repeticion",
+        "uso": "Al tirar Dados"
+    },
+    "letal":
+    {
+        "name": "Letal X+",
+        "description": "Tus éxitos iguales o superiores a x son <span class=\"faction\">éxitos críticos</span>",
+        "description_corta": "Tus éxitos iguales o superiores a x son <span class=\"faction\">éxitos críticos</span>",
+        "ejemplo": "Con Letal 5+, un resultado de 5 o 6 en el dado cuenta como crítico.",
+        "type": "precision",
+        "uso": "Al tirar Dados"
+
+    },
+    "limitada": {
+        "name": "Limitada x",
+        "description": "Un agente deja de tener esta arma después de usarla x veces en la batalla. Si la usa varias veces en una acción (p.ej. Área), solo se cuenta un uso.",
+        "description_corta": "Un agente deja de tener esta arma después de usarla x veces en la batalla.",
+        "ejemplo": "Una granada con Limitada 1 se descarta inmediatamente tras resolver su único uso en toda la batalla.",
+        "type": "reglas-especiales",
+        "uso": "Restricción General"
+    },
+    "penetracion": {
+        "name": "Penetración x",
+        "description": "El defensor guarda x dados de defensa menos, p.ej. Penetración 1. Si la regla es Críticos de penetración x, solo tiene efecto al guardar <span class=\"faction\">éxitos críticos</span>.",
+        "description_corta": "El defensor guarda x dados de defensa menos, Si la regla es Críticos de penetración x, solo tiene efecto al guardar <span class=\"faction\">éxitos críticos</span>.",
+        "ejemplo": "Si un arma tiene Penetración 1, un agente enemigo que normalmente tira 3 dados de defensa, solo tirará 2.",
+        "type": "antidefensa",
+        "uso": "Al Defender"
+    },
+    "pesada": {
+        "name": "Pesada",
+        "description": "Un agente no puede usar esta arma en una activación o reacción en la que haya movido y no puede mover en una activación o reacción en la que haya usado esta arma. Si la regla es Pesada (solo x), donde x es una acción de movimiento, solo se permite realizar esa acción de movimiento, p.ej. Pesada (solo Correr). Esta regla de arma no impide la acción Ponerse en guardia.",
+        "description_corta": "",
+        "ejemplo": "Un francotirador debe quedarse quieto para poder disparar su rifle Pesado.",
+        "type": "reglas-especiales",
+        "uso": "Restricción de Activación"
+    },
+    "rafaga": {
+        "name": "Ráfaga x",
+        "description": "Elige normalmente un blanco válido como blanco primario. A continuación, elige tantos otros blancos válidos a x\" o menos del blanco primario como blancos secundarios, pero que no estén en la zona de control de agentes amigos p.ej. Ráfaga 2\". Dispara esta arma contra todos ellos en el orden que quieras (tira cada secuencia por separado).",
+        "description_corta": "",
+        "ejemplo": "Típico de lanzallamas. Barres una zona atacando al primario y a quienes estén cerca, pero a diferencia de Área, los secundarios también deben cumplir las reglas normales de visibilidad desde tu tirador.",
+        "type": "dano-area",
+        "uso": "Secuencia de Disparo"
+    },
+    "saturacion": {
+        "name": "Saturación",
+        "description": "El defensor no puede guardar salvaciones por cobertura.",
+        "description_corta": "El defensor no puede guardar salvaciones por cobertura.",
+        "ejemplo": "El objetivo tiene que tirar todos sus dados de defensa obligatoriamente; no puede \"apartar\" uno como éxito automático aunque esté a cubierto.",
+        "type": "antidefensa",
+        "uso": "Al Defender"
+    },
+    "severa": {
+        "name": "Severa",
+        "description": "Si no guardas ningún <span class=\"faction\">éxitos críticos</span>, puedes cambiar uno de tus <span class=\"faction\">éxitos normales</span> a <span class=\"faction\">éxitos críticos</span>. Las reglas de arma Devastadora y Críticos de penetración aún tienen efecto; Castigadora y Desgarradora ya no.",
+        "description_corta": "",
+        "ejemplo": "Ideal para armas fiables; si no sacaste ningún 6 natural, cambias un impacto normal por uno crítico.",
+        "type": "precision",
+        "uso": "Al Guardar Éxitos"
+    },
+    "silenciosa": {
+        "name": "Silenciosa",
+        "description": "Un agente puede realizar la acción de Disparar con esta arma aunque tenga una orden de ocultarse.",
+        "description_corta": "",
+        "ejemplo": "Ideal para operativos sigilosos que quieren disparar sin exponerse a represalias inmediatas.",
+        "type": "reglas-especiales",
+        "uso": "Permiso Especial"
+    },
+    "sobrecalentamiento": {
+        "name": "Sobrecalentamiento",
+        "description": "Tira 1D6 después de que un agente use esta arma. Si el resultado es inferior al atributo Impactar del arma, inflige tanto daño a ese agente como el resultado multiplicado por 2. Solo se tira 1D6 aunque se use varias veces en una acción (p.ej. Área).",
+        "description_corta": "",
+        "ejemplo": "Las armas de plasma son poderosas, pero corres el riesgo de freír a tu propio operativo si fallas el dado de seguridad.",
+        "type": "reglas-especiales",
+        "uso": "Tras Disparar"
+    }
+}

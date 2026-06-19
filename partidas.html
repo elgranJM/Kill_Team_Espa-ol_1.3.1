@@ -171,28 +171,35 @@
                 <div class="row mb-4 text-center">
                     <div class="col-12">
                         <div class="bg-white p-3 rounded shadow-sm d-inline-block border">
-                            <h6 class="text-uppercase fw-bold text-muted mb-3"><i
-                                    class="bi bi-hourglass-split me-2"></i>Punto de Inflexión</h6>
-                            <div class="btn-group" role="group">
-                                <input type="radio" class="btn-check" name="tpRadio" id="tp1" autocomplete="off" checked
-                                    onchange="validateAllScores()">
-                                <label class="btn btn-outline-dark fw-bold px-4" for="tp1">1</label>
-
-                                <input type="radio" class="btn-check" name="tpRadio" id="tp2" autocomplete="off"
-                                    onchange="validateAllScores()">
-                                <label class="btn btn-outline-dark fw-bold px-4" for="tp2">2</label>
-
-                                <input type="radio" class="btn-check" name="tpRadio" id="tp3" autocomplete="off"
-                                    onchange="validateAllScores()">
-                                <label class="btn btn-outline-dark fw-bold px-4" for="tp3">3</label>
-
-                                <input type="radio" class="btn-check" name="tpRadio" id="tp4" autocomplete="off"
-                                    onchange="validateAllScores()">
-                                <label class="btn btn-outline-dark fw-bold px-4" for="tp4">4</label>
-                            </div>
                             <button type="button" class="btn btn-outline-danger btn-sm ms-3 fw-bold shadow-sm"
                                 data-bs-toggle="modal" data-bs-target="#killOpModal">
                                 <i class="bi bi-table me-1"></i>Tabla Kill Op
+                            </button>
+                            <div class="bg-white p-3 rounded shadow-sm d-inline-block border">
+                                <h6 class="text-uppercase fw-bold text-muted mb-3"><i
+                                        class="bi bi-hourglass-split me-2"></i>Punto de Inflexión</h6>
+                                <div class="btn-group" role="group">
+                                    <input type="radio" class="btn-check" name="tpRadio" id="tp1" autocomplete="off"
+                                        checked onchange="validateAllScores()">
+                                    <label class="btn btn-outline-dark fw-bold px-4" for="tp1">1</label>
+
+                                    <input type="radio" class="btn-check" name="tpRadio" id="tp2" autocomplete="off"
+                                        onchange="validateAllScores()">
+                                    <label class="btn btn-outline-dark fw-bold px-4" for="tp2">2</label>
+
+                                    <input type="radio" class="btn-check" name="tpRadio" id="tp3" autocomplete="off"
+                                        onchange="validateAllScores()">
+                                    <label class="btn btn-outline-dark fw-bold px-4" for="tp3">3</label>
+
+                                    <input type="radio" class="btn-check" name="tpRadio" id="tp4" autocomplete="off"
+                                        onchange="validateAllScores()">
+                                    <label class="btn btn-outline-dark fw-bold px-4" for="tp4">4</label>
+                                </div>
+                            </div>
+                            <button type="button"
+                                class="btn btn-outline-info btn-sm ms-2 fw-bold shadow-sm text-dark border-info"
+                                data-bs-toggle="modal" data-bs-target="#weaponRulesModal">
+                                <i class="bi bi-crosshair me-1"></i>Reglas de Armas
                             </button>
                         </div>
                     </div>
@@ -1042,23 +1049,27 @@
         let dataFactions = {};
         let dataTacOps = {};
         let dataCritOps = {};
+        let dataWeapons = {};
 
         // 2. Carga Asíncrona de ambos JSON
         async function initializeMatchData() {
             try {
-                // Agregamos CritsOps.json a nuestra promesa concurrente
-                const [factionsRes, tacopsRes, critopsRes] = await Promise.all([
+                // Agregamos reglasArmas.json a nuestra promesa concurrente
+                const [factionsRes, tacopsRes, critopsRes, weaponsRes] = await Promise.all([
                     fetch('tacops.json'),
                     fetch('tacopsgenerales.json'),
-                    fetch('CritsOps.json')
+                    fetch('CritsOps.json'),
+                    fetch('reglasArmas.json') // <-- Nuevo fetch
                 ]);
 
                 dataFactions = await factionsRes.json();
                 dataTacOps = await tacopsRes.json();
-                dataCritOps = await critopsRes.json(); // Cargamos el nuevo JSON
+                dataCritOps = await critopsRes.json();
+                dataWeapons = await weaponsRes.json(); // <-- Asignación de datos
 
                 populateFactions();
-                populateCritOps(); // Llamamos a la función para llenar el selector
+                populateCritOps();
+                populateWeaponRules(); // <-- Llamada a la nueva función generadora
 
                 loadGameState();
                 calculateTotals();
@@ -1710,6 +1721,54 @@
             }
         }
 
+        // --- SISTEMA DE REFERENCIA RÁPIDA DE ARMAS ---
+
+        function populateWeaponRules() {
+            const container = document.getElementById('weaponRulesBody');
+            if (!container) return;
+
+            let html = '<div class="list-group list-group-flush">';
+
+            // Convertir el objeto a un array, ordenarlo alfabéticamente y generar el HTML
+            const sortedKeys = Object.keys(dataWeapons).sort((a, b) =>
+                dataWeapons[a].name.localeCompare(dataWeapons[b].name)
+            );
+
+            sortedKeys.forEach(key => {
+                const rule = dataWeapons[key];
+                // Renderizamos usando únicamente los campos solicitados: name, uso y description_corta
+                html += `
+        <div class="list-group-item list-group-item-action weapon-rule-item py-3">
+            <div class="d-flex w-100 justify-content-between align-items-center mb-1">
+                <h6 class="mb-0 fw-bold text-dark">${rule.name}</h6>
+                <span class="badge bg-secondary text-uppercase" style="font-size: 0.7rem;">${rule.uso}</span>
+            </div>
+            <p class="mb-0 small text-muted lh-sm">${rule.description_corta}</p>
+        </div>`;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        // Función de filtro en tiempo real para la barra de búsqueda del Modal
+        function filterWeaponRules() {
+            const term = document.getElementById('weaponSearch').value.toLowerCase();
+            const items = document.querySelectorAll('.weapon-rule-item');
+
+            items.forEach(item => {
+                // Busca coincidencias tanto en el nombre como en la descripción o el uso
+                const text = item.innerText.toLowerCase();
+                if (text.includes(term)) {
+                    item.classList.remove('d-none');
+                    item.classList.add('d-block');
+                } else {
+                    item.classList.remove('d-block');
+                    item.classList.add('d-none');
+                }
+            });
+        }
+
         // Ejecutar la carga cuando el documento esté listo
         document.addEventListener('DOMContentLoaded', initializeMatchData);
 
@@ -1971,6 +2030,29 @@
                         onclick="resetGame()">
                         <i class="bi bi-arrow-counterclockwise me-2"></i>Nueva Partida
                     </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="weaponRulesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 shadow-lg border-info border-top border-4">
+                <div class="modal-header bg-light pb-2">
+                    <h5 class="modal-title fw-bold text-dark">
+                        <i class="bi bi-crosshair text-info me-2"></i>Referencia Rápida: Armas
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-light px-3 pb-2 border-bottom">
+                    <input type="text" id="weaponSearch" class="form-control form-control-sm"
+                        placeholder="Buscar regla (ej. Letal, Perforante...)" onkeyup="filterWeaponRules()">
+                </div>
+                <div class="modal-body bg-white p-0" id="weaponRulesBody">
+                </div>
+                <div class="modal-footer bg-light py-1">
+                    <button type="button" class="btn btn-secondary btn-sm fw-bold"
+                        data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>

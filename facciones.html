@@ -118,7 +118,7 @@
                             <button class="nav-link active fw-bold text-success" id="faction-info-tab"
                                 data-bs-toggle="tab" data-bs-target="#faction-info-pane" type="button" role="tab"
                                 aria-controls="faction-info-pane" aria-selected="true">
-                                <i class="bi bi-info-circle me-2"></i>Reglas Base
+                                <i class="bi bi-info-circle me-2"></i>Reglas de Facción
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -164,6 +164,31 @@
 
                         <!-- Agentes (Datacards) -->
                         <div class="tab-pane fade" id="datacards-pane" role="tabpanel" aria-labelledby="datacards-tab">
+                            <div class="row mb-3 mt-2 align-items-center">
+                                <div class="col-md-8 col-12 mb-2 mb-md-0">
+                                    <div class="input-group shadow-sm">
+                                        <span class="input-group-text bg-dark text-white border-dark"><i
+                                                class="bi bi-search"></i></span>
+                                        <input type="text" id="operative-search" class="form-control border-dark"
+                                            placeholder="Buscar operativo (ej. Sargento)...">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-12 text-md-end text-start">
+                                    <div class="form-check form-switch d-inline-block">
+                                        <input class="form-check-input border-dark" type="checkbox" role="switch"
+                                            id="filter-selected-switch">
+                                        <label class="form-check-label fw-bold text-dark"
+                                            for="filter-selected-switch">Solo seleccionados</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="datacards-container" class="row justify-content-center g-3">
+                                <div class="col-12 text-center text-muted mt-5">
+                                    <p>Selecciona un Comando en el menú superior para ver sus operativos.</p>
+                                </div>
+                            </div>
+
                             <div id="datacards-container" class="row justify-content-center g-3">
                                 <!-- Los agentes se renderizan aquí -->
                             </div>

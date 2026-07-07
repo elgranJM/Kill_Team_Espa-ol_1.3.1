@@ -76,6 +76,32 @@
             padding: 1rem;
             margin-bottom: 1rem;
         }
+
+        /* Ajustes para pantallas horizontales angostas (celulares en horizontal) */
+        @media (max-width: 992px) and (orientation: landscape) {
+            .player-card {
+                padding: 0.75rem !important;
+            }
+
+            .vp-total {
+                font-size: 2.5rem;
+            }
+
+            .op-section {
+                padding: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .counter-btn {
+                width: 28px;
+                height: 28px;
+                font-size: 1rem;
+            }
+
+            .score-display {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 
@@ -83,22 +109,22 @@
 
     <!-- Header -->
     <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="index.html">
-            <i class="bi bi-shield-shaded me-2"></i>Kill Team BattleKit
-        </a>
         <div class="d-flex align-items-center">
-            <button class="navbar-toggler d-md-none collapsed me-2" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler d-xl-none collapsed mx-3" type="button" data-bs-toggle="collapse"
                 data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
                 aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="index.html">
+                <i class="bi bi-shield-shaded me-2"></i>Kill Team BattleKit
+            </a>
         </div>
     </header>
 
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse shadow-sm"
+            <nav id="sidebarMenu" class="col-xl-2 d-xl-block bg-white sidebar collapse shadow-sm"
                 style="min-height: calc(100vh - 48px);">
                 <div class="position-sticky pt-3">
                     <ul class="nav nav-pills flex-column" id="main-nav">
@@ -143,7 +169,7 @@
             </nav>
 
             <!-- Main Content Area -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+            <main class="col-12 col-xl-10 ms-xl-auto px-md-4 py-4">
 
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 border-bottom">
@@ -209,7 +235,7 @@
                 <div class="row g-4 mb-4">
 
                     <!-- ==================== JUGADOR 1 ==================== -->
-                    <div class="col-12 col-xl-6">
+                    <div class="col-12 col-md-6">
                         <div class="bg-white p-4 rounded shadow-sm player-card player-1 h-100">
                             <div class="d-flex align-items-center justify-content-center mb-3">
                                 <img id="p1-faction-img" src="./resources/facciones/blank.png" alt="Facción J1"
@@ -393,7 +419,7 @@
                     </div>
 
                     <!-- ==================== JUGADOR 2 ==================== -->
-                    <div class="col-12 col-xl-6">
+                    <div class="col-12 col-md-6">
                         <div class="bg-white p-4 rounded shadow-sm player-card player-2 h-100">
                             <div class="d-flex align-items-center justify-content-center mb-3">
                                 <img id="p2-faction-img" src="./resources/facciones/blank.png" alt="Facción J2"

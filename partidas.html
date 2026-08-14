@@ -102,6 +102,25 @@
                 font-size: 1.3rem;
             }
         }
+
+        /* Estilos de pestañas del Modal de Facción */
+        #factionModalTabs .nav-link {
+            color: #198754;
+            transition: all 0.2s ease;
+        }
+
+        #factionModalTabs .nav-link:hover {
+            background-color: #f1f3f5;
+        }
+
+        #factionModalTabs .nav-link.active {
+            background-color: #198754 !important;
+            color: #ffffff !important;
+        }
+
+        #factionModalTabs .nav-link.active i {
+            color: #ffffff !important;
+        }
     </style>
 </head>
 
@@ -2346,7 +2365,7 @@
                     <!-- Nav Tabs internas para alternar entre Reglas, Ardides y Equipamiento -->
                     <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border" id="factionModalTabs" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active fw-bold text-success" id="faction-tab-rules-btn" data-bs-toggle="pill" data-bs-target="#faction-tab-rules" type="button" role="tab" aria-controls="faction-tab-rules" aria-selected="true">
+                            <button class="nav-link active fw-bold" id="faction-tab-rules-btn" data-bs-toggle="pill" data-bs-target="#faction-tab-rules" type="button" role="tab" aria-controls="faction-tab-rules" aria-selected="true">
                                 <i class="bi bi-shield-shaded me-1"></i>Reglas y Habilidades
                             </button>
                         </li>

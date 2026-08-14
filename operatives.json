@@ -824,7 +824,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "3/4",
-                        "RA": "Severa"
+                        "RA": "Área 1\", Severa"
                     }
                 },
                 {
@@ -897,7 +897,7 @@
             "abilities": [],
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, ARMAMENTO, SERVIDOR",
-            "peana": "25"
+            "peana": "32"
         },
         {
             "id": "technomedic-servitor",

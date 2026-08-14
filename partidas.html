@@ -250,10 +250,17 @@
                             <div class="mb-3">
                                 <label class="form-label fw-bold small text-muted mb-1"><i
                                         class="bi bi-person-vcard me-1"></i>Facción</label>
-                                <select class="form-select form-select-sm border-dark fw-bold" id="p1-faction"
-                                    onchange="updateTacOps('p1')">
-                                    <option value="" selected disabled>Selecciona tu facción...</option>
-                                </select>
+                                <div class="input-group input-group-sm shadow-sm">
+                                    <select class="form-select form-select-sm border-dark fw-bold" id="p1-faction"
+                                        onchange="updateTacOps('p1')">
+                                        <option value="" selected disabled>Selecciona tu facción...</option>
+                                    </select>
+                                    <button class="btn btn-outline-success fw-bold px-3" type="button"
+                                        id="p1-btn-faction-rules" onclick="showFactionRules('p1')" disabled
+                                        title="Ver reglas y ardides de la facción">
+                                        <i class="bi bi-book-half"></i>
+                                    </button>
+                                </div>
                             </div>
 
                             <div>
@@ -433,10 +440,17 @@
                             <div class="mb-3">
                                 <label class="form-label fw-bold small text-muted mb-1"><i
                                         class="bi bi-person-vcard me-1"></i>Facción</label>
-                                <select class="form-select form-select-sm border-dark fw-bold" id="p2-faction"
-                                    onchange="updateTacOps('p2')">
-                                    <option value="" selected disabled>Selecciona tu facción...</option>
-                                </select>
+                                <div class="input-group input-group-sm shadow-sm">
+                                    <select class="form-select form-select-sm border-dark fw-bold" id="p2-faction"
+                                        onchange="updateTacOps('p2')">
+                                        <option value="" selected disabled>Selecciona tu facción...</option>
+                                    </select>
+                                    <button class="btn btn-outline-success fw-bold px-3" type="button"
+                                        id="p2-btn-faction-rules" onclick="showFactionRules('p2')" disabled
+                                        title="Ver reglas y ardides de la facción">
+                                        <i class="bi bi-book-half"></i>
+                                    </button>
+                                </div>
                             </div>
 
                             <div>
@@ -1076,22 +1090,31 @@
         let dataTacOps = {};
         let dataCritOps = {};
         let dataWeapons = {};
+        let dataRacial = {};
+        let dataPloys = [];
+        let dataEquipment = [];
 
         // 2. Carga Asíncrona de ambos JSON
         async function initializeMatchData() {
             try {
-                // Agregamos reglasArmas.json a nuestra promesa concurrente
-                const [factionsRes, tacopsRes, critopsRes, weaponsRes] = await Promise.all([
+                // Agregamos reglasArmas.json, racial.json, ploys.json y equipment.json a nuestra promesa concurrente
+                const [factionsRes, tacopsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes] = await Promise.all([
                     fetch('tacops.json'),
                     fetch('tacopsgenerales.json'),
                     fetch('CritsOps.json'),
-                    fetch('reglasArmas.json') // <-- Nuevo fetch
+                    fetch('reglasArmas.json'),
+                    fetch('racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
+                    fetch('ploys.json').catch(e => { console.warn('ploys.json error', e); return null; }),
+                    fetch('equipment.json').catch(e => { console.warn('equipment.json error', e); return null; })
                 ]);
 
                 dataFactions = await factionsRes.json();
                 dataTacOps = await tacopsRes.json();
                 dataCritOps = await critopsRes.json();
-                dataWeapons = await weaponsRes.json(); // <-- Asignación de datos
+                dataWeapons = await weaponsRes.json();
+                if (racialRes) dataRacial = await racialRes.json();
+                if (ploysRes) dataPloys = await ploysRes.json();
+                if (equipRes) dataEquipment = await equipRes.json();
 
                 populateFactions();
                 populateCritOps();
@@ -1145,6 +1168,7 @@
             const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
             const tacopSelect = document.getElementById(`${playerPrefix}-tacop`);
             const archetypesDisplay = document.getElementById(`${playerPrefix}-archetypes-display`);
+            const factionRulesBtn = document.getElementById(`${playerPrefix}-btn-faction-rules`);
 
             // --- RESET DE SEGURIDAD PARA TACOPS SECRETAS ---
             // Si el jugador cambia de facción, reiniciamos toda la UI de secretos a su estado original
@@ -1161,6 +1185,10 @@
             }
             let infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
             if (infoBtn) infoBtn.disabled = true;
+
+            if (factionRulesBtn) {
+                factionRulesBtn.disabled = !factionKey || !dataFactions[factionKey];
+            }
 
             document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.remove('d-flex');
             document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.add('d-none');
@@ -1460,6 +1488,224 @@
 
             // 6. Mostrar el Modal
             const modal = new bootstrap.Modal(document.getElementById('critOpInfoModal'));
+            modal.show();
+        }
+
+        // --- SISTEMA DE VISUALIZACIÓN DE REGLAS DE FACCIÓN, ARDIDES Y EQUIPAMIENTO ---
+        function showFactionRules(playerPrefix) {
+            const selectEl = document.getElementById(`${playerPrefix}-faction`);
+            const factionKey = selectEl ? selectEl.value : "";
+
+            if (!factionKey) {
+                mostrarNotificacion("Falta selección: Por favor, selecciona primero tu Facción.");
+                return;
+            }
+
+            const factionName = factionTranslations[factionKey] || factionKey;
+            const modalTitleEl = document.getElementById('factionModalTitle');
+            const modalImgEl = document.getElementById('factionModalImg');
+            const modalArchetypesEl = document.getElementById('factionModalArchetypes');
+
+            if (modalTitleEl) modalTitleEl.textContent = factionName;
+            if (modalImgEl) modalImgEl.src = `./resources/facciones/${factionKey}.png`;
+
+            // 1. Arquetipos
+            const allowedArchetypes = dataFactions[factionKey]?.archetypes || [];
+            const translatedArchs = allowedArchetypes.map(a => archetypeTranslations[a] || a).join(' • ');
+            if (modalArchetypesEl) modalArchetypesEl.textContent = `Arquetipos: ${translatedArchs || 'N/A'}`;
+
+            // 2. Tab: Reglas y Habilidades
+            const rulesPane = document.getElementById('faction-tab-rules');
+            if (rulesPane) {
+                const teamItems = dataRacial[factionKey] || [];
+                let htmlRules = '';
+
+                if (Array.isArray(teamItems) && teamItems.length > 0) {
+                    // Roster / Composición de equipo
+                    teamItems.filter(item => item.type === "team").forEach(item => {
+                        htmlRules += `
+                            <div class="card mb-3 border-dark shadow-sm">
+                                <div class="card-header bg-dark text-white fw-bold d-flex align-items-center">
+                                    <i class="bi bi-people-fill me-2"></i>Composición de Equipo: ${item.name || 'Agentes'}
+                                </div>
+                                <div class="card-body bg-white small lh-base">
+                                    ${item.description}
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    // Habilidades raciales / de facción
+                    const racialAbilities = teamItems.filter(item => item.type === "racial" && item.name !== "Arquetipos");
+                    if (racialAbilities.length > 0) {
+                        racialAbilities.forEach(rule => {
+                            htmlRules += `
+                                <div class="card mb-3 border-success border-opacity-50 shadow-sm">
+                                    <div class="card-header bg-success text-white fw-bold d-flex align-items-center">
+                                        <i class="bi bi-shield-shaded me-2"></i>${rule.name}
+                                    </div>
+                                    <div class="card-body bg-white small lh-base">
+                                        ${rule.description}
+                                    </div>
+                                </div>
+                            `;
+                        });
+                    }
+                }
+
+                if (!htmlRules) {
+                    htmlRules = '<div class="alert alert-light text-center p-4">No hay reglas especiales registradas para esta facción.</div>';
+                }
+                rulesPane.innerHTML = htmlRules;
+            }
+
+            // 3. Tab: Ardides (Ploys)
+            const ploysPane = document.getElementById('faction-tab-ploys');
+            if (ploysPane) {
+                let ploysList = [];
+                if (Array.isArray(dataPloys)) {
+                    ploysList = dataPloys.filter(p => p.faction === factionKey);
+                }
+
+                if (ploysList.length === 0) {
+                    ploysPane.innerHTML = '<div class="alert alert-light text-center p-4">No hay ardides registrados para esta facción.</div>';
+                } else {
+                    // Ordenar: Estratégicos primero, luego Tiroteo
+                    ploysList.sort((a, b) => (a.type || '').localeCompare(b.type || ''));
+
+                    let strategicHtml = '';
+                    let tacticalHtml = '';
+
+                    ploysList.forEach(ploy => {
+                        const isStrat = ploy.type === 'strategic';
+                        const cardHtml = `
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="card h-100 shadow-sm border ${isStrat ? 'border-warning' : 'border-info'}">
+                                    <div class="card-header ${isStrat ? 'bg-dark text-white' : 'bg-secondary text-white'} d-flex justify-content-between align-items-center py-2">
+                                        <span class="fw-bold text-uppercase small">${ploy.name}</span>
+                                        <span class="badge ${isStrat ? 'bg-warning text-dark' : 'bg-info text-dark'} fw-bold">${ploy.cps || '1 PM'}</span>
+                                    </div>
+                                    <div class="card-body bg-white p-3">
+                                        <span class="badge ${isStrat ? 'bg-warning-subtle text-warning-emphasis border border-warning' : 'bg-info-subtle text-info-emphasis border border-info'} mb-2 small">
+                                            ${isStrat ? 'Ardid de Estrategia' : 'Ardid de Tiroteo'}
+                                        </span>
+                                        <div class="card-text small lh-sm text-dark">${ploy.description}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        if (isStrat) strategicHtml += cardHtml;
+                        else tacticalHtml += cardHtml;
+                    });
+
+                    ploysPane.innerHTML = `
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-warning-emphasis border-bottom pb-1"><i class="bi bi-hourglass-split me-1"></i>Ardides de Estrategia (Fase de Estrategia / Gambito)</h6>
+                            <div class="row">${strategicHtml || '<p class="small text-muted ps-3">Ninguno</p>'}</div>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold text-info-emphasis border-bottom pb-1"><i class="bi bi-crosshair me-1"></i>Ardides de Tiroteo (Fase de Tiroteo / Activaciones)</h6>
+                            <div class="row">${tacticalHtml || '<p class="small text-muted ps-3">Ninguno</p>'}</div>
+                        </div>
+                    `;
+                }
+            }
+
+            // 4. Tab: Equipamiento
+            const equipPane = document.getElementById('faction-tab-equip');
+            if (equipPane) {
+                let equipList = [];
+                if (Array.isArray(dataEquipment)) {
+                    equipList = dataEquipment.filter(item => item.faction === factionKey);
+                }
+
+                if (equipList.length === 0) {
+                    equipPane.innerHTML = '<div class="alert alert-light text-center p-4">Esta facción no posee equipamiento registrado en la base de datos.</div>';
+                } else {
+                    equipList.sort((a, b) => a.name.localeCompare(b.name));
+                    let htmlEquip = '<div class="row">';
+
+                    equipList.forEach(item => {
+                        let descHtml = Array.isArray(item.description)
+                            ? item.description.map(line => `<p class="mb-1">${line}</p>`).join('')
+                            : `<p class="mb-1">${item.description}</p>`;
+
+                        let weaponHtml = '';
+                        if (item.ATK) {
+                            weaponHtml = `
+                                <div class="table-responsive mt-2">
+                                    <table class="table table-sm table-dark table-bordered mb-0 small text-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-start">ARMA</th>
+                                                <th>ATQ</th>
+                                                <th>IMP</th>
+                                                <th>DAÑO</th>
+                                                <th class="text-start">REGLAS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-bold text-start text-warning">${item.name}</td>
+                                                <td>${item.ATK}</td>
+                                                <td>${item.HIT}</td>
+                                                <td>${item.DMG}</td>
+                                                <td class="text-start fst-italic">${item.special_rules || '-'}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            `;
+                        }
+
+                        let actionHtml = '';
+                        if (item.action && item.action.length > 0) {
+                            item.action.forEach(a => {
+                                actionHtml += `
+                                    <div class="unique-actions-section mt-2 shadow-sm rounded">
+                                        <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
+                                            <span class="fw-bold small">${a.action_name}</span>
+                                            <span class="badge bg-secondary">${a.action_cost}</span>
+                                        </div>
+                                        <div class="content p-2 border border-top-0 rounded-bottom small bg-white text-start">
+                                            ${a.action_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span><span>${Array.isArray(a.action_yes) ? a.action_yes.join(' ') : a.action_yes}</span></p>` : ''}
+                                            ${a.action_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span><span>${a.action_no}</span></p>` : ''}
+                                        </div>
+                                    </div>
+                                `;
+                            });
+                        }
+
+                        htmlEquip += `
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="card h-100 shadow-sm border border-danger border-opacity-50">
+                                    <div class="card-header bg-danger text-white fw-bold py-1 px-2 text-uppercase small text-center">
+                                        ${item.name}
+                                    </div>
+                                    <div class="card-body bg-light p-3 small lh-sm">
+                                        ${descHtml}
+                                        ${weaponHtml}
+                                        ${actionHtml}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    htmlEquip += '</div>';
+                    equipPane.innerHTML = htmlEquip;
+                }
+            }
+
+            // Resetear a la primera pestaña de Reglas
+            const firstTabBtn = document.getElementById('faction-tab-rules-btn');
+            if (firstTabBtn) {
+                const tabInstance = new bootstrap.Tab(firstTabBtn);
+                tabInstance.show();
+            }
+
+            // Mostrar el Modal
+            const modal = new bootstrap.Modal(document.getElementById('factionRulesModal'));
             modal.show();
         }
 
@@ -2079,6 +2325,52 @@
                 <div class="modal-footer bg-light py-1">
                     <button type="button" class="btn btn-secondary btn-sm fw-bold"
                         data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="factionRulesModal" tabindex="-1" aria-labelledby="factionRulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content border-0 shadow-lg border-success border-top border-4">
+                <div class="modal-header bg-light pb-2">
+                    <div class="d-flex align-items-center">
+                        <img id="factionModalImg" src="./resources/facciones/blank.png" alt="Icono Facción" class="me-3 rounded-circle border shadow-sm" style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
+                        <div>
+                            <h4 class="modal-title fw-bold text-dark mb-0" id="factionModalTitle">Reglas de Facción</h4>
+                            <span class="badge bg-success small" id="factionModalArchetypes">Arquetipos</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light p-3">
+                    <!-- Nav Tabs internas para alternar entre Reglas, Ardides y Equipamiento -->
+                    <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border" id="factionModalTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold text-success" id="faction-tab-rules-btn" data-bs-toggle="pill" data-bs-target="#faction-tab-rules" type="button" role="tab" aria-controls="faction-tab-rules" aria-selected="true">
+                                <i class="bi bi-shield-shaded me-1"></i>Reglas y Habilidades
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold text-dark" id="faction-tab-ploys-btn" data-bs-toggle="pill" data-bs-target="#faction-tab-ploys" type="button" role="tab" aria-controls="faction-tab-ploys" aria-selected="false">
+                                <i class="bi bi-lightning-charge-fill me-1"></i>Ardides (Ploys)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold text-dark" id="faction-tab-equip-btn" data-bs-toggle="pill" data-bs-target="#faction-tab-equip" type="button" role="tab" aria-controls="faction-tab-equip" aria-selected="false">
+                                <i class="bi bi-tools me-1"></i>Equipamiento
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="factionModalTabContent">
+                        <div class="tab-pane fade show active" id="faction-tab-rules" role="tabpanel" aria-labelledby="faction-tab-rules-btn"></div>
+                        <div class="tab-pane fade" id="faction-tab-ploys" role="tabpanel" aria-labelledby="faction-tab-ploys-btn"></div>
+                        <div class="tab-pane fade" id="faction-tab-equip" role="tabpanel" aria-labelledby="faction-tab-equip-btn"></div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-white justify-content-center py-2 border-top">
+                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-return-left me-2"></i>Volver a la Partida
+                    </button>
                 </div>
             </div>
         </div>

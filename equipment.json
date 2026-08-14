@@ -1044,28 +1044,28 @@
     "id_equip": 150,
     "faction": "hierotek",
     "name": "Conductos Magnificadores",
-    "description": "Una vez por Punto de Inflexión, cuando un agente APPRENTEK HIEROTEK CIRCLE o CRYPTEK HIEROTEK CIRCLE amigo esté realizando la acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, selecciona otro agente HIEROTEK CIRCLE amigo (excluyendo PLASMACYTE) que tenga una orden de Trabarse y sea visible para ese agente amigo. Hasta el final de esa acción, ese otro agente amigo puede ser tratado como el agente activo para la regla de armas Magnificar.",
+    "description": "Una vez por punto de inflexión, cuando un agente <b>APRENTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> o <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo realice una acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo <b>PLASMACITA</b>) que tenga una orden de trabarse y sea visible para ese agente amigo. Hasta el final de esa acción, puedes tratar a ese otro agente amigo como el agente activo para la regla de armas Magnificar.",
     "action": []
   },
   {
     "id_equip": 151,
     "faction": "hierotek",
     "name": "Cubo Teseráctico",
-    "description": "En el paso de Preparación de cada Fase de Estrategia, cuando ganes PM, si un agente CRYPTEK amigo no está incapacitado, no está dentro del área de control de agentes enemigos y no ha sido REANIMADO este Punto de Inflexión, puedes usar esta regla. Si lo haces, lanza un D6: con un 1, no puedes usar esta regla por el resto de la batalla; con un 4+, ganas 1PM. Una vez que hayas ganado 2PM con esta regla, no puedes usarla por el resto de la batalla.",
+    "description": "En el paso de Preparación de cada fase de estrategia, cuando ganes PM, si tienes un agente <b>CRIPTECNÓLOGO</b> amigo que no esté incapacitado, se encuentre fuera de la zona de control de todo agente enemigo y no haya sido <b>REANIMADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, tira 1D6: con un 1, no podrás volver a usar esta regla durante el resto de la batalla; con un 4+, ganas 1PM. En cuanto hayas ganado 2PM con esta regla, ya no podrás usarla durante el resto de la batalla.",
     "action": []
   },
   {
     "id_equip": 152,
     "faction": "hierotek",
     "name": "Tejido Tesla",
-    "description": "Una vez por Punto de Inflexión, cuando un agente enemigo termine la acción de Cargar con agentes HIEROTEK CIRCLE amigos dentro de su área de control, puedes usar esta regla. Si lo haces, inflige D3+1 de daño a ese agente enemigo.",
+    "description": "Una vez por punto de inflexión, cuando un agente enemigo termine la acción de <b>Cargar</b> con algún agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo en su zona de control, puedes usar esta regla. Si lo haces, inflige 1D3+1 daños a ese agente enemigo.",
     "action": []
   },
   {
     "id_equip": 153,
     "faction": "hierotek",
     "name": "Cambiafases",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CRYPTEK amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <b>CRIPTECNÓLOGO</b> amigo, al inicio del paso de Tirar dados de defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si procede) hasta el final de esa secuencia. Ten en cuenta que, en tal caso, Penetración 1 pasaría a ignorarse.",
     "action": []
   },
   {

@@ -2381,7 +2381,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Asalto Implacable",
-        "description": "Siempre que un agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo dispare contra un agente a 8\" de él, las armas a distancia de ese agente amigo tienen la regla de armas Equilibrada. Ten en cuenta que cuando usas la regla de armas Magnificar, este agente aún debe estar a 8\" del objetivo para usar esta regla (no el otro agente amigo desde el cual estás determinando un blanco válido).",
+        "description": "Siempre que un agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo dispare contra un agente a 8\" o menos de él, las armas a distancia de ese agente amigo tienen la regla de armas Equilibrada. Ten en cuenta que cuando usas la regla de armas Magnificar, este agente aún debe estar a 8\" o menos del blanco para usar esta regla (no el otro agente amigo desde el cual estás determinando un blanco válido).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2390,7 +2390,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Androides Inmortales",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo, si no puedes retener ninguna salvación por cobertura, puedes retener uno de tus dados de defensa como un éxito normal sin tirarlo.",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo, si no puedes guardar ninguna salvación por cobertura, puedes guardar uno de tus dados de defensa como un éxito normal sin tirarlo.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2399,7 +2399,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Eliminación Metódica",
-        "description": "Las armas de combate de los agentes <span class=\"faction\">CÍRCULO HIEROTEK</span> amigos tienen la regla de armas Certera 1. Siempre que un agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo esté combatiendo durante una activación en la que no se haya movido más que su atributo de Movimiento, o siempre que esté contraataque, sus armas de combate tienen la regla de armas Precisa 2 en su lugar.",
+        "description": "Las armas de combate de los agentes <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigos tienen la regla de armas Certera 1. Siempre que un agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo esté combatiendo durante una activación en la que no se haya movido más que su atributo de Movimiento, o cuando contraataque, en lugar de eso sus armas de combate tienen la regla de armas Certera 2.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2408,7 +2408,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Dirigir Subordinados",
-        "description": "Selecciona uno de los siguientes: <ul><li><b>APOYO.</b> Cada otro agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo visible y a 6\" de un agente <b>CRIPTECNÓLOGO</b> amigo puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección.</li><li><b>APOYO.</b> Cada otro agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo (excluyendo <b>CRIPTECNÓLOGO</b>) visible para y a 3\" de un agente <b>APRENTEK</b> amigo puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección.</li></ul>",
+        "description": "Selecciona uno de los siguientes: <ul><li><b>APOYO.</b> Cada otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo visible y a 6\" de un agente <b>CRIPTECNÓLOGO</b> amigo puede realizar inmediatamente una acción libre de <b>Correr</b> en el orden que elijas.</li><li><b>APOYO.</b> Cada otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (excluyendo <b>CRIPTECNÓLOGO</b>) visible para y a 3\" de un agente <b>APRENTECNÓLOGO</b> amigo puede realizar inmediatamente una acción libre de <b>Correr</b> en el orden que elijas.</li></ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2417,7 +2417,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Control Cortical",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>APRENTEK</b> <span class=\"faction\">CÍRCULO HIEROTEK</span> o <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo realice una acción única de <b>APOYO</b>. Hasta el final de esa acción, para los propósitos de seleccionar otro agente amigo, ignora el requisito de distancia (solo la visibilidad es un requisito).",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>APRENTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> o <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo realice una acción única de <b>APOYO</b>. Hasta el final de esa acción, al elegir otro agente amigo, ignora el requisito de distancia (solo es un requisito la visibilidad).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2426,7 +2426,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Función Reanimada",
-        "description": "Usa este ardid de tiroteo al determinar el control de un marcador. Elige uno de tus marcadores de Reanimación. Hasta el inicio del siguiente punto de inflexión, siempre que se determine el control de un marcador, trata ese marcador de Reanimación como un agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo que tiene un <b>atributo de LPA de 1</b>.",
+        "description": "Usa este ardid de tiroteo al determinar el control de un marcador. Elige uno de tus marcadores de Reanimación. Hasta el inicio del siguiente punto de inflexión, siempre que se determine el control de un marcador, trata ese marcador de Reanimación como un agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo que tiene un <b>atributo de LPA de 1</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2435,7 +2435,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Rayo Viviente",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>INMORTAL</b> <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo esté realizando la acción <b>Disparar</b> y selecciones una carabina tesla. Hasta el final de esa acción, ese arma no tiene las 2\" de su regla de armas Devastadora pero tiene la regla de armas Estallido 2\".",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>INMORTAL</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo esté realizando la acción <b>Disparar</b> y selecciones una carabina tesla. Hasta el final de esa acción, esa arma no tiene las 2\" de su regla de armas Devastadora pero tiene la regla de armas Área 2\".",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2444,7 +2444,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Emboscada Dimensional",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MARCA DE MUERTE</b> <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo, si tiene una orden de Ocultación. Durante esa activación, ese agente puede realizar la acción de <b>Guardia</b> (ver reglas de combate cerrado, Libro Básico de Kill Team) en cualquier zona de aniquilación y mientras tiene una orden de Ocultación, pero cuando interrumpes para la acción gratuita de <b>Combatir</b> o <b>Disparar</b> durante la interrupción, debes cambiar su orden a Trabarse.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>OMNICIDA</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo, si tiene una orden de ocultarse. Durante esa activación, ese agente puede realizar la acción de <b>Ponerse en guardia</b> (ver reglas de combate cerrado, Reglamento de Kill Team) sin importar la zona de aniquilación y mientras tiene una orden de ocultarse, pero cuando interrumpes para la acción gratuita de <b>Combatir</b> o <b>Disparar</b> durante la interrupción, debes cambiar su orden por trabarse.",
         "typename": "Ardid de Tiroteo"
     },
     {

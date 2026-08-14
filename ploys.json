@@ -2426,7 +2426,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Función Reanimada",
-        "description": "Usa este ardid de tiroteo al determinar el control de un marcador. Elige uno de tus marcadores de Reanimación. Hasta el inicio del siguiente punto de inflexión, siempre que se determine el control de un marcador, trata ese marcador de Reanimación como un agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo que tiene un <b>atributo de LPA de 1</b>.",
+        "description": "Usa este ardid de tiroteo al determinar el control de un marcador. Elige uno de tus marcadores de Reanimación. Hasta el inicio del siguiente punto de inflexión, siempre que se determine el control de un marcador, trata ese marcador de Reanimación como un agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo que tiene un <b>atributo de LPA de 1</b>. A efectos de la operación táctica Mártires (Operaciones Aprobadas 2025), este ardid no tiene efecto.",
         "typename": "Ardid de Tiroteo"
     },
     {

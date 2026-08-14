@@ -14258,7 +14258,7 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo que sea visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo que sea visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero durante esa acción no puede moverse más de 2\" ni ser retirado y situado a más de 2\" de distancia, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 },
@@ -14347,7 +14347,7 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo que sea visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo que sea visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero durante esa acción no puede moverse más de 2\" ni ser retirado y situado a más de 2\" de distancia, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 },
@@ -14416,7 +14416,7 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero durante esa acción no puede moverse más de 2\" ni ser retirado y situado a más de 2\" de distancia, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 },
@@ -14543,7 +14543,7 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él. Dicho agente puede realizar de inmediato una acción de 1PA como acción libre (excepto Acelerar), pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él. Dicho agente puede realizar de inmediato una acción de 1PA como acción libre (excepto Acelerar), pero durante esa acción no puede moverse más de 2\" ni ser retirado y situado a más de 2\" de distancia, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 }
@@ -14686,7 +14686,7 @@
             "abilities": [
                 {
                     "name": "Elusivo",
-                    "description": "<ul><li>Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas salvo estar a 2\" o menos.</li></ul> <ul><li>Este agente puede realizar la acción de <b>Retroceder</b> por 1 PA menos.</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo Acelerar.</li></ul>"
+                    "description": "<ul><li>Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (por ejemplo, Buscadora o terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Este agente puede realizar la acción de <b>Retroceder</b> por 1 PA menos.</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo Acelerar.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -14736,7 +14736,7 @@
             "abilities": [
                 {
                     "name": "Elusivo",
-                    "description": "<ul><li>Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas salvo estar a 2\" o menos.</li></ul> <ul><li>Este agente puede realizar la acción de <b>Retroceder</b> por 1 PA menos.</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo Reanimar.</li></ul>"
+                    "description": "<ul><li>Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (por ejemplo, Buscadora o terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Este agente puede realizar la acción de <b>Retroceder</b> por 1 PA menos.</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo Reanimar.</li></ul>"
                 }
             ],
             "uniqueActions": [

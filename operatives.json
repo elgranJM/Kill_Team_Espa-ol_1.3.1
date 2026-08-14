@@ -14376,7 +14376,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNOLOGO, CRONOMANTE",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNÓLOGO, CRONOMANTE",
             "peana": "40"
         },
         {
@@ -14396,7 +14396,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "2/2",
-                        "RA": "Área 2\", Devastadora 1, Penetración 2, Magnificar<span class=\"faction\">*</span>"
+                        "RA": "Área 2\", 2\" Devastadora 1, Penetración 2, Magnificar<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -14433,7 +14433,7 @@
                     "name": "MORTAJA DE PESADILLAS",
                     "cost": "1 PA",
                     "description": [
-                        "Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), siempre que un agente enemigo a 4\" o menos de este agente dispare, combata o contraataque, tu oponente no puede repetir sus dados de ataque y no puede guardar dados con un resultado menor de 6 como éxitos criticos (p. ej. por las reglas de armas Letal o Severa)."
+                        "Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), siempre que un agente enemigo a 4\" o menos de este agente dispare, combata o contraataque, tu oponente no puede repetir sus dados de ataque y no puede guardar dados con un resultado menor de 6 como éxitos críticos (p. ej. por las reglas de armas Letal o Severa)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -14447,14 +14447,14 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CIRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNÓLOGO, PSICOMANTE",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNÓLOGO, PSICOMANTE",
             "peana": "40"
         },
         {
             "id": "apprentek",
             "name": "APRENTECNÓLOGO",
             "stats": {
-                "LPA": "2",
+                "LPA": "3",
                 "MOVER": "6\"",
                 "SALVACIÓN": "3+",
                 "HERIDAS": "11"
@@ -14488,7 +14488,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, APRENTECNOLOGO",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, APRENTECNÓLOGO",
             "peana": "32"
         },
         {
@@ -14543,17 +14543,17 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO CRIPTECNOLOGO) a 6\" o menos de este agente y visible para él. Dicho agente puede realizar de inmediato una acción de 1PA como acción libre (excepto Acelerar), pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él. Dicho agente puede realizar de inmediato una acción de 1PA como acción libre (excepto Acelerar), pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, DESPOTECNOLOGO",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, DESPOTECNÓLOGO",
             "peana": "32"
         },
         {
             "id": "immortal-guardian",
-            "name": "GUARDIAN INMORTAL",
+            "name": "GUARDIÁN INMORTAL",
             "stats": {
                 "LPA": "2",
                 "MOVER": "5\"",
@@ -14599,7 +14599,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, GUARDIAN",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, GUARDIÁN",
             "peana": "32"
         },
         {
@@ -14613,7 +14613,7 @@
             },
             "weapons": [
                 {
-                    "name": "Desintegrador sinaptico",
+                    "name": "Desintegrador sináptico",
                     "type": "ranged",
                     "stats": {
                         "A": "4",

@@ -1043,14 +1043,14 @@
   {
     "id_equip": 150,
     "faction": "hierotek",
-    "name": "Conductos de Magnificación",
+    "name": "Conductos Magnificadores",
     "description": "Una vez por Punto de Inflexión, cuando un agente APPRENTEK HIEROTEK CIRCLE o CRYPTEK HIEROTEK CIRCLE amigo esté realizando la acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, selecciona otro agente HIEROTEK CIRCLE amigo (excluyendo PLASMACYTE) que tenga una orden de Trabarse y sea visible para ese agente amigo. Hasta el final de esa acción, ese otro agente amigo puede ser tratado como el agente activo para la regla de armas Magnificar.",
     "action": []
   },
   {
     "id_equip": 151,
     "faction": "hierotek",
-    "name": "Cubo Teseracto",
+    "name": "Cubo Teseráctico",
     "description": "En el paso de Preparación de cada Fase de Estrategia, cuando ganes PM, si un agente CRYPTEK amigo no está incapacitado, no está dentro del área de control de agentes enemigos y no ha sido REANIMADO este Punto de Inflexión, puedes usar esta regla. Si lo haces, lanza un D6: con un 1, no puedes usar esta regla por el resto de la batalla; con un 4+, ganas 1PM. Una vez que hayas ganado 2PM con esta regla, no puedes usarla por el resto de la batalla.",
     "action": []
   },
@@ -1064,7 +1064,7 @@
   {
     "id_equip": 153,
     "faction": "hierotek",
-    "name": "Desfasador",
+    "name": "Cambiafases",
     "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CRYPTEK amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },

@@ -2380,7 +2380,7 @@
         "faction": "hierotek",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Embestida Implacable",
+        "name": "Asalto Implacable",
         "description": "Siempre que un agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo dispare contra un agente a 8\" de él, las armas a distancia de ese agente amigo tienen la regla de armas Equilibrada. Ten en cuenta que cuando usas la regla de armas Magnificar, este agente aún debe estar a 8\" del objetivo para usar esta regla (no el otro agente amigo desde el cual estás determinando un blanco válido).",
         "typename": "Ardid de Estrategia"
     },
@@ -2407,7 +2407,7 @@
         "faction": "hierotek",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Comandar Subordinados",
+        "name": "Dirigir Subordinados",
         "description": "Selecciona uno de los siguientes: <ul><li><b>APOYO.</b> Cada otro agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo visible y a 6\" de un agente <b>CRIPTECNÓLOGO</b> amigo puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección.</li><li><b>APOYO.</b> Cada otro agente <span class=\"faction\">CÍRCULO HIEROTEK</span> amigo (excluyendo <b>CRIPTECNÓLOGO</b>) visible para y a 3\" de un agente <b>APRENTEK</b> amigo puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección.</li></ul>",
         "typename": "Ardid de Estrategia"
     },

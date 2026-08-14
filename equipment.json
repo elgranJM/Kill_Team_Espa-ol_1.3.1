@@ -449,28 +449,28 @@
     "id_equip": 70,
     "faction": "battleclade",
     "name": "Equipo Oculto",
-    "description": "GAMBITO ESTRATÉGICO en el segundo Punto de Inflexión. Puedes intercambiar las ubicaciones de cualquier número de agentes SERVIDOR amigos entre sí (excluyendo SERVIDOR DE ARMAMENTO), y puedes intercambiar las ubicaciones de agentes SERVIDOR DE ARMAMENTO amigos entre sí (retíralos de la zona de aniquilación y vuelve a colocarlos). No puedes intercambiar ningún agente que haya hecho alguna de las siguientes cosas durante la batalla: <ul><li>Usado armas de su tarjeta de datos.</li></ul> <ul><li>Realizado acciones de su tarjeta de datos.</li></ul> <ul><li>Usado la regla Matriz de Mecanosutura (ver TECHNOMEDIC).</li></ul>",
+    "description": "Una vez por batalla, un agente <b>SERVIDOR DE COMBATE</b> o <b>SERVIDOR DE ARMAMENTO</b> puede usar otra opción de arma de su tarjeta de datos, aunque no la hubiera seleccionado para la batalla.",
     "action":[]
   },
   {
     "id_equip": 71,
     "faction": "battleclade",
     "name": "Disfraces",
-    "description": "Después de revelar esta opción de equipamiento, tira 1D3. Como un GAMBITO ESTRATÉGICO en el primer Punto de Inflexión, un número de agentes CLADO DE BATALLA amigos igual al resultado que estén totalmente dentro de tu zona de descenso pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de descenso. Tu agente TECHNOARCHEOLOGIST no puede realizar más de una acción de Reposicionarse en la Fase de Estrategia del primer Punto de Inflexión (es decir, como resultado de la regla Buscador de la Arcana Divina también).",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Como <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión, un número de agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos igual al resultado, de entre los que estén completamente dentro de tu zona de descenso, pueden realizar de inmediato una acción libre de <b>Reposicionarse</b>, pero deben terminarla completamente a 3\" o menos de tu zona de descenso. Tu agente <b>TECNOARQUEÓLOGO</b> no puede realizar más de una acción de <b>Reposicionarse</b> durante la fase de estrategia del primer punto de inflexión (por ejemplo, por la regla Buscador de misterios divinos).",
     "action": []
   },
   {
     "id_equip": 72,
     "faction": "battleclade",
     "name": "Capacitadores Electrománticos",
-    "description": "Las armas de combate de los agentes CLADO DE BATALLA amigos tienen la regla de armas Choque. Siempre que un agente CLADO DE BATALLA amigo preparado esté contraataque, sus armas de combate también tienen la regla de armas Severa.",
+    "description": "Las armas de combate de los agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos tienen la regla de armas Choque. Siempre que un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo contraataque, sus armas de combate tienen además la regla de armas Severa.",
     "action": []
   },
   {
     "id_equip": 73,
     "faction": "battleclade",
     "name": "Células de Reserva Neurocíclica",
-    "description": "Después de revelar esta opción de equipamiento, tira 1D3. Un número de veces durante la batalla igual al resultado, siempre que TRANSFIERAS POTENCIA, puedes usar esta regla. Si lo haces, no restes 1 al atributo de LPA del agente, pero este no puede realizar acciones de Combatir o <b>Disparar</b> durante esa activación (esto tiene prioridad sobre las reglas normales de Red Noosférica).",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Una vez por punto de inflexión, cuando lleves a cabo <b>TRANSFERIR POTENCIA</b>, puedes usar esta regla. Si lo haces, gastas 0PA en lugar de 1PA (esto tiene preferencia sobre las reglas normales de Red noosférica).",
     "action": []
   },
   {

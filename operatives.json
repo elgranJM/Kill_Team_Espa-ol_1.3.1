@@ -973,10 +973,10 @@
             "abilities": [],
             "uniqueActions": [
                 {
-                    "name": "Incentivo noosférico",
+                    "name": "Acumulador datacoronario",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo para realizar de inmediato una acción libre de <b>Correr</b>. Solo puedes elegir a cada agente <b>SERVIDOR</b> amigo para esta regla una vez por punto de inflexión. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se determina la distancia debe controlar ese marcador."
+                        "<b>APOYO.</b> Determina qué agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos se encuentran a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo, y a continuación tira 1D3. Si el resultado es igual o menor que el número de marcadores de objetivo que esos agentes amigos disputan, ganas 1PM. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se mide la distancia debe controlar tu marcador de Aparato de comunicaciones para sumar 3\" al requisito de distancia de esta regla."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -984,7 +984,7 @@
                     "name": "Anulación de red",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo para <b>REACCIONAR EN RED</b> inmediatamente (no tienes que <b>TRANSFERIR POTENCIA</b> para ello). Continúa la activación de este agente tras hacerlo. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se determina la distancia debe controlar ese marcador."
+                        "<b>APOYO.</b> Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo, para que <b>REACCIONE EN RED</b> de inmediato (sin necesidad de <b>TRANSFERIR POTENCIA</b>) o para que realice una acción libre de Correr. Después continúa la activación de este agente. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se mide la distancia debe controlar ese marcador. Este agente puede realizar esta acción dos veces durante su activación."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }

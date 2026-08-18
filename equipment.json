@@ -330,7 +330,7 @@
     "id_equip": 44,
     "faction": "hunter-clade",
     "name": "Sistemas Redundantes",
-    "description": "Una vez por Punto de Inflexión, cuando se activa un agente CLADO DE CAZA amigo, si no está dentro del área de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta un máximo de 1D3+2 heridas perdidas.",
+    "description": "Una vez por Punto de Inflexión, cuando se activa un agente CLADO DE CAZA amigo, si no está dentro de la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta un máximo de 1D3+2 heridas perdidas.",
     "action": []
   },
   {

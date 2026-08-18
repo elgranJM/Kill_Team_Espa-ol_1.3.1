@@ -309,14 +309,14 @@
     "id_equip": 41,
     "faction": "hunter-clade",
     "name": "Bombardeo Radioactivo",
-    "description": "GAMBITO ESTRATÉGICO una vez por batalla en cualquier Punto de Inflexión después del primero. Selecciona un marcador de objetivo o la zona de despliegue de tu adversario. Tira 1D6 por cada agente enemigo dentro del área de control de ese marcador de objetivo seleccionado o dentro de esa zona de despliegue, y resta 1 del atributo de LPA de ese agente enemigo hasta el final de su próxima activación con un 4+; con un 6, también inflige D3 de daño en él (tira por separado para cada uno).",
+    "description": "<b>GAMBITO ESTRATÉGICO</b> de una vez por batalla, a partir de cualquier punto de inflexión. Elige un marcador de objetivo. Tira un dado por cada agente enemigo que se encuentre en la zona de control de ese marcador o en esa zona de descenso, y resta 1 si alguna parte de la peana de ese agente está bajo terreno Aventajado: con 4+, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación; con un 6, inflígele además 1D3 daños (tira por separado para cada uno).",
     "action": []
   },
   {
     "id_equip": 42,
     "faction": "hunter-clade",
     "name": "Campo Refractor",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CLADO DE CAZA amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CLADO DE CAZA amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si la hay) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },
   {
@@ -330,7 +330,7 @@
     "id_equip": 44,
     "faction": "hunter-clade",
     "name": "Sistemas Redundantes",
-    "description": "Una vez por Punto de Inflexión, cuando se activa un agente CLADO DE CAZA amigo, si no está dentro del área de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta D3+2 heridas perdidas.",
+    "description": "Una vez por Punto de Inflexión, cuando se activa un agente CLADO DE CAZA amigo, si no está dentro del área de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta un máximo de 1D3+2 heridas perdidas.",
     "action": []
   },
   {

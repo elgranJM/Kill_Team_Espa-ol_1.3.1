@@ -13462,7 +13462,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, EXPLORADOR, ALFA",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, EXPLORADOR, ALFA",
             "peana": "25"
         },
         {
@@ -13571,7 +13571,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, VANGUARDIA, ALFA",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, VANGUARDIA, ALFA",
             "peana": "25"
         },
         {
@@ -13606,11 +13606,11 @@
                 },
                 {
                     "name": "Protocolo de control",
-                    "description": "Puedes usar el ardid de tiroteo Sobreescribir orden por OPM si el agente <span class=\"faction\">CLADO DE CAZAS</span> amigo especificado es visible para este agente."
+                    "description": "Puedes usar el ardid de tiroteo Sobreescribir orden por OPM si el agente <span class=\"faction\">CLADO DE CAZA</span> amigo especificado es visible para este agente."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SICARIANO, FERRACECHADOR, PRINCEPS",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SICARIANO, FERRACECHADOR, PRINCEPS",
             "peana": "40"
         },
         {
@@ -13675,7 +13675,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "CLADO DE CAZA, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SICARIANO, INFILTRADOR, PRINCEPS",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SICARIANO, INFILTRADOR, PRINCEPS",
             "peana": "40"
         },
         {
@@ -13756,7 +13756,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, TIRADOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, TIRADOR",
             "peana": "25 (60x35 para Arcabuz)"
         },
         {
@@ -13837,7 +13837,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, TIRADOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, TIRADOR",
             "peana": "25 (60x35 para Arcabuz)"
         },
         {
@@ -13882,12 +13882,12 @@
                     "name": "AVISTAR",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZAS</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
+                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZA</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, SUPERVISOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, SUPERVISOR",
             "peana": "25"
         },
         {
@@ -13932,12 +13932,12 @@
                     "name": "AVISTAR",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZAS</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
+                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZA</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, SUPERVISOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, SUPERVISOR",
             "peana": "25"
         },
         {
@@ -13987,7 +13987,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, DIKTAT",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, DIKTAT",
             "peana": "25"
         },
         {
@@ -14037,7 +14037,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, DIKTAT",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, DIKTAT",
             "peana": "25"
         },
         {
@@ -14078,7 +14078,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, COMBATIENTE",
             "peana": "25"
         },
         {
@@ -14119,7 +14119,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, COMBATIENTE",
             "peana": "25"
         },
         {
@@ -14160,7 +14160,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SICARIANO, FERRACECHADOR, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SICARIANO, FERRACECHADOR, COMBATIENTE",
             "peana": "40"
         },
         {
@@ -14216,7 +14216,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SICARIANO, INFILTRADOR, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SICARIANO, INFILTRADOR, COMBATIENTE",
             "peana": "40"
         }
     ],

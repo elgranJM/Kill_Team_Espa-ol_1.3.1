@@ -436,8 +436,8 @@
         "faction": "hunter-clade",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Irradiación Debilitante",
-        "description": "Siempre que un agente enemigo dispare, combatiendo o contraataque contra un agente <b>VANGUARDIA</b> <span class=\"faction\">HUNTER CLADE</span> amigo, si ese agente enemigo está bajo los efectos de la regla <b>Saturación-Rad</b> (ver agentes VANGUARDIA), resta 1 del atributo de Daño Normal de sus armas (hasta un mínimo de 3).",
+        "name": "Radiación Debilitante",
+        "description": "Siempre que un agente enemigo dispare, combatiendo o contraataque contra un agente <b>VANGUARDIA</b> <span class=\"faction\">CLADO DE CAZA</span> amigo, si ese agente enemigo está bajo los efectos de la regla <b>Irradiación</b> (ver agentes VANGUARDIA), resta 1 del atributo de Daño Normal de sus armas (hasta un mínimo de 3).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -446,7 +446,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Protocolo de Exploración",
-        "description": "Cada agente <b>EXPLORADOR</b> <span class=\"faction\">HUNTER CLADE</span> amigo que tenga una orden de Ocultación y esté a más de 6\" de agentes enemigos puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección. No puedes usar este ardid durante el primer punto de inflexión.",
+        "description": "Cada agente <b>EXPLORADOR</b> <span class=\"faction\">CLADO DE CAZA</span> amigo que tenga una orden de Ocultación y esté a más de 6\" de agentes enemigos puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -454,8 +454,8 @@
         "faction": "hunter-clade",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Interferencia Neuroestática",
-        "description": "Siempre que un agente enemigo a 6\" de un agente <b>INFILTRADOR</b> <span class=\"faction\">HUNTER CLADE</span> amigo dispare, combatiendo o contraataque, tu oponente no puede repetir sus dados de ataque.",
+        "name": "Interferencia Neurostática",
+        "description": "Siempre que un agente enemigo a 6\" de un agente <b>INFILTRADOR</b> <span class=\"faction\">CLADO DE CAZA</span> amigo dispare, combatiendo o contraataque, tu oponente no puede repetir sus dados de ataque.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -463,8 +463,8 @@
         "faction": "hunter-clade",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Agentes Acelerantes",
-        "description": "Durante la activación de cada agente <b>RUSTSTALKER</b> <span class=\"faction\">HUNTER CLADE</span> amigo, puede realizar dos acciones de <b>Combatir</b>, y una de ellas puede ser gratuita.",
+        "name": "Agentes Aceleradores",
+        "description": "Durante la activación de cada agente <b>FERRACECHADOR</b> <span class=\"faction\">CLADO DE CAZA</span> amigo, puede realizar dos acciones de <b>Combatir</b>, y una de ellas puede ser gratuita.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -473,7 +473,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Edicto de Control",
-        "description": "Usa este ardid de tiroteo cuando sea tu turno de activar un agente amigo. Elige un agente <b>LÍDER</b> <span class=\"faction\">HUNTER CLADE</span> amigo y otro agente <span class=\"faction\">HUNTER CLADE</span> amigo preparado visible para y a 3\" de ese agente <b>LÍDER</b>; activa uno de ellos de manera normal. Cuando ese primer agente amigo esté agotado, puedes activar al otro agente amigo antes de que active tu oponente. Siempre que uses este ardid, no puedes seleccionar más de un agente <b>SICARIAN</b> <span class=\"faction\">HUNTER CLADE</span>.",
+        "description": "Usa este ardid de tiroteo cuando sea tu turno de activar un agente amigo. Elige un agente <b>LÍDER</b> <span class=\"faction\">CLADO DE CAZA</span> amigo y otro agente <span class=\"faction\">CLADO DE CAZA</span> amigo preparado visible para y a 3\" de ese agente <b>LÍDER</b>; activa uno de ellos de manera normal. Cuando ese primer agente amigo esté agotado, puedes activar al otro agente amigo antes de que active tu oponente. Siempre que uses este ardid, no puedes seleccionar más de un agente <b>SICARIAN</b> <span class=\"faction\">CLADO DE CAZA</span>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -482,7 +482,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Imperativo del Omnissiah",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">HUNTER CLADE</span> amigo. <span class=\"text-info-emphasis\">Alternativamente, úsalo cuando un agente enemigo dispare contra un agente HUNTER CLADE amigo, al final del paso Tirar Dados de Ataque.</span> <span class=\"text-decoration-line-through text-warning-emphasis\">Inflige 1D3+1 de daño a ese agente amigo</span>. Hasta el paso de Preparar de la próxima fase de Estrategia, ese agente <span class=\"text-info-emphasis\">amigo</span> tiene una regla adicional determinada por su actual <b>IMPERATIVO DE DOCTRINA</b> como sigue:\n<ul>\n<li><b>Protector:</b> Las armas a distancia de este agente tienen la regla de armas Severa.</li>\n<li><b>Conquistador:</b> Siempre que este agente esté combatiendo, después de resolver tu primer dado de ataque durante esa secuencia, puedes resolver inmediatamente otro (antes que tu oponente).</li>\n<li><b>Baluarte: </b> Mejora el atributo de Salvación de este agente en 1. Además, siempre que un agente dispare a este agente, puedes recoger y tirar un dado de defensa adicional. <span class=\"text-info-emphasis\">Si usas este ardid durante una acción de <b>Disparar</b>, el atributo de Salvación de este agente se cambia inmediatamente (esto tiene precedencia sobre las reglas básicas).</span></li>\n<li><b>Agresor:</b> Puedes ignorar la primera distancia vertical de 2\" que este agente mueve durante una escalada <span class=\"text-info-emphasis\">hacia arriba</span>.</li>\n<li><b>Neutral:</b> Ninguna.</li>\n</ul>\nTen en cuenta que puedes usar este ardid después de tirar dados de ataque o defensa para este agente, o antes o después de retener o repetir esos dados.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CLADO DE CAZA</span> amigo. <span class=\"text-info-emphasis\">Alternativamente, úsalo cuando un agente enemigo dispare contra un agente CLADO DE CAZA amigo, al final del paso Tirar Dados de Ataque.</span> <span class=\"text-decoration-line-through text-warning-emphasis\">Inflige 1D3+1 de daño a ese agente amigo</span>. Hasta el paso de Preparar de la próxima fase de Estrategia, ese agente <span class=\"text-info-emphasis\">amigo</span> tiene una regla adicional determinada por su actual <b>IMPERATIVO DE DOCTRINA</b> como sigue:\n<ul>\n<li><b>Protector:</b> Las armas a distancia de este agente tienen la regla de armas Severa.</li>\n<li><b>Conquistador:</b> Siempre que este agente esté combatiendo, después de resolver tu primer dado de ataque durante esa secuencia, puedes resolver inmediatamente otro (antes que tu oponente).</li>\n<li><b>Baluarte: </b> Mejora el atributo de Salvación de este agente en 1. Además, siempre que un agente dispare a este agente, puedes recoger y tirar un dado de defensa adicional. <span class=\"text-info-emphasis\">Si usas este ardid durante una acción de <b>Disparar</b>, el atributo de Salvación de este agente se cambia inmediatamente (esto tiene precedencia sobre las reglas básicas).</span></li>\n<li><b>Agresor:</b> Puedes ignorar la primera distancia vertical de 2\" que este agente mueve durante una escalada <span class=\"text-info-emphasis\">hacia arriba</span>.</li>\n<li><b>Neutral:</b> Ninguna.</li>\n</ul>\nTen en cuenta que puedes usar este ardid después de tirar dados de ataque o defensa para este agente, o antes o después de retener o repetir esos dados.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -490,8 +490,8 @@
         "faction": "hunter-clade",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Sobrecarga de Código Chatarra",
-        "description": "Usa este ardid de tiroteo cuando se active un agente <b>INFILTRADOR</b> <span class=\"faction\">HUNTER CLADE</span> amigo. Alternativamente, usa este ardid de tiroteo cuando un agente <b>INFILTRADOR</b> <span class=\"faction\">HUNTER CLADE</span> amigo, o un agente enemigo a 3\" de ese agente amigo, fuera a realizar la acción <b>Recoger Marcador</b> o una acción de misión (excluyendo <b>Operar Compuerta</b>). Hasta el inicio de la próxima activación de ese agente amigo, siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menor si al menos uno de esos agentes enemigos está a 3\" de ese agente amigo. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto, y esto puede cambiar el control de un marcador antes de realizar la acción.",
+        "name": "Sobrecarga de Código de Desecho",
+        "description": "Usa este ardid de tiroteo cuando se active un agente <b>INFILTRADOR</b> <span class=\"faction\">CLADO DE CAZA</span> amigo. Alternativamente, usa este ardid de tiroteo cuando un agente <b>INFILTRADOR</b> <span class=\"faction\">CLADO DE CAZA</span> amigo, o un agente enemigo a 3\" de ese agente amigo, fuera a realizar la acción <b>Recoger Marcador</b> o una acción de misión (excluyendo <b>Operar Compuerta</b>). Hasta el inicio de la próxima activación de ese agente amigo, siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menor si al menos uno de esos agentes enemigos está a 3\" de ese agente amigo. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto, y esto puede cambiar el control de un marcador antes de realizar la acción.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -500,7 +500,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Anular Mando",
-        "description": "Usa este ardid de tiroteo cuando actives a un agente <span class=\"faction\">HUNTER CLADE</span> amigo. Elige un <b>IMPERATIVO DE DOCTRINA</b> para que ese agente lo tenga en lugar de su actual (si lo hay) hasta el paso de Preparar de la próxima fase de Estrategia.",
+        "description": "Usa este ardid de tiroteo cuando actives a un agente <span class=\"faction\">CLADO DE CAZA</span> amigo. Elige un <b>IMPERATIVO DE DOCTRINA</b> para que ese agente lo tenga en lugar de su actual (si lo hay) hasta el paso de Preparar de la próxima fase de Estrategia.",
         "typename": "Ardid de Tiroteo"
     },
     {

@@ -854,28 +854,28 @@
     "id_equip": 126,
     "faction": "void-dancer-troupe",
     "name": "Talismán de Hueso Espectral",
-    "description": "Una vez por Punto de Inflexión, cuando un agente VOID-DANCER TROUPE amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
     "action": []
   },
   {
     "id_equip": 127,
     "faction": "void-dancer-troupe",
-    "name": "Proyectiles de Toxina Aulladora",
-    "description": "Una vez por Punto de Inflexión, cuando un agente VOID-DANCER TROUPE amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (enfocado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Devastadora 1.",
+    "name": "Proyectiles de Toxinas Aulladores",
+    "description": "Una vez por Punto de Inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (concentrado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Devastadora 1.",
     "action": []
   },
   {
     "id_equip": 128,
     "faction": "void-dancer-troupe",
-    "name": "Máscara Mortuoria",
-    "description": "Mantén una cuenta de Tragedia. Siempre que un agente VOID-DANCER TROUPE amigo que tenga una regla de GALARDÓN sea incapacitado, añade 1 a tu cuenta de Tragedia. Cuando tu cuenta de Tragedia llegue a 3, ganas 1PM y detienes esa cuenta.",
+    "name": "Máscara de la Muerte",
+    "description": "Mantén una cuenta de Tragedia. Siempre que un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo que tenga una regla de GALARDÓN sea incapacitado, añade 1 a tu cuenta de Tragedia. Cuando tu cuenta de Tragedia llegue a 3, ganas 1PM y detienes esa cuenta.",
     "action": []
   },
   {
     "id_equip": 129,
     "faction": "void-dancer-troupe",
     "name": "Máscara del Suplente",
-    "description": "Una vez por batalla, cuando actives a un agente VOID-DANCER TROUPE amigo, si el agente amigo que tiene el ROL CRUCIAL ha sido incapacitado, puedes usar esta regla. Si lo haces, ese agente activado tiene el ROL CRUCIAL para la batalla.",
+    "description": "Una vez por batalla, cuando actives a un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo, si el agente amigo que tiene el PAPEL CENTRAL ha sido incapacitado, puedes usar esta regla. Si lo haces, ese agente activado tiene el PAPEL CENTRAL para la batalla.",
     "action": []
   },
   {

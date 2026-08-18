@@ -2840,7 +2840,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Broma de Cegorach",
-        "description": "Siempre que un agente de la <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> amigo esté combatiendo o contraataque y tu oponente golpee con un éxito normal, puedes tirar un D6: si el resultado es menor que el atributo de Impacto del arma seleccionada de tu oponente, ese golpe es un bloqueo en su lugar (ignora la regla de armas Brutal, si es relevante) y no puedes usar esta regla por el resto de la secuencia.",
+        "description": "Siempre que un agente de la <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> amigo esté combatiendo o contraataque y tu oponente golpee con un éxito normal, puedes tirar 1D6: si el resultado es menor que el atributo Impactar del arma seleccionada de tu oponente, ese golpe es un bloqueo en su lugar (ignora la regla de armas Brutal, si es relevante) y no puedes usar esta regla por el resto de la secuencia.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2858,7 +2858,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Cae el Telón",
-        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> amigo esté combatiendo, después de golpear con un éxito crítico. Termina esa secuencia (cualquier dado de ataque restante se descarta) e inmediatamente realiza una acción gratuita de <b>Correr</b> o <b>Retroceder</b> hasta 3\" con ese agente (entonces la acción <b>Combatir</b> termina). Ese agente puede hacerlo incluso si ha realizado una acción que le impide realizar la acción <b>Correr</b> o <b>Retroceder</b>.",
+        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> amigo esté combatiendo, después de golpear con un éxito crítico, si el agente enemigo no resultó incapacitado. Termina esa secuencia (cualquier dado de ataque restante se descarta) e inmediatamente realiza una acción libre de <b>Retroceder</b> de hasta 3\" con ese agente (entonces la acción <b>Combatir</b> termina). Ese agente puede hacerlo incluso si ha realizado una acción que le impide realizar la acción <b>Retroceder</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2867,7 +2867,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Blanco Esquivo",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> amigo. Hasta el inicio de su próxima activación, si ese agente tiene una orden de Ocultación y está en cobertura, no puede ser seleccionado como un blanco válido, ignorando todas las demás reglas (p. ej., Buscadora, terreno de Ventaja) excepto estar a 2\".",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> amigo. Hasta el inicio de su próxima activación, si ese agente tiene una orden de ocultarse y está en cobertura, no puede ser seleccionado como un blanco válido, ignorando todas las demás reglas (p. ej., Buscadora, terreno Aventajado) excepto estar a 2\".",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2876,7 +2876,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Campo Antifaz",
-        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente de la <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> amigo, durante el paso Resolver Dados de Defensa. Puedes asignar uno de tus dados exitosos tirados para bloquear todos los dados de ataque de tu oponente con resultados coincidentes (p. ej., uno de tus resultados de dados de defensa exitosos de 5 se puede usar para bloquear todos los resultados de dados de ataque exitosos de 5).",
+        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente de la <span class=\"faction\">COMPAÑÍA DE BAILARINES DEL VACÍO</span> amigo, durante el paso resolver dados de defensa. Puedes asignar uno de tus dados exitosos tirados para bloquear todos los dados de ataque de tu oponente con resultados coincidentes (p. ej., uno de tus resultados de dados de defensa exitosos de 5 se puede usar para bloquear todos los resultados de dados de ataque exitosos de 5).",
         "typename": "Ardid de Tiroteo"
     },
     {

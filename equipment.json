@@ -854,14 +854,14 @@
     "id_equip": 126,
     "faction": "void-dancer-troupe",
     "name": "Talismán de Hueso Espectral",
-    "description": "Una vez por Punto de Inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por punto de inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.",
     "action": []
   },
   {
     "id_equip": 127,
     "faction": "void-dancer-troupe",
     "name": "Proyectiles de Toxinas Aulladores",
-    "description": "Una vez por Punto de Inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (concentrado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Devastadora 1.",
+    "description": "Una vez por punto de inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (concentrado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Devastadora 1.",
     "action": []
   },
   {

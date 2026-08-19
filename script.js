@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const factionSelect = document.getElementById('faction-select');
     // Actualizado: Referencia al nuevo selector de Tipo de Facción
     const factionTypeSelect = document.getElementById('faction-type-select');
-    
+
     // Contenedores de contenido
     const containers = {
         racial: document.getElementById('faction-info-pane'),
@@ -49,25 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Configuración Visual ---
     const archetypeConfig = {
-        'recon': { 
-            color: '#f05c22', 
-            name: 'Reconocimiento', 
-            icon: 'recon.svg' 
+        'recon': {
+            color: '#f05c22',
+            name: 'Reconocimiento',
+            icon: 'recon.svg'
         },
-        'security': { 
-            color: '#0b6be1', 
-            name: 'Seguridad', 
-            icon: 'security.svg' 
+        'security': {
+            color: '#0b6be1',
+            name: 'Seguridad',
+            icon: 'security.svg'
         },
-        'seek-destroy': { 
-            color: '#bd0003', 
-            name: 'Búsqueda y Destrucción', 
-            icon: 'seek-destroy.svg' 
+        'seek-destroy': {
+            color: '#bd0003',
+            name: 'Búsqueda y Destrucción',
+            icon: 'seek-destroy.svg'
         },
-        'infiltration': { 
-            color: '#5f5f5f', 
-            name: 'Infiltración', 
-            icon: 'infiltration.svg' 
+        'infiltration': {
+            color: '#5f5f5f',
+            name: 'Infiltración',
+            icon: 'infiltration.svg'
         }
     };
 
@@ -127,24 +127,122 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Inicialización ---
     async function init() {
         console.log('Iniciando Kill Team BattleKit...');
-        
+
         try {
             await loadData();
             // Inicializamos el selector con el filtro vacío (o el seleccionado por defecto)
             populateFactionSelector(factionTypeSelect.value);
             console.log('Datos cargados y listos.');
+
+            // ⚠️ AQUÍ ESTÁ LA CLAVE: Restaurar el estado justo después de cargar la base
+            restoreState();
+
         } catch (error) {
             console.error('Error fatal cargando datos:', error);
             factionSelect.innerHTML = '<option>Error al cargar archivos JSON. Revisa la consola.</option>';
         }
 
         factionSelect.addEventListener('change', handleFactionSelection);
-        
+
         // Listener para el cambio de Tipo de Facción
         factionTypeSelect.addEventListener('change', (e) => {
+            localStorage.setItem('battlekit_factionType', e.target.value);
+
             populateFactionSelector(e.target.value);
             // Limpiamos los paneles al cambiar de tipo de filtro para evitar confusión
             clearPanes();
+        });
+
+        // 2. Guardar Facción Específica
+        factionSelect.addEventListener('change', (e) => {
+            localStorage.setItem('battlekit_faction', e.target.value);
+
+            // Limpiar buscador y Switch al cambiar de facción
+            if (document.getElementById('operative-search')) {
+                document.getElementById('operative-search').value = '';
+            }
+            if (document.getElementById('filter-selected-switch')) {
+                document.getElementById('filter-selected-switch').checked = false;
+            }
+        });
+
+        // 3. Guardar la Pestaña Activa
+        const tabElements = document.querySelectorAll('button[data-bs-toggle="tab"], button[data-bs-toggle="pill"]');
+        tabElements.forEach(tab => {
+            tab.addEventListener('shown.bs.tab', event => {
+                // Guarda el ID del contenedor al que apunta la pestaña (ej. #operatives-pane)
+                localStorage.setItem('battlekit_activeTab', event.target.getAttribute('data-bs-target'));
+            });
+        });
+
+        // --- MOTOR DE FILTRADO UNIFICADO DE OPERATIVOS ---
+        const operativeSearchInput = document.getElementById('operative-search');
+        const filterSelectedSwitch = document.getElementById('filter-selected-switch');
+
+        function applyOperativeFilters() {
+            if (!operativeSearchInput || !filterSelectedSwitch) return;
+
+            const searchTerm = operativeSearchInput.value.toLowerCase().trim();
+            const showOnlySelected = filterSelectedSwitch.checked;
+            const operativeCards = containers.operatives.querySelectorAll('.operative-card');
+
+            operativeCards.forEach(card => {
+                // Buscamos el nombre usando la clase específica que le pusimos al span
+                const opNameElement = card.querySelector('.op-title-name');
+                if (!opNameElement) return;
+
+                const opName = opNameElement.textContent.toLowerCase();
+                const matchesSearch = opName.includes(searchTerm);
+                // Si tiene la clase de borde azul, está seleccionado
+                const isSelected = card.classList.contains('border-primary');
+
+                // Lógica combinada: Coincide con texto Y (no está activo el switch O está seleccionado)
+                if (matchesSearch && (!showOnlySelected || isSelected)) {
+                    card.classList.remove('d-none');
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+        }
+
+        // Listeners para ejecutar el filtro
+        if (operativeSearchInput) operativeSearchInput.addEventListener('input', applyOperativeFilters);
+        if (filterSelectedSwitch) filterSelectedSwitch.addEventListener('change', applyOperativeFilters);
+
+        // --- DELEGACIÓN DE EVENTOS: Clic en botón "Agregar al equipo" ---
+        containers.operatives.addEventListener('click', (e) => {
+            const btn = e.target.closest('.toggle-roster-btn');
+            if (!btn) return; // Si el clic no fue en el botón, ignorar
+
+            const opName = btn.getAttribute('data-op');
+            const factionKey = btn.getAttribute('data-faction');
+            const storageKey = `battlekit_roster_${factionKey}`;
+            const card = btn.closest('.operative-card');
+
+            // Leemos el estado actual de la base de datos
+            let selectedOps = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+            if (selectedOps.includes(opName)) {
+                // DESELECCIONAR
+                selectedOps = selectedOps.filter(name => name !== opName);
+                btn.classList.replace('btn-primary', 'btn-outline-secondary');
+                btn.innerHTML = 'Agregar al equipo';
+                card.classList.replace('border-primary', 'border');
+                card.classList.remove('border-3');
+            } else {
+                // SELECCIONAR
+                selectedOps.push(opName);
+                btn.classList.replace('btn-outline-secondary', 'btn-primary');
+                btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Listo';
+                card.classList.replace('border', 'border-primary');
+                card.classList.add('border-3');
+            }
+
+            // Guardamos en memoria
+            localStorage.setItem(storageKey, JSON.stringify(selectedOps));
+
+            // Re-aplicamos filtros por si el jugador deselecciona mientras el Switch está activo (para que la carta desaparezca)
+            applyOperativeFilters();
         });
     }
 
@@ -153,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ploys: 'ploys.json',
             racial: 'racial.json',
             factionTacops: 'tacops.json',
-            generalTacops: 'tacopsgenerales.json', 
+            generalTacops: 'tacopsgenerales.json',
             operatives: 'operatives.json',
             equipment: 'equipment.json'
         };
@@ -175,8 +273,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Función de Filtrado Actualizada ---
     function populateFactionSelector(filterType = "") {
-        factionSelect.innerHTML = '<option selected value="">Elige un Kill Team...</option>';
-        
+        factionSelect.innerHTML = '<option selected value="">Elige un Comando...</option>';
+
         let filteredKeys = [];
 
         if (!filterType || filterType === "Todas las facciones") {
@@ -191,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Ordenamos alfabéticamente por el nombre visible
         filteredKeys.sort((a, b) => factionNames[a].localeCompare(factionNames[b]));
-        
+
         filteredKeys.forEach(key => {
             const option = document.createElement('option');
             option.value = key;
@@ -245,8 +343,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="mb-3">Arquetipos</h3>
                     <div class="d-flex justify-content-center flex-wrap gap-3">
                         ${factionArchetypes.map(arch => {
-                            const config = archetypeConfig[arch] || { color: '#333', name: arch, icon: '' };
-                            return `
+                const config = archetypeConfig[arch] || { color: '#333', name: arch, icon: '' };
+                return `
                             <div class="archetype-box" style="
                                 background-color: ${config.color};
                                 width: 140px;
@@ -263,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                      style="width: 50px; height: 50px; filter: brightness(0) invert(1); margin-bottom: 10px;">
                                 <span style="font-weight: bold; font-size: 0.9em; text-transform: uppercase;">${config.name}</span>
                             </div>`;
-                        }).join('')}
+            }).join('')}
                     </div>
                 </div>
             </div>`;
@@ -292,10 +390,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const abilities = gameData.racial[factionKey] || [];
         let rulesHtml = '';
-        
+
         if (Array.isArray(abilities)) {
             rulesHtml = abilities
-                .filter(r => r.type === 'racial' && r.name !== 'Arquetipos') 
+                .filter(r => r.type === 'racial' && r.name !== 'Arquetipos')
                 .map(rule => `
                 <div class="col-12 col-lg-10 mx-auto mb-3">
                     <div class="ability-card">
@@ -309,21 +407,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. Agentes
-function renderOperatives(factionKey) {
-    const operatives = gameData.operatives[factionKey] || [];
+    function renderOperatives(factionKey) {
+        const operatives = gameData.operatives[factionKey] || [];
 
-    if (operatives.length === 0) {
-        containers.operatives.innerHTML = '<div class="alert alert-info">No hay datos de agentes disponibles para esta facción.</div>';
-        return;
-    }
+        if (operatives.length === 0) {
+            containers.operatives.innerHTML = '<div class="alert alert-info">No hay datos de agentes disponibles para esta facción.</div>';
+            return;
+        }
 
-    const html = operatives.map(op => {
-        const imgPath = `./resources/roster_images/${factionKey}/${op.id}.png`;
+        // ⚠️ NUEVO: Leer los agentes seleccionados de esta facción desde localStorage
+        const storageKey = `battlekit_roster_${factionKey}`;
+        const selectedOps = JSON.parse(localStorage.getItem(storageKey)) || [];
 
-        // Generación de HTML para Armas
-        const weaponsHtml = op.weapons.map(w => {
-            const icon = w.type === 'ranged' ? 'shoot.svg' : 'attack.svg';
-            return `
+        const html = operatives.map(op => {
+            const imgPath = `./resources/roster_images/${factionKey}/${op.id}.png`;
+
+            // Generación de HTML para Armas
+            const weaponsHtml = op.weapons.map(w => {
+                const icon = w.type === 'ranged' ? 'shoot.svg' : 'attack.svg';
+                return `
             <tr class="weapon-profile-row">
                 <td><img src="./resources/game_rules_files/${icon}" class="weapon-icon" width="20"></td>
                 <td class="weapon-name fw-bold">${w.name}</td>
@@ -332,33 +434,30 @@ function renderOperatives(factionKey) {
                 <td class="text-center">${w.stats['Dñ'] || '-'}</td>
                 <td class="small">${w.stats.RA || '-'}</td>
             </tr>`;
-        }).join('');
+            }).join('');
 
-        // Generación de HTML para Habilidades
-        const abilitiesHtml = op.abilities?.length ? 
-            `<div class="mt-2 p-2 bg-light rounded"><strong>Habilidades:</strong>${op.abilities.map(a => `<div class="mb-1"><span class="fw-bold">${a.name}:</span> ${a.description}</div>`).join('')}</div>` : '';
+            // Generación de HTML para Habilidades
+            const abilitiesHtml = op.abilities?.length ?
+                `<div class="mt-2 p-2 bg-light rounded"><strong>Habilidades:</strong>${op.abilities.map(a => `<div class="mb-1"><span class="fw-bold">${a.name}:</span> ${a.description}</div>`).join('')}</div>` : '';
 
-        // Generación de HTML para Acciones Únicas (Sistema de Yes/No)
-        const actionsHtml = op.uniqueActions?.length ? 
-            op.uniqueActions.map(a => {
-                // Mapeo de la lista de descripciones positivas (icon-yes)
-                const descYes = Array.isArray(a.description) 
-                    ? a.description.map(line => `
+            // Generación de HTML para Acciones Únicas (Sistema de Yes/No)
+            const actionsHtml = op.uniqueActions?.length ?
+                op.uniqueActions.map(a => {
+                    const descYes = Array.isArray(a.description)
+                        ? a.description.map(line => `
                         <p>
                             <span class="icon icon-yes"></span> 
                             <span>${line}</span>
                         </p>`).join('')
-                    : `<p>${a.description}</p>`;
+                        : `<p>${a.description}</p>`;
 
-                // Mapeo de la descripción negativa (icon-no)
-                const descNo = a.description_no ? `
+                    const descNo = a.description_no ? `
                     <p>
                         <span class="icon icon-no"></span> 
                         ${a.description_no}
                     </p>` : '';
 
-                // Estructura final de la tarjeta de Acción Única
-                return `
+                    return `
                 <div class="unique-actions-section">
                     <div class="header">
                         <div>${a.name}</div>
@@ -369,22 +468,30 @@ function renderOperatives(factionKey) {
                         ${descNo}
                     </div>
                 </div>`;
-            }).join('') : '';
+                }).join('') : '';
 
-        return `
-        <div class="card-container col-12 col-lg-11 mt-4 mb-3 mx-auto shadow bg-white border rounded overflow-hidden">
+            // ⚠️ LÓGICA DE ESTADO VISUAL: Se calcula ANTES de imprimir el HTML
+            const isSelected = selectedOps.includes(op.name);
+            const borderClass = isSelected ? 'border-primary border-3' : 'border';
+            const btnClass = isSelected ? 'btn-primary' : 'btn-outline-secondary';
+            const btnText = isSelected ? '<i class="bi bi-check-circle-fill"></i> Listo' : 'Agregar al equipo';
+
+            // ⚠️ ÚNICO RETURN: Tarjeta HTML completa y fusionada
+            return `
+        <div class="card-container operative-card col-12 col-lg-11 mt-4 mb-3 mx-auto shadow bg-white ${borderClass} rounded overflow-hidden" data-op-name="${op.name}">
             <div class="row g-0 align-items-stretch">
-                <!-- LADO IZQUIERDO: Información y Stats -->
                 <div class="col-12 col-md-8 p-3 d-flex flex-column">
-                    <div class="mb-2 border-bottom pb-2">
-                        <span class="fs-4 fw-bold text-uppercase text-dark">${op.name}</span>
+                    
+                    <div class="mb-2 border-bottom pb-2 d-flex justify-content-between align-items-center">
+                        <span class="fs-4 fw-bold text-uppercase text-dark op-title-name">${op.name}</span>
+                        <button class="btn btn-sm ${btnClass} toggle-roster-btn" data-faction="${factionKey}" data-op="${op.name}">${btnText}</button>
                     </div>
 
                     <div class="d-flex justify-content-between mb-3 text-center bg-light p-2 rounded">
                         <div><div class="small text-muted fw-bold">LPA</div><div class="fs-4">${op.stats.LPA}</div></div>
-                        <div><div class="small text-muted fw-bold">MOV</div><div class="fs-4">${op.stats.MOVER}</div></div>
-                        <div><div class="small text-muted fw-bold">SAL</div><div class="fs-4">${op.stats.SALVACIÓN}</div></div>
-                        <div><div class="small text-muted fw-bold">HER</div><div class="fs-4">${op.stats.HERIDAS}</div></div>
+                        <div><div class="small text-muted fw-bold">MOV.</div><div class="fs-4">${op.stats.MOVER}</div></div>
+                        <div><div class="small text-muted fw-bold">SALV.</div><div class="fs-4">${op.stats.SALVACIÓN}</div></div>
+                        <div><div class="small text-muted fw-bold">HERIDAS</div><div class="fs-4">${op.stats.HERIDAS}</div></div>
                     </div>
 
                     <div class="table-responsive mb-3">
@@ -392,11 +499,11 @@ function renderOperatives(factionKey) {
                             <thead class="table-dark">
                                 <tr>
                                     <th style="width:30px"></th>
-                                    <th>Arma</th>
-                                    <th class="text-center">A</th>
-                                    <th class="text-center">HA</th>
-                                    <th class="text-center">Dñ</th>
-                                    <th>Reglas adicionales</th>
+                                    <th>Nombre</th>
+                                    <th class="text-center">ATAQ.</th>
+                                    <th class="text-center">IMP.</th>
+                                    <th class="text-center">DAÑO</th>
+                                    <th>Reglas de armas</th>
                                 </tr>
                             </thead>
                             <tbody>${weaponsHtml}</tbody>
@@ -408,7 +515,6 @@ function renderOperatives(factionKey) {
                         ${actionsHtml}
                     </div>
                 
-                    <!-- PARTE INFERIOR: Peana y Keywords -->
                     <div class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center">
                         <div class="peana-box bg-dark text-white px-2 py-1 rounded small fw-bold" style="font-size: 0.75rem;">
                             ${op.peana || 'N/A'}
@@ -419,7 +525,6 @@ function renderOperatives(factionKey) {
                     </div>
                 </div>
 
-                <!-- LADO DERECHO: Imagen del Agente -->
                 <div class="col-12 col-md-4 bg-dark d-flex align-items-center justify-content-center p-2" style="min-height: 250px;">
                     <img src="${imgPath}" 
                          class="img-fluid" 
@@ -432,16 +537,16 @@ function renderOperatives(factionKey) {
                 </div>
             </div>
         </div>`;
-    }).join('');
+        }).join('');
 
-    containers.operatives.innerHTML = `<div class="row">${html}</div>`;
-}
+        containers.operatives.innerHTML = `<div class="row">${html}</div>`;
+    }
 
     // 4. TacOps Generales
     function renderTacops(factionKey) {
         const validArchetypes = gameData.factionTacops[factionKey]?.archetypes || [];
         const allOps = gameData.generalTacops;
-        
+
         const factionOpsKeys = Object.keys(allOps).filter(key => {
             const op = allOps[key];
             return validArchetypes.includes(op.archetype);
@@ -455,7 +560,7 @@ function renderOperatives(factionKey) {
         const html = factionOpsKeys.map(key => {
             const op = allOps[key];
             const archData = archetypeConfig[op.archetype] || { color: '#666', icon: '', name: op.archetype };
-            
+
             let specialImage = '';
             if (op.name === 'Flanco' || key === 'Flanco') {
                 specialImage = `<div class="text-center"><img src="./resources/game_rules_files/flank_tacop-1.png" class="img-fluid mt-2 mb-2 rounded border" alt="Diagrama de Flanco" style="max-height:150px;"></div>`;
@@ -541,7 +646,7 @@ function renderOperatives(factionKey) {
             const isStrategic = ploy.type === 'strategic';
             const headerColor = isStrategic ? 'bg-dark' : 'bg-secondary';
             const typeLabel = isStrategic ? 'Ardid de Estrategia' : 'Ardid de Tiroteo';
-            
+
             return `
             <div class="col-12 col-md-6 mb-3">
                 <div class="card h-100 shadow-sm">
@@ -596,11 +701,11 @@ function renderOperatives(factionKey) {
                     <table class="table table-sm table-dark table-bordered mb-0">
                         <thead>
                             <tr class="text-center">
-                                <th class="text-start">Arma</th>
-                                <th>A</th>
-                                <th>HA</th>
-                                <th>Dñ</th>
-                                <th class="text-start">Reglas adicionales</th>
+                                <th class="text-start">NOMBRE</th>
+                                <th>ATAQ.</th>
+                                <th>IMP.</th>
+                                <th>DAÑO</th>
+                                <th class="text-start">REGLAS DE ARMAS</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -616,26 +721,26 @@ function renderOperatives(factionKey) {
                 </div>`;
             }
 
-        const actionHtml = item.action?.length ? 
-            item.action.map(a => {
-                // Mapeo de descripciones positivas (icon-yes)
-                const descYes = Array.isArray(a.action_yes) 
-                    ? a.action_yes.map(line => `
+            const actionHtml = item.action?.length ?
+                item.action.map(a => {
+                    // Mapeo de descripciones positivas (icon-yes)
+                    const descYes = Array.isArray(a.action_yes)
+                        ? a.action_yes.map(line => `
                         <p>
                             <span class="icon icon-yes"></span> 
                             <span>${line}</span>
                         </p>`).join('')
-                    : `<p><span class="icon icon-yes"></span> ${a.action_yes}</p>`;
+                        : `<p><span class="icon icon-yes"></span> ${a.action_yes}</p>`;
 
-                // Mapeo de descripción negativa (icon-no)
-                const descNo = a.action_no ? `
+                    // Mapeo de descripción negativa (icon-no)
+                    const descNo = a.action_no ? `
                     <p>
                         <span class="icon icon-no"></span> 
                         ${a.action_no}
                     </p>` : '';
 
-                // Estructura de tarjeta consistente
-                return `
+                    // Estructura de tarjeta consistente
+                    return `
                 <div class="crit-op" data-type="action">
                     <div class="header">
                         <div>${a.action_name}</div>
@@ -646,10 +751,10 @@ function renderOperatives(factionKey) {
                         ${descNo}
                     </div>
                 </div>`;
-            }).join('') : '';
+                }).join('') : '';
 
-    // Retorno del componente
-    return `
+            // Retorno del componente
+            return `
         <div class="col-12 col-md-6 mb-4">
             <div class="equipment-card h-100 shadow-sm border border-danger rounded overflow-hidden"> 
                 <div class="p-2 bg-danger text-white text-center">
@@ -667,6 +772,38 @@ function renderOperatives(factionKey) {
         }).join('');
 
         containers.equipment.innerHTML = `<div class="row">${html}</div>`;
+    }
+
+    function restoreState() {
+        const savedFactionType = localStorage.getItem('battlekit_factionType');
+        const savedFaction = localStorage.getItem('battlekit_faction');
+        const savedTab = localStorage.getItem('battlekit_activeTab');
+
+        // A. Restaurar Tipo de Facción
+        if (savedFactionType) {
+            factionTypeSelect.value = savedFactionType;
+            // Forzamos el evento 'change' para que se dispare tu lógica que llena el segundo select
+            factionTypeSelect.dispatchEvent(new Event('change'));
+        }
+
+        // B. Restaurar Facción Específica
+        // Usamos setTimeout(..., 0) para permitir que el DOM se actualice tras el evento anterior
+        setTimeout(() => {
+            if (savedFaction && factionSelect.querySelector(`option[value="${savedFaction}"]`)) {
+                factionSelect.value = savedFaction;
+                factionSelect.dispatchEvent(new Event('change')); // Renderiza los datos de la facción
+            }
+        }, 0);
+
+        // C. Restaurar Pestaña Activa
+        if (savedTab) {
+            const tabTrigger = document.querySelector(`[data-bs-target="${savedTab}"]`);
+            if (tabTrigger) {
+                // Utilizamos la API de Bootstrap para activar la pestaña vía JS
+                const tab = new bootstrap.Tab(tabTrigger);
+                tab.show();
+            }
+        }
     }
 
     init();

@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <li>No necesitas declarar todas las acciones del agente cuando se activa. En su lugar, realiza una acción y luego decide la siguiente después de ver el resultado.</li>
                             <li>Si una acción se declara o comienza pero no se puede completar, la acción se cancela. Revierte el estado del juego a antes de esa acción. Por ejemplo, si un agente se ha movido pero no puede completar el movimiento, devuélvelo a donde estaba antes de moverse; no ha realizado esa acción y no has gastado PA en ella.</li>
                         </ul>
-                        <p><em>Ejemplo: un agente con LPA 2 podría <b>Reposicionarse</b> (1PA) y <b>Disparar</b> (1PA), totalizando 2PA; pero no podría <b>Retirarse</b> (2PA) y <b>Disparar</b> (1PA), lo que totaliza 3PA.</em></p>
+                        <p><em>Ejemplo: un agente con LPA 2 podría <b>Reposicionarse</b> (1PA) y <b>Disparar</b> (1PA), totalizando 2PA; pero no podría <b>Retroceder</b> (2PA) y <b>Disparar</b> (1PA), lo que totaliza 3PA.</em></p>
                     </div>
                     <div class="col-12 firefight-rule">
                         <h3 id="firefight-title-5" class="rules-title mt-3"><i class="bi bi-3-circle-fill"></i> Agotado</h3>
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <ul>
                             <li><i class="icon-apl"></i><b>LPA (Límite de Puntos de Acción):</b> El costo total de acciones que un agente puede realizar durante su activación, y una estadística utilizada para determinar el control de marcadores. Algunas reglas raras cambian el LPA de un agente. Independientemente de por cuántos cambios de estadística de LPA se vea afectado un agente, el total nunca puede ser más de -1 o +1 de su LPA normal. Esto tiene precedencia sobre todos los cambios de estadísticas.<p><em>Si un agente tiene un LPA de 2, y dos reglas dicen sumar 1 al LPA del agente, tendría un LPA de 3.</em></p>
                             </li>
-                            <li><i class="icon-move"></i><b>Mover:</b> La distancia de movimiento del agente, utilizada al realizar las acciones de <b>Reposicionarse</b>, <b>Retirarse</b> y <b>Cargar</b>. El atributo de Movimiento de un agente nunca puede cambiarse a menos de 4”. Esto tiene precedencia sobre todos los cambios de estadísticas.<p><em>Si las estadísticas de un agente cambian durante una acción, aplica el cambio una vez que la acción se haya completado.</em></p>
+                            <li><i class="icon-move"></i><b>Mover:</b> La distancia de movimiento del agente, utilizada al realizar las acciones de <b>Reposicionarse</b>, <b>Retroceder</b> y <b>Cargar</b>. El atributo de Movimiento de un agente nunca puede cambiarse a menos de 4”. Esto tiene precedencia sobre todos los cambios de estadísticas.<p><em>Si las estadísticas de un agente cambian durante una acción, aplica el cambio una vez que la acción se haya completado.</em></p>
                             </li>
                             <li><i class="icon-move"></i><b>Salvación:</b> El resultado requerido para dados de defensa exitosos siempre que otro agente esté disparando al agente.<p><em>Ten en cuenta que un número más alto en la estadística de Impacto y Salvación es peor porque tu probabilidad de obtener un éxito disminuye. Esto es importante si una regla requiere que mejores o empeores dicha estadística. Por ejemplo, una estadística de Impacto de 4+ empeorada en 1 es 5+.</em></p>
                             </li>
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <ul>
                                         <li><span class="icon-yes"></span> Mueve al agente activo hasta su atributo de Movimiento a una ubicación donde pueda ser colocado. Esto debe hacerse en uno o más incrementos en línea recta, y los incrementos siempre se redondean hacia arriba a la pulgada más cercana.</li>
                                         <li><span class="icon-no"></span> No puede moverse dentro del rango de control de un agente enemigo, a menos que uno o más agentes amigos ya estén dentro del rango de control de ese agente enemigo, en cuyo caso puede moverse dentro del rango de control de ese agente enemigo pero no puede terminar el movimiento allí.</li>
-                                        <li><span class="icon-no"></span> Un agente no puede realizar esta acción mientras esté dentro del rango de control de un agente enemigo, o durante la misma activación en la que realizó la acción de <b>Retirarse</b> o <b>Cargar</b>.</li>
+                                        <li><span class="icon-no"></span> Un agente no puede realizar esta acción mientras esté dentro del rango de control de un agente enemigo, o durante la misma activación en la que realizó la acción de <b>Retroceder</b> o <b>Cargar</b>.</li>
                                     </ul>
                                     <p><em>Moverse en incrementos permite una mayor precisión y claridad.</em></p>
                                 </div>
@@ -438,11 +438,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                     <div class="col-xs-12 basic-rules">
-                        <h3 id="fall-back-action" class="rules-title mt-3">Retirarse</h3>
+                        <h3 id="fall-back-action" class="rules-title mt-3">Retroceder</h3>
                         <div class="crit-op border border-0" data-type="action">
                             <div class="middle">
                                 <div class="header">
-                                    <div class="name-action">Retirarse</div>
+                                    <div class="name-action">Retroceder</div>
                                     <div class="ap-box">2PA</div>
                                 </div>
                                 <div class="content">
@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <li><span class="icon-yes"></span> Lo mismo que la acción <b>Reposicionarse</b>, excepto que el agente activo puede moverse dentro del rango de control de un agente enemigo, pero no puede terminar el movimiento allí.</li>
                                         <li><span class="icon-no"></span> Un agente no puede realizar esta acción a menos que un agente enemigo esté dentro de su rango de control. No puede realizar esta acción durante la misma activación en la que realizó la acción de <b>Reposicionarse</b> o <b>Cargar</b>.</li>
                                     </ul>
-                                    <p><em>Si un agente se activa dentro del rango de control de un agente enemigo, la acción de Retirarse es una forma de replegarse. Cuesta 2PA, por lo que la mayoría de los agentes no podrán realizar más acciones en esa activación.</em></p>
+                                    <p><em>Si un agente se activa dentro del rango de control de un agente enemigo, la acción de Retroceder es una forma de replegarse. Cuesta 2PA, por lo que la mayoría de los agentes no podrán realizar más acciones en esa activación.</em></p>
                                 </div>
                             </div>
                         </div>
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <ul>
                                         <li><span class="icon-yes"></span> Lo mismo que la acción <b>Reposicionarse</b>, excepto que el agente activo puede moverse 2” adicionales.</li>
                                         <li><span class="icon-yes"></span> Puede moverse, y debe terminar el movimiento, dentro del rango de control de un agente enemigo. Si se mueve dentro del rango de control de un agente enemigo del que no hay otros agentes amigos dentro del rango de control, no puede salir del rango de control de ese agente.</li>
-                                        <li><span class="icon-no"></span> Un agente no puede realizar esta acción mientras tiene una orden de Ocultación, si ya está dentro del rango de control de un agente enemigo, o durante la misma activación en la que realizó la acción de <b>Reposicionarse</b>, <b>Correr</b> o <b>Retirarse</b>.</li>
+                                        <li><span class="icon-no"></span> Un agente no puede realizar esta acción mientras tiene una orden de Ocultación, si ya está dentro del rango de control de un agente enemigo, o durante la misma activación en la que realizó la acción de <b>Reposicionarse</b>, <b>Correr</b> o <b>Retroceder</b>.</li>
                                     </ul>
                                     <p><em>Las acciones de carga permiten a los agentes inmovilizar efectivamente a los enemigos, pero dado que necesitan estar en una orden de trabarse para hacerlo, pueden volverse vulnerables a los disparos enemigos.</em></p>
                                 </div>
@@ -1366,7 +1366,7 @@ restricciones habituales).</p>
                         <h3 id="tomb_world-title-5" class="rules-title mt-3">Plataforma de teletransporte</h3>
                         <p class="intro">Una plataforma de teletransporte es terreno Expuesto, Insignificante y de Ventaja. Solo un agente puede estar en ella a la vez, y mientras un agente está en ella, ese agente no puede tocar el suelo de la killzone (en otras palabras, un agente no puede estar tanto en la plataforma de teletransporte como en el suelo de la killzone).</p>
                         <figure class="figure"><img src="./resources/game_rules_files/tw-teleport_pad-1.png" class="figure-img img-fluid rounded"></figure>
-                        <p>Desde el inicio del segundo punto de inflexión, siempre que un agente amigo en una plataforma de teletransporte realice la acción de <b>Cargar</b>, <b>Retirarse</b> o <b>Reposicionarse</b>, puedes teletransportarlo. Si lo haces, no lo muevas. En su lugar, retíralo de la killzone y colócalo de nuevo en la otra plataforma de teletransporte. Aún debe cumplir con todos los demás requisitos de esa acción, de lo contrario no puede teletransportarse (p. ej. si es la acción de <b>Cargar</b>, el agente debe terminar esa acción dentro del rango de control de un agente enemigo). Si otro agente está en la otra plataforma de teletransporte cuando un agente se teletransporta, intercámbialos (si es un agente enemigo, su jugador controlador lo coloca).</p>
+                        <p>Desde el inicio del segundo punto de inflexión, siempre que un agente amigo en una plataforma de teletransporte realice la acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, puedes teletransportarlo. Si lo haces, no lo muevas. En su lugar, retíralo de la killzone y colócalo de nuevo en la otra plataforma de teletransporte. Aún debe cumplir con todos los demás requisitos de esa acción, de lo contrario no puede teletransportarse (p. ej. si es la acción de <b>Cargar</b>, el agente debe terminar esa acción dentro del rango de control de un agente enemigo). Si otro agente está en la otra plataforma de teletransporte cuando un agente se teletransporta, intercámbialos (si es un agente enemigo, su jugador controlador lo coloca).</p>
                     </div>
                     <div class="col-12 tomb_world-rule">
                         <h3 id="tomb_world-title-6" class="rules-title mt-3">Sarcófago y escombros (terreno ligero)</h3>
@@ -1554,7 +1554,7 @@ restricciones habituales).</p>
                                     <ul>
                                         <li><span class="icon icon-yes"></span> Lo mismo que la acción <b>Reposicionarse</b>, excepto que el agente activo no puede moverse más que su atributo de Movimiento menos 2" y no puede escalar, caer, saltar o usar reglas de cualquier kill team que lo retiren y lo vuelvan a colocar (p. ej. VOLAR de HEARTHKYN SALVAGER, PASO DE SOMBRAS de MANDRAKE).</li>
                                         <li><span class="icon icon-yes"></span> Antes de que este agente se mueva, retira la barricada portátil a la que está conectado. Después de que el agente se mueva, coloca la barricada portátil para que esté una vez más<span class="text-info-emphasis">, pero la barricada portátil no puede colocarse a menos de 2" de otros elementos de terreno de equipamiento, puntos de acceso o terreno Accesible. Si esto no es posible, la barricada portátil no se vuelve a colocar</span>.</li>
-                                        <li><span class="icon icon-no"></span> Esta acción se trata como una acción de <b>Reposicionarse</b>. Un agente no puede realizar la acción Mover con Barricada en el mismo punto de inflexión en el que realizó las acciones de <b>Retirarse</b> o <b>Cargar</b>.</li>
+                                        <li><span class="icon icon-no"></span> Esta acción se trata como una acción de <b>Reposicionarse</b>. Un agente no puede realizar la acción Mover con Barricada en el mismo punto de inflexión en el que realizó las acciones de <b>Retroceder</b> o <b>Cargar</b>.</li>
                                     </ul>
                                 </div>
                             </div>

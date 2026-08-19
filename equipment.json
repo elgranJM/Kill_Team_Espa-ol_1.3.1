@@ -308,15 +308,15 @@
   {
     "id_equip": 41,
     "faction": "hunter-clade",
-    "name": "Bombardeo de Radiación",
-    "description": "GAMBITO ESTRATÉGICO una vez por batalla en cualquier Punto de Inflexión después del primero. Selecciona un marcador de objetivo o la zona de despliegue de tu adversario. Lanza un D6 por cada agente enemigo dentro del área de control de ese marcador de objetivo seleccionado o dentro de esa zona de despliegue, y resta 1 del atributo de LPA de ese agente enemigo hasta el final de su próxima activación con un 4+; con un 6, también inflige D3 de daño en él (tira por separado para cada uno).",
+    "name": "Bombardeo Radioactivo",
+    "description": "<b>GAMBITO ESTRATÉGICO</b> de una vez por batalla, a partir de cualquier punto de inflexión. Elige un marcador de objetivo. Tira un dado por cada agente enemigo que se encuentre en la zona de control de ese marcador o en esa zona de descenso, y resta 1 si alguna parte de la peana de ese agente está bajo terreno Aventajado: con 4+, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación; con un 6, inflígele además 1D3 daños (tira por separado para cada uno).",
     "action": []
   },
   {
     "id_equip": 42,
     "faction": "hunter-clade",
     "name": "Campo Refractor",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente HUNTER CLADE amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CLADO DE CAZA amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si la hay) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
     "action": []
   },
   {
@@ -329,8 +329,8 @@
   {
     "id_equip": 44,
     "faction": "hunter-clade",
-    "name": "Sistemas de Redundancia",
-    "description": "Una vez por Punto de Inflexión, cuando se activa un agente HUNTER CLADE amigo, si no está dentro del área de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta D3+2 heridas perdidas.",
+    "name": "Sistemas Redundantes",
+    "description": "Una vez por Punto de Inflexión, cuando se activa un agente CLADO DE CAZA amigo, si no está dentro de la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta un máximo de 1D3+2 heridas perdidas.",
     "action": []
   },
   {
@@ -448,29 +448,29 @@
   {
     "id_equip": 70,
     "faction": "battleclade",
-    "name": "Aparato Oculto",
-    "description": "GAMBITO ESTRATÉGICO en el segundo Punto de Inflexión. Puedes intercambiar las ubicaciones de cualquier número de agentes BATTLECLADE SERVITOR amigos entre sí (excluyendo GUN SERVITOR), y puedes intercambiar las ubicaciones de agentes BATTLECLADE GUN SERVITOR amigos entre sí (retíralos de la zona de aniquilación y vuelve a colocarlos). No puedes intercambiar ningún agente que haya hecho alguna de las siguientes cosas durante la batalla: <ul><li>Usado armas de su tarjeta de datos.</li></ul> <ul><li>Realizado acciones de su tarjeta de datos.</li></ul> <ul><li>Usado la regla Matriz de Mecanosutura (ver TECHNOMEDIC).</li></ul>",
+    "name": "Equipo Oculto",
+    "description": "Una vez por batalla, un agente <b>SERVIDOR DE COMBATE</b> o <b>SERVIDOR DE ARMAMENTO</b> puede usar otra opción de arma de su tarjeta de datos, aunque no la hubiera seleccionado para la batalla.",
     "action":[]
   },
   {
     "id_equip": 71,
     "faction": "battleclade",
-    "name": "Disfraces Encubiertos",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un GAMBITO ESTRATÉGICO en el primer Punto de Inflexión, un número de agentes BATTLECLADE amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue. Tu agente TECHNOARCHEOLOGIST no puede realizar más de una acción de Reposicionarse en la Fase de Estrategia del primer Punto de Inflexión (es decir, como resultado de la regla Buscador de la Arcana Divina también).",
+    "name": "Disfraces",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Como <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión, un número de agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos igual al resultado, de entre los que estén completamente dentro de tu zona de descenso, pueden realizar de inmediato una acción libre de <b>Reposicionarse</b>, pero deben terminarla completamente a 3\" o menos de tu zona de descenso. Tu agente <b>TECNOARQUEÓLOGO</b> no puede realizar más de una acción de <b>Reposicionarse</b> durante la fase de estrategia del primer punto de inflexión (por ejemplo, por la regla Buscador de misterios divinos).",
     "action": []
   },
   {
     "id_equip": 72,
     "faction": "battleclade",
-    "name": "Condensadores Electrománticos",
-    "description": "Las armas de combate de los agentes BATTLECLADE amigos tienen la regla de armas Choque. Siempre que un agente BATTLECLADE amigo preparado esté contraataque, sus armas de combate también tienen la regla de armas Severa.",
+    "name": "Capacitadores Electrománticos",
+    "description": "Las armas de combate de los agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos tienen la regla de armas Choque. Siempre que un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo contraataque, sus armas de combate tienen además la regla de armas Severa.",
     "action": []
   },
   {
     "id_equip": 73,
     "faction": "battleclade",
-    "name": "Células de Reserva Neurocíclicas",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Un número de veces durante la batalla igual al resultado, siempre que TRANSFIERAS ENERGÍA, puedes usar esta regla. Si lo haces, no restes 1 al atributo de LPA del agente, pero este no puede realizar acciones de Combatir o <b>Disparar</b> durante esa activación (esto tiene prioridad sobre las reglas normales de Red Noosférica).",
+    "name": "Células de Reserva Neurocíclica",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Una vez por punto de inflexión, cuando lleves a cabo <b>TRANSFERIR POTENCIA</b>, puedes usar esta regla. Si lo haces, gastas 0PA en lugar de 1PA (esto tiene preferencia sobre las reglas normales de Red noosférica).",
     "action": []
   },
   {
@@ -854,28 +854,28 @@
     "id_equip": 126,
     "faction": "void-dancer-troupe",
     "name": "Talismán de Hueso Espectral",
-    "description": "Una vez por Punto de Inflexión, cuando un agente VOID-DANCER TROUPE amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por punto de inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.",
     "action": []
   },
   {
     "id_equip": 127,
     "faction": "void-dancer-troupe",
-    "name": "Proyectiles de Toxina Aulladora",
-    "description": "Una vez por Punto de Inflexión, cuando un agente VOID-DANCER TROUPE amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (enfocado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Devastadora 1.",
+    "name": "Proyectiles de Toxinas Aulladores",
+    "description": "Una vez por punto de inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (concentrado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Devastadora 1.",
     "action": []
   },
   {
     "id_equip": 128,
     "faction": "void-dancer-troupe",
-    "name": "Máscara Mortuoria",
-    "description": "Mantén una cuenta de Tragedia. Siempre que un agente VOID-DANCER TROUPE amigo que tenga una regla de GALARDÓN sea incapacitado, añade 1 a tu cuenta de Tragedia. Cuando tu cuenta de Tragedia llegue a 3, ganas 1PM y detienes esa cuenta.",
+    "name": "Máscara de la Muerte",
+    "description": "Mantén una cuenta de Tragedia. Siempre que un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo que tenga una regla de GALARDÓN sea incapacitado, añade 1 a tu cuenta de Tragedia. Cuando tu cuenta de Tragedia llegue a 3, ganas 1PM y detienes esa cuenta.",
     "action": []
   },
   {
     "id_equip": 129,
     "faction": "void-dancer-troupe",
     "name": "Máscara del Suplente",
-    "description": "Una vez por batalla, cuando actives a un agente VOID-DANCER TROUPE amigo, si el agente amigo que tiene el ROL CRUCIAL ha sido incapacitado, puedes usar esta regla. Si lo haces, ese agente activado tiene el ROL CRUCIAL para la batalla.",
+    "description": "Una vez por batalla, cuando actives a un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo, si el agente amigo que tiene el PAPEL CENTRAL ha sido incapacitado, puedes usar esta regla. Si lo haces, ese agente activado tiene el PAPEL CENTRAL para la batalla.",
     "action": []
   },
   {
@@ -1043,29 +1043,29 @@
   {
     "id_equip": 150,
     "faction": "hierotek",
-    "name": "Conductos de Magnificación",
-    "description": "Una vez por Punto de Inflexión, cuando un agente APPRENTEK HIEROTEK CIRCLE o CRYPTEK HIEROTEK CIRCLE amigo esté realizando la acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, selecciona otro agente HIEROTEK CIRCLE amigo (excluyendo PLASMACYTE) que tenga una orden de Trabarse y sea visible para ese agente amigo. Hasta el final de esa acción, ese otro agente amigo puede ser tratado como el agente activo para la regla de armas Magnificar.",
+    "name": "Conductos Magnificadores",
+    "description": "Una vez por punto de inflexión, cuando un agente <b>APRENTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> o <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo realice una acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo <b>PLASMACITA</b>) que tenga una orden de trabarse y sea visible para ese agente amigo. Hasta el final de esa acción, puedes tratar a ese otro agente amigo como el agente activo para la regla de armas Magnificar.",
     "action": []
   },
   {
     "id_equip": 151,
     "faction": "hierotek",
-    "name": "Cubo Teseracto",
-    "description": "En el paso de Preparación de cada Fase de Estrategia, cuando ganes PM, si un agente CRYPTEK amigo no está incapacitado, no está dentro del área de control de agentes enemigos y no ha sido REANIMADO este Punto de Inflexión, puedes usar esta regla. Si lo haces, lanza un D6: con un 1, no puedes usar esta regla por el resto de la batalla; con un 4+, ganas 1PM. Una vez que hayas ganado 2PM con esta regla, no puedes usarla por el resto de la batalla.",
+    "name": "Cubo Teseráctico",
+    "description": "En el paso de Preparación de cada fase de estrategia, cuando ganes PM, si tienes un agente <b>CRIPTECNÓLOGO</b> amigo que no esté incapacitado, se encuentre fuera de la zona de control de todo agente enemigo y no haya sido <b>REANIMADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, tira 1D6: con un 1, no podrás volver a usar esta regla durante el resto de la batalla; con un 4+, ganas 1PM. En cuanto hayas ganado 2PM con esta regla, ya no podrás usarla durante el resto de la batalla.",
     "action": []
   },
   {
     "id_equip": 152,
     "faction": "hierotek",
     "name": "Tejido Tesla",
-    "description": "Una vez por Punto de Inflexión, cuando un agente enemigo termine la acción de Cargar con agentes HIEROTEK CIRCLE amigos dentro de su área de control, puedes usar esta regla. Si lo haces, inflige D3+1 de daño a ese agente enemigo.",
+    "description": "Una vez por punto de inflexión, cuando un agente enemigo termine la acción de <b>Cargar</b> con algún agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo en su zona de control, puedes usar esta regla. Si lo haces, inflige 1D3+1 daños a ese agente enemigo.",
     "action": []
   },
   {
     "id_equip": 153,
     "faction": "hierotek",
-    "name": "Desfasador",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CRYPTEK amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "name": "Cambiafases",
+    "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <b>CRIPTECNÓLOGO</b> amigo, al inicio del paso de Tirar dados de defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si procede) hasta el final de esa secuencia. Ten en cuenta que, en tal caso, Penetración 1 pasaría a ignorarse.",
     "action": []
   },
   {
@@ -1265,14 +1265,14 @@
     "id_equip": 180,
     "faction": "brood-brothers",
     "name": "Disfraz Encubierto",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un GAMBITO ESTRATÉGICO en el primer Punto de Inflexión, un número de agentes BROOD BROTHER BROODGUARD amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.",
+    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un <b>GAMBITO ESTRATÉGICO</b> en el primer Punto de Inflexión, un número de agentes BROOD BROTHER BROODGUARD amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.",
     "action": []
   },
   {
     "id_equip": 181,
     "faction": "brood-brothers",
     "name": "Vigía",
-    "description": "GAMBITO ESTRATÉGICO: Selecciona un agente enemigo visible para un agente BROOD BROTHER amigo para que gane una de tus fichas de Fuego Cruzado.",
+    "description": "<b>GAMBITO ESTRATÉGICO</b>: Selecciona un agente enemigo visible para un agente BROOD BROTHER amigo para que gane una de tus fichas de Fuego Cruzado.",
     "action": []
   },
   {

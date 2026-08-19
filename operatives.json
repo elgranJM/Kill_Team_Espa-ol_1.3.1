@@ -824,7 +824,7 @@
                         "A": "4",
                         "HP/HA": "4+",
                         "Dñ": "3/4",
-                        "RA": "Severa"
+                        "RA": "Área 1\", Severa"
                     }
                 },
                 {
@@ -897,7 +897,7 @@
             "abilities": [],
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">CLADO DE BATALLA</span>, IMPERIUM, ADEPTUS MECHANICUS, ARMAMENTO, SERVIDOR",
-            "peana": "25"
+            "peana": "32"
         },
         {
             "id": "technomedic-servitor",
@@ -973,10 +973,10 @@
             "abilities": [],
             "uniqueActions": [
                 {
-                    "name": "Incentivo noosférico",
+                    "name": "Acumulador datacoronario",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo para realizar de inmediato una acción libre de <b>Correr</b>. Solo puedes elegir a cada agente <b>SERVIDOR</b> amigo para esta regla una vez por punto de inflexión. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se determina la distancia debe controlar ese marcador."
+                        "<b>APOYO.</b> Determina qué agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos se encuentran a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo, y a continuación tira 1D3. Si el resultado es igual o menor que el número de marcadores de objetivo que esos agentes amigos disputan, ganas 1PM. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se mide la distancia debe controlar tu marcador de Aparato de comunicaciones para sumar 3\" al requisito de distancia de esta regla."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -984,7 +984,7 @@
                     "name": "Anulación de red",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo para <b>REACCIONAR EN RED</b> inmediatamente (no tienes que <b>TRANSFERIR POTENCIA</b> para ello). Continúa la activación de este agente tras hacerlo. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se determina la distancia debe controlar ese marcador."
+                        "<b>APOYO.</b> Elige un agente <b>SERVIDOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo a 6\" o menos de este agente o de un agente <b>AUTOTRANSMISOR</b> <span class=\"faction\">CLADO DE BATALLA</span> amigo, para que <b>REACCIONE EN RED</b> de inmediato (sin necesidad de <b>TRANSFERIR POTENCIA</b>) o para que realice una acción libre de Correr. Después continúa la activación de este agente. A efectos del equipo universal Aparato de comunicaciones, el agente desde el que se mide la distancia debe controlar ese marcador. Este agente puede realizar esta acción dos veces durante su activación."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -13462,7 +13462,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, EXPLORADOR, ALFA",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, EXPLORADOR, ALFA",
             "peana": "25"
         },
         {
@@ -13571,7 +13571,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, VANGUARDIA, ALFA",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SKITARII, VANGUARDIA, ALFA",
             "peana": "25"
         },
         {
@@ -13606,11 +13606,11 @@
                 },
                 {
                     "name": "Protocolo de control",
-                    "description": "Puedes usar el ardid de tiroteo Sobreescribir orden por OPM si el agente <span class=\"faction\">CLADO DE CAZAS</span> amigo especificado es visible para este agente."
+                    "description": "Puedes usar el ardid de tiroteo Sobreescribir orden por OPM si el agente <span class=\"faction\">CLADO DE CAZA</span> amigo especificado es visible para este agente."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SICARIANO, FERRACECHADOR, PRINCEPS",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SICARIANO, FERRACECHADOR, PRINCEPS",
             "peana": "40"
         },
         {
@@ -13675,7 +13675,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "CLADO DE CAZA, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SICARIANO, INFILTRADOR, PRINCEPS",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, LÍDER, SICARIANO, INFILTRADOR, PRINCEPS",
             "peana": "40"
         },
         {
@@ -13695,7 +13695,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Aturdir, Penetración 1"
+                        "RA": "Aturdidora, Penetración 1"
                     }
                 },
                 {
@@ -13756,7 +13756,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, TIRADOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, TIRADOR",
             "peana": "25 (60x35 para Arcabuz)"
         },
         {
@@ -13776,7 +13776,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Aturdir, Penetración 1"
+                        "RA": "Aturdidora, Penetración 1"
                     }
                 },
                 {
@@ -13837,7 +13837,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, TIRADOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, TIRADOR",
             "peana": "25 (60x35 para Arcabuz)"
         },
         {
@@ -13882,12 +13882,12 @@
                     "name": "AVISTAR",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZAS</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
+                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZA</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, SUPERVISOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, SUPERVISOR",
             "peana": "25"
         },
         {
@@ -13932,12 +13932,12 @@
                     "name": "AVISTAR",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZAS</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
+                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">CLADO DE CAZA</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, SUPERVISOR",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, SUPERVISOR",
             "peana": "25"
         },
         {
@@ -13987,7 +13987,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, DIKTAT",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, DIKTAT",
             "peana": "25"
         },
         {
@@ -14037,7 +14037,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, DIKTAT",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, DIKTAT",
             "peana": "25"
         },
         {
@@ -14078,7 +14078,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, EXPLORADOR, COMBATIENTE",
             "peana": "25"
         },
         {
@@ -14119,7 +14119,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SKITARII, VANGUARDIA, COMBATIENTE",
             "peana": "25"
         },
         {
@@ -14160,7 +14160,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SICARIANO, FERRACECHADOR, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SICARIANO, FERRACECHADOR, COMBATIENTE",
             "peana": "40"
         },
         {
@@ -14216,7 +14216,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CLADO DE CAZAS</span>, IMPERIUM, ADEPTUS MECHANICUS, SICARIANO, INFILTRADOR, COMBATIENTE",
+            "keywords": "<span class=\"faction\">CLADO DE CAZA</span>, IMPERIUM, ADEPTUS MECHANICUS, SICARIANO, INFILTRADOR, COMBATIENTE",
             "peana": "40"
         }
     ],
@@ -14258,7 +14258,7 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo que sea visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo que sea visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero durante esa acción no puede moverse más de 2\" ni ser retirado y situado a más de 2\" de distancia, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 },
@@ -14347,7 +14347,7 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo que sea visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo que sea visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero durante esa acción no puede moverse más de 2\" ni ser retirado y situado a más de 2\" de distancia, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 },
@@ -14376,7 +14376,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNOLOGO, CRONOMANTE",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNÓLOGO, CRONOMANTE",
             "peana": "40"
         },
         {
@@ -14396,7 +14396,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "2/2",
-                        "RA": "Área 2\", Devastadora 1, Penetración 2, Magnificar<span class=\"faction\">*</span>"
+                        "RA": "Área 2\", 2\" Devastadora 1, Penetración 2, Magnificar<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -14416,7 +14416,7 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO o CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él, o a 6\" o menos de y visible para un agente DESPOTECNÓLOGO amigo visible para este agente. Dicho agente puede realizar de inmediato una acción libre de 1PA, pero durante esa acción no puede moverse más de 2\" ni ser retirado y situado a más de 2\" de distancia, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 },
@@ -14433,7 +14433,7 @@
                     "name": "MORTAJA DE PESADILLAS",
                     "cost": "1 PA",
                     "description": [
-                        "Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), siempre que un agente enemigo a 4\" o menos de este agente dispare, combata o contraataque, tu oponente no puede repetir sus dados de ataque y no puede guardar dados con un resultado menor de 6 como éxitos criticos (p. ej. por las reglas de armas Letal o Severa)."
+                        "Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), siempre que un agente enemigo a 4\" o menos de este agente dispare, combata o contraataque, tu oponente no puede repetir sus dados de ataque y no puede guardar dados con un resultado menor de 6 como éxitos críticos (p. ej. por las reglas de armas Letal o Severa)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -14447,14 +14447,14 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CIRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNÓLOGO, PSICOMANTE",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, LÍDER, CRIPTECNÓLOGO, PSICOMANTE",
             "peana": "40"
         },
         {
             "id": "apprentek",
             "name": "APRENTECNÓLOGO",
             "stats": {
-                "LPA": "2",
+                "LPA": "3",
                 "MOVER": "6\"",
                 "SALVACIÓN": "3+",
                 "HERIDAS": "11"
@@ -14488,7 +14488,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, APRENTECNOLOGO",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, APRENTECNÓLOGO",
             "peana": "32"
         },
         {
@@ -14543,17 +14543,17 @@
                     "name": "ORDEN INTERPUESTA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO CRIPTECNOLOGO) a 6\" o menos de este agente y visible para él. Dicho agente puede realizar de inmediato una acción de 1PA como acción libre (excepto Acelerar), pero no puede moverse más de 2\" durante esa acción, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo APRENTECNÓLOGO CRIPTECNÓLOGO) a 6\" o menos de este agente y visible para él. Dicho agente puede realizar de inmediato una acción de 1PA como acción libre (excepto Acelerar), pero durante esa acción no puede moverse más de 2\" ni ser retirado y situado a más de 2\" de distancia, ni realizar una acción que ya haya realizado durante este punto de inflexión, ni tampoco podrá volver a realizar esa acción durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o al reaccionar."
                 }
             ],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, DESPOTECNOLOGO",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, DESPOTECNÓLOGO",
             "peana": "32"
         },
         {
             "id": "immortal-guardian",
-            "name": "GUARDIAN INMORTAL",
+            "name": "GUARDIÁN INMORTAL",
             "stats": {
                 "LPA": "2",
                 "MOVER": "5\"",
@@ -14599,7 +14599,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, GUARDIAN",
+            "keywords": "<span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span>, NECRÓN, INMORTAL, GUARDIÁN",
             "peana": "32"
         },
         {
@@ -14613,7 +14613,7 @@
             },
             "weapons": [
                 {
-                    "name": "Desintegrador sinaptico",
+                    "name": "Desintegrador sináptico",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -14686,7 +14686,7 @@
             "abilities": [
                 {
                     "name": "Elusivo",
-                    "description": "<ul><li>Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas salvo estar a 2\" o menos.</li></ul> <ul><li>Este agente puede realizar la acción de <b>Retroceder</b> por 1 PA menos.</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo Acelerar.</li></ul>"
+                    "description": "<ul><li>Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (por ejemplo, Buscadora o terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Este agente puede realizar la acción de <b>Retroceder</b> por 1 PA menos.</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo Acelerar.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -14736,7 +14736,7 @@
             "abilities": [
                 {
                     "name": "Elusivo",
-                    "description": "<ul><li>Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas salvo estar a 2\" o menos.</li></ul> <ul><li>Este agente puede realizar la acción de <b>Retroceder</b> por 1 PA menos.</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo Reanimar.</li></ul>"
+                    "description": "<ul><li>Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (por ejemplo, Buscadora o terreno Aventajado), salvo estar a 2\" o menos.</li></ul> <ul><li>Este agente puede realizar la acción de <b>Retroceder</b> por 1 PA menos.</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo Reanimar.</li></ul>"
                 }
             ],
             "uniqueActions": [

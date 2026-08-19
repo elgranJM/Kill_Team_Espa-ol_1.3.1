@@ -693,9 +693,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 descHtml = `<p>${item.description}</p>`;
             }
 
-            // Armas (si tiene ATK)
+            
+            // Armas (si el arreglo 'weapon' existe y tiene elementos)
             let weaponHtml = '';
-            if (item.ATK) {
+            if (item.weapon && item.weapon.length > 0) {
+                
+                // Mapeamos el arreglo de armas para generar múltiples filas <tr>
+                const rowsHtml = item.weapon.map(w => `
+                    <tr>
+                        <td class="fw-bold text-start">${w.w_name}</td>
+                        <td class="text-center">${w.ATK}</td>
+                        <td class="text-center">${w.HIT}</td>
+                        <td class="text-center">${w.DMG}</td>
+                        <td class="text-start fst-italic">${w.rules || '-'}</td>
+                    </tr>
+                `).join('');
+
                 weaponHtml = `
                 <div class="equip-weapon-table mt-3">
                     <table class="table table-sm table-dark table-bordered mb-0">
@@ -709,13 +722,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="fw-bold text-start">${item.name}</td>
-                                <td class="text-center">${item.ATK}</td>
-                                <td class="text-center">${item.HIT}</td>
-                                <td class="text-center">${item.DMG}</td>
-                                <td class="text-start fst-italic">${item.special_rules || '-'}</td>
-                            </tr>
+                            ${rowsHtml}
                         </tbody>
                     </table>
                 </div>`;

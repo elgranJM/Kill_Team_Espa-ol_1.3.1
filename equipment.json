@@ -3,28 +3,32 @@
     "id_equip": 1,
     "faction": "wolf-scouts",
     "name": "Armas Gélidas",
-    "description": "Las hojas de combate de los agentes <span class=\"faction\">EXPLORADORES LOBO</span> amigos tienen la regla de armas Letal 5+, y el arma de energía de un agente <span class=\"faction\">EXPLORADORES LOBO</span> PACK LEADER amigo tiene la regla de armas Letal 4+ (si tiene alguna).",
+    "description": "Las hojas de combate de los agentes <span class=\"faction\">EXPLORADORES LOBO</span> amigos tienen la regla de armas Letal 5+, y el arma de energía de un agente <span class=\"faction\">EXPLORADORES LOBO</span> PACK LEADER amigo tiene la regla de armas Letal 4+ (si tiene alguna).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 2,
     "faction": "wolf-scouts",
     "name": "Amuletos Rúnicos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF), al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF), al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 3,
     "faction": "wolf-scouts",
     "name": "Collares de Dientes de Lobo",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF) esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF) esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 4,
     "faction": "wolf-scouts",
     "name": "Trofeos Talismánicos",
-    "description": "Siempre que un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF) esté combatiendo o contraataque, en el paso de Resolver Dados de Ataque, puedes restar 1 al daño infligido sobre él por un éxito.",
+    "description": "Siempre que un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF) esté combatiendo o contraataque, en el paso de Resolver Dados de Ataque, puedes restar 1 al daño infligido sobre él por un éxito.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -32,30 +36,39 @@
     "faction": "tempestus-aquilons",
     "name": "Daga Tempestus",
     "description": "Los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos (excluyendo SERVO-SENTRY) tienen la siguiente arma de combate:",
-    "ATK": "3",
-    "HIT": "4+",
-    "DMG": "3/4",
+    "weapon": [
+      {
+        "w_name": "Daga Tempestus",
+        "ATK": "3",
+        "HIT": "4+",
+        "DMG": "3/4",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 6,
     "faction": "tempestus-aquilons",
     "name": "Estimulantes de Combate",
-    "description": "Puedes ignorar cualquier cambio en el atributo de Movimiento de los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos por estar lesionados.",
+    "description": "Puedes ignorar cualquier cambio en el atributo de Movimiento de los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos por estar lesionados.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 7,
     "faction": "tempestus-aquilons",
     "name": "Augurio de Despliegue",
-    "description": "Una vez durante la batalla, cuando se active un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo que haya sido desplegado en lo alto, puedes mover uno de tus marcadores de Despliegue de nuevo. No puede moverse más cerca de la zona de despliegue de tu adversario.",
+    "description": "Una vez durante la batalla, cuando se active un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo que haya sido desplegado en lo alto, puedes mover uno de tus marcadores de Despliegue de nuevo. No puede moverse más cerca de la zona de despliegue de tu adversario.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 8,
     "faction": "tempestus-aquilons",
     "name": "Supervisor Remoto",
-    "description": "Una vez durante la batalla, al realizar la tirada para decidir la iniciativa, puedes repetir tu D6.",
+    "description": "Una vez durante la batalla, al realizar la tirada para decidir la iniciativa, puedes repetir tu D6.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -63,37 +76,47 @@
     "faction": "scouts",
     "name": "Filopuñales",
     "description": "Los agentes <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigos tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
-    "ATK": "3",
-    "HIT": "3+",
-    "DMG": "4/5",
+    "weapon": [
+      {
+        "w_name": "Filopuñales",
+        "ATK": "3",
+        "HIT": "3+",
+        "DMG": "4/5",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 10,
     "faction": "scouts",
     "name": "Capa de Camuflaje",
-    "description": "Siempre que un agente dispare a un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo (salvo <b>FRANCOTIRADOR</b>), si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.",
+    "description": "Siempre que un agente dispare a un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo (salvo <b>FRANCOTIRADOR</b>), si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 11,
     "faction": "scouts",
     "name": "Oculares Trazablancos",
-    "description": "Hasta dos veces por Punto de Inflexión, cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté realizando la acción de <b>Disparar</b> y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, sus armas a distancia tienen las reglas de arma Letal 5+ y Saturación.",
+    "description": "Hasta dos veces por Punto de Inflexión, cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté realizando la acción de <b>Disparar</b> y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, sus armas a distancia tienen las reglas de arma Letal 5+ y Saturación.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 12,
     "faction": "scouts",
     "name": "Bípode de Arma Pesada",
-    "description": "Siempre que un agente <b>TIRADOR PESADO</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté disparando con un bólter pesado o un lanzamisiles, si no se ha movido durante la activación, o si es una reacción, esa arma tiene la regla de armas Incesante; si el arma ya tiene esa regla, obtiene la regla de armas Implacable. Ten en cuenta que el agente no tiene restringido moverse después de <b>Disparar</b>.",
+    "description": "Siempre que un agente <b>TIRADOR PESADO</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté disparando con un bólter pesado o un lanzamisiles, si no se ha movido durante la activación, o si es una reacción, esa arma tiene la regla de armas Incesante; si el arma ya tiene esa regla, obtiene la regla de armas Implacable. Ten en cuenta que el agente no tiene restringido moverse después de <b>Disparar</b>.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 13,
     "faction": "sanctifiers",
     "name": "Orbes de Santificación",
-    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">SANTIFICADOR</span> amigo (excluyendo CHERUB, DEATH CULT ASSASSIN y MIRACULIST) puede realizar la siguiente acción única:",
+    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">SANTIFICADOR</span> amigo (excluyendo CHERUB, DEATH CULT ASSASSIN y MIRACULIST) puede realizar la siguiente acción única:", 
+    "weapon": [],
     "action": [
       {
       "action_name": "Orbe de Santificación",
@@ -111,63 +134,72 @@
     "id_equip": 14,
     "faction": "sanctifiers",
     "name": "Sello de Pureza",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté disparando o combatiendo, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté disparando o combatiendo, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 15,
     "faction": "sanctifiers",
     "name": "Textos de la Eclesiarquía",
-    "description": "En el paso de Preparación de cada Fase de Estrategia, lanza 3D6: si el resultado es menor que las heridas restantes de un agente ORATOR amigo, ganas 1PM. Ten en cuenta que esto se hace antes del paso de Gambito, por lo que si no hay un agente ORATOR válido, no puedes usar esta regla durante ese Punto de Inflexión (P. ej. durante el primer Punto de Inflexión).",
+    "description": "En el paso de Preparación de cada Fase de Estrategia, lanza 3D6: si el resultado es menor que las heridas restantes de un agente ORATOR amigo, ganas 1PM. Ten en cuenta que esto se hace antes del paso de Gambito, por lo que si no hay un agente ORATOR válido, no puedes usar esta regla durante ese Punto de Inflexión (P. ej. durante el primer Punto de Inflexión).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 16,
     "faction": "sanctifiers",
     "name": "Símbolo del Culto Imperial",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del SERMÓN, cuando recojas tus dados de defensa, puedes usar esta regla. Si lo haces, cambia uno de los éxitos críticos retenidos del atacante a un éxito normal (cualquier regla de armas que ya hayan resuelto no se ve afectada, P. ej. Críticos Perforantes).",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del SERMÓN, cuando recojas tus dados de defensa, puedes usar esta regla. Si lo haces, cambia uno de los éxitos críticos retenidos del atacante a un éxito normal (cualquier regla de armas que ya hayan resuelto no se ve afectada, P. ej. Críticos Perforantes).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 17,
     "faction": "ratling",
     "name": "Orbes de Santificación",
-    "description": "Al final del paso de Seleccionar agentes, lanza un D3. Si el resultado es: <ul><li>1. Pierdes 1PM.</li></ul> <ul><li>2. Ganas 1PM.</li></ul> <ul><li>3. Tu adversario pierde 1PM.</li></ul>",
+    "description": "Al final del paso de Seleccionar agentes, lanza un D3. Si el resultado es: <ul><li>1. Pierdes 1PM.</li></ul> <ul><li>2. Ganas 1PM.</li></ul> <ul><li>3. Tu adversario pierde 1PM.</li></ul>", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 18,
     "faction": "ratling",
     "name": "Raciones Hurtadas",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente <span class=\"faction\">RATIDOS</span> amigo esté disparando con un rifle y hayas lanzado tus dados de ataque, puedes usar esta regla si no has usado el equipamiento Ronda de la Suerte durante esta activación. Si lo haces, mejora el atributo de Impacto de su rifle en 1 hasta el final de esa secuencia.",
+    "description": "Una vez por Punto de Inflexión, siempre que un agente <span class=\"faction\">RATIDOS</span> amigo esté disparando con un rifle y hayas lanzado tus dados de ataque, puedes usar esta regla si no has usado el equipamiento Ronda de la Suerte durante esta activación. Si lo haces, mejora el atributo de Impacto de su rifle en 1 hasta el final de esa secuencia.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 19,
     "faction": "ratling",
     "name": "Ronda de la Suerte",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente <span class=\"faction\">RATIDOS</span> amigo esté disparando con un rifle y hayas lanzado tus dados de ataque, puedes usar esta regla si no has usado el equipamiento Raciones Hurtadas en esta activación. Si lo haces, esa arma tiene la regla de armas Severa para esa secuencia.",
+    "description": "Una vez por Punto de Inflexión, siempre que un agente <span class=\"faction\">RATIDOS</span> amigo esté disparando con un rifle y hayas lanzado tus dados de ataque, puedes usar esta regla si no has usado el equipamiento Raciones Hurtadas en esta activación. Si lo haces, esa arma tiene la regla de armas Severa para esa secuencia.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 20,
     "faction": "ratling",
     "name": "Armadura Improvisada",
-    "description": "Siempre que un agente esté disparando a un agente BULLGRYN <span class=\"faction\">RATIDOS</span> amigo o a un agente OGRYN <span class=\"faction\">RATIDOS</span> amigo, sus resultados de dados de defensa de 5+ son éxitos críticos.",
+    "description": "Siempre que un agente esté disparando a un agente BULLGRYN <span class=\"faction\">RATIDOS</span> amigo o a un agente OGRYN <span class=\"faction\">RATIDOS</span> amigo, sus resultados de dados de defensa de 5+ son éxitos críticos.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 22,
     "faction": "phobos",
     "name": "Sellos de Pureza",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo dispare o combata, si sacas dos o más fallos, puedes descartar uno de ellos para guardar otro como éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo dispare o combata, si sacas dos o más fallos, puedes descartar uno de ellos para guardar otro como éxito normal en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 23,
     "faction": "phobos",
     "name": "Granadas Especiales Adicionales",
-    "description": "Este equipamiento te permite seleccionar cuatro granadas especiales adicionales del equipo de granadas especiales (ver equipo universal). No puedes ademas elegir ese equipo de forma normal (y por tanto tener cinco o seis).",
+    "description": "Este equipamiento te permite seleccionar cuatro granadas especiales adicionales del equipo de granadas especiales (ver equipo universal). No puedes ademas elegir ese equipo de forma normal (y por tanto tener cinco o seis).", 
+    "weapon": [],
     "action": []
   },
   {
@@ -175,65 +207,79 @@
     "faction": "phobos",
     "name": "Filopuñales",
     "description": "Los Agentes <span class=\"faction\">ASALTANTE PHOBOS</span> amigos tienen la siguiente arma de combate:",
-    "ATK": "5",
-    "HIT": "3+",
-    "DMG": "3/4",
+    "weapon": [
+      {
+        "w_name": "Filopuñales",
+        "ATK": "5",
+        "HIT": "3+",
+        "DMG": "3/4",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 24,
     "faction": "phobos",
     "name": "Munición Especial",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo realice la acción <b>Disparar</b> y elijas una carabina bólter, una carabina bólter de tirador o carabina bólter occulus, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, dicha arma tendra la regla Penetración 1.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ASALTANTE PHOBOS</span> amigo realice la acción <b>Disparar</b> y elijas una carabina bólter, una carabina bólter de tirador o carabina bólter occulus, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, dicha arma tendra la regla Penetración 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 25,
     "faction": "novitiates",
     "name": "Icono de Fe",
-    "description": "Una vez por Punto de Inflexión, puedes usar hasta dos <b>ACTOS DE FE</b> durante una secuencia, pero cada uno debe ser distinto. Esto tiene prioridad sobre las reglas normales de <b>ACTOS DE FE</b>.",
+    "description": "Una vez por Punto de Inflexión, puedes usar hasta dos <b>ACTOS DE FE</b> durante una secuencia, pero cada uno debe ser distinto. Esto tiene prioridad sobre las reglas normales de <b>ACTOS DE FE</b>.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 26,
     "faction": "novitiates",
     "name": "Proyectiles Santificados",
-    "description": "Siempre que una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un bólter reliquia, una pistola automática, una pistola bólter reliquia o un rifle automático, si gastas un Punto de Fe, esa arma tiene la regla de armas Críticos de Penetración 1 hasta el final de esa secuencia.",
+    "description": "Siempre que una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un bólter reliquia, una pistola automática, una pistola bólter reliquia o un rifle automático, si gastas un Punto de Fe, esa arma tiene la regla de armas Críticos de Penetración 1 hasta el final de esa secuencia.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 27,
     "faction": "novitiates",
     "name": "Autocastigador",
-    "description": "Una vez por Punto de Inflexión, cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare, combata o contraataque, en el paso de Tirar Dados de Ataque, puedes inflingir 1-3 de daño a ese agente amiga (pero no lo suficiente para incapacitarla). Si lo haces, durante esa secuencia puedes usar gratis un <b>ACTO DE FE</b> cuyo coste en Puntos de Fe no sea mayor que el daño que has inflingido mediante esta regla.",
+    "description": "Una vez por Punto de Inflexión, cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare, combata o contraataque, en el paso de Tirar Dados de Ataque, puedes inflingir 1-3 de daño a ese agente amiga (pero no lo suficiente para incapacitarla). Si lo haces, durante esa secuencia puedes usar gratis un <b>ACTO DE FE</b> cuyo coste en Puntos de Fe no sea mayor que el daño que has inflingido mediante esta regla.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 28,
     "faction": "novitiates",
     "name": "Émbrocas Sagradas",
-    "description": "Puedes ignorar cualquier cambio al atributo Movimiento de las agentes <span class=\"faction\">NOVICIA</span> amigas por estar lesionadas.",
+    "description": "Puedes ignorar cualquier cambio al atributo Movimiento de las agentes <span class=\"faction\">NOVICIA</span> amigas por estar lesionadas.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 30,
     "faction": "kasrkin",
     "name": "Guardamanos",
-    "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare contra un agente a 3\" o menos de él, las armas a distancia en su hoja de datos (salvo las armas que incluyan \"pistola\" en el nombre, P. ej. pistola láser potenciada, todos los perfiles de una pistola de plasma, etc.) tienen la regla de arma Certera 1.",
+    "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare contra un agente a 3\" o menos de él, las armas a distancia en su hoja de datos (salvo las armas que incluyan \"pistola\" en el nombre, P. ej. pistola láser potenciada, todos los perfiles de una pistola de plasma, etc.) tienen la regla de arma Certera 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 31,
     "faction": "kasrkin",
     "name": "Mira de Largo Alcance",
-    "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare contra un agente a más de 6\" de él, las armas potenciadas de ese agente amigo tienen la regla de armas Saturación.",
+    "description": "Siempre que un agente <span class=\"faction\">KASRKIN</span> amigo dispare contra un agente a más de 6\" de él, las armas potenciadas de ese agente amigo tienen la regla de armas Saturación.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 32,
     "faction": "kasrkin",
     "name": "Reliquias de Cadia",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">KASRKIN</span> amigo dispare, combata o contraataque, si sacas 2 o más fallos puedes descartar 1 de ellos para guardar otro como éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">KASRKIN</span> amigo dispare, combata o contraataque, si sacas 2 o más fallos puedes descartar 1 de ellos para guardar otro como éxito normal en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -241,9 +287,15 @@
     "faction": "kasrkin",
     "name": "Filodagas",
     "description": "Los agentes <span class=\"faction\">KASRKIN</span> amigos tienen la siguiente arma de combate:",
-    "ATK": "3",
-    "HIT": "4+",
-    "DMG": "3/4",
+    "weapon": [
+      {
+        "w_name": "Filodagas",
+        "ATK": "3",
+        "HIT": "4+",
+        "DMG": "3/4",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
@@ -251,86 +303,103 @@
     "faction": "inquisitorial-agent",
     "name": "Dagas de Combate",
     "description": "Los agentes INQUISITORIAL AGENT amigos tienen la siguiente arma de combate. Siempre que un agente SISTER OF SILENCE amigo la esté usando, añade 1 a su atributo de Atq.",
-    "ATK": "3",
-    "HIT": "4+",
-    "DMG": "3/4",
+    "weapon": [
+      {
+        "w_name": "Dagas de Combate",
+        "ATK": "3",
+        "HIT": "4+",
+        "DMG": "3/4",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 34,
     "faction": "inquisitorial-agent",
     "name": "Roseta Inquisitorial",
-    "description": "Una vez por batalla, cuando un agente INQUISITORIAL AGENT amigo sea activado, si has usado el ardid estratégico Presa durante este Punto de Inflexión, puedes usar esta regla. Si lo haces, puedes seleccionar un nuevo agente enemigo para ser tu presa hasta el final del Punto de Inflexión.",
+    "description": "Una vez por batalla, cuando un agente INQUISITORIAL AGENT amigo sea activado, si has usado el ardid estratégico Presa durante este Punto de Inflexión, puedes usar esta regla. Si lo haces, puedes seleccionar un nuevo agente enemigo para ser tu presa hasta el final del Punto de Inflexión.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 35,
     "faction": "inquisitorial-agent",
     "name": "Trajes Blindados",
-    "description": "Siempre que un agente esté disparando a un agente INQUISITORIAL AGENT amigo (excluyendo TOME-SKULL) que tenga un atributo de Salvación de 5+, puedes retener uno de tus resultados de dados de defensa de 4 como un éxito normal.",
+    "description": "Siempre que un agente esté disparando a un agente INQUISITORIAL AGENT amigo (excluyendo TOME-SKULL) que tenga un atributo de Salvación de 5+, puedes retener uno de tus resultados de dados de defensa de 4 como un éxito normal.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 36,
     "faction": "inquisitorial-agent",
     "name": "Servo-Cráneo",
-    "description": "Una vez por batalla, un agente INQUISITORIAL AGENT amigo puede realizar una acción de misión por 1 PA menos.",
+    "description": "Una vez por batalla, un agente INQUISITORIAL AGENT amigo puede realizar una acción de misión por 1 PA menos.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 37,
     "faction": "imperial-navy-breachers",
     "name": "Respiradores",
-    "description": "Puedes ignorar cualquier cambio al atributo LPA de los agentes <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigos, y ademas no se ven afectados por la regla de armas Choque de agentes enemigos.",
+    "description": "Puedes ignorar cualquier cambio al atributo LPA de los agentes <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigos, y ademas no se ven afectados por la regla de armas Choque de agentes enemigos.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 38,
     "faction": "imperial-navy-breachers",
     "name": "Postas",
-    "description": "Hasta tres veces por Punto de Inflexión, cuando un agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo realice una acción de <b>Disparar</b> y elijas una escopeta de la Armada (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora en 1 el atributo de Impactar de esa arma y suma 1 a sus dos atributos Daño.",
+    "description": "Hasta tres veces por Punto de Inflexión, cuando un agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo realice una acción de <b>Disparar</b> y elijas una escopeta de la Armada (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora en 1 el atributo de Impactar de esa arma y suma 1 a sus dos atributos Daño.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 39,
     "faction": "imperial-navy-breachers",
     "name": "Estimulantes de Combate",
-    "description": "Puedes ignorar cualquier cambio al atributo Movimiento de los agentes <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigos por estar lesionados.",
+    "description": "Puedes ignorar cualquier cambio al atributo Movimiento de los agentes <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigos por estar lesionados.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 40,
     "faction": "imperial-navy-breachers",
     "name": "Dispositivo de Intrusión",
-    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo puede realizar la acción de <b>Operar portillo</b> por 1 PA menos.",
+    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo puede realizar la acción de <b>Operar portillo</b> por 1 PA menos.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 41,
     "faction": "hunter-clade",
     "name": "Bombardeo Radioactivo",
-    "description": "<b>GAMBITO ESTRATÉGICO</b> de una vez por batalla, a partir de cualquier punto de inflexión. Elige un marcador de objetivo. Tira un dado por cada agente enemigo que se encuentre en la zona de control de ese marcador o en esa zona de descenso, y resta 1 si alguna parte de la peana de ese agente está bajo terreno Aventajado: con 4+, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación; con un 6, inflígele además 1D3 daños (tira por separado para cada uno).",
+    "description": "<b>GAMBITO ESTRATÉGICO</b> de una vez por batalla, a partir de cualquier punto de inflexión. Elige un marcador de objetivo. Tira un dado por cada agente enemigo que se encuentre en la zona de control de ese marcador o en esa zona de descenso, y resta 1 si alguna parte de la peana de ese agente está bajo terreno Aventajado: con 4+, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación; con un 6, inflígele además 1D3 daños (tira por separado para cada uno).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 42,
     "faction": "hunter-clade",
     "name": "Campo Refractor",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CLADO DE CAZA amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si la hay) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CLADO DE CAZA amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si la hay) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 43,
     "faction": "hunter-clade",
     "name": "Enlace Mental Extremis",
-    "description": "Una vez por batalla, puedes usar el ardid de tiroteo Edicto de Control por 0PM, pero en lugar de activar los agentes amigos seleccionados en sucesión, actívalos al mismo tiempo. Completa sus activaciones acción por acción en cualquier orden.",
+    "description": "Una vez por batalla, puedes usar el ardid de tiroteo Edicto de Control por 0PM, pero en lugar de activar los agentes amigos seleccionados en sucesión, actívalos al mismo tiempo. Completa sus activaciones acción por acción en cualquier orden.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 44,
     "faction": "hunter-clade",
     "name": "Sistemas Redundantes",
-    "description": "Una vez por Punto de Inflexión, cuando se activa un agente CLADO DE CAZA amigo, si no está dentro de la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta un máximo de 1D3+2 heridas perdidas.",
+    "description": "Una vez por Punto de Inflexión, cuando se activa un agente CLADO DE CAZA amigo, si no está dentro de la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta un máximo de 1D3+2 heridas perdidas.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -343,49 +412,56 @@
     "id_equip": 46,
     "faction": "exaction-squad",
     "name": "Visor de Espejo Reforzado",
-    "description": "Puedes ignorar cualquier cambio en los atributos de LPA de los agentes EXACTION SQUAD amigos, y no se ven afectados por la regla de armas Choque de los agentes enemigos.",
+    "description": "Puedes ignorar cualquier cambio en los atributos de LPA de los agentes EXACTION SQUAD amigos, y no se ven afectados por la regla de armas Choque de los agentes enemigos.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 47,
     "faction": "exaction-squad",
     "name": "Esposas",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente EXACTION SQUAD amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).",
+    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente EXACTION SQUAD amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 48,
     "faction": "exaction-squad",
     "name": "Fósforo-Lumen Estroboscópico",
-    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente EXACTION SQUAD amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
+    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente EXACTION SQUAD amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 49,
     "faction": "elucidian-starstrider",
     "name": "Subtraje Blindado",
-    "description": "Siempre que un agente esté disparando a un agente ELUCIDIAN STARSTRIDER amigo que tenga un atributo de Salvación de 5+ (excluyendo CANID), puedes retener uno de tus resultados de dados de defensa de 4 como un éxito normal.",
+    "description": "Siempre que un agente esté disparando a un agente ELUCIDIAN STARSTRIDER amigo que tenga un atributo de Salvación de 5+ (excluyendo CANID), puedes retener uno de tus resultados de dados de defensa de 4 como un éxito normal.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 50,
     "faction": "elucidian-starstrider",
     "name": "Condensadores Sobrecargados",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente ELUCIDIAN STARSTRIDER amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola láser o rifle láser, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, añade 1 a ambos atributos de Daño de esa arma y tiene las reglas de arma Caliente y Críticos de Penetración 1. Ten en cuenta que las pistolas láser reliquia están excluidas de esta regla.",
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente ELUCIDIAN STARSTRIDER amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola láser o rifle láser, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, añade 1 a ambos atributos de Daño de esa arma y tiene las reglas de arma Caliente y Críticos de Penetración 1. Ten en cuenta que las pistolas láser reliquia están excluidas de esta regla.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 51,
     "faction": "elucidian-starstrider",
     "name": "Enlace de Coordenadas Mejorado",
-    "description": "Siempre que un agente ELUCIDIAN STARSTRIDER amigo esté usando un RECURSO DE APOYO CORSARIO, si el objetivo está a 6\" o menos de un agente ELUCIDIAN STARSTRIDER NAVIS amigo, el objetivo no puede estar Ofuscado y esa arma tiene la regla de armas Saturación.",
+    "description": "Siempre que un agente ELUCIDIAN STARSTRIDER amigo esté usando un RECURSO DE APOYO CORSARIO, si el objetivo está a 6\" o menos de un agente ELUCIDIAN STARSTRIDER NAVIS amigo, el objetivo no puede estar Ofuscado y esa arma tiene la regla de armas Saturación.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 52,
     "faction": "elucidian-starstrider",
     "name": "Artillería Rápida",
-    "description": "Una vez por batalla, al seleccionar un RECURSO DE APOYO CORSARIO, puedes seleccionar uno que ya haya sido usado durante la batalla. Esto tiene prioridad sobre las reglas normales de RECURSOS DE APOYO CORSARIO.",
+    "description": "Una vez por batalla, al seleccionar un RECURSO DE APOYO CORSARIO, puedes seleccionar uno que ya haya sido usado durante la batalla. Esto tiene prioridad sobre las reglas normales de RECURSOS DE APOYO CORSARIO.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -404,14 +480,16 @@
     "id_equip": 55,
     "faction": "deathwatch",
     "name": "RESERVA DE MUNICIÓN",
-    "description": "Una vez por batalla, puedes usar la regla de facción Munición Especial para hasta dos acciones de <b>Disparar</b> durante un Punto de Inflexión, pero debes seleccionar diferentes reglas de arma para ambos usos. Esto tiene prioridad sobre las reglas normales de Munición Especial.",
+    "description": "Una vez por batalla, puedes usar la regla de facción Munición Especial para hasta dos acciones de <b>Disparar</b> durante un Punto de Inflexión, pero debes seleccionar diferentes reglas de arma para ambos usos. Esto tiene prioridad sobre las reglas normales de Munición Especial.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 56,
     "faction": "deathwatch",
     "name": "ARMAS DIGITALES",
-    "description": "Una vez por Punto de Inflexión, cuando un agente DEATHWATCH amigo realice la acción de Combatir, al inicio del paso de Tirar Dados de Ataque puedes usar esta regla. Si lo haces, inflige 1 de daño al agente enemigo en esa secuencia.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente DEATHWATCH amigo realice la acción de Combatir, al inicio del paso de Tirar Dados de Ataque puedes usar esta regla. Si lo haces, inflige 1 de daño al agente enemigo en esa secuencia.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -419,121 +497,143 @@
     "faction": "veteran-guardsmen",
     "name": "Hacha de Mano",
     "description": "Los agentes DEATH KORPS amigos tienen la siguiente arma de combate:",
-    "ATK": "3",
-    "HIT": "4+",
-    "DMG": "3/4",
+    "weapon": [
+      {
+        "w_name": "Hacha de Mano",
+        "ATK": "3",
+        "HIT": "4+",
+        "DMG": "3/4",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 58,
     "faction": "veteran-guardsmen",
     "name": "Cronómetro",
-    "description": "<p>GAMBITO ESTRATÉGICO una vez por batalla, en el primer o segundo Punto de Inflexión. Cada agente DEATH KORPS amigo totalmente dentro de tu territorio puede realizar inmediatamente una acción de Moverse con Cuidado (Dash) gratuita en un orden de tu elección pero debe terminar ese movimiento más cerca de la zona de despliegue de un adversario o del borde de la zona de aniquilación.</p> <p>No puedes usar este GAMBITO ESTRATÉGICO y el ardid estratégico Reagruparse durante el mismo Punto de Inflexión.</p>",
+    "description": "<p>GAMBITO ESTRATÉGICO una vez por batalla, en el primer o segundo Punto de Inflexión. Cada agente DEATH KORPS amigo totalmente dentro de tu territorio puede realizar inmediatamente una acción de Moverse con Cuidado (Dash) gratuita en un orden de tu elección pero debe terminar ese movimiento más cerca de la zona de despliegue de un adversario o del borde de la zona de aniquilación.</p> <p>No puedes usar este GAMBITO ESTRATÉGICO y el ardid estratégico Reagruparse durante el mismo Punto de Inflexión.</p>", 
+    "weapon": [],
     "action":[]
   },
   {
     "id_equip": 59,
     "faction": "veteran-guardsmen",
     "name": "Cuentas de Comunicación",
-    "description": "Siempre que un agente DEATH KORPS WATCHMASTER o CONFIDANT amigo emita una ORDEN DE GUARDIA, puedes usar esta regla. Si lo haces, en lugar de que cada agente DEATH KORPS amigo a 6” reciba la orden, puedes seleccionar un agente DEATH KORPS amigo para recibir esa orden",
+    "description": "Siempre que un agente DEATH KORPS WATCHMASTER o CONFIDANT amigo emita una ORDEN DE GUARDIA, puedes usar esta regla. Si lo haces, en lugar de que cada agente DEATH KORPS amigo a 6” reciba la orden, puedes seleccionar un agente DEATH KORPS amigo para recibir esa orden", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 60,
     "faction": "veteran-guardsmen",
     "name": "Bombardeo de Gas",
-    "description": "GAMBITO ESTRATÉGICO una vez por batalla. Coloca tu marcador de Gas en la zona de aniquilación; no puede colocarse debajo de terreno Elevado. Siempre que un agente esté a 3” de ese marcador, resta 1 de su atributo de LPA. En el paso de Preparación de la siguiente Fase de Estrategia, retira ese marcador. Ten en cuenta que el atributo de LPA de un agente solo cambia mientras está a 3\" de ese marcador. Si se mueve a más de 3\" de ese marcador, su atributo de LPA ya no es cambiado por esta regla.",
+    "description": "GAMBITO ESTRATÉGICO una vez por batalla. Coloca tu marcador de Gas en la zona de aniquilación; no puede colocarse debajo de terreno Elevado. Siempre que un agente esté a 3” de ese marcador, resta 1 de su atributo de LPA. En el paso de Preparación de la siguiente Fase de Estrategia, retira ese marcador. Ten en cuenta que el atributo de LPA de un agente solo cambia mientras está a 3\" de ese marcador. Si se mueve a más de 3\" de ese marcador, su atributo de LPA ya no es cambiado por esta regla.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 70,
     "faction": "battleclade",
     "name": "Equipo Oculto",
-    "description": "Una vez por batalla, un agente <b>SERVIDOR DE COMBATE</b> o <b>SERVIDOR DE ARMAMENTO</b> puede usar otra opción de arma de su tarjeta de datos, aunque no la hubiera seleccionado para la batalla.",
+    "description": "Una vez por batalla, un agente <b>SERVIDOR DE COMBATE</b> o <b>SERVIDOR DE ARMAMENTO</b> puede usar otra opción de arma de su tarjeta de datos, aunque no la hubiera seleccionado para la batalla.", 
+    "weapon": [],
     "action":[]
   },
   {
     "id_equip": 71,
     "faction": "battleclade",
     "name": "Disfraces",
-    "description": "Tras revelar esta opción de equipo, tira 1D3. Como <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión, un número de agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos igual al resultado, de entre los que estén completamente dentro de tu zona de descenso, pueden realizar de inmediato una acción libre de <b>Reposicionarse</b>, pero deben terminarla completamente a 3\" o menos de tu zona de descenso. Tu agente <b>TECNOARQUEÓLOGO</b> no puede realizar más de una acción de <b>Reposicionarse</b> durante la fase de estrategia del primer punto de inflexión (por ejemplo, por la regla Buscador de misterios divinos).",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Como <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión, un número de agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos igual al resultado, de entre los que estén completamente dentro de tu zona de descenso, pueden realizar de inmediato una acción libre de <b>Reposicionarse</b>, pero deben terminarla completamente a 3\" o menos de tu zona de descenso. Tu agente <b>TECNOARQUEÓLOGO</b> no puede realizar más de una acción de <b>Reposicionarse</b> durante la fase de estrategia del primer punto de inflexión (por ejemplo, por la regla Buscador de misterios divinos).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 72,
     "faction": "battleclade",
     "name": "Capacitadores Electrománticos",
-    "description": "Las armas de combate de los agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos tienen la regla de armas Choque. Siempre que un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo contraataque, sus armas de combate tienen además la regla de armas Severa.",
+    "description": "Las armas de combate de los agentes <span class=\"faction\">CLADO DE BATALLA</span> amigos tienen la regla de armas Choque. Siempre que un agente <span class=\"faction\">CLADO DE BATALLA</span> amigo contraataque, sus armas de combate tienen además la regla de armas Severa.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 73,
     "faction": "battleclade",
     "name": "Células de Reserva Neurocíclica",
-    "description": "Tras revelar esta opción de equipo, tira 1D3. Una vez por punto de inflexión, cuando lleves a cabo <b>TRANSFERIR POTENCIA</b>, puedes usar esta regla. Si lo haces, gastas 0PA en lugar de 1PA (esto tiene preferencia sobre las reglas normales de Red noosférica).",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Una vez por punto de inflexión, cuando lleves a cabo <b>TRANSFERIR POTENCIA</b>, puedes usar esta regla. Si lo haces, gastas 0PA en lugar de 1PA (esto tiene preferencia sobre las reglas normales de Red noosférica).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 74,
     "faction": "intercessors",
     "name": "Sellos de Pureza",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo dispare, combata o contraataque, si sacas dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo dispare, combata o contraataque, si sacas dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 76,
     "faction": "intercessors",
     "name": "Relicarios del Capítulo",
-    "description": "Puedes usar el ardid de tiroteo Ira de Venganza por 0PM si el agente amigo especificado tiene una orden de Trabarse.",
+    "description": "Puedes usar el ardid de tiroteo Ira de Venganza por 0PM si el agente amigo especificado tiene una orden de Trabarse.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 75,
     "faction": "intercessors",
     "name": "Escudos Decorativos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo combate o contraataca, después de que tu oponente tire sus dados de ataque, pero antes de que se repitan tiradas, puedes usar esta regla. Si lo haces, tu oponente no puede guardar dados de ataque con un resultado menor que 6 como éxitos críticos durante esa secuencia (por ejemplo, debido a las reglas de arma Letal, Desgarradora o Severa).",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo combate o contraataca, después de que tu oponente tire sus dados de ataque, pero antes de que se repitan tiradas, puedes usar esta regla. Si lo haces, tu oponente no puede guardar dados de ataque con un resultado menor que 6 como éxitos críticos durante esa secuencia (por ejemplo, debido a las reglas de arma Letal, Desgarradora o Severa).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 77,
     "faction": "intercessors",
     "name": "Auspex",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo realiza una acción de <b>Disparar</b> y estás eligiendo Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de la activación (o reacción), los agentes enemigos a 8\" o menos de ese agente amigo no pueden estar Ofuscados.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">ÁNGEL DE LA MUERTE</span> amigo realiza una acción de <b>Disparar</b> y estás eligiendo Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de la activación (o reacción), los agentes enemigos a 8\" o menos de ese agente amigo no pueden estar Ofuscados.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 78,
     "faction": "warpcoven",
     "name": "Balas Hechizadas",
-    "description": "Los bólteres infierno, pistolas bólter infierno y pistolas automáticas de los agentes <span class=\"faction\">AQUELARRE DISFORME</span> amigos tienen la regla de armas Devastadora 1.",
+    "description": "Los bólteres infierno, pistolas bólter infierno y pistolas automáticas de los agentes <span class=\"faction\">AQUELARRE DISFORME</span> amigos tienen la regla de armas Devastadora 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 79,
     "faction": "warpcoven",
     "name": "Armas FaucesDaemónicas",
-    "description": "Suma 1 al atributo de Ataque de las armas de combate de los agentes <b>MARINE RÚBRICA</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigos. Cuando un agente <b>MARINE RÚBRICA</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo contraataca, sus armas de combate tienen la regla de armas Certera 1.",
+    "description": "Suma 1 al atributo de Ataque de las armas de combate de los agentes <b>MARINE RÚBRICA</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigos. Cuando un agente <b>MARINE RÚBRICA</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo contraataca, sus armas de combate tienen la regla de armas Certera 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 80,
     "faction": "warpcoven",
     "name": "Túnicas Arcanas",
-    "description": "Una vez por Punto de Inflexión, cuando un dado de ataque vaya a infligir Daño Crítico a un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo, puedes decidir que ese dado inflinja Daño Normal en su lugar. No puedes usar esta regla más de una vez por punto de inflexión para cada agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo.",
+    "description": "Una vez por Punto de Inflexión, cuando un dado de ataque vaya a infligir Daño Crítico a un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo, puedes decidir que ese dado inflinja Daño Normal en su lugar. No puedes usar esta regla más de una vez por punto de inflexión para cada agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 81,
     "faction": "warpcoven",
     "name": "Pergaminos de Hechicería",
-    "description": "Una vez por batalla, cuando un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo sea activado o reaccione, puedes elegir un <b>DON DE TZEENTCH</b> diferente al que tenga. Dicho agente lo tendrá hasta el final de la batalla (pierde el que tenía previamente). No puedes elegir un <b>DON DE TZEENTCH</b> que tenga otro agente amigo. Ten en cuenta que si usas esta regla cuando un agente amigo reacciona y seleccionas Ecos de la Disformidad, puede usarse inmediatamente para cambiar la orden del agente y que este realice una acción libre durante la reacción.",
+    "description": "Una vez por batalla, cuando un agente <b>HECHICERO</b> <span class=\"faction\">AQUELARRE DISFORME</span> amigo sea activado o reaccione, puedes elegir un <b>DON DE TZEENTCH</b> diferente al que tenga. Dicho agente lo tendrá hasta el final de la batalla (pierde el que tenía previamente). No puedes elegir un <b>DON DE TZEENTCH</b> que tenga otro agente amigo. Ten en cuenta que si usas esta regla cuando un agente amigo reacciona y seleccionas Ecos de la Disformidad, puede usarse inmediatamente para cambiar la orden del agente y que este realice una acción libre durante la reacción.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 85,
     "faction": "plague-marines",
     "name": "CAMPANAS DE LA PLAGA",
-    "description": "Puedes ignorar cualquier cambio a los atributos de agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos por estar lesionados (incluyendo los atributos de sus armas).",
+    "description": "Puedes ignorar cualquier cambio a los atributos de agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos por estar lesionados (incluyendo los atributos de sus armas).", 
+    "weapon": [],
     "action": []
   },
   {
@@ -541,73 +641,87 @@
     "faction": "plague-marines",
     "name": "GRANADAS DE PLAGA",
     "description": "Los agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos tienen la siguiente arma a distancia (no puedes elegirla para su uso más de dos veces durante la batalla):",
-    "ATK": "4",
-    "HIT": "4+",
-    "DMG": "2/4",
-    "special_rules": "Alcance 6\", Área 2\", Saturación, Severa, Veneno<span class=\"faction\">*</span>",
+    "weapon": [
+      {
+        "w_name": "GRANADAS DE PLAGA",
+        "ATK": "4",
+        "HIT": "4+",
+        "DMG": "2/4",
+        "rules": "Alcance 6\", Área 2\", Saturación, Severa, Veneno<span class=\"faction\">*</span>"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 84,
     "faction": "plague-marines",
     "name": "MUNICIÓN DE PLAGA",
-    "description": "Los bólteres y pistolas bólter de los agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos tienen las reglas de armas Severa y Veneno.",
+    "description": "Los bólteres y pistolas bólter de los agentes <span class=\"faction\">MARINE DE PLAGA</span> amigos tienen las reglas de armas Severa y Veneno.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 83,
     "faction": "plague-marines",
     "name": "VENTILACIONES DE VENENO",
-    "description": "Siempre que un agente enemigo que no tenga una de tus fichas de Veneno sea activado estando a 3\" o menos de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, tira 1D3: con un 3, ese agente recibe una de tus fichas de Veneno.",
+    "description": "Siempre que un agente enemigo que no tenga una de tus fichas de Veneno sea activado estando a 3\" o menos de un agente <span class=\"faction\">MARINE DE PLAGA</span> amigo, tira 1D3: con un 3, ese agente recibe una de tus fichas de Veneno.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 86,
     "faction": "nemesis-claw",
     "name": "Piel Desollada",
-    "description": "Piel Desollada: Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente NEMESIS CLAW amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
+    "description": "Piel Desollada: Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente NEMESIS CLAW amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 87,
     "faction": "nemesis-claw",
     "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente NEMESIS CLAW amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).",
+    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente NEMESIS CLAW amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 88,
     "faction": "nemesis-claw",
     "name": "Trofeo Macabro",
-    "description": "Trofeo Macabro: Una vez por batalla, cuando un agente NEMESIS CLAW amigo incapacita a un agente enemigo a 2\" o menos de él, gana una de tus fichas de Trofeo Macabro (si no tiene ya una). Siempre que un agente NEMESIS CLAW amigo que tenga una de tus fichas de Trofeo Macabro sea visible y esté a 2\" o menos de un agente enemigo, resta 1 del atributo de Atq de las armas de ese agente enemigo.",
+    "description": "Trofeo Macabro: Una vez por batalla, cuando un agente NEMESIS CLAW amigo incapacita a un agente enemigo a 2\" o menos de él, gana una de tus fichas de Trofeo Macabro (si no tiene ya una). Siempre que un agente NEMESIS CLAW amigo que tenga una de tus fichas de Trofeo Macabro sea visible y esté a 2\" o menos de un agente enemigo, resta 1 del atributo de Atq de las armas de ese agente enemigo.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 89,
     "faction": "nemesis-claw",
     "name": "Inhibidores de Comunicaciones",
-    "description": "Inhibidores de Comunicaciones: Siempre que un agente enemigo esté a 3\" o menos de un agente NEMESIS CLAW amigo, el atributo de LPA de ese agente enemigo no puede ser incrementado. Ten en cuenta que esto no afecta a los atributos de LPA que ya han sido cambiados.",
+    "description": "Inhibidores de Comunicaciones: Siempre que un agente enemigo esté a 3\" o menos de un agente NEMESIS CLAW amigo, el atributo de LPA de ese agente enemigo no puede ser incrementado. Ten en cuenta que esto no afecta a los atributos de LPA que ya han sido cambiados.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 91,
     "faction": "legionary",
     "name": "Armadura con Salvaguardas",
-    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente <span class=\"faction\">LEGIONARIO</span> amigo. Hasta el paso de Preparación de la siguiente Fase de Estrategia, el atributo Salvación de ese agente cambia a 2+.",
+    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente <span class=\"faction\">LEGIONARIO</span> amigo. Hasta el paso de Preparación de la siguiente Fase de Estrategia, el atributo Salvación de ese agente cambia a 2+.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 92,
     "faction": "legionary",
     "name": "Balas Corrompidas",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo realice una acción de <b>Disparar</b> y elijas un bólter o una pistola bólter, puedes usar esta regla. Si lo haces, hasta el final de esa acción el arma en cuestion tiene la regla de armas Desgarradora.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo realice una acción de <b>Disparar</b> y elijas un bólter o una pistola bólter, puedes usar esta regla. Si lo haces, hasta el final de esa acción el arma en cuestion tiene la regla de armas Desgarradora.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 93,
     "faction": "legionary",
     "name": "Talismanes del Caos",
-    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige una clave Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo que tenga esa clave dispare, combata o contraataque y saques dos o más fallos, puedes infligir 1D3 daños a ese agente amigo para descartar uno de ellos y guardar el otro como un éxito normal en su lugar. \nTen en cuenta que, si era la acción de <b>Disparar</b> y ese daño incapacita a ese agente amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos).",
+    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige una clave Marcas del Caos. Una vez durante cada una de sus activaciones, cuando un agente <span class=\"faction\">LEGIONARIO</span> amigo que tenga esa clave dispare, combata o contraataque y saques dos o más fallos, puedes infligir 1D3 daños a ese agente amigo para descartar uno de ellos y guardar el otro como un éxito normal en su lugar. \nTen en cuenta que, si era la acción de <b>Disparar</b> y ese daño incapacita a ese agente amigo, la acción no termina (continúa la secuencia con tus dados de ataque exitosos).", 
+    "weapon": [],
     "action":[]
   },
   {
@@ -615,177 +729,207 @@
     "faction": "legionary",
     "name": "Filos Maléficos",
     "description": "Los agentes <span class=\"faction\">LEGIONARIO</span> amigos tienen la siguiente arma de combate:",
-    "ATK": "5",
-    "HIT": "3+",
-    "DMG": "3/4",
+    "weapon": [
+      {
+        "w_name": "Filos Maléficos",
+        "ATK": "5",
+        "HIT": "3+",
+        "DMG": "3/4",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 94,
     "faction": "goremongers",
     "name": "Tótem Sangriento",
-    "description": "Antes de la batalla, puedes colocar uno de tus marcadores de Tótem Sangriento totalmente dentro de tu territorio y a más de 2\" de otros marcadores (excluyendo tu marcador de Cadáver Sangriento). Siempre que un agente enemigo a 3\" o menos de tu marcador de Tótem Sangriento esté disparando, combatiendo o contraataque, tu adversario no puede repetir sus dados de ataque.",
+    "description": "Antes de la batalla, puedes colocar uno de tus marcadores de Tótem Sangriento totalmente dentro de tu territorio y a más de 2\" de otros marcadores (excluyendo tu marcador de Cadáver Sangriento). Siempre que un agente enemigo a 3\" o menos de tu marcador de Tótem Sangriento esté disparando, combatiendo o contraataque, tu adversario no puede repetir sus dados de ataque.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 95,
     "faction": "goremongers",
     "name": "Cadáver Sangriento",
-    "description": "Antes de la batalla, puedes colocar uno de tus marcadores de Cadáver Sangriento totalmente dentro de tu territorio y a más de 2\" de otros marcadores (excluyendo tu marcador de Tótem Sangriento). Los agentes GOREMONGER amigos pueden realizar la acción de Recoger Marcador en ese marcador. En el paso de Preparación de cada Fase de Estrategia, puedes incrementar el TANQUE DE SANGRE de un agente GOREMONGER amigo que controle ese marcador, a menos que ese agente amigo esté dentro del área de control de un agente enemigo.",
+    "description": "Antes de la batalla, puedes colocar uno de tus marcadores de Cadáver Sangriento totalmente dentro de tu territorio y a más de 2\" de otros marcadores (excluyendo tu marcador de Tótem Sangriento). Los agentes GOREMONGER amigos pueden realizar la acción de Recoger Marcador en ese marcador. En el paso de Preparación de cada Fase de Estrategia, puedes incrementar el TANQUE DE SANGRE de un agente GOREMONGER amigo que controle ese marcador, a menos que ese agente amigo esté dentro del área de control de un agente enemigo.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 96,
     "faction": "goremongers",
     "name": "Sigilo del Caos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente GOREMONGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente GOREMONGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 97,
     "faction": "goremongers",
     "name": "Cadenas de Muñeca",
-    "description": "Una vez por Punto de Inflexión, cuando un agente GOREMONGER amigo realice la acción de <b>Disparar</b> y estés seleccionando un arma a distancia, puedes usar esta regla. Si lo haces, hasta el final de esa acción, las siguientes armas de combate se tratan como armas a distancia con la regla de armas Alcance 2\": espada sierra, guja sierra, gran hacha sierra (ignora su regla de armas Brutal), desgarradores de pico.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente GOREMONGER amigo realice la acción de <b>Disparar</b> y estés seleccionando un arma a distancia, puedes usar esta regla. Si lo haces, hasta el final de esa acción, las siguientes armas de combate se tratan como armas a distancia con la regla de armas Alcance 2\": espada sierra, guja sierra, gran hacha sierra (ignora su regla de armas Brutal), desgarradores de pico.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 98,
     "faction": "gellerpox",
     "name": "Alimañas Mutoides",
-    "description": "Después de revelar esta opción de equipamiento, añade cuatro agentes GELLERPOX INFECTED MUTOID VERMIN a tu kill team para la batalla.",
+    "description": "Después de revelar esta opción de equipamiento, añade cuatro agentes GELLERPOX INFECTED MUTOID VERMIN a tu kill team para la batalla.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 99,
     "faction": "gellerpox",
     "name": "Suministros Contaminados",
-    "description": "Después de revelar esta opción de equipamiento, lanza 2D6: con un 7+, retira una de las opciones de equipamiento seleccionadas por tu adversario; de lo contrario, ese jugador retira una de sus propias opciones de equipamiento seleccionadas. No pueden seleccionar ese equipamiento de nuevo durante la secuencia de juego (P. ej. en el paso de Exploración de Operaciones Aprobadas). No puedes seleccionar esta opción de equipamiento después del paso de Seleccionar agentes.",
+    "description": "Después de revelar esta opción de equipamiento, lanza 2D6: con un 7+, retira una de las opciones de equipamiento seleccionadas por tu adversario; de lo contrario, ese jugador retira una de sus propias opciones de equipamiento seleccionadas. No pueden seleccionar ese equipamiento de nuevo durante la secuencia de juego (P. ej. en el paso de Exploración de Operaciones Aprobadas). No puedes seleccionar esta opción de equipamiento después del paso de Seleccionar agentes.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 100,
     "faction": "gellerpox",
     "name": "Síntomas Mutados",
-    "description": "Una vez por batalla, cuando actives a un agente GELLERPOX INFECTED amigo, puedes seleccionar una TECNO-MALDICIÓN adicional para que ese agente la gane hasta el final del Punto de Inflexión (debe ser diferente de tu TECNO-MALDICIÓN existente). Ten en cuenta que si una regla se refiere a un agente enemigo siendo afectado por tu regla de TECNO-MALDICIÓN seleccionada (P. ej. la regla Esparcir los Regalos Gloriosos del agente VULGRAR THRICE-CURSED), también es afectado por tu regla de TECNO-MALDICIÓN adicional.",
+    "description": "Una vez por batalla, cuando actives a un agente GELLERPOX INFECTED amigo, puedes seleccionar una TECNO-MALDICIÓN adicional para que ese agente la gane hasta el final del Punto de Inflexión (debe ser diferente de tu TECNO-MALDICIÓN existente). Ten en cuenta que si una regla se refiere a un agente enemigo siendo afectado por tu regla de TECNO-MALDICIÓN seleccionada (P. ej. la regla Esparcir los Regalos Gloriosos del agente VULGRAR THRICE-CURSED), también es afectado por tu regla de TECNO-MALDICIÓN adicional.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 101,
     "faction": "gellerpox",
     "name": "Fuelles de Plaga",
-    "description": "Siempre que un agente esté disparando a un agente GELLERPOX INFECTED NIGHTMARE HULK amigo que esté a más de 6\" de él, puedes retener uno de tus resultados de dados de defensa de 3 como un éxito normal en lugar de descartarlo.",
+    "description": "Siempre que un agente esté disparando a un agente GELLERPOX INFECTED NIGHTMARE HULK amigo que esté a más de 6\" de él, puedes retener uno de tus resultados de dados de defensa de 3 como un éxito normal en lugar de descartarlo.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 102,
     "faction": "fellgor-ravagers",
     "name": "Adornos de Latón",
-    "description": "Una vez por batalla, puedes usar los ardides de tiroteo Furia Animal y Rabia Salvaje por 0PM cada uno.",
+    "description": "Una vez por batalla, puedes usar los ardides de tiroteo Furia Animal y Rabia Salvaje por 0PM cada uno.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 103,
     "faction": "fellgor-ravagers",
     "name": "Sigilo del Caos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente FELLGOR RAVAGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente FELLGOR RAVAGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 104,
     "faction": "fellgor-ravagers",
     "name": "Marcas de Sangre",
-    "description": "Una vez por Punto de Inflexión, cuando un agente FELLGOR RAVAGER amigo esté combatiendo o contraataque, puedes usar esta regla. Si lo haces, inflige 1 de daño a ese agente amigo y repite uno de tus dados de ataque. Si el resultado es un fallo, inflige 1 de daño adicional a ese agente amigo.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente FELLGOR RAVAGER amigo esté combatiendo o contraataque, puedes usar esta regla. Si lo haces, inflige 1 de daño a ese agente amigo y repite uno de tus dados de ataque. Si el resultado es un fallo, inflige 1 de daño adicional a ese agente amigo.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 105,
     "faction": "fellgor-ravagers",
     "name": "Pintura de Guerra",
-    "description": "Puedes ignorar cualquier cambio en el atributo de Movimiento de los agentes FELLGOR RAVAGER amigos por estar lesionados.",
+    "description": "Puedes ignorar cualquier cambio en el atributo de Movimiento de los agentes FELLGOR RAVAGER amigos por estar lesionados.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 106,
     "faction": "chaos-cult",
     "name": "Escritura Funesta",
-    "description": "GAMBITO ESTRATÉGICO una vez por batalla. Cambia uno de tus DONES MALDITOS. Ten en cuenta que si es un DON MALDITO que un agente tiene por el ardid de tiroteo Mutación Aborrecible, solo ese agente se beneficia de esto.",
+    "description": "GAMBITO ESTRATÉGICO una vez por batalla. Cambia uno de tus DONES MALDITOS. Ten en cuenta que si es un DON MALDITO que un agente tiene por el ardid de tiroteo Mutación Aborrecible, solo ese agente se beneficia de esto.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 107,
     "faction": "chaos-cult",
     "name": "Disfraz Encubierto",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un GAMBITO ESTRATÉGICO en el primer Punto de Inflexión, un número de agentes CHAOS CULT DEVOTEE amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.",
+    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un GAMBITO ESTRATÉGICO en el primer Punto de Inflexión, un número de agentes CHAOS CULT DEVOTEE amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 108,
     "faction": "chaos-cult",
     "name": "Talismán Profano",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CHAOS CULT amigo, en el paso de Tirar Dados de Defensa, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CHAOS CULT amigo, en el paso de Tirar Dados de Defensa, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 109,
     "faction": "chaos-cult",
     "name": "Bendición Vil",
-    "description": "Una vez por batalla, cuando un dado de ataque inflige Daño Normal a un agente CHAOS CULT amigo (excluyendo DEVOTEE), puedes ignorar ese daño infligido. Si ese agente amigo es un agente MUTANT o TORMENT, no puedes tirar para la regla Regeneración Antinatural para ese dado de ataque y luego decidir usar esta regla en el mismo dado; debes usar una o la otra.",
+    "description": "Una vez por batalla, cuando un dado de ataque inflige Daño Normal a un agente CHAOS CULT amigo (excluyendo DEVOTEE), puedes ignorar ese daño infligido. Si ese agente amigo es un agente MUTANT o TORMENT, no puedes tirar para la regla Regeneración Antinatural para ese dado de ataque y luego decidir usar esta regla en el mismo dado; debes usar una o la otra.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 110,
     "faction": "blooded",
     "name": "Sigilo del Caos",
-    "description": "El ardid de tiroteo Recompensa Ganada te cuesta 0PM.",
+    "description": "El ardid de tiroteo Recompensa Ganada te cuesta 0PM.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 111,
     "faction": "blooded",
     "name": "Trofeos Siniestros",
-    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra, o contraataque contra un agente BLOODED amigo que tenga una de tus fichas de Sangriento y esté a 2” o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.",
+    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra, o contraataque contra un agente BLOODED amigo que tenga una de tus fichas de Sangriento y esté a 2” o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 112,
     "faction": "blooded",
     "name": "Símbolos de Adoración Sangrienta",
-    "description": "Siempre que un agente BLOODED amigo termine una acción, si no fue incapacitado pero infligió daño a cualquier agente enemigo durante esa acción, recupera 1 herida perdida.",
+    "description": "Siempre que un agente BLOODED amigo termine una acción, si no fue incapacitado pero infligió daño a cualquier agente enemigo durante esa acción, recupera 1 herida perdida.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 113,
     "faction": "blooded",
     "name": "Hojas Perversas",
-    "description": "Añade 1 a ambos atributos de Daño de la bayoneta, bayoneta y escudo, y hoja improvisada de cada agente BLOODED amigo para la batalla.",
+    "description": "Añade 1 a ambos atributos de Daño de la bayoneta, bayoneta y escudo, y hoja improvisada de cada agente BLOODED amigo para la batalla.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 114,
     "faction": "xv26-battlesuits",
     "name": "Selectores de Blanco Integrados",
-    "description": "Siempre que fueras a contraactuar, puedes hacerlo con un agente XV26 STEALTH BATTLESUIT amigo que tenga una orden de Ocultarse y esté a más de 3\" de agentes enemigos, pero antes de que contraactúe, debes cambiar su orden a Trabarse y no puede realizar ninguna acción aparte de <b>Disparar</b> durante esa contraacción.",
+    "description": "Siempre que fueras a contraactuar, puedes hacerlo con un agente XV26 STEALTH BATTLESUIT amigo que tenga una orden de Ocultarse y esté a más de 3\" de agentes enemigos, pero antes de que contraactúe, debes cambiar su orden a Trabarse y no puede realizar ninguna acción aparte de <b>Disparar</b> durante esa contraacción.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 115,
     "faction": "xv26-battlesuits",
     "name": "Multirrastreadores XV26",
-    "description": "Una vez por Punto de Inflexión, cuando un agente XV26 STEALTH BATTLESUIT amigo esté realizando la acción de <b>Disparar</b> y selecciones un cañón rotativo (barrido), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Torrente 2\".",
+    "description": "Una vez por Punto de Inflexión, cuando un agente XV26 STEALTH BATTLESUIT amigo esté realizando la acción de <b>Disparar</b> y selecciones un cañón rotativo (barrido), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Torrente 2\".", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 116,
     "faction": "xv26-battlesuits",
     "name": "Inhibidores de Contrarred",
-    "description": "Siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menos si solo un agente XV26 STEALTH BATTLESUIT amigo y solo dos agentes enemigos lo disputan. Ese agente XV26 STEALTH BATTLESUIT amigo no puede ser un agente DRONE. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.",
+    "description": "Siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menos si solo un agente XV26 STEALTH BATTLESUIT amigo y solo dos agentes enemigos lo disputan. Ese agente XV26 STEALTH BATTLESUIT amigo no puede ser un agente DRONE. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 117,
     "faction": "xv26-battlesuits",
     "name": "Filtros de Sol Negro Avanzados",
-    "description": "Siempre que un agente XV26 STEALTH BATTLESUIT amigo esté disparando a un agente que está Ofuscado, no tienes que descartar un éxito como resultado de esa regla. Todos los demás efectos de estar Ofuscado aplican de forma normal.",
+    "description": "Siempre que un agente XV26 STEALTH BATTLESUIT amigo esté disparando a un agente que está Ofuscado, no tienes que descartar un éxito como resultado de esa regla. Todos los demás efectos de estar Ofuscado aplican de forma normal.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -793,9 +937,15 @@
     "faction": "wyrmblade",
     "name": "Cargas Explosivas",
     "description": "Una vez por Punto de Inflexión, un agente WYRMBLADE NEOPHYTE amigo puede usar la siguiente arma a distancia:",
-    "ATK": "4",
-    "HIT": "4+",
-    "DMG": "3/5",
+    "weapon": [
+      {
+        "w_name": "Cargas Explosivas",
+        "ATK": "4",
+        "HIT": "4+",
+        "DMG": "3/5",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
@@ -803,163 +953,191 @@
     "faction": "wyrmblade",
     "name": "Cuchillos de Culto",
     "description": "Los agentes WYRMBLADE NEOPHYTE amigos tienen la siguiente arma de combate:",
-    "ATK": "3",
-    "HIT": "4+",
-    "DMG": "3/4",
+    "weapon": [
+      {
+        "w_name": "Cuchillos de Culto",
+        "ATK": "3",
+        "HIT": "4+",
+        "DMG": "3/4",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 120,
     "faction": "wyrmblade",
     "name": "Reflectores",
-    "description": "Siempre que un agente WYRMBLADE amigo esté disparando, el objetivo no puede estar Ofuscado si es visible y está a 6\" o menos de un agente WYRMBLADE NEOPHYTE amigo que no esté dentro del área de control de agentes enemigos.",
+    "description": "Siempre que un agente WYRMBLADE amigo esté disparando, el objetivo no puede estar Ofuscado si es visible y está a 6\" o menos de un agente WYRMBLADE NEOPHYTE amigo que no esté dentro del área de control de agentes enemigos.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 121,
     "faction": "wyrmblade",
     "name": "Trampas Explosivas",
-    "description": "Este equipamiento te permite seleccionar dos minas (ver equipamiento universal). No puedes seleccionar también ese equipamiento de forma normal (es decir, para tener tres), y los agentes WYRMBLADE amigos son ignorados para los efectos de tus minas (es decir, no pueden activarlas ni recibir daño de ellas). Esto tiene prioridad sobre las reglas normales de minas.",
+    "description": "Este equipamiento te permite seleccionar dos minas (ver equipamiento universal). No puedes seleccionar también ese equipamiento de forma normal (es decir, para tener tres), y los agentes WYRMBLADE amigos son ignorados para los efectos de tus minas (es decir, no pueden activarlas ni recibir daño de ellas). Esto tiene prioridad sobre las reglas normales de minas.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 122,
     "faction": "wrecka-krew",
     "name": "Kohetes Taladradores",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo esté realizando la acción de <b>Disparar</b> y selecciones un lanzakohetez o lanzakohetez pezado, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma pierde la regla de armas Explosión pero tiene la regla de armas Penetración 1.",
+    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo esté realizando la acción de <b>Disparar</b> y selecciones un lanzakohetez o lanzakohetez pezado, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma pierde la regla de armas Explosión pero tiene la regla de armas Penetración 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 123,
     "faction": "wrecka-krew",
     "name": "Blindaje Adicional",
-    "description": "Resta 1\" del atributo de Movimiento de los agentes WRECKA KREW amigos y mejora su atributo de Salvación en 1. Esto excluye a los agentes <b>GARRAPATO BOMBA</b> y no es acumulativo con la regla Protección de una Barricada Portátil del equipamiento universal.",
+    "description": "Resta 1\" del atributo de Movimiento de los agentes WRECKA KREW amigos y mejora su atributo de Salvación en 1. Esto excluye a los agentes <b>GARRAPATO BOMBA</b> y no es acumulativo con la regla Protección de una Barricada Portátil del equipamiento universal.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 124,
     "faction": "wrecka-krew",
     "name": "Aceite de Motor",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo (excluyendo <b>GARRAPATO BOMBA</b>) sea activado, puedes usar esta regla. Si lo haces, hasta el final de esa activación, puedes ignorar cualquier cambio en los atributos de ese agente por estar herido (incluyendo los atributos de sus armas).",
+    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo (excluyendo <b>GARRAPATO BOMBA</b>) sea activado, puedes usar esta regla. Si lo haces, hasta el final de esa activación, puedes ignorar cualquier cambio en los atributos de ese agente por estar herido (incluyendo los atributos de sus armas).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 125,
     "faction": "wrecka-krew",
     "name": "Glifos",
-    "description": "Cuando se selecciona este ítem de equipamiento, selecciona también el ardid estratégico ¡Waaagh! o Destrucción. La primera vez que fueras a usar ese ardid durante la batalla, cuesta 0PM; siempre que fueras a usarlo a partir de entonces, cuesta 0PM si tienes algún punto de Wrecka.",
+    "description": "Cuando se selecciona este ítem de equipamiento, selecciona también el ardid estratégico ¡Waaagh! o Destrucción. La primera vez que fueras a usar ese ardid durante la batalla, cuesta 0PM; siempre que fueras a usarlo a partir de entonces, cuesta 0PM si tienes algún punto de Wrecka.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 126,
     "faction": "void-dancer-troupe",
     "name": "Talismán de Hueso Espectral",
-    "description": "Una vez por punto de inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.",
+    "description": "Una vez por punto de inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 127,
     "faction": "void-dancer-troupe",
     "name": "Proyectiles de Toxinas Aulladores",
-    "description": "Una vez por punto de inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (concentrado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Devastadora 1.",
+    "description": "Una vez por punto de inflexión, cuando un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola shuriken o cañón aullador (concentrado), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Devastadora 1.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 128,
     "faction": "void-dancer-troupe",
     "name": "Máscara de la Muerte",
-    "description": "Mantén una cuenta de Tragedia. Siempre que un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo que tenga una regla de GALARDÓN sea incapacitado, añade 1 a tu cuenta de Tragedia. Cuando tu cuenta de Tragedia llegue a 3, ganas 1PM y detienes esa cuenta.",
+    "description": "Mantén una cuenta de Tragedia. Siempre que un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo que tenga una regla de GALARDÓN sea incapacitado, añade 1 a tu cuenta de Tragedia. Cuando tu cuenta de Tragedia llegue a 3, ganas 1PM y detienes esa cuenta.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 129,
     "faction": "void-dancer-troupe",
     "name": "Máscara del Suplente",
-    "description": "Una vez por batalla, cuando actives a un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo, si el agente amigo que tiene el PAPEL CENTRAL ha sido incapacitado, puedes usar esta regla. Si lo haces, ese agente activado tiene el PAPEL CENTRAL para la batalla.",
+    "description": "Una vez por batalla, cuando actives a un agente COMPAÑÍA DE BAILARINES DEL VACÍO amigo, si el agente amigo que tiene el PAPEL CENTRAL ha sido incapacitado, puedes usar esta regla. Si lo haces, ese agente activado tiene el PAPEL CENTRAL para la batalla.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 130,
     "faction": "vespid-stingwings",
     "name": "Neuroestimulante",
-    "description": "En el paso de Preparación de cada Fase de Estrategia, al determinar cuántos puntos de Comunión ganar, puedes tirar 2D3 y elegir cúal de los dos usar.",
+    "description": "En el paso de Preparación de cada Fase de Estrategia, al determinar cuántos puntos de Comunión ganar, puedes tirar 2D3 y elegir cúal de los dos usar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 132,
     "faction": "vespid-stingwings",
     "name": "Estimulante de Convergencia",
-    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo puede realizar una acción <b>Recoger Marcador</b> o una acción de misión sin que tengas que gastar un punto de Comunión.",
+    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo puede realizar una acción <b>Recoger Marcador</b> o una acción de misión sin que tengas que gastar un punto de Comunión.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 131,
     "faction": "vespid-stingwings",
     "name": "Estimulante Acelerador",
-    "description": "Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo (salvo <b>DRON DE VIGILANCIA</b>) realiza una acción de <b>Cargar</b> o <b>Correr</b>, puede moverse 1\" adicional. Si utiliza <b>VOLAR</b> para esta acción, puedes redesplegarlo a 1\" más de distancia.",
+    "description": "Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo (salvo <b>DRON DE VIGILANCIA</b>) realiza una acción de <b>Cargar</b> o <b>Correr</b>, puede moverse 1\" adicional. Si utiliza <b>VOLAR</b> para esta acción, puedes redesplegarlo a 1\" más de distancia.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 133,
     "faction": "vespid-stingwings",
     "name": "Estimulante de Agresión",
-    "description": "Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo (salvo <b>DRON DE VIGILANCIA</b>) combata, sus armas de combate tienen la regla de arma Incesante.",
+    "description": "Siempre que un agente <span class=\"faction\">AGUIJÓN ALADO VÉSPID</span> amigo (salvo <b>DRON DE VIGILANCIA</b>) combata, sus armas de combate tienen la regla de arma Incesante.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 134,
     "faction": "raveners",
     "name": "Camuflaje de Cromatoesporas",
-    "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">MÁNTIFEX</span> amigo, si puedes guardar cualquier salvación por cobertura, puedes guardar una salvación por cobertura adicional. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.",
+    "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">MÁNTIFEX</span> amigo, si puedes guardar cualquier salvación por cobertura, puedes guardar una salvación por cobertura adicional. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 136,
     "faction": "raveners",
     "name": "Sangre Ácida",
-    "description": "Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo esté combatiendo o contraatacando, siempre que un dado de ataque le inflinja daño, tira 1D6: con un 5+, inflige 1 de daño al agente enemigo en esa secuencia.",
+    "description": "Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo esté combatiendo o contraatacando, siempre que un dado de ataque le inflinja daño, tira 1D6: con un 5+, inflige 1 de daño al agente enemigo en esa secuencia.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 135,
     "faction": "raveners",
     "name": "Carne Metamórfica",
-    "description": "Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo se active, recupera 1D3 heridas perdidas.",
+    "description": "Siempre que un agente <span class=\"faction\">MÁNTIFEX</span> amigo se active, recupera 1D3 heridas perdidas.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 137,
     "faction": "raveners",
     "name": "Sentidos Agudizados",
-    "description": "Una vez por batalla, despues de desempatar para decidir la iniciativa, si un agente <span class=\"faction\">MÁNTIFEX</span> amigo está bajo tierra y un agente enemigo se encuentra a 5\" o menos de tu <b>TÚNEL</b>, puedes repetir la tirada.",
+    "description": "Una vez por batalla, despues de desempatar para decidir la iniciativa, si un agente <span class=\"faction\">MÁNTIFEX</span> amigo está bajo tierra y un agente enemigo se encuentra a 5\" o menos de tu <b>TÚNEL</b>, puedes repetir la tirada.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 138,
     "faction": "pathfinders",
     "name": "Óptica de Análisis de Objetivos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo (excluyendo DRONE) esté realizando la acción de <b>Disparar</b> y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, si el objetivo tiene al menos una de tus fichas de Luz de Marcado, se trata como si tuviera una más. Si el arma a distancia tiene la regla de armas Explosión o Torrente, solo el objetivo principal se ve afectado.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo (excluyendo DRONE) esté realizando la acción de <b>Disparar</b> y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, si el objetivo tiene al menos una de tus fichas de Luz de Marcado, se trata como si tuviera una más. Si el arma a distancia tiene la regla de armas Explosión o Torrente, solo el objetivo principal se ve afectado.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 139,
     "faction": "pathfinders",
     "name": "Luz de Marcado de Alta Intensidad",
-    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo (excluyendo MV7 MARKER DRONE) realice la acción de Luz de Marcado, puedes usar esta regla. Si lo haces, el agente enemigo que selecciones gana dos de tus fichas de Luz de Marcado (en lugar de una).",
+    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo (excluyendo MV7 MARKER DRONE) realice la acción de Luz de Marcado, puedes usar esta regla. Si lo haces, el agente enemigo que selecciones gana dos de tus fichas de Luz de Marcado (en lugar de una).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 140,
     "faction": "pathfinders",
     "name": "Enlace de Sondeo Orbital",
-    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo realice la acción de Luz de Marcado, puedes usar esta regla. Si lo haces, puedes seleccionar un agente enemigo en la zona de aniquilación para que gane una de tus fichas de Luz de Marcado en su lugar (no necesita ser visible). Esto no es acumulativo con las reglas Luz de Marcado de Alta Intensidad o Analizar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo realice la acción de Luz de Marcado, puedes usar esta regla. Si lo haces, puedes seleccionar un agente enemigo en la zona de aniquilación para que gane una de tus fichas de Luz de Marcado en su lugar (no necesita ser visible). Esto no es acumulativo con las reglas Luz de Marcado de Alta Intensidad o Analizar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 141,
     "faction": "pathfinders",
     "name": "Granada de Fotones",
-    "description": "Una vez por Punto de Inflexión, un agente PATHFINDER amigo que tenga la acción de Luz de Marcado en su tarjeta de datos (excluyendo DRONE) puede realizar la siguiente acción única:",
+    "description": "Una vez por Punto de Inflexión, un agente PATHFINDER amigo que tenga la acción de Luz de Marcado en su tarjeta de datos (excluyendo DRONE) puede realizar la siguiente acción única:", 
+    "weapon": [],
     "action": [
       {
         "action_name": "Granada de Fotones",
@@ -974,31 +1152,39 @@
     "faction": "mandrakes",
     "name": "Dardos de Hueso",
     "description": "Una vez por Punto de Inflexión, un agente MANDRAKE amigo puede usar la siguiente arma a distancia:",
-    "ATK": "4",
-    "HIT": "3+",
-    "DMG": "2/4",
-    "special_rules": "Alcance 6\", Desgarradora, Silenciosa",
+    "weapon": [
+      {
+        "w_name": "Dardos de Hueso",
+        "ATK": "4",
+        "HIT": "3+",
+        "DMG": "2/4",
+        "rules": "Alcance 6\", Desgarradora, Silenciosa"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 143,
     "faction": "mandrakes",
     "name": "Glifo de Sombra",
-    "description": "Una vez por Punto de Inflexión, cuando un agente MANDRAKE amigo sea activado EN LAS SOMBRAS, puedes usar esta regla. Si lo haces, hasta el inicio de su siguiente activación, mientras ese agente tenga una orden de Ocultarse y esté en cobertura, no puede ser seleccionado como un Blanco Válido, teniendo prioridad sobre todas las demás reglas (P. ej. Búsqueda, terreno Elevado) excepto estar a 2\" o menos.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente MANDRAKE amigo sea activado EN LAS SOMBRAS, puedes usar esta regla. Si lo haces, hasta el inicio de su siguiente activación, mientras ese agente tenga una orden de Ocultarse y esté en cobertura, no puede ser seleccionado como un Blanco Válido, teniendo prioridad sobre todas las demás reglas (P. ej. Búsqueda, terreno Elevado) excepto estar a 2\" o menos.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 144,
     "faction": "mandrakes",
     "name": "Gema del Alma",
-    "description": "Una vez por Punto de Inflexión, cuando un agente MANDRAKE amigo esté realizando la acción de <b>Disparar</b> y selecciones un fuego brujo, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Explosión 1\".",
+    "description": "Una vez por Punto de Inflexión, cuando un agente MANDRAKE amigo esté realizando la acción de <b>Disparar</b> y selecciones un fuego brujo, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Explosión 1\".", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 145,
     "faction": "mandrakes",
     "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente MANDRAKE amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación/reacción (no se gastan PA en ella).",
+    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente MANDRAKE amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación/reacción (no se gastan PA en ella).", 
+    "weapon": [],
     "action": []
   },
   {
@@ -1006,9 +1192,15 @@
     "faction": "kommandos",
     "name": "Rebanadora",
     "description": "Los agentes <span class=\"faction\">ORKOMANDO</span> amigos (salvo <b>GARRAPATO BOMBA</b> o <b>GROT</b>) tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la versión que sea mejor.",
-    "ATK": "3",
-    "HIT": "3+",
-    "DMG": "4/5",
+    "weapon": [
+      {
+        "w_name": "Rebanadora",
+        "ATK": "3",
+        "HIT": "3+",
+        "DMG": "4/5",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
@@ -1016,10 +1208,15 @@
     "faction": "kommandos",
     "name": "Dinamita",
     "description": "Una vez por batalla, un agente <span class=\"faction\">ORKOMANDO</span> amigo (que no sea <b>GARRAPATO BOMBA</b> o <b>GROT</b>) puede usar la siguiente arma a distancia.",
-    "ATK": "5",
-    "HIT": "4+",
-    "DMG": "4/5",
-    "special_rules": "Alcance 4\", Explosión 1\", Pesada (Solo Reposicionarse), Saturación",
+    "weapon": [
+      {
+        "w_name": "Dinamita",
+        "ATK": "5",
+        "HIT": "4+",
+        "DMG": "4/5",
+        "rules": "Alcance 4\", Explosión 1\", Pesada (Solo Reposicionarse), Saturación"
+      }
+    ],
     "action": []
   },
   {
@@ -1027,45 +1224,55 @@
     "faction": "kommandos",
     "name": "Arpón",
     "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">ORKOMANDO</span> amigo (salvo <b>GARRAPATO BOMBA</b> o <b>GROT</b>) puede usar la siguiente arma a distancia.",
-    "ATK": "4",
-    "HIT": "4+",
-    "DMG": "4/5",
-    "special_rules": "Alcance 8\", Aturdidora, Letal 5+",
+    "weapon": [
+      {
+        "w_name": "Arpón",
+        "ATK": "4",
+        "HIT": "4+",
+        "DMG": "4/5",
+        "rules": "Alcance 8\", Aturdidora, Letal 5+"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 149,
     "faction": "kommandos",
     "name": "Culata Plegable",
-    "description": "Elimina la regla de arma Alcance de las siguientes armas a distancia que tengan los agentes <span class=\"faction\">ORKOMANDO</span> amigos: <ul><li>Piztola kalambrazo</li></ul> <ul><li>Piztola</li></ul>",
+    "description": "Elimina la regla de arma Alcance de las siguientes armas a distancia que tengan los agentes <span class=\"faction\">ORKOMANDO</span> amigos: <ul><li>Piztola kalambrazo</li></ul> <ul><li>Piztola</li></ul>", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 150,
     "faction": "hierotek",
     "name": "Conductos Magnificadores",
-    "description": "Una vez por punto de inflexión, cuando un agente <b>APRENTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> o <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo realice una acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo <b>PLASMACITA</b>) que tenga una orden de trabarse y sea visible para ese agente amigo. Hasta el final de esa acción, puedes tratar a ese otro agente amigo como el agente activo para la regla de armas Magnificar.",
+    "description": "Una vez por punto de inflexión, cuando un agente <b>APRENTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> o <b>CRIPTECNÓLOGO</b> <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo realice una acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, elige otro agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo (salvo <b>PLASMACITA</b>) que tenga una orden de trabarse y sea visible para ese agente amigo. Hasta el final de esa acción, puedes tratar a ese otro agente amigo como el agente activo para la regla de armas Magnificar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 151,
     "faction": "hierotek",
     "name": "Cubo Teseráctico",
-    "description": "En el paso de Preparación de cada fase de estrategia, cuando ganes PM, si tienes un agente <b>CRIPTECNÓLOGO</b> amigo que no esté incapacitado, se encuentre fuera de la zona de control de todo agente enemigo y no haya sido <b>REANIMADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, tira 1D6: con un 1, no podrás volver a usar esta regla durante el resto de la batalla; con un 4+, ganas 1PM. En cuanto hayas ganado 2PM con esta regla, ya no podrás usarla durante el resto de la batalla.",
+    "description": "En el paso de Preparación de cada fase de estrategia, cuando ganes PM, si tienes un agente <b>CRIPTECNÓLOGO</b> amigo que no esté incapacitado, se encuentre fuera de la zona de control de todo agente enemigo y no haya sido <b>REANIMADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, tira 1D6: con un 1, no podrás volver a usar esta regla durante el resto de la batalla; con un 4+, ganas 1PM. En cuanto hayas ganado 2PM con esta regla, ya no podrás usarla durante el resto de la batalla.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 152,
     "faction": "hierotek",
     "name": "Tejido Tesla",
-    "description": "Una vez por punto de inflexión, cuando un agente enemigo termine la acción de <b>Cargar</b> con algún agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo en su zona de control, puedes usar esta regla. Si lo haces, inflige 1D3+1 daños a ese agente enemigo.",
+    "description": "Una vez por punto de inflexión, cuando un agente enemigo termine la acción de <b>Cargar</b> con algún agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo en su zona de control, puedes usar esta regla. Si lo haces, inflige 1D3+1 daños a ese agente enemigo.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 153,
     "faction": "hierotek",
     "name": "Cambiafases",
-    "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <b>CRIPTECNÓLOGO</b> amigo, al inicio del paso de Tirar dados de defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si procede) hasta el final de esa secuencia. Ten en cuenta que, en tal caso, Penetración 1 pasaría a ignorarse.",
+    "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <b>CRIPTECNÓLOGO</b> amigo, al inicio del paso de Tirar dados de defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si procede) hasta el final de esa secuencia. Ten en cuenta que, en tal caso, Penetración 1 pasaría a ignorarse.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -1073,31 +1280,39 @@
     "faction": "yaegirs",
     "name": "Cuchillo de Plasma",
     "description": "Los agentes HERNKYN YAEGIR amigos tienen la siguiente arma de combate: Cuchillo de Plasma. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión, y esa arma tiene la regla de armas Equilibrada para la batalla.",
-    "ATK": "3",
-    "HIT": "4+",
-    "DMG": "3/5",
-    "special_rules": "Letal 5+",
+    "weapon": [
+      {
+        "w_name": "Cuchillo de Plasma",
+        "ATK": "3",
+        "HIT": "4+",
+        "DMG": "3/5",
+        "rules": "Letal 5+"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 155,
     "faction": "yaegirs",
     "name": "Cartuchos Bólter Estabilizados",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HERNKYN YAEGIR amigo esté realizando la acción de <b>Disparar</b> con una escopeta bólter (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora el atributo de Impacto de esa arma en 1 y añade 1 a ambos atributos de Daño.",
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HERNKYN YAEGIR amigo esté realizando la acción de <b>Disparar</b> con una escopeta bólter (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora el atributo de Impacto de esa arma en 1 y añade 1 a ambos atributos de Daño.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 156,
     "faction": "yaegirs",
     "name": "Cartuchos Bólter Tormenta de Fuego",
-    "description": "Una vez por Punto de Inflexión, cuando un agente HERNKYN YAEGIR amigo esté realizando la acción de <b>Disparar</b> con una escopeta bólter (corto alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Explosión 1\".",
+    "description": "Una vez por Punto de Inflexión, cuando un agente HERNKYN YAEGIR amigo esté realizando la acción de <b>Disparar</b> con una escopeta bólter (corto alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Explosión 1\".", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 157,
     "faction": "yaegirs",
     "name": "Subtraje de KV-Ceramida",
-    "description": "Siempre que un agente esté disparando a un agente HERNKYN YAEGIR amigo, si el arma a distancia en esa secuencia tiene la regla de armas Explosión o Torrente, puedes repetir uno de tus dados de defensa. Además, los agentes HERNKYN YAEGIR amigos no se ven afectados por la regla de armas Devastadora x\" (es decir, Devastadora con una distancia) a menos que sean el objetivo durante esa secuencia.",
+    "description": "Siempre que un agente esté disparando a un agente HERNKYN YAEGIR amigo, si el arma a distancia en esa secuencia tiene la regla de armas Explosión o Torrente, puedes repetir uno de tus dados de defensa. Además, los agentes HERNKYN YAEGIR amigos no se ven afectados por la regla de armas Devastadora x\" (es decir, Devastadora con una distancia) a menos que sean el objetivo durante esa secuencia.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -1105,143 +1320,167 @@
     "faction": "hearthkyn-salvager",
     "name": "Cuchillo de Plasma",
     "description": "Los agentes HEARTHKYN SALVAGER amigos tienen la siguiente arma de combate. Ten en cuenta que el agente FIELD MEDIC ya tiene esta arma pero con mejores atributos; en ese caso, usa la mejor versión:",
-    "ATK": "3",
-    "HIT": "4+",
-    "DMG": "3/5",
-    "special_rules": "Letal 5+",
+    "weapon": [
+      {
+        "w_name": "Cuchillo de Plasma",
+        "ATK": "3",
+        "HIT": "4+",
+        "DMG": "3/5",
+        "rules": "Letal 5+"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 159,
     "faction": "hearthkyn-salvager",
     "name": "Herramienta de Excavación",
-    "description": "Los agentes HEARTHKYN SALVAGER amigos pueden realizar la acción de Recoger Marcador por 1 PA menos, y no tienen que controlar el marcador para hacerlo (teniendo prioridad sobre las condiciones de esa acción – solo necesitan disputar el marcador).",
+    "description": "Los agentes HEARTHKYN SALVAGER amigos pueden realizar la acción de Recoger Marcador por 1 PA menos, y no tienen que controlar el marcador para hacerlo (teniendo prioridad sobre las condiciones de esa acción – solo necesitan disputar el marcador).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 160,
     "faction": "hearthkyn-salvager",
     "name": "Equipos de Escalada",
-    "description": "Siempre que un agente HEARTHKYN SALVAGER amigo esté escalando, trata la distancia vertical como 1\" menos (hasta un mínimo de 2\"). Ten en cuenta que esto no tiene efecto al usar terreno de equipamiento de escalera, que trata la distancia vertical como 1\" (pero tendría efecto si el agente continuara escalando otro elemento de terreno).",
+    "description": "Siempre que un agente HEARTHKYN SALVAGER amigo esté escalando, trata la distancia vertical como 1\" menos (hasta un mínimo de 2\"). Ten en cuenta que esto no tiene efecto al usar terreno de equipamiento de escalera, que trata la distancia vertical como 1\" (pero tendría efecto si el agente continuara escalando otro elemento de terreno).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 161,
     "faction": "hearthkyn-salvager",
     "name": "Escritura de Reclamación",
-    "description": "Una vez por batalla, si los agentes HEARTHKYN SALVAGER amigos disputan dos o más marcadores de objetivo, después de tirar para decidir la iniciativa, puedes usar esta regla. Si lo haces puedes repetir tu dado.",
+    "description": "Una vez por batalla, si los agentes HEARTHKYN SALVAGER amigos disputan dos o más marcadores de objetivo, después de tirar para decidir la iniciativa, puedes usar esta regla. Si lo haces puedes repetir tu dado.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 162,
     "faction": "kabalite",
     "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente HAND OF THE ARCHON amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).",
+    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente HAND OF THE ARCHON amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 163,
     "faction": "kabalite",
     "name": "Hoja Perversa",
-    "description": "Añade 1 al atributo de Atq del abanico de hojas de los agentes HAND OF THE ARCHON amigos.",
+    "description": "Añade 1 al atributo de Atq del abanico de hojas de los agentes HAND OF THE ARCHON amigos.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 164,
     "faction": "kabalite",
     "name": "Recubrimiento de Toxinas",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté combatiendo o contraataque y estés seleccionando un arma de combate, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia, el arma de combate de ese agente tiene la regla de armas Letal 5+.",
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté combatiendo o contraataque y estés seleccionando un arma de combate, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia, el arma de combate de ese agente tiene la regla de armas Letal 5+.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 165,
     "faction": "kabalite",
     "name": "Veneno Refinado",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté realizando la acción de <b>Disparar</b> y selecciones una carabina cristalina, cañón cristalino, pistola cristalina, rifle cristalino o pistola aguijón, puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 1 al atributo de Daño Normal de esa arma.",
+    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté realizando la acción de <b>Disparar</b> y selecciones una carabina cristalina, cañón cristalino, pistola cristalina, rifle cristalino o pistola aguijón, puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 1 al atributo de Daño Normal de esa arma.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 166,
     "faction": "farstalker-kinband",
     "name": "Bala Perforante",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo realice una acción de <b>Disparar</b> y elijas un rifle Kroot, un Trabuco Kroot o el perfil concentrado de unas pistolas Kroot dobles, puedes usar esta regla. Si lo haces, hasta el final de esa acción dicha arma tiene la regla de armas Penetración 1. <p>No puedes usar la Bala Perforante y la Bala de Tóxinas durante la misma acción.</p>",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo realice una acción de <b>Disparar</b> y elijas un rifle Kroot, un Trabuco Kroot o el perfil concentrado de unas pistolas Kroot dobles, puedes usar esta regla. Si lo haces, hasta el final de esa acción dicha arma tiene la regla de armas Penetración 1. <p>No puedes usar la Bala Perforante y la Bala de Tóxinas durante la misma acción.</p>", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 167,
     "faction": "farstalker-kinband",
     "name": "Balas de Tóxinas",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo realice una acción de <b>Disparar</b> y elijas un rifle Kroot, un Trabuco Kroot o el perfil concentrado de unas pistolas Kroot dobles, puedes usar esta regla. Si lo haces, hasta el final de esa acción dicha arma tiene las reglas de arma Letal 5+ y Aturdidora, pero resta 1 a sus atributos de Daño. <p>No puedes usar la Bala Perforante y la Bala de Toxinas durante la misma acción.</p>",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo realice una acción de <b>Disparar</b> y elijas un rifle Kroot, un Trabuco Kroot o el perfil concentrado de unas pistolas Kroot dobles, puedes usar esta regla. Si lo haces, hasta el final de esa acción dicha arma tiene las reglas de arma Letal 5+ y Aturdidora, pero resta 1 a sus atributos de Daño. <p>No puedes usar la Bala Perforante y la Bala de Toxinas durante la misma acción.</p>", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 168,
     "faction": "farstalker-kinband",
     "name": "Carne",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo (salvo <b>MASTÍN DE GUERRA</b>) sea activado, si no se encuentra en la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta 1D3+1 heridas perdidas.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo (salvo <b>MASTÍN DE GUERRA</b>) sea activado, si no se encuentra en la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, ese agente amigo recupera hasta 1D3+1 heridas perdidas.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 169,
     "faction": "farstalker-kinband",
     "name": "Trofeo",
-    "description": "Una vez por batalla, durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo (salvo <b>MASTÍN DE GUERRA</b>), antes o después de que realice una acción, si no se encuentra en la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, suma 1 al atributo de LPA de ese agente amigo hasta el final de su activación.",
+    "description": "Una vez por batalla, durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo (salvo <b>MASTÍN DE GUERRA</b>), antes o después de que realice una acción, si no se encuentra en la zona de control de agentes enemigos, puedes usar esta regla. Si lo haces, suma 1 al atributo de LPA de ese agente amigo hasta el final de su activación.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 170,
     "faction": "corsair-voidscarred",
     "name": "Manto Diuturno",
-    "description": "Siempre que un agente esté disparando a un agente CORSAIR VOIDSCARRED amigo, si el arma a distancia en esa secuencia tiene la regla de armas Explosión o Torrente, puedes repetir uno de tus dados de defensa. Además, los agentes CORSAIR VOIDSCARRED amigos no se ven afectados por la regla de armas Devastadora X\" (es decir, Devastadora con una distancia) a menos que sean el objetivo durante esa secuencia.",
+    "description": "Siempre que un agente esté disparando a un agente CORSAIR VOIDSCARRED amigo, si el arma a distancia en esa secuencia tiene la regla de armas Explosión o Torrente, puedes repetir uno de tus dados de defensa. Además, los agentes CORSAIR VOIDSCARRED amigos no se ven afectados por la regla de armas Devastadora X\" (es decir, Devastadora con una distancia) a menos que sean el objetivo durante esa secuencia.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 171,
     "faction": "corsair-voidscarred",
     "name": "Runas de Guía",
-    "description": "Una vez por Punto de Inflexión, cuando un agente VOIDSCARRED WAY SEEKER o VOIDSCARRED SOUL WEAVER amigo esté realizando una acción PSÍQUICA (excluyendo Pliegue Disforme), puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 3\" a su requisito de distancia. Ten en cuenta que esto no tiene efecto en armas PSÍQUICAS (P. ej., el requisito de distancia de Devastadora de GOLPE DE RELÁMPAGO).",
+    "description": "Una vez por Punto de Inflexión, cuando un agente VOIDSCARRED WAY SEEKER o VOIDSCARRED SOUL WEAVER amigo esté realizando una acción PSÍQUICA (excluyendo Pliegue Disforme), puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 3\" a su requisito de distancia. Ten en cuenta que esto no tiene efecto en armas PSÍQUICAS (P. ej., el requisito de distancia de Devastadora de GOLPE DE RELÁMPAGO).", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 172,
     "faction": "corsair-voidscarred",
     "name": "Campo de Niebla",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CORSAIR VOIDSCARRED amigo a más de 3\" de distancia, durante el paso de Tirar Dados de Defensa, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Esto puede causar que Penetración 1 sea ignorada.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CORSAIR VOIDSCARRED amigo a más de 3\" de distancia, durante el paso de Tirar Dados de Defensa, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Esto puede causar que Penetración 1 sea ignorada.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 173,
     "faction": "corsair-voidscarred",
     "name": "Cartas Estelares",
-    "description": "GAMBITO ESTRATÉGICO: Lanza un D3: Si el resultado es mayor que el número del Punto de Inflexión actual, ganas 1PM y no puedes usar este GAMBITO ESTRATÉGICO por el resto de la batalla.",
+    "description": "GAMBITO ESTRATÉGICO: Lanza un D3: Si el resultado es mayor que el número del Punto de Inflexión actual, ganas 1PM y no puedes usar este GAMBITO ESTRATÉGICO por el resto de la batalla.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 174,
     "faction": "canoptek",
     "name": "MANIPULADOR DE MATRIZ",
-    "description": "Una vez por batalla, durante la activación o reacción de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, puedes usar esta regla. Si lo haces, hasta el final de esa activación/reacción, un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se trata como si fuera tu cuarto marcador de <b>NODO DE OBELISCOS</b>.",
+    "description": "Una vez por batalla, durante la activación o reacción de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, puedes usar esta regla. Si lo haces, hasta el final de esa activación/reacción, un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se trata como si fuera tu cuarto marcador de <b>NODO DE OBELISCOS</b>.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 175,
     "faction": "canoptek",
     "name": "NODOS OBELISCO DESPIERTOS",
-    "description": "Tras revelar esta opción de equipo, tira 1D3. Durante la batalla, por 0 PM puedes usar el ardid de tiroteo Animar Nodos de obeliscos tantas veces como el resultado de la tirada.",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Durante la batalla, por 0 PM puedes usar el ardid de tiroteo Animar Nodos de obeliscos tantas veces como el resultado de la tirada.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 176,
     "faction": "canoptek",
     "name": "ATAÚDES DE NANOESCARABAJOS",
-    "description": "Siempre que un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se active, recupera 1D3 heridas perdidas.",
+    "description": "Siempre que un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se active, recupera 1D3 heridas perdidas.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 177,
     "faction": "canoptek",
     "name": "CAMBIAFASES",
-    "description": "Una vez por Punto de Inflexión, cuando un agente dispare contra un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia empeora en 1 la x de la regla de armas Penetración (si la hay). Eso significa que Penetración 1 se ignoraría.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente dispare contra un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia empeora en 1 la x de la regla de armas Penetración (si la hay). Eso significa que Penetración 1 se ignoraría.", 
+    "weapon": [],
     "action": []
   },
   {
@@ -1249,65 +1488,79 @@
     "faction": "brood-brothers",
     "name": "Cuchillo de Culto",
     "description": "Los agentes BROOD BROTHER BROODGUARD amigos tienen la siguiente arma de combate:",
-    "ATK": "3",
-    "HIT": "4+",
-    "DMG": "3/4",
+    "weapon": [
+      {
+        "w_name": "Cuchillo de Culto",
+        "ATK": "3",
+        "HIT": "4+",
+        "DMG": "3/4",
+        "rules": "-"
+      }
+    ],
     "action": []
   },
   {
     "id_equip": 179,
     "faction": "brood-brothers",
     "name": "Talismán de Culto",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente BROOD BROTHER amigo (excluyendo PATRIARCH), en el paso de Tirar Dados de Defensa, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente BROOD BROTHER amigo (excluyendo PATRIARCH), en el paso de Tirar Dados de Defensa, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 180,
     "faction": "brood-brothers",
     "name": "Disfraz Encubierto",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un <b>GAMBITO ESTRATÉGICO</b> en el primer Punto de Inflexión, un número de agentes BROOD BROTHER BROODGUARD amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.",
+    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un <b>GAMBITO ESTRATÉGICO</b> en el primer Punto de Inflexión, un número de agentes BROOD BROTHER BROODGUARD amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 181,
     "faction": "brood-brothers",
     "name": "Vigía",
-    "description": "<b>GAMBITO ESTRATÉGICO</b>: Selecciona un agente enemigo visible para un agente BROOD BROTHER amigo para que gane una de tus fichas de Fuego Cruzado.",
+    "description": "<b>GAMBITO ESTRATÉGICO</b>: Selecciona un agente enemigo visible para un agente BROOD BROTHER amigo para que gane una de tus fichas de Fuego Cruzado.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 182,
     "faction": "blades-of-khaine",
     "name": "Runa de Profecía",
-    "description": "Una vez por batalla, después de tirar para decidir la iniciativa, puedes añadir D3 a, o restar D3 de, tu resultado.",
+    "description": "Una vez por batalla, después de tirar para decidir la iniciativa, puedes añadir D3 a, o restar D3 de, tu resultado.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 183,
     "faction": "blades-of-khaine",
     "name": "Runa de Previsión",
-    "description": "Cuando se revela este equipamiento, lanza un D3. En la Fase de Estrategia del Punto de Inflexión igual al resultado, ganas 1 Punto de Mando (PM) adicional.",
+    "description": "Cuando se revela este equipamiento, lanza un D3. En la Fase de Estrategia del Punto de Inflexión igual al resultado, ganas 1 Punto de Mando (PM) adicional.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 184,
     "faction": "blades-of-khaine",
     "name": "Runa de Protección",
-    "description": "Una vez por batalla, cuando un dado de ataque inflige Daño Normal a un agente BLADES OF KHAINE amigo, puedes ignorar ese daño infligido.",
+    "description": "Una vez por batalla, cuando un dado de ataque inflige Daño Normal a un agente BLADES OF KHAINE amigo, puedes ignorar ese daño infligido.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 185,
     "faction": "blades-of-khaine",
     "name": "Talismán de Hueso Espectral",
-    "description": "Una vez por Punto de Inflexión, cuando un agente BLADES OF KHAINE amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.",
+    "description": "Una vez por Punto de Inflexión, cuando un agente BLADES OF KHAINE amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 186,
     "faction": "murderwing",
     "name": "FILOALETAS",
-    "description": "Los agentes <span class=\"faction\">ALA ASESINA</span> amigos pueden realizar la siguiente acción única:",
+    "description": "Los agentes <span class=\"faction\">ALA ASESINA</span> amigos pueden realizar la siguiente acción única:", 
+    "weapon": [],
     "action": [
       {
         "action_name": "REBANAR DESDE LO ALTO",
@@ -1321,7 +1574,8 @@
     "id_equip": 187,
     "faction": "murderwing",
     "name": "ARMADURA CON GARRAS",
-    "description": "Los agentes <span class=\"faction\">ALA ASESINA</span> amigos pueden realizar la siguiente acción única:",
+    "description": "Los agentes <span class=\"faction\">ALA ASESINA</span> amigos pueden realizar la siguiente acción única:", 
+    "weapon": [],
     "action": [
       {
         "action_name": "CARGAR CON GARRAS",
@@ -1335,14 +1589,16 @@
     "id_equip": 188,
     "faction": "murderwing",
     "name": "COMBUSTIBLE DISFORME",
-    "description": "Una vez por punto de inflexión, cuando un agente enemigo termine la acción de <b>Retroceder</b> durante su activación, si al menos un agente <span class=\"faction\">ALA ASESINA</span> amigo se encontraba en su zona de control al inicio de esa acción, puedes usar esta regla. Uno de esos agentes amigos puede realizar de inmediato una acción libre de <b>Reposicionarse</b> o <b>Cargar</b>, pero no puede usar más de 3\" de distancia de movimiento. Ten en cuenta que si el agente enemigo no realiza la acción de <b>Retroceder</b> durante su propia activación, esto no tiene efecto.",
+    "description": "Una vez por punto de inflexión, cuando un agente enemigo termine la acción de <b>Retroceder</b> durante su activación, si al menos un agente <span class=\"faction\">ALA ASESINA</span> amigo se encontraba en su zona de control al inicio de esa acción, puedes usar esta regla. Uno de esos agentes amigos puede realizar de inmediato una acción libre de <b>Reposicionarse</b> o <b>Cargar</b>, pero no puede usar más de 3\" de distancia de movimiento. Ten en cuenta que si el agente enemigo no realiza la acción de <b>Retroceder</b> durante su propia activación, esto no tiene efecto.", 
+    "weapon": [],
     "action": []
   },
   {
     "id_equip": 189,
     "faction": "murderwing",
     "name": "VOCOEMISORES",
-    "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">ALA ASESINA</span> amigo puede realizar la siguiente acción única:",
+    "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">ALA ASESINA</span> amigo puede realizar la siguiente acción única:", 
+    "weapon": [],
     "action": [
       {
       "action_name": "VOCOGRITO",
@@ -1356,28 +1612,162 @@
     "id_equip": 190,
     "faction": "celestian-insidiants",
     "name": "GRANADAS ANTIPSÍQUICOS",
-    "description": "Este equipo te permite elegir dos granadas especiales del equipo de granadas especiales (ver equipo universal) y deben ser todas granadas aturdidoras. Si también eliges ese equipo como equipo normal, no puedes elegir granadas aturdidoras (para tener más de dos). Siempre que un agente realice un chequeo de aturdimiento como resultado de la acción <b>Granada aturdidora</b> de una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga, si el resultado es 3+, también infliges a ese primer agente tantos daños como la mitad del resultado (redondea al alza). Si ese primer agente tiene la clave <b>PSÍQUICO</b>, le infliges en su lugar tantos daños como el resultado de la tirada.",
+    "description": "Este equipo te permite elegir dos granadas especiales del equipo de granadas especiales (ver equipo universal) y deben ser todas granadas aturdidoras. Si también eliges ese equipo como equipo normal, no puedes elegir granadas aturdidoras (para tener más de dos). Siempre que un agente realice un chequeo de aturdimiento como resultado de la acción <b>Granada aturdidora</b> de una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga, si el resultado es 3+, también infliges a ese primer agente tantos daños como la mitad del resultado (redondea al alza). Si ese primer agente tiene la clave <b>PSÍQUICO</b>, le infliges en su lugar tantos daños como el resultado de la tirada.", 
+    "weapon": [],
     "action":[]
   },
   {
     "id_equip": 191,
     "faction": "celestian-insidiants",
     "name": "VOCIFERA MORTIS",
-    "description": "Una vez por batalla, puedes usar esta regla cuando una agente <span class=\"faction\">INSIDIADORA CELESTE</span> <b>INSPIRADORA</b> amiga quede incapacitada. Si lo haces, de cara a la regla de facción Martirio la otra agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga que elijas puede ser una que no sea visible para esa agente ni esté a 6\" o menos de ella.",
+    "description": "Una vez por batalla, puedes usar esta regla cuando una agente <span class=\"faction\">INSIDIADORA CELESTE</span> <b>INSPIRADORA</b> amiga quede incapacitada. Si lo haces, de cara a la regla de facción Martirio la otra agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga que elijas puede ser una que no sea visible para esa agente ni esté a 6\" o menos de ella.", 
+    "weapon": [],
     "action":[]
   },
   {
     "id_equip": 192,
     "faction": "celestian-insidiants",
     "name": "RELIQUIAS SANTAS",
-    "description": "Puedes usar esta regla siempre que un dado de ataque vaya a infligir daño a una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga. Si lo haces, tira 1D6, o 2D6 si esa agente es <b>INSPIRADORA</b>: si sacas algún 6, ignora el daño infligido por ese dado de ataque. No puedes ignorar más de un dado de ataque por acción y dos dados de ataque por batalla con esta regla.",
+    "description": "Puedes usar esta regla siempre que un dado de ataque vaya a infligir daño a una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga. Si lo haces, tira 1D6, o 2D6 si esa agente es <b>INSPIRADORA</b>: si sacas algún 6, ignora el daño infligido por ese dado de ataque. No puedes ignorar más de un dado de ataque por acción y dos dados de ataque por batalla con esta regla.", 
+    "weapon": [],
     "action":[]
   },
   {
     "id_equip": 193,
     "faction": "celestian-insidiants",
     "name": "AUTOFLAGELANTE",
-    "description": "Puedes usar esta regla siempre que se active una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga. Si la usas, tira 1D6 e inflige a esa agente tantos daños como la mitad del resultado (redondea al alza); con 4+, además esa agente se vuelve <b>INSPIRADORA</b>. No puedes hacer <b>INSPIRADORA</b> con esta regla a más de una agente amiga en cada punto de inflexión.",
+    "description": "Puedes usar esta regla siempre que se active una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga. Si la usas, tira 1D6 e inflige a esa agente tantos daños como la mitad del resultado (redondea al alza); con 4+, además esa agente se vuelve <b>INSPIRADORA</b>. No puedes hacer <b>INSPIRADORA</b> con esta regla a más de una agente amiga en cada punto de inflexión.", 
+    "weapon": [],
     "action":[]
+  },
+  {
+    "id_equip": 194,
+    "faction": "universal",
+    "name": "1 DEPÓSITO DE MUNICIÓN",
+    "description": "Antes de la batalla, puedes desplegar uno de tus marcadores de Depósito de munición completamente dentro de tu territorio. Los agentes amigos pueden realizar la siguiente misión durante la batalla:", 
+    "weapon": [],
+    "action": [
+      {
+      "action_name": "RECARGA DE MUNICIÓN",
+      "action_cost": "0 PA",
+      "action_yes": ["Uno de tus marcadores de Depósito de munición controlado por el agente activo es usado este punto de inflexión.", "Hasta el inicio del siguiente punto de inflexión, cuando este agente dispare con un arma de su tarjeta de datos, puedes repetir uno de tus dados de ataque."],
+      "action_no": "Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, si ese marcador no es tuyo o si ese marcador ha sido usado durante este punto de inflexión."
+      }
+    ]
+  },
+  {
+    "id_equip": 195,
+    "faction": "universal",
+    "name": "1 ALAMBRE DE PÚAS",
+    "description": "<p>El alambre de púas es terreno Expuesto y Obstructor. Antes de la batalla, lo puedes desplegar completamente dentro de tu territorio en el suelo de la zona de aniquilación y a más de 2\" de todo otro elemento de equipo, puntos de acceso y terreno Accesible.</p> <p><b>Obstructor:</b> Cuando un agente vaya a cruzar por encima de este elemento de terreno estando a 1\" o menos del mismo, trata la distancia como 1\" adicional.</p>", 
+    "weapon": [],
+    "action": []
+  },
+  {
+    "id_equip": 196,
+    "faction": "universal",
+    "name": "1 APARATO DE COMUNICACIONES",
+    "description": "Antes de la batalla, puedes desplegar uno de tus marcadores de aparato de comunicaciones completamente dentro de tu territorio. Mientras un agente amigo controle este marcador, suma 3\" a los requisitos de distancia de sus reglas <b>APOYO</b> que se refieran a agentes amigos (p.ej., “elige a un agente amigo a 6\" o menos” sería “a 9\" o menos” en su lugar). Ten en cuenta que no puedes beneficiarte de los marcadores de aparato de comunicaciones de tu oponente.", 
+    "weapon": [],
+    "action": []
+  },
+  {
+    "id_equip": 197,
+    "faction": "universal",
+    "name": "1 MINAS",
+    "description": "Antes de la batalla, puedes desplegar hasta 1 de tus marcadores de Minas completamente dentro de tu territorio y a más de 2\" todo otro marcador, punto de acceso y terreno Accesible. La primera vez que ese marcador quede dentro de la zona de control de un agente, retira el marcador e inflige 1D3+3 puntos de daño al agente.", 
+    "weapon": [],
+    "action": []
+  },
+  {
+    "id_equip": 198,
+    "faction": "universal",
+    "name": "2 BARRICADAS LIGERAS",
+    "description": "Las barricadas ligeras son terreno Ligero, excepto los pies, que son Insignificantes y Expuestos. Antes de la batalla, puedes desplegar cualquier número de ellas completamente dentro de tu territorio, en el suelo de la zona de aniquilación y a más de 2\" de todo otro elemento de terreno de equipo, punto de acceso y terreno Accesible.", 
+    "weapon": [],
+    "action": []
+  },
+  {
+    "id_equip": 199,
+    "faction": "universal",
+    "name": "1 BARRICADA PESADA",
+    "description": "Una barricada pesada es terreno Pesado. Antes de la batalla, puedes desplegarla completamente a 4\" o menos de tu zona de descenso, en el suelo de la zona de aniquilación y a más de 2\" de todo otro elemento de terreno de equipo, punto de acceso y terreno Accesible.", 
+    "weapon": [],
+    "action": []
+  },
+  {
+    "id_equip": 200,
+    "faction": "universal",
+    "name": "2 ESCALERAS",
+    "description": "<p>Las escaleras son terreno Insignificante y Expuesto. Antes de la batalla, puedes desplegar cualquier número de ellas tal como se indica a continuación: </p> <p><ul><li>Completamente dentro de tu territorio.</li></ul> <ul><li> En vertical contra terreno que tenga una altura de al menos 2\".</li></ul> <ul><li>A más de 2\" de otros elementos de terreno de equipo.</li></ul> <ul><li>A más de 1\" de puertas y puntos de acceso.</li></ul></p> <p>Una vez por acción, cuando un agente trepe el elemento de terreno contra el que se apoya una escalera, trata la distancia vertical como 1\" si la escalera está dentro de la zona de control del agente durante todo el movimiento de trepar.</p>", 
+    "weapon": [],
+    "action": []
+  },
+  {
+    "id_equip": 201,
+    "faction": "universal",
+    "name": "GRANADAS ESPECIALES",
+    "description": "Al elegir este equipo, selecciona dos granadas especiales (2 de humo, 2 aturdidoras, o 1 de humo y 1 aturdidora). Cada selección es una acción única para tus agentes, pero tu comando solo podrá realizar esa acción durante la batalla un número total de veces igual a tu selección.", 
+    "weapon": [],
+    "action": [
+      {
+      "action_name": "GRANADA ATURDIDORA",
+      "action_cost": "1 PA",
+      "action_yes": ["Elige un agente enemigo a 6\" o menos de este agente y visible para él. Dicho agente y cada otro agente a 1\" o menos de él hace un chequeo de aturdimiento. Para que un agente haga un chequeo de aturdimiento, tira un D6: si el resultado es 3+, resta 1 a su atributo LPA hasta el final de su siguiente activación."],
+      "action_no": "Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si has alcanzado el número total de veces que tu comando puede realizarla."
+      },
+      {
+      "action_name": "GRANADA DE HUMO",
+      "action_cost": "1 PA",
+      "action_yes": ["Coloca uno de tus marcadores de granada de humo a 6\" o menos de este agente. Debe ser visible para este agente, o estar situado en un terreno Aventajado o un elemento de terreno visible para este agente. El marcador genera un área de humo de 1\" horizontalmente y de una altura ilimitada verticalmente a partir de él (pero no por debajo de él)", "Mientras un agente se encuentre completamente dentro de un área de humo, se considera ofuscado para los agentes a más de 2\" de él, y viceversa. Además, cuando un agente dispare contra un agente enemigo que esté completamente dentro de un área de humo, las armas con la regla de arma Penetración 2 o Críticos de penetración 2 pasan a tener en su lugar la regla de arma Penetración 1 o Críticos de penetración 1 (respectivamente).", "En el paso de preparación de la siguiente fase de estrategia, tira 1D3. Retira ese marcador de granada de humo una vez que se haya completado un número de activaciones igual al resultado de ese D3, o al final del punto de inflexión (lo que ocurra antes)"],
+      "action_no": "Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si has alcanzado el número total de veces que tu comando puede realizarla."
+      }
+    ]
+  },
+  {
+    "id_equip": 202,
+    "faction": "universal",
+    "name": "GRANADAS EXPLOSIVAS",
+    "description": "<p>Las escaleras son terreno Insignificante y Expuesto. Antes de la batalla, puedes desplegar cualquier número de ellas tal como se indica a continuación: </p> <p><ul><li>Completamente dentro de tu territorio.</li></ul> <ul><li> En vertical contra terreno que tenga una altura de al menos 2\".</li></ul> <ul><li>A más de 2\" de otros elementos de terreno de equipo.</li></ul> <ul><li>A más de 1\" de puertas y puntos de acceso.</li></ul></p> <p>Una vez por acción, cuando un agente trepe el elemento de terreno contra el que se apoya una escalera, trata la distancia vertical como 1\" si la escalera está dentro de la zona de control del agente durante todo el movimiento de trepar.</p>", 
+    "weapon": [
+      {
+        "w_name": "Granada frag",
+        "ATK": "4",
+        "HIT": "4+",
+        "DMG": "2/4",
+        "rules": "Alcance 6\", Área 2\", Saturación"
+      },
+      {
+        "w_name": "Granada perforante",
+        "ATK": "4",
+        "HIT": "4+",
+        "DMG": "4/5",
+        "rules": "Alcance 6\", Penetración 1, Saturación"
+      }
+    ],
+    "action": []
+  },
+  {
+    "id_equip": 203,
+    "faction": "universal",
+    "name": "CARGA DE DEMOLICIÓN",
+    "description": "Una vez por batalla, cuando un agente amigo realiza una acción de <b>Brecha</b>, puedes usar esta regla. Si lo haces, ese agente puede realizar esa acción por 1 PA menos (hasta un mínimo de 1PA) como si tuviera las palabras “marcador de brecha” en su tarjeta de datos.", 
+    "weapon": [],
+    "action": []
+  },
+  {
+    "id_equip": 204,
+    "faction": "universal",
+    "name": "1 BARRICADA PORTÁTIL",
+    "description": "<p>Una barricada portátil es terreno Ligero, Protector y Portátil, excepto por las patas, que son Insignificantes y Expuestas. Antes de la batalla, puedes desplegarla completamente en tu territorio, en el suelo de la zona de aniquilación y a más de 2\" de todo otro elemento de terreno de equipo, punto de acceso y terreno Accesible.</p> <p><b>Protector:</b> Mientras un agente se encuentre a cubierto tras este elemento de terreno, mejora en 1 su atributo Salvación (hasta un máximo de 2+).</p> <p><b>Portátil:</b> Este elemento de terreno solo otorga cobertura mientras un agente se encuentre conectado a él y si el escudo está interpuesto (ignora sus pies). Los agentes conectados a su parte interior pueden realizar la siguiente acción única durante la batalla:</p>", 
+    "weapon": [],
+    "action": [
+      {
+      "action_name": "MOVERSE CON BARRICADA",
+      "action_cost": "1 PA",
+      "action_yes": ["Igual que la acción de Reposicionarse salvo que el agente activo no puede moverse más que su atributo Movimiento menos 2\" y no puede trepar, dejarse caer ni saltar, ni usar reglas de comando que lo retiren y lo desplieguen de nuevo (p.ej. Propulsor de salto de los <span class=\"faction\">SUCESORES RECUPERADORES</span> o Paso sombrío de las <span class=\"faction\">MANDRÁGORAS</span> ).", "Antes de que este agente se mueva, retira la barricada portátil a la que está conectado. Después de que se mueva, despliega la barricada portátil de modo que esté conectada de nuevo, pero la barricada portátil no puede desplegarse a 2\" o menos de otros elementos de terreno de equipo, puntos de acceso o terreno accesible. Si esto no es posible, la barricada portátil no se vuelve a desplegar."],
+      "action_no": "Esta acción se trata como una acción de Reposicionarse. Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni en la misma activación en la que ha realizado una acción de Retroceder o Carga."
+      }
+    ]
   }
 ]

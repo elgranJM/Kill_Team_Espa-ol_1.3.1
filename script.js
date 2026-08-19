@@ -133,6 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Inicializamos el selector con el filtro vacío (o el seleccionado por defecto)
             populateFactionSelector(factionTypeSelect.value);
             console.log('Datos cargados y listos.');
+
+            // ⚠️ AQUÍ ESTÁ LA CLAVE: Restaurar el estado justo después de cargar la base
+            restoreState();
+
         } catch (error) {
             console.error('Error fatal cargando datos:', error);
             factionSelect.innerHTML = '<option>Error al cargar archivos JSON. Revisa la consola.</option>';
@@ -142,9 +146,103 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Listener para el cambio de Tipo de Facción
         factionTypeSelect.addEventListener('change', (e) => {
+            localStorage.setItem('battlekit_factionType', e.target.value);
+
             populateFactionSelector(e.target.value);
             // Limpiamos los paneles al cambiar de tipo de filtro para evitar confusión
             clearPanes();
+        });
+
+        // 2. Guardar Facción Específica
+        factionSelect.addEventListener('change', (e) => {
+            localStorage.setItem('battlekit_faction', e.target.value);
+
+            // Limpiar buscador y Switch al cambiar de facción
+            if (document.getElementById('operative-search')) {
+                document.getElementById('operative-search').value = '';
+            }
+            if (document.getElementById('filter-selected-switch')) {
+                document.getElementById('filter-selected-switch').checked = false;
+            }
+        });
+
+        // 3. Guardar la Pestaña Activa
+        const tabElements = document.querySelectorAll('button[data-bs-toggle="tab"], button[data-bs-toggle="pill"]');
+        tabElements.forEach(tab => {
+            tab.addEventListener('shown.bs.tab', event => {
+                // Guarda el ID del contenedor al que apunta la pestaña (ej. #operatives-pane)
+                localStorage.setItem('battlekit_activeTab', event.target.getAttribute('data-bs-target'));
+            });
+        });
+
+        // --- MOTOR DE FILTRADO UNIFICADO DE OPERATIVOS ---
+        const operativeSearchInput = document.getElementById('operative-search');
+        const filterSelectedSwitch = document.getElementById('filter-selected-switch');
+
+        function applyOperativeFilters() {
+            if (!operativeSearchInput || !filterSelectedSwitch) return;
+
+            const searchTerm = operativeSearchInput.value.toLowerCase().trim();
+            const showOnlySelected = filterSelectedSwitch.checked;
+            const operativeCards = containers.operatives.querySelectorAll('.operative-card');
+
+            operativeCards.forEach(card => {
+                // Buscamos el nombre usando la clase específica que le pusimos al span
+                const opNameElement = card.querySelector('.op-title-name');
+                if (!opNameElement) return;
+
+                const opName = opNameElement.textContent.toLowerCase();
+                const matchesSearch = opName.includes(searchTerm);
+                // Si tiene la clase de borde azul, está seleccionado
+                const isSelected = card.classList.contains('border-primary');
+
+                // Lógica combinada: Coincide con texto Y (no está activo el switch O está seleccionado)
+                if (matchesSearch && (!showOnlySelected || isSelected)) {
+                    card.classList.remove('d-none');
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+        }
+
+        // Listeners para ejecutar el filtro
+        if (operativeSearchInput) operativeSearchInput.addEventListener('input', applyOperativeFilters);
+        if (filterSelectedSwitch) filterSelectedSwitch.addEventListener('change', applyOperativeFilters);
+
+        // --- DELEGACIÓN DE EVENTOS: Clic en botón "Agregar al equipo" ---
+        containers.operatives.addEventListener('click', (e) => {
+            const btn = e.target.closest('.toggle-roster-btn');
+            if (!btn) return; // Si el clic no fue en el botón, ignorar
+
+            const opName = btn.getAttribute('data-op');
+            const factionKey = btn.getAttribute('data-faction');
+            const storageKey = `battlekit_roster_${factionKey}`;
+            const card = btn.closest('.operative-card');
+
+            // Leemos el estado actual de la base de datos
+            let selectedOps = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+            if (selectedOps.includes(opName)) {
+                // DESELECCIONAR
+                selectedOps = selectedOps.filter(name => name !== opName);
+                btn.classList.replace('btn-primary', 'btn-outline-secondary');
+                btn.innerHTML = 'Agregar al equipo';
+                card.classList.replace('border-primary', 'border');
+                card.classList.remove('border-3');
+            } else {
+                // SELECCIONAR
+                selectedOps.push(opName);
+                btn.classList.replace('btn-outline-secondary', 'btn-primary');
+                btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Listo';
+                card.classList.replace('border', 'border-primary');
+                card.classList.add('border-3');
+            }
+
+            // Guardamos en memoria
+            localStorage.setItem(storageKey, JSON.stringify(selectedOps));
+
+            // Re-aplicamos filtros por si el jugador deselecciona mientras el Switch está activo (para que la carta desaparezca)
+            applyOperativeFilters();
         });
     }
 
@@ -317,6 +415,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // ⚠️ NUEVO: Leer los agentes seleccionados de esta facción desde localStorage
+        const storageKey = `battlekit_roster_${factionKey}`;
+        const selectedOps = JSON.parse(localStorage.getItem(storageKey)) || [];
+
         const html = operatives.map(op => {
             const imgPath = `./resources/roster_images/${factionKey}/${op.id}.png`;
 
@@ -341,7 +443,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // Generación de HTML para Acciones Únicas (Sistema de Yes/No)
             const actionsHtml = op.uniqueActions?.length ?
                 op.uniqueActions.map(a => {
-                    // Mapeo de la lista de descripciones positivas (icon-yes)
                     const descYes = Array.isArray(a.description)
                         ? a.description.map(line => `
                         <p>
@@ -350,14 +451,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         </p>`).join('')
                         : `<p>${a.description}</p>`;
 
-                    // Mapeo de la descripción negativa (icon-no)
                     const descNo = a.description_no ? `
                     <p>
                         <span class="icon icon-no"></span> 
                         ${a.description_no}
                     </p>` : '';
 
-                    // Estructura final de la tarjeta de Acción Única
                     return `
                 <div class="unique-actions-section">
                     <div class="header">
@@ -371,13 +470,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>`;
                 }).join('') : '';
 
+            // ⚠️ LÓGICA DE ESTADO VISUAL: Se calcula ANTES de imprimir el HTML
+            const isSelected = selectedOps.includes(op.name);
+            const borderClass = isSelected ? 'border-primary border-3' : 'border';
+            const btnClass = isSelected ? 'btn-primary' : 'btn-outline-secondary';
+            const btnText = isSelected ? '<i class="bi bi-check-circle-fill"></i> Listo' : 'Agregar al equipo';
+
+            // ⚠️ ÚNICO RETURN: Tarjeta HTML completa y fusionada
             return `
-        <div class="card-container col-12 col-lg-11 mt-4 mb-3 mx-auto shadow bg-white border rounded overflow-hidden">
+        <div class="card-container operative-card col-12 col-lg-11 mt-4 mb-3 mx-auto shadow bg-white ${borderClass} rounded overflow-hidden" data-op-name="${op.name}">
             <div class="row g-0 align-items-stretch">
-                <!-- LADO IZQUIERDO: Información y Stats -->
                 <div class="col-12 col-md-8 p-3 d-flex flex-column">
-                    <div class="mb-2 border-bottom pb-2">
-                        <span class="fs-4 fw-bold text-uppercase text-dark">${op.name}</span>
+                    
+                    <div class="mb-2 border-bottom pb-2 d-flex justify-content-between align-items-center">
+                        <span class="fs-4 fw-bold text-uppercase text-dark op-title-name">${op.name}</span>
+                        <button class="btn btn-sm ${btnClass} toggle-roster-btn" data-faction="${factionKey}" data-op="${op.name}">${btnText}</button>
                     </div>
 
                     <div class="d-flex justify-content-between mb-3 text-center bg-light p-2 rounded">
@@ -408,7 +515,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${actionsHtml}
                     </div>
                 
-                    <!-- PARTE INFERIOR: Peana y Keywords -->
                     <div class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center">
                         <div class="peana-box bg-dark text-white px-2 py-1 rounded small fw-bold" style="font-size: 0.75rem;">
                             ${op.peana || 'N/A'}
@@ -419,7 +525,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
 
-                <!-- LADO DERECHO: Imagen del Agente -->
                 <div class="col-12 col-md-4 bg-dark d-flex align-items-center justify-content-center p-2" style="min-height: 250px;">
                     <img src="${imgPath}" 
                          class="img-fluid" 
@@ -667,6 +772,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }).join('');
 
         containers.equipment.innerHTML = `<div class="row">${html}</div>`;
+    }
+
+    function restoreState() {
+        const savedFactionType = localStorage.getItem('battlekit_factionType');
+        const savedFaction = localStorage.getItem('battlekit_faction');
+        const savedTab = localStorage.getItem('battlekit_activeTab');
+
+        // A. Restaurar Tipo de Facción
+        if (savedFactionType) {
+            factionTypeSelect.value = savedFactionType;
+            // Forzamos el evento 'change' para que se dispare tu lógica que llena el segundo select
+            factionTypeSelect.dispatchEvent(new Event('change'));
+        }
+
+        // B. Restaurar Facción Específica
+        // Usamos setTimeout(..., 0) para permitir que el DOM se actualice tras el evento anterior
+        setTimeout(() => {
+            if (savedFaction && factionSelect.querySelector(`option[value="${savedFaction}"]`)) {
+                factionSelect.value = savedFaction;
+                factionSelect.dispatchEvent(new Event('change')); // Renderiza los datos de la facción
+            }
+        }, 0);
+
+        // C. Restaurar Pestaña Activa
+        if (savedTab) {
+            const tabTrigger = document.querySelector(`[data-bs-target="${savedTab}"]`);
+            if (tabTrigger) {
+                // Utilizamos la API de Bootstrap para activar la pestaña vía JS
+                const tab = new bootstrap.Tab(tabTrigger);
+                tab.show();
+            }
+        }
     }
 
     init();

@@ -195,23 +195,7 @@
                     if (Array.isArray(op.additional_rules)) {
                         additionalRulesHtml = `<div class="victory-points"><div class="sub-header">Reglas Adicionales</div><ul>${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul></div>`;
                     } else {
-                        if (key === 'Flanco' || op.name === 'Flanco') {
-                            additionalRulesHtml = `
-                                <div class="victory-points">
-                                    <div class="sub-header">Reglas Adicionales</div>
-                                    <div class="row g-3 tacop-columns text-start">
-                                        <div class="col-12 col-md-6"><p class="mb-0 text-muted small">${op.additional_rules}</p></div>
-                                        <div class="col-12 col-md-6 text-center">
-                                            <div class="bg-light border rounded p-2 text-muted small d-flex align-items-center justify-content-center" style="min-height: 100px;">
-                                                <img src="./resources/tacops_files/flank_tacop-1.png" alt="Diagrama de Flanco (Reconocimiento)" class="img-fluid">
-                                            </div>
-                                            <p class="small mt-2 mb-0">P. ej., el Jugador 1 controla este flanco ya que el LPA total de los agentes del jugador 1 totalmente dentro del territorio del jugador 2 es mayor que el de los agentes del jugador 2 totalmente dentro del territorio del jugador 1.</p>
-                                        </div>
-                                    </div>
-                                </div>`;
-                        } else {
-                            additionalRulesHtml = `<div class="victory-points"><div class="sub-header">Reglas Adicionales</div><p class="text-muted small mb-0">${op.additional_rules}</p></div>`;
-                        }
+                        additionalRulesHtml = `<div class="victory-points"><div class="sub-header">Reglas Adicionales</div><p class="text-muted small mb-0">${op.additional_rules}</p></div>`;
                     }
                 }
 

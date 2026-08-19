@@ -10,7 +10,7 @@
     "area": {
         "name": "Área x",
         "description": "El blanco elegido es el blanco primario. Tras disparar al blanco primario, dispara esta arma contra cada blanco secundario en el orden que quieras (tira cada secuencia por separado). Los blancos secundarios son todos aquellos agentes visibles para el blanco primario y a x\" o menos de él. Recuerda que todos son blancos válidos aunque tengan una orden de ocultarse. Si el blanco primario estaba a cubierto, los secundarios también lo están.",
-        "description_corta": "Dispara al blanco primario y luego, con secuencias separadas, a cada agente visible a x\". o menos de él (blancos secundarios). Los secundarios son blancos válidos aunque estén Ocultos y comparten el mismo estado de cobertura que el primario.",
+        "description_corta": "<b>Dispara</b> al blanco primario y luego, con secuencias separadas, a cada agente visible a x\". o menos de él (blancos secundarios). Los secundarios son blancos válidos aunque estén Ocultos y comparten el mismo estado de cobertura que el primario.",
         "ejemplo": "Típico de granadas o misiles. Disparas al primer objetivo y luego repites todo el ataque contra cualquiera que esté en el radio de la explosión (incluso aliados).",
         "type": "dano-area",
         "uso": "Secuencia de Disparo"
@@ -41,8 +41,8 @@
     },
     "castigadora": {
         "name": "Castigadora",
-        "description": "Si guardas algún <span class=\"faction\">éxitos críticos</span>, puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo.",
-        "description_corta": "Si guardas algún <span class=\"faction\">éxitos críticos</span>, puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo.",
+        "description": "Si guardas algún <span class=\"faction\">éxitos críticos</span>, puedes guardar uno de tus fallos como un <span class=\"faction\">éxito normal</span> en lugar de descartarlo.",
+        "description_corta": "Si guardas algún <span class=\"faction\">éxitos críticos</span>, puedes guardar uno de tus fallos como un <span class=\"faction\">éxito normal</span> en lugar de descartarlo.",
         "ejemplo": "Un 6 natural te permite \"rescatar\" un dado que había fallado, volviéndolo un impacto normal.",
         "type": "precision",
         "uso": "Al Guardar Éxitos"
@@ -58,7 +58,7 @@
     "choque": {
         "name": "Choque",
         "description": "La primera vez que golpees con un <span class=\"faction\">éxitos críticos</span> en cada secuencia, descarta también uno de los <span class=\"faction\">éxitos normales</span> sin resolver de tu oponente (o uno de sus <span class=\"faction\">éxitos críticos</span> si no hay normales).",
-        "description_corta": "La primera vez que golpees con un éxito crítico en tu secuencia, descarta 1 éxito normal del oponente (o 1 crítico, si no tiene normales).",
+        "description_corta": "La primera vez que golpees con un <span class=\"faction\">éxito crítico</span> en tu secuencia, descarta 1 <span class=\"faction\">éxito normal</span> del oponente (o 1 crítico, si no tiene normales).",
         "ejemplo": "Al asestar tu primer impacto crítico, le \"quitas\" un dado de la reserva al enemigo, dejándolo con menos opciones para golpearte o bloquearte.",
         "type": "antidefensa",
         "uso": "Combate: Al Golpear"
@@ -74,7 +74,7 @@
     "devastadora": {
         "name": "Devastadora x",
         "description": "Cada <span class=\"faction\">éxitos críticos</span> guardado inflige inmediatamente x daño al agente contra el que se usa esta arma, p.ej. Devastadora 3. Si la regla incluye una distancia (p.ej. 1\" Devastadora x), inflige x daño a ese agente y a cada otro agente visible para él y a esa distancia o menos de él. Los éxitos no se descartan después de causar ese daño y pueden resolverse más adelante en la secuencia.",
-        "description_corta": "Cada éxito crítico guardado inflige x de daño inmediato al blanco (y a agentes visibles a x\", si se indica distancia). El dado crítico no se descarta por este efecto y se resuelve normalmente en los bloqueos.",
+        "description_corta": "Cada <span class=\"faction\">éxito crítico</span> guardado inflige x de daño inmediato al blanco (y a agentes visibles a x\", si se indica distancia). El dado crítico no se descarta por este efecto y se resuelve normalmente en los bloqueos.",
         "ejemplo": "Causas daño ineludible (splash damage) en el momento en que sacas un 6, y además sigues teniendo ese 6 para golpear durante el paso de resolución normal.",
         "type": "dano-area",
         "uso": "Al Guardar Éxitos"
@@ -141,7 +141,7 @@
     "rafaga": {
         "name": "Ráfaga x",
         "description": "Elige normalmente un blanco válido como blanco primario. A continuación, elige tantos otros blancos válidos a x\" o menos del blanco primario como blancos secundarios, pero que no estén en la zona de control de agentes amigos p.ej. Ráfaga 2\". Dispara esta arma contra todos ellos en el orden que quieras (tira cada secuencia por separado).",
-        "description_corta": "Dispara al blanco primario. Luego, elige como blancos secundarios a otros agentes válidos a x\" o menos que <b>NO</b> estén en la Zona de Control de agentes amigos. Resuelve secuencias separadas contra cada uno.",
+        "description_corta": "<b>Dispara</b> al blanco primario. Luego, elige como blancos secundarios a otros agentes válidos a x\" o menos que <b>NO</b> estén en la Zona de Control de agentes amigos. Resuelve secuencias separadas contra cada uno.",
         "ejemplo": "Típico de lanzallamas. Barres una zona atacando al primario y a quienes estén cerca, pero a diferencia de Área, los secundarios también deben cumplir las reglas normales de visibilidad desde tu tirador.",
         "type": "dano-area",
         "uso": "Secuencia de Disparo"
@@ -164,8 +164,8 @@
     },
     "silenciosa": {
         "name": "Silenciosa",
-        "description": "Un agente puede realizar la acción de Disparar con esta arma aunque tenga una orden de ocultarse.",
-        "description_corta": "Un agente puede realizar la acción de Disparar con esta arma aunque tenga una orden de ocultarse.",
+        "description": "Un agente puede realizar la acción de <b>Disparar</b> con esta arma aunque tenga una orden de ocultarse.",
+        "description_corta": "Un agente puede realizar la acción de <b>Disparar</b> con esta arma aunque tenga una orden de ocultarse.",
         "ejemplo": "Ideal para operativos sigilosos que quieren disparar sin exponerse a represalias inmediatas.",
         "type": "reglas-especiales",
         "uso": "Permiso Especial"

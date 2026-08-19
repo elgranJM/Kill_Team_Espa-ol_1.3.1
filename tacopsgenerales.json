@@ -3,7 +3,7 @@
         "name": "Flanco",
         "archetype": "recon",
         "Reveal": "Como un <b>GAMBITO ESTRATÉGICO</b>",
-        "additional_rules": "Divide la killzone en dos flancos (izquierdo y derecho) trazando una línea imaginaria igual que la línea central, excepto que va desde el centro del borde de la killzone de cada jugador. Un agente disputa un flanco mientras esté totalmente dentro de él y dentro del territorio de su oponente. Los agentes amigos controlan un flanco si el atributo LPA total de los que lo disputan es mayor que el de los agentes enemigos.",
+        "additional_rules": "<div class=\"row g-3 tacop-columns\"> <div class=\"col-12 col-md-6\">Divide la killzone en dos flancos (izquierdo y derecho) trazando una línea imaginaria igual que la línea central, excepto que va desde el centro del borde de la killzone de cada jugador. Un agente disputa un flanco mientras esté totalmente dentro de él y dentro del territorio de su oponente. Los agentes amigos controlan un flanco si el atributo LPA total de los que lo disputan es mayor que el de los agentes enemigos. </div> <div class=\"col-12 col-md-6 text-center\"><img src=\"./resources/tacops_files/flank_tacop-1.png\" alt=\"Diagrama de Flanco (Reconocimiento)\" class=\"img-fluid\"> <p class=\"small mt-2 mb-0\"> P. ej., el Jugador 1 controla este flanco ya que el LPA total de los agentes del jugador 1 totalmente dentro del territorio del jugador 2 es mayor que el de los agentes del jugador 2 totalmente dentro del territorio del jugador 1.</p> </div> </div>",
         "victoy_points": ["Después de revelar esta op, al final de cada punto de inflexión después del primero, por cada flanco que los agentes amigos controlen, obtienes 1PV.", 
                         "Si los agentes amigos también controlaron ese flanco al final del punto de inflexión anterior (excluyendo el primero), obtienes 2PV en su lugar."],
         "limite_puntos": [
@@ -75,10 +75,10 @@
         ]
     },
     "Dominar": {
-        "name": "Dominar",
+        "name": "Dominación",
         "archetype": "seek-destroy",
         "Reveal": "<p><p>La primera vez que un agente enemigo es incapacitado por un agente amigo.</p></p>",
-        "additional_rules": "Cada vez que un agente amigo incapacita a un agente enemigo, ese agente amigo gana una de tus fichas de Dominación.",
+        "additional_rules": "Cada vez que un agente amigo incapacita a un agente enemigo, ese agente amigo gana una de tus fichas de Dominación, o dos de tus fichas de Dominación si ese agente enemigo tenía una estadística de Heridas de 12 o más.",
         "victoy_points": ["Al final del tercer y cuarto punto de inflexión, puedes retirar fichas de Dominación de los agentes aliados que no estén incapacitados. Por cada ficha que elimines, obtienes 1 PV.",
                         "No puedes obtener más de 3PV de esta op por punto de inflexión."],
         "limite_puntos": [

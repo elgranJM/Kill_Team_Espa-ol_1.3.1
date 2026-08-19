@@ -1,0 +1,973 @@
+{
+	"volkus": {
+		"name": "VOLKUS",
+        "description": "Volkus tiene 2 fortalezas, 2 ruinas grandes, 2 ruinas pequeñas, 2 escombros pesados y 3 escombros ligeros.",
+        "portada": "./resources/game_rules_files/maps/volkus-portada.png",
+		"rules": [
+			{
+				"r_name": "FORTALEZA COMPACTA",
+                "r_description": "Cuando un agente dispara con un arma con la regla de arma Área, Ráfaga y/o x\" Devastadora (es decir, Devastadora con un requisito de distancia), también tiene la regla de arma Letal 5+ si el blanco esta completamente dentro de un elemento de terreno fortaleza y en el suelo de la zona de aniquilación.",
+                "r_img": ""
+			},
+			{
+				"r_name": "FORTALEZA GUARNECIDA",
+                "r_description": "Cuando un agente completamente dentro de un elemento de terreno fortaleza contraataca contra un agente que no lo está, el defensor se resuelve primero (esto tiene preferencia sobre el orden normal de resolución de combates).",
+                "r_img": ""
+			}
+		],
+		"actions": [
+			{
+				"a_name": "COMBATIR EN PUERTA",
+				"cost":"1 PA",
+                "a_description": ["Combate con el agente activo.", "En el paso de elegir agente enemigo, debes elegir un agente enemigo a 2\" o menos de una puerta que el agente activo esté tocando, y al otro lado de la misma. Mientras dure la acción, esos agentes se considera que están dentro de la zona de control uno de otro."],
+                "a_no": "Esta acción se considera una acción de <b>Combatir</b>. Un agente no puede realizar esta acción estando en la zona de control de un agente enemigo, o si su peana no toca una puerta."
+			}
+		],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-1-min.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-2-min.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-3-min.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-4-min.png"
+			},
+            {
+				"m_id": 5,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-5-min.png"
+			},
+            {
+				"m_id": 6,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-6-min.png"
+			},
+            {
+				"m_id": 7,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-7-min.png"
+			},
+            {
+				"m_id": 8,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-8-min.png"
+			},
+            {
+				"m_id": 9,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-9-min.png"
+			},
+            {
+				"m_id": 10,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-10-min.png"
+			},
+            {
+				"m_id": 11,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-11-min.png"
+			},
+            {
+				"m_id": 12,
+				"m_img": "./resources/game_rules_files/maps/volkus/map-vk-12-min.png"
+			}
+		],
+        "terrain":[
+            {
+                "t_id": "A",
+				"type": ["Pesado", "Accesible", "Aventajado", "Techo", "Fortaleza"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/a.png"
+            },
+			{
+                "t_id": "B",
+				"type": ["Pesado", "Accesible", "Aventajado", "Techo", "Fortaleza"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/b.png"
+            },
+			{
+                "t_id": "C",
+				"type": ["Pesado", "Accesible", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/c.png"
+            },
+			{
+                "t_id": "D",
+				"type": ["Pesado", "Accesible", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/d.png"
+            },
+			{
+                "t_id": "E",
+				"type": ["Pesado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/e.png"
+            },
+			{
+                "t_id": "F",
+				"type": ["Pesado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/f.png"
+            },
+			{
+                "t_id": "G",
+				"type": ["Pesado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/g.png"
+            },
+			{
+                "t_id": "H",
+				"type": ["Pesado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/h.png"
+            },
+			{
+                "t_id": "I",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/i.png"
+            },
+			{
+                "t_id": "J",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/j.png"
+            },
+			{
+                "t_id": "K",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/k.png"
+            },
+			{
+                "t_id": "L",
+				"type": ["Insignificante", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/l.png"
+            },
+			{
+                "t_id": "M",
+				"type": ["Insignificante", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/m.png"
+            },
+			{
+                "t_id": "N",
+				"type": ["Insignificante", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/n.png"
+            }
+        ]
+	},
+	"gallowdark": {
+		"name": "HORCASOMBRIA",
+        "description": "Horcasombría se juega en un área de 607 mm por 704 mm que utiliza las reglas de Combate cerrado. Es una zona de aniquilación de interior, con Muros y Escotillas que crean habitaciones y corredores muy angostos. Carece de puntos aventajados; en lugar de eso, los agentes deben moverse con sumo cuidado, aprovechando las líneas de disparo más beneficiosas y lanzando sus avances en el momento preciso.",
+        "portada": "./resources/game_rules_files/maps/gallowdark-portada.png",
+		"rules": [
+			{
+				"r_name": "ENTORNO CONDENSADO",
+                "r_description": "Las armas con la regla de armas Área, Ráfaga y/o x\" Devastadora (es decir, Devastadora con un requisito de distancia) tienen también la regla de armas Letal 5+.",
+                "r_img": ""
+			},
+			{
+				"r_name": "En Guardia",
+                "r_description": "<p>Una vez durante la activación de cada agente enemigo, después de que ese agente enemigo realice una acción, puedes interrumpir esa activación y elegir un agente amigo en guardia para que realice una acción libre de <b>Disparar</b> o <b>Combatir</b> (incluyendo acciones equivalentes a estas, como por ejemplo <b>Combatir en escotillas</b> abajo).</p> <p>Ese agente amigo puede incluso realizar la acción de <b>Disparar</b> mientras se encuentre en la zona de control de un agente enemigo (esto tiene preferencia sobre las condiciones normales de la acción de <b>Disparar</b>). Esto se conoce como un disparo a bocajarro y tiene las siguientes reglas adicionales mientras tu agente la está llevando a cabo:</p> <p><ul><li>Toma como blanco al agente enemigo en la zona de control de tu agente (incluso aunque normalmente no sería un blanco válido).</li></ul> <ul><li>• Empeora en 1 el atributo Impactar de las armas de tu agente.</li></ul> <ul><li>Hasta el final de la activación interrumpida del agente enemigo, tu agente no puede contraatacar.</li></ul></p>",
+                "r_img": ""
+			},
+			{
+				"r_name": "MURO DE HORCASOMBRIA",
+                "r_description": "<p>Un elemento de terreno de Horcasombria es terreno pesado y de muro. Algunos muros incluyen una escotilla (explicados más adelante).</p> <p><b></b>Terreno de muro:</p> <p><ul><li> Los agentes no pueden moverse por encima o a través de terreno de muro (esto tiene preferencia sobre todas las demás reglas).</li></ul> <ul><li>La visibilidad no puede determinarse por encima o a través de terreno de muro.</li></ul> <ul><li>Aparte de hacia áreas de la zona de aniquilación (el centro de la zona de aniquilación, las zonas de descenso, etc), no se pueden medir distancias por encima o a través de terreno de muro; deben medirse rodeándolo por la ruta más corta posible.</li></ul> <ul><li>A efectos de la cobertura y el ofuscamiento, solo las esquinas y los finales de un terreno de muro pueden interponerse, a menos que el agente activo los haya superado (ver ejemplos a continuación.).</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/terrain/b1.png"
+			},
+			{
+				"r_name": "EJEMPLO DE MOVIMIENTO",
+                "r_description": "Normalmente el agente A debería estar a 3\" o menos del agente B, pero dado que las distancias no pueden medirse ni por encima ni a través de terreno de muro, deben medirse rodeando el muro de Mundo Necrópolis. Esto dejaría al agente A a más de 3\" del agente B.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/movimiento.png"
+			},
+			{
+				"r_name": "EJEMPLO DE COBERTURA",
+                "r_description": "El agente B no se encuentra tras cobertura, ya que no se interpone ninguna esquina o final de muro. Ten en cuenta que las partes menores del muro que sobresalen no conforman por sí mismas una esquina o un final, debe ser la estructura principal del muro la que genera la esquina o el final, tal como muestran los siguientes diagramas.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cobertura.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO",
+                "r_description": "Una esquina del muro está interpuesta, y por lo tanto el agente B está tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cobertura2.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO 2",
+                "r_description": "El agente A ha superado la esquina del muro, por lo que no está interpuesta y el agente B no está tras cobertura. Ten en cuenta que si el agente A estuviera completamente bajo la línea de puntos negros, el muro se consideraría interpuesto y el agente B estaría tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cobertura3.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO 3",
+                "r_description": "Un final del muro está interpuesto y por lo tanto el agente B está tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cobertura4.png"
+			},
+			{
+				"r_name": "EJEMPLO DE OFUSCADO",
+                "r_description": "Dado que la escotilla está abierta, un final del muro está interpuesto. Se encuentra a más de 1\" de ambos agentes, por lo que el agente B está ofuscado.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/ofuscado.png"
+			},
+			{
+				"r_name": "CERRADA",
+                "r_description": "<p>Una escotilla tiene dos estados: cerrada y abierta. Tiene dos partes, un punto de acceso y un portillo, y sus tipos de terreno dependen del estado de la escotilla. Los agentes pueden realizar la acción de misión <b>Operar portillo</b> para cambiar su estado. Las escotillas empiezan la batalla cerradas</p> <p>Mientras una escotilla está cerrada:</p> <p><ul><li>Su portillo debe estar en su punto de acceso.</li></ul> <ul><li>El punto de acceso y el portillo son terreno pesado y de muro.</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cerrado.png"
+			},
+			{
+				"r_name": "Abierto",
+                "r_description": "<p>Mientras una escotilla está abierta:</p> <p><ul><li>Su portillo debe permanecer abierto y se considera terreno insignificante.</li></ul> <ul><li>Su punto de acceso es terreno accesible e insignificante. </li></ul> <ul><li>Su punto de acceso es también terreno expuesto. Esto significa que los muros en cualquiera de sus lados deben ser usados para cobertura y ofuscación en su lugar.</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/abierto.png"
+			}
+		],
+		"actions": [
+			{
+				"a_name": "OPERAR PORTILLO",
+				"cost": "1 PA",
+                "a_description": ["Abre o cierra una escotilla cuyo punto de acceso se encuentre en la zona de control del agente.", "Un agente puede realizar esta acción durante la acción de <b>Correr</b> o <b>Reposicionarse</b>, y tras realizarla puede usar cualquier distancia de movimiento que le quede."],
+				"a_no": "Un agente no puede realizar esta acción mientras se encuentre en la zona de control de un agente enemigo, o si esa escotilla está abierta y su punto de acceso se encuentra en la zona de control de un agente enemigo."
+			},
+			{
+				"a_name": "DEFENSA",
+				"cost": "1 PA",
+                "a_description": ["<p>El agente se pone en guardia hasta que se cumpla cualquiera de las siguientes condiciones:</p> <p><ul><li>Realiza cualquier acción.</li></ul> <ul><li>Un agente enemigo termina una acción en su zona de control y no interrumpes esa activación.</li></ul> <ul><li>Su orden cambia.</li></ul> <ul><li>Es el inicio del siguiente punto de inflexión.</li></ul></p>"],
+				"a_no": "Esta acción se trata como una acción de <b>Disparar</b>. Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si tiene una orden de ocultarse."
+			},
+			{
+				"a_name": "COMBATIR EN ESCOTILLAS",
+				"cost": "1 PA",
+                "a_description": ["Combate con el agente activo.", "En el paso de Elegir agente enemigo, en su lugar elige un agente enemigo a 2\" o menos de, y al otro lado de, el punto de acceso de una escotilla abierta o un punto de brecha abierto que el agente activo esté tocando. Mientras dure esa acción, los agentes en cuestión se tratan como si se encontraran en la zona de control del otro."],
+				"a_no": "Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si el punto de brecha está abierto."
+			}
+		],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/gallowdark/map-itd-1-min.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/gallowdark/map-itd-2-min.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/gallowdark/map-itd-3-min.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/gallowdark/map-itd-4-min.png"
+			},
+            {
+				"m_id": 5,
+				"m_img": "./resources/game_rules_files/maps/gallowdark/map-itd-5-min.png"
+			},
+            {
+				"m_id": 6,
+				"m_img": "./resources/game_rules_files/maps/gallowdark/map-itd-6-min.png"
+			}
+		],
+        "terrain":[
+            {
+                "t_id": "A1",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/a1.png"
+            },
+            {
+                "t_id": "A2",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/a2.png"
+            },
+            {
+                "t_id": "A3",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/a3.png"
+            },
+            {
+                "t_id": "A4",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/a4.png"
+            },
+            {
+                "t_id": "B1",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/b1.png"
+            },
+            {
+                "t_id": "B2",
+				"type": ["Pesado", "Muro","Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/b2.png"
+            },
+            {
+                "t_id": "B3",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/b3.png"
+            },
+			{
+				"t_id": "II",
+				"type": ["Pesado", "Muro"],
+				"t_img":"./resources/game_rules_files/maps/gallowdark/terrain/wallend.png"
+			}
+        ]
+	},
+	"tombworld": {
+		"name": "MUNDO TUMBA",
+        "description": "Mundo Necrópolis utiliza un tablero de 606 mm x 703 mm con una rejilla de 6 x 7 zonas para el despliegue. Incluye 1 sarcófago, 4 escombros y 2 elementos de terreno de cada tipo, especificados en la clave del mapa de la Zona de aniquilación: Mundo Necrópolis. También incluye 16 medios pilares para completar la configuración del terreno. Ten en cuenta que algunos mapas de misión utilizan menos elementos.",
+        "portada": "./resources/game_rules_files/maps/tombworld-portada.png",
+		"rules": [
+			{
+				"r_name": "ENTORNO CONDENSADO",
+                "r_description": "Las armas con la regla de armas Área, Ráfaga y/o x\" Devastadora (es decir, Devastadora con un requisito de distancia) tienen también la regla de armas Letal 5+.",
+                "r_img": ""
+			},
+			{
+				"r_name": "En Guardia",
+                "r_description": "<p>Una vez durante la activación de cada agente enemigo, después de que ese agente enemigo realice una acción, puedes interrumpir esa activación y elegir un agente amigo en guardia para que realice una acción libre de <b>Disparar</b> o <b>Combatir</b> (incluyendo acciones equivalentes a estas, como por ejemplo <b>Combatir en escotillas</b> abajo).</p> <p>Ese agente amigo puede incluso realizar la acción de <b>Disparar</b> mientras se encuentre en la zona de control de un agente enemigo (esto tiene preferencia sobre las condiciones normales de la acción de <b>Disparar</b>). Esto se conoce como un disparo a bocajarro y tiene las siguientes reglas adicionales mientras tu agente la está llevando a cabo:</p> <p><ul><li>Toma como blanco al agente enemigo en la zona de control de tu agente (incluso aunque normalmente no sería un blanco válido).</li></ul> <ul><li>• Empeora en 1 el atributo Impactar de las armas de tu agente.</li></ul> <ul><li>Hasta el final de la activación interrumpida del agente enemigo, tu agente no puede contraatacar.</li></ul></p>",
+                "r_img": ""
+			},
+			{
+				"r_name": "MURO DE MUNDO NECROPOLIS",
+                "r_description": "<p>Un elemento de terreno de Mundo Necrópolis es terreno pesado y de muro. Algunos muros incluyen una escotilla o un punto de brecha (explicados más adelante).</p> <p><b></b>Terreno de muro:</p> <p><ul><li> Los agentes no pueden moverse por encima o a través de terreno de muro (esto tiene preferencia sobre todas las demás reglas).</li></ul> <ul><li>La visibilidad no puede determinarse por encima o a través de terreno de muro.</li></ul> <ul><li>Aparte de hacia áreas de la zona de aniquilación (el centro de la zona de aniquilación, las zonas de descenso, etc), no se pueden medir distancias por encima o a través de terreno de muro; deben medirse rodeándolo por la ruta más corta posible.</li></ul> <ul><li>A efectos de la cobertura y el ofuscamiento, solo las esquinas y los finales de un terreno de muro pueden interponerse, a menos que el agente activo los haya superado (ver ejemplos en los ejemplos).</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/tombworld/terrain/b1.png"
+			},
+			{
+				"r_name": "EJEMPLO DE MOVIMIENTO",
+                "r_description": "Normalmente el agente A debería estar a 3\" o menos del agente B, pero dado que las distancias no pueden medirse ni por encima ni a través de terreno de muro, deben medirse rodeando el muro de Mundo Necrópolis. Esto dejaría al agente A a más de 3\" del agente B.",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/movimiento.png"
+			},
+			{
+				"r_name": "EJEMPLO DE COBERTURA",
+                "r_description": "El agente B no se encuentra tras cobertura, ya que no se interpone ninguna esquina o final de muro. Ten en cuenta que las partes menores del muro que sobresalen no conforman por sí mismas una esquina o un final, debe ser la estructura principal del muro la que genera la esquina o el final, tal como muestran los siguientes diagramas.",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/cobertura.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO",
+                "r_description": "Una esquina del muro está interpuesta, y por lo tanto el agente B está tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/cobertura2.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO 2",
+                "r_description": "El agente A ha superado la esquina del muro, por lo que no está interpuesta y el agente B no está tras cobertura. Ten en cuenta que si el agente A estuviera completamente bajo la línea de puntos negros, el muro se consideraría interpuesto y el agente B estaría tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/cobertura3.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO 3",
+                "r_description": "Un final del muro está interpuesto y por lo tanto el agente B está tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/cobertura4.png"
+			},
+			{
+				"r_name": "EJEMPLO DE OFUSCADO",
+                "r_description": "Dado que la escotilla está abierta, un final del muro está interpuesto. Se encuentra a más de 1\" de ambos agentes, por lo que el agente B está ofuscado.",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/ofuscado.png"
+			},
+			{
+				"r_name": "CERRADA",
+                "r_description": "Una escotilla tiene dos estados: cerrada y abierta. Tiene dos partes, un punto de acceso y un portillo, y sus tipos de terreno dependen del estado de la escotilla. Los agentes pueden realizar la acción de misión <b>Operar portillo</b> para cambiar su estado. Las escotillas empiezan la batalla cerradas",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/cerrado.png"
+			},
+			{
+				"r_name": "PUNTO DE BRECHA",
+                "r_description": "Un punto de brecha tiene dos estados: cerrado y abierto. Tiene dos partes, un punto de acceso y un punto de brecha, y sus tipos de terreno dependen del estado del punto de brecha. Los puntos de brecha empiezan la batalla cerrados. Para abrir un punto de brecha, los agentes pueden realizar la acción de misión Brecha (tras la cual no podrán volver a cerrarlo).",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/brecha.png"
+			},
+			{
+				"r_name": "Escotilla o Brecha",
+                "r_description": "<p>Mientras una escotilla o brecha está cerrada:</p> <p><ul><li>Su portillo debe estar en su punto de acceso.</li></ul> <ul><li>El punto de acceso y el portillo son terreno pesado y de muro.</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/escotilla.png"
+			},
+			{
+				"r_name": "Abierto",
+                "r_description": "<p>Mientras una escotilla o brecha está abierta:</p> <p><ul><li>Su portillo debe ser retirado de la zona de aniquilación.</li></ul> <ul><li>Su punto de acceso es terreno accesible e insignificante. </li></ul> <ul><li>Su punto de acceso es también terreno expuesto. Esto significa que los muros en cualquiera de sus lados deben ser usados para cobertura y ofuscación en su lugar.</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/tombworld/rules/abierto.png"
+			},
+			{
+				"r_name": "PLATAFORMA DE TELEPORTACIÓN",
+                "r_description": "<p>Una plataforma de teleportación es terreno Descubierto, Insignificante y Aventajado. Solo puede estar encima de ella un único agente, que no podrá tocar el suelo de la zona de aniquilación mientras esté sobre ella (es decir, un agente no puede estar en la plataforma y en el suelo al mismo tiempo). El equipo que sea elemento de terreno no puede situarse a 2\" o menos de una plataforma de teleportación. Siempre que la peana de un agente toque la plataforma y encima de ella haya otro agente, se considera que ambos agentes están dentro de la zona de control del otro.</p> <p>Desde el inicio del segundo punto de inflexión, siempre que un agente amigo en una plataforma de teleportación realice una acción de <b>Cargar</b>, Retroceder o <b>Reposicionarse</b>, puedes teleportarlo. Si lo haces, no lo muevas. En su lugar, retíralo de la zona de aniquilación y vuelve a colocarlo en la otra plataforma de teleportación. Debe seguir cumpliendo todos los demás requisitos para esa acción, o de lo contrario no podrá teleportarse (p. ej., si es la acción de <b>Cargar</b> , el agente deberá terminar esa acción en la zona de control de un agente enemigo). Si otro agente está en la otra plataforma de teleportación cuando un agente se teleporte, intercámbialos (si se trata de un agente enemigo, su jugador controlador lo coloca). Un agente no puede teletransportarse más de una vez por activación.</p>",
+                "r_img": "./resources/game_rules_files/maps/tombworld/terrain/t.png"
+			}
+		],
+		"actions": [
+			{
+				"a_name": "OPERAR PORTILLO",
+				"cost": "1 PA",
+                "a_description": ["Abre o cierra una escotilla cuyo punto de acceso se encuentre en la zona de control del agente.", "Un agente puede realizar esta acción durante la acción de <b>Correr</b> o <b>Reposicionarse</b>, y tras realizarla puede usar cualquier distancia de movimiento que le quede."],
+				"a_no": "Un agente no puede realizar esta acción mientras se encuentre en la zona de control de un agente enemigo, o si esa escotilla está abierta y su punto de acceso se encuentra en la zona de control de un agente enemigo."
+			},
+			{
+				"a_name": "BRECHA",
+				"cost": "2 PA",
+                "a_description": ["Abre un punto de brecha cerrado cuyo punto de acceso esté en la zona de control del agente.", "Un agente que tenga las palabras “marcador de brecha”, “granadero” o “mina” en su tarjeta de datos, o que tenga un arma con la regla de armas Penetración 2 o Críticos de penetración 2 (salvo armas con la regla de armas Área o Ráfaga), puede realizar esta acción por 1 PA menos (hasta un mínimo de 1 PA). No puede realizarla por menos de 2PA durante una activación/reacción en la que haya realizado la acción <b>Cargar</b> o <b>Disparar</b> (o viceversa).", "Tira 1D6 por separado por cada agente que se encuentre en el otro lado de un punto de acceso y tenga ese punto de acceso en su zona de control: con un 4+, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación e inflígele daño igual a la mitad del resultado del dado (redondeando al alza)."],
+				"a_no": "Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si el punto de brecha está abierto."
+			},
+			{
+				"a_name": "DEFENSA",
+				"cost": "1 PA",
+                "a_description": ["<p>El agente se pone en guardia hasta que se cumpla cualquiera de las siguientes condiciones:</p> <p><ul><li>Realiza cualquier acción.</li></ul> <ul><li>Un agente enemigo termina una acción en su zona de control y no interrumpes esa activación.</li></ul> <ul><li>Su orden cambia.</li></ul> <ul><li>Es el inicio del siguiente punto de inflexión.</li></ul></p>"],
+				"a_no": "Esta acción se trata como una acción de <b>Disparar</b>. Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si tiene una orden de ocultarse."
+			},
+			{
+				"a_name": "COMBATIR EN ESCOTILLAS",
+				"cost": "1 PA",
+                "a_description": ["Combate con el agente activo.", "En el paso de Elegir agente enemigo, en su lugar elige un agente enemigo a 2\" o menos de, y al otro lado de, el punto de acceso de una escotilla abierta o un punto de brecha abierto que el agente activo esté tocando. Mientras dure esa acción, los agentes en cuestión se tratan como si se encontraran en la zona de control del otro."],
+				"a_no": "Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si el punto de brecha está abierto."
+			}
+		],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/tombworld/map-tw-1-min.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/tombworld/map-tw-2-min.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/tombworld/map-tw-3-min.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/tombworld/map-tw-4-min.png"
+			},
+            {
+				"m_id": 5,
+				"m_img": "./resources/game_rules_files/maps/tombworld/map-tw-5-min.png"
+			},
+            {
+				"m_id": 6,
+				"m_img": "./resources/game_rules_files/maps/tombworld/map-tw-6-min.png"
+			}
+		],
+        "terrain":[
+            {
+                "t_id": "A1",
+				"type": ["Pesado", "Muro", "Punto de brecha"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/a1.png"
+            },
+            {
+                "t_id": "A2",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/a2.png"
+            },
+            {
+                "t_id": "A3",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/a3.png"
+            },
+            {
+                "t_id": "A4",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/a4.png"
+            },
+            {
+                "t_id": "B1",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/b1.png"
+            },
+            {
+                "t_id": "B2",
+				"type": ["Pesado", "Muro", "Punto de brecha"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/b2.png"
+            },
+            {
+                "t_id": "B3",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/b3.png"
+            },
+            {
+                "t_id": "B4",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/b4.png"
+            },
+            {
+                "t_id": "X",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/x.png"
+            },
+            {
+                "t_id": "T",
+				"type": ["Insignificante", "Descubierto", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/t.png"
+            },
+            {
+                "t_id": "C1",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c1.png"
+            },
+            {
+                "t_id": "C2",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c2.png"
+            },
+            {
+                "t_id": "C3",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c3.png"
+            },
+            {
+                "t_id": "C4",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c4.png"
+            },
+            {
+                "t_id": "C5",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c5.png"
+            }
+        ]
+	},
+	"descent": {
+		"name": "DESCENSO",
+        "description": "Una zona de aniquilación Descenso utiliza dos zonas de aniquilación ya existentes en tableros más pequeños. Están conectadas mediante marcadores de Entrada, lo que permite a los agentes moverse entre los distintos tableros durante la batalla. La zona de aniquilación Descenso de esta publicación utiliza las Zonas de aniquilación Volkus y Mundo Necrópolis, pero los jugadores son libres de usar otras zonas de aniquilación. Las reglas hacen referencia a zonas de aniquilación “superior” e “inferior”; en esta publicación, la zona de aniquilación: Volkus es la superior y la zona de aniquilación: Mundo Necrópolis es la inferior. Si estás usando zonas de aniquilación diferentes, asegúrate de definir cuál es cuál. Utiliza un tablero de 607 mm x 414 mm las zonas de aniquilación de combate cerrado, y uno de 559 mm x 381 mm para las demás zonas de aniquilación.",
+        "portada": "./resources/game_rules_files/maps/descent-portada.jpg",
+		"rules": [
+			{
+				"r_name": "ZONA DE ANIQUILACIÓN INFERIOR",
+                "r_description": "Puedes usar cualquier tablero de combate cerrado para cualquiera de las dos zonas de aniquilación (Zona de aniquilación: Mundo Necrópolis o Zona de aniquilación: Horcasombría). Simplemente utiliza un área de 6 x 4 recuadros para tener las dimensiones correctas.",
+                "r_img": "./resources/game_rules_files/maps/descent/killzone-inferior.png"
+			},
+			{
+				"r_name": "ZONA DE ANIQUILACIÓN SUPERIOR",
+                "r_description": "Puedes usar cualquier tablero de 30\" x 22\" que ya tengas para la zona de aniquilación superior, doblándolo por la mitad para que tenga las dimensiones adecuadas (p.ej., Zona de aniquilación: Octarius)",
+                "r_img": ""
+			},
+            {
+				"r_name": "TREPAR HASTA MARCADORES DE ENTRADA",
+                "r_description": "<p>Cuando un marcador de Entrada se encuentre en la zona de control de un agente amigo, dicho agente amigo puede trepar por él gastando 3\" de su distancia de movimiento. Retira a ese agente de la zona de aniquilación y vuelve a desplegarlo en una ubicación en la que pueda ser colocado de modo que el marcador de Entrada con el mismo número en la otra zona de aniquilación quede en su zona de control (si esto no es posible, colócalo lo más cerca posible de ese marcador). Ese agente no puede desplegarse en la zona de control de un agente enemigo a menos que tenga permitido moverse hasta allí durante esa acción (p.ej., al <b>Cargar</b>).</p> <p>Ten en cuenta que el agente puede seguir moviéndose tras ser desplegado si aún le queda movimiento y la acción se lo permite. A efectos de los requisitos de distancia para desplegar a un agente (p. ej., un agente que transporte la reliquia de la misión 3 de Operaciones contrarias: Despertar), trepar por un marcador de Entrada se considera recorrer una distancia de 3\". </p>",
+                "r_img": "./resources/game_rules_files/maps/descent/marcadores-entrada.png"
+			},
+            {
+				"r_name": "DISPARAR DESDE MARCADORES DE ENTRADA",
+                "r_description": "<p>Cuando un agente amigo realice la acción de <b>Disparar</b>, si hay un marcador de Entrada en su zona de control, en lugar de elegir un blanco válido de manera normal, puedes elegir a un agente enemigo que tenga el marcador de Entrada con el mismo número en la otra zona de aniquilación y en su zona de control (ignorando la regla de armas Alcance X ). En tal caso, ese agente enemigo no puede estar en cobertura ni ofuscado para esa secuencia. Ten en cuenta que seguirás sin poder elegir a un agente enemigo que tenga agentes amigos en su zona de control. </p> <p>Si el blanco se encuentra en una zona de aniquilación que tenga las reglas de combate cerrado (p.ej., Zona de aniquilación: Horcasombría), entonces estará activa la regla adicional Entorno condensado (incluso si el agente amigo no se encuentra en esa zona de aniquilación).</p>",
+                "r_img": ""
+			},
+            {
+				"r_name": "REGLAS ADICIONALES",
+                "r_description": "<p>Algunos agentes tienen reglas de facción que permiten retirarlos de la zona de aniquilación y desplegarlos de nuevo, p.ej., <b>VOLAR</b>, <b>PASO SOMBRÍO</b> <span class=\"faction\">MANDRÁGORA</span>, etc. Cuando uses dichas reglas de facción en una zona de aniquilación Descenso, no puedes desplegar al agente en una zona de aniquilación diferente de aquella de la que se ha retirado. Es decir, los agentes pueden usar <b>VOLAR</b> y <b>PASO SOMBRÍO</b> en una zona de aniquilación superior o inferior, pero no entre ellas.</p> <p>Al usar marcadores de Descenso <span class=\"faction\">TEMPESTUS AQUILON</span> y marcadores de Túnel <span class=\"faction\">MÁNTIFEX</span>, dichos marcadores no pueden colocarse en zonas de aniquilación diferentes (debes elegir superior o inferior).</p> <p>Para el comando <span class=\"faction\">CÍRCULO CANÓPTICO</span>, ten en cuenta dónde has desplegado los marcadores <b>NODO DE OBELISCOS</b> (y dónde te permiten hacerlo los mapas de misión), ya que solo pueden crear una <b>MATRIZ DE NODOS DE OBELISCOS</b> con otros marcadores de la misma zona de aniquilación.</p> <p>Si tu agente está en guardia y se teleporta a una zona de aniquilación diferente usando una plataforma de teleportación, deja de estar en guardia.</p>",
+                "r_img": ""
+			}
+		],
+		"actions": [
+			{
+				"a_name": "OPERAR PORTILLO",
+				"cost": "1 PA",
+                "a_description": ["Abre o cierra una escotilla cuyo punto de acceso se encuentre en la zona de control del agente.", "Un agente puede realizar esta acción durante la acción de <b>Correr</b> o <b>Reposicionarse</b>, y tras realizarla puede usar cualquier distancia de movimiento que le quede."],
+				"a_no": "Un agente no puede realizar esta acción mientras se encuentre en la zona de control de un agente enemigo, o si esa escotilla está abierta y su punto de acceso se encuentra en la zona de control de un agente enemigo."
+			},
+			{
+				"a_name": "BRECHA",
+				"cost": "2 PA",
+                "a_description": ["Abre un punto de brecha cerrado cuyo punto de acceso esté en la zona de control del agente.", "Un agente que tenga las palabras “marcador de brecha”, “granadero” o “mina” en su tarjeta de datos, o que tenga un arma con la regla de armas Penetración 2 o Críticos de penetración 2 (salvo armas con la regla de armas Área o Ráfaga), puede realizar esta acción por 1 PA menos (hasta un mínimo de 1 PA). No puede realizarla por menos de 2PA durante una activación/reacción en la que haya realizado la acción <b>Cargar</b> o <b>Disparar</b> (o viceversa).", "Tira 1D6 por separado por cada agente que se encuentre en el otro lado de un punto de acceso y tenga ese punto de acceso en su zona de control: con un 4+, resta 1 al atributo LPA de ese agente hasta el final de su siguiente activación e inflígele daño igual a la mitad del resultado del dado (redondeando al alza)."],
+				"a_no": "Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si el punto de brecha está abierto."
+			},
+			{
+				"a_name": "DEFENSA",
+				"cost": "1 PA",
+                "a_description": ["<p>El agente se pone en guardia hasta que se cumpla cualquiera de las siguientes condiciones:</p> <p><ul><li>Realiza cualquier acción.</li></ul> <ul><li>Un agente enemigo termina una acción en su zona de control y no interrumpes esa activación.</li></ul> <ul><li>Su orden cambia.</li></ul> <ul><li>Es el inicio del siguiente punto de inflexión.</li></ul></p>"],
+				"a_no": "Esta acción se trata como una acción de <b>Disparar</b>. Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si tiene una orden de ocultarse."
+			},
+			{
+				"a_name": "COMBATIR EN ESCOTILLAS",
+				"cost": "1 PA",
+                "a_description": ["Combate con el agente activo.", "En el paso de Elegir agente enemigo, en su lugar elige un agente enemigo a 2\" o menos de, y al otro lado de, el punto de acceso de una escotilla abierta o un punto de brecha abierto que el agente activo esté tocando. Mientras dure esa acción, los agentes en cuestión se tratan como si se encontraran en la zona de control del otro."],
+				"a_no": "Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si el punto de brecha está abierto."
+			},
+			{
+				"a_name": "COMBATIR EN PUERTA",
+				"cost": "1 PA",
+                "a_description": ["Combate con el agente activo", "En el paso de elegir agente enemigo, debes elegir un agente enemigo a 2\" o menos de una puerta que el agente activo esté tocando, y al otro lado de la misma. Mientras dure la acción, esos agentes se considera que están dentro de la zona de control uno de otro."],
+                "a_no": "Esta acción se considera una acción de <b>Combatir</b>. Un agente no puede realizar esta acción estando en la zona de control de un agente enemigo, o si su peana no toca una puerta."
+			}
+		],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/descent/map-dsc-1-min.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/descent/map-dsc-2-min.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/descent/map-dsc-3-min.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/descent/map-dsc-4-min.png"
+			},
+            {
+				"m_id": 5,
+				"m_img": "./resources/game_rules_files/maps/descent/map-dsc-5-min.png"
+			},
+            {
+				"m_id": 6,
+				"m_img": "./resources/game_rules_files/maps/descent/map-dsc-6-min.png"
+			}
+		],
+        "terrain":[
+            {
+                "t_id": "A",
+				"type": ["Pesado", "Accesible", "Aventajado", "Techo", "Fortaleza"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/a.png"
+            },
+			{
+                "t_id": "B",
+				"type": ["Pesado", "Accesible", "Aventajado", "Techo", "Fortaleza"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/b.png"
+            },
+			{
+                "t_id": "C",
+				"type": ["Pesado", "Accesible", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/c.png"
+            },
+			{
+                "t_id": "D",
+				"type": ["Pesado", "Accesible", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/d.png"
+            },
+			{
+                "t_id": "E",
+				"type": ["Pesado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/e.png"
+            },
+			{
+                "t_id": "F",
+				"type": ["Pesado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/f.png"
+            },
+			{
+                "t_id": "G",
+				"type": ["Pesado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/g.png"
+            },
+			{
+                "t_id": "H",
+				"type": ["Pesado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/h.png"
+            },
+			{
+                "t_id": "I",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/i.png"
+            },
+			{
+                "t_id": "J",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/j.png"
+            },
+			{
+                "t_id": "K",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/k.png"
+            },
+			{
+                "t_id": "L",
+				"type": ["Insignificante", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/l.png"
+            },
+			{
+                "t_id": "M",
+				"type": ["Insignificante", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/m.png"
+            },
+			{
+                "t_id": "N",
+				"type": ["Insignificante", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/volkus/terrain/n.png"
+            },
+			{
+                "t_id": "A1",
+				"type": ["Pesado", "Muro", "Punto de brecha"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/a1.png"
+            },
+            {
+                "t_id": "A2",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/a2.png"
+            },
+            {
+                "t_id": "A3",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/a3.png"
+            },
+            {
+                "t_id": "A4",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/a4.png"
+            },
+            {
+                "t_id": "B1",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/b1.png"
+            },
+            {
+                "t_id": "B2",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/b2.png"
+            },
+            {
+                "t_id": "B3",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/b3.png"
+            },
+            {
+                "t_id": "B4",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/b4.png"
+            },
+            {
+                "t_id": "X",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/x.png"
+            },
+            {
+                "t_id": "T",
+				"type": ["Insignificante", "Descubierto", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/t.png"
+            },
+            {
+                "t_id": "C1",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c1.png"
+            },
+            {
+                "t_id": "C2",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c2.png"
+            },
+            {
+                "t_id": "C3",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c3.png"
+            },
+            {
+                "t_id": "C4",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c4.png"
+            },
+            {
+                "t_id": "C5",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/tombworld/terrain/c5.png"
+            }
+        ]
+	},
+	"betha_decima": {
+		"name": "BETHA-DECIMA",
+        "description": "Tiene 2 pasarelas cortas, 4 pasarelas medianas, 2 pasarelas largas y 1 condensador termométrico.",
+        "portada": "./resources/game_rules_files/maps/bethadecima-portada.png",
+        "rules": [
+			{
+				"r_name": "MOVIMIENTO RESTRINGIDO",
+                "r_description": "Ninguna parte de la peana de un agente puede tocar un área peligrosa.",
+                "r_img": "./resources/game_rules_files/maps/betha/rules/area-peligrosa.png"
+			},
+            {
+				"r_name": "BLANCOS RESTRINGIDOS",
+                "r_description": "<p>Al elegir un blanco válido para un agente en el suelo de la zona de aniquilación, un blanco en el suelo de aniquilación no es un blanco válido si hay 4\" de área peligrosa entre ellos.</p> <p>Al elegir un blanco válido para un agente en terreno Aventajado, un blanco en el suelo de la zona de aniquilacion no es un blanco válido si media el contorno de una pasarela entre ellos. Lo mismo se aplica a la inversa (desde un agente en el suelo de la zona de aniquilación hasta un blanco en terreno Aventajado). \nSin Embargo, en ambos casos, ignora el contorno de los elementos de terreno pasarelas en las que estén el agente activo o el blanco.</p> <p>En ambos casos, usa líneas de tiro para determinar si un área peligrosa o el contorno de una pasarela esán entre ellos.</p>",
+                "r_img": "./resources/game_rules_files/maps/betha/rules/blanco-no-valido.png"
+			},
+            {
+				"r_name": "CONTORNO DE PASARELA",
+                "r_description": "El contorno de una pasarela es la propia pasarela, más el área bajo ella.",
+                "r_img": "./resources/game_rules_files/maps/betha/rules/contorno-pasarela.png"
+			},
+            {
+				"r_name": "EQUIPO",
+                "r_description": "Se puede desplegar Equipo en terreno Aventajado (esto tiene preferencia sobre el requisito de tener que desplegarlo en el suelo de la zona de aniquilación).",
+                "r_img": ""
+			}
+		],
+		"actions": [],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-1-min.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-2-min.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-3-min.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-4-min.png"
+			},
+            {
+				"m_id": 5,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-5-min.png"
+			},
+            {
+				"m_id": 6,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-6-min.png"
+			},
+            {
+				"m_id": 7,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-7-min.png"
+			},
+            {
+				"m_id": 8,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-8-min.png"
+			},
+            {
+				"m_id": 9,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-9-min.png"
+			},
+            {
+				"m_id": 10,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-10-min.png"
+			},
+            {
+				"m_id": 11,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-11-min.png"
+			},
+            {
+				"m_id": 12,
+				"m_img": "./resources/game_rules_files/maps/betha/map-bd-12-min.png"
+			}
+		],
+        "terrain":[
+            {
+                "t_id": "A",
+				"type": ["Pesado", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/betha/terrain/a.png"
+            },
+			{
+                "t_id": "B",
+				"type": ["Pesado", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/betha/terrain/b.png"
+            },
+			{
+                "t_id": "C",
+				"type": ["Pesado", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/betha/terrain/c.png"
+            },
+			{
+                "t_id": "D",
+				"type": ["Pesado", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/betha/terrain/d.png"
+            }
+        ]
+	},
+	"octarius": {
+		"name": "OCTARIUS",
+        "description": "La Zona de aniquilación: Octarius tiene 4 muros destartalados, 1 bomba de aceite, 3 barricadas destartaladas, y 3 montones de chatarra.",
+        "portada": "./resources/game_rules_files/maps/octarius-portada.png",
+		"rules": [],
+		"actions": [
+			{
+				"a_name": "COMBATIR EN PUERTA",
+				"cost": "1 PA",
+                "a_description": ["Combate con el agente activo", "En el paso de elegir agente enemigo, debes elegir un agente enemigo a 2\" o menos de una puerta que el agente activo esté tocando, y al otro lado de la misma. Mientras dure la acción, esos agentes se considera que están dentro de la zona de control uno de otro."],
+                "a_no": "Esta acción se considera una acción de <b>Combatir</b>. Un agente no puede realizar esta acción estando en la zona de control de un agente enemigo, o si su peana no toca una puerta."
+			}
+		],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/octarius/map-oct-1-min.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/octarius/map-oct-2-min.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/octarius/map-oct-3-min.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/octarius/map-oct-4-min.png"
+			},
+            {
+				"m_id": 5,
+				"m_img": "./resources/game_rules_files/maps/octarius/map-oct-5-min.png"
+			},
+            {
+				"m_id": 6,
+				"m_img": "./resources/game_rules_files/maps/octarius/map-oct-6-min.png"
+			}
+		],
+        "terrain":[
+            {
+                "t_id": "A",
+				"type": ["Pesado", "Aventajado", "Techo", "Accesible"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/a.png"
+            },
+			{
+                "t_id": "B",
+				"type": ["Pesado", "Aventajado", "Techo", "Accesible"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/b.png"
+            },
+			{
+                "t_id": "C",
+				"type": ["Pesado", "Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/c.png"
+            },
+			{
+                "t_id": "D",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/d.png"
+            },
+			{
+                "t_id": "E",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/e.png"
+            },
+			{
+                "t_id": "F",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/f.png"
+            },
+			{
+                "t_id": "G",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/g.png"
+            },
+			{
+                "t_id": "H",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/h.png"
+            },
+			{
+                "t_id": "I",
+				"type": ["Ligero"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/i.png"
+            },
+			{
+                "t_id": "J",
+				"type": ["Aventajado", "Techo"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/j.png"
+            },
+			{
+                "t_id": "K",
+				"type": ["Ligero", "Techo", "Aventajado"],
+                "t_img": "./resources/game_rules_files/maps/octarius/terrain/k.png"
+            }
+        ]
+	},
+    "open": {
+		"name": "ZONAS DE ANIQUILACION ABIERTAS",
+        "description": "A continuacion se presentan mapas genericos para que tengas la libertad de mezclar las piezas de terreno que gustes o de utilizar piezas fabricadas por ti.",
+        "portada": "",
+		"rules": [],
+		"actions": [],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+			},
+            {
+				"m_id": 5,
+				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+			},
+            {
+				"m_id": 6,
+				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+			}
+		],
+        "terrain": []
+	}
+}

@@ -697,7 +697,8 @@
             p1: { primary: null },
             p2: { primary: null },
             revealed: false,
-            currentPlayerSelecting: 1
+            currentPlayerSelecting: 1,
+            loading: false // <-- NUEVO: Bandera de control para evitar sobreescrituras en carga
         };
 
         // Tabla de umbrales para Kill Op (100% fiel al reglamento entregado)
@@ -763,6 +764,9 @@
             const modalEl = document.getElementById('secretModal');
             const modalInstance = bootstrap.Modal.getInstance(modalEl);
             modalInstance.hide();
+
+            // NUEVO: Guardar el estado inmediatamente para no perder la selección secreta
+            saveGameState();
         }
 
         // --- SISTEMA DE REVELADO DE PARTIDA ---
@@ -1190,7 +1194,6 @@
             const factionRulesBtn = document.getElementById(`${playerPrefix}-btn-faction-rules`);
 
             // --- RESET DE SEGURIDAD PARA TACOPS SECRETAS ---
-            // Si el jugador cambia de facción, reiniciamos toda la UI de secretos a su estado original
             document.getElementById(`${playerPrefix}-tacop-container`)?.classList.remove('d-none');
             document.getElementById(`${playerPrefix}-tacop-container`)?.classList.add('d-flex');
             document.getElementById(`${playerPrefix}-tacop-status`)?.classList.add('d-none');
@@ -1199,9 +1202,8 @@
             document.getElementById(`${playerPrefix}-btn-reveal-tacop`)?.classList.remove('d-none');
             document.getElementById(`${playerPrefix}-revealed-badge`)?.classList.add('d-none');
             let lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
-            if (lockBtn) {
-                lockBtn.disabled = true;
-            }
+            if (lockBtn) lockBtn.disabled = true;
+
             let infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
             if (infoBtn) infoBtn.disabled = true;
 
@@ -1214,129 +1216,69 @@
 
             if (!factionKey || !dataFactions[factionKey]) return;
 
-            // --- ¡NUEVO CÓDIGO! Actualización visual de la imagen ---
+            // Actualización visual de la imagen
             const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
-            if (imgEl) {
-                // En la web, siempre se usan barras normales (/) para las rutas, no contrabarras (\)
-                imgEl.src = `./resources/facciones/${factionKey}.png`;
-            }
+            if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
 
-            // Obtener los arquetipos permitidos para esta facción
             const allowedArchetypes = dataFactions[factionKey].archetypes;
-
-            // Mostrarle al usuario qué arquetipos tiene disponibles
             const translatedArchs = allowedArchetypes.map(a => archetypeTranslations[a] || a).join(' / ');
             archetypesDisplay.innerHTML = `Arquetipos permitidos: <strong>${translatedArchs}</strong>`;
 
-            // Limpiar el selector de TacOps
             tacopSelect.innerHTML = '<option value="" selected disabled>Selecciona tu TacOp...</option>';
 
-            // Filtrar e inyectar solo las TacOps que coincidan con los arquetipos
             for (const [tacopName, tacopData] of Object.entries(dataTacOps)) {
                 if (allowedArchetypes.includes(tacopData.archetype)) {
                     const option = document.createElement('option');
                     option.value = tacopName;
-                    // Mostramos el nombre de la misión y a qué arquetipo pertenece
                     option.textContent = `${tacopName} (${archetypeTranslations[tacopData.archetype] || tacopData.archetype})`;
                     tacopSelect.appendChild(option);
                 }
             }
+
+            // NUEVO: Guardar estado tras cambiar la facción de forma activa
+            saveGameState();
         }
 
-        // 1. Detectar en qué turno estamos (Asumiendo que tus radio buttons de turnos tienen IDs tp1, tp2, tp3, tp4)
-        function getCurrentTurn() {
-            if (document.getElementById('tp4') && document.getElementById('tp4').checked) return 4;
-            if (document.getElementById('tp3') && document.getElementById('tp3').checked) return 3;
-            if (document.getElementById('tp2') && document.getElementById('tp2').checked) return 2;
-            return 1; // Por defecto es el turno 1
+        // 1. Habilita el botón de bloqueo e información al seleccionar TacOp
+        function enableTacOpLock(playerPrefix) {
+            const lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
+            const infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
+            if (lockBtn) lockBtn.disabled = false;
+            if (infoBtn) infoBtn.disabled = false;
+
+            // NUEVO: Guardar estado tras cambiar la selección del menú de TacOp
+            saveGameState();
         }
 
-        // 2. Calculadora de límites acumulativos
-        function calculateDynamicLimit(missionType, missionKey, currentTurn) {
-            let data = missionType === 'crit' ? dataCritOps[missionKey] : dataTacOps[missionKey];
+        // 2. Fija la TacOp en secreto (Oculta selectores y muestra estado)
+        function lockTacOp(playerPrefix) {
+            document.getElementById(`${playerPrefix}-tacop-container`).classList.remove('d-flex');
+            document.getElementById(`${playerPrefix}-tacop-container`).classList.add('d-none');
 
-            // Si no hay datos o no hay límites, retornamos un máximo de seguridad (ej. 99)
-            if (!data || !data.limite_puntos || data.limite_puntos.length === 0) return 99;
+            document.getElementById(`${playerPrefix}-tacop-status`).classList.remove('d-none');
+            document.getElementById(`${playerPrefix}-tacop-status`).classList.add('d-flex');
 
-            let limites = data.limite_puntos[0];
-            let maxScore = 0;
-
-            // Sumamos los límites desde el turno 1 hasta el turno actual
-            for (let i = 1; i <= currentTurn; i++) {
-                maxScore += (limites[`ronda_${i}`] || 0);
-            }
-
-            return maxScore;
+            // NUEVO: Guardar estado cuando el jugador confirma el bloqueo secreto
+            saveGameState();
         }
 
-        // 3. Modificar tu updateCounter para que use la lógica de límites dinámicos
-        function updateCounter(id, delta, defaultLimit = 14) {
-            let el = document.getElementById(id);
-            if (!el) return;
+        // 3. Transición del Estado 2 al Estado 3 (Revelar en la partida)
+        function revealTacOp(playerPrefix) {
+            const selectEl = document.getElementById(`${playerPrefix}-tacop`);
+            const selectedText = selectEl.options[selectEl.selectedIndex].text;
 
-            let currentVal = parseInt(el.innerText);
-            let limit = defaultLimit;
+            document.getElementById(`${playerPrefix}-secret-badge`).classList.add('d-none');
+            document.getElementById(`${playerPrefix}-btn-reveal-tacop`).classList.add('d-none');
 
-            let isCrit = id.includes('crit-vp');
-            let isTac = id.includes('tac-vp');
+            const revealedBadge = document.getElementById(`${playerPrefix}-revealed-badge`);
+            revealedBadge.innerText = selectedText;
 
-            // Obtenemos el turno actual al principio para usarlo en los mensajes
-            let currentTurn = getCurrentTurn();
+            const revealedContainer = document.getElementById(`${playerPrefix}-revealed-badge-container`);
+            revealedContainer.classList.remove('d-none');
+            revealedContainer.classList.add('d-flex');
 
-            // Interceptamos si es un puntaje de CritOp o TacOp
-            if (isCrit || isTac) {
-                let playerPrefix = id.split('-')[0]; // Extrae 'p1' o 'p2'
-
-                if (isCrit) {
-                    let critKey = document.getElementById('global-critop').value;
-                    if (!critKey) {
-                        // REEMPLAZO 1: Cambiamos alert() por mostrarNotificacion()
-                        mostrarNotificacion("Falta selección: Por favor, selecciona primero la Misión Crítica (CritOp) de la partida.");
-                        return;
-                    }
-                    limit = calculateDynamicLimit('crit', critKey, currentTurn);
-                } else if (isTac) {
-                    let tacKey = document.getElementById(`${playerPrefix}-tacop`).value;
-                    if (!tacKey) {
-                        mostrarNotificacion("Falta selección: Por favor, selecciona primero tu Operación Táctica (TacOp).");
-                        return;
-                    }
-
-                    // --- NUEVA VALIDACIÓN: ESTADO DE REVELACIÓN ---
-                    // Leemos el DOM para saber si el contenedor del badge "revelado" está visible
-                    let isRevealed = !document.getElementById(`${playerPrefix}-revealed-badge-container`).classList.contains('d-none');
-
-                    // Solo bloqueamos la acción si el jugador intenta sumar puntos (delta > 0)
-                    // Permitimos restar (delta < 0) por si el jugador cometió un error de clic previamente.
-                    if (delta > 0 && !isRevealed) {
-                        mostrarNotificacion("Acción no permitida: Debes revelar tu TacOp a tu oponente antes de poder anotar puntos en ella.");
-                        return;
-                    }
-                    // ----------------------------------------------
-
-                    limit = calculateDynamicLimit('tac', tacKey, currentTurn);
-                }
-            }
-
-            let newVal = currentVal + delta;
-
-            // --- NUEVA LÓGICA DE FEEDBACK AL USUARIO ---
-            // Si el usuario intenta sumar (delta > 0) y supera el límite dinámico
-            if (delta > 0 && newVal > limit) {
-                if (currentTurn === 1) {
-                    mostrarNotificacion("No permitido: Por regla general, no se pueden anotar puntos de TacOp o CritOp en el Punto de Inflexión 1.");
-                } else {
-                    mostrarNotificacion(`Límite alcanzado: El máximo de puntos permitidos para esta operación hasta el Punto de Inflexión ${currentTurn} es de ${limit} PV.`);
-                }
-                newVal = limit; // Bloqueamos el valor al límite máximo
-            }
-
-            // Restricciones finales de seguridad
-            if (newVal < 0) newVal = 0;
-            if (newVal > limit) newVal = limit;
-
-            el.innerText = newVal;
-            if (typeof calculateTotals === 'function') calculateTotals();
+            // NUEVO: Guardar estado cuando la misión secundaria se hace pública
+            saveGameState();
         }
 
         // 4. (Opcional pero recomendado) Función de validación masiva si el usuario cambia de turno hacia atrás
@@ -1361,43 +1303,6 @@
                 }
             });
             calculateTotals();
-        }
-
-        //tacops secretas
-        // 1. Habilita el botón de bloqueo e información al seleccionar TacOp
-        function enableTacOpLock(playerPrefix) {
-            const lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
-            const infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
-            if (lockBtn) lockBtn.disabled = false;
-            if (infoBtn) infoBtn.disabled = false;
-        }
-
-        // 2. Fija la TacOp en secreto (Oculta selectores y muestra estado)
-        function lockTacOp(playerPrefix) {
-            // Ocultar el contenedor de selección
-            document.getElementById(`${playerPrefix}-tacop-container`).classList.remove('d-flex');
-            document.getElementById(`${playerPrefix}-tacop-container`).classList.add('d-none');
-
-            // Mostrar el estado de TacOp fijada (secreta)
-            document.getElementById(`${playerPrefix}-tacop-status`).classList.remove('d-none');
-            document.getElementById(`${playerPrefix}-tacop-status`).classList.add('d-flex');
-        }
-
-        // 3. Transición del Estado 2 al Estado 3 (Revelar en la partida)
-        function revealTacOp(playerPrefix) {
-            const selectEl = document.getElementById(`${playerPrefix}-tacop`);
-            const selectedText = selectEl.options[selectEl.selectedIndex].text;
-
-            document.getElementById(`${playerPrefix}-secret-badge`).classList.add('d-none');
-            document.getElementById(`${playerPrefix}-btn-reveal-tacop`).classList.add('d-none');
-
-            // Ahora inyectamos el texto en el contenedor nuevo y lo mostramos como flexbox
-            const revealedBadge = document.getElementById(`${playerPrefix}-revealed-badge`);
-            revealedBadge.innerText = selectedText;
-
-            const revealedContainer = document.getElementById(`${playerPrefix}-revealed-badge-container`);
-            revealedContainer.classList.remove('d-none');
-            revealedContainer.classList.add('d-flex');
         }
 
         // --- SISTEMA DE NOTIFICACIONES ---
@@ -1491,7 +1396,8 @@
             bodyEl.innerHTML = `
                 <div class="card shadow border-0 bg-light mx-auto" style="max-width: 600px;">
                     <div class="position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center shadow-sm" style="background-color: #ff5418; font-size: 1.1rem;">
-                        <span>CRIT OP</span>
+                        <div class="ap-box bg-dark px-2 rounded small">${op.id}</div>
+                        <span>&nbsp&nbspCRIT OP</span>
                     </div>
             
                     <div class="p-4 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom text-center">
@@ -1870,6 +1776,10 @@
         // --- SISTEMA DE AUTOGUARDADO (LOCALSTORAGE) ---
 
         function saveGameState() {
+
+            // NUEVO: Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardamos estados corruptos
+            if (gameState.loading || Object.keys(dataFactions).length === 0) return;
+
             // Si los datos aún no cargan de los JSON, no guardamos estados vacíos
             if (Object.keys(dataFactions).length === 0) return;
 
@@ -1907,16 +1817,21 @@
         function loadGameState() {
             const savedStateStr = localStorage.getItem('killTeamMatchState');
 
-            // Si no hay partida guardada, no hacemos nada y dejamos que cargue normal
             if (!savedStateStr) return;
 
             try {
+                gameState.loading = true; // <-- NUEVO: Encender bandera antes de tocar el DOM
                 const state = JSON.parse(savedStateStr);
 
                 // 1. Restaurar Globals
                 if (state.globalCritOp) document.getElementById('global-critop').value = state.globalCritOp;
                 if (state.tp) document.getElementById(state.tp).checked = true;
-                if (state.internalGameState) gameState = state.internalGameState;
+
+                // Conservar la propiedad loading al restaurar el estado interno
+                if (state.internalGameState) {
+                    gameState = state.internalGameState;
+                    gameState.loading = true;
+                }
 
                 // 2. Restaurar Jugadores
                 restorePlayerState('p1', state.p1);
@@ -1937,9 +1852,8 @@
                         document.getElementById(`${p}-primary-bonus-display`).classList.remove('d-none');
                     });
                 } else {
-                    // Si estaban fijadas pero no reveladas
                     ['p1', 'p2'].forEach(p => {
-                        if (gameState[p].primary) {
+                        if (gameState[p] && gameState[p].primary) {
                             const btn = document.getElementById(`${p}-btn-secret`);
                             btn.classList.remove('btn-warning');
                             btn.classList.add('btn-success');
@@ -1948,11 +1862,12 @@
                     });
                 }
 
-                // Mostrar notificación de éxito
+                gameState.loading = false; // <-- NUEVO: Apagar bandera, la UI ya es estable y fiel al guardado
                 mostrarNotificacion("Partida cargada exitosamente.");
             } catch (e) {
+                gameState.loading = false; // <-- NUEVO: Asegurar apagado si el JSON está corrupto
                 console.error("Error cargando partida guardada:", e);
-                localStorage.removeItem('killTeamMatchState'); // Si hay un error, borramos el archivo corrupto
+                localStorage.removeItem('killTeamMatchState');
             }
         }
 
@@ -2235,7 +2150,7 @@
                 <div class="modal-body bg-light pt-2" id="tacOpModalBody"></div>
                 <div class="modal-footer bg-white border-top justify-content-center py-2">
                     <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
-                        <i class="bi bi-arrow-return-left me-2"></i>Volver a la partida
+                        <i class="bi bi-arrow-return-left me-2"></i>Cerrar
                     </button>
                 </div>
             </div>

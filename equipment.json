@@ -1653,6 +1653,9 @@
       "action_yes": ["Uno de tus marcadores de Depósito de munición controlado por el agente activo es usado este punto de inflexión.", "Hasta el inicio del siguiente punto de inflexión, cuando este agente dispare con un arma de su tarjeta de datos, puedes repetir uno de tus dados de ataque."],
       "action_no": "Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, si ese marcador no es tuyo o si ese marcador ha sido usado durante este punto de inflexión."
       }
+    ],
+    "img": [
+      "./resources/game_rules_files/equipment/ammo-cache.png"
     ]
   },
   {
@@ -1661,7 +1664,10 @@
     "name": "1 ALAMBRE DE PÚAS",
     "description": "<p>El alambre de púas es terreno Expuesto y Obstructor. Antes de la batalla, lo puedes desplegar completamente dentro de tu territorio en el suelo de la zona de aniquilación y a más de 2\" de todo otro elemento de equipo, puntos de acceso y terreno Accesible.</p> <p><b>Obstructor:</b> Cuando un agente vaya a cruzar por encima de este elemento de terreno estando a 1\" o menos del mismo, trata la distancia como 1\" adicional.</p>", 
     "weapon": [],
-    "action": []
+    "action": [],
+    "img": [
+      "./resources/game_rules_files/equipment/razor-wire.png"
+    ]
   },
   {
     "id_equip": 196,
@@ -1669,7 +1675,10 @@
     "name": "1 APARATO DE COMUNICACIONES",
     "description": "Antes de la batalla, puedes desplegar uno de tus marcadores de aparato de comunicaciones completamente dentro de tu territorio. Mientras un agente amigo controle este marcador, suma 3\" a los requisitos de distancia de sus reglas <b>APOYO</b> que se refieran a agentes amigos (p.ej., “elige a un agente amigo a 6\" o menos” sería “a 9\" o menos” en su lugar). Ten en cuenta que no puedes beneficiarte de los marcadores de aparato de comunicaciones de tu oponente.", 
     "weapon": [],
-    "action": []
+    "action": [],
+    "img": [
+      "./resources/game_rules_files/equipment/comms-device.png"
+    ]
   },
   {
     "id_equip": 197,
@@ -1677,7 +1686,10 @@
     "name": "1 MINAS",
     "description": "Antes de la batalla, puedes desplegar hasta 1 de tus marcadores de Minas completamente dentro de tu territorio y a más de 2\" todo otro marcador, punto de acceso y terreno Accesible. La primera vez que ese marcador quede dentro de la zona de control de un agente, retira el marcador e inflige 1D3+3 puntos de daño al agente.", 
     "weapon": [],
-    "action": []
+    "action": [],
+    "img": [
+      "./resources/game_rules_files/equipment/mines.png"
+    ]
   },
   {
     "id_equip": 198,
@@ -1685,7 +1697,10 @@
     "name": "2 BARRICADAS LIGERAS",
     "description": "Las barricadas ligeras son terreno Ligero, excepto los pies, que son Insignificantes y Expuestos. Antes de la batalla, puedes desplegar cualquier número de ellas completamente dentro de tu territorio, en el suelo de la zona de aniquilación y a más de 2\" de todo otro elemento de terreno de equipo, punto de acceso y terreno Accesible.", 
     "weapon": [],
-    "action": []
+    "action": [],
+    "img": [
+      "./resources/game_rules_files/equipment/light-barricade.png"
+    ]
   },
   {
     "id_equip": 199,
@@ -1693,7 +1708,10 @@
     "name": "1 BARRICADA PESADA",
     "description": "Una barricada pesada es terreno Pesado. Antes de la batalla, puedes desplegarla completamente a 4\" o menos de tu zona de descenso, en el suelo de la zona de aniquilación y a más de 2\" de todo otro elemento de terreno de equipo, punto de acceso y terreno Accesible.", 
     "weapon": [],
-    "action": []
+    "action": [],
+    "img": [
+      "./resources/game_rules_files/equipment/heavy-barricade.png"
+    ]
   },
   {
     "id_equip": 200,
@@ -1701,7 +1719,10 @@
     "name": "2 ESCALERAS",
     "description": "<p>Las escaleras son terreno Insignificante y Expuesto. Antes de la batalla, puedes desplegar cualquier número de ellas tal como se indica a continuación: </p> <p><ul><li>Completamente dentro de tu territorio.</li></ul> <ul><li> En vertical contra terreno que tenga una altura de al menos 2\".</li></ul> <ul><li>A más de 2\" de otros elementos de terreno de equipo.</li></ul> <ul><li>A más de 1\" de puertas y puntos de acceso.</li></ul></p> <p>Una vez por acción, cuando un agente trepe el elemento de terreno contra el que se apoya una escalera, trata la distancia vertical como 1\" si la escalera está dentro de la zona de control del agente durante todo el movimiento de trepar.</p>", 
     "weapon": [],
-    "action": []
+    "action": [],
+    "img": [
+      "./resources/game_rules_files/equipment/ladder.png"
+    ]
   },
   {
     "id_equip": 201,
@@ -1722,6 +1743,10 @@
       "action_yes": ["Coloca uno de tus marcadores de granada de humo a 6\" o menos de este agente. Debe ser visible para este agente, o estar situado en un terreno Aventajado o un elemento de terreno visible para este agente. El marcador genera un área de humo de 1\" horizontalmente y de una altura ilimitada verticalmente a partir de él (pero no por debajo de él)", "Mientras un agente se encuentre completamente dentro de un área de humo, se considera ofuscado para los agentes a más de 2\" de él, y viceversa. Además, cuando un agente dispare contra un agente enemigo que esté completamente dentro de un área de humo, las armas con la regla de arma Penetración 2 o Críticos de penetración 2 pasan a tener en su lugar la regla de arma Penetración 1 o Críticos de penetración 1 (respectivamente).", "En el paso de preparación de la siguiente fase de estrategia, tira 1D3. Retira ese marcador de granada de humo una vez que se haya completado un número de activaciones igual al resultado de ese D3, o al final del punto de inflexión (lo que ocurra antes)"],
       "action_no": "Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si has alcanzado el número total de veces que tu comando puede realizarla."
       }
+    ],
+    "img": [
+      "./resources/game_rules_files/equipment/utilitygrenades-example-1.png",
+      "./resources/game_rules_files/equipment/utilitygrenades-example-2.png"
     ]
   },
   {
@@ -1745,7 +1770,11 @@
         "rules": "Alcance 6\", Penetración 1, Saturación"
       }
     ],
-    "action": []
+    "action": [],
+    "img": [
+      "./resources/game_rules_files/equipment/explosivegrenades-example-1.png",
+      "./resources/game_rules_files/equipment/explosivegrenades-example-2.png"
+    ]
   },
   {
     "id_equip": 203,
@@ -1768,6 +1797,10 @@
       "action_yes": ["Igual que la acción de Reposicionarse salvo que el agente activo no puede moverse más que su atributo Movimiento menos 2\" y no puede trepar, dejarse caer ni saltar, ni usar reglas de comando que lo retiren y lo desplieguen de nuevo (p.ej. Propulsor de salto de los <span class=\"faction\">SUCESORES RECUPERADORES</span> o Paso sombrío de las <span class=\"faction\">MANDRÁGORAS</span> ).", "Antes de que este agente se mueva, retira la barricada portátil a la que está conectado. Después de que se mueva, despliega la barricada portátil de modo que esté conectada de nuevo, pero la barricada portátil no puede desplegarse a 2\" o menos de otros elementos de terreno de equipo, puntos de acceso o terreno accesible. Si esto no es posible, la barricada portátil no se vuelve a desplegar."],
       "action_no": "Esta acción se trata como una acción de Reposicionarse. Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni en la misma activación en la que ha realizado una acción de Retroceder o Carga."
       }
+    ],
+    "img": [
+      "./resources/game_rules_files/equipment/portable-barricade.png",
+      "./resources/game_rules_files/equipment/portable_barricade-1.png"
     ]
   }
 ]

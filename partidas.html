@@ -1542,9 +1542,11 @@
                 let equipList = [];
                 if (Array.isArray(dataEquipment)) {
                     equipList = dataEquipment.filter(item => item.faction === factionKey);
+                } else if (dataEquipment && dataEquipment[factionKey]) {
+                    equipList = dataEquipment[factionKey];
                 }
 
-                if (equipList.length === 0) {
+                if (!equipList || equipList.length === 0) {
                     equipPane.innerHTML = '<div class="alert alert-light text-center p-4">Esta facción no posee equipamiento registrado en la base de datos.</div>';
                 } else {
                     equipList.sort((a, b) => a.name.localeCompare(b.name));
@@ -1555,60 +1557,77 @@
                             ? item.description.map(line => `<p class="mb-1">${line}</p>`).join('')
                             : `<p class="mb-1">${item.description}</p>`;
 
+                        // Armas (si el arreglo 'weapon' existe y tiene elementos)
                         let weaponHtml = '';
-                        if (item.ATK) {
+                        if (item.weapon && item.weapon.length > 0) {
+                            const rowsHtml = item.weapon.map(w => `
+                                <tr>
+                                    <td class="fw-bold text-start">${w.w_name}</td>
+                                    <td class="text-center">${w.ATK}</td>
+                                    <td class="text-center">${w.HIT}</td>
+                                    <td class="text-center">${w.DMG}</td>
+                                    <td class="text-start fst-italic">${w.rules || '-'}</td>
+                                </tr>
+                            `).join('');
+
                             weaponHtml = `
-                                <div class="table-responsive mt-2">
-                                    <table class="table table-sm table-dark table-bordered mb-0 small text-center">
-                                        <thead>
-                                            <tr>
-                                                <th class="text-start">ARMA</th>
-                                                <th>ATQ</th>
-                                                <th>IMP</th>
-                                                <th>DAÑO</th>
-                                                <th class="text-start">REGLAS</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="fw-bold text-start text-warning">${item.name}</td>
-                                                <td>${item.ATK}</td>
-                                                <td>${item.HIT}</td>
-                                                <td>${item.DMG}</td>
-                                                <td class="text-start fst-italic">${item.special_rules || '-'}</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            `;
+                            <div class="equip-weapon-table mt-3">
+                                <table class="table table-sm table-dark table-bordered mb-0">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th class="text-start">NOMBRE</th>
+                                            <th>ATAQ.</th>
+                                            <th>IMP.</th>
+                                            <th>DAÑO</th>
+                                            <th class="text-start">REGLAS DE ARMAS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${rowsHtml}
+                                    </tbody>
+                                </table>
+                            </div>`;
                         }
 
-                        let actionHtml = '';
-                        if (item.action && item.action.length > 0) {
-                            item.action.forEach(a => {
-                                actionHtml += `
-                                    <div class="unique-actions-section mt-2 shadow-sm rounded">
-                                        <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
-                                            <span class="fw-bold small">${a.action_name}</span>
-                                            <span class="badge bg-secondary">${a.action_cost}</span>
-                                        </div>
-                                        <div class="content p-2 border border-top-0 rounded-bottom small bg-white text-start">
-                                            ${a.action_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span><span>${Array.isArray(a.action_yes) ? a.action_yes.join(' ') : a.action_yes}</span></p>` : ''}
-                                            ${a.action_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span><span>${a.action_no}</span></p>` : ''}
-                                        </div>
-                                    </div>
-                                `;
-                            });
-                        }
+                        const actionHtml = item.action?.length ?
+                            item.action.map(a => {
+                                const descYes = Array.isArray(a.action_yes)
+                                    ? a.action_yes.map(line => `
+                                    <p class="mb-1 d-flex align-items-start">
+                                        <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
+                                        <span>${line}</span>
+                                    </p>`).join('')
+                                    : `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.action_yes}</span></p>`;
+
+                                const descNo = a.action_no ? `
+                                <p class="mb-0 d-flex align-items-start">
+                                    <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                                    <span>${a.action_no}</span>
+                                </p>` : '';
+
+                                return `
+                            <div class="crit-op mt-3" data-type="action">
+                                <div class="header">
+                                    <div>${a.action_name}</div>
+                                    <div class="ap-box">${a.action_cost}</div>
+                                </div>
+                                <div class="content bg-white">
+                                    ${descYes}
+                                    ${descNo}
+                                </div>
+                            </div>`;
+                            }).join('') : '';
 
                         htmlEquip += `
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="card h-100 shadow-sm border border-danger border-opacity-50">
-                                    <div class="card-header bg-danger text-white fw-bold py-1 px-2 text-uppercase small text-center">
-                                        ${item.name}
+                            <div class="col-12 col-md-6 mb-4">
+                                <div class="equipment-card h-100 shadow-sm border border-danger rounded overflow-hidden">
+                                    <div class="p-2 bg-danger text-white text-center">
+                                        <h6 class="mb-0 fw-bold text-uppercase">${item.name}</h6>
                                     </div>
-                                    <div class="card-body bg-light p-3 small lh-sm">
-                                        ${descHtml}
+                                    <div class="p-3 bg-light text-dark">
+                                        <div class="equipment-description small">
+                                            ${descHtml}
+                                        </div>
                                         ${weaponHtml}
                                         ${actionHtml}
                                     </div>

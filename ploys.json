@@ -2884,8 +2884,8 @@
         "faction": "wrecka-krew",
         "type": "strategic",
         "cps": "1PM",
-        "name": "A TOPE",
-        "description": "Cada agente <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo que tenga una orden de Trabarse puede recuperar inmediatamente 1D3+1 heridas perdidas (tira por separado para cada uno).",
+        "name": "VITAMINADOZ",
+        "description": "Cada agente <span class=\"faction\">DEMOLEDOREZ</span> amigo que tenga una orden de Trabarse puede recuperar inmediatamente 1D3+1 heridas perdidas (tira por separado para cada uno).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2894,7 +2894,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "DESTRUCCIÓN",
-        "description": "Las armas a distancia de los agentes <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigos tienen la regla de armas Saturar.",
+        "description": "Las armas a distancia de los agentes <span class=\"faction\">DEMOLEDOREZ</span> amigos tienen la regla de armas Saturación.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2902,8 +2902,8 @@
         "faction": "wrecka-krew",
         "type": "strategic",
         "cps": "1PM",
-        "name": "TIPOS DUROS",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo que tenga una orden de Trabarse, puedes repetir uno de tus dados de defensa.",
+        "name": "TIPOZ DUROZ",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo que tenga una orden de Trabarse, puedes repetir uno de tus dados de defensa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2912,7 +2912,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "¡WAAAGH!",
-        "description": "Las armas de combate de los agentes <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigos tienen la regla de armas Equilibrada.",
+        "description": "Las armas de combate de los agentes <span class=\"faction\">DEMOLEDOREZ</span> amigos tienen la regla de armas Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2920,8 +2920,8 @@
         "faction": "wrecka-krew",
         "type": "tactical",
         "cps": "1PM",
-        "name": "TRABAJO DE DEMOLICIÓN",
-        "description": "Usa este ardid de tiroteo después de que un agente <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo realice la acción <b>Combatir</b> o <b>Disparar</b>, justo antes de que los agentes incapacitados sean retirados (si los hay). Coloca uno de tus marcadores de Demolición dentro del rango de control del objetivo (si está usando un arma de Estallido, el objetivo primario). Siempre que un agente <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo (excluyendo <b>GARRAPATO BOMBA</b>) dispare, combatiendo o contraataque contra un agente que esté a 3\" de ese marcador, puedes gastar un punto de Demolición gratis (incluso si no tienes ninguno). En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador.",
+        "name": "TRABAJO DE DEMOLIZIÓN",
+        "description": "Usa este ardid de tiroteo después de que un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo realice la acción <b>Combatir</b> o <b>Disparar</b>, justo antes de retirar a los agentes incapacitados (si los hay). Sitúa uno de tus marcadores de Demolizión en la zona de combate del blanco (del blanco principal si se usa un arma Área). Cuando un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo (salvo <b>GARRAPATO BOMBA</b>) dispare, combata o contraataque a un agente situado a 3\" o menos de ese marcador, puedes gastar un punto de Demolizión gratis (aunque no tengas ninguno). En el paso de preparación de la siguiente fase de estrategia, retira ese marcador.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2929,8 +2929,8 @@
         "faction": "wrecka-krew",
         "type": "tactical",
         "cps": "1PM",
-        "name": "SOLO UN RASGUÑO",
-        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflija Daño Normal a un agente <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo (excluyendo <b>GARRAPATO BOMBA</b>). Ignora ese daño infligido.",
+        "name": "ZOLO EZ UN RAZGUÑO",
+        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflija daño normal a un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo (salvo <b>GARRAPATO BOMBA</b>). Ignora ese daño infligido.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2938,8 +2938,8 @@
         "faction": "wrecka-krew",
         "type": "tactical",
         "cps": "1PM",
-        "name": "¡KABOOM!",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo realice la acción <b>Disparar</b> y se seleccione un arma con la regla de armas Estallido. Hasta el final de esa acción, suma 1\" al Estallido de ese arma y tiene la regla de armas Severa al disparar al objetivo primario. No puedes usar este ardid y la regla Cohetes Taladro (ver equipo) durante la misma acción. Ten en cuenta que Severa no genera un punto de Demolición (ya que no es un 6).",
+        "name": "¡KABUM!",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo realice la acción <b>Disparar</b> y se seleccione un arma con la regla de armas Área. Hasta el final de esa acción, suma 1\" al Área de esa arma y tiene la regla de armas Severa al disparar al blanco principal. No puedes usar este ardid y la regla Kobetez taladro (ver equipo) durante la misma acción. Ten en cuenta que Severa no genera un punto de Demolizión (ya que no es un 6).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2948,7 +2948,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "PELEA DE VERDAD",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>CHIKO ROMPEDOR</b> <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> o <b>JEFASO NOBLE</b> <span class=\"faction\">EQUIPO DE DEMOLICIÓN</span> amigo. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>TRONCHADOR</b> <span class=\"faction\">DEMOLEDOREZ</span> o <b>NOBLE JEFAZO</b> <span class=\"faction\">DEMOLEDOREZ</span> amigo. Ese agente puede realizar dos acciones de <b>Combatir</b> durante esa activación.",
         "typename": "Ardid de Tiroteo"
     },
     {

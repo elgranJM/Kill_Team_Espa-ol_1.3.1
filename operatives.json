@@ -20995,7 +20995,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">CULTO DEL CAOS</span>, CAOS, LIDER, CONGREGACIÓN OSCURA, DEMAGOGO DEL CULTO",
+            "keywords": "<span class=\"faction\">CULTO DEL CAOS</span>, CAOS, LÍDER, CONGREGACIÓN OSCURA, DEMAGOGO DEL CULTO",
             "peana": "32"
         },
         {
@@ -21135,7 +21135,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 },
                 {
-                    "name": "VORTICE MALEFICO",
+                    "name": "VÓRTICE MALÉFICO",
                     "cost": "1PA",
                     "description": [
                         "<b>PSÍQUICA.</b> Retira tu marcador de Vortice maléfico de la zona de aniquilación (de haberlo). A continuación, coloca tu marcador de Vortice maléfico visible para este agente, o sobre un terreno Aventajado de un elemento de terreno que sea visible para este agente. Inflige 1 daño a cada agente enemigo a 2\" o menos de ese marcador. Además, en el paso de preparación de cada fase de estrategia, inflige 1 daño a cada agente enemigo a 2\" o menos de ese marcador."

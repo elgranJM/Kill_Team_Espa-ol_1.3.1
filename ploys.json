@@ -1229,7 +1229,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Exaltación en el Dolor",
-        "description": "Puedes ignorar cualquier cambio en el <span class=\"text-warning-emphasis\">atributo de Impacto</span> de las armas de los agentes de la <span class=\"faction\">SECTA DEL CAOS</span> amigos <span class=\"text-warning-emphasis\"> armas</span> por estar lesionados <span class=\"text-decoration-line-through text-warning-emphasis\">(incluyendo los atributos de sus armas)</span>\nSiempre que un agente dispare contra un agente de la <span class=\"faction\">SECTA DEL CAOS</span> amigo que esté herido, puedes repetir uno de tus dados de defensa.\n",
+        "description": "Puedes ignorar cualquier cambio en el <span class=\"text-warning-emphasis\">atributo de Impacto</span> de las armas de los agentes <span class=\"faction\">CULTO DEL CAOS</span> amigos <span class=\"text-warning-emphasis\"> armas</span> por estar lesionados <span class=\"text-decoration-line-through text-warning-emphasis\">(incluyendo los atributos de sus armas)</span>\nSiempre que un agente dispare contra un agente <span class=\"faction\">CULTO DEL CAOS</span> amigo que esté herido, puedes repetir uno de tus dados de defensa.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1237,8 +1237,8 @@
         "faction": "chaos-cult",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Embestida Ferviente",
-        "description": "Las armas de combate de los agentes de la <span class='faction'>SECTA DEL CAOS</span> amigos tienen la regla de armas Certera 1<span class=\"text-info-emphasis\">, o la regla de armas Precisa 2 si ese agente amigo es un agente <b>MUTANTE</b> o <b>TORMENTO</b>.</span>\n",
+        "name": "Asalto Ferviente",
+        "description": "Las armas de combate de los agentes <span class='faction'>CULTO DEL CAOS</span> amigos tienen la regla de armas Certera 1<span class=\"text-info-emphasis\">, o la regla de armas Precisa 2 si ese agente amigo es un agente <b>MUTANTE</b> o <b>TORMENTO</b>.</span>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1247,7 +1247,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Criaturas de Pesadilla",
-        "description": "Siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menor si al menos uno de esos agentes enemigos está a 2\" de cualquier agente <b>MUTANTE</b> de la <span class='faction'>SECTA DEL CAOS</span> o <b>TORMENTO</b> de la <span class='faction'>SECTA DEL CAOS</span> amigo. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.",
+        "description": "Siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menor si al menos uno de esos agentes enemigos está a 2\" de cualquier agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1256,7 +1256,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Aura Enfermiza",
-        "description": "Siempre que un agente enemigo esté a 2\" de cualquier agente <b>MUTANTE</b> de la <span class='faction'>SECTA DEL CAOS</span> o <b>TORMENTO</b> de la <span class='faction'>SECTA DEL CAOS</span> amigo, empeora el atributo de Impacto de las armas de ese agente enemigo en 1. Esto no es acumulativo con estar lesionado.",
+        "description": "Siempre que un agente enemigo esté a 2\" de cualquier agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo, empeora el atributo de Impacto de las armas de ese agente enemigo en 1. Esto no es acumulativo con estar lesionado.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1264,8 +1264,8 @@
         "faction": "chaos-cult",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Seguidor Fiel",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>COMUNA OSCURA</b> de la <span class='faction'>SECTA DEL CAOS</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente de la <span class='faction'>SECTA DEL CAOS</span> amigo (excluyendo <b>COMUNA OSCURA</b>) visible para y a 3\" de ese agente <b>COMUNA OSCURA</b> para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción.  <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas Estallido o Torrente.</p>",
+        "name": "Fiel Seguidor",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>CONGREGACIÓN OSCURA</b> <span class='faction'>CULTO DEL CAOS</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <span class='faction'>CULTO DEL CAOS</span> amigo (excluyendo <b>CONGREGACIÓN OSCURA</b>) visible para y a 3\" de ese agente <b>CONGREGACIÓN OSCURA</b> para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción.  <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas Estallido o Torrente.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1273,8 +1273,8 @@
         "faction": "chaos-cult",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Desaparición Frenética",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>MUTANTE</b> de la <span class='faction'>SECTA DEL CAOS</span> o <b>TORMENTO</b> de la <span class='faction'>SECTA DEL CAOS</span> amigo sea incapacitado<span class=\"text-info-emphasis\">, antes de que sea retirado de la zona de aniquilación</span>. Inflige 1D3 de daño (o D6 de daño en su lugar si ese agente amigo es un <b>TORMENTO</b>) a un agente enemigo visible para y a 2\" de ese agente amigo.\n",
+        "name": "Muerte y Frenesí",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo sea incapacitado<span class=\"text-info-emphasis\">, antes de que sea retirado de la zona de aniquilación</span>. Inflige 1D3 de daño (o D6 de daño en su lugar si ese agente amigo es un <b>TORMENTO</b>) a un agente enemigo visible para y a 2\" de ese agente amigo.\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1282,8 +1282,8 @@
         "faction": "chaos-cult",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Desatar al Demonio",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MUTANTE</b> de la <span class='faction'>SECTA DEL CAOS</span> o <b>TORMENTO</b> de la <span class='faction'>SECTA DEL CAOS</span> amigo. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>, y una de ellas puede ser gratuita.\n",
+        "name": "Desata al Daemon",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>, y una de ellas puede ser gratuita.\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1291,8 +1291,8 @@
         "faction": "chaos-cult",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Mutación Aborrecible",
-        "description": "Usa este ardid de tiroteo cuando se active un agente de la <span class='faction'>SECTA DEL CAOS</span> amigo (excluyendo <b>COMUNA OSCURA</b>). Elige un <b>DON MALDITO</b> para que ese agente lo gane. Esto es además de cualquier <b>DON MALDITO</b> que ya tenga. Cada agente amigo solo puede ser seleccionado para este ardid una vez por batalla, y si ese agente se convierte en uno diferente (ver regla de facción Mutación), todavía tiene ese <b>DON MALDITO</b>.",
+        "name": "Mutación Horrenda",
+        "description": "Usa este ardid de tiroteo cuando se active un agente <span class='faction'>CULTO DEL CAOS</span> amigo (excluyendo <b>CONGREGACIÓN OSCURA</b>). Elige un <b>DON MALDITO</b> para que ese agente lo gane. Esto es además de cualquier <b>DON MALDITO</b> que ya tenga. Cada agente amigo solo puede ser seleccionado para este ardid una vez por batalla, y si ese agente se convierte en uno diferente (ver regla de facción Mutación), todavía tiene ese <b>DON MALDITO</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {

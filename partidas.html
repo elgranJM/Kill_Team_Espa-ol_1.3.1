@@ -121,6 +121,49 @@
         #factionModalTabs .nav-link.active i {
             color: #ffffff !important;
         }
+
+        /* Estilos para Ardides Estratégicos */
+        .strat-ploys-container {
+            min-height: 52px;
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 4px;
+            scrollbar-width: thin;
+            scrollbar-color: #ffc107 #f8f9fa;
+            transition: min-height 0.2s ease;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar-track {
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar-thumb {
+            background-color: #ffc107;
+            border-radius: 4px;
+        }
+
+        .active-ploy-card {
+            border-left: 4px solid #ffc107 !important;
+            transition: all 0.2s ease;
+        }
+
+        .active-ploy-card:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .ploy-modal-card {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .ploy-modal-card.is-active {
+            border-color: #198754 !important;
+            background-color: #f8fff9;
+        }
     </style>
 </head>
 
@@ -225,19 +268,19 @@
                                         class="bi bi-hourglass-split me-2"></i>Punto de Inflexión</h6>
                                 <div class="btn-group" role="group">
                                     <input type="radio" class="btn-check" name="tpRadio" id="tp1" autocomplete="off"
-                                        checked onchange="validateAllScores()">
+                                        checked onchange="onTurningPointChange()">
                                     <label class="btn btn-outline-dark fw-bold px-4" for="tp1">1</label>
 
                                     <input type="radio" class="btn-check" name="tpRadio" id="tp2" autocomplete="off"
-                                        onchange="validateAllScores()">
+                                        onchange="onTurningPointChange()">
                                     <label class="btn btn-outline-dark fw-bold px-4" for="tp2">2</label>
 
                                     <input type="radio" class="btn-check" name="tpRadio" id="tp3" autocomplete="off"
-                                        onchange="validateAllScores()">
+                                        onchange="onTurningPointChange()">
                                     <label class="btn btn-outline-dark fw-bold px-4" for="tp3">3</label>
 
                                     <input type="radio" class="btn-check" name="tpRadio" id="tp4" autocomplete="off"
-                                        onchange="validateAllScores()">
+                                        onchange="onTurningPointChange()">
                                     <label class="btn btn-outline-dark fw-bold px-4" for="tp4">4</label>
                                 </div>
                             </div>
@@ -328,7 +371,7 @@
 
                             <!-- Puntos Totales y PM -->
                             <div
-                                class="d-flex justify-content-between align-items-center mb-4 bg-light p-3 rounded border">
+                                class="d-flex justify-content-between align-items-center mb-3 bg-light p-3 rounded border">
                                 <div class="text-center">
                                     <div class="small text-muted fw-bold text-uppercase">Total PV</div>
                                     <div class="vp-total text-primary" id="p1-total-vp">0</div>
@@ -343,6 +386,25 @@
                                         <button class="btn btn-success counter-btn shadow-sm"
                                             style="width: 40px; height: 40px;" onclick="updateCounter('p1-cp', 1)"><i
                                                 class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ardides de Estrategia (Gambito por TP) -->
+                            <div class="op-section border-warning border-2 border-opacity-50 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos (TP <span class="current-tp-label">1</span>)
+                                    </span>
+                                    <button class="btn btn-warning btn-sm fw-bold shadow-sm" type="button"
+                                        id="p1-btn-strat-ploys" onclick="openStrategicPloysModal('p1')" disabled
+                                        title="Gestionar ardides estratégicos para este TP">
+                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span class="badge bg-dark ms-1" id="p1-active-ploys-count">0</span>
+                                    </button>
+                                </div>
+                                <div id="p1-active-strategic-ploys" class="d-flex flex-column gap-2 strat-ploys-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small>
                                     </div>
                                 </div>
                             </div>
@@ -518,7 +580,7 @@
 
                             <!-- Puntos Totales y PM -->
                             <div
-                                class="d-flex justify-content-between align-items-center mb-4 bg-light p-3 rounded border">
+                                class="d-flex justify-content-between align-items-center mb-3 bg-light p-3 rounded border">
                                 <div class="text-center">
                                     <div class="small text-muted fw-bold text-uppercase">Total PV</div>
                                     <div class="vp-total text-danger" id="p2-total-vp">0</div>
@@ -533,6 +595,25 @@
                                         <button class="btn btn-success counter-btn shadow-sm"
                                             style="width: 40px; height: 40px;" onclick="updateCounter('p2-cp', 1)"><i
                                                 class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ardides de Estrategia (Gambito por TP) -->
+                            <div class="op-section border-warning border-2 border-opacity-50 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos (TP <span class="current-tp-label">1</span>)
+                                    </span>
+                                    <button class="btn btn-warning btn-sm fw-bold shadow-sm" type="button"
+                                        id="p2-btn-strat-ploys" onclick="openStrategicPloysModal('p2')" disabled
+                                        title="Gestionar ardides estratégicos para este TP">
+                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span class="badge bg-dark ms-1" id="p2-active-ploys-count">0</span>
+                                    </button>
+                                </div>
+                                <div id="p2-active-strategic-ploys" class="d-flex flex-column gap-2 strat-ploys-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small>
                                     </div>
                                 </div>
                             </div>
@@ -692,10 +773,10 @@
 
     <!-- Lógica del Gestor de Partidas -->
     <script>
-        // Estado del Juego (Para la Selección Secreta)
+        // Estado del Juego (Para la Selección Secreta y Ardides)
         let gameState = {
-            p1: { primary: null },
-            p2: { primary: null },
+            p1: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] } },
+            p2: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] } },
             revealed: false,
             currentPlayerSelecting: 1,
             loading: false // <-- NUEVO: Bandera de control para evitar sobreescrituras en carga
@@ -863,7 +944,9 @@
         function executeResetGame() {
             // 1. Reset de Estado Lógico Interno
             gameState.p1.primary = null;
+            gameState.p1.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
             gameState.p2.primary = null;
+            gameState.p2.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
             gameState.revealed = false;
 
             // --- NUEVO: Reset de la Operación Crítica (CritOp) Global ---
@@ -936,6 +1019,11 @@
             // Volver el Punto de Inflexión (Turno) al TP1
             const tp1Radio = document.getElementById('tp1');
             if (tp1Radio) tp1Radio.checked = true;
+            document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = '1');
+
+            // Actualizar vista de ardides activos
+            updateActiveStrategicPloysDisplay('p1');
+            updateActiveStrategicPloysDisplay('p2');
 
             // Recalcular los totales para que la UI muestre 0 puntos globales
             calculateTotals();
@@ -1145,6 +1233,9 @@
 
                 loadGameState();
                 calculateTotals();
+                updateActiveStrategicPloysDisplay('p1');
+                updateActiveStrategicPloysDisplay('p2');
+                onTurningPointChange();
 
             } catch (error) {
                 console.error("Error cargando los datos del juego:", error);
@@ -1211,8 +1302,15 @@
                 factionRulesBtn.disabled = !factionKey || !dataFactions[factionKey];
             }
 
+            const stratBtn = document.getElementById(`${playerPrefix}-btn-strat-ploys`);
+            if (stratBtn) {
+                stratBtn.disabled = !factionKey || !dataFactions[factionKey];
+            }
+
             document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.remove('d-flex');
             document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.add('d-none');
+
+            updateActiveStrategicPloysDisplay(playerPrefix);
 
             if (!factionKey || !dataFactions[factionKey]) return;
 
@@ -1279,6 +1377,294 @@
 
             // NUEVO: Guardar estado cuando la misión secundaria se hace pública
             saveGameState();
+        }
+
+        // --- SISTEMA DE GESTIÓN Y ACTIVACIÓN DE ARDIDES ESTRATÉGICOS ---
+
+        function getCurrentTurn() {
+            const checked = document.querySelector('input[name="tpRadio"]:checked');
+            if (!checked) return 1;
+            return parseInt(checked.id.replace('tp', '')) || 1;
+        }
+
+        function calculateDynamicLimit(type, key, turn) {
+            if (type === 'crit' && dataCritOps[key]) {
+                const op = dataCritOps[key];
+                if (Array.isArray(op.limite_puntos) && op.limite_puntos[turn - 1] !== undefined) {
+                    return op.limite_puntos[turn - 1];
+                }
+            }
+            return 6;
+        }
+
+        function onTurningPointChange() {
+            const currentTP = getCurrentTurn();
+            document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = currentTP);
+            updateActiveStrategicPloysDisplay('p1');
+            updateActiveStrategicPloysDisplay('p2');
+            validateAllScores();
+            saveGameState();
+        }
+
+        function getPlayerPloysForTP(playerPrefix, tp) {
+            if (!gameState[playerPrefix]) {
+                gameState[playerPrefix] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] } };
+            }
+            if (!gameState[playerPrefix].strategicPloys) {
+                gameState[playerPrefix].strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
+            }
+            if (!Array.isArray(gameState[playerPrefix].strategicPloys[tp])) {
+                gameState[playerPrefix].strategicPloys[tp] = [];
+            }
+            return gameState[playerPrefix].strategicPloys[tp];
+        }
+
+        function openStrategicPloysModal(playerPrefix) {
+            const factionSelect = document.getElementById(`${playerPrefix}-faction`);
+            const factionKey = factionSelect ? factionSelect.value : "";
+
+            if (!factionKey) {
+                mostrarNotificacion("Falta selección: Por favor, selecciona primero tu facción para ver sus ardides de estrategia.");
+                return;
+            }
+
+            gameState.currentPlayerSelecting = playerPrefix === 'p1' ? 1 : 2;
+            renderStrategicPloysModal(playerPrefix);
+
+            const modal = new bootstrap.Modal(document.getElementById('strategicPloysModal'));
+            modal.show();
+        }
+
+        function renderStrategicPloysModal(playerPrefix) {
+            const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
+            const currentTP = getCurrentTurn();
+            const currentCP = parseInt(document.getElementById(`${playerPrefix}-cp`).innerText) || 0;
+            const playerName = document.querySelector(`.player-${playerPrefix === 'p1' ? '1' : '2'} .name-input`).value.trim() || (playerPrefix === 'p1' ? 'Jugador 1' : 'Jugador 2');
+            const factionName = factionTranslations[factionKey] || factionKey;
+
+            // Actualizar cabecera del modal
+            const imgEl = document.getElementById('stratModalFactionImg');
+            if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
+            
+            const titleEl = document.getElementById('stratModalTitle');
+            if (titleEl) titleEl.innerHTML = `<i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos — ${factionName}`;
+            
+            const subTitleEl = document.getElementById('stratModalSubtitle');
+            if (subTitleEl) subTitleEl.innerText = `Fase de Estrategia (Gambito) — Punto de Inflexión ${currentTP}`;
+            
+            const playerEl = document.getElementById('stratModalPlayerName');
+            if (playerEl) playerEl.innerText = playerName;
+            
+            const cpEl = document.getElementById('stratModalCP');
+            if (cpEl) cpEl.innerText = `${currentCP} PM`;
+
+            const modalBody = document.getElementById('stratModalBody');
+            if (!modalBody) return;
+
+            // Filtrar ardides estratégicos de esta facción
+            let stratPloys = [];
+            if (Array.isArray(dataPloys)) {
+                stratPloys = dataPloys.filter(p => p.faction === factionKey && (p.type === 'strategic' || p.typename?.toLowerCase().includes('estrategia')));
+            }
+
+            if (stratPloys.length === 0) {
+                modalBody.innerHTML = '<div class="alert alert-light text-center p-4">No se encontraron ardides de estrategia para esta facción en la base de datos.</div>';
+                return;
+            }
+
+            const activeList = getPlayerPloysForTP(playerPrefix, currentTP);
+            let html = '<div class="row g-3">';
+
+            stratPloys.forEach(ploy => {
+                const costMatch = String(ploy.cps || '1').match(/\d+/);
+                const cost = costMatch ? parseInt(costMatch[0]) : 1;
+                const isActive = activeList.includes(ploy.id_ploy);
+                const canAfford = currentCP >= cost;
+
+                let actionButtonHtml = '';
+                if (isActive) {
+                    actionButtonHtml = `
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-success py-2 px-3 fw-bold"><i class="bi bi-check-circle-fill me-1"></i>Activo en TP ${currentTP}</span>
+                            <button type="button" class="btn btn-outline-danger btn-sm fw-bold" onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" title="Desactivar y reembolsar PM">
+                                <i class="bi bi-arrow-counterclockwise me-1"></i>Desactivar (+${cost} PM)
+                            </button>
+                        </div>
+                    `;
+                } else if (canAfford) {
+                    actionButtonHtml = `
+                        <button type="button" class="btn btn-warning btn-sm fw-bold px-3 shadow-sm" onclick="activateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})">
+                            <i class="bi bi-lightning-charge-fill me-1"></i>Activar (${cost} PM)
+                        </button>
+                    `;
+                } else {
+                    actionButtonHtml = `
+                        <button type="button" class="btn btn-secondary btn-sm fw-bold px-3 disabled" disabled title="Puntos de Mando insuficientes">
+                            <i class="bi bi-x-circle me-1"></i>PM Insuficiente (${cost} PM)
+                        </button>
+                    `;
+                }
+
+                html += `
+                    <div class="col-12">
+                        <div class="card ploy-modal-card ${isActive ? 'is-active border-success' : 'border-secondary border-opacity-25'} shadow-sm">
+                            <div class="card-header ${isActive ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center py-2">
+                                <span class="fw-bold text-uppercase small"><i class="bi bi-shield-shaded me-1"></i>${ploy.name}</span>
+                                <span class="badge ${isActive ? 'bg-light text-success' : 'bg-warning text-dark'} fw-bold">${ploy.cps || '1 PM'}</span>
+                            </div>
+                            <div class="card-body bg-white p-3">
+                                <div class="card-text small lh-sm text-dark mb-3">${ploy.description}</div>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                    <small class="text-muted fst-italic">Ardid de Estrategia (Inicio de TP)</small>
+                                    ${actionButtonHtml}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            modalBody.innerHTML = html;
+        }
+
+        function activateStrategicPloy(playerPrefix, ployId) {
+            const currentTP = getCurrentTurn();
+            const activeList = getPlayerPloysForTP(playerPrefix, currentTP);
+            if (activeList.includes(ployId)) return;
+
+            const ploy = dataPloys.find(p => p.id_ploy === ployId);
+            if (!ploy) return;
+
+            const costMatch = String(ploy.cps || '1').match(/\d+/);
+            const cost = costMatch ? parseInt(costMatch[0]) : 1;
+
+            const cpEl = document.getElementById(`${playerPrefix}-cp`);
+            let currentCP = parseInt(cpEl.innerText) || 0;
+
+            if (currentCP < cost) {
+                mostrarNotificacion("Puntos de Mando insuficientes: No tienes suficientes PM para activar este ardid.");
+                return;
+            }
+
+            // Deducir Puntos de Mando
+            updateCounter(`${playerPrefix}-cp`, -cost);
+
+            // Registrar en el estado del jugador para este TP
+            activeList.push(ployId);
+
+            // Actualizar interfaz del tablero y del modal
+            updateActiveStrategicPloysDisplay(playerPrefix);
+            renderStrategicPloysModal(playerPrefix);
+            saveGameState();
+
+            mostrarNotificacion(`Ardid "${ploy.name}" activado para el TP ${currentTP} (-${cost} PM).`);
+        }
+
+        function deactivateStrategicPloy(playerPrefix, ployId) {
+            const currentTP = getCurrentTurn();
+            const activeList = getPlayerPloysForTP(playerPrefix, currentTP);
+            const index = activeList.indexOf(ployId);
+            if (index === -1) return;
+
+            const ploy = dataPloys.find(p => p.id_ploy === ployId);
+            const costMatch = ploy ? String(ploy.cps || '1').match(/\d+/) : null;
+            const cost = costMatch ? parseInt(costMatch[0]) : 1;
+
+            // Retirar del estado
+            activeList.splice(index, 1);
+
+            // Reembolsar Puntos de Mando
+            updateCounter(`${playerPrefix}-cp`, cost);
+
+            // Actualizar interfaz del tablero y del modal
+            updateActiveStrategicPloysDisplay(playerPrefix);
+            renderStrategicPloysModal(playerPrefix);
+            saveGameState();
+
+            mostrarNotificacion(`Ardid "${ploy ? ploy.name : ''}" desactivado (+${cost} PM reembolsado).`);
+        }
+
+        function syncStratSectionsHeight() {
+            const c1 = document.getElementById('p1-active-strategic-ploys');
+            const c2 = document.getElementById('p2-active-strategic-ploys');
+            if (!c1 || !c2) return;
+
+            // En dispositivos móviles (menor a 768px), las columnas van apiladas
+            if (window.innerWidth < 768) {
+                c1.style.minHeight = 'auto';
+                c2.style.minHeight = 'auto';
+                return;
+            }
+
+            // Resetear para medir altura natural
+            c1.style.minHeight = 'auto';
+            c2.style.minHeight = 'auto';
+
+            requestAnimationFrame(() => {
+                const h1 = c1.scrollHeight || c1.offsetHeight;
+                const h2 = c2.scrollHeight || c2.offsetHeight;
+                const maxH = Math.max(h1, h2, 52);
+
+                c1.style.minHeight = `${maxH}px`;
+                c2.style.minHeight = `${maxH}px`;
+            });
+        }
+
+        function updateActiveStrategicPloysDisplay(playerPrefix) {
+            const currentTP = getCurrentTurn();
+            const activeContainer = document.getElementById(`${playerPrefix}-active-strategic-ploys`);
+            const countBadge = document.getElementById(`${playerPrefix}-active-ploys-count`);
+            const factionBtn = document.getElementById(`${playerPrefix}-btn-strat-ploys`);
+            const factionKey = document.getElementById(`${playerPrefix}-faction`)?.value;
+
+            if (factionBtn) {
+                factionBtn.disabled = !factionKey || !dataFactions[factionKey];
+            }
+
+            if (!activeContainer) return;
+
+            const activeList = getPlayerPloysForTP(playerPrefix, currentTP);
+
+            if (countBadge) {
+                countBadge.innerText = activeList.length;
+            }
+
+            if (activeList.length === 0) {
+                activeContainer.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-2"><small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small></div>';
+                syncStratSectionsHeight();
+                return;
+            }
+
+            let html = '';
+            activeList.forEach(ployId => {
+                const ploy = dataPloys.find(p => p.id_ploy === ployId);
+                if (!ploy) return;
+
+                html += `
+                    <div class="active-ploy-card p-2 bg-white rounded border border-warning shadow-sm">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="fw-bold text-dark small">
+                                <i class="bi bi-lightning-charge-fill text-warning me-1"></i>${ploy.name}
+                            </span>
+                            <div class="d-flex align-items-center gap-1">
+                                <span class="badge bg-dark" style="font-size: 0.7rem;">${ploy.cps || '1 PM'}</span>
+                                <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0" 
+                                    onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" 
+                                    title="Desactivar ardid y recuperar PM">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-dark small lh-sm" style="font-size: 0.82rem;">
+                            ${ploy.description}
+                        </div>
+                    </div>
+                `;
+            });
+
+            activeContainer.innerHTML = html;
+            syncStratSectionsHeight();
         }
 
         // 4. (Opcional pero recomendado) Función de validación masiva si el usuario cambia de turno hacia atrás
@@ -1829,7 +2215,8 @@
                 critVp: document.getElementById(`${p}-crit-vp`).innerText,
                 tacVp: document.getElementById(`${p}-tac-vp`).innerText,
                 enemySize: document.getElementById(`${p}-enemy-size`).value,
-                kills: document.getElementById(`${p}-kills`).innerText
+                kills: document.getElementById(`${p}-kills`).innerText,
+                strategicPloys: (gameState[p] && gameState[p].strategicPloys) ? gameState[p].strategicPloys : { 1: [], 2: [], 3: [], 4: [] }
             };
         }
 
@@ -1924,6 +2311,15 @@
             }
 
             document.getElementById(`${p}-kills`).innerText = pState.kills || "0";
+
+            // Restaurar ardides estratégicos
+            if (!gameState[p]) {
+                gameState[p] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] } };
+            }
+            if (pState.strategicPloys) {
+                gameState[p].strategicPloys = pState.strategicPloys;
+            }
+            updateActiveStrategicPloysDisplay(p);
         }
 
         // Ejecutar la carga cuando el documento esté listo
@@ -1934,6 +2330,9 @@
             document.querySelectorAll('.name-input').forEach(input => {
                 input.addEventListener('blur', saveGameState);
             });
+
+            // Sincronizar altura de bloques al redimensionar ventana
+            window.addEventListener('resize', syncStratSectionsHeight);
         });
 
         function validarSeleccionFacciom(event, playerPrefix) {
@@ -1993,12 +2392,6 @@
                 }
             });
         }
-
-        // Ejecutar la carga cuando el documento esté listo
-        document.addEventListener('DOMContentLoaded', initializeMatchData);
-
-        // Primera carga
-        document.addEventListener('DOMContentLoaded', calculateTotals);
 
     </script>
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
@@ -2323,6 +2716,41 @@
                 <div class="modal-footer bg-white justify-content-center py-2 border-top">
                     <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
                         <i class="bi bi-arrow-return-left me-2"></i>Volver a la Partida
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="strategicPloysModal" tabindex="-1" aria-labelledby="strategicPloysModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 shadow-lg border-warning border-top border-4">
+                <div class="modal-header bg-light pb-2">
+                    <div class="d-flex align-items-center">
+                        <img id="stratModalFactionImg" src="./resources/facciones/blank.png" alt="Facción"
+                            class="me-3 rounded-circle border shadow-sm"
+                            style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
+                        <div>
+                            <h5 class="modal-title fw-bold text-dark mb-0" id="stratModalTitle">
+                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides de Estrategia
+                            </h5>
+                            <span class="badge bg-dark small" id="stratModalSubtitle">Fase de Estrategia - TP 1</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center shadow-sm">
+                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span id="stratModalPlayerName">Jugador 1</span></span>
+                    <span class="badge bg-warning text-dark fs-6 fw-bold shadow-sm">
+                        <i class="bi bi-wallet2 me-1"></i>PM Disponibles: <span id="stratModalCP">2</span>
+                    </span>
+                </div>
+                <div class="modal-body bg-light p-3" id="stratModalBody">
+                    <!-- Lista dinámica de ardides estratégicos -->
+                </div>
+                <div class="modal-footer bg-white justify-content-between py-2 border-top">
+                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Máximo 1 uso por ardid por Punto de Inflexión.</small>
+                    <button type="button" class="btn btn-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-check2 me-1"></i>Listo
                     </button>
                 </div>
             </div>

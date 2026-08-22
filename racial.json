@@ -902,21 +902,21 @@
             "faction": "wrecka-krew",
             "type": "team",
             "name": "Agentes",
-            "description": "1 agente <span class=\"faction\">DEMOLEDOREZ</span> <b>NOBLE JEFAZO</b> con una de las siguientes opciones:\n<ul>\n  <li>Pistola lanzakobetez; martillo brutal</li>\n  <li>Dos pistolas lanzakobetez; rebanadora</li>\n</ul>\n2 agentes <span class=\"faction\">DEMOLEDOREZ</span> <b>GARRAPATO BOMBA</b> <br>\n5 agentes <span class=\"faction\">DEMOLEDOREZ</span> elegido de la siguiente lista:\n<ul>\n  <li><b>TRONCHADEMOLEDOR</b></li>\n  <li><b>TRONCHAPELEÓN</b></li>\n  <li><b>TRONCHAMACHAKADOR</b></li>\n  <li><b>ARTILLERO PETATANKEZ</b> con una de las siguientes opciones:\n    <ul>\n      <li>Lanzakobetez pezado; puñoz</li>\n      <li>LanzaKobetes; puñoz</li>\n    </ul>\n  </li>\n  <li><b>KOBETEADOR PETATANKEZ</b> con una de las siguientes opciones:\n    <ul>\n      <li>Lanzakobetes; kobete induktor; puñoz</li>\n      <li>Lanzakobetes; batería de kobetez; puñoz</li>\n    </ul>\n  </li>\n</ul>\n<p>Salvo agentes <b>GARRAPATO BOMBA</b>, <b>TRONCHAPELEÓN</b> y <b>ARTILLERO PETATANKEZ</b>, tu comando solo puede incluir uno de cada uno de los agentes aqui listados.</p>\n"
+            "description": "1 agente <b>NOBLE JEFAZO</b> <span class=\"faction\">DEMOLEDOREZ</span> con una de las siguientes opciones:\n<ul>\n  <li>Piztola lanzakobetez; martillo brutal</li>\n  <li>Dos piztolaz lanzakobetez; rebanadora</li>\n</ul>\n2 agentes <b>GARRAPATO BOMBA</b> <span class=\"faction\">DEMOLEDOREZ</span> <br>\n5 agentes <span class=\"faction\">DEMOLEDOREZ</span> elegidos de la siguiente lista:\n<ul>\n  <li><b>TRONCHADEMOLEDOR</b></li>\n  <li><b>TRONCHAPELEÓN</b></li>\n  <li><b>TRONCHAMACHAKADOR</b></li>\n  <li><b>ARTILLERO PETATANKEZ</b> con una de las siguientes opciones:\n    <ul>\n      <li>Lanzakobetez pezado; puñoz</li>\n      <li>Lanzakobetez; puñoz</li>\n    </ul>\n  </li>\n  <li><b>KOBETEADOR PETATANKEZ</b> con una de las siguientes opciones:\n    <ul>\n      <li>Lanzakobetez; kobete induktor; puñoz</li>\n      <li>Lanzakobetez; batería de kobetez; puñoz</li>\n    </ul>\n  </li>\n</ul>\n<p>Salvo agentes <b>GARRAPATO BOMBA</b>, <b>TRONCHAPELEÓN</b> y <b>ARTILLERO PETATANKEZ</b>, tu comando solo puede incluir uno de cada uno de los agentes aquí listados.</p>\n"
         },
         {
             "id_racial": 118,
             "faction": "wrecka-krew",
             "type": "racial",
             "name": "EMBESTIDA DEMOLEDORA",
-            "description": "Cuando un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo dispare, combata o contrataque, en el paso Tirar Dados de Ataque:\n<ul>\n  <li>Por cada resultado de dado de ataque de 6 que retengas, ganas un punto de Demolizión.</li>\n  <li>Puedes gastar hasta 3 de tus puntos de Demolizión (a menos que sea un <b>GARRAPATO BOMBA</b>). Por cada punto que gastes de esta manera, retén uno de tus fallos como un éxito normal en lugar de descartarlo.</li>\n</ul>\n<p>Puedes ganar y perder puntos de Demolizión durante la misma acción y lo puedes hacer en el orden que elijas, salvo si empezaste la acción con 6, en cuyo caso solo puedes gastarlos.</p>"
+            "description": "Cuando un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo dispare, combata o contraataque, en el paso Tirar Dados de Ataque:\n<ul>\n  <li>Por cada resultado de dado de ataque de 6 que guardes, ganas un punto de Demolizión.</li>\n  <li>Puedes gastar hasta 2 de tus puntos de Demolizión (a menos que sea un <b>GARRAPATO BOMBA</b>, en cuyo caso no puedes gastar ninguno). Por cada punto que gastes de esta manera, guarda uno de tus fallos como un éxito normal en lugar de descartarlo.</li>\n</ul>\n<p>Puedes ganar y gastar puntos de Demolizión durante la misma acción y lo puedes hacer en el orden que elijas, salvo si empezaste la acción con 6, en cuyo caso solo puedes gastarlos.</p>"
         },
         {
             "id_racial": 119,
             "faction": "wrecka-krew",
             "type": "racial",
             "name": "HAZTA LAZ CEJAZ",
-            "description": "La primera vez que un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo (excluyendo <b>GARRAPATO BOMBA</b>) con una orden de Trabarse realice tanto la acción <b>Combatir</b>, como la de <b>Disparar</b> o la de <b>Combatir</b> (salvo <b>Ponerse en guardia</b>) durante cada una de sus activaciones/reacciones, suma 1 a su atributo LPA hasta el inicio de su siguiente activación."
+            "description": "La primera vez que un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo (salvo el <b>GARRAPATO BOMBA</b>) con una orden de Trabarse realice o la acción de <b>Cargar</b>, o la de <b>Disparar</b>, o la de <b>Combatir</b> (salvo <b>Ponerse en guardia</b>) durante cada una de sus activaciones/reacciones, suma 1 a su atributo LPA hasta el inicio de su siguiente activación."
         }
     ],
     "wyrmblade": [

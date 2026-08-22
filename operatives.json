@@ -2121,7 +2121,7 @@
     "wrecka-krew": [
         {
             "id": "wrecka-boss-nob",
-            "name": "NOBLE JEFAZO DEMOLEDOR",
+            "name": "NOBLE JEFAZO DEMOLEDOREZ",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -2196,7 +2196,7 @@
         },
         {
             "id": "bomb-squig",
-            "name": "GARRAPATO BOMBA DEMOLEDOR",
+            "name": "GARRAPATO BOMBA DEMOLEDOREZ",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -2215,7 +2215,7 @@
                     }
                 },
                 {
-                    "name": "Mordizko",
+                    "name": "Mordizquitoz",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -2379,7 +2379,7 @@
                         "A": "6",
                         "HP/HA": "5+",
                         "Dñ": "4/5",
-                        "RA": "Area 1\""
+                        "RA": "Área 1\""
                     }
                 },
                 {
@@ -2389,7 +2389,7 @@
                         "A": "6",
                         "HP/HA": "4+",
                         "Dñ": "4/5",
-                        "RA": "Area 1\", Pesada (solo Correr)"
+                        "RA": "Área 1\", Pesada (solo Correr)"
                     }
                 },
                 {
@@ -2440,7 +2440,7 @@
                         "A": "6",
                         "HP/HA": "5+",
                         "Dñ": "4/5",
-                        "RA": "Area 1\""
+                        "RA": "Área 1\""
                     }
                 },
                 {
@@ -2466,7 +2466,7 @@
             ],
             "abilities": [
                 {
-                    "name": "<span class=\"faction\">*</span>Indukzion",
+                    "name": "<span class=\"faction\">*</span>Indukzión",
                     "description": "No selecciones un blanco válido. En su lugar, sitúa tu marcador de Indukzión visible para este agente, o en terreno ventajoso de un elemento de terreno visible para este agente. Ese marcador gana 1 punto de Indukzión (usa las fichas de puntos de Indukzión); luego tira los dados de ataque: el marcador gana 1 punto de Indukzión adicional por cada éxito (hasta un máximo de 3 puntos adicionales). Inflige 1D3 de daño por separado a cada agente a x\" o menos de ese marcador, donde x equivale a los puntos de Indukzión de ese marcador. Después la acción finaliza."
                 },
                 {

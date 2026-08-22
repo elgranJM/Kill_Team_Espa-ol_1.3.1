@@ -21045,7 +21045,7 @@
             "weapons": [
                 {
                     "name": "Incensario ardiente",
-                    "type": "melee",
+                    "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "2+",

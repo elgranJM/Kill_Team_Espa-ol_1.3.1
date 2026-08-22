@@ -1229,7 +1229,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Exaltación en el Dolor",
-        "description": "Puedes ignorar cualquier cambio en el <span class=\"text-warning-emphasis\">atributo de Impacto</span> de las armas de los agentes <span class=\"faction\">CULTO DEL CAOS</span> amigos <span class=\"text-warning-emphasis\"> armas</span> por estar lesionados <span class=\"text-decoration-line-through text-warning-emphasis\">(incluyendo los atributos de sus armas)</span>\nSiempre que un agente dispare contra un agente <span class=\"faction\">CULTO DEL CAOS</span> amigo que esté herido, puedes repetir uno de tus dados de defensa.\n",
+        "description": "<p>Puedes ignorar cualquier cambio al atributo Impactar de las armas de los agentes <span class='faction'>CULTO DEL CAOS</span> amigos causado por resultar lesionados.</p>\n\n<p>Siempre que un agente dispare contra un agente <span class='faction'>CULTO DEL CAOS</span> amigo que esté herido, puedes repetir uno de tus dados de defensa.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1238,7 +1238,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Asalto Ferviente",
-        "description": "Las armas de combate de los agentes <span class='faction'>CULTO DEL CAOS</span> amigos tienen la regla de armas Certera 1<span class=\"text-info-emphasis\">, o la regla de armas Precisa 2 si ese agente amigo es un agente <b>MUTANTE</b> o <b>TORMENTO</b>.</span>\n",
+        "description": "Las armas de combate de los agentes <span class='faction'>CULTO DEL CAOS</span> amigos tienen la regla de armas Certera 1<span class=\"text-info-emphasis\">, o la regla de armas Certera 2 si ese agente amigo es un agente <b>MUTANTE</b> o <b>TORMENTO</b>.</span>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1265,7 +1265,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Fiel Seguidor",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>CONGREGACIÓN OSCURA</b> <span class='faction'>CULTO DEL CAOS</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <span class='faction'>CULTO DEL CAOS</span> amigo (excluyendo <b>CONGREGACIÓN OSCURA</b>) visible para y a 3\" de ese agente <b>CONGREGACIÓN OSCURA</b> para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción.  <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas Estallido o Torrente.</p>",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>CONGREGACIÓN OSCURA</b> <span class='faction'>CULTO DEL CAOS</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <span class='faction'>CULTO DEL CAOS</span> amigo (excluyendo <b>CONGREGACIÓN OSCURA</b>) visible para y a 3\" de ese agente <b>CONGREGACIÓN OSCURA</b> para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción.  <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene las reglas de armas Área o Ráfaga.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1283,7 +1283,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Desata al Daemon",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>, y una de ellas puede ser gratuita.\n",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo, antes o después de que realice una acción. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>, y una de ellas puede ser gratuita.\n",
         "typename": "Ardid de Tiroteo"
     },
     {

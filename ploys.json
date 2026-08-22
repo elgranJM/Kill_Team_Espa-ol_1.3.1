@@ -1256,7 +1256,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Aura Enfermiza",
-        "description": "Siempre que un agente enemigo esté a 2\" de cualquier agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo, empeora el atributo de Impacto de las armas de ese agente enemigo en 1. Esto no es acumulativo con estar lesionado.",
+        "description": "Siempre que un agente enemigo esté a 2\" de cualquier agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo, empeora el atributo Impactar de las armas de ese agente enemigo en 1. Esto no es acumulativo con estar lesionado.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1265,7 +1265,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Fiel Seguidor",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>CONGREGACIÓN OSCURA</b> <span class='faction'>CULTO DEL CAOS</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <span class='faction'>CULTO DEL CAOS</span> amigo (excluyendo <b>CONGREGACIÓN OSCURA</b>) visible para y a 3\" de ese agente <b>CONGREGACIÓN OSCURA</b> para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción.  <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene las reglas de armas Área o Ráfaga.</p>",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>CONGREGACIÓN OSCURA</b> <span class='faction'>CULTO DEL CAOS</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <span class='faction'>CULTO DEL CAOS</span> amigo (excluyendo <b>CONGREGACIÓN OSCURA</b>) visible para y a 3\" de ese agente <b>CONGREGACIÓN OSCURA</b> para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro de la zona de control del agente combatiente durante la duración de esa acción.  <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene las reglas de armas Área o Ráfaga.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1283,7 +1283,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Desata al Daemon",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo, antes o después de que realice una acción. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>, y una de ellas puede ser gratuita.\n",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>MUTANTE</b> <span class='faction'>CULTO DEL CAOS</span> o <b>TORMENTO</b> <span class='faction'>CULTO DEL CAOS</span> amigo, antes o después de que realice una acción. Durante esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>, y una de ellas puede ser libre.\n",
         "typename": "Ardid de Tiroteo"
     },
     {

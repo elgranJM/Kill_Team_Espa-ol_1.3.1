@@ -848,7 +848,7 @@
     "id_equip": 107,
     "faction": "chaos-cult",
     "name": "Disfraces",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un GAMBITO ESTRATÉGICO en el primer Punto de Inflexión, un número de agentes DEVOTO CULTO DEL CAOS amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.", 
+    "description": "Después de revelar esta opción de equipamiento, tira 1D3. Como un GAMBITO ESTRATÉGICO en el primer punto de inflexión, un número de agentes DEVOTO CULTO DEL CAOS amigos igual al resultado que estén totalmente dentro de tu zona de descenso pueden realizar inmediatamente una acción de Reposicionarse libre, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de descenso.", 
     "weapon": [],
     "action": []
   },
@@ -856,7 +856,7 @@
     "id_equip": 108,
     "faction": "chaos-cult",
     "name": "Talismán Impío",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CULTO DEL CAOS amigo, en el paso de Tirar Dados de Defensa, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.", 
+    "description": "Una vez por punto de inflexión, cuando un agente esté disparando a un agente CULTO DEL CAOS amigo, en el paso de tirar dados de defensa, puedes guardar uno de tus éxitos normales como un éxito crítico en su lugar.", 
     "weapon": [],
     "action": []
   },
@@ -864,7 +864,7 @@
     "id_equip": 109,
     "faction": "chaos-cult",
     "name": "Bendición Vil",
-    "description": "Una vez por batalla, cuando un dado de ataque inflige Daño Normal a un agente CULTO DEL CAOS amigo (excluyendo DEVOTO), puedes ignorar ese daño infligido. Si ese agente amigo es un agente MUTANTE o TORMENTO, no puedes tirar para la regla Regeneración Antinatural para ese dado de ataque y luego decidir usar esta regla en el mismo dado; debes usar una o la otra.", 
+    "description": "Una vez por batalla, cuando un dado de ataque inflige Daño normal a un agente CULTO DEL CAOS amigo (excluyendo DEVOTO), puedes ignorar ese daño infligido. Si ese agente amigo es un agente MUTANTE o TORMENTO, no puedes tirar para la regla Regeneración Antinatural para ese dado de ataque y luego decidir usar esta regla en el mismo dado; debes usar una o la otra.", 
     "weapon": [],
     "action": []
   },

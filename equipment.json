@@ -983,8 +983,8 @@
   {
     "id_equip": 122,
     "faction": "wrecka-krew",
-    "name": "Kohetes Taladradores",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo esté realizando la acción de <b>Disparar</b> y selecciones un lanzakohetez o lanzakohetez pezado, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma pierde la regla de armas Explosión pero tiene la regla de armas Penetración 1.", 
+    "name": "Kobetaladradorez",
+    "description": "Una vez por punto de inflexión, siempre que un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo realice la acción de <b>Disparar</b> y selecciones un lanzakobetez o lanzakobetez pezado, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma pierde la regla de armas Área pero gana la regla de armas Penetración 1.", 
     "weapon": [],
     "action": []
   },
@@ -992,23 +992,23 @@
     "id_equip": 123,
     "faction": "wrecka-krew",
     "name": "Blindaje Adicional",
-    "description": "Resta 1\" del atributo de Movimiento de los agentes WRECKA KREW amigos y mejora su atributo de Salvación en 1. Esto excluye a los agentes <b>GARRAPATO BOMBA</b> y no es acumulativo con la regla Protección de una Barricada Portátil del equipamiento universal.", 
+    "description": "Resta 1\" al atributo Movimiento de los agentes <span class=\"faction\">DEMOLEDOREZ</span> amigos y mejora en 1 su atributo Salvación (salvo agentes <b>GARRAPATO BOMBA</b>). Esto no es acumulable con la regla Protección de una Barricada Portátil de equipo universal.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 124,
     "faction": "wrecka-krew",
-    "name": "Aceite de Motor",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente WRECKA KREW amigo (excluyendo <b>GARRAPATO BOMBA</b>) sea activado, puedes usar esta regla. Si lo haces, hasta el final de esa activación, puedes ignorar cualquier cambio en los atributos de ese agente por estar herido (incluyendo los atributos de sus armas).", 
+    "name": "Azeite de Motor",
+    "description": "Puedes usar esta regla una vez por punto de inflexión, al activar a un agente <span class=\"faction\">DEMOLEDOREZ</span> amigo (salvo <b>GARRAPATO BOMBA</b>). Si lo haces, hasta el final de esa activación puedes ignorar cualquier cambio a los atributos de ese agente por estar herido (incluidos los atributos de sus armas).", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 125,
     "faction": "wrecka-krew",
-    "name": "Glifos",
-    "description": "Cuando se selecciona este ítem de equipamiento, selecciona también el ardid estratégico ¡Waaagh! o Destrucción. La primera vez que fueras a usar ese ardid durante la batalla, cuesta 0PM; siempre que fueras a usarlo a partir de entonces, cuesta 0PM si tienes algún punto de Wrecka.", 
+    "name": "Glifoz",
+    "description": "Cuando se selecciona este ítem de equipamiento, selecciona también el ardid estratégico ¡Waaagh! o Destrucción. La primera vez que fueras a usar ese ardid durante la batalla, cuesta 0PM; siempre que fueras a usarlo a partir de entonces, cuesta 0PM si tienes algún punto de Demolizión.", 
     "weapon": [],
     "action": []
   },

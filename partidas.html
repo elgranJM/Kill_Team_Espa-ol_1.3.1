@@ -13,6 +13,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="equipment_styles.css">
 
     <style>
         /* Estilos específicos para el Score Tracker */
@@ -100,6 +101,11 @@
 
             .score-display {
                 font-size: 1.3rem;
+                min-width: 30px;
+            }
+
+            .name-input {
+                font-size: 1.2rem;
             }
         }
 
@@ -120,6 +126,117 @@
 
         #factionModalTabs .nav-link.active i {
             color: #ffffff !important;
+        }
+
+        /* Estilos para el visor de misiones y acciones */
+        .icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .icon-yes {
+            background-image: url('./resources/game_rules_files/yes.svg');
+        }
+
+        .icon-no {
+            background-image: url('./resources/game_rules_files/no.svg');
+        }
+
+        /* Estilos para Ardides Estratégicos */
+        .strat-ploys-container {
+            min-height: 52px;
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 4px;
+            scrollbar-width: thin;
+            scrollbar-color: #ffc107 #f8f9fa;
+            transition: min-height 0.2s ease;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar-track {
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar-thumb {
+            background-color: #ffc107;
+            border-radius: 4px;
+        }
+
+        .active-ploy-card {
+            border-left: 4px solid #ffc107 !important;
+            transition: all 0.2s ease;
+        }
+
+        .active-ploy-card:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .ploy-modal-card {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .ploy-modal-card.is-active {
+            border-color: #198754 !important;
+            background-color: #f8fff9;
+        }
+
+        /* Estilos específicos para Equipamiento Táctico */
+        .equip-list-container {
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 4px;
+            scrollbar-width: thin;
+            scrollbar-color: #0b6be1 #f8f9fa;
+            transition: min-height 0.2s ease;
+        }
+
+        .equip-list-container::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .equip-list-container::-webkit-scrollbar-track {
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .equip-list-container::-webkit-scrollbar-thumb {
+            background-color: #0b6be1;
+            border-radius: 4px;
+        }
+
+        .player-2 .equip-list-container {
+            scrollbar-color: #dc3545 #f8f9fa;
+        }
+
+        .player-2 .equip-list-container::-webkit-scrollbar-thumb {
+            background-color: #dc3545;
+        }
+
+        .active-equip-card {
+            transition: all 0.2s ease;
+        }
+
+        .active-equip-card:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        .equip-select-card {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .equip-select-card.is-selected {
+            border-color: #198754 !important;
+            box-shadow: 0 0 0 2px #198754 !important;
         }
     </style>
 </head>
@@ -225,19 +342,19 @@
                                         class="bi bi-hourglass-split me-2"></i>Punto de Inflexión</h6>
                                 <div class="btn-group" role="group">
                                     <input type="radio" class="btn-check" name="tpRadio" id="tp1" autocomplete="off"
-                                        checked onchange="validateAllScores()">
+                                        checked onchange="onTurningPointChange()">
                                     <label class="btn btn-outline-dark fw-bold px-4" for="tp1">1</label>
 
                                     <input type="radio" class="btn-check" name="tpRadio" id="tp2" autocomplete="off"
-                                        onchange="validateAllScores()">
+                                        onchange="onTurningPointChange()">
                                     <label class="btn btn-outline-dark fw-bold px-4" for="tp2">2</label>
 
                                     <input type="radio" class="btn-check" name="tpRadio" id="tp3" autocomplete="off"
-                                        onchange="validateAllScores()">
+                                        onchange="onTurningPointChange()">
                                     <label class="btn btn-outline-dark fw-bold px-4" for="tp3">3</label>
 
                                     <input type="radio" class="btn-check" name="tpRadio" id="tp4" autocomplete="off"
-                                        onchange="validateAllScores()">
+                                        onchange="onTurningPointChange()">
                                     <label class="btn btn-outline-dark fw-bold px-4" for="tp4">4</label>
                                 </div>
                             </div>
@@ -326,9 +443,28 @@
                                 <small class="text-muted d-block mt-2" id="p1-archetypes-display"></small>
                             </div>
 
+                            <!-- Equipamiento Táctico (Hasta 4 opciones) -->
+                            <div class="op-section border-primary border-2 border-opacity-25 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-tools text-primary me-1"></i>Equipamiento (<span id="p1-selected-equip-count">0</span>/4)
+                                    </span>
+                                    <button class="btn btn-primary btn-sm fw-bold shadow-sm" type="button"
+                                        id="p1-btn-select-equip" onclick="openEquipmentSelectModal('p1')" disabled
+                                        title="Seleccionar equipamiento antes de la batalla">
+                                        <i class="bi bi-gear-fill me-1"></i>Seleccionar
+                                    </button>
+                                </div>
+                                <div id="p1-selected-equipment-container" class="d-flex flex-column gap-2 equip-list-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún equipamiento seleccionado (hasta 4).</small>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Puntos Totales y PM -->
                             <div
-                                class="d-flex justify-content-between align-items-center mb-4 bg-light p-3 rounded border">
+                                class="d-flex justify-content-between align-items-center mb-3 bg-light p-3 rounded border">
                                 <div class="text-center">
                                     <div class="small text-muted fw-bold text-uppercase">Total PV</div>
                                     <div class="vp-total text-primary" id="p1-total-vp">0</div>
@@ -343,6 +479,25 @@
                                         <button class="btn btn-success counter-btn shadow-sm"
                                             style="width: 40px; height: 40px;" onclick="updateCounter('p1-cp', 1)"><i
                                                 class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ardides de Estrategia (Gambito por TP) -->
+                            <div class="op-section border-warning border-2 border-opacity-50 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos (TP <span class="current-tp-label">1</span>)
+                                    </span>
+                                    <button class="btn btn-warning btn-sm fw-bold shadow-sm" type="button"
+                                        id="p1-btn-strat-ploys" onclick="openStrategicPloysModal('p1')" disabled
+                                        title="Gestionar ardides estratégicos para este TP">
+                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span class="badge bg-dark ms-1" id="p1-active-ploys-count">0</span>
+                                    </button>
+                                </div>
+                                <div id="p1-active-strategic-ploys" class="d-flex flex-column gap-2 strat-ploys-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small>
                                     </div>
                                 </div>
                             </div>
@@ -516,9 +671,28 @@
                                 <small class="text-muted d-block mt-2" id="p2-archetypes-display"></small>
                             </div>
 
+                            <!-- Equipamiento Táctico (Hasta 4 opciones) -->
+                            <div class="op-section border-danger border-2 border-opacity-25 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-tools text-danger me-1"></i>Equipamiento (<span id="p2-selected-equip-count">0</span>/4)
+                                    </span>
+                                    <button class="btn btn-danger btn-sm fw-bold shadow-sm" type="button"
+                                        id="p2-btn-select-equip" onclick="openEquipmentSelectModal('p2')" disabled
+                                        title="Seleccionar equipamiento antes de la batalla">
+                                        <i class="bi bi-gear-fill me-1"></i>Seleccionar
+                                    </button>
+                                </div>
+                                <div id="p2-selected-equipment-container" class="d-flex flex-column gap-2 equip-list-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún equipamiento seleccionado (hasta 4).</small>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Puntos Totales y PM -->
                             <div
-                                class="d-flex justify-content-between align-items-center mb-4 bg-light p-3 rounded border">
+                                class="d-flex justify-content-between align-items-center mb-3 bg-light p-3 rounded border">
                                 <div class="text-center">
                                     <div class="small text-muted fw-bold text-uppercase">Total PV</div>
                                     <div class="vp-total text-danger" id="p2-total-vp">0</div>
@@ -533,6 +707,25 @@
                                         <button class="btn btn-success counter-btn shadow-sm"
                                             style="width: 40px; height: 40px;" onclick="updateCounter('p2-cp', 1)"><i
                                                 class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ardides de Estrategia (Gambito por TP) -->
+                            <div class="op-section border-warning border-2 border-opacity-50 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos (TP <span class="current-tp-label">1</span>)
+                                    </span>
+                                    <button class="btn btn-warning btn-sm fw-bold shadow-sm" type="button"
+                                        id="p2-btn-strat-ploys" onclick="openStrategicPloysModal('p2')" disabled
+                                        title="Gestionar ardides estratégicos para este TP">
+                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span class="badge bg-dark ms-1" id="p2-active-ploys-count">0</span>
+                                    </button>
+                                </div>
+                                <div id="p2-active-strategic-ploys" class="d-flex flex-column gap-2 strat-ploys-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small>
                                     </div>
                                 </div>
                             </div>
@@ -692,12 +885,13 @@
 
     <!-- Lógica del Gestor de Partidas -->
     <script>
-        // Estado del Juego (Para la Selección Secreta)
+        // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
         let gameState = {
-            p1: { primary: null },
-            p2: { primary: null },
+            p1: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] },
+            p2: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] },
             revealed: false,
             currentPlayerSelecting: 1,
+            currentPlayerSelectingEquip: 'p1',
             loading: false // <-- NUEVO: Bandera de control para evitar sobreescrituras en carga
         };
 
@@ -863,7 +1057,11 @@
         function executeResetGame() {
             // 1. Reset de Estado Lógico Interno
             gameState.p1.primary = null;
+            gameState.p1.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
+            gameState.p1.equipment = [];
             gameState.p2.primary = null;
+            gameState.p2.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
+            gameState.p2.equipment = [];
             gameState.revealed = false;
 
             // --- NUEVO: Reset de la Operación Crítica (CritOp) Global ---
@@ -936,6 +1134,13 @@
             // Volver el Punto de Inflexión (Turno) al TP1
             const tp1Radio = document.getElementById('tp1');
             if (tp1Radio) tp1Radio.checked = true;
+            document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = '1');
+
+            // Actualizar vista de ardides activos y equipamiento
+            updateActiveStrategicPloysDisplay('p1');
+            updateActiveStrategicPloysDisplay('p2');
+            updateSelectedEquipmentDisplay('p1');
+            updateSelectedEquipmentDisplay('p2');
 
             // Recalcular los totales para que la UI muestre 0 puntos globales
             calculateTotals();
@@ -1145,6 +1350,11 @@
 
                 loadGameState();
                 calculateTotals();
+                updateActiveStrategicPloysDisplay('p1');
+                updateActiveStrategicPloysDisplay('p2');
+                updateSelectedEquipmentDisplay('p1');
+                updateSelectedEquipmentDisplay('p2');
+                onTurningPointChange();
 
             } catch (error) {
                 console.error("Error cargando los datos del juego:", error);
@@ -1211,8 +1421,29 @@
                 factionRulesBtn.disabled = !factionKey || !dataFactions[factionKey];
             }
 
+            const stratBtn = document.getElementById(`${playerPrefix}-btn-strat-ploys`);
+            if (stratBtn) {
+                stratBtn.disabled = !factionKey || !dataFactions[factionKey];
+            }
+
+            const equipBtn = document.getElementById(`${playerPrefix}-btn-select-equip`);
+            if (equipBtn) {
+                equipBtn.disabled = !factionKey || !dataFactions[factionKey];
+            }
+
             document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.remove('d-flex');
             document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.add('d-none');
+
+            updateActiveStrategicPloysDisplay(playerPrefix);
+
+            // Filtrar equipamientos que ya no pertenezcan a la nueva facción (conservando universales)
+            if (gameState[playerPrefix] && Array.isArray(gameState[playerPrefix].equipment)) {
+                gameState[playerPrefix].equipment = gameState[playerPrefix].equipment.filter(id => {
+                    const item = dataEquipment.find(e => e.id_equip === id);
+                    return item && (item.faction === 'universal' || item.faction === factionKey);
+                });
+            }
+            updateSelectedEquipmentDisplay(playerPrefix);
 
             if (!factionKey || !dataFactions[factionKey]) return;
 
@@ -1279,6 +1510,681 @@
 
             // NUEVO: Guardar estado cuando la misión secundaria se hace pública
             saveGameState();
+        }
+
+        // --- SISTEMA DE GESTIÓN Y ACTIVACIÓN DE ARDIDES ESTRATÉGICOS ---
+
+        function getCurrentTurn() {
+            const checked = document.querySelector('input[name="tpRadio"]:checked');
+            if (!checked) return 1;
+            return parseInt(checked.id.replace('tp', '')) || 1;
+        }
+
+        function calculateDynamicLimit(type, key, turn) {
+            if (type === 'crit' && dataCritOps[key]) {
+                const op = dataCritOps[key];
+                if (Array.isArray(op.limite_puntos) && op.limite_puntos[turn - 1] !== undefined) {
+                    return op.limite_puntos[turn - 1];
+                }
+            }
+            return 6;
+        }
+
+        function onTurningPointChange() {
+            const currentTP = getCurrentTurn();
+            document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = currentTP);
+            updateActiveStrategicPloysDisplay('p1');
+            updateActiveStrategicPloysDisplay('p2');
+            validateAllScores();
+            saveGameState();
+        }
+
+        function getPlayerPloysForTP(playerPrefix, tp) {
+            if (!gameState[playerPrefix]) {
+                gameState[playerPrefix] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] } };
+            }
+            if (!gameState[playerPrefix].strategicPloys) {
+                gameState[playerPrefix].strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
+            }
+            if (!Array.isArray(gameState[playerPrefix].strategicPloys[tp])) {
+                gameState[playerPrefix].strategicPloys[tp] = [];
+            }
+            return gameState[playerPrefix].strategicPloys[tp];
+        }
+
+        function openStrategicPloysModal(playerPrefix) {
+            const factionSelect = document.getElementById(`${playerPrefix}-faction`);
+            const factionKey = factionSelect ? factionSelect.value : "";
+
+            if (!factionKey) {
+                mostrarNotificacion("Falta selección: Por favor, selecciona primero tu facción para ver sus ardides de estrategia.");
+                return;
+            }
+
+            gameState.currentPlayerSelecting = playerPrefix === 'p1' ? 1 : 2;
+            renderStrategicPloysModal(playerPrefix);
+
+            const modal = new bootstrap.Modal(document.getElementById('strategicPloysModal'));
+            modal.show();
+        }
+
+        function renderStrategicPloysModal(playerPrefix) {
+            const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
+            const currentTP = getCurrentTurn();
+            const currentCP = parseInt(document.getElementById(`${playerPrefix}-cp`).innerText) || 0;
+            const playerName = document.querySelector(`.player-${playerPrefix === 'p1' ? '1' : '2'} .name-input`).value.trim() || (playerPrefix === 'p1' ? 'Jugador 1' : 'Jugador 2');
+            const factionName = factionTranslations[factionKey] || factionKey;
+
+            // Actualizar cabecera del modal
+            const imgEl = document.getElementById('stratModalFactionImg');
+            if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
+            
+            const titleEl = document.getElementById('stratModalTitle');
+            if (titleEl) titleEl.innerHTML = `<i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos — ${factionName}`;
+            
+            const subTitleEl = document.getElementById('stratModalSubtitle');
+            if (subTitleEl) subTitleEl.innerText = `Fase de Estrategia (Gambito) — Punto de Inflexión ${currentTP}`;
+            
+            const playerEl = document.getElementById('stratModalPlayerName');
+            if (playerEl) playerEl.innerText = playerName;
+            
+            const cpEl = document.getElementById('stratModalCP');
+            if (cpEl) cpEl.innerText = `${currentCP} PM`;
+
+            const modalBody = document.getElementById('stratModalBody');
+            if (!modalBody) return;
+
+            // Filtrar ardides estratégicos de esta facción
+            let stratPloys = [];
+            if (Array.isArray(dataPloys)) {
+                stratPloys = dataPloys.filter(p => p.faction === factionKey && (p.type === 'strategic' || p.typename?.toLowerCase().includes('estrategia')));
+            }
+
+            if (stratPloys.length === 0) {
+                modalBody.innerHTML = '<div class="alert alert-light text-center p-4">No se encontraron ardides de estrategia para esta facción en la base de datos.</div>';
+                return;
+            }
+
+            const activeList = getPlayerPloysForTP(playerPrefix, currentTP);
+            let html = '<div class="row g-3">';
+
+            stratPloys.forEach(ploy => {
+                const costMatch = String(ploy.cps || '1').match(/\d+/);
+                const cost = costMatch ? parseInt(costMatch[0]) : 1;
+                const isActive = activeList.includes(ploy.id_ploy);
+                const canAfford = currentCP >= cost;
+
+                let actionButtonHtml = '';
+                if (isActive) {
+                    actionButtonHtml = `
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-success py-2 px-3 fw-bold"><i class="bi bi-check-circle-fill me-1"></i>Activo en TP ${currentTP}</span>
+                            <button type="button" class="btn btn-outline-danger btn-sm fw-bold" onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" title="Desactivar y reembolsar PM">
+                                <i class="bi bi-arrow-counterclockwise me-1"></i>Desactivar (+${cost} PM)
+                            </button>
+                        </div>
+                    `;
+                } else if (canAfford) {
+                    actionButtonHtml = `
+                        <button type="button" class="btn btn-warning btn-sm fw-bold px-3 shadow-sm" onclick="activateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})">
+                            <i class="bi bi-lightning-charge-fill me-1"></i>Activar (${cost} PM)
+                        </button>
+                    `;
+                } else {
+                    actionButtonHtml = `
+                        <button type="button" class="btn btn-secondary btn-sm fw-bold px-3 disabled" disabled title="Puntos de Mando insuficientes">
+                            <i class="bi bi-x-circle me-1"></i>PM Insuficiente (${cost} PM)
+                        </button>
+                    `;
+                }
+
+                html += `
+                    <div class="col-12">
+                        <div class="card ploy-modal-card ${isActive ? 'is-active border-success' : 'border-secondary border-opacity-25'} shadow-sm">
+                            <div class="card-header ${isActive ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center py-2">
+                                <span class="fw-bold text-uppercase small"><i class="bi bi-shield-shaded me-1"></i>${ploy.name}</span>
+                                <span class="badge ${isActive ? 'bg-light text-success' : 'bg-warning text-dark'} fw-bold">${ploy.cps || '1 PM'}</span>
+                            </div>
+                            <div class="card-body bg-white p-3">
+                                <div class="card-text small lh-sm text-dark mb-3">${ploy.description}</div>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                    <small class="text-muted fst-italic">Ardid de Estrategia (Inicio de TP)</small>
+                                    ${actionButtonHtml}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            modalBody.innerHTML = html;
+        }
+
+        function activateStrategicPloy(playerPrefix, ployId) {
+            const currentTP = getCurrentTurn();
+            const activeList = getPlayerPloysForTP(playerPrefix, currentTP);
+            if (activeList.includes(ployId)) return;
+
+            const ploy = dataPloys.find(p => p.id_ploy === ployId);
+            if (!ploy) return;
+
+            const costMatch = String(ploy.cps || '1').match(/\d+/);
+            const cost = costMatch ? parseInt(costMatch[0]) : 1;
+
+            const cpEl = document.getElementById(`${playerPrefix}-cp`);
+            let currentCP = parseInt(cpEl.innerText) || 0;
+
+            if (currentCP < cost) {
+                mostrarNotificacion("Puntos de Mando insuficientes: No tienes suficientes PM para activar este ardid.");
+                return;
+            }
+
+            // Deducir Puntos de Mando
+            updateCounter(`${playerPrefix}-cp`, -cost);
+
+            // Registrar en el estado del jugador para este TP
+            activeList.push(ployId);
+
+            // Actualizar interfaz del tablero y del modal
+            updateActiveStrategicPloysDisplay(playerPrefix);
+            renderStrategicPloysModal(playerPrefix);
+            saveGameState();
+
+            mostrarNotificacion(`Ardid "${ploy.name}" activado para el TP ${currentTP} (-${cost} PM).`);
+        }
+
+        function deactivateStrategicPloy(playerPrefix, ployId) {
+            const currentTP = getCurrentTurn();
+            const activeList = getPlayerPloysForTP(playerPrefix, currentTP);
+            const index = activeList.indexOf(ployId);
+            if (index === -1) return;
+
+            const ploy = dataPloys.find(p => p.id_ploy === ployId);
+            const costMatch = ploy ? String(ploy.cps || '1').match(/\d+/) : null;
+            const cost = costMatch ? parseInt(costMatch[0]) : 1;
+
+            // Retirar del estado
+            activeList.splice(index, 1);
+
+            // Reembolsar Puntos de Mando
+            updateCounter(`${playerPrefix}-cp`, cost);
+
+            // Actualizar interfaz del tablero y del modal
+            updateActiveStrategicPloysDisplay(playerPrefix);
+            renderStrategicPloysModal(playerPrefix);
+            saveGameState();
+
+            mostrarNotificacion(`Ardid "${ploy ? ploy.name : ''}" desactivado (+${cost} PM reembolsado).`);
+        }
+
+        function syncStratSectionsHeight() {
+            const c1 = document.getElementById('p1-active-strategic-ploys');
+            const c2 = document.getElementById('p2-active-strategic-ploys');
+            if (!c1 || !c2) return;
+
+            // En dispositivos móviles (menor a 768px), las columnas van apiladas
+            if (window.innerWidth < 768) {
+                c1.style.minHeight = 'auto';
+                c2.style.minHeight = 'auto';
+                return;
+            }
+
+            // Resetear para medir altura natural
+            c1.style.minHeight = 'auto';
+            c2.style.minHeight = 'auto';
+
+            requestAnimationFrame(() => {
+                const h1 = c1.scrollHeight || c1.offsetHeight;
+                const h2 = c2.scrollHeight || c2.offsetHeight;
+                const maxH = Math.max(h1, h2, 52);
+
+                c1.style.minHeight = `${maxH}px`;
+                c2.style.minHeight = `${maxH}px`;
+            });
+        }
+
+        function updateActiveStrategicPloysDisplay(playerPrefix) {
+            const currentTP = getCurrentTurn();
+            const activeContainer = document.getElementById(`${playerPrefix}-active-strategic-ploys`);
+            const countBadge = document.getElementById(`${playerPrefix}-active-ploys-count`);
+            const factionBtn = document.getElementById(`${playerPrefix}-btn-strat-ploys`);
+            const factionKey = document.getElementById(`${playerPrefix}-faction`)?.value;
+
+            if (factionBtn) {
+                factionBtn.disabled = !factionKey || !dataFactions[factionKey];
+            }
+
+            if (!activeContainer) return;
+
+            const activeList = getPlayerPloysForTP(playerPrefix, currentTP);
+
+            if (countBadge) {
+                countBadge.innerText = activeList.length;
+            }
+
+            if (activeList.length === 0) {
+                activeContainer.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-2"><small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small></div>';
+                syncStratSectionsHeight();
+                return;
+            }
+
+            let html = '';
+            activeList.forEach(ployId => {
+                const ploy = dataPloys.find(p => p.id_ploy === ployId);
+                if (!ploy) return;
+
+                html += `
+                    <div class="active-ploy-card p-2 bg-white rounded border border-warning shadow-sm">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="fw-bold text-dark small">
+                                <i class="bi bi-lightning-charge-fill text-warning me-1"></i>${ploy.name}
+                            </span>
+                            <div class="d-flex align-items-center gap-1">
+                                <span class="badge bg-dark" style="font-size: 0.7rem;">${ploy.cps || '1 PM'}</span>
+                                <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0" 
+                                    onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" 
+                                    title="Desactivar ardid y recuperar PM">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-dark small lh-sm" style="font-size: 0.82rem;">
+                            ${ploy.description}
+                        </div>
+                    </div>
+                `;
+            });
+
+            activeContainer.innerHTML = html;
+            syncStratSectionsHeight();
+        }
+
+        // --- SISTEMA DE GESTIÓN Y SELECCIÓN DE EQUIPAMIENTO ---
+
+        function getPlayerEquipment(playerPrefix) {
+            if (!gameState[playerPrefix]) {
+                gameState[playerPrefix] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] };
+            }
+            if (!Array.isArray(gameState[playerPrefix].equipment)) {
+                gameState[playerPrefix].equipment = [];
+            }
+            return gameState[playerPrefix].equipment;
+        }
+
+        function openEquipmentSelectModal(playerPrefix) {
+            const factionSelect = document.getElementById(`${playerPrefix}-faction`);
+            const factionKey = factionSelect ? factionSelect.value : "";
+
+            if (!factionKey) {
+                mostrarNotificacion("Falta selección: Por favor, selecciona primero tu facción para elegir equipamiento.");
+                return;
+            }
+
+            gameState.currentPlayerSelectingEquip = playerPrefix;
+            renderEquipmentSelectModal(playerPrefix);
+
+            const modal = new bootstrap.Modal(document.getElementById('equipmentSelectModal'));
+            modal.show();
+        }
+
+        function buildEquipmentCardInnerHtml(item) {
+            let descHtml = Array.isArray(item.description)
+                ? item.description.map(line => `<p class="mb-2">${line}</p>`).join('')
+                : `<p class="mb-2">${item.description}</p>`;
+
+            let weaponHtml = '';
+            if (item.weapon && item.weapon.length > 0) {
+                const rowsHtml = item.weapon.map(w => `
+                    <tr>
+                        <td class="fw-bold text-start">${w.w_name}</td>
+                        <td class="text-center">${w.ATK}</td>
+                        <td class="text-center">${w.HIT}</td>
+                        <td class="text-center">${w.DMG}</td>
+                        <td class="text-start fst-italic">${w.rules || '-'}</td>
+                    </tr>
+                `).join('');
+
+                weaponHtml = `
+                <div class="equip-weapon-table mt-2 mb-2 shadow-sm rounded overflow-hidden">
+                    <table class="table table-sm table-dark table-bordered mb-0">
+                        <thead>
+                            <tr class="text-center">
+                                <th class="text-start">NOMBRE</th>
+                                <th>ATAQ.</th>
+                                <th>IMP.</th>
+                                <th>DAÑO</th>
+                                <th class="text-start">REGLAS DE ARMAS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${rowsHtml}
+                        </tbody>
+                    </table>
+                </div>`;
+            }
+
+            let actionHtml = '';
+            if (item.action && item.action.length > 0) {
+                actionHtml = item.action.map(a => {
+                    const descYes = Array.isArray(a.action_yes)
+                        ? a.action_yes.map(line => `
+                            <div class="equip-action-yes p-2 mb-2 d-flex align-items-start">
+                                <span class="icon icon-yes flex-shrink-0 mt-1 me-2"></span>
+                                <div>${line}</div>
+                            </div>`).join('')
+                        : (a.action_yes ? `
+                            <div class="equip-action-yes p-2 mb-2 d-flex align-items-start">
+                                <span class="icon icon-yes flex-shrink-0 mt-1 me-2"></span>
+                                <div>${a.action_yes}</div>
+                            </div>` : '');
+
+                    const descNo = Array.isArray(a.action_no)
+                        ? a.action_no.map(line => `
+                            <div class="equip-action-no p-2 d-flex align-items-start">
+                                <span class="icon icon-no flex-shrink-0 mt-1 me-2"></span>
+                                <div>${line}</div>
+                            </div>`).join('')
+                        : (a.action_no ? `
+                            <div class="equip-action-no p-2 d-flex align-items-start">
+                                <span class="icon icon-no flex-shrink-0 mt-1 me-2"></span>
+                                <div>${a.action_no}</div>
+                            </div>` : '');
+
+                    return `
+                    <div class="equip-action-box shadow-sm mb-2">
+                        <div class="equip-action-header d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-uppercase">${a.action_name}</span>
+                            <span class="badge bg-dark">${a.action_cost}</span>
+                        </div>
+                        <div class="content bg-white p-2">
+                            ${descYes}
+                            ${descNo}
+                        </div>
+                    </div>`;
+                }).join('');
+            }
+
+            let imgHtml = '';
+            if (item.img && item.img.length > 0) {
+                imgHtml = `
+                    <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
+                        ${item.img.map(src => `<img src="${src}" class="img-fluid rounded border shadow-sm" style="max-height: 160px;" alt="Ejemplo de equipo">`).join('')}
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="small lh-base text-dark">${descHtml}</div>
+                ${weaponHtml}
+                ${actionHtml}
+                ${imgHtml}
+            `;
+        }
+
+        function renderEquipmentSelectModal(playerPrefix) {
+            const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
+            const playerName = document.querySelector(`.player-${playerPrefix === 'p1' ? '1' : '2'} .name-input`).value.trim() || (playerPrefix === 'p1' ? 'Jugador 1' : 'Jugador 2');
+            const factionName = factionTranslations[factionKey] || factionKey;
+            const currentEquipList = getPlayerEquipment(playerPrefix);
+
+            // Actualizar cabecera del modal
+            const imgEl = document.getElementById('equipModalFactionImg');
+            if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
+
+            const titleEl = document.getElementById('equipModalTitle');
+            if (titleEl) titleEl.innerHTML = `<i class="bi bi-tools text-primary me-1"></i>Selección de Equipamiento — ${factionName}`;
+
+            const subTitleEl = document.getElementById('equipModalSubtitle');
+            if (subTitleEl) subTitleEl.innerText = `${playerName} — Selección Previa a la Batalla`;
+
+            const playerEl = document.getElementById('equipModalPlayerName');
+            if (playerEl) playerEl.innerText = playerName;
+
+            const countEl = document.getElementById('equipModalSelectedCount');
+            if (countEl) countEl.innerText = currentEquipList.length;
+
+            const badgeEl = document.getElementById('equipModalCounterBadge');
+            if (badgeEl) {
+                if (currentEquipList.length === 4) {
+                    badgeEl.className = 'badge bg-success text-white fs-6 fw-bold shadow-sm';
+                } else if (currentEquipList.length > 0) {
+                    badgeEl.className = 'badge bg-warning text-dark fs-6 fw-bold shadow-sm';
+                } else {
+                    badgeEl.className = 'badge bg-secondary text-white fs-6 fw-bold shadow-sm';
+                }
+            }
+
+            // Filtrar opciones
+            let factionItems = [];
+            let universalItems = [];
+            if (Array.isArray(dataEquipment)) {
+                factionItems = dataEquipment.filter(item => item.faction === factionKey);
+                universalItems = dataEquipment.filter(item => item.faction === 'universal');
+            }
+
+            const factionTabCount = document.getElementById('equipTabFactionCount');
+            if (factionTabCount) factionTabCount.innerText = factionItems.length;
+
+            const universalTabCount = document.getElementById('equipTabUniversalCount');
+            if (universalTabCount) universalTabCount.innerText = universalItems.length;
+
+            // Renderizar pestaña de Facción
+            const factionPane = document.getElementById('equip-tab-faction');
+            if (factionPane) {
+                if (factionItems.length === 0) {
+                    factionPane.innerHTML = '<div class="alert alert-light text-center p-4">No se encontró equipamiento de facción en la base de datos.</div>';
+                } else {
+                    factionItems.sort((a, b) => a.name.localeCompare(b.name));
+                    factionPane.innerHTML = renderEquipmentGridHtml(factionItems, playerPrefix, currentEquipList, false);
+                }
+            }
+
+            // Renderizar pestaña Universal
+            const universalPane = document.getElementById('equip-tab-universal');
+            if (universalPane) {
+                if (universalItems.length === 0) {
+                    universalPane.innerHTML = '<div class="alert alert-light text-center p-4">No se encontró equipamiento universal en la base de datos.</div>';
+                } else {
+                    universalItems.sort((a, b) => a.name.localeCompare(b.name));
+                    universalPane.innerHTML = renderEquipmentGridHtml(universalItems, playerPrefix, currentEquipList, true);
+                }
+            }
+        }
+
+        function renderEquipmentGridHtml(items, playerPrefix, currentList, isUniversal) {
+            let html = '<div class="row g-3">';
+            const reachedLimit = currentList.length >= 4;
+
+            items.forEach(item => {
+                const isSelected = currentList.includes(item.id_equip);
+                let btnHtml = '';
+
+                if (isSelected) {
+                    btnHtml = `
+                        <button type="button" class="btn btn-success btn-sm fw-bold px-3 shadow-sm" onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})">
+                            <i class="bi bi-check-circle-fill me-1"></i>Seleccionado (Quitar)
+                        </button>
+                    `;
+                } else if (reachedLimit) {
+                    btnHtml = `
+                        <button type="button" class="btn btn-secondary btn-sm fw-bold px-3 disabled" disabled title="Límite de 4 equipamientos alcanzado">
+                            <i class="bi bi-slash-circle me-1"></i>Límite 4/4
+                        </button>
+                    `;
+                } else {
+                    btnHtml = `
+                        <button type="button" class="btn btn-outline-primary btn-sm fw-bold px-3 shadow-sm" onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})">
+                            <i class="bi bi-plus-circle me-1"></i>Seleccionar
+                        </button>
+                    `;
+                }
+
+                html += `
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 equip-select-card ${isSelected ? 'is-selected border-success' : 'border-secondary border-opacity-25'} shadow-sm">
+                            <div class="card-header ${isSelected ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center py-2">
+                                <span class="fw-bold text-uppercase small"><i class="bi bi-tools me-1"></i>${item.name}</span>
+                                <span class="badge ${isSelected ? 'bg-light text-success' : 'bg-secondary text-white'} fw-bold">${isUniversal ? 'Universal' : 'Facción'}</span>
+                            </div>
+                            <div class="card-body bg-light p-3 d-flex flex-column justify-content-between">
+                                <div class="mb-3">
+                                    ${buildEquipmentCardInnerHtml(item)}
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top bg-light mt-auto">
+                                    <small class="text-muted fst-italic">${isUniversal ? 'Equipo Global' : 'Exclusivo Facción'}</small>
+                                    ${btnHtml}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            return html;
+        }
+
+        function toggleEquipmentSelection(playerPrefix, equipId) {
+            const list = getPlayerEquipment(playerPrefix);
+            const index = list.indexOf(equipId);
+            const item = dataEquipment.find(e => e.id_equip === equipId);
+            const itemName = item ? item.name : 'Equipamiento';
+
+            if (index !== -1) {
+                // Deseleccionar
+                list.splice(index, 1);
+                updateSelectedEquipmentDisplay(playerPrefix);
+                renderEquipmentSelectModal(playerPrefix);
+                saveGameState();
+                mostrarNotificacion(`"${itemName}" eliminado de la selección.`);
+            } else {
+                // Seleccionar
+                if (list.length >= 4) {
+                    mostrarNotificacion("Límite alcanzado: Máximo 4 opciones de equipamiento por comando.");
+                    return;
+                }
+                list.push(equipId);
+                updateSelectedEquipmentDisplay(playerPrefix);
+                renderEquipmentSelectModal(playerPrefix);
+                saveGameState();
+                mostrarNotificacion(`"${itemName}" seleccionado (${list.length}/4).`);
+            }
+        }
+
+        function syncEquipSectionsHeight() {
+            const c1 = document.getElementById('p1-selected-equipment-container');
+            const c2 = document.getElementById('p2-selected-equipment-container');
+            if (!c1 || !c2) return;
+
+            if (window.innerWidth < 768) {
+                c1.style.minHeight = 'auto';
+                c2.style.minHeight = 'auto';
+                return;
+            }
+
+            c1.style.minHeight = 'auto';
+            c2.style.minHeight = 'auto';
+
+            requestAnimationFrame(() => {
+                const h1 = c1.scrollHeight || c1.offsetHeight;
+                const h2 = c2.scrollHeight || c2.offsetHeight;
+                const maxH = Math.max(h1, h2, 44);
+
+                c1.style.minHeight = `${maxH}px`;
+                c2.style.minHeight = `${maxH}px`;
+            });
+        }
+
+        function updateSelectedEquipmentDisplay(playerPrefix) {
+            const container = document.getElementById(`${playerPrefix}-selected-equipment-container`);
+            const countBadge = document.getElementById(`${playerPrefix}-selected-equip-count`);
+            const selectBtn = document.getElementById(`${playerPrefix}-btn-select-equip`);
+            const factionKey = document.getElementById(`${playerPrefix}-faction`)?.value;
+
+            if (selectBtn) {
+                selectBtn.disabled = !factionKey || !dataFactions[factionKey];
+            }
+
+            if (!container) return;
+
+            const list = getPlayerEquipment(playerPrefix);
+
+            if (countBadge) {
+                countBadge.innerText = list.length;
+            }
+
+            if (list.length === 0) {
+                container.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-2"><small class="text-muted fst-italic text-center">Ningún equipamiento seleccionado (hasta 4).</small></div>';
+                syncEquipSectionsHeight();
+                return;
+            }
+
+            let html = '';
+            list.forEach(equipId => {
+                const item = dataEquipment.find(e => e.id_equip === equipId);
+                if (!item) return;
+
+                const isUniversal = item.faction === 'universal';
+                const hasWeapons = item.weapon && item.weapon.length > 0;
+                const hasActions = item.action && item.action.length > 0;
+
+                html += `
+                <!-- Indexador: Equipamiento Helper v1.0 -->
+                    <div class="active-equip-card p-2 bg-white rounded border ${playerPrefix === 'p1' ? 'border-primary' : 'border-danger'} border-opacity-50 shadow-sm">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-1 overflow-hidden">
+                                <button type="button" class="btn btn-outline-danger btn-sm py-0 px-1 border-0" 
+                                    onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})" title="Quitar equipamiento">
+                                    <i class="bi bi-x-circle-fill"></i>
+                                </button>
+                                <span class="badge ${isUniversal ? 'bg-secondary' : (playerPrefix === 'p1' ? 'bg-primary' : 'bg-danger')} text-white" style="font-size: 0.7rem;">
+                                    ${isUniversal ? 'Universal' : 'Facción'}
+                                </span>
+                                <span class="fw-bold text-dark small text-truncate" style="font-size: 1rem;" title="${item.name}">${item.name}</span>
+                                ${hasWeapons ? '<span class="badge bg-dark" style="font-size: 0.85rem;" title="Armas"><i class="bi bi-crosshair"></i></span>' : ''}
+                                ${hasActions ? '<span class="badge bg-warning text-dark" style="font-size: 0.6rem;" title="Acción Única"><i class="bi bi-lightning-fill"></i></span>' : ''}
+                            </div>
+                            <div class="d-flex align-items-center gap-1 flex-shrink-0">
+                                <button type="button" class="btn btn-outline-dark btn-sm py-0 px-4" style="font-size: 1.15rem;" 
+                                    onclick="showEquipmentDetails(${item.id_equip})" title="Ver detalles y reglas completas">
+                                    <i class="bi bi-eye-fill"></i>
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+            syncEquipSectionsHeight();
+        }
+
+        function showEquipmentDetails(equipId) {
+            const item = dataEquipment.find(e => e.id_equip === equipId);
+            if (!item) return;
+
+            const modalTitleEl = document.getElementById('equipDetailModalTitle');
+            const modalBodyEl = document.getElementById('equipDetailModalBody');
+
+            const isUniversal = item.faction === 'universal';
+            const factionName = isUniversal ? 'Equipamiento Universal' : (factionTranslations[item.faction] || item.faction);
+
+            if (modalTitleEl) {
+                modalTitleEl.innerHTML = `<i class="bi bi-tools text-primary me-2"></i>${item.name} <span class="badge ${isUniversal ? 'bg-secondary' : 'bg-primary'} fs-6 ms-2">${isUniversal ? 'Universal' : factionName}</span>`;
+            }
+
+            if (modalBodyEl) {
+                modalBodyEl.innerHTML = `
+                    <div class="p-2 bg-white rounded">
+                        ${buildEquipmentCardInnerHtml(item)}
+                    </div>
+                `;
+            }
+
+            const modal = new bootstrap.Modal(document.getElementById('equipmentDetailModal'));
+            modal.show();
         }
 
         // 4. (Opcional pero recomendado) Función de validación masiva si el usuario cambia de turno hacia atrás
@@ -1829,7 +2735,9 @@
                 critVp: document.getElementById(`${p}-crit-vp`).innerText,
                 tacVp: document.getElementById(`${p}-tac-vp`).innerText,
                 enemySize: document.getElementById(`${p}-enemy-size`).value,
-                kills: document.getElementById(`${p}-kills`).innerText
+                kills: document.getElementById(`${p}-kills`).innerText,
+                strategicPloys: (gameState[p] && gameState[p].strategicPloys) ? gameState[p].strategicPloys : { 1: [], 2: [], 3: [], 4: [] },
+                equipment: getPlayerEquipment(p)
             };
         }
 
@@ -1924,6 +2832,23 @@
             }
 
             document.getElementById(`${p}-kills`).innerText = pState.kills || "0";
+
+            // Restaurar ardides estratégicos
+            if (!gameState[p]) {
+                gameState[p] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] };
+            }
+            if (pState.strategicPloys) {
+                gameState[p].strategicPloys = pState.strategicPloys;
+            }
+            updateActiveStrategicPloysDisplay(p);
+
+            // Restaurar equipamiento
+            if (pState.equipment && Array.isArray(pState.equipment)) {
+                gameState[p].equipment = pState.equipment;
+            } else if (!gameState[p].equipment) {
+                gameState[p].equipment = [];
+            }
+            updateSelectedEquipmentDisplay(p);
         }
 
         // Ejecutar la carga cuando el documento esté listo
@@ -1933,6 +2858,12 @@
             // Detectar cuando el usuario cambia su nombre para guardarlo
             document.querySelectorAll('.name-input').forEach(input => {
                 input.addEventListener('blur', saveGameState);
+            });
+
+            // Sincronizar altura de bloques al redimensionar ventana
+            window.addEventListener('resize', () => {
+                syncStratSectionsHeight();
+                syncEquipSectionsHeight();
             });
         });
 
@@ -1993,12 +2924,6 @@
                 }
             });
         }
-
-        // Ejecutar la carga cuando el documento esté listo
-        document.addEventListener('DOMContentLoaded', initializeMatchData);
-
-        // Primera carga
-        document.addEventListener('DOMContentLoaded', calculateTotals);
 
     </script>
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
@@ -2323,6 +3248,116 @@
                 <div class="modal-footer bg-white justify-content-center py-2 border-top">
                     <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
                         <i class="bi bi-arrow-return-left me-2"></i>Volver a la Partida
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="strategicPloysModal" tabindex="-1" aria-labelledby="strategicPloysModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 shadow-lg border-warning border-top border-4">
+                <div class="modal-header bg-light pb-2">
+                    <div class="d-flex align-items-center">
+                        <img id="stratModalFactionImg" src="./resources/facciones/blank.png" alt="Facción"
+                            class="me-3 rounded-circle border shadow-sm"
+                            style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
+                        <div>
+                            <h5 class="modal-title fw-bold text-dark mb-0" id="stratModalTitle">
+                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides de Estrategia
+                            </h5>
+                            <span class="badge bg-dark small" id="stratModalSubtitle">Fase de Estrategia - TP 1</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center shadow-sm">
+                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span id="stratModalPlayerName">Jugador 1</span></span>
+                    <span class="badge bg-warning text-dark fs-6 fw-bold shadow-sm">
+                        <i class="bi bi-wallet2 me-1"></i>PM Disponibles: <span id="stratModalCP">2</span>
+                    </span>
+                </div>
+                <div class="modal-body bg-light p-3" id="stratModalBody">
+                    <!-- Lista dinámica de ardides estratégicos -->
+                </div>
+                <div class="modal-footer bg-white justify-content-between py-2 border-top">
+                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Máximo 1 uso por ardid por Punto de Inflexión.</small>
+                    <button type="button" class="btn btn-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-check2 me-1"></i>Listo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Selección de Equipamiento al Inicio de la Partida -->
+    <div class="modal fade" id="equipmentSelectModal" tabindex="-1" aria-labelledby="equipmentSelectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content border-0 shadow-lg border-primary border-top border-4" id="equipModalWrapper">
+                <div class="modal-header bg-light pb-2">
+                    <div class="d-flex align-items-center">
+                        <img id="equipModalFactionImg" src="./resources/facciones/blank.png" alt="Facción"
+                            class="me-3 rounded-circle border shadow-sm"
+                            style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
+                        <div>
+                            <h5 class="modal-title fw-bold text-dark mb-0" id="equipModalTitle">
+                                <i class="bi bi-tools text-primary me-1"></i>Selección de Equipamiento
+                            </h5>
+                            <span class="badge bg-dark small" id="equipModalSubtitle">Selección Previa a la Batalla</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center shadow-sm">
+                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span id="equipModalPlayerName">Jugador 1</span></span>
+                    <span class="badge bg-primary text-white fs-6 fw-bold shadow-sm" id="equipModalCounterBadge">
+                        <i class="bi bi-tools me-1"></i>Seleccionados: <span id="equipModalSelectedCount">0</span> / 4
+                    </span>
+                </div>
+                <div class="modal-body bg-light p-3">
+                    <!-- Nav Tabs para alternar entre Equipamiento de Facción y Universal -->
+                    <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border" id="equipmentModalTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold" id="equip-tab-faction-btn" data-bs-toggle="pill" data-bs-target="#equip-tab-faction" type="button" role="tab" aria-controls="equip-tab-faction" aria-selected="true">
+                                <i class="bi bi-shield-shaded me-1"></i>Equipamiento de Facción (<span id="equipTabFactionCount">4</span>)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold text-dark" id="equip-tab-universal-btn" data-bs-toggle="pill" data-bs-target="#equip-tab-universal" type="button" role="tab" aria-controls="equip-tab-universal" aria-selected="false">
+                                <i class="bi bi-globe2 me-1"></i>Equipamiento Universal (<span id="equipTabUniversalCount">11</span>)
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="equipmentModalTabContent">
+                        <div class="tab-pane fade show active" id="equip-tab-faction" role="tabpanel" aria-labelledby="equip-tab-faction-btn"></div>
+                        <div class="tab-pane fade" id="equip-tab-universal" role="tabpanel" aria-labelledby="equip-tab-universal-btn"></div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-white justify-content-between py-2 border-top">
+                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Selecciona hasta 4 opciones en total entre equipamiento de facción y universal.</small>
+                    <button type="button" class="btn btn-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-check2 me-1"></i>Listo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalle Rápido de Equipamiento In-Game -->
+    <div class="modal fade" id="equipmentDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 shadow-lg border-primary border-top border-4" id="equipDetailModalWrapper">
+                <div class="modal-header bg-light pb-2">
+                    <h5 class="modal-title fw-bold text-dark" id="equipDetailModalTitle">
+                        <i class="bi bi-tools text-primary me-2"></i>Detalle de Equipamiento
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body bg-white p-3" id="equipDetailModalBody">
+                    <!-- Contenido detallado con tablas de armas y acciones -->
+                </div>
+                <div class="modal-footer bg-light py-2 justify-content-center">
+                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-return-left me-1"></i>Cerrar
                     </button>
                 </div>
             </div>

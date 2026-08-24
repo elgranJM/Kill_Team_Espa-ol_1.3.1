@@ -904,7 +904,7 @@
     "id_equip": 114,
     "faction": "xv26-battlesuits",
     "name": "Selectores de Blanco Integrados",
-    "description": "Siempre que fueras a contraactuar, puedes hacerlo con un agente XV26 STEALTH BATTLESUIT amigo que tenga una orden de Ocultarse y esté a más de 3\" de agentes enemigos, pero antes de que contraactúe, debes cambiar su orden a Trabarse y no puede realizar ninguna acción aparte de <b>Disparar</b> durante esa contraacción.", 
+    "description": "Siempre que fueras a contraatacar, puedes hacerlo con un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo que tenga una orden de Ocultarse y esté a más de 3\" de agentes enemigos, pero antes de que contraataque, debes cambiar su orden a Trabarse y no puede realizar ninguna acción aparte de <b>Disparar</b> durante ese contraataque.",
     "weapon": [],
     "action": []
   },
@@ -912,7 +912,7 @@
     "id_equip": 115,
     "faction": "xv26-battlesuits",
     "name": "Multirrastreadores XV26",
-    "description": "Una vez por Punto de Inflexión, cuando un agente XV26 STEALTH BATTLESUIT amigo esté realizando la acción de <b>Disparar</b> y selecciones un cañón rotativo (barrido), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Torrente 2\".", 
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo esté realizando la acción de <b>Disparar</b> y selecciones un cañón rotativo (barrido), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Ráfaga 2\".",
     "weapon": [],
     "action": []
   },
@@ -920,7 +920,7 @@
     "id_equip": 116,
     "faction": "xv26-battlesuits",
     "name": "Inhibidores de Contrarred",
-    "description": "Siempre que se determine el control de un marcador, trata el atributo de LPA total de los agentes enemigos que lo disputan como 1 menos si solo un agente XV26 STEALTH BATTLESUIT amigo y solo dos agentes enemigos lo disputan. Ese agente XV26 STEALTH BATTLESUIT amigo no puede ser un agente DRONE. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.", 
+    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige 1 marcador de objetivo o marcador de misión. Hasta el final del punto de inflexión, siempre que se determine el control de ese marcador, trata el atributo LPA total de los agentes enemigos que lo disputan como 1 menos si al menos 1 de esos agentes enemigos está a 3\" o menos de agentes <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigos. Ten en cuenta que esto no es un cambio al atributo LPA, por lo que cualquier cambio es acumulable con esto.",
     "weapon": [],
     "action": []
   },
@@ -928,7 +928,7 @@
     "id_equip": 117,
     "faction": "xv26-battlesuits",
     "name": "Filtros de Sol Negro Avanzados",
-    "description": "Siempre que un agente XV26 STEALTH BATTLESUIT amigo esté disparando a un agente que está Ofuscado, no tienes que descartar un éxito como resultado de esa regla. Todos los demás efectos de estar Ofuscado aplican de forma normal.", 
+    "description": "Siempre que un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo esté disparando a un agente que está Ofuscado, no tienes que descartar un éxito como resultado de esa regla. Todos los demás efectos de estar Ofuscado aplican de forma normal.",
     "weapon": [],
     "action": []
   },

@@ -1045,7 +1045,7 @@
                     }
                 },
                 {
-                    "name": "Pistola de inducción (a distancia)",
+                    "name": "Pistola de pulso (a distancia)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -1055,7 +1055,7 @@
                     }
                 },
                 {
-                    "name": "Pistola de inducción (a bocajarro)",
+                    "name": "Pistola de pulso (a bocajarro)",
                     "type": "ranged",
                     "stats": {
                         "A": "3",
@@ -1071,7 +1071,7 @@
                     "description": "<b>GAMBITO ESTRATÉGICO</b> siempre que este agente se encuentre en la zona de aniquilación. Elige 1 agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> <b>DRON</b> amigo en la zona de aniquilación. Hasta el final de la siguiente activación de ese agente, ignora los dos primeros puntos de su regla de Dron (esto tiene prioridad frente a esa regla)."
                 },
                 {
-                    "name": "Por el Bien Supremo",
+                    "name": "Por el Bien Mayor",
                     "description": "Al determinar el valor de Certera X de la regla de facción Kauyon, si este agente se encuentra en la zona de aniquilación, suma 1 al resultado si al menos 2 agentes <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigos (salvo <b>DRON</b>) están incapacitados (hasta un máximo de Certera 3). Requiere un mínimo de Certera 1 para usar esta regla."
                 }
             ],
@@ -1146,7 +1146,14 @@
                     "description": "Siempre que un agente enemigo sea un blanco válido de este agente, o sea visible para este agente y se encuentre a 2\" o menos de tu marcador de Emboscada (ver ardid de estrategia Preparar emboscada), está marcado. Siempre que un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo dispare a un agente marcado, sus armas a distancia tienen la regla de armas Severa.  Recuerda que un agente puede ser un blanco válido para este agente aunque este agente no sea el agente activo."
                 }
             ],
-            "uniqueActions": [],
+            "uniqueActions": [
+                {
+                    "name": "Marcador telemétrico enfocado",
+                    "cost": "1PA",
+                    "description": ["Elige 1 agente enemigo visible para este agente. Una vez durante este punto de inflexión, cuando un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo dispare a ese agente enemigo, puedes usar este efecto. Si lo haces, mejora en 1 el atributo Impactar de las armas a distancia de la ficha de datos de ese agente amigo hasta el final de esa acción."],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
+                }
+            ],
             "keywords": "<span class=\"faction\">EXOARMADURA XV26 SIGILO</span>, IMPERIO T'AU, DESIGNADOR",
             "peana": "32"
         },
@@ -1214,7 +1221,7 @@
             "abilities": [
                 {
                     "name": "Protocolos de encubrimiento",
-                    "description": "Este agente puede reaccionar independientemente de su orden, pero si tiene una orden de Ocultarse, durante esa reacción solo podrá realizar acciones de <b>Recoger marcador</b>, <b>Colocar marcador</b> o de misión."
+                    "description": "Este agente puede contraatacar independientemente de su orden, pero si tiene una orden de Ocultarse, durante ese contraataque solo podrá realizar acciones de <b>Recoger marcador</b>, <b>Colocar marcador</b> o de misión."
                 }
             ],
             "uniqueActions": [],
@@ -1285,7 +1292,7 @@
             "abilities": [
                 {
                     "name": "Pack de sensores multiespectro",
-                    "description": "<p><b>APOYO</b>. Puedes usar esta regla una vez por punto de inflexión, cuando un agente enemigo visible para este agente y a 8\" o menos de él se active. Si lo haces, cada agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo a 3\" o menos de este agente puede hacer de inmediato una de las siguientes opciones:</p> <p><ul><li> Realizar una acción libre de <b>Correr</b> (en el orden que elijas).</li></ul></p> <p><ul><li>Cambia su orden.</li></ul></p> <p>Los agentes amigos que realicen la acción de <b>Correr</b> no pueden terminar ese movimiento a 3\" o menos de algún agente enemigo. Recuerda que el equipo universal Aparato de comunicaciones solo afecta a la segunda distancia de esta regla.</p>"
+                    "description": "<p><b>APOYO</b>. Puedes usar esta regla una vez por punto de inflexión, cuando un agente enemigo a 8\" o menos de este agente se active. Si lo haces, cada agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo a 3\" o menos de este agente puede hacer de inmediato una de las siguientes opciones:</p> <p><ul><li> Realizar una acción libre de <b>Correr</b> (en el orden que elijas).</li></ul></p> <p><ul><li>Cambia su orden.</li></ul></p> <p>Los agentes amigos que realicen la acción de <b>Correr</b> no pueden terminar ese movimiento a 3\" o menos de algún agente enemigo. Recuerda que el equipo universal Aparato de comunicaciones solo afecta a la segunda distancia de esta regla.</p>"
                 }
             ],
             "uniqueActions": [
@@ -1468,7 +1475,7 @@
             },
             "weapons": [
                 {
-                    "name": "Carabina de inducción doble",
+                    "name": "Carabina de pulso doble",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -1491,7 +1498,7 @@
             "abilities": [
                 {
                     "name": "Dron",
-                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Lanzador de granada de fotones</b>. <b>Reposicionarse</b> y <b>Disparar</b></li></ul> <ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Este agente no puede usar armas que no aparezcan en su tarjeta de datos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li>Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para las condiciones de victoria y la obtención de PV si requieren que los agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc).</li></ul>"
+                    "description": "<ul><li>Este agente solo puede realizar acciones de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Lanzador de granada de fotones</b>, <b>Reposicionarse</b> y <b>Disparar</b></li></ul> <ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Este agente no puede usar armas que no aparezcan en su tarjeta de datos.</li></ul> <ul><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul> <ul><li>Este agente se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para las condiciones de victoria y la obtención de PV si requieren que los agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/queda incapacitado, determinar cuántos agentes deben escapar/sobrevivir/quedar incapacitados, etc).</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -1499,7 +1506,7 @@
                     "name": "Lanzador de granada de fotones",
                     "cost": "1 PA",
                     "description": [
-                        "Elige 1 agente enemigo visible para este agente y tira 1D6. Con 3+, Hasta el final de la siguiente activación de ese agente, resta 2\" a su atributo Movimiento."
+                        "Elige 1 agente enemigo visible para este agente y tira 1D6. Con 3+, hasta el final de la siguiente activación de ese agente, resta 2\" a su atributo Movimiento."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
                 }

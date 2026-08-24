@@ -3229,5 +3229,77 @@
         "name": "ODIO ARDIENTE",
         "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para una agente <span class=\"faction\">INSIDIADORA CELESTE</span> amiga si está disparando, combatiendo o contraatacando contra un agente enemigo que no tenga la clave <b>IMPERIUM</b>. Hasta el final de esa secuencia, las armas de esa agente amiga tienen la regla de armas Incesante; si ese agente enemigo tiene también las claves <b>CAOS</b> y/o <b>PSÍQUICO</b>, en su lugar, hasta el final de esa secuencia, las armas de esa agente amiga tienen la regla de armas Implacable.",
         "typename":"Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 460,
+        "faction": "xv26-battlesuits",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "CAZADORES PACIENTES",
+        "description": "Siempre que un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo esté disparando o combatiendo contra un agente enemigo agotado, las armas de ese agente amigo tienen la regla de armas Equilibrada y sus armas a distancia tienen la regla de armas Saturación.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 461,
+        "faction": "xv26-battlesuits",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "LAZOS DE UNIDAD",
+        "description": "Siempre que un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo (salvo <b>DRON</b>) sea activado, si es visible para otro agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo (salvo <b>DRON</b>) y se encuentra a 6\" o menos de él, puedes ignorar cualquier cambio al atributo LPA de ese primer agente amigo y elegir 1 de las siguientes opciones: <ul><li>Ignora cualquier cambio al atributo Movimiento de ese primer agente amigo por estar herido hasta el final de esa activación.</li><li>Ignora cualquier cambio al atributo Impactar de las armas de ese primer agente amigo por estar herido hasta el final de esa activación.</li></ul>",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 462,
+        "faction": "xv26-battlesuits",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "PREPARAR EMBOSCADA",
+        "description": "Sitúa 1 de tus marcadores de Emboscada por completo dentro de tu territorio y a más de 2\" de agentes enemigos. Siempre que un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo dispare a un agente enemigo que esté a 2\" o menos de ese marcador, puedes usar esta regla. Si lo haces, las armas a distancia de ese agente amigo tienen la regla de armas Buscar hasta el final de la acción. Retira ese marcador de Emboscada al final de esa acción o en el paso de Preparación del siguiente punto de inflexión (lo que ocurra antes).",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 463,
+        "faction": "xv26-battlesuits",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "CONTRAMEDIDAS HOLOONDA",
+        "description": "Siempre que un agente dispare a un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo que esté a más de 6\" de él, en el paso de Tirar dados de ataque, el atacante debe descartar 1 de sus éxitos normales sin resolver (o 1 de sus éxitos críticos si no le quedan). Esto no es acumulable con estar Ofuscado.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 464,
+        "faction": "xv26-battlesuits",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "RETROPROPULSORES VECTORIALES",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo termine la acción <b>Cargar</b> dentro de la zona de control de un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo (salvo <b>DRON</b>). Interrumpe esa acción para usar esta regla. Si lo haces, ese agente amigo puede realizar de inmediato una acción libre de <b>Retroceder</b>, pero no puede mover más de 3\" durante esa acción. A continuación, ese agente enemigo puede realizar de inmediato una acción libre de <b>Reposicionarse</b> usando cualquier distancia de movimiento restante que tuviera de esa primera acción de <b>Cargar</b>, y puede hacerlo incluso si ha realizado una acción que le impide realizar la acción de <b>Reposicionarse</b>.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 465,
+        "faction": "xv26-battlesuits",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "SUDARIO FANTASMA",
+        "description": "Usa este ardid de tiroteo al final de la activación de un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo. Si ese agente tiene una orden de Trabarse, cámbiala a Ocultarse. No puedes usar este ardid más de 1 vez por batalla para cada agente amigo.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 466,
+        "faction": "xv26-battlesuits",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "ACTIVAR MOCHILA PROPULSORA",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo (salvo <b>DRON</b>) sea activado o contraataque. Hasta el final de esa activación/contraataque, puedes ignorar la distancia vertical que se mueve durante 1 subida y 1 bajada.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 467,
+        "faction": "xv26-battlesuits",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "PROTOCOLOS SALVADORES",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo (salvo <b>DRON</b>) sea elegido como blanco válido de una acción <b>Disparar</b>. Elige 1 agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> <b>DRON</b> amigo visible para ese primer agente amigo y a 3\" o menos de él para que se convierta en el blanco válido en su lugar (incluso si normalmente no sería válido para esto). Ese agente <b>DRON</b> amigo solo está en cobertura u ofuscado si el blanco original lo estaba. Este ardid no tiene efecto si el arma a distancia tiene la regla de armas Área o Ráfaga.",
+        "typename": "Ardid de Tiroteo"
     }
 ]

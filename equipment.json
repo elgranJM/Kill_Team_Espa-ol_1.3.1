@@ -1753,7 +1753,7 @@
     "id_equip": 202,
     "faction": "universal",
     "name": "GRANADAS EXPLOSIVAS",
-    "description": "<p>Las escaleras son terreno Insignificante y Expuesto. Antes de la batalla, puedes desplegar cualquier número de ellas tal como se indica a continuación: </p> <p><ul><li>Completamente dentro de tu territorio.</li></ul> <ul><li> En vertical contra terreno que tenga una altura de al menos 2\".</li></ul> <ul><li>A más de 2\" de otros elementos de terreno de equipo.</li></ul> <ul><li>A más de 1\" de puertas y puntos de acceso.</li></ul></p> <p>Una vez por acción, cuando un agente trepe el elemento de terreno contra el que se apoya una escalera, trata la distancia vertical como 1\" si la escalera está dentro de la zona de control del agente durante todo el movimiento de trepar.</p>", 
+    "description": "Cuando elijas este equipo, selecciona dos granadas explosivas (2 frag, 2 perforantes, o 1 frag y 1 perforante). Cada selección es un arma a distancia que pueden usar tus agentes, pero tu comando solo podrá usar esa arma durante la batalla un número total de veces igual a tu selección.", 
     "weapon": [
       {
         "w_name": "Granada frag",

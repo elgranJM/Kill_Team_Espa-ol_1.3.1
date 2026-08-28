@@ -314,18 +314,105 @@
                 </div>
 
                 <!-- Selector CritOp -->
-                <div class="mb-4 p-3 border border-warning border-2 border-opacity-50 rounded bg-light shadow-sm">
-                    <label class="form-label fw-bold text-dark"><i class="bi bi-globe-americas me-2"></i>Misión Crítica
-                        (CritOp) Global</label>
-                    <div class="input-group input-group-lg shadow-sm">
-                        <select class="form-select border-warning fw-bold text-center" id="global-critop"
-                            onchange="validateAllScores()">
-                            <option value="" selected disabled>Selecciona la misión crítica de la partida...</option>
-                        </select>
-                        <button class="btn btn-warning fw-bold px-4 border-warning" type="button"
-                            onclick="showCritOpDetails()" title="Ver detalles de la misión">
-                            <i class="bi bi-info-circle-fill fs-5 text-dark"></i>
+                <div class="card border-secondary mb-4 shadow-sm">
+                    <div
+                        class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-globe me-2"></i>Entorno y Misión (Generación)</span>
+                        <button class="btn btn-sm btn-warning shadow-sm fw-bold" onclick="randomizeAll()">
+                            <i class="bi bi-dice-5-fill me-1"></i>Aleatorizar Todo
                         </button>
+                    </div>
+                    <div class="card-body bg-light">
+
+                        <div class="input-group mb-3 shadow-sm">
+                            <span class="input-group-text bg-primary text-white border-primary fw-bold"
+                                style="min-width: 110px;"><i class="bi bi-crosshair me-1"></i> CritOp</span>
+                            <select class="form-select border-primary fw-bold text-center" id="global-critop"
+                                onchange="validateAllScores()">
+                                <option value="" selected disabled>-- Selecciona Misión Manualmente --</option>
+                            </select>
+                            <button class="btn btn-warning fw-bold border-warning px-3" type="button"
+                                onclick="showCritOpDetails()" title="Ver tarjeta de misión">
+                                <i class="bi bi-info-circle-fill"></i>
+                            </button>
+                            <button class="btn btn-outline-primary px-3" type="button" onclick="randomizeCritOp()"
+                                title="Misión al Azar">
+                                <i class="bi bi-dice-5-fill"></i>
+                            </button>
+                        </div>
+
+                        <div class="input-group mb-3 shadow-sm">
+                            <span class="input-group-text bg-secondary text-white border-secondary fw-bold"
+                                style="min-width: 110px;"><i class="bi bi-geo-alt-fill me-1"></i> Killzone</span>
+                            <select class="form-select border-secondary fw-bold text-center" id="killzoneSelect"
+                                onchange="updateMapOptions()">
+                                <option value="" selected disabled>-- Selecciona Killzone Manualmente --</option>
+                            </select>
+                            <button class="btn btn-secondary fw-bold border-secondary px-3" type="button"
+                                id="btnViewTerrain" onclick="showTerrainModal()" title="Ver Catálogo de Terrenos"
+                                disabled>
+                                <i class="bi bi-bricks"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary px-3" type="button" onclick="randomizeKillzone()"
+                                title="Killzone al Azar">
+                                <i class="bi bi-dice-5-fill"></i>
+                            </button>
+                        </div>
+
+                        <div class="input-group mb-0 shadow-sm">
+                            <span class="input-group-text bg-secondary text-white border-secondary fw-bold"
+                                style="min-width: 110px;"><i class="bi bi-map me-1"></i> Mapa</span>
+                            <select class="form-select border-secondary fw-bold text-center" id="mapSelect" disabled>
+                                <option value="" selected disabled>-- Selecciona Killzone Primero --</option>
+                            </select>
+                            <button class="btn btn-info text-dark fw-bold border-info px-3" type="button"
+                                id="btnViewMap" onclick="showMapModal()" title="Ver plano del Mapa" disabled>
+                                <i class="bi bi-eye-fill"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary px-3" type="button" id="btnRandomMap"
+                                onclick="randomizeMap()" title="Mapa al Azar" disabled>
+                                <i class="bi bi-dice-5-fill"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal fade" id="mapViewModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content border-0 shadow-lg border-info border-top border-4">
+                            <div class="modal-header bg-dark text-white pb-2">
+                                <h5 class="modal-title fw-bold" id="mapModalTitle"></h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body text-center bg-dark p-2">
+                                <img id="mapModalImg" src="" alt="Plano de la Zona de Aniquilación"
+                                    class="img-fluid rounded border border-secondary shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Visualización de Terrenos -->
+                <div class="modal fade" id="terrainViewModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                        <div class="modal-content border-0 shadow-lg border-secondary border-top border-4">
+                            <div class="modal-header bg-light pb-2 border-bottom-0">
+                                <h5 class="modal-title fw-bold text-dark" id="terrainModalTitle"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body bg-light pt-2" id="terrainModalBody">
+                                <!-- La grilla de terrenos se inyecta aquí -->
+                            </div>
+                            <div class="modal-footer bg-white border-top justify-content-center py-2">
+                                <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm"
+                                    data-bs-dismiss="modal">
+                                    <i class="bi bi-check2 me-2"></i>Entendido
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -447,7 +534,8 @@
                             <div class="op-section border-primary border-2 border-opacity-25 mb-3">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="fw-bold text-dark small">
-                                        <i class="bi bi-tools text-primary me-1"></i>Equipamiento (<span id="p1-selected-equip-count">0</span>/4)
+                                        <i class="bi bi-tools text-primary me-1"></i>Equipamiento (<span
+                                            id="p1-selected-equip-count">0</span>/4)
                                     </span>
                                     <button class="btn btn-primary btn-sm fw-bold shadow-sm" type="button"
                                         id="p1-btn-select-equip" onclick="openEquipmentSelectModal('p1')" disabled
@@ -455,9 +543,11 @@
                                         <i class="bi bi-gear-fill me-1"></i>Seleccionar
                                     </button>
                                 </div>
-                                <div id="p1-selected-equipment-container" class="d-flex flex-column gap-2 equip-list-container">
+                                <div id="p1-selected-equipment-container"
+                                    class="d-flex flex-column gap-2 equip-list-container">
                                     <div class="d-flex align-items-center justify-content-center h-100 py-2">
-                                        <small class="text-muted fst-italic text-center">Ningún equipamiento seleccionado (hasta 4).</small>
+                                        <small class="text-muted fst-italic text-center">Ningún equipamiento
+                                            seleccionado (hasta 4).</small>
                                     </div>
                                 </div>
                             </div>
@@ -487,17 +577,21 @@
                             <div class="op-section border-warning border-2 border-opacity-50 mb-3">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="fw-bold text-dark small">
-                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos (Punto de Inflexión <span class="current-tp-label">1</span>)
+                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos
+                                        (Punto de Inflexión <span class="current-tp-label">1</span>)
                                     </span>
                                     <button class="btn btn-warning btn-sm fw-bold shadow-sm" type="button"
                                         id="p1-btn-strat-ploys" onclick="openStrategicPloysModal('p1')" disabled
                                         title="Gestionar ardides estratégicos para este TP">
-                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span class="badge bg-dark ms-1" id="p1-active-ploys-count">0</span>
+                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span
+                                            class="badge bg-dark ms-1" id="p1-active-ploys-count">0</span>
                                     </button>
                                 </div>
-                                <div id="p1-active-strategic-ploys" class="d-flex flex-column gap-2 strat-ploys-container">
+                                <div id="p1-active-strategic-ploys"
+                                    class="d-flex flex-column gap-2 strat-ploys-container">
                                     <div class="d-flex align-items-center justify-content-center h-100 py-2">
-                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small>
+                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo
+                                            en este TP.</small>
                                     </div>
                                 </div>
                             </div>
@@ -675,7 +769,8 @@
                             <div class="op-section border-danger border-2 border-opacity-25 mb-3">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="fw-bold text-dark small">
-                                        <i class="bi bi-tools text-danger me-1"></i>Equipamiento (<span id="p2-selected-equip-count">0</span>/4)
+                                        <i class="bi bi-tools text-danger me-1"></i>Equipamiento (<span
+                                            id="p2-selected-equip-count">0</span>/4)
                                     </span>
                                     <button class="btn btn-danger btn-sm fw-bold shadow-sm" type="button"
                                         id="p2-btn-select-equip" onclick="openEquipmentSelectModal('p2')" disabled
@@ -683,9 +778,11 @@
                                         <i class="bi bi-gear-fill me-1"></i>Seleccionar
                                     </button>
                                 </div>
-                                <div id="p2-selected-equipment-container" class="d-flex flex-column gap-2 equip-list-container">
+                                <div id="p2-selected-equipment-container"
+                                    class="d-flex flex-column gap-2 equip-list-container">
                                     <div class="d-flex align-items-center justify-content-center h-100 py-2">
-                                        <small class="text-muted fst-italic text-center">Ningún equipamiento seleccionado (hasta 4).</small>
+                                        <small class="text-muted fst-italic text-center">Ningún equipamiento
+                                            seleccionado (hasta 4).</small>
                                     </div>
                                 </div>
                             </div>
@@ -715,17 +812,21 @@
                             <div class="op-section border-warning border-2 border-opacity-50 mb-3">
                                 <div class="d-flex justify-content-between align-items-center mb-2">
                                     <span class="fw-bold text-dark small">
-                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos (Punto de Inflexión <span class="current-tp-label">1</span>)
+                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos
+                                        (Punto de Inflexión <span class="current-tp-label">1</span>)
                                     </span>
                                     <button class="btn btn-warning btn-sm fw-bold shadow-sm" type="button"
                                         id="p2-btn-strat-ploys" onclick="openStrategicPloysModal('p2')" disabled
                                         title="Gestionar ardides estratégicos para este TP">
-                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span class="badge bg-dark ms-1" id="p2-active-ploys-count">0</span>
+                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span
+                                            class="badge bg-dark ms-1" id="p2-active-ploys-count">0</span>
                                     </button>
                                 </div>
-                                <div id="p2-active-strategic-ploys" class="d-flex flex-column gap-2 strat-ploys-container">
+                                <div id="p2-active-strategic-ploys"
+                                    class="d-flex flex-column gap-2 strat-ploys-container">
                                     <div class="d-flex align-items-center justify-content-center h-100 py-2">
-                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small>
+                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo
+                                            en este TP.</small>
                                     </div>
                                 </div>
                             </div>
@@ -1321,19 +1422,21 @@
         let dataRacial = {};
         let dataPloys = [];
         let dataEquipment = [];
+        let dataMaps = {};
 
         // 2. Carga Asíncrona de ambos JSON
         async function initializeMatchData() {
             try {
                 // Agregamos reglasArmas.json, racial.json, ploys.json y equipment.json a nuestra promesa concurrente
-                const [factionsRes, tacopsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes] = await Promise.all([
+                const [factionsRes, tacopsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes, mapsRes] = await Promise.all([
                     fetch('tacops.json'),
                     fetch('tacopsgenerales.json'),
                     fetch('CritsOps.json'),
                     fetch('reglasArmas.json'),
                     fetch('racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
                     fetch('ploys.json').catch(e => { console.warn('ploys.json error', e); return null; }),
-                    fetch('equipment.json').catch(e => { console.warn('equipment.json error', e); return null; })
+                    fetch('equipment.json').catch(e => { console.warn('equipment.json error', e); return null; }),
+                    fetch('maps.json').catch(e => { console.warn('maps.json error', e); return null; })
                 ]);
 
                 dataFactions = await factionsRes.json();
@@ -1343,10 +1446,12 @@
                 if (racialRes) dataRacial = await racialRes.json();
                 if (ploysRes) dataPloys = await ploysRes.json();
                 if (equipRes) dataEquipment = await equipRes.json();
+                if (mapsRes) dataMaps = await mapsRes.json();
 
                 populateFactions();
                 populateCritOps();
-                populateWeaponRules(); // <-- Llamada a la nueva función generadora
+                populateKillzonesDropdown();
+                populateWeaponRules();
 
                 loadGameState();
                 calculateTotals();
@@ -1578,16 +1683,16 @@
             // Actualizar cabecera del modal
             const imgEl = document.getElementById('stratModalFactionImg');
             if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
-            
+
             const titleEl = document.getElementById('stratModalTitle');
             if (titleEl) titleEl.innerHTML = `<i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos — ${factionName}`;
-            
+
             const subTitleEl = document.getElementById('stratModalSubtitle');
             if (subTitleEl) subTitleEl.innerText = `Fase de Estrategia (Gambito) — Punto de Inflexión ${currentTP}`;
-            
+
             const playerEl = document.getElementById('stratModalPlayerName');
             if (playerEl) playerEl.innerText = playerName;
-            
+
             const cpEl = document.getElementById('stratModalCP');
             if (cpEl) cpEl.innerText = `${currentCP} PM`;
 
@@ -2925,6 +3030,188 @@
             });
         }
 
+        // 1. Población del Selector de Killzone
+        function populateKillzonesDropdown() {
+            const select = document.getElementById('killzoneSelect');
+            if (!select || !dataMaps) return;
+
+            for (const [key, killzone] of Object.entries(dataMaps)) {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = killzone.name;
+                select.appendChild(option);
+            }
+        }
+
+        // 2. Lógica de Cascada Estricta (Killzone -> Mapas)
+        function updateMapOptions() {
+            const killzoneKey = document.getElementById('killzoneSelect').value;
+            const mapSelect = document.getElementById('mapSelect');
+            const btnRandomMap = document.getElementById('btnRandomMap');
+            const btnViewMap = document.getElementById('btnViewMap');
+            const btnViewTerrain = document.getElementById('btnViewTerrain');
+
+            mapSelect.innerHTML = '<option value="" selected disabled>-- Selecciona Mapa Manualmente --</option>';
+
+            if (!killzoneKey) {
+                mapSelect.disabled = true;
+                btnRandomMap.disabled = true;
+                btnViewMap.disabled = true;
+                btnViewTerrain.disabled = true;
+                return;
+            }
+
+            // Activar los botones si hay una Killzone válida
+            mapSelect.disabled = false;
+            btnRandomMap.disabled = false;
+            btnViewMap.disabled = false;
+
+            const killzone = dataMaps[killzoneKey];
+            // Activar el botón de terrenos SÓLO si existen datos válidos
+            if (killzone && Array.isArray(killzone.terrain) && killzone.terrain.length > 0) {
+                btnViewTerrain.disabled = false;
+            } else {
+                btnViewTerrain.disabled = true;
+            }
+
+            if (killzone && killzone.maps) {
+                killzone.maps.forEach((m, index) => {
+                    const option = document.createElement('option');
+                    option.value = index;
+                    option.textContent = `Mapa ${m.m_id}`;
+                    mapSelect.appendChild(option);
+                });
+            }
+        }
+
+        // 3. Motores de Aleatorización
+        function randomizeCritOp() {
+            const select = document.getElementById('global-critop');
+            const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
+            if (options.length > 0) {
+                const randomOpt = options[Math.floor(Math.random() * options.length)];
+                select.value = randomOpt.value;
+                select.dispatchEvent(new Event('change')); // Disparamos tu validador de puntuaciones
+            }
+        }
+
+        function randomizeKillzone() {
+            const select = document.getElementById('killzoneSelect');
+            const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
+            if (options.length > 0) {
+                const randomOpt = options[Math.floor(Math.random() * options.length)];
+                select.value = randomOpt.value;
+                updateMapOptions(); // Vital: Obligamos a la UI a pintar los mapas de esta Killzone
+            }
+        }
+
+        function randomizeMap() {
+            const killzoneKey = document.getElementById('killzoneSelect').value;
+
+            // Autocorrección UX: Si no hay Killzone elegida, aleatorizar ambas cosas.
+            if (!killzoneKey) {
+                randomizeKillzone();
+            }
+
+            const select = document.getElementById('mapSelect');
+            const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
+            if (options.length > 0) {
+                const randomOpt = options[Math.floor(Math.random() * options.length)];
+                select.value = randomOpt.value;
+            }
+        }
+
+        function randomizeAll() {
+            randomizeCritOp();
+            randomizeKillzone();
+            randomizeMap();
+        }
+
+        // 4. Modal de Visualización de Mapa
+        function showMapModal() {
+            const killzoneKey = document.getElementById('killzoneSelect').value;
+            const mapIndex = document.getElementById('mapSelect').value;
+
+            if (killzoneKey && mapIndex !== "") {
+                const mapData = dataMaps[killzoneKey].maps[mapIndex];
+                const killzoneName = dataMaps[killzoneKey].name;
+
+                // Inyectar datos
+                document.getElementById('mapModalTitle').innerHTML = `<i class="bi bi-map me-2"></i>Mapa ${mapData.m_id} - ${killzoneName}`;
+                document.getElementById('mapModalImg').src = mapData.m_img;
+
+                // Lanzar modal de Bootstrap
+                const modal = new bootstrap.Modal(document.getElementById('mapViewModal'));
+                modal.show();
+            } else {
+                if (typeof mostrarNotificacion === 'function') {
+                    mostrarNotificacion("Operación bloqueada: Debes elegir una Killzone y un Mapa para visualizar el plano.");
+                } else {
+                    alert("Operación bloqueada: Debes elegir una Killzone y un Mapa para visualizar el plano.");
+                }
+            }
+        }
+
+        // 5. Modal de Catálogo de Terrenos
+function showTerrainModal() {
+    const killzoneKey = document.getElementById('killzoneSelect').value;
+    
+    // Validación de seguridad (Programación Defensiva)
+    if (!killzoneKey || !dataMaps[killzoneKey]) {
+        if(typeof mostrarNotificacion === 'function') mostrarNotificacion("Falta selección: Debes elegir una Killzone primero.");
+        return;
+    }
+
+    const kzData = dataMaps[killzoneKey];
+    const terrainList = kzData.terrain;
+
+    if (!Array.isArray(terrainList) || terrainList.length === 0) {
+        if(typeof mostrarNotificacion === 'function') mostrarNotificacion("Esta zona de aniquilación no cuenta con piezas de terreno específicas registradas.");
+        return;
+    }
+
+    // Cabecera del Modal
+    document.getElementById('terrainModalTitle').innerHTML = `<i class="bi bi-bricks text-secondary me-2"></i>Terrenos: ${kzData.name}`;
+
+    // Construcción de la Grilla de Terrenos
+    let html = '<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">';
+    
+    terrainList.forEach(t => {
+        // Validar y construir los badges de tipo
+        let typeBadges = '';
+        if (Array.isArray(t.type)) {
+            typeBadges = t.type.map(tipo => `<span class="badge bg-dark m-1 shadow-sm" style="font-size: 0.75rem;">${tipo}</span>`).join('');
+        }
+
+        // Construir la tarjeta
+        html += `
+            <div class="col">
+                <div class="card h-100 shadow-sm border-secondary">    
+                    <div class="equipment-card h-100 shadow-sm border border-secondary rounded overflow-hidden"> 
+                        <div class="p-2 bg-secondary text-white text-center">
+                            <h6 class="mb-0 fw-bold text-uppercase">${t.t_id || 'N/A'}</h6>
+                        </div>
+                        <div class="p-3 bg-light text-dark">
+                            <div class="card-body p-2 d-flex justify-content-center align-items-center bg-light">
+                                ${t.t_img ? `<img src="${t.t_img}" alt="Pieza ${t.t_id}" class="img-fluid rounded mb-2" style="max-height: 100px; object-fit: contain; margin: 0 auto;">` : ''}
+                            </div>
+                            <div>
+                                ${t.type.map(t => `<span class="badge bg-dark me-1 mb-1">${t}</span>`).join('')}
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        `;
+    });
+    
+    html += '</div>';
+
+    // Inyección y llamado al Modal
+    document.getElementById('terrainModalBody').innerHTML = html;
+    const modal = new bootstrap.Modal(document.getElementById('terrainViewModal'));
+    modal.show();
+}
     </script>
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
         <div id="limitToast" class="toast align-items-center text-bg-warning border-0 shadow" role="alert"
@@ -3207,12 +3494,15 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="factionRulesModal" tabindex="-1" aria-labelledby="factionRulesModalLabel" aria-hidden="true">
+    <div class="modal fade" id="factionRulesModal" tabindex="-1" aria-labelledby="factionRulesModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content border-0 shadow-lg border-success border-top border-4">
                 <div class="modal-header bg-light pb-2">
                     <div class="d-flex align-items-center">
-                        <img id="factionModalImg" src="./resources/facciones/blank.png" alt="Icono Facción" class="me-3 rounded-circle border shadow-sm" style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
+                        <img id="factionModalImg" src="./resources/facciones/blank.png" alt="Icono Facción"
+                            class="me-3 rounded-circle border shadow-sm"
+                            style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
                         <div>
                             <h4 class="modal-title fw-bold text-dark mb-0" id="factionModalTitle">Reglas de Facción</h4>
                             <span class="badge bg-success small" id="factionModalArchetypes">Arquetipos</span>
@@ -3222,27 +3512,37 @@
                 </div>
                 <div class="modal-body bg-light p-3">
                     <!-- Nav Tabs internas para alternar entre Reglas, Ardides y Equipamiento -->
-                    <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border" id="factionModalTabs" role="tablist">
+                    <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border" id="factionModalTabs"
+                        role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active fw-bold" id="faction-tab-rules-btn" data-bs-toggle="pill" data-bs-target="#faction-tab-rules" type="button" role="tab" aria-controls="faction-tab-rules" aria-selected="true">
+                            <button class="nav-link active fw-bold" id="faction-tab-rules-btn" data-bs-toggle="pill"
+                                data-bs-target="#faction-tab-rules" type="button" role="tab"
+                                aria-controls="faction-tab-rules" aria-selected="true">
                                 <i class="bi bi-shield-shaded me-1"></i>Reglas y Habilidades
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link fw-bold text-dark" id="faction-tab-ploys-btn" data-bs-toggle="pill" data-bs-target="#faction-tab-ploys" type="button" role="tab" aria-controls="faction-tab-ploys" aria-selected="false">
+                            <button class="nav-link fw-bold text-dark" id="faction-tab-ploys-btn" data-bs-toggle="pill"
+                                data-bs-target="#faction-tab-ploys" type="button" role="tab"
+                                aria-controls="faction-tab-ploys" aria-selected="false">
                                 <i class="bi bi-lightning-charge-fill me-1"></i>Ardides (Ploys)
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link fw-bold text-dark" id="faction-tab-equip-btn" data-bs-toggle="pill" data-bs-target="#faction-tab-equip" type="button" role="tab" aria-controls="faction-tab-equip" aria-selected="false">
+                            <button class="nav-link fw-bold text-dark" id="faction-tab-equip-btn" data-bs-toggle="pill"
+                                data-bs-target="#faction-tab-equip" type="button" role="tab"
+                                aria-controls="faction-tab-equip" aria-selected="false">
                                 <i class="bi bi-tools me-1"></i>Equipamiento
                             </button>
                         </li>
                     </ul>
                     <div class="tab-content" id="factionModalTabContent">
-                        <div class="tab-pane fade show active" id="faction-tab-rules" role="tabpanel" aria-labelledby="faction-tab-rules-btn"></div>
-                        <div class="tab-pane fade" id="faction-tab-ploys" role="tabpanel" aria-labelledby="faction-tab-ploys-btn"></div>
-                        <div class="tab-pane fade" id="faction-tab-equip" role="tabpanel" aria-labelledby="faction-tab-equip-btn"></div>
+                        <div class="tab-pane fade show active" id="faction-tab-rules" role="tabpanel"
+                            aria-labelledby="faction-tab-rules-btn"></div>
+                        <div class="tab-pane fade" id="faction-tab-ploys" role="tabpanel"
+                            aria-labelledby="faction-tab-ploys-btn"></div>
+                        <div class="tab-pane fade" id="faction-tab-equip" role="tabpanel"
+                            aria-labelledby="faction-tab-equip-btn"></div>
                     </div>
                 </div>
                 <div class="modal-footer bg-white justify-content-center py-2 border-top">
@@ -3253,7 +3553,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="strategicPloysModal" tabindex="-1" aria-labelledby="strategicPloysModalLabel" aria-hidden="true">
+    <div class="modal fade" id="strategicPloysModal" tabindex="-1" aria-labelledby="strategicPloysModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content border-0 shadow-lg border-warning border-top border-4">
                 <div class="modal-header bg-light pb-2">
@@ -3271,7 +3572,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center shadow-sm">
-                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span id="stratModalPlayerName">Jugador 1</span></span>
+                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span
+                            id="stratModalPlayerName">Jugador 1</span></span>
                     <span class="badge bg-warning text-dark fs-6 fw-bold shadow-sm">
                         <i class="bi bi-wallet2 me-1"></i>PM Disponibles: <span id="stratModalCP">2</span>
                     </span>
@@ -3280,7 +3582,8 @@
                     <!-- Lista dinámica de ardides estratégicos -->
                 </div>
                 <div class="modal-footer bg-white justify-content-between py-2 border-top">
-                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Máximo 1 uso por ardid por Punto de Inflexión.</small>
+                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Máximo 1 uso por ardid por Punto de
+                        Inflexión.</small>
                     <button type="button" class="btn btn-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
                         <i class="bi bi-check2 me-1"></i>Listo
                     </button>
@@ -3290,7 +3593,8 @@
     </div>
 
     <!-- Modal de Selección de Equipamiento al Inicio de la Partida -->
-    <div class="modal fade" id="equipmentSelectModal" tabindex="-1" aria-labelledby="equipmentSelectModalLabel" aria-hidden="true">
+    <div class="modal fade" id="equipmentSelectModal" tabindex="-1" aria-labelledby="equipmentSelectModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content border-0 shadow-lg border-primary border-top border-4" id="equipModalWrapper">
                 <div class="modal-header bg-light pb-2">
@@ -3302,38 +3606,50 @@
                             <h5 class="modal-title fw-bold text-dark mb-0" id="equipModalTitle">
                                 <i class="bi bi-tools text-primary me-1"></i>Selección de Equipamiento
                             </h5>
-                            <span class="badge bg-dark small" id="equipModalSubtitle">Selección Previa a la Batalla</span>
+                            <span class="badge bg-dark small" id="equipModalSubtitle">Selección Previa a la
+                                Batalla</span>
                         </div>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center shadow-sm">
-                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span id="equipModalPlayerName">Jugador 1</span></span>
+                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span
+                            id="equipModalPlayerName">Jugador 1</span></span>
                     <span class="badge bg-primary text-white fs-6 fw-bold shadow-sm" id="equipModalCounterBadge">
                         <i class="bi bi-tools me-1"></i>Seleccionados: <span id="equipModalSelectedCount">0</span> / 4
                     </span>
                 </div>
                 <div class="modal-body bg-light p-3">
                     <!-- Nav Tabs para alternar entre Equipamiento de Facción y Universal -->
-                    <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border" id="equipmentModalTabs" role="tablist">
+                    <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border"
+                        id="equipmentModalTabs" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active fw-bold" id="equip-tab-faction-btn" data-bs-toggle="pill" data-bs-target="#equip-tab-faction" type="button" role="tab" aria-controls="equip-tab-faction" aria-selected="true">
-                                <i class="bi bi-shield-shaded me-1"></i>Equipamiento de Facción (<span id="equipTabFactionCount">4</span>)
+                            <button class="nav-link active fw-bold" id="equip-tab-faction-btn" data-bs-toggle="pill"
+                                data-bs-target="#equip-tab-faction" type="button" role="tab"
+                                aria-controls="equip-tab-faction" aria-selected="true">
+                                <i class="bi bi-shield-shaded me-1"></i>Equipamiento de Facción (<span
+                                    id="equipTabFactionCount">4</span>)
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link fw-bold text-dark" id="equip-tab-universal-btn" data-bs-toggle="pill" data-bs-target="#equip-tab-universal" type="button" role="tab" aria-controls="equip-tab-universal" aria-selected="false">
-                                <i class="bi bi-globe2 me-1"></i>Equipamiento Universal (<span id="equipTabUniversalCount">11</span>)
+                            <button class="nav-link fw-bold text-dark" id="equip-tab-universal-btn"
+                                data-bs-toggle="pill" data-bs-target="#equip-tab-universal" type="button" role="tab"
+                                aria-controls="equip-tab-universal" aria-selected="false">
+                                <i class="bi bi-globe2 me-1"></i>Equipamiento Universal (<span
+                                    id="equipTabUniversalCount">11</span>)
                             </button>
                         </li>
                     </ul>
                     <div class="tab-content" id="equipmentModalTabContent">
-                        <div class="tab-pane fade show active" id="equip-tab-faction" role="tabpanel" aria-labelledby="equip-tab-faction-btn"></div>
-                        <div class="tab-pane fade" id="equip-tab-universal" role="tabpanel" aria-labelledby="equip-tab-universal-btn"></div>
+                        <div class="tab-pane fade show active" id="equip-tab-faction" role="tabpanel"
+                            aria-labelledby="equip-tab-faction-btn"></div>
+                        <div class="tab-pane fade" id="equip-tab-universal" role="tabpanel"
+                            aria-labelledby="equip-tab-universal-btn"></div>
                     </div>
                 </div>
                 <div class="modal-footer bg-white justify-content-between py-2 border-top">
-                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Selecciona hasta 4 opciones en total entre equipamiento de facción y universal.</small>
+                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Selecciona hasta 4 opciones en total
+                        entre equipamiento de facción y universal.</small>
                     <button type="button" class="btn btn-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
                         <i class="bi bi-check2 me-1"></i>Listo
                     </button>
@@ -3345,7 +3661,8 @@
     <!-- Modal de Detalle Rápido de Equipamiento In-Game -->
     <div class="modal fade" id="equipmentDetailModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-            <div class="modal-content border-0 shadow-lg border-primary border-top border-4" id="equipDetailModalWrapper">
+            <div class="modal-content border-0 shadow-lg border-primary border-top border-4"
+                id="equipDetailModalWrapper">
                 <div class="modal-header bg-light pb-2">
                     <h5 class="modal-title fw-bold text-dark" id="equipDetailModalTitle">
                         <i class="bi bi-tools text-primary me-2"></i>Detalle de Equipamiento

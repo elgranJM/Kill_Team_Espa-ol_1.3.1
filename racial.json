@@ -1001,21 +1001,21 @@
             "faction": "wolf-scouts",
             "type": "team",
             "name": "Agentes",
-            "description": "1 agente <b>LOBO FENRISIANO</b> <span class=\"faction\">EXPLORADOR LOBO</span><br>\n 5 agentes <span class=\"faction\">EXPLORADOR LOBO</span> elegido de la siguiente lista:\n\n<ul> <li><b>JEFE DE MANADA</b></li> <li><b>PORTACOLMILLOS</b></li> <li><b>OJOGÉLIDO</b></li> <li><b>TIRADOR</b></li> <li><b>MAESTRO TRAMPERO</b></li> <li><b>GSACERDOTE RÚNICO ESCALDO</b></li> <li><b>CAZADOR</b></li> </ul> <p>A excepción de los agentes <b>CAZADOR</b>, tu comando solo puede incluir a cada operativo en esta lista una vez.</p>"
+            "description": "<p>1 agente <b>LOBO FENRISIANO</b> <span class=\"faction\">EXPLORADOR LOBO</span></p><p>5 agentes <span class=\"faction\">EXPLORADOR LOBO</span> elegidos de la siguiente lista:</p><ul><li><b>JEFE DE MANADA</b></li><li><b>PORTACOLMILLOS</b></li><li><b>OJOGÉLIDO</b></li><li><b>TIRADOR</b></li><li><b>MAESTRO TRAMPERO</b></li><li><b>SACERDOTE RÚNICO ESCALDO</b></li><li><b>CAZADOR</b></li></ul><p>Salvo agentes <b>CAZADOR</b>, tu comando solo puede incluir 1 de cada uno de los agentes de esta lista.</p>"
         },
         {
             "id_racial": 131,
             "faction": "wolf-scouts",
             "type": "racial",
-            "name": "Astartes Cazadores",
-            "description": "Durante la activación de cada agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>COMBATIR</b>. Si realiza dos acciones de <b>Disparar</b>: <p><ul><li>Se debe gastar 1 PA adicional para la segunda acción si en ambas se usa un rifle de plasma o una pistola de plasma.</li></ul> <ul><li>No puedes elegir dos armas a distancia <b>PSÍQUICA</b>.</li></ul></p> \nCada agente <span class=\"faction\">EXPLORADOR LOBO</span> puede reaccionar independientemente de su orden. Siempre que lo haga dentro de tu <b>TORMENTA</b>, puedes cambiar primero su orden, o cambiar su orden en lugar de realizar una acción (en este caso, se sigue considerando que ha reaccionado en este punto de inflexión)."
+            "name": "Astartes a la Caza",
+            "description": "Durante la activación de cada agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si realiza dos acciones de <b>Disparar</b>: <p><ul><li>Se debe gastar 1 PA adicional para la segunda acción si en ambas se usa un rifle de plasma o una pistola de plasma.</li></ul> <ul><li>No puedes elegir dos armas a distancia <b>PSÍQUICA</b>.</li></ul></p> Todo agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo puede reaccionar sin importar su orden. Siempre que lo haga completamente dentro de tu <b>TORMENTA</b>, puedes cambiar primero su orden, o cambiar su orden en lugar de realizar una acción (en este caso, se sigue considerando que ha reaccionado en este punto de inflexión)."
         },
         {
             "id_racial": 132,
             "faction": "wolf-scouts",
             "type": "racial",
             "name": "Tormenta elemental",
-            "description": "<p><b>GAMBITO ESTRATÉGICO.</b> Retira tu marcador de Tormenta de la zona de aniquilación (si hay alguno), y colócalo en la zona de aniquilación. Siempre que un agente esté a 6\" o menos horizontalmente de tu marcador de Tormenta, estará dentro de tu <b>TORMENTA</b>.</p> <p>Cada agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo puede realizar la acción de <b>Cargar</b> mientras tiene una orden de Ocultarse si comienza o finaliza esa acción dentro de tu <b>TORMENTA</b>.</p>"
+            "description": "<p><b>GAMBITO ESTRATÉGICO.</b> Retira tu marcador de Tormenta de la zona de aniquilación (si hay alguno), y colócalo en la zona de aniquilación. Siempre que un agente esté completamente a 6\" o menos en horizontal de tu marcador de Tormenta, se le considera completamente dentro de tu <b>TORMENTA</b>.</p> <p>Todo agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo puede realizar la acción de <b>Cargar</b> mientras tenga una orden de Ocultarse si termina esa acción completamente dentro de tu <b>TORMENTA</b>.</p>"
         }
     ],
     "strike-force-variel": [

@@ -1310,7 +1310,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Emboscada",
-        "description": "Siempre que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo sea activado, si su orden se cambia de Ocultación a Trabarse, está emboscando durante esa activación. Siempre que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo que está emboscando esté combatiendo, <span class=\"text-decoration-line-through text-info-emphasis\">agente que está emboscando esté combatiendo, puedes retener uno de tus fallos como un éxito normal en lugar de descartarlo, o</span> puedes retener uno de tus éxitos normales como un éxito crítico en su lugar. Ten en cuenta que un agente que tiene una de tus fichas de Frenesí no puede emboscar.",
+        "description": "Siempre que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo sea activado, si su orden se cambia de ocultarse a trabarse, está emboscando durante esa activación. Siempre que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo que esté emboscando combata, puedes guardar 1 de tus fallos como éxito normal en lugar de descartarlo, o puedes guardar 1 de tus éxitos normales como éxito crítico. Ten en cuenta que un agente que tenga una de tus fichas de Furia asesina no puede emboscar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1318,8 +1318,8 @@
         "faction": "fellgor-ravagers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Potencia de Fuego Intensa",
-        "description": "Siempre que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo dispare contra un agente enemigo que ha recibido disparos de otro agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo durante este punto de inflexión, las armas a distancia de ese primer agente amigo tienen la regla de armas Incesante; si el agente enemigo ha recibido disparos de más de un otro agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo durante este punto de inflexión, las armas a distancia de ese primer agente amigo tienen la regla de armas Implacable en su lugar.",
+        "name": "Disparos Desgarradores",
+        "description": "Siempre que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo dispare contra un agente enemigo que ha sido disparado por un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo distinto durante este punto de inflexión, las armas a distancia de ese primer agente amigo tienen la regla de armas Incesante; si más de un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo distinto ha disparado contra el agente enemigo durante este punto de inflexión, las armas a distancia de ese primer agente amigo tienen la regla de armas Implacable en su lugar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1328,7 +1328,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Determinación Temeraria",
-        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo agotado, <span class=\"text-info-emphasis\">si no puedes retener ninguna salvación por cobertura,</span> puedes retener uno de tus dados de defensa como un éxito normal sin tirarlo <span class=\"text-decoration-line-through text-info-emphasis\">(además de una salvación por cobertura, si la hay).</span>",
+        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo usado, si no puedes guardar salvaciones por cobertura, puedes guardar 1 de tus dados de defensa como un éxito normal sin necesidad de lanzarlo (además de la salvación por cobertura, si la hubiera).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1336,8 +1336,8 @@
         "faction": "fellgor-ravagers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Desenfreno Implacable",
-        "description": "Usa este ardid de tiroteo después de que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo realice la acción <b>Combatir</b>, si ya no está dentro del rango de control de agentes enemigos. Ese agente amigo puede realizar inmediatamente una acción de <b>Cargar</b> gratuita (incluso si ya ha realizado la acción <b>Cargar</b> durante esa activación), pero no puede moverse más de 3\" durante esa acción.",
+        "name": "Asalto Despiadado",
+        "description": "Usa este ardid de tiroteo después de que un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo realice una acción de <b>Combatir</b>, si ya no se encuentra en la zona de control de agentes enemigos. Ese agente amigo puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso aunque ya haya realizado una acción de <b>Cargar</b> durante esa activación), pero no puede moverse más de 3\" durante esa acción.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1345,7 +1345,7 @@
         "faction": "fellgor-ravagers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Furia Salvaje",
+        "name": "Rabia Salvaje",
         "description": "Usa este ardid de tiroteo cuando se active un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo. Hasta el final de la activación de ese agente, suma 1\" a su atributo de Movimiento.",
         "typename": "Ardid de Tiroteo"
     },
@@ -1363,8 +1363,8 @@
         "faction": "fellgor-ravagers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Sentido de la Sangre",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo, cuando incapacite a un agente enemigo dentro de su zona de control. Elige otro agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo preparado que sea visible para y esté a 3\" del agente enemigo incapacitado. Cuando ese primer agente amigo esté agotado, puedes activar a ese otro agente amigo antes de que active tu oponente.",
+        "name": "Impulso Sangriento",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo, cuando incapacite a un agente enemigo en su zona de control. Elige otro agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo apostado a 3\" o menos del agente enemigo incapacitado y visible para él. Cuando ese primer agente amigo quede usado, puedes activar ese otro agente amigo antes que active tu oponente, cuando este segundo agente amigo quede usado, tu oponente puede activar normalmente.",
         "typename": "Ardid de Tiroteo"
     },
     {

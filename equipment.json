@@ -3,15 +3,15 @@
     "id_equip": 1,
     "faction": "wolf-scouts",
     "name": "Armas Gélidas",
-    "description": "Las hojas de combate de los agentes <span class=\"faction\">EXPLORADORES LOBO</span> amigos tienen la regla de armas Letal 5+, y el arma de energía de un agente <span class=\"faction\">EXPLORADORES LOBO</span> PACK LEADER amigo tiene la regla de armas Letal 4+ (si tiene alguna).", 
+    "description": "Siempre que un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo esté completamente dentro de tu <b>TORMENTA</b>, sus filopuñales (si los tiene) tienen la regla de armas Letal 5+, y el arma de energía (si la tiene) de 1 agente <b>JEFE DE MANADA</b> <span class=\"faction\">EXPLORADOR LOBO</span> tiene la regla de armas Letal 4+ (si se puede).",
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 2,
     "faction": "wolf-scouts",
-    "name": "Amuletos Rúnicos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF), al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.", 
+    "name": "Colgantes Rúnicos",
+    "description": "Una vez por punto de inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo (salvo <b>LOBO FENRISIANO</b>) que esté completamente dentro de tu <b>TORMENTA</b>, al inicio del paso de Tirar dados de defensa puedes usar esta regla. Si lo haces, hasta el final de esa secuencia empeora en 1 la x de la regla de armas Penetración (si aplica). Eso significa que Penetración 1 se ignoraría.",
     "weapon": [],
     "action": []
   },
@@ -19,15 +19,15 @@
     "id_equip": 3,
     "faction": "wolf-scouts",
     "name": "Collares de Dientes de Lobo",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF) esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.", 
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo (salvo <b>LOBO FENRISIANO</b>) dispare, combata o contraataque, si sacas dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.",
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 4,
     "faction": "wolf-scouts",
-    "name": "Trofeos Talismánicos",
-    "description": "Siempre que un agente <span class=\"faction\">EXPLORADORES LOBO</span> amigo (excluyendo FENRISIAN WOLF) esté combatiendo o contraataque, en el paso de Resolver Dados de Ataque, puedes restar 1 al daño infligido sobre él por un éxito.", 
+    "name": "Trofeos y Talismanes",
+    "description": "Siempre que un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo (salvo <b>LOBO FENRISIANO</b>) que esté completamente dentro de tu <b>TORMENTA</b> combata o contraataque, en el paso de Resolver dados de ataque, puedes restar 1 al daño que sufra por uno de los éxitos normales.",
     "weapon": [],
     "action": []
   },

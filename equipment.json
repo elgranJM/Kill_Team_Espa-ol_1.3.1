@@ -1527,23 +1527,23 @@
     "id_equip": 182,
     "faction": "blades-of-khaine",
     "name": "Runa de Profecía",
-    "description": "Una vez por batalla, después de tirar para decidir la iniciativa, puedes añadir D3 a, o restar D3 de, tu resultado.", 
+    "description": "Una vez por batalla, tras desempatar para determinar la iniciativa, puedes añadir o restar 1D3 a tu resultado.",
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 183,
     "faction": "blades-of-khaine",
-    "name": "Runa de Previsión",
-    "description": "Cuando se revela este equipamiento, lanza un D3. En la Fase de Estrategia del Punto de Inflexión igual al resultado, ganas 1 Punto de Mando (PM) adicional.", 
+    "name": "Runa de Adivinación",
+    "description": "Cuando se revele este equipo, tira 1D3. En la fase de estrategia del punto de inflexión cuyo número es igual al resultado, obtienes 1 PM adicional.",
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 184,
     "faction": "blades-of-khaine",
-    "name": "Runa de Protección",
-    "description": "Una vez por batalla, cuando un dado de ataque inflige Daño Normal a un agente BLADES OF KHAINE amigo, puedes ignorar ese daño infligido.", 
+    "name": "Runa de Escudo",
+    "description": "Una vez por batalla, cuando un dado de ataque inflige Daño normal a un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo, puedes ignorar ese daño infligido.",
     "weapon": [],
     "action": []
   },
@@ -1551,7 +1551,7 @@
     "id_equip": 185,
     "faction": "blades-of-khaine",
     "name": "Talismán de Hueso Espectral",
-    "description": "Una vez por Punto de Inflexión, cuando un agente BLADES OF KHAINE amigo esté disparando, combatiendo o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.", 
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo dispare, combata o contraataque, si sacas dos o más fallos puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.",
     "weapon": [],
     "action": []
   },

@@ -807,7 +807,7 @@
   {
     "id_equip": 102,
     "faction": "fellgor-ravagers",
-    "name": "Adornos de Latón",
+    "name": "Adornos de Bronce",
     "description": "Una vez por batalla, puedes usar los ardides de tiroteo Furia Animal y Rabia Salvaje por 0PM cada uno.", 
     "weapon": [],
     "action": []
@@ -815,16 +815,16 @@
   {
     "id_equip": 103,
     "faction": "fellgor-ravagers",
-    "name": "Sigilo del Caos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente FELLGOR RAVAGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.", 
+    "name": "Sello del Caos",
+    "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo, al inicio del paso de Tirar dados de defensa, puedes usar esta regla. Si lo haces, empeora en 1 la x de la regla de armas Penetración (si la hay) hasta el final de esa secuencia. Eso significa que Penetración 1 se ignoraría.",
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 104,
     "faction": "fellgor-ravagers",
-    "name": "Marcas de Sangre",
-    "description": "Una vez por Punto de Inflexión, cuando un agente FELLGOR RAVAGER amigo esté combatiendo o contraataque, puedes usar esta regla. Si lo haces, inflige 1 de daño a ese agente amigo y repite uno de tus dados de ataque. Si el resultado es un fallo, inflige 1 de daño adicional a ese agente amigo.", 
+    "name": "Marcas Sangrantes",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigo combata o contraataque, puedes usar esta regla. Si lo haces, inflige 1 daño a ese agente amigo y repite uno de tus dados de ataque. Si el resultado es un fallo, inflige 1 daño adicional a ese agente amigo.",
     "weapon": [],
     "action": []
   },
@@ -832,7 +832,7 @@
     "id_equip": 105,
     "faction": "fellgor-ravagers",
     "name": "Pintura de Guerra",
-    "description": "Puedes ignorar cualquier cambio en el atributo de Movimiento de los agentes FELLGOR RAVAGER amigos por estar lesionados.", 
+    "description": "Puedes ignorar cualquier cambio al atributo Movimiento de agentes <span class=\"faction\">EXPOLIAGOR IMPÍO</span> amigos debido a estar lesionados.",
     "weapon": [],
     "action": []
   },

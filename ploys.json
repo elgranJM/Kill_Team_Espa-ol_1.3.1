@@ -1805,7 +1805,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Danza de la Muerte",
-        "description": "Selecciona dos agentes <span class=\"faction\">FILOS DE KHAINE</span> amigos visibles y a 6\" el uno del otro. Retira a ambos de la zona de aniquilación y colócalos de nuevo en las ubicaciones anteriores del otro (en otras palabras, intercambia sus posiciones).",
+        "description": "Elige dos agentes <span class=\"faction\">FILOS DE KHAINE</span> amigos a 6\" o menos uno del otro y visibles entre sí. Retíralos a ambos de la zona de aniquilación y despliégalos de nuevo a cada uno en la ubicación anterior del otro (o, dicho de otro modo, intercámbialos de lugar).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1813,8 +1813,8 @@
         "faction": "blades-of-khaine",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Postura Implacable",
-        "description": "Siempre que un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo esté combatiendo contra un agente enemigo preparado, las armas de combate de ese agente amigo tienen la regla de armas Incesante.",
+        "name": "Aplomo Implacable",
+        "description": "Siempre que un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo combata contra un agente enemigo apostado, las armas de combate de ese agente amigo tienen la regla de armas Incesante.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1822,8 +1822,8 @@
         "faction": "blades-of-khaine",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Prevenido",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo preparado, puedes repetir cualquiera de tus dados de defensa de un resultado (p. ej., resultados de 2).",
+        "name": "Advertidos",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo apostado, puedes repetir cualesquiera de tus dados de defensa de un mismo resultado (p. ej., los resultados de 2).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1832,7 +1832,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Venganza de Khaine",
-        "description": "Siempre que un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo dispare contra un agente enemigo agotado, las armas a distancia de ese agente amigo tienen la regla de armas Incesante.",
+        "description": "Siempre que un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo dispare contra un agente enemigo usado, las armas a distancia de ese agente amigo tienen la regla de armas Incesante.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1840,8 +1840,8 @@
         "faction": "blades-of-khaine",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Viento de Hojas",
-        "description": "Usa este Ardid de Tiroteo durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo. Hasta el final de su activación, ese agente puede realizar dos acciones de Combatir.",
+        "name": "Viento Afilado",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo. Durante esa activación, ese agente puede realizar dos acciones de Combatir.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1849,8 +1849,8 @@
         "faction": "blades-of-khaine",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Luz Evanescente",
-        "description": "Usa este Ardid de Tiroteo durante <span class=\"text-decoration-line-through text-info-emphasis\">se activa un agente</span> la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo <span class=\"text-info-emphasis\">, antes o después de que realice una acción</span>. Hasta el final de su activación, ese agente puede realizar la acción <b>Retroceder</b> por un punto de acción menos (hasta un mínimo de 0PA).",
+        "name": "Luz que se Apaga",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo, antes o después de que realice una acción. Durante esa activación, ese agente puede realizar una acción de Retroceder por 1 PA menos.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1858,8 +1858,8 @@
         "faction": "blades-of-khaine",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Lluvia de Estrellas",
-        "description": "Usa este Ardid de Tiroteo durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo. Hasta el final de su activación, ese agente puede realizar dos acciones de Disparar.",
+        "name": "Caída de Estrella",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo. Durante esa activación, ese agente puede realizar dos acciones de Disparar.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1868,7 +1868,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Desprecio",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo esté contraataque o un agente enemigo le dispare, después de que tu oponente tire sus dados de ataque, pero antes de las repeticiones. Hasta el final de la secuencia, tu oponente no puede repetir sus dados de ataque (si tu oponente declaró el uso de cualquier ardid de tiroteo durante esa secuencia que le permitiera repetir, ese ardid se cancela y los PM gastados en él se reembolsan).",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">FILOS DE KHAINE</span> amigo contraataque o un agente enemigo dispare contra él, después de que tu oponente tire sus dados de ataque, pero antes de repetir tiradas. Hasta el final de la secuencia, tu oponente no puede repetir sus dados de ataque (si tu oponente ha declarado el uso de algún ardid de tiroteo durante esa secuencia que le permitiría repetir tiradas, ese ardid se cancela y los PM gastados en él se recuperan).",
         "typename": "Ardid de Tiroteo"
     },
     {

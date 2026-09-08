@@ -2494,7 +2494,7 @@
                 "LPA": "3",
                 "MOVER": "7\"",
                 "SALVACIÓN": "3+",
-                "HERIDAS": "14"
+                "HERIDAS": "13"
             },
             "weapons": [
                 {
@@ -2535,7 +2535,7 @@
                 },
                 {
                     "name": "Rudo veterano",
-                    "description": "La primera vez que este agente quedaría incapacitado durante la batalla, no queda incapacitado, le queda 1 herida restante y no puede ser incapacitado durante el resto de la acción. Todos los dados de ataque restantes se descartan.  (incluyendo los tuyos si este agente está combatiendo o contraatacando). No puedes usar el ardid de tiroteo Contraataque para infligir daño como resultado de el ardid de estrategia Luchadores salvajes al final de esa acción."
+                    "description": "La primera vez que este agente quedaría incapacitado durante la batalla, no queda incapacitado, le queda 1 herida restante y no puede ser incapacitado durante el resto de la acción. Todos los dados de ataque restantes se descartan (incluyendo los tuyos si este agente está combatiendo o contraatacando). No puedes usar el ardid de tiroteo Devolver el ataque ni infligir daño como resultado del ardid de estrategia Luchadores salvajes al final de esa acción."
                 }
             ],
             "uniqueActions": [],
@@ -2556,7 +2556,7 @@
                     "name": "Colmillos",
                     "type": "melee",
                     "stats": {
-                        "A": "5",
+                        "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
                         "RA": "Desgarradora"
@@ -2604,7 +2604,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Alcance 9\", Críticos de penetración 1"
+                        "RA": "Alcance 8\", Críticos de penetración 1"
                     }
                 }
             ],
@@ -2621,7 +2621,7 @@
                     "description": [
                         "Elige un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo en la zona de control de este agente. Ese agente recupera hasta 1D3+3 heridas perdidas."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
                 }
             ],
             "keywords": "<span class=\"faction\">EXPLORADOR LOBO</span>, IMPERIUM, ADEPTUS ASTARTES, LOBOS ESPACIALES, PORTACOLMILLOS",
@@ -2641,7 +2641,7 @@
                     "name": "Fauces del Mundo Lobo",
                     "type": "ranged",
                     "stats": {
-                        "A": "5",
+                        "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/5",
                         "RA": "<b>PSÍQUICA</b>, Área 2\", Severa"
@@ -2680,8 +2680,8 @@
             ],
             "abilities": [
                 {
-                    "name": "Lanzar runas",
-                    "description": "Tras elegir este agente, antes de la batalla, tira tres D6 y déjalos a un lado. Por cada 1-4, puedes usar el ardid de tiroteo Repetición de mando por 0PM una vez durante el punto de inflexión que coincida con el resultado. Por cada 5-6, ganas 1PM. Por ejemplo, si obtuviste 2, 2, y 5, ganas 1PM y durante el segundo punto de inflexión podrás usar Repetición de mando dos veces por 0PM."
+                    "name": "Lanzar las runas",
+                    "description": "Tras elegir este agente, antes de la batalla, tira tres D6 y déjalos a un lado. Por cada 1-4, puedes usar el ardid de tiroteo Repetición de mando por 0PM una vez durante el punto de inflexión que coincida con el resultado. Si alguno de los resultados es 5-6, ganas 1PM. Por ejemplo, si obtuviste 2, 2, y 5, ganas 1PM y durante el segundo punto de inflexión podrás usar Repetición de mando dos veces por 0PM."
                 }
             ],
             "uniqueActions": [
@@ -2690,7 +2690,7 @@
                     "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA</b>. Retira tu marcador de Tormenta de la zona de aniquilación (si lo hay). A continuación, colócalo en la zona de aniquilación.",
-                        "<b>PSÍQUICA</b>. Alternativamente, en lugar de resolver el efecto anterior, elige 1 agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado, o hasta que realice esta acción de nuevo (lo que ocurra antes), siempre que ese agente amigo esté en tu <b>TORMENTA</b> y a más de 3\" del agente activo, estará ofuscado."
+                        "<b>PSÍQUICA</b>. Alternativamente, en lugar de resolver el efecto anterior, elige 1 agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo. Hasta el inicio de la siguiente activación de este agente, hasta que resulte incapacitado, o hasta que realice esta acción de nuevo (lo que ocurra antes), siempre que ese agente amigo esté completamente dentro de tu <b>TORMENTA</b> y a más de 3\" del agente activo, estará ofuscado."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -2790,14 +2790,14 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "5/6",
-                        "RA": "Letal 5+, Penetración 1, Sobrecalentada"
+                        "RA": "Letal 5+, Penetración 1, Sobrecalentamiento"
                     }
                 }
             ],
             "abilities": [
                 {
                     "name": "Furia de la tempestad",
-                    "description": "Siempre que este agente esté dentro de tu <b>TORMENTA</b>: <ul><li>Todos los perfiles de su rifle de plasma tienen la regla de armas Castigadora.</li></ul> <ul><li>Su rifle de plasma (sobrecarga) no tiene la regla de armas Sobrecalentamiento.</li></ul>"
+                    "description": "Siempre que este agente esté completamente dentro de tu <b>TORMENTA</b>: <ul><li>Todos los perfiles de su rifle de plasma tienen la regla de armas Castigadora.</li></ul> <ul><li>Su rifle de plasma (sobrecarga) no tiene la regla de armas Sobrecalentamiento.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -2815,17 +2815,7 @@
             },
             "weapons": [
                 {
-                    "name": "Carabina bólter instigador (pesada)",
-                    "type": "ranged",
-                    "stats": {
-                        "A": "4",
-                        "HP/HA": "2+",
-                        "Dñ": "3/4",
-                        "RA": "Críticos de penetración 1, Pesada (solo Correr), Silenciosa"
-                    }
-                },
-                {
-                    "name": "Carabina bólter instigador (móvil)",
+                    "name": "Carabina bólter instigador",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -2848,7 +2838,7 @@
             "abilities": [
                 {
                     "name": "Tormenta ejecutora",
-                    "description": "Siempre que este agente esté en tu <b>TORMENTA</b>: <ul><li>Puede realizar la acción de <b>Ponerse en guardia</b> independientemente de la zona de aniquilación (ver reglas de combate cerrado, Reglamento básico de Kill Team).</li></ul> <ul><li>Puede realizar la acción de <b>Ponerse en guardia</b> mientras tiene una orden de ocultarse, pero, si lo hace, no puede realizar más de una acción de <b>Disparar</b> durante el resto del punto de inflexión (p. ej. no puede <b>Disparar</b> durante la interrupción y durante la reacción).</li></ul>"
+                    "description": "Siempre que este agente esté completamente dentro de tu <b>TORMENTA</b>: <ul><li>Puede realizar la acción de <b>Ponerse en guardia</b> independientemente de la zona de aniquilación (ver reglas de combate cerrado, Reglamento básico de Kill Team).</li></ul> <ul><li>Puede realizar la acción de <b>Ponerse en guardia</b> mientras tiene una orden de ocultarse.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -2908,7 +2898,7 @@
             "abilities": [
                 {
                     "name": "Temperamento fiero",
-                    "description": "Siempre que este agente esté en tu <b>TORMENTA</b>, sus armas tienen la regla de armas Severa."
+                    "description": "Siempre que este agente esté completamente dentro de tu <b>TORMENTA</b>, sus armas tienen la regla de armas Severa."
                 }
             ],
             "uniqueActions": [],

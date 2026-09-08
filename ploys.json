@@ -3301,5 +3301,77 @@
         "name": "PROTOCOLOS SALVADORES",
         "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo (salvo <b>DRON</b>) sea elegido como blanco válido de una acción <b>Disparar</b>. Elige 1 agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> <b>DRON</b> amigo visible para ese primer agente amigo y a 3\" o menos de él para que se convierta en el blanco válido en su lugar (incluso si normalmente no sería válido para esto). Ese agente <b>DRON</b> amigo solo está en cobertura u ofuscado si el blanco original lo estaba. Este ardid no tiene efecto si el arma a distancia tiene la regla de armas Área o Ráfaga.",
         "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 468,
+        "faction": "wolf-scouts",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "OCULTOS EN LA TORMENTA",
+        "description": "Siempre que un agente dispare a un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo completamente dentro de tu <b>TORMENTA</b>, puedes repetir uno de tus dados de defensa.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 469,
+        "faction": "wolf-scouts",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "IRA TEMPESTUOSA",
+        "description": "Siempre que un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo ataque o contraataque, si está completamente dentro de tu <b>TORMENTA</b> o estaba completamente dentro de tu <b>TORMENTA</b> al inicio de la activación, sus armas de combate tienen la regla de armas Equilibrada.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 470,
+        "faction": "wolf-scouts",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "MORDISCO DE LA TORMENTA",
+        "description": "Siempre que un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo combata contra un agente enemigo que esté completamente dentro de tu <b>TORMENTA</b>, resta 1 al atributo Ataque de las armas de combate de dicho agente enemigo (hasta un mínimo de 3).",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 471,
+        "faction": "wolf-scouts",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "LUCHADORES SALVAJES",
+        "description": "Siempre que un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo termine de contraatacar, si no quedó incapacitado y aún está en la zona de control del agente enemigo en esa secuencia, puedes infligir 1D3+1 daños a ese agente enemigo.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 472,
+        "faction": "wolf-scouts",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "SENTIDOS AGUZADOS",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo realice la acción de <b>Disparar</b> y elijas un blanco válido. Hasta el final de esa acción, las armas a distancia de ese agente amigo tienen las reglas de armas Alcance 6\" y Buscadora (Ligero), y los agentes enemigos no pueden estar ofuscados.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 473,
+        "faction": "wolf-scouts",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "DEVOLVER EL ATAQUE",
+        "description": "Usa este ardid de tiroteo al final de la activación de un agente enemigo, o después de que un agente enemigo realice la acción de <b>Combatir</b>. 1 agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo puede realizar de inmediato una acción libre de <b>Combatir</b>, pero solo puede combatir contra ese agente enemigo.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 474,
+        "faction": "wolf-scouts",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "TOCADO POR LOKYAR",
+        "description": "Usa este ardid de tiroteo tras tirar tus dados de ataque para un agente <span class=\"faction\">EXPLORADOR LOBO</span> amigo (salvo <b>LOBO FENRISIANO</b>) si está combatiendo a más de 5\" de todo otro agente amigo. Puedes repetir cualquiera de tus dados de ataque.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 475,
+        "faction": "wolf-scouts",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "FISIOLOGÍA TRANSHUMANA",
+        "description": "Usa este ardid de tiroteo cuando un agente dispare a un agente <span class=\"faction\">EXPLORADOR LOBO</span> (salvo <b>LOBO FENRISIANO</b>) amigo, en el paso de tirar dados de defensa. Puedes guardar uno de tus éxitos normales como éxito crítico en su lugar.",
+        "typename": "Ardid de Tiroteo"
     }
 ]

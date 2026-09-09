@@ -20286,7 +20286,7 @@
     "corsair-voidscarred": [
         {
             "id": "voidscarred-felarch",
-            "name": "FERARCA DEL VACÍO",
+            "name": "FELARCA DEL VACÍO",
             "stats": {
                 "LPA": "2",
                 "MOVER": "7\"",
@@ -20338,7 +20338,7 @@
             "abilities": [
                 {
                     "name": "Incursor veterano",
-                    "description": "Este agente puede realizar una acción de 1PA como acción libre durante su activación gracias a la regia Incursores Aeldari (en lugar de solo la acción de <b>Correr</b>)."
+                    "description": "Este agente puede realizar una acción de 1PA como acción libre durante su activación gracias a la regla Incursores Aeldari (en lugar de solo la acción de <b>Correr</b>)."
                 },
                 {
                     "name": "Un paso por delante",
@@ -20346,7 +20346,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">CORSARIO DEL VACÍO</span>, AELDARI, ANHRATHE, LÍDER, FERARCA",
+            "keywords": "<span class=\"faction\">CORSARIO DEL VACÍO</span>, AELDARI, ANHRATHE, LÍDER, FELARCA",
             "peana": "28"
         },
         {
@@ -20621,7 +20621,11 @@
             "abilities": [
                 {
                     "name": "Vínculo del Faolchú",
-                    "description": "La primera vez durante cada punto de inflexión que este agente contraataque, si está apostado, en el paso de Resolver dados de ataque de esa secuencia eres tú quien resuelve el primer dado de ataque (es decir, el defensor en lugar del atacante). Cazador erudito: <b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo a 9\" o menos de este agente. Una vez en este punto de inflexión, durante la activación de ese agente enemigo, después de que realice una acción en la que se mueva, puedes interrumpir dicha activación para usar esta regla. Si lo haces, este agente puede realizar de inmediato una acción libre de <b>Reposicionarse</b> (no puede terminarla estando más lejos de lo que estaba de ese agente enemigo), o una acción libre de <b>Cargar</b> (puedes cambiar su orden para hacer esto, y el movimiento de dicha acción debe terminar en la zona de control de ese agente enemigo). En una zona de aniquilación que usa reglas de combate cerrado (p. ej., Zona de aniquilación: Mundo Necrópolis), ignora el terreno Muro cuando determines distancias mayores."
+                    "description": "La primera vez durante cada punto de inflexión que este agente contraataque, si no ha usado su arma a distancia Faolchú durante este punto de inflexión, en el paso de Resolver dados de ataque de esa secuencia eres tú quien resuelve el primer dado de ataque (es decir, el defensor en lugar del atacante)."
+                },
+                {
+                    "name": "Cazador erudito",
+                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo a 9\" o menos de este agente. Una vez en este punto de inflexión, después de que ese agente enemigo realice una acción en la que se mueva, puedes interrumpir para usar esta regla. Si lo haces, este agente puede realizar de inmediato una acción libre de <b>Reposicionarse</b> (no puede terminarla estando más lejos de lo que estaba de ese agente enemigo), o una acción libre de <b>Cargar</b> (puedes cambiar su orden para hacer esto, y el movimiento de dicha acción debe terminar en la zona de control de ese agente enemigo). En una zona de aniquilación que usa reglas de combate cerrado (p. ej., Zona de aniquilación: Mundo Necrópolis), ignora el terreno Muro cuando determines distancias mayores."
                 }
             ],
             "uniqueActions": [],
@@ -20672,7 +20676,7 @@
             "abilities": [
                 {
                     "name": "Mochila de parpadeo",
-                    "description": "Cuando este agente realice una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, puede saltar por la disformidad. Si lo hace, no lo muevas. En su lugar, retíralo de la zona de aniquilación y despliégalo de nuevo completamente a 7\" o menos horizontalmente de su ubicación original (en una Zona de aniquilación que use la regla de combate cerrado, como Mundo Necrópolis, esta distancia puede medirse a través de terreno Muro). Debe desplegarse en una ubicación en la que pueda colocarse y, a menos que estuviese realizando una acción de <b>Cargar</b>, no puede desplegarse en la zona de control de un agente enemigo. Este agente no puede saltar por la disformidad durante la misma activación en que haya realizado una acción de <b>Correr</b> (o viceversa)."
+                    "description": "Cuando este agente realice una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, puede saltar por la disformidad. Si lo hace, no lo muevas. En su lugar, retíralo de la zona de aniquilación y despliégalo de nuevo completamente a 7\" o menos horizontalmente de su ubicación original (en una Zona de aniquilación que use la regla de combate cerrado, como Mundo Necrópolis, esta distancia puede medirse a través de terreno Muro). Debe desplegarse en una ubicación en la que pueda colocarse y, a menos que estuviese realizando una acción de <b>Cargar</b>, no puede desplegarse en la zona de control de un agente enemigo."
                 },
                 {
                     "name": "Ataque tajante",
@@ -20728,7 +20732,7 @@
                     "name": "CURACIÓN DE ALMAS",
                     "cost": "1 PA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Elige a un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo a 6\" o menos de este agente y visible para él. Dicho agente recupera 2D3 heridas perdidas."
+                        "<b>PSÍQUICA.</b> Elige a un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo a 6\" o menos de este agente y visible para él. Dicho agente recupera hasta 2D3 heridas perdidas."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -20923,7 +20927,7 @@
             "abilities": [
                 {
                     "name": "Incursores al acecho",
-                    "description": "Puedes usar los ardides de tiroteo Huida veleidosa y Dedos largos por 0 PM cada uno si el agente <span class=\"faction\">CORSARIO DEL VACÍO</span> especificado es un agente COMBATIENTE amigo."
+                    "description": "Puedes usar los ardides de tiroteo Vuelo Caprichoso y Dedos Ligeros por 0 PM cada uno si el agente <span class=\"faction\">CORSARIO DEL VACÍO</span> especificado es un agente COMBATIENTE amigo."
                 }
             ],
             "uniqueActions": [],

@@ -2021,7 +2021,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Saqueadores",
-        "description": "Hasta 1D3 agentes <span class=\"faction\">CORSARIO DEL VACÍO</span> amigos pueden realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección. Este punto de inflexión, cada uno que lo haga no puede realizar la acción de <b>Correr</b> durante su activación. No puedes usar este ardid durante el primer punto de inflexión.",
+        "description": "Hasta 1D3 agentes <span class=\"faction\">CORSARIO DEL VACÍO</span> amigos pueden realizar inmediatamente una acción libre de <b>Correr</b> en un orden de tu elección. Este punto de inflexión, cada uno que lo haga no puede realizar la acción de <b>Correr</b> durante su activación. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2030,7 +2030,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Especuladores Piratas",
-        "description": "Siempre que un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo dispare, combatiendo o contraataque, si él o el agente enemigo en esa secuencia disputa un marcador de objetivo o uno de tus marcadores de misión, las armas de ese agente amigo tienen la regla de armas <b>Equilibrada</b>.",
+        "description": "Siempre que un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo dispare, combata o contraataque, si él o el agente enemigo en esa secuencia disputa un marcador de objetivo o uno de tus marcadores de misión, las armas de ese agente amigo tienen la regla de armas <b>Equilibrada</b>.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2066,7 +2066,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Dedos Ligeros",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo. Hasta el final de esa activación, tener un agente enemigo dentro de su zona de control no impide que ese agente amigo realice la acción <b>Recoger Marcador</b> o <b>Acciones de Misión</b>.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo. Hasta el final de esa activación, tener un agente enemigo dentro de su zona de control no impide que ese agente amigo realice la acción <b>Recoger marcador</b> o acciones de misión.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2075,7 +2075,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Vuelo Caprichoso",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo<span class=\"text-info-emphasis\">, antes o después de que realice\nuna acción</span>. Durante esa activación, ese agente puede realizar la acción <b>Retroceder</b> por 1 PA menos.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo, antes o después de que realice una acción. Durante esa activación, ese agente puede realizar la acción <b>Retroceder</b> por 1 PA menos.",
         "typename": "Ardid de Tiroteo"
     },
     {

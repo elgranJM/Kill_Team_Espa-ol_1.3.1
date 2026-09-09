@@ -129,21 +129,21 @@
             "faction": "corsair-voidscarred",
             "type": "team",
             "name": "Agentes",
-            "description": "1 agente <b>FELARCA CORSARIO</b> equipado con una de las siguientes opciones:\n<ul>\n    <li>Rifle shuriken; Pistola shuriken; Arma de energía</li>\n    <li>Neurodisruptor; Arma de energía</li>\n</ul>\n8 agentes <span class=\"faction\">CORSARIOS DEL VACÍO</span> elegido de la siguiente lista:\n<ul>\n    <li><b>DEALER DEL DESTINO</b></li>\n    <li><b>TIRADOR</b> equipado con una pistola shuriken, puños y una de las siguientes opciones:\n        <ul>\n            <li>Bláster<span class=\"faction\">*</span>; Pistola shuriken; Puños</li>\n            <li>Desgarrador; Pistola shuriken; Puños</li>\n        </ul>\n    </li>\n    <li><b>TIRADOR PESADO</b> equipado con una pistola shuriken, puños y una de las siguientes opciones:\n        <ul>\n            <li>Cañón shuriken; Pistola shuriken; Puños</li>\n            <li>Cañón espectral<span class=\"faction\">*</span>; Pistola shuriken; Puños</li>\n        </ul>\n    </li>\n    <li><b>KURNATHI</b></li>\n    <li><b>CAZADOR KURNITA</b></li>\n    <li><b>CORREDOR SOMBRÍO</b></li>\n    <li><b>TEJEDOR DE ALMAS</b></li>\n    <li><b>DUELISTA TORMENTA ESTELAR</b></li>\n    <li><b>BUSCADOR DE SENDAS</b></li>\n<li><b>COMBATIENTE</b> con una de las siguientes opciones:\n<ul><li>Pistola shuriken; \narma de energía</li>\n<li>Rifle shuriken; puños</li></ul></ul>\n<p>Salvo agentes <b>COMBATIENTE</b>, tu comando solo puede incluir cada agente de arriba una vez.</p><p><span class=\"faction\">*</span>Tu comando no puede incluir tanto un Bláster como un Cañón espectral.</p>"
+            "description": "<p>1 agente <b>FELARCA</b> <span class=\"faction\">CORSARIO DEL VACÍO</span> equipado con una de las siguientes opciones:</p><ul><li>Rifle shuriken; pistola shuriken; arma de energía</li><li>Neurodisruptor; arma de energía</li></ul><p>8 agentes <span class=\"faction\">CORSARIO DEL VACÍO</span> elegidos de la siguiente lista:</p><ul><li><b>REPARTEDESTINOS</b></li><li><b>TIRADOR</b> con una de las siguientes opciones:<ul><li>Bláster<span class=\"faction\">*</span>; pistola shuriken; puños</li><li>Desgarrador; pistola shuriken; puños</li></ul></li><li><b>TIRADOR PESADO</b> con una de las siguientes opciones:<ul><li>Cañón shuriken; pistola shuriken; puños</li><li>Pistola shuriken; cañón espectral<span class=\"faction\">*</span>; puños</li></ul></li><li><b>KURNATHI</b></li><li><b>CAZADOR KURNITA</b></li><li><b>CORRESOMBRAS</b></li><li><b>TEJEALMAS</b></li><li><b>PISTOLERO TORMENTAESTELAR</b></li><li><b>COMBATIENTE</b> con una de las siguientes opciones:<ul><li>Pistola shuriken; arma de energía</li><li>Rifle shuriken; puños</li></ul></li><li><b>TRAZACAMINOS</b></li></ul><p>Salvo agentes <b>COMBATIENTE</b>, tu comando solo puede incluir cada agente de arriba una vez.</p><p><span class=\"faction\">*</span>Tu comando no puede incluir tanto un Bláster como un Cañón espectral.</p>"
         },
         {
             "id_racial": 18,
             "faction": "corsair-voidscarred",
             "type": "racial",
             "name": "Asaltantes Aeldari",
-            "description": "Cada agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo puede realizar una acción gratuita de <b>Correr</b> durante su activación."
+            "description": "Cada agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo puede realizar una acción libre de <b>Correr</b> durante su activación."
         },
         {
             "id_racial": 19,
             "faction": "corsair-voidscarred",
             "type": "racial",
             "name": "Rifles",
-            "description": "Siempre que un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo esté disparando con un rifle shuriken o un rifle largo de explorador durante una activación en la que no ha realizado la acción <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, ese arma tiene la regla de armas <b>Certera 1</b>. Ten en cuenta que el agente no tiene restringido realizar esas acciones después de disparar."
+            "description": "Siempre que un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo dispare con un rifle shuriken o un rifle de explorador durante una activación en la que no ha realizado la acción <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, ese arma tiene la regla de armas Certera 1. Ten en cuenta que el agente no tiene restringido realizar esas acciones después de disparar."
         }
     ],
     "deathwatch": [

@@ -1423,7 +1423,7 @@
     "id_equip": 170,
     "faction": "corsair-voidscarred",
     "name": "Manto Diuturno",
-    "description": "Siempre que un agente esté disparando a un agente CORSAIR VOIDSCARRED amigo, si el arma a distancia en esa secuencia tiene la regla de armas Explosión o Torrente, puedes repetir uno de tus dados de defensa. Además, los agentes CORSAIR VOIDSCARRED amigos no se ven afectados por la regla de armas Devastadora X\" (es decir, Devastadora con una distancia) a menos que sean el objetivo durante esa secuencia.", 
+    "description": "Siempre que un agente esté disparando a un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo, si el arma a distancia en esa secuencia tiene la regla de armas Área o Ráfaga, puedes repetir uno de tus dados de defensa. Además, los agentes <span class=\"faction\">CORSARIO DEL VACÍO</span> amigos no se ven afectados por la regla de armas Devastadora X\" (es decir, Devastadora con una distancia) a menos que sean el blanco durante esa secuencia.",
     "weapon": [],
     "action": []
   },
@@ -1431,7 +1431,7 @@
     "id_equip": 171,
     "faction": "corsair-voidscarred",
     "name": "Runas de Guía",
-    "description": "Una vez por Punto de Inflexión, cuando un agente VOIDSCARRED WAY SEEKER o VOIDSCARRED SOUL WEAVER amigo esté realizando una acción PSÍQUICA (excluyendo Pliegue Disforme), puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 3\" a su requisito de distancia. Ten en cuenta que esto no tiene efecto en armas PSÍQUICAS (P. ej., el requisito de distancia de Devastadora de GOLPE DE RELÁMPAGO).", 
+    "description": "Una vez por punto de inflexión, cuando un agente <b>TRAZACAMINOS</b> o <b>TEJEALMAS</b> <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo esté realizando una acción PSÍQUICA (excluyendo Pliegue Disforme), puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 3\" a su requisito de distancia. Ten en cuenta que esto no tiene efecto en armas PSÍQUICAS (p. ej., el requisito de distancia de Devastadora del impacto de relámpago).",
     "weapon": [],
     "action": []
   },
@@ -1439,7 +1439,7 @@
     "id_equip": 172,
     "faction": "corsair-voidscarred",
     "name": "Campo de Niebla",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente CORSAIR VOIDSCARRED amigo a más de 3\" de distancia, durante el paso de Tirar Dados de Defensa, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Esto puede causar que Penetración 1 sea ignorada.", 
+    "description": "Una vez por punto de inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">CORSARIO DEL VACÍO</span> amigo a más de 3\" de distancia, durante el paso de Tirar dados de defensa, empeora el valor x de la regla de armas Penetración en 1 (si la tiene) hasta el final de esa secuencia. Esto puede causar que Penetración 1 sea ignorada.",
     "weapon": [],
     "action": []
   },
@@ -1447,7 +1447,7 @@
     "id_equip": 173,
     "faction": "corsair-voidscarred",
     "name": "Cartas Estelares",
-    "description": "GAMBITO ESTRATÉGICO: Lanza un D3: Si el resultado es mayor que el número del Punto de Inflexión actual, ganas 1PM y no puedes usar este GAMBITO ESTRATÉGICO por el resto de la batalla.", 
+    "description": "<b>GAMBITO ESTRATÉGICO</b>. Tira 1D3: si el resultado es mayor que el número del punto de inflexión actual, ganas 1PM y no puedes usar este <b>GAMBITO ESTRATÉGICO</b> por el resto de la batalla.",
     "weapon": [],
     "action": []
   },

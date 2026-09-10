@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Partidas - Kill Team BattleKit</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="equipment_styles.css">
+
+    <style>
+        /* Estilos específicos para el Score Tracker */
+        .player-card {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .player-1 {
+            border-color: #0b6be1;
+        }
+
+        .player-2 {
+            border-color: #dc3545;
+        }
+
+        .name-input {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            background: transparent;
+            width: 100%;
+            border-bottom: 2px dashed #ccc;
+            padding-bottom: 5px;
+        }
+
+        .name-input:focus {
+            outline: none;
+            border-bottom-color: #333;
+        }
+
+        .counter-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .score-display {
+            font-size: 1.8rem;
+            font-weight: bold;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .vp-total {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .op-section {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Ajustes para pantallas horizontales angostas (celulares en horizontal) */
+        @media (max-width: 992px) and (orientation: landscape) {
+            .player-card {
+                padding: 0.75rem !important;
+            }
+
+            .vp-total {
+                font-size: 2.5rem;
+            }
+
+            .op-section {
+                padding: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .counter-btn {
+                width: 28px;
+                height: 28px;
+                font-size: 1rem;
+            }
+
+            .score-display {
+                font-size: 1.3rem;
+                min-width: 30px;
+            }
+
+            .name-input {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Estilos de pestañas del Modal de Facción */
+        #factionModalTabs .nav-link {
+            color: #198754;
+            transition: all 0.2s ease;
+        }
+
+        #factionModalTabs .nav-link:hover {
+            background-color: #f1f3f5;
+        }
+
+        #factionModalTabs .nav-link.active {
+            background-color: #198754 !important;
+            color: #ffffff !important;
+        }
+
+        #factionModalTabs .nav-link.active i {
+            color: #ffffff !important;
+        }
+
+        /* Estilos para el visor de misiones y acciones */
+        .icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .icon-yes {
+            background-image: url('./resources/game_rules_files/yes.svg');
+        }
+
+        .icon-no {
+            background-image: url('./resources/game_rules_files/no.svg');
+        }
+
+        /* Estilos para Ardides Estratégicos */
+        .strat-ploys-container {
+            min-height: 52px;
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 4px;
+            scrollbar-width: thin;
+            scrollbar-color: #ffc107 #f8f9fa;
+            transition: min-height 0.2s ease;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar-track {
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .strat-ploys-container::-webkit-scrollbar-thumb {
+            background-color: #ffc107;
+            border-radius: 4px;
+        }
+
+        .active-ploy-card {
+            border-left: 4px solid #ffc107 !important;
+            transition: all 0.2s ease;
+        }
+
+        .active-ploy-card:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .ploy-modal-card {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .ploy-modal-card.is-active {
+            border-color: #198754 !important;
+            background-color: #f8fff9;
+        }
+
+        /* Estilos específicos para Equipamiento Táctico */
+        .equip-list-container {
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 4px;
+            scrollbar-width: thin;
+            scrollbar-color: #0b6be1 #f8f9fa;
+            transition: min-height 0.2s ease;
+        }
+
+        .equip-list-container::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .equip-list-container::-webkit-scrollbar-track {
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .equip-list-container::-webkit-scrollbar-thumb {
+            background-color: #0b6be1;
+            border-radius: 4px;
+        }
+
+        .player-2 .equip-list-container {
+            scrollbar-color: #dc3545 #f8f9fa;
+        }
+
+        .player-2 .equip-list-container::-webkit-scrollbar-thumb {
+            background-color: #dc3545;
+        }
+
+        .active-equip-card {
+            transition: all 0.2s ease;
+        }
+
+        .active-equip-card:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        .equip-select-card {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .equip-select-card.is-selected {
+            border-color: #198754 !important;
+            box-shadow: 0 0 0 2px #198754 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-xl-none collapsed mx-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+                aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="index.html">
+                <i class="bi bi-shield-shaded me-2"></i>Kill Team BattleKit
+            </a>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-xl-2 d-xl-block bg-white sidebar collapse shadow-sm"
+                style="min-height: calc(100vh - 48px);">
+                <div class="position-sticky pt-3">
+                    <ul class="nav nav-pills flex-column" id="main-nav">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-dark" href="index.html">
+                                <i class="bi bi-house-door me-2"></i> Inicio (Portada)
+                            </a>
+                        </li>
+                        <hr class="my-2">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="secuencia.html">
+                                <i class="bi bi-sort-numeric-down me-2"></i> Secuencia de Juego
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="critops.html">
+                                <i class="bi bi-crosshair me-2"></i> CritOps
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="tacops.html">
+                                <i class="bi bi-bookmark-star me-2"></i> TacOps
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="facciones.html">
+                                <i class="bi bi-person-vcard me-2"></i> Reglas de Facción
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="reglas.html">
+                                <i class="bi bi-book me-2"></i> Reglas de Juego
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active shadow-sm" href="partidas.html">
+                                <i class="bi bi-list-ol me-2"></i> Partidas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-12 col-xl-10 ms-xl-auto px-md-4 py-4">
+
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 border-bottom">
+                    <h1 class="h2 text-dark"><i class="bi bi-list-ol me-3"></i>Gestor de Partida</h1>
+                    <p class="text-muted mb-0 d-none d-md-block">Calculadora automática de Puntos de Victoria</p>
+                </div>
+
+                <!-- Selector CritOp -->
+                <div class="card border-secondary mb-4 shadow-sm">
+                    <div
+                        class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-globe me-2"></i>Entorno y Misión (Generación)</span>
+                        <button class="btn btn-sm btn-warning shadow-sm fw-bold" onclick="randomizeAll()">
+                            <i class="bi bi-dice-5-fill me-1"></i>Aleatorizar Todo
+                        </button>
+                    </div>
+                    <div class="card-body bg-light">
+
+                        <div class="input-group mb-3 shadow-sm">
+                            <span class="input-group-text bg-primary text-white border-primary fw-bold"
+                                style="min-width: 110px;"><i class="bi bi-crosshair me-1"></i> CritOp</span>
+                            <select class="form-select border-primary fw-bold text-center" id="global-critop"
+                                onchange="validateAllScores()">
+                                <option value="" selected disabled>-- Selecciona Misión Manualmente --</option>
+                            </select>
+                            <button class="btn btn-warning fw-bold border-warning px-3" type="button"
+                                onclick="showCritOpDetails()" title="Ver tarjeta de misión">
+                                <i class="bi bi-info-circle-fill"></i>
+                            </button>
+                            <button class="btn btn-outline-primary px-3" type="button" onclick="randomizeCritOp()"
+                                title="Misión al Azar">
+                                <i class="bi bi-dice-5-fill"></i>
+                            </button>
+                        </div>
+
+                        <div class="input-group mb-3 shadow-sm">
+                            <span class="input-group-text bg-secondary text-white border-secondary fw-bold"
+                                style="min-width: 110px;"><i class="bi bi-geo-alt-fill me-1"></i> Killzone</span>
+                            <select class="form-select border-secondary fw-bold text-center" id="killzoneSelect"
+                                onchange="updateMapOptions()">
+                                <option value="" selected disabled>-- Selecciona Killzone Manualmente --</option>
+                            </select>
+                            <button class="btn btn-secondary fw-bold border-secondary px-3" type="button"
+                                id="btnViewTerrain" onclick="showTerrainModal()" title="Ver Catálogo de Terrenos"
+                                disabled>
+                                <i class="bi bi-bricks"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary px-3" type="button" onclick="randomizeKillzone()"
+                                title="Killzone al Azar">
+                                <i class="bi bi-dice-5-fill"></i>
+                            </button>
+                        </div>
+
+                        <div class="input-group mb-0 shadow-sm">
+                            <span class="input-group-text bg-secondary text-white border-secondary fw-bold"
+                                style="min-width: 110px;"><i class="bi bi-map me-1"></i> Mapa</span>
+                            <select class="form-select border-secondary fw-bold text-center" id="mapSelect" disabled>
+                                <option value="" selected disabled>-- Selecciona Killzone Primero --</option>
+                            </select>
+                            <button class="btn btn-info text-dark fw-bold border-info px-3" type="button"
+                                id="btnViewMap" onclick="showMapModal()" title="Ver plano del Mapa" disabled>
+                                <i class="bi bi-eye-fill"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary px-3" type="button" id="btnRandomMap"
+                                onclick="randomizeMap()" title="Mapa al Azar" disabled>
+                                <i class="bi bi-dice-5-fill"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal fade" id="mapViewModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content border-0 shadow-lg border-info border-top border-4">
+                            <div class="modal-header bg-dark text-white pb-2">
+                                <h5 class="modal-title fw-bold" id="mapModalTitle"></h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body text-center bg-dark p-2">
+                                <img id="mapModalImg" src="" alt="Plano de la Zona de Aniquilación"
+                                    class="img-fluid rounded border border-secondary shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Visualización de Terrenos -->
+                <div class="modal fade" id="terrainViewModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                        <div class="modal-content border-0 shadow-lg border-secondary border-top border-4">
+                            <div class="modal-header bg-light pb-2 border-bottom-0">
+                                <h5 class="modal-title fw-bold text-dark" id="terrainModalTitle"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body bg-light pt-2" id="terrainModalBody">
+                                <!-- La grilla de terrenos se inyecta aquí -->
+                            </div>
+                            <div class="modal-footer bg-white border-top justify-content-center py-2">
+                                <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm"
+                                    data-bs-dismiss="modal">
+                                    <i class="bi bi-check2 me-2"></i>Entendido
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rastreador de Puntos de Inflexión -->
+                <div class="row mb-4 text-center">
+                    <div class="col-12">
+                        <div class="bg-white p-3 rounded shadow-sm d-inline-block border">
+                            <button type="button" class="btn btn-danger btn-sm ms-3 fw-bold shadow-sm"
+                                onclick="calculateKillOpAsymmetric()">
+                                <i class="bi bi-skull-fill me-1"></i>Puntuar KillOp (Fin de TP)
+                            </button>
+                            <div class="bg-white p-3 rounded shadow-sm d-inline-block border">
+                                <h6 class="text-uppercase fw-bold text-muted mb-3"><i
+                                        class="bi bi-hourglass-split me-2"></i>Punto de Inflexión</h6>
+                                <div class="btn-group" role="group">
+                                    <input type="radio" class="btn-check" name="tpRadio" id="tp1" autocomplete="off"
+                                        checked onchange="onTurningPointChange()">
+                                    <label class="btn btn-outline-dark fw-bold px-4" for="tp1">1</label>
+
+                                    <input type="radio" class="btn-check" name="tpRadio" id="tp2" autocomplete="off"
+                                        onchange="onTurningPointChange()">
+                                    <label class="btn btn-outline-dark fw-bold px-4" for="tp2">2</label>
+
+                                    <input type="radio" class="btn-check" name="tpRadio" id="tp3" autocomplete="off"
+                                        onchange="onTurningPointChange()">
+                                    <label class="btn btn-outline-dark fw-bold px-4" for="tp3">3</label>
+
+                                    <input type="radio" class="btn-check" name="tpRadio" id="tp4" autocomplete="off"
+                                        onchange="onTurningPointChange()">
+                                    <label class="btn btn-outline-dark fw-bold px-4" for="tp4">4</label>
+                                </div>
+                            </div>
+                            <button type="button"
+                                class="btn btn-outline-info btn-sm ms-2 fw-bold shadow-sm text-dark border-info"
+                                data-bs-toggle="modal" data-bs-target="#weaponRulesModal">
+                                <i class="bi bi-crosshair me-1"></i>Reglas de Armas
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tableros de Jugadores -->
+                <div class="row g-4 mb-4">
+
+                    <!-- ==================== JUGADOR 1 ==================== -->
+                    <div class="col-12 col-md-6">
+                        <div class="bg-white p-4 rounded shadow-sm player-card player-1 h-100">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <img id="p1-faction-img" src="./resources/facciones/blank.png" alt="Facción J1"
+                                    class="me-2 rounded-circle border border-secondary border-opacity-50"
+                                    style="width: 100px; height: 100px; object-fit: cover; background-color: white;">
+                                <input type="text" class="name-input text-primary mb-3" value="Atacante"
+                                    placeholder="Nombre Jugador 1">
+                            </div>
+
+
+                            <!-- seleccion de faccion-->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small text-muted mb-1"><i
+                                        class="bi bi-person-vcard me-1"></i>Facción</label>
+                                <div class="input-group input-group-sm shadow-sm">
+                                    <select class="form-select form-select-sm border-dark fw-bold" id="p1-faction">
+                                        <option value="" selected disabled>Selecciona tu facción...</option>
+                                    </select>
+                                    <button class="btn btn-outline-success fw-bold px-3" type="button"
+                                        id="p1-btn-faction-rules" onclick="showFactionRules('p1')" disabled
+                                        title="Ver reglas y ardides de la facción">
+                                        <i class="bi bi-book-half"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Equipamiento Táctico (Hasta 4 opciones) -->
+                            <div class="op-section border-primary border-2 border-opacity-25 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-tools text-primary me-1"></i>Equipamiento (<span
+                                            id="p1-selected-equip-count">0</span>/4)
+                                    </span>
+                                    <button class="btn btn-primary btn-sm fw-bold shadow-sm" type="button"
+                                        id="p1-btn-select-equip" onclick="openEquipmentSelectModal('p1')" disabled
+                                        title="Seleccionar equipamiento antes de la batalla">
+                                        <i class="bi bi-gear-fill me-1"></i>Seleccionar
+                                    </button>
+                                </div>
+                                <div id="p1-selected-equipment-container"
+                                    class="d-flex flex-column gap-2 equip-list-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún equipamiento
+                                            seleccionado (hasta 4).</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Puntos Totales y PM -->
+                            <div
+                                class="d-flex justify-content-between align-items-center mb-3 bg-light p-3 rounded border">
+                                <div class="text-center">
+                                    <div class="small text-muted fw-bold text-uppercase">Total PV</div>
+                                    <div class="vp-total text-primary" id="p1-total-vp">0</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="small text-muted fw-bold text-uppercase mb-2">Puntos de Mando</div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <button class="btn btn-danger counter-btn shadow-sm"
+                                            style="width: 40px; height: 40px;" onclick="updateCounter('p1-cp', -1)"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3" id="p1-cp">2</span>
+                                        <button class="btn btn-success counter-btn shadow-sm"
+                                            style="width: 40px; height: 40px;" onclick="updateCounter('p1-cp', 1)"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ardides de Estrategia (Gambito por TP) -->
+                            <div class="op-section border-warning border-2 border-opacity-50 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos
+                                        (Punto de Inflexión <span class="current-tp-label">1</span>)
+                                    </span>
+                                    <button class="btn btn-warning btn-sm fw-bold shadow-sm" type="button"
+                                        id="p1-btn-strat-ploys" onclick="openStrategicPloysModal('p1')" disabled
+                                        title="Gestionar ardides estratégicos para este TP">
+                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span
+                                            class="badge bg-dark ms-1" id="p1-active-ploys-count">0</span>
+                                    </button>
+                                </div>
+                                <div id="p1-active-strategic-ploys"
+                                    class="d-flex flex-column gap-2 strat-ploys-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo
+                                            en este TP.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Crit Op -->
+                            <div class="op-section">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-crosshair text-primary me-2"></i>Crit Op (Máx 6)</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p1-crit-vp', -1, 6); calculateTotals();"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3 text-dark" id="p1-crit-vp">0</span>
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p1-crit-vp', 1, 6); calculateTotals();"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kill Op -->
+                            <div class="op-section border-primary border-2 border-opacity-25">
+                                <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-skull-fill text-danger me-2"></i>Kill Op</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="text-danger fw-bold small lh-sm">Enemigos Incapacitados<br>(TP
+                                        Actual)</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p1-kills-current-tp', -1, 99);"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3 text-danger" id="p1-kills-current-tp">0</span>
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p1-kills-current-tp', 1, 99);"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white p-2 rounded border text-center d-flex justify-content-center align-items-center">
+                                    <span class="small fw-bold">Total Kill Op: <strong id="p1-killop-total"
+                                            class="text-primary fs-5">0</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==================== JUGADOR 2 ==================== -->
+                    <div class="col-12 col-md-6">
+                        <div class="bg-white p-4 rounded shadow-sm player-card player-2 h-100">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <img id="p2-faction-img" src="./resources/facciones/blank.png" alt="Facción J2"
+                                    class="me-2 rounded-circle border border-secondary border-opacity-50"
+                                    style="width: 100px; height: 100px; object-fit: cover; background-color: white;">
+                                <input type="text" class="name-input text-danger mb-3" value="Defensor"
+                                    placeholder="Nombre Jugador 2">
+                            </div>
+
+                            <!-- seleccion de faccion-->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold small text-muted mb-1"><i
+                                        class="bi bi-person-vcard me-1"></i>Facción</label>
+                                <div class="input-group input-group-sm shadow-sm">
+                                    <select class="form-select form-select-sm border-dark fw-bold" id="p2-faction">
+                                        <option value="" selected disabled>Selecciona tu facción...</option>
+                                    </select>
+                                    <button class="btn btn-outline-success fw-bold px-3" type="button"
+                                        id="p2-btn-faction-rules" onclick="showFactionRules('p2')" disabled
+                                        title="Ver reglas y ardides de la facción">
+                                        <i class="bi bi-book-half"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Equipamiento Táctico (Hasta 4 opciones) -->
+                            <div class="op-section border-danger border-2 border-opacity-25 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-tools text-danger me-1"></i>Equipamiento (<span
+                                            id="p2-selected-equip-count">0</span>/4)
+                                    </span>
+                                    <button class="btn btn-danger btn-sm fw-bold shadow-sm" type="button"
+                                        id="p2-btn-select-equip" onclick="openEquipmentSelectModal('p2')" disabled
+                                        title="Seleccionar equipamiento antes de la batalla">
+                                        <i class="bi bi-gear-fill me-1"></i>Seleccionar
+                                    </button>
+                                </div>
+                                <div id="p2-selected-equipment-container"
+                                    class="d-flex flex-column gap-2 equip-list-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún equipamiento
+                                            seleccionado (hasta 4).</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Puntos Totales y PM -->
+                            <div
+                                class="d-flex justify-content-between align-items-center mb-3 bg-light p-3 rounded border">
+                                <div class="text-center">
+                                    <div class="small text-muted fw-bold text-uppercase">Total PV</div>
+                                    <div class="vp-total text-danger" id="p2-total-vp">0</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="small text-muted fw-bold text-uppercase mb-2">Puntos de Mando</div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <button class="btn btn-danger counter-btn shadow-sm"
+                                            style="width: 40px; height: 40px;" onclick="updateCounter('p2-cp', -1)"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3" id="p2-cp">2</span>
+                                        <button class="btn btn-success counter-btn shadow-sm"
+                                            style="width: 40px; height: 40px;" onclick="updateCounter('p2-cp', 1)"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ardides de Estrategia (Gambito por TP) -->
+                            <div class="op-section border-warning border-2 border-opacity-50 mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="fw-bold text-dark small">
+                                        <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos
+                                        (Punto de Inflexión <span class="current-tp-label">1</span>)
+                                    </span>
+                                    <button class="btn btn-warning btn-sm fw-bold shadow-sm" type="button"
+                                        id="p2-btn-strat-ploys" onclick="openStrategicPloysModal('p2')" disabled
+                                        title="Gestionar ardides estratégicos para este TP">
+                                        <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span
+                                            class="badge bg-dark ms-1" id="p2-active-ploys-count">0</span>
+                                    </button>
+                                </div>
+                                <div id="p2-active-strategic-ploys"
+                                    class="d-flex flex-column gap-2 strat-ploys-container">
+                                    <div class="d-flex align-items-center justify-content-center h-100 py-2">
+                                        <small class="text-muted fst-italic text-center">Ningún ardid estratégico activo
+                                            en este TP.</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Crit Op -->
+                            <div class="op-section">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fw-bold text-dark"><i class="bi bi-crosshair text-danger me-2"></i>Crit
+                                        Op (Máx 6)</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p2-crit-vp', -1, 6); calculateTotals();"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3 text-dark" id="p2-crit-vp">0</span>
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p2-crit-vp', 1, 6); calculateTotals();"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kill Op -->
+                            <div class="op-section border-danger border-2 border-opacity-25">
+                                <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-skull-fill text-danger me-2"></i>Kill Op</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="text-danger fw-bold small lh-sm">Enemigos Incapacitados<br>(TP
+                                        Actual)</span>
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-danger counter-btn"
+                                            onclick="updateCounter('p2-kills-current-tp', -1, 99);"><i
+                                                class="bi bi-dash"></i></button>
+                                        <span class="score-display mx-3 text-danger" id="p2-kills-current-tp">0</span>
+                                        <button class="btn btn-outline-success counter-btn"
+                                            onclick="updateCounter('p2-kills-current-tp', 1, 99);"><i
+                                                class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white p-2 rounded border text-center d-flex justify-content-center align-items-center">
+                                    <span class="small fw-bold">Total Kill Op: <strong id="p2-killop-total"
+                                            class="text-danger fs-5">0</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End Row -->
+
+                <!-- Acciones Globales de la Partida -->
+                <div class="text-center p-4 bg-white rounded shadow-sm border">
+                    <h5 class="fw-bold mb-3">Acciones de Fin de Partida</h5>
+                    <button class="btn btn-outline-secondary btn-lg shadow-sm" onclick="resetGame()">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Reiniciar Partida
+                    </button>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lógica del Gestor de Partidas -->
+    <script src="games.js" defer></script>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+        <div id="limitToast" class="toast align-items-center text-bg-warning border-0 shadow" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fw-bold text-dark">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i><span id="toastMessage">Mensaje de prueba</span>
+                </div>
+                <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="critOpInfoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg border-warning border-top border-4">
+                <div class="modal-header bg-light border-bottom-0 pb-0">
+                    <h4 class="modal-title fw-bold text-dark" id="critOpModalTitle">
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light pt-2" id="critOpModalBody">
+                </div>
+                <div class="modal-footer bg-white border-top justify-content-center py-2">
+                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="resetConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-secondary border-3 shadow-lg">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Reiniciar Partida
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center py-4 bg-light">
+                    <i class="bi bi-exclamation-circle-fill text-danger" style="font-size: 3rem;"></i>
+                    <p class="mt-3 fs-5 text-dark fw-bold">¿Estás seguro de que deseas reiniciar?</p>
+                    <p class="text-muted">Todos los puntajes volverán a 0 y se ocultarán las misiones. <strong>Esta
+                            acción no se puede deshacer.</strong></p>
+                </div>
+                <div class="modal-footer bg-light justify-content-center">
+                    <button type="button" class="btn btn-secondary fw-bold shadow-sm"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger fw-bold shadow-sm" data-bs-dismiss="modal"
+                        onclick="executeResetGame()">
+                        Confirmar y Reiniciar <i class="bi bi-trash-fill ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="matchResultModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg text-center overflow-hidden">
+                <div class="modal-header" id="matchResultHeader">
+                    <h4 class="modal-title fw-bold mx-auto text-white">
+                        <i class="bi bi-flag-fill me-2"></i>Reporte de Batalla
+                    </h4>
+                </div>
+                <div class="modal-body py-5 bg-light">
+                    <div id="matchResultIcon" class="mb-3">
+                    </div>
+                    <h2 class="fw-bold text-dark display-6" id="matchResultMessage">
+                    </h2>
+                    <p class="fs-4 mt-3 text-muted" id="matchResultScore">
+                    </p>
+                </div>
+                <div class="modal-footer bg-white justify-content-center py-3">
+                    <button type="button" class="btn btn-outline-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-search me-2"></i>Revisar Tablero
+                    </button>
+                    <button type="button" class="btn btn-danger fw-bold px-4 shadow-sm" data-bs-dismiss="modal"
+                        onclick="resetGame()">
+                        <i class="bi bi-arrow-counterclockwise me-2"></i>Nueva Partida
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="weaponRulesModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 shadow-lg border-info border-top border-4">
+                <div class="modal-header bg-light pb-2">
+                    <h5 class="modal-title fw-bold text-dark">
+                        <i class="bi bi-crosshair text-info me-2"></i>Referencia Rápida: Armas
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="bg-light px-3 pb-2 border-bottom">
+                    <input type="text" id="weaponSearch" class="form-control form-control-sm"
+                        placeholder="Buscar regla (ej. Letal, Perforante...)" onkeyup="filterWeaponRules()">
+                </div>
+                <div class="modal-body bg-white p-0" id="weaponRulesBody">
+                </div>
+                <div class="modal-footer bg-light py-1">
+                    <button type="button" class="btn btn-secondary btn-sm fw-bold"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="factionRulesModal" tabindex="-1" aria-labelledby="factionRulesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content border-0 shadow-lg border-success border-top border-4">
+                <div class="modal-header bg-light pb-2">
+                    <div class="d-flex align-items-center">
+                        <img id="factionModalImg" src="./resources/facciones/blank.png" alt="Icono Facción"
+                            class="me-3 rounded-circle border shadow-sm"
+                            style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
+                        <div>
+                            <h4 class="modal-title fw-bold text-dark mb-0" id="factionModalTitle">Reglas de Facción</h4>
+                            <span class="badge bg-success small" id="factionModalArchetypes">Arquetipos</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light p-3">
+                    <!-- Nav Tabs internas para alternar entre Reglas, Ardides y Equipamiento -->
+                    <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border" id="factionModalTabs"
+                        role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold" id="faction-tab-rules-btn" data-bs-toggle="pill"
+                                data-bs-target="#faction-tab-rules" type="button" role="tab"
+                                aria-controls="faction-tab-rules" aria-selected="true">
+                                <i class="bi bi-shield-shaded me-1"></i>Reglas y Habilidades
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold text-dark" id="faction-tab-ploys-btn" data-bs-toggle="pill"
+                                data-bs-target="#faction-tab-ploys" type="button" role="tab"
+                                aria-controls="faction-tab-ploys" aria-selected="false">
+                                <i class="bi bi-lightning-charge-fill me-1"></i>Ardides (Ploys)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold text-dark" id="faction-tab-equip-btn" data-bs-toggle="pill"
+                                data-bs-target="#faction-tab-equip" type="button" role="tab"
+                                aria-controls="faction-tab-equip" aria-selected="false">
+                                <i class="bi bi-tools me-1"></i>Equipamiento
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="factionModalTabContent">
+                        <div class="tab-pane fade show active" id="faction-tab-rules" role="tabpanel"
+                            aria-labelledby="faction-tab-rules-btn"></div>
+                        <div class="tab-pane fade" id="faction-tab-ploys" role="tabpanel"
+                            aria-labelledby="faction-tab-ploys-btn"></div>
+                        <div class="tab-pane fade" id="faction-tab-equip" role="tabpanel"
+                            aria-labelledby="faction-tab-equip-btn"></div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-white justify-content-center py-2 border-top">
+                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-return-left me-2"></i>Volver a la Partida
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="strategicPloysModal" tabindex="-1" aria-labelledby="strategicPloysModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 shadow-lg border-warning border-top border-4">
+                <div class="modal-header bg-light pb-2">
+                    <div class="d-flex align-items-center">
+                        <img id="stratModalFactionImg" src="./resources/facciones/blank.png" alt="Facción"
+                            class="me-3 rounded-circle border shadow-sm"
+                            style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
+                        <div>
+                            <h5 class="modal-title fw-bold text-dark mb-0" id="stratModalTitle">
+                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides de Estrategia
+                            </h5>
+                            <span class="badge bg-dark small" id="stratModalSubtitle">Fase de Estrategia - TP 1</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center shadow-sm">
+                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span
+                            id="stratModalPlayerName">Jugador 1</span></span>
+                    <span class="badge bg-warning text-dark fs-6 fw-bold shadow-sm">
+                        <i class="bi bi-wallet2 me-1"></i>PM Disponibles: <span id="stratModalCP">2</span>
+                    </span>
+                </div>
+                <div class="modal-body bg-light p-3" id="stratModalBody">
+                    <!-- Lista dinámica de ardides estratégicos -->
+                </div>
+                <div class="modal-footer bg-white justify-content-between py-2 border-top">
+                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Máximo 1 uso por ardid por Punto de
+                        Inflexión.</small>
+                    <button type="button" class="btn btn-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-check2 me-1"></i>Listo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Selección de Equipamiento al Inicio de la Partida -->
+    <div class="modal fade" id="equipmentSelectModal" tabindex="-1" aria-labelledby="equipmentSelectModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+            <div class="modal-content border-0 shadow-lg border-primary border-top border-4" id="equipModalWrapper">
+                <div class="modal-header bg-light pb-2">
+                    <div class="d-flex align-items-center">
+                        <img id="equipModalFactionImg" src="./resources/facciones/blank.png" alt="Facción"
+                            class="me-3 rounded-circle border shadow-sm"
+                            style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
+                        <div>
+                            <h5 class="modal-title fw-bold text-dark mb-0" id="equipModalTitle">
+                                <i class="bi bi-tools text-primary me-1"></i>Selección de Equipamiento
+                            </h5>
+                            <span class="badge bg-dark small" id="equipModalSubtitle">Selección Previa a la
+                                Batalla</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="bg-dark text-white px-3 py-2 d-flex justify-content-between align-items-center shadow-sm">
+                    <span class="small fw-bold text-uppercase"><i class="bi bi-person-fill me-1"></i><span
+                            id="equipModalPlayerName">Jugador 1</span></span>
+                    <span class="badge bg-primary text-white fs-6 fw-bold shadow-sm" id="equipModalCounterBadge">
+                        <i class="bi bi-tools me-1"></i>Seleccionados: <span id="equipModalSelectedCount">0</span> / 4
+                    </span>
+                </div>
+                <div class="modal-body bg-light p-3">
+                    <!-- Nav Tabs para alternar entre Equipamiento de Facción y Universal -->
+                    <ul class="nav nav-pills nav-fill mb-3 bg-white p-2 rounded shadow-sm border"
+                        id="equipmentModalTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold" id="equip-tab-faction-btn" data-bs-toggle="pill"
+                                data-bs-target="#equip-tab-faction" type="button" role="tab"
+                                aria-controls="equip-tab-faction" aria-selected="true">
+                                <i class="bi bi-shield-shaded me-1"></i>Equipamiento de Facción (<span
+                                    id="equipTabFactionCount">4</span>)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold text-dark" id="equip-tab-universal-btn"
+                                data-bs-toggle="pill" data-bs-target="#equip-tab-universal" type="button" role="tab"
+                                aria-controls="equip-tab-universal" aria-selected="false">
+                                <i class="bi bi-globe2 me-1"></i>Equipamiento Universal (<span
+                                    id="equipTabUniversalCount">11</span>)
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="equipmentModalTabContent">
+                        <div class="tab-pane fade show active" id="equip-tab-faction" role="tabpanel"
+                            aria-labelledby="equip-tab-faction-btn"></div>
+                        <div class="tab-pane fade" id="equip-tab-universal" role="tabpanel"
+                            aria-labelledby="equip-tab-universal-btn"></div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-white justify-content-between py-2 border-top">
+                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i>Selecciona hasta 4 opciones en total
+                        entre equipamiento de facción y universal.</small>
+                    <button type="button" class="btn btn-dark fw-bold px-4 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-check2 me-1"></i>Listo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalle Rápido de Equipamiento In-Game -->
+    <div class="modal fade" id="equipmentDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content border-0 shadow-lg border-primary border-top border-4"
+                id="equipDetailModalWrapper">
+                <div class="modal-header bg-light pb-2">
+                    <h5 class="modal-title fw-bold text-dark" id="equipDetailModalTitle">
+                        <i class="bi bi-tools text-primary me-2"></i>Detalle de Equipamiento
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body bg-white p-3" id="equipDetailModalBody">
+                    <!-- Contenido detallado con tablas de armas y acciones -->
+                </div>
+                <div class="modal-footer bg-light py-2 justify-content-center">
+                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-return-left me-1"></i>Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

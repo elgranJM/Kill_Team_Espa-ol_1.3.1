@@ -2,81 +2,12 @@
 
 // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
 let gameState = {
-    p1: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] },
-    p2: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] },
-    revealed: false,
-    currentPlayerSelecting: 1,
-    currentPlayerSelectingEquip: 'p1',
-    loading: false // <-- NUEVO: Bandera de control para evitar sobreescrituras en carga
+    p1: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'A', killOpVP: 0 },
+    p2: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'B', killOpVP: 0 },
+    p3: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'C', killOpVP: 0 },
+    p4: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'D', killOpVP: 0 },
+    loading: false
 };
-
-// Tabla de umbrales para Kill Op (100% fiel al reglamento entregado)
-const killOpThresholds = {
-    5: [1, 2, 3, 4, 5],
-    6: [1, 2, 4, 5, 6],
-    7: [1, 3, 4, 6, 7],
-    8: [2, 3, 5, 6, 8],
-    9: [2, 4, 5, 7, 9],
-    10: [2, 4, 6, 8, 10],
-    11: [2, 4, 7, 9, 11],
-    12: [2, 5, 7, 10, 12],
-    13: [3, 5, 8, 10, 13],
-    14: [3, 6, 8, 11, 14]
-};
-
-// --- SISTEMA DE SELECCIÓN SECRETA ---
-function openSecretModal(playerNum) {
-    if (gameState.revealed) {
-        mostrarNotificacion("Acción no permitida: Las misiones ya fueron reveladas. Reinicia la partida para escoger nuevas.");
-        return;
-    }
-
-    gameState.currentPlayerSelecting = playerNum;
-    document.getElementById('modal-player-name').innerText = `Jugador ${playerNum}`;
-
-    // Limpiar selección visual del modal
-    document.querySelectorAll('input[name="secretPrimary"]').forEach(r => r.checked = false);
-
-    // Si ya había seleccionado algo antes de revelar, volver a marcarlo en el modal
-    let currentSelection = playerNum === 1 ? gameState.p1.primary : gameState.p2.primary;
-    if (currentSelection) {
-        document.querySelector(`input[name="secretPrimary"][value="${currentSelection}"]`).checked = true;
-    }
-
-    const modal = new bootstrap.Modal(document.getElementById('secretModal'));
-    modal.show();
-}
-
-function saveSecretPrimary() {
-    const selected = document.querySelector('input[name="secretPrimary"]:checked');
-    if (!selected) {
-        mostrarNotificacion("Falta selección: Debes seleccionar una operación primaria antes de confirmar.");
-        return;
-    }
-
-    const playerNum = gameState.currentPlayerSelecting;
-    const btnId = `p${playerNum}-btn-secret`;
-    const btn = document.getElementById(btnId);
-
-    if (playerNum === 1) {
-        gameState.p1.primary = selected.value;
-    } else {
-        gameState.p2.primary = selected.value;
-    }
-
-    // Cambiar el botón a estado "Fijado"
-    btn.classList.remove('btn-warning');
-    btn.classList.add('btn-success');
-    btn.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Fijada 🔒';
-
-    // Cerrar el modal correctamente
-    const modalEl = document.getElementById('secretModal');
-    const modalInstance = bootstrap.Modal.getInstance(modalEl);
-    modalInstance.hide();
-
-    // NUEVO: Guardar el estado inmediatamente para no perder la selección secreta
-    saveGameState();
-}
 
 // --- SISTEMA DE REVELADO DE PARTIDA ---
 function revealPrimaries() {
@@ -171,13 +102,13 @@ function resetGame() {
 // Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal de reinicio
 function executeResetGame() {
     // 1. Reset de Estado Lógico Interno
-    gameState.p1.primary = null;
     gameState.p1.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
     gameState.p1.equipment = [];
-    gameState.p2.primary = null;
     gameState.p2.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
     gameState.p2.equipment = [];
     gameState.revealed = false;
+    gameState.p1.killOpVP = 0;
+    gameState.p2.killOpVP = 0;
 
     // --- NUEVO: Reset de la Operación Crítica (CritOp) Global ---
     const globalCritOp = document.getElementById('global-critop');
@@ -196,34 +127,10 @@ function executeResetGame() {
         const factionSelect = document.getElementById(`${p}-faction`);
         if (factionSelect) factionSelect.value = "";
 
-        // Forzar la actualización de TacOps para limpiar el listado y ocultar imágenes de facción antiguas
-        if (typeof updateTacOps === 'function') {
-            updateTacOps(p);
-        }
-
-        // Reestablecer el selector de TacOp al valor por defecto
-        const tacopSelect = document.getElementById(`${p}-tacop`);
-        if (tacopSelect) tacopSelect.value = "";
-
-        // Restaurar visibilidad del contenedor de TacOps (por si estaba oculto/bloqueado)
-        const tacopContainer = document.getElementById(`${p}-tacop-container`);
-        if (tacopContainer) {
-            tacopContainer.classList.remove('d-none');
-            tacopContainer.classList.add('d-flex');
-        }
-
         // Ocultar la insignia de TacOp revelada
         const revealedBadge = document.getElementById(`${p}-revealed-badge-container`);
         if (revealedBadge) {
             revealedBadge.classList.add('d-none');
-        }
-
-        // Reset de los botones de Operación Primaria Secreta UI
-        let btnPrimary = document.getElementById(`${p}-btn-secret`);
-        if (btnPrimary) {
-            btnPrimary.className = 'btn btn-warning btn-sm fw-bold shadow-sm';
-            btnPrimary.innerHTML = 'Fijar en Secreto 🔒';
-            btnPrimary.classList.remove('d-none');
         }
 
         document.getElementById(`${p}-revealed-primary`).classList.add('d-none');
@@ -234,7 +141,7 @@ function executeResetGame() {
     document.getElementById('btn-reveal-global').classList.remove('d-none');
 
     // 3. Reset de Contadores Numéricos (Puntos de Victoria y Bajas)
-    const idsToReset = ['p1-crit-vp', 'p1-tac-vp', 'p1-kills', 'p2-crit-vp', 'p2-tac-vp', 'p2-kills'];
+    const idsToReset = ['p1-crit-vp', 'p1-kills-current-tp', 'p1-killop-total', 'p2-crit-vp', 'p2-kills-current-tp', 'p2-killop-total'];
     idsToReset.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.innerText = "0";
@@ -281,92 +188,20 @@ function updateCounter(elementId, amount, max = 99) {
     }
 }
 
-function calculatePlayerKillScore(kills, enemySize) {
-    const thresholds = killOpThresholds[enemySize];
-    let score = 0;
-    // Evaluamos la tabla: un punto por cada barrera superada
-    for (let i = 0; i < thresholds.length; i++) {
-        if (kills >= thresholds[i]) score++;
-    }
-    return score;
-}
-
 function calculateTotals() {
-    // 1. Obtener valores de J1
-    let p1Crit = parseInt(document.getElementById('p1-crit-vp').innerText);
-    let p1Tac = parseInt(document.getElementById('p1-tac-vp').innerText);
-    let p1EnemySize = parseInt(document.getElementById('p1-enemy-size').value);
-    let p1Kills = parseInt(document.getElementById('p1-kills').innerText);
-    let p1KillBase = calculatePlayerKillScore(p1Kills, p1EnemySize);
-
-    // 2. Obtener valores de J2
-    let p2Crit = parseInt(document.getElementById('p2-crit-vp').innerText);
-    let p2Tac = parseInt(document.getElementById('p2-tac-vp').innerText);
-    let p2EnemySize = parseInt(document.getElementById('p2-enemy-size').value);
-    let p2Kills = parseInt(document.getElementById('p2-kills').innerText);
-    let p2KillBase = calculatePlayerKillScore(p2Kills, p2EnemySize);
-
-    // 3. Evaluar el Bono de Mayoría en Kill Op (+1 PV extra)
-    let p1KillBonus = 0;
-    let p2KillBonus = 0;
-    document.getElementById('p1-kill-bonus').classList.add('d-none');
-    document.getElementById('p2-kill-bonus').classList.add('d-none');
-
-    if (p1KillBase > p2KillBase) {
-        p1KillBonus = 1;
-        document.getElementById('p1-kill-bonus').classList.remove('d-none');
-    } else if (p2KillBase > p1KillBase) {
-        p2KillBonus = 1;
-        document.getElementById('p2-kill-bonus').classList.remove('d-none');
-    }
-
-    let p1KillTotal = Math.min(6, p1KillBase + p1KillBonus);
-    let p2KillTotal = Math.min(6, p2KillBase + p2KillBonus);
-
-    document.getElementById('p1-kill-base').innerText = p1KillBase;
-    document.getElementById('p1-kill-total').innerText = p1KillTotal;
-    document.getElementById('p2-kill-base').innerText = p2KillBase;
-    document.getElementById('p2-kill-total').innerText = p2KillTotal;
-
-    // 4. Calcular el Bono de Operación Primaria (Solo si ya fue revelado)
-    let p1PrimaryBonus = 0;
-    let p2PrimaryBonus = 0;
-
-    if (gameState.revealed) {
-        let p1PrimaryType = gameState.p1.primary;
-        let p2PrimaryType = gameState.p2.primary;
-
-        let p1PrimaryScore = (p1PrimaryType === 'critop') ? p1Crit : (p1PrimaryType === 'tacop' ? p1Tac : p1KillTotal);
-        let p2PrimaryScore = (p2PrimaryType === 'critop') ? p2Crit : (p2PrimaryType === 'tacop' ? p2Tac : p2KillTotal);
-
-        // Mitad redondeada al alza (Math.ceil)
-        p1PrimaryBonus = Math.ceil(p1PrimaryScore / 2);
-        p2PrimaryBonus = Math.ceil(p2PrimaryScore / 2);
-
-        document.getElementById('p1-primary-bonus-display').innerText = `+${p1PrimaryBonus} PV (Bono Primaria)`;
-        document.getElementById('p2-primary-bonus-display').innerText = `+${p2PrimaryBonus} PV (Bono Primaria)`;
-    }
-
-    // 5. Total Final de Puntos de Victoria
-    let p1GrandTotal = p1Crit + p1Tac + p1KillTotal + p1PrimaryBonus;
-    let p2GrandTotal = p2Crit + p2Tac + p2KillTotal + p2PrimaryBonus;
-
-    document.getElementById('p1-total-vp').innerText = p1GrandTotal;
-    document.getElementById('p2-total-vp').innerText = p2GrandTotal;
-
+    ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+        if (gameState[p]) {
+            let crit = parseInt(document.getElementById(`${p}-crit-vp`)?.innerText) || 0;
+            let kill = gameState[p].killOpVP || 0;
+            
+            // En modo asimétrico solo se suma CritOp + KillOp
+            let grandTotal = crit + kill;
+            
+            const totalEl = document.getElementById(`${p}-total-vp`);
+            if (totalEl) totalEl.innerText = grandTotal;
+        }
+    });
     saveGameState();
-}
-
-function validateKills(playerPrefix) {
-    // Obtenemos los elementos HTML según el jugador (p1 o p2)
-    let enemySize = parseInt(document.getElementById(playerPrefix + '-enemy-size').value);
-    let killsDisplay = document.getElementById(playerPrefix + '-kills');
-    let currentKills = parseInt(killsDisplay.innerText);
-
-    // Si las muertes actuales superan el nuevo tamaño rival, las reducimos al tope
-    if (currentKills > enemySize) {
-        killsDisplay.innerText = enemySize;
-    }
 }
 
 // 1. Diccionario de Traducciones de Facciones
@@ -430,7 +265,6 @@ const archetypeTranslations = {
 
 // Variables para almacenar los datos en memoria
 let dataFactions = {};
-let dataTacOps = {};
 let dataCritOps = {};
 let dataWeapons = {};
 let dataRacial = {};
@@ -442,9 +276,7 @@ let dataMaps = {};
 async function initializeMatchData() {
     try {
         // Agregamos reglasArmas.json, racial.json, ploys.json y equipment.json a nuestra promesa concurrente
-        const [factionsRes, tacopsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes, mapsRes] = await Promise.all([
-            fetch('tacops.json'),
-            fetch('tacopsgenerales.json'),
+        const [factionsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes, mapsRes] = await Promise.all([
             fetch('CritsOps.json'),
             fetch('reglasArmas.json'),
             fetch('racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
@@ -454,7 +286,6 @@ async function initializeMatchData() {
         ]);
 
         dataFactions = await factionsRes.json();
-        dataTacOps = await tacopsRes.json();
         dataCritOps = await critopsRes.json();
         dataWeapons = await weaponsRes.json();
         if (racialRes) dataRacial = await racialRes.json();
@@ -483,13 +314,20 @@ async function initializeMatchData() {
 // Función para llenar el selector global de CritOps
 function populateCritOps() {
     const select = document.getElementById('global-critop');
-    if (!select) return;
+    if (!select || !dataCritOps) return;
+
+    select.innerHTML = '<option value="" selected disabled>-- Selecciona Misión Manualmente --</option>';
+
+    // Filtro por los IDs permitidos en el JSON
+    const allowedCritOps = ['1', '2', '3']; 
 
     for (const [key, op] of Object.entries(dataCritOps)) {
-        const option = document.createElement('option');
-        option.value = key; // La llave (ej. "secure", "loot")
-        option.textContent = op.name_es || key; // El nombre en español
-        select.appendChild(option);
+        if (allowedCritOps.includes(op.id)) {
+            const option = document.createElement('option');
+            option.value = key; 
+            option.textContent = op.name_es || key; 
+            select.appendChild(option);
+        }
     }
 }
 
@@ -513,122 +351,6 @@ function populateFactions() {
             select.appendChild(option);
         });
     });
-}
-
-// 4. Lógica de filtrado cuando se elige una facción
-function updateTacOps(playerPrefix) {
-    const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
-    const tacopSelect = document.getElementById(`${playerPrefix}-tacop`);
-    const archetypesDisplay = document.getElementById(`${playerPrefix}-archetypes-display`);
-    const factionRulesBtn = document.getElementById(`${playerPrefix}-btn-faction-rules`);
-
-    // --- RESET DE SEGURIDAD PARA TACOPS SECRETAS ---
-    document.getElementById(`${playerPrefix}-tacop-container`)?.classList.remove('d-none');
-    document.getElementById(`${playerPrefix}-tacop-container`)?.classList.add('d-flex');
-    document.getElementById(`${playerPrefix}-tacop-status`)?.classList.add('d-none');
-    document.getElementById(`${playerPrefix}-tacop-status`)?.classList.remove('d-flex');
-    document.getElementById(`${playerPrefix}-secret-badge`)?.classList.remove('d-none');
-    document.getElementById(`${playerPrefix}-btn-reveal-tacop`)?.classList.remove('d-none');
-    document.getElementById(`${playerPrefix}-revealed-badge`)?.classList.add('d-none');
-    let lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
-    if (lockBtn) lockBtn.disabled = true;
-
-    let infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
-    if (infoBtn) infoBtn.disabled = true;
-
-    if (factionRulesBtn) {
-        factionRulesBtn.disabled = !factionKey || !dataFactions[factionKey];
-    }
-
-    const stratBtn = document.getElementById(`${playerPrefix}-btn-strat-ploys`);
-    if (stratBtn) {
-        stratBtn.disabled = !factionKey || !dataFactions[factionKey];
-    }
-
-    const equipBtn = document.getElementById(`${playerPrefix}-btn-select-equip`);
-    if (equipBtn) {
-        equipBtn.disabled = !factionKey || !dataFactions[factionKey];
-    }
-
-    document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.remove('d-flex');
-    document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.add('d-none');
-
-    updateActiveStrategicPloysDisplay(playerPrefix);
-
-    // Filtrar equipamientos que ya no pertenezcan a la nueva facción (conservando universales)
-    if (gameState[playerPrefix] && Array.isArray(gameState[playerPrefix].equipment)) {
-        gameState[playerPrefix].equipment = gameState[playerPrefix].equipment.filter(id => {
-            const item = dataEquipment.find(e => e.id_equip === id);
-            return item && (item.faction === 'universal' || item.faction === factionKey);
-        });
-    }
-    updateSelectedEquipmentDisplay(playerPrefix);
-
-    if (!factionKey || !dataFactions[factionKey]) return;
-
-    // Actualización visual de la imagen
-    const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
-    if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
-
-    const allowedArchetypes = dataFactions[factionKey].archetypes;
-    const translatedArchs = allowedArchetypes.map(a => archetypeTranslations[a] || a).join(' / ');
-    archetypesDisplay.innerHTML = `Arquetipos permitidos: <strong>${translatedArchs}</strong>`;
-
-    tacopSelect.innerHTML = '<option value="" selected disabled>Selecciona tu TacOp...</option>';
-
-    for (const [tacopName, tacopData] of Object.entries(dataTacOps)) {
-        if (allowedArchetypes.includes(tacopData.archetype)) {
-            const option = document.createElement('option');
-            option.value = tacopName;
-            option.textContent = `${tacopName} (${archetypeTranslations[tacopData.archetype] || tacopData.archetype})`;
-            tacopSelect.appendChild(option);
-        }
-    }
-
-    // NUEVO: Guardar estado tras cambiar la facción de forma activa
-    saveGameState();
-}
-
-// 1. Habilita el botón de bloqueo e información al seleccionar TacOp
-function enableTacOpLock(playerPrefix) {
-    const lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
-    const infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
-    if (lockBtn) lockBtn.disabled = false;
-    if (infoBtn) infoBtn.disabled = false;
-
-    // NUEVO: Guardar estado tras cambiar la selección del menú de TacOp
-    saveGameState();
-}
-
-// 2. Fija la TacOp en secreto (Oculta selectores y muestra estado)
-function lockTacOp(playerPrefix) {
-    document.getElementById(`${playerPrefix}-tacop-container`).classList.remove('d-flex');
-    document.getElementById(`${playerPrefix}-tacop-container`).classList.add('d-none');
-
-    document.getElementById(`${playerPrefix}-tacop-status`).classList.remove('d-none');
-    document.getElementById(`${playerPrefix}-tacop-status`).classList.add('d-flex');
-
-    // NUEVO: Guardar estado cuando el jugador confirma el bloqueo secreto
-    saveGameState();
-}
-
-// 3. Transición del Estado 2 al Estado 3 (Revelar en la partida)
-function revealTacOp(playerPrefix) {
-    const selectEl = document.getElementById(`${playerPrefix}-tacop`);
-    const selectedText = selectEl.options[selectEl.selectedIndex].text;
-
-    document.getElementById(`${playerPrefix}-secret-badge`).classList.add('d-none');
-    document.getElementById(`${playerPrefix}-btn-reveal-tacop`).classList.add('d-none');
-
-    const revealedBadge = document.getElementById(`${playerPrefix}-revealed-badge`);
-    revealedBadge.innerText = selectedText;
-
-    const revealedContainer = document.getElementById(`${playerPrefix}-revealed-badge-container`);
-    revealedContainer.classList.remove('d-none');
-    revealedContainer.classList.add('d-flex');
-
-    // NUEVO: Guardar estado cuando la misión secundaria se hace pública
-    saveGameState();
 }
 
 // --- SISTEMA DE GESTIÓN Y ACTIVACIÓN DE ARDIDES ESTRATÉGICOS ---
@@ -917,6 +639,56 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
 
     activeContainer.innerHTML = html;
     syncStratSectionsHeight();
+}
+
+function calculateKillOpAsymmetric() {
+    let players = [];
+    
+    // Recolectar dinámicamente solo los jugadores presentes en el DOM
+    ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+        const killEl = document.getElementById(`${p}-kills-current-tp`);
+        if (killEl) {
+            players.push({ id: p, kills: parseInt(killEl.innerText) || 0 });
+        }
+    });
+
+    if(players.length === 0) return;
+
+    // Ordenar descendente por cantidad de bajas
+    players.sort((a, b) => b.kills - a.kills);
+
+    let currentRank = 1;
+
+    // Asignación de PV basada en Standard Competition Ranking
+    for (let i = 0; i < players.length; i++) {
+        // Regla: 0 bajas = 0 puntos (se ignoran)
+        if (players[i].kills === 0) {
+            players[i].vp = 0;
+            continue;
+        }
+
+        if (i > 0 && players[i].kills < players[i - 1].kills) {
+            currentRank = i + 1;
+        }
+
+        if (currentRank === 1) {
+            players[i].vp = 2;
+        } else if (currentRank === 2) {
+            players[i].vp = 1;
+        } else {
+            players[i].vp = 0;
+        }
+    }
+
+    // Actualizar estados y reiniciar el contador del TP actual
+    players.forEach(p => {
+        gameState[p.id].killOpVP += p.vp;
+        document.getElementById(`${p.id}-kills-current-tp`).innerText = '0';
+        document.getElementById(`${p.id}-killop-total`).innerText = gameState[p.id].killOpVP;
+    });
+
+    calculateTotals();
+    mostrarNotificacion("KillOp evaluada. Puntos asignados y contadores de TP reseteados.");
 }
 
 // --- SISTEMA DE GESTIÓN Y SELECCIÓN DE EQUIPAMIENTO ---
@@ -1842,21 +1614,17 @@ function saveGameState() {
 }
 
 function getPlayerState(p) {
-    // Para identificar si es Jugador 1 o Jugador 2 en la clase CSS del input
+    
     const playerClass = p === 'p1' ? '1' : '2';
 
     return {
         name: document.querySelector(`.player-${playerClass} .name-input`).value,
         faction: document.getElementById(`${p}-faction`).value,
-        tacop: document.getElementById(`${p}-tacop`).value,
         // Detectamos el estado de la TacOp leyendo la interfaz visual
-        tacopLocked: !document.getElementById(`${p}-tacop-container`).classList.contains('d-flex'),
-        tacopRevealed: !document.getElementById(`${p}-revealed-badge-container`).classList.contains('d-none'),
         cp: document.getElementById(`${p}-cp`).innerText,
         critVp: document.getElementById(`${p}-crit-vp`).innerText,
-        tacVp: document.getElementById(`${p}-tac-vp`).innerText,
-        enemySize: document.getElementById(`${p}-enemy-size`).value,
-        kills: document.getElementById(`${p}-kills`).innerText,
+        killsCurrentTP: document.getElementById(`${p}-kills-current-tp`).innerText,
+        killOpVP: gameState[p].killOpVP,
         strategicPloys: (gameState[p] && gameState[p].strategicPloys) ? gameState[p].strategicPloys : { 1: [], 2: [], 3: [], 4: [] },
         equipment: getPlayerEquipment(p)
     };
@@ -1931,42 +1699,34 @@ function loadGameState() {
 function restorePlayerState(p, pState) {
     if (!pState) return;
 
-    const playerClass = p === 'p1' ? '1' : '2';
-    document.querySelector(`.player-${playerClass} .name-input`).value = pState.name || "";
+    // 1. Solución Escalable: Extraemos el número directamente del prefijo ('p1' -> '1', 'p3' -> '3')
+    const playerClass = p.replace('p', ''); 
+    
+    const nameInput = document.querySelector(`.player-${playerClass} .name-input`);
+    if (nameInput) nameInput.value = pState.name || "";
 
-    if (pState.faction) {
-        document.getElementById(`${p}-faction`).value = pState.faction;
-        updateTacOps(p); // Reconstruye el selector y la imagen
+    // 2. Restaurar contadores estándar
+    const cpEl = document.getElementById(`${p}-cp`);
+    if (cpEl) cpEl.innerText = pState.cp || "2";
+    
+    const critEl = document.getElementById(`${p}-crit-vp`);
+    if (critEl) critEl.innerText = pState.critVp || "0";
+
+    // 3. Restaurar nuevo sistema KillOp (TP actual y Total Acumulado)
+    const killsTpEl = document.getElementById(`${p}-kills-current-tp`);
+    if (killsTpEl) killsTpEl.innerText = pState.killsCurrentTP || "0";
+
+    // 4. Restaurar el objeto de estado en memoria (Limpiando residuos de Primary)
+    if (!gameState[p]) {
+        gameState[p] = { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: '', killOpVP: 0 };
     }
-
-    if (pState.tacop) {
-        document.getElementById(`${p}-tacop`).value = pState.tacop;
-        enableTacOpLock(p);
-    }
-
-    // Restaurar los estados visuales que updateTacOps reseteó
-    if (pState.tacopRevealed) {
-        lockTacOp(p);
-        revealTacOp(p);
-    } else if (pState.tacopLocked) {
-        lockTacOp(p);
-    }
-
-    // Restaurar contadores
-    document.getElementById(`${p}-cp`).innerText = pState.cp || "2";
-    document.getElementById(`${p}-crit-vp`).innerText = pState.critVp || "0";
-    document.getElementById(`${p}-tac-vp`).innerText = pState.tacVp || "0";
-
-    if (pState.enemySize) {
-        document.getElementById(`${p}-enemy-size`).value = pState.enemySize;
-    }
-
-    document.getElementById(`${p}-kills`).innerText = pState.kills || "0";
+    
+    // Inyectar el acumulado de KillOp guardado a la memoria RAM y al DOM
+    gameState[p].killOpVP = pState.killOpVP || 0;
+    const killTotalEl = document.getElementById(`${p}-killop-total`);
+    if (killTotalEl) killTotalEl.innerText = gameState[p].killOpVP;
 
     // Restaurar ardides estratégicos
-    if (!gameState[p]) {
-        gameState[p] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] };
-    }
     if (pState.strategicPloys) {
         gameState[p].strategicPloys = pState.strategicPloys;
     }
@@ -2069,22 +1829,18 @@ function populateKillzonesDropdown() {
     const select = document.getElementById('killzoneSelect');
     if (!select || !dataMaps) return;
 
-    // Reseteo del DOM previo a la inyección
     select.innerHTML = '<option value="" selected disabled>-- Selecciona Killzone Manualmente --</option>';
 
-    // Lista de exclusión para mapas de 3 o 4 jugadores
-    const excludedKillzones = ['open_asymetrics', 'gallowdark_asymetrics'];
+    // Lista de INCLUSIÓN estricta (Whitelisting)
+    const allowedKillzones = ['open_asymetrics', 'gallowdark_asymetrics'];
 
     for (const [key, killzone] of Object.entries(dataMaps)) {
-        // Validación: Omitir la iteración si la clave está en la lista de exclusión
-        if (excludedKillzones.includes(key)) {
-            continue;
+        if (allowedKillzones.includes(key)) {
+            const option = document.createElement('option');
+            option.value = key;
+            option.textContent = killzone.name;
+            select.appendChild(option);
         }
-
-        const option = document.createElement('option');
-        option.value = key;
-        option.textContent = killzone.name;
-        select.appendChild(option);
     }
 }
 

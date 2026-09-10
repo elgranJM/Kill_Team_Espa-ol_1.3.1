@@ -949,25 +949,234 @@
 			},
             {
 				"m_id": 2,
-				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+				"m_img": "./resources/game_rules_files/maps/open/map-op-2-min.png"
 			},
             {
 				"m_id": 3,
-				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+				"m_img": "./resources/game_rules_files/maps/open/map-op-3-min.png"
 			},
             {
 				"m_id": 4,
-				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+				"m_img": "./resources/game_rules_files/maps/open/map-op-4-min.png"
 			},
             {
 				"m_id": 5,
-				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+				"m_img": "./resources/game_rules_files/maps/open/map-op-5-min.png"
 			},
             {
 				"m_id": 6,
-				"m_img": "./resources/game_rules_files/maps/open/map-op-1-min.png"
+				"m_img": "./resources/game_rules_files/maps/open/map-op-6-min.png"
 			}
 		],
         "terrain": []
+	},
+	"open_asymetrics": {
+		"name": "PARTIDAS ASIMETRICAS ABIERTAS",
+        "description": "Este es un paquete de misiones para juegos de tres o cuatro jugadores para Zonas de Aniquilaciones abiertas. Es ideal para un grupo de amigos que quieran jugar juntos. Todos los demás jugadores son enemigos, así que espera mucha matanza y destrucción. Este paquete de misiones requiere dos tableros de juego del mismo tamaño combinados a lo largo del borde largo para crear un tablero más grande.",
+        "portada": "",
+		"rules": [
+			{
+				"r_name": "ORDEN DE JUGADORES",
+                "r_description": "<p>Siempre que determinéis <span cass=\"faction\">iniciativa</span>, se establece el orden de los jugadores. Todos los jugadores tiran un D6. El jugador con el resultado más alto es el primero, el jugador con el segundo resultado más alto es el segundo, y así sucesivamente. Si dos o más jugadores están empatados, esos jugadores siguen tirando hasta que se establezca un orden entre ellos</p> <p>Siempre que hagan algo, comiencen con el jugador con iniciativa, haganlo en orden de jugador. Por ejemplo, en la selección de zonas de despliegue, comenzando con el jugador que va primero.</p>",
+                "r_img": ""
+			},
+			{
+				"r_name": "OPERACIONES",
+                "r_description": "<p>Los jugadores deben intentar conseguir puntos de victoria (PV) en dos operaciones:</p> <p><ul><li><span class=\"faction\">Operación de eliminación (KillOp)</span></li></ul> <ul><li><span class=\"faction\">Operación Crítica (CritOp)</span></li></ul></p> <p>La batalla termina después de cuatro puntos de inflexión y el jugador con más PV es el ganador.</p>",
+                "r_img": ""
+			},
+			{
+				"r_name": "OPERACIÓN DE ELIMINACIÓN",
+                "r_description": "<p>Mantengan un registro de cuántos agentes enemigos son <b>incapacitados</b> por agentes amigos durante cada punto de inflexión. Los agentes enemigos con una estadística de Heridas de 12 o más se tratan como dos para este propósito, y los agentes enemigos que no son incapacitados por un agente amigo se ignoran (por ejemplo, si fueron incapacitados por la regla de armas <b>Sobrecalentamiento</b>).</p> <p>Al final de cada punto de inflexión despues del primero, clasifica a cada jugador que incapacitó agentes enemigos durante ese punto de inflexión. Obtienes una cantidad de PV en base a lo que se muestra en la tabla.</p> <p>Si dos o más jugadores están empatados en un rango, comparten el rango en el extremo superior de ese empate. Por ejemplo, si cuatro jugadores incapacitaran a agentes enemigos durante el punto de inflexión, y dos de ellos empataran el segundo rango, ambos ocuparian el segundo rango. El jugador restante ocuparia el cuarto lugar.</p>",
+                "r_img": "./resources/game_rules_files/maps/open_asymetrics/rules/KillOp_Asymetrics.png"
+			},
+			{
+				"r_name": "OPERACIÓN CRÍTICA",
+                "r_description": "<p>A la hora de seleccionar la CritOp pueden hacerlo entre las siguientes opciones:</p> <p><ul><li><span class=\"faction\">Asegurar</span></li></ul> <ul><li><span class=\"faction\">Saquear</span></li></ul> <ul><li><span class=\"faction\">Transmisión</span></li></ul></p> <p>Para seleccionar la CritOp pueden lanzar un D3.</p>",
+                "r_img": ""
+			}
+		],
+		"actions": [],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/open_asymetrics/MP_Ops_3pl_1.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/open_asymetrics/MP_Ops_3pl_2.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/open_asymetrics/MP_Ops_4pl_1.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/open_asymetrics/MP_Ops_4pl_2.png"
+			}
+		],
+        "terrain": []
+	},
+	"gallowdark_asymetrics": {
+		"name": "PARTIDAS HORCASOMBRIA ASIMETRICAS",
+        "description": "Este es un paquete de misiones para juegos de tres o cuatro jugadores en Horcasombria. Es ideal para un grupo de amigos que quieran jugar juntos. Todos los demás jugadores son enemigos, así que espera mucha matanza y destrucción. Este paquete de misiones requiere dos tableros de juego Horcasombria del mismo tamaño combinados a lo largo del borde largo para crear un tablero más grande.",
+        "portada": "./resources/game_rules_files/maps/gallowdark-portada.png",
+		"rules": [
+			{
+				"r_name": "ORDEN DE JUGADORES",
+                "r_description": "<p>Siempre que determinéis <span cass=\"faction\">iniciativa</span>, se establece el orden de los jugadores. Todos los jugadores tiran un D6. El jugador con el resultado más alto es el primero, el jugador con el segundo resultado más alto es el segundo, y así sucesivamente. Si dos o más jugadores están empatados, esos jugadores siguen tirando hasta que se establezca un orden entre ellos</p> <p>Siempre que hagan algo, comiencen con el jugador con iniciativa, haganlo en orden de jugador. Por ejemplo, en la selección de zonas de despliegue, comenzando con el jugador que va primero.</p>",
+                "r_img": ""
+			},
+			{
+				"r_name": "OPERACIONES",
+                "r_description": "<p>Los jugadores deben intentar conseguir puntos de victoria (PV) en dos operaciones:</p> <p><ul><li><span class=\"faction\">Operación de eliminación (KillOp)</span></li></ul> <ul><li><span class=\"faction\">Operación Crítica (CritOp)</span></li></ul></p> <p>La batalla termina después de cuatro puntos de inflexión y el jugador con más PV es el ganador.</p>",
+                "r_img": ""
+			},
+			{
+				"r_name": "OPERACIÓN DE ELIMINACIÓN",
+                "r_description": "<p>Mantengan un registro de cuántos agentes enemigos son <b>incapacitados</b> por agentes amigos durante cada punto de inflexión. Los agentes enemigos con una estadística de Heridas de 12 o más se tratan como dos para este propósito, y los agentes enemigos que no son incapacitados por un agente amigo se ignoran (por ejemplo, si fueron incapacitados por la regla de armas <b>Sobrecalentamiento</b>).</p> <p>Al final de cada punto de inflexión despues del primero, clasifica a cada jugador que incapacitó agentes enemigos durante ese punto de inflexión. Obtienes una cantidad de PV en base a lo que se muestra en la tabla.</p> <p>Si dos o más jugadores están empatados en un rango, comparten el rango en el extremo superior de ese empate. Por ejemplo, si cuatro jugadores incapacitaran a agentes enemigos durante el punto de inflexión, y dos de ellos empataran el segundo rango, ambos ocuparian el segundo lugar. El jugador restante ocuparia el cuarto lugar.</p>",
+                "r_img": "./resources/game_rules_files/maps/open_asymetrics/rules/KillOp_Asymetrics.png"
+			},
+			{
+				"r_name": "OPERACIÓN CRÍTICA",
+                "r_description": "<p>A la hora de seleccionar la CritOp pueden hacerlo entre las siguientes opciones:</p> <p><ul><li><span class=\"faction\">Asegurar</span></li></ul> <ul><li><span class=\"faction\">Saquear</span></li></ul> <ul><li><span class=\"faction\">Transmisión</span></li></ul></p> <p>Para seleccionar la CritOp pueden lanzar un D3.</p>",
+                "r_img": ""
+			},
+			{
+				"r_name": "ENTORNO CONDENSADO",
+                "r_description": "Las armas con la regla de armas Área, Ráfaga y/o x\" Devastadora (es decir, Devastadora con un requisito de distancia) tienen también la regla de armas Letal 5+.",
+                "r_img": ""
+			},
+			{
+				"r_name": "En Guardia",
+                "r_description": "<p>Una vez durante la activación de cada agente enemigo, después de que ese agente enemigo realice una acción, puedes interrumpir esa activación y elegir un agente amigo en guardia para que realice una acción libre de <b>Disparar</b> o <b>Combatir</b> (incluyendo acciones equivalentes a estas, como por ejemplo <b>Combatir en escotillas</b> abajo).</p> <p>Ese agente amigo puede incluso realizar la acción de <b>Disparar</b> mientras se encuentre en la zona de control de un agente enemigo (esto tiene preferencia sobre las condiciones normales de la acción de <b>Disparar</b>). Esto se conoce como un disparo a bocajarro y tiene las siguientes reglas adicionales mientras tu agente la está llevando a cabo:</p> <p><ul><li>Toma como blanco al agente enemigo en la zona de control de tu agente (incluso aunque normalmente no sería un blanco válido).</li></ul> <ul><li>• Empeora en 1 el atributo Impactar de las armas de tu agente.</li></ul> <ul><li>Hasta el final de la activación interrumpida del agente enemigo, tu agente no puede contraatacar.</li></ul></p>",
+                "r_img": ""
+			},
+			{
+				"r_name": "MURO DE HORCASOMBRIA",
+                "r_description": "<p>Un elemento de terreno de Horcasombria es terreno pesado y de muro. Algunos muros incluyen una escotilla (explicados más adelante).</p> <p><b></b>Terreno de muro:</p> <p><ul><li> Los agentes no pueden moverse por encima o a través de terreno de muro (esto tiene preferencia sobre todas las demás reglas).</li></ul> <ul><li>La visibilidad no puede determinarse por encima o a través de terreno de muro.</li></ul> <ul><li>Aparte de hacia áreas de la zona de aniquilación (el centro de la zona de aniquilación, las zonas de descenso, etc), no se pueden medir distancias por encima o a través de terreno de muro; deben medirse rodeándolo por la ruta más corta posible.</li></ul> <ul><li>A efectos de la cobertura y el ofuscamiento, solo las esquinas y los finales de un terreno de muro pueden interponerse, a menos que el agente activo los haya superado (ver ejemplos a continuación.).</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/terrain/b1.png"
+			},
+			{
+				"r_name": "EJEMPLO DE MOVIMIENTO",
+                "r_description": "Normalmente el agente A debería estar a 3\" o menos del agente B, pero dado que las distancias no pueden medirse ni por encima ni a través de terreno de muro, deben medirse rodeando el muro de Mundo Necrópolis. Esto dejaría al agente A a más de 3\" del agente B.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/movimiento.png"
+			},
+			{
+				"r_name": "EJEMPLO DE COBERTURA",
+                "r_description": "El agente B no se encuentra tras cobertura, ya que no se interpone ninguna esquina o final de muro. Ten en cuenta que las partes menores del muro que sobresalen no conforman por sí mismas una esquina o un final, debe ser la estructura principal del muro la que genera la esquina o el final, tal como muestran los siguientes diagramas.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cobertura.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO",
+                "r_description": "Una esquina del muro está interpuesta, y por lo tanto el agente B está tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cobertura2.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO 2",
+                "r_description": "El agente A ha superado la esquina del muro, por lo que no está interpuesta y el agente B no está tras cobertura. Ten en cuenta que si el agente A estuviera completamente bajo la línea de puntos negros, el muro se consideraría interpuesto y el agente B estaría tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cobertura3.png"
+			},
+			{
+				"r_name": "EJEMPLO DE INTERPUESTO 3",
+                "r_description": "Un final del muro está interpuesto y por lo tanto el agente B está tras cobertura.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cobertura4.png"
+			},
+			{
+				"r_name": "EJEMPLO DE OFUSCADO",
+                "r_description": "Dado que la escotilla está abierta, un final del muro está interpuesto. Se encuentra a más de 1\" de ambos agentes, por lo que el agente B está ofuscado.",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/ofuscado.png"
+			},
+			{
+				"r_name": "CERRADA",
+                "r_description": "<p>Una escotilla tiene dos estados: cerrada y abierta. Tiene dos partes, un punto de acceso y un portillo, y sus tipos de terreno dependen del estado de la escotilla. Los agentes pueden realizar la acción de misión <b>Operar portillo</b> para cambiar su estado. Las escotillas empiezan la batalla cerradas</p> <p>Mientras una escotilla está cerrada:</p> <p><ul><li>Su portillo debe estar en su punto de acceso.</li></ul> <ul><li>El punto de acceso y el portillo son terreno pesado y de muro.</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/cerrado.png"
+			},
+			{
+				"r_name": "Abierto",
+                "r_description": "<p>Mientras una escotilla está abierta:</p> <p><ul><li>Su portillo debe permanecer abierto y se considera terreno insignificante.</li></ul> <ul><li>Su punto de acceso es terreno accesible e insignificante. </li></ul> <ul><li>Su punto de acceso es también terreno expuesto. Esto significa que los muros en cualquiera de sus lados deben ser usados para cobertura y ofuscación en su lugar.</li></ul></p>",
+                "r_img": "./resources/game_rules_files/maps/gallowdark/rules/abierto.png"
+			}
+		],
+		"actions": [
+			{
+				"a_name": "OPERAR PORTILLO",
+				"cost": "1 PA",
+                "a_description": ["Abre o cierra una escotilla cuyo punto de acceso se encuentre en la zona de control del agente.", "Un agente puede realizar esta acción durante la acción de <b>Correr</b> o <b>Reposicionarse</b>, y tras realizarla puede usar cualquier distancia de movimiento que le quede."],
+				"a_no": "Un agente no puede realizar esta acción mientras se encuentre en la zona de control de un agente enemigo, o si esa escotilla está abierta y su punto de acceso se encuentra en la zona de control de un agente enemigo."
+			},
+			{
+				"a_name": "DEFENSA",
+				"cost": "1 PA",
+                "a_description": ["<p>El agente se pone en guardia hasta que se cumpla cualquiera de las siguientes condiciones:</p> <p><ul><li>Realiza cualquier acción.</li></ul> <ul><li>Un agente enemigo termina una acción en su zona de control y no interrumpes esa activación.</li></ul> <ul><li>Su orden cambia.</li></ul> <ul><li>Es el inicio del siguiente punto de inflexión.</li></ul></p>"],
+				"a_no": "Esta acción se trata como una acción de <b>Disparar</b>. Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si tiene una orden de ocultarse."
+			},
+			{
+				"a_name": "COMBATIR EN ESCOTILLAS",
+				"cost": "1 PA",
+                "a_description": ["Combate con el agente activo.", "En el paso de Elegir agente enemigo, en su lugar elige un agente enemigo a 2\" o menos de, y al otro lado de, el punto de acceso de una escotilla abierta o un punto de brecha abierto que el agente activo esté tocando. Mientras dure esa acción, los agentes en cuestión se tratan como si se encontraran en la zona de control del otro."],
+				"a_no": "Un agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si el punto de brecha está abierto."
+			}
+		],
+		"maps": [
+			{
+				"m_id": 1,
+				"m_img": "./resources/game_rules_files/maps/gallowdark_asymetrics/MP_Ops_3pl_1_GD.png"
+			},
+            {
+				"m_id": 2,
+				"m_img": "./resources/game_rules_files/maps/gallowdark_asymetrics/MP_Ops_3pl_2_GD.png"
+			},
+            {
+				"m_id": 3,
+				"m_img": "./resources/game_rules_files/maps/gallowdark_asymetrics/MP_Ops_4pl_1_GD.png"
+			},
+            {
+				"m_id": 4,
+				"m_img": "./resources/game_rules_files/maps/gallowdark_asymetrics/MP_Ops_4pl_2_GD.png"
+			}
+		],
+        "terrain": [
+			{
+                "t_id": "A1",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/a1.png"
+            },
+            {
+                "t_id": "A2",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/a2.png"
+            },
+            {
+                "t_id": "A3",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/a3.png"
+            },
+            {
+                "t_id": "A4",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/a4.png"
+            },
+            {
+                "t_id": "B1",
+				"type": ["Pesado", "Muro"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/b1.png"
+            },
+            {
+                "t_id": "B2",
+				"type": ["Pesado", "Muro","Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/b2.png"
+            },
+            {
+                "t_id": "B3",
+				"type": ["Pesado", "Muro", "Escotilla"],
+                "t_img": "./resources/game_rules_files/maps/gallowdark/terrain/b3.png"
+            },
+			{
+				"t_id": "II",
+				"type": ["Pesado", "Muro"],
+				"t_img":"./resources/game_rules_files/maps/gallowdark/terrain/wallend.png"
+			}
+		]
 	}
 }

@@ -9,85 +9,54 @@ let gameState = {
     loading: false
 };
 
-// --- SISTEMA DE REVELADO DE PARTIDA ---
-function revealPrimaries() {
-    if (!gameState.p1.primary || !gameState.p2.primary) {
-        // Cambiamos el 'alert' molesto por la notificación integrada en la interfaz
-        mostrarNotificacion("Falta selección: Ambos jugadores deben fijar su Operación Primaria secreta antes de finalizar.");
-        return;
-    }
-
-    // Abrir el modal de confirmación temático
-    const modal = new bootstrap.Modal(document.getElementById('revealConfirmModal'));
-    modal.show();
-}
-
-// Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal
-function executeRevealPrimaries() {
-    gameState.revealed = true;
-
-    // Ocultar botones de selección y mostrar insignias
-    document.getElementById('p1-btn-secret').classList.add('d-none');
-    document.getElementById('p2-btn-secret').classList.add('d-none');
-
-    const mapNames = { 'critop': 'Crit Op', 'tacop': 'Tac Op', 'killop': 'Kill Op' };
-
-    let p1Badge = document.getElementById('p1-revealed-primary');
-    p1Badge.innerText = mapNames[gameState.p1.primary];
-    p1Badge.classList.remove('d-none');
-    document.getElementById('p1-primary-bonus-display').classList.remove('d-none');
-
-    let p2Badge = document.getElementById('p2-revealed-primary');
-    p2Badge.innerText = mapNames[gameState.p2.primary];
-    p2Badge.classList.remove('d-none');
-    document.getElementById('p2-primary-bonus-display').classList.remove('d-none');
-
-    // Ocultar botón global de revelar
-    document.getElementById('btn-reveal-global').classList.add('d-none');
-
-    calculateTotals();
-
-    showMatchResult();
-}
-
 // --- SISTEMA DE DECLARACIÓN DE VICTORIA ---
 function showMatchResult() {
-    // Extraer los puntos finales desde la interfaz (ya calculados)
-    const p1Score = parseInt(document.getElementById('p1-total-vp').innerText) || 0;
-    const p2Score = parseInt(document.getElementById('p2-total-vp').innerText) || 0;
+    let teams = {};
+    
+    // Recopilar totales previniendo la duplicación de la KillOp compartida
+    ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+        const playerCard = document.querySelector(`.player-${p.replace('p', '')}`);
+        if (playerCard) {
+            let critScore = parseInt(document.getElementById(`${p}-crit-vp`)?.innerText) || 0;
+            let teamId = document.getElementById(`${p}-team`)?.value || 'A';
+            let name = document.querySelector(`.player-${p.replace('p', '')} .name-input`)?.value.trim() || `Jugador ${p.replace('p', '')}`;
+            
+            if (!teams[teamId]) {
+                // Inicializamos el puntaje del equipo con el KillOp compartido
+                let sharedKillOp = gameState[p] ? gameState[p].killOpVP : 0;
+                teams[teamId] = { score: sharedKillOp, members: [] };
+            }
+            // Sumamos ÚNICAMENTE los Puntos de Victoria individuales (CritOp) al total
+            teams[teamId].score += critScore;
+            teams[teamId].members.push(name);
+        }
+    });
 
-    // Extraer los nombres de los jugadores (Si está vacío, usamos nombres por defecto)
-    let p1Name = document.querySelector('.player-1 .name-input').value.trim() || "Jugador 1";
-    let p2Name = document.querySelector('.player-2 .name-input').value.trim() || "Jugador 2";
+    // Ordenar los equipos de mayor a menor puntuación
+    let sortedTeams = Object.keys(teams).map(t => {
+        return { id: t, score: teams[t].score, members: teams[t].members };
+    }).sort((a, b) => b.score - a.score);
 
-    // Referencias a los elementos del Modal de Resultado
     const modalHeader = document.getElementById('matchResultHeader');
     const resultMessage = document.getElementById('matchResultMessage');
     const resultScore = document.getElementById('matchResultScore');
     const resultIcon = document.getElementById('matchResultIcon');
 
-    // Lógica de Victoria / Empate
-    if (p1Score > p2Score) {
-        // Gana Jugador 1 (Color Azul)
-        modalHeader.className = "modal-header bg-primary text-white";
-        resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-primary" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(11, 107, 225, 0.4);"></i>';
-        resultMessage.innerHTML = `¡Victoria para <span class="text-primary">${p1Name}</span>!`;
-        resultScore.innerHTML = `Con un total de <b>${p1Score}</b> PV frente a los ${p2Score} PV del enemigo.`;
-    } else if (p2Score > p1Score) {
-        // Gana Jugador 2 (Color Rojo)
-        modalHeader.className = "modal-header bg-danger text-white";
-        resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-danger" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(220, 53, 69, 0.4);"></i>';
-        resultMessage.innerHTML = `¡Victoria para <span class="text-danger">${p2Name}</span>!`;
-        resultScore.innerHTML = `Con un total de <b>${p2Score}</b> PV frente a los ${p1Score} PV del enemigo.`;
-    } else {
-        // Empate (Color Gris/Secundario)
+    let winner = sortedTeams[0];
+    let isTie = sortedTeams.length > 1 && sortedTeams[0].score === sortedTeams[1].score;
+
+    if (isTie) {
         modalHeader.className = "modal-header bg-secondary text-white";
-        resultIcon.innerHTML = '<i class="bi bi-shield-shaded text-secondary" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(108, 117, 125, 0.4);"></i>';
+        resultIcon.innerHTML = '<i class="bi bi-shield-shaded text-secondary" style="font-size: 5rem;"></i>';
         resultMessage.innerHTML = "¡La escaramuza termina en EMPATE!";
-        resultScore.innerHTML = `Ambos bandos lograron <b>${p1Score}</b> PV. ¡Una batalla reñida!`;
+        resultScore.innerHTML = `Múltiples equipos lograron <b>${winner.score}</b> PV.`;
+    } else {
+        modalHeader.className = "modal-header bg-success text-white";
+        resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-success" style="font-size: 5rem;"></i>';
+        resultMessage.innerHTML = `¡Victoria para el Equipo ${winner.id}!`;
+        resultScore.innerHTML = `Con un total combinado de <b>${winner.score}</b> PV.<br><small class="text-muted">Desplegados por: ${winner.members.join(' y ')}</small>`;
     }
 
-    // Llamar a Bootstrap para mostrar el Modal
     const resultModal = new bootstrap.Modal(document.getElementById('matchResultModal'));
     resultModal.show();
 }
@@ -101,83 +70,63 @@ function resetGame() {
 
 // Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal de reinicio
 function executeResetGame() {
-    // 1. Reset de Estado Lógico Interno
-    gameState.p1.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
-    gameState.p1.equipment = [];
-    gameState.p2.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
-    gameState.p2.equipment = [];
+    // 1. Reset de Estado Lógico Interno para los 4
+    ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+        gameState[p] = { 
+            strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, 
+            equipment: [], 
+            team: document.getElementById(`${p}-team`)?.value || 'A', 
+            killOpVP: 0 
+        };
+    });
     gameState.revealed = false;
-    gameState.p1.killOpVP = 0;
-    gameState.p2.killOpVP = 0;
 
-    // --- NUEVO: Reset de la Operación Crítica (CritOp) Global ---
     const globalCritOp = document.getElementById('global-critop');
-    if (globalCritOp) {
-        globalCritOp.value = ""; // Devuelve el selector a la opción por defecto ("Selecciona una CritOp...")
-    }
+    if (globalCritOp) globalCritOp.value = ""; 
 
-    // 2. Reset de Elementos de Jugadores (Nombres, Facciones, TacOps e Interfaz)
-    ['p1', 'p2'].forEach((p, index) => {
-        const playerNum = index === 0 ? '1' : '2';
-
-        // Reestablecer Nombres a vacío (o puedes poner 'Jugador 1' / 'Jugador 2')
-        document.querySelector(`.player-${playerNum} .name-input`).value = "";
-
-        // Reestablecer el selector de Facción al valor por defecto
+    // 2. Reset de Interfaz en Bucle Unificado
+    ['p1', 'p2', 'p3', 'p4'].forEach((p) => {
+        const playerNum = p.replace('p', '');
+        
+        const nameInput = document.querySelector(`.player-${playerNum} .name-input`);
+        if(nameInput) nameInput.value = `Jugador ${playerNum}`;
+        
         const factionSelect = document.getElementById(`${p}-faction`);
         if (factionSelect) factionSelect.value = "";
+        
+        const imgEl = document.getElementById(`${p}-faction-img`);
+        if (imgEl) imgEl.src = "./resources/facciones/blank.png";
 
-        // Ocultar la insignia de TacOp revelada
-        const revealedBadge = document.getElementById(`${p}-revealed-badge-container`);
-        if (revealedBadge) {
-            revealedBadge.classList.add('d-none');
-        }
+        const rulesBtn = document.getElementById(`${p}-btn-faction-rules`);
+        if (rulesBtn) rulesBtn.disabled = true;
+        
+        const idsToReset = [`${p}-crit-vp`, `${p}-kills-current-tp`, `${p}-killop-total`];
+        idsToReset.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.innerText = "0";
+        });
 
-        document.getElementById(`${p}-revealed-primary`).classList.add('d-none');
-        document.getElementById(`${p}-primary-bonus-display`).classList.add('d-none');
+        const cpEl = document.getElementById(`${p}-cp`);
+        if (cpEl) cpEl.innerText = "2";
+
+        updateActiveStrategicPloysDisplay(p);
+        updateSelectedEquipmentDisplay(p);
     });
 
-    // Mostrar el botón global de revelar primarias nuevamente
-    document.getElementById('btn-reveal-global').classList.remove('d-none');
-
-    // 3. Reset de Contadores Numéricos (Puntos de Victoria y Bajas)
-    const idsToReset = ['p1-crit-vp', 'p1-kills-current-tp', 'p1-killop-total', 'p2-crit-vp', 'p2-kills-current-tp', 'p2-killop-total'];
-    idsToReset.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.innerText = "0";
-    });
-
-    // Reset de Puntos de Mando (CP) iniciales
-    const p1Cp = document.getElementById('p1-cp');
-    const p2Cp = document.getElementById('p2-cp');
-    if (p1Cp) p1Cp.innerText = "2";
-    if (p2Cp) p2Cp.innerText = "2";
-
-    // Volver el Punto de Inflexión (Turno) al TP1
     const tp1Radio = document.getElementById('tp1');
     if (tp1Radio) tp1Radio.checked = true;
     document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = '1');
 
-    // Actualizar vista de ardides activos y equipamiento
-    updateActiveStrategicPloysDisplay('p1');
-    updateActiveStrategicPloysDisplay('p2');
-    updateSelectedEquipmentDisplay('p1');
-    updateSelectedEquipmentDisplay('p2');
-
-    // Recalcular los totales para que la UI muestre 0 puntos globales
     calculateTotals();
 
-    // Limpiar el autoguardado del LocalStorage para que no recuerde la partida anterior
     if (typeof localStorage !== 'undefined') {
         localStorage.removeItem('killTeamMatchState');
     }
 
-    // Notificación flotante estética del sistema
-    mostrarNotificacion("Partida reiniciada por completo. Tablero limpio.");
+    mostrarNotificacion("Partida reiniciada por completo. Tableros limpios.");
 }
 
 // --- SISTEMA DE CÁLCULO GENERAL ---
-
 function updateCounter(elementId, amount, max = 99) {
     const el = document.getElementById(elementId);
     let current = parseInt(el.innerText);
@@ -185,9 +134,13 @@ function updateCounter(elementId, amount, max = 99) {
 
     if (newVal >= 0 && newVal <= max) {
         el.innerText = newVal;
+        
+        // Disparar la persistencia automáticamente con cualquier cambio numérico
+        if (typeof saveGameState === 'function') {
+            saveGameState();
+        }
     }
 }
-
 function calculateTotals() {
     ['p1', 'p2', 'p3', 'p4'].forEach(p => {
         if (gameState[p]) {
@@ -275,8 +228,9 @@ let dataMaps = {};
 // 2. Carga Asíncrona de ambos JSON
 async function initializeMatchData() {
     try {
-        // Agregamos reglasArmas.json, racial.json, ploys.json y equipment.json a nuestra promesa concurrente
+        // CORRECCIÓN: Se agregan 7 promesas para las 7 variables correspondientes.
         const [factionsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes, mapsRes] = await Promise.all([
+            fetch('tacops.json'),
             fetch('CritsOps.json'),
             fetch('reglasArmas.json'),
             fetch('racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
@@ -297,13 +251,15 @@ async function initializeMatchData() {
         populateCritOps();
         populateKillzonesDropdown();
         populateWeaponRules();
-
         loadGameState();
         calculateTotals();
-        updateActiveStrategicPloysDisplay('p1');
-        updateActiveStrategicPloysDisplay('p2');
-        updateSelectedEquipmentDisplay('p1');
-        updateSelectedEquipmentDisplay('p2');
+        
+        // CORRECCIÓN: Bucle unificado para inicializar a los 4 jugadores
+        ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+            updateActiveStrategicPloysDisplay(p);
+            updateSelectedEquipmentDisplay(p);
+        });
+
         onTurningPointChange();
 
     } catch (error) {
@@ -340,7 +296,8 @@ function populateFactions() {
         return nameA.localeCompare(nameB);
     });
 
-    ['p1', 'p2'].forEach(playerPrefix => {
+    // CORRECCIÓN: Agregar 'p3' y 'p4' al bucle
+    ['p1', 'p2', 'p3', 'p4'].forEach(playerPrefix => {
         const select = document.getElementById(`${playerPrefix}-faction`);
         if (!select) return;
 
@@ -352,6 +309,41 @@ function populateFactions() {
         });
     });
 }
+
+// NUEVO: Escuchar el cambio de facción para habilitar botones, actualizar imagen y limpiar selecciones
+    document.querySelectorAll('select[id$="-faction"]').forEach(select => {
+        select.addEventListener('change', (e) => {
+            const playerPrefix = e.target.id.split('-')[0]; // Extrae "p1", "p2", "p3", "p4"
+            const factionKey = e.target.value;
+
+            // 1. Habilitar el botón de Reglas de Facción
+            const rulesBtn = document.getElementById(`${playerPrefix}-btn-faction-rules`);
+            if (rulesBtn) {
+                rulesBtn.disabled = !factionKey || !dataFactions[factionKey];
+            }
+
+            // 2. Actualizar la imagen circular de la facción
+            const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
+            if (imgEl) {
+                imgEl.src = `./resources/facciones/${factionKey}.png`;
+            }
+
+            // 3. Limpiar equipamiento incompatible con la nueva facción (mantiene universales)
+            if (gameState[playerPrefix] && Array.isArray(gameState[playerPrefix].equipment)) {
+                gameState[playerPrefix].equipment = gameState[playerPrefix].equipment.filter(id => {
+                    const item = dataEquipment.find(eq => eq.id_equip === id);
+                    return item && (item.faction === 'universal' || item.faction === factionKey);
+                });
+            }
+
+            // 4. Actualizar la UI (Esto remueve el 'disabled' de los botones de equipamiento y ardides)
+            updateActiveStrategicPloysDisplay(playerPrefix);
+            updateSelectedEquipmentDisplay(playerPrefix);
+            
+            // 5. Guardar el estado inmediatamente
+            saveGameState();
+        });
+    });
 
 // --- SISTEMA DE GESTIÓN Y ACTIVACIÓN DE ARDIDES ESTRATÉGICOS ---
 
@@ -374,8 +366,10 @@ function calculateDynamicLimit(type, key, turn) {
 function onTurningPointChange() {
     const currentTP = getCurrentTurn();
     document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = currentTP);
-    updateActiveStrategicPloysDisplay('p1');
-    updateActiveStrategicPloysDisplay('p2');
+    
+    // CORRECCIÓN: Actualizar ardides para los 4 jugadores
+    ['p1', 'p2', 'p3', 'p4'].forEach(p => updateActiveStrategicPloysDisplay(p));
+    
     validateAllScores();
     saveGameState();
 }
@@ -642,53 +636,68 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
 }
 
 function calculateKillOpAsymmetric() {
-    let players = [];
-    
-    // Recolectar dinámicamente solo los jugadores presentes en el DOM
+    let teamsData = {};
+
+    // 1. Recolectar a los jugadores presentes y agrupar sus bajas por Alianza (Equipo)
     ['p1', 'p2', 'p3', 'p4'].forEach(p => {
         const killEl = document.getElementById(`${p}-kills-current-tp`);
-        if (killEl) {
-            players.push({ id: p, kills: parseInt(killEl.innerText) || 0 });
+        const teamSelect = document.getElementById(`${p}-team`);
+
+        if (killEl && teamSelect) {
+            let teamId = teamSelect.value;
+            let kills = parseInt(killEl.innerText) || 0;
+
+            if (!teamsData[teamId]) {
+                teamsData[teamId] = { id: teamId, kills: 0, players: [] };
+            }
+            teamsData[teamId].kills += kills;
+            teamsData[teamId].players.push(p);
         }
     });
 
-    if(players.length === 0) return;
+    // Convertir a un arreglo para su ordenamiento
+    let teamsArray = Object.values(teamsData);
+    if(teamsArray.length === 0) return;
 
-    // Ordenar descendente por cantidad de bajas
-    players.sort((a, b) => b.kills - a.kills);
+    // 2. Ordenar descendente por cantidad de bajas TOTALES del equipo
+    teamsArray.sort((a, b) => b.kills - a.kills);
 
     let currentRank = 1;
 
-    // Asignación de PV basada en Standard Competition Ranking
-    for (let i = 0; i < players.length; i++) {
+    // 3. Asignación de PV basada en Standard Competition Ranking por EQUIPO
+    for (let i = 0; i < teamsArray.length; i++) {
         // Regla: 0 bajas = 0 puntos (se ignoran)
-        if (players[i].kills === 0) {
-            players[i].vp = 0;
+        if (teamsArray[i].kills === 0) {
+            teamsArray[i].vp = 0;
             continue;
         }
 
-        if (i > 0 && players[i].kills < players[i - 1].kills) {
+        if (i > 0 && teamsArray[i].kills < teamsArray[i - 1].kills) {
             currentRank = i + 1;
         }
 
         if (currentRank === 1) {
-            players[i].vp = 2;
+            teamsArray[i].vp = 2;
         } else if (currentRank === 2) {
-            players[i].vp = 1;
+            teamsArray[i].vp = 1;
         } else {
-            players[i].vp = 0;
+            teamsArray[i].vp = 0;
         }
     }
 
-    // Actualizar estados y reiniciar el contador del TP actual
-    players.forEach(p => {
-        gameState[p.id].killOpVP += p.vp;
-        document.getElementById(`${p.id}-kills-current-tp`).innerText = '0';
-        document.getElementById(`${p.id}-killop-total`).innerText = gameState[p.id].killOpVP;
+    // 4. Distribuir el PV ganado a los tableros de todos los jugadores de ese equipo y reiniciar
+    teamsArray.forEach(team => {
+        team.players.forEach(p => {
+            if (gameState[p]) {
+                gameState[p].killOpVP += team.vp;
+                document.getElementById(`${p}-kills-current-tp`).innerText = '0';
+                document.getElementById(`${p}-killop-total`).innerText = gameState[p].killOpVP;
+            }
+        });
     });
 
     calculateTotals();
-    mostrarNotificacion("KillOp evaluada. Puntos asignados y contadores de TP reseteados.");
+    mostrarNotificacion("KillOp por Equipos evaluada. Puntos asignados y contadores de TP reseteados.");
 }
 
 // --- SISTEMA DE GESTIÓN Y SELECCIÓN DE EQUIPAMIENTO ---
@@ -815,7 +824,10 @@ function buildEquipmentCardInnerHtml(item) {
 
 function renderEquipmentSelectModal(playerPrefix) {
     const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
-    const playerName = document.querySelector(`.player-${playerPrefix === 'p1' ? '1' : '2'} .name-input`).value.trim() || (playerPrefix === 'p1' ? 'Jugador 1' : 'Jugador 2');
+    
+    const playerNum = playerPrefix.replace('p', '');
+    const playerName = document.querySelector(`.player-${playerNum} .name-input`).value.trim() || `Jugador ${playerNum}`;
+    
     const factionName = factionTranslations[factionKey] || factionKey;
     const currentEquipList = getPlayerEquipment(playerPrefix);
 
@@ -966,24 +978,35 @@ function toggleEquipmentSelection(playerPrefix, equipId) {
 function syncEquipSectionsHeight() {
     const c1 = document.getElementById('p1-selected-equipment-container');
     const c2 = document.getElementById('p2-selected-equipment-container');
-    if (!c1 || !c2) return;
+    const c3 = document.getElementById('p3-selected-equipment-container');
+    const c4 = document.getElementById('p4-selected-equipment-container');
+    
+    if (!c1 || !c2 || !c3 || !c4) return;
 
     if (window.innerWidth < 768) {
         c1.style.minHeight = 'auto';
         c2.style.minHeight = 'auto';
+        c3.style.minHeight = 'auto';
+        c4.style.minHeight = 'auto';
         return;
     }
 
     c1.style.minHeight = 'auto';
     c2.style.minHeight = 'auto';
+    c3.style.minHeight = 'auto';
+    c4.style.minHeight = 'auto';
 
     requestAnimationFrame(() => {
         const h1 = c1.scrollHeight || c1.offsetHeight;
         const h2 = c2.scrollHeight || c2.offsetHeight;
-        const maxH = Math.max(h1, h2, 44);
+        const h3 = c3.scrollHeight || c3.offsetHeight;
+        const h4 = c4.scrollHeight || c4.offsetHeight;
+        const maxH = Math.max(h1, h2, h3, h4, 44);
 
         c1.style.minHeight = `${maxH}px`;
         c2.style.minHeight = `${maxH}px`;
+        c3.style.minHeight = `${maxH}px`;
+        c4.style.minHeight = `${maxH}px`;
     });
 }
 
@@ -1012,6 +1035,13 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
     }
 
     let html = '';
+    
+    // CORRECCIÓN: Determinar el color dinámico según el jugador
+    let colorClass = 'primary';
+    if (playerPrefix === 'p2') colorClass = 'danger';
+    if (playerPrefix === 'p3') colorClass = 'success';
+    if (playerPrefix === 'p4') colorClass = 'warning';
+
     list.forEach(equipId => {
         const item = dataEquipment.find(e => e.id_equip === equipId);
         if (!item) return;
@@ -1022,14 +1052,14 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
 
         html += `
                 <!-- Indexador: Equipamiento Helper v1.0 -->
-                    <div class="active-equip-card p-2 bg-white rounded border ${playerPrefix === 'p1' ? 'border-primary' : 'border-danger'} border-opacity-50 shadow-sm">
+                    <div class="active-equip-card p-2 bg-white rounded border border-${colorClass} border-opacity-50 shadow-sm">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center gap-1 overflow-hidden">
                                 <button type="button" class="btn btn-outline-danger btn-sm py-0 px-1 border-0" 
                                     onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})" title="Quitar equipamiento">
                                     <i class="bi bi-x-circle-fill"></i>
                                 </button>
-                                <span class="badge ${isUniversal ? 'bg-secondary' : (playerPrefix === 'p1' ? 'bg-primary' : 'bg-danger')} text-white" style="font-size: 0.7rem;">
+                                <span class="badge ${isUniversal ? 'bg-secondary' : `bg-${colorClass}`} text-white" style="font-size: 0.7rem;">
                                     ${isUniversal ? 'Universal' : 'Facción'}
                                 </span>
                                 <span class="fw-bold text-dark small text-truncate" style="font-size: 1rem;" title="${item.name}">${item.name}</span>
@@ -1078,9 +1108,9 @@ function showEquipmentDetails(equipId) {
     modal.show();
 }
 
-// 4. (Opcional pero recomendado) Función de validación masiva si el usuario cambia de turno hacia atrás
+// 4. Función de validación masiva si el usuario cambia de turno hacia atrás
 function validateAllScores() {
-    ['p1', 'p2'].forEach(playerPrefix => {
+    ['p1', 'p2', 'p3', 'p4'].forEach(playerPrefix => {
         let currentTurn = getCurrentTurn();
 
         // Revisar CritOp
@@ -1090,14 +1120,7 @@ function validateAllScores() {
             let limit = calculateDynamicLimit('crit', critKey, currentTurn);
             if (parseInt(critEl.innerText) > limit) critEl.innerText = limit;
         }
-
-        // Revisar TacOp
-        let tacEl = document.getElementById(`${playerPrefix}-tac-vp`);
-        let tacKey = document.getElementById(`${playerPrefix}-tacop`)?.value;
-        if (tacEl && tacKey) {
-            let limit = calculateDynamicLimit('tac', tacKey, currentTurn);
-            if (parseInt(tacEl.innerText) > limit) tacEl.innerText = limit;
-        }
+        
     });
     calculateTotals();
 }
@@ -1606,7 +1629,9 @@ function saveGameState() {
         tp: document.querySelector('input[name="tpRadio"]:checked').id,
         internalGameState: gameState,
         p1: getPlayerState('p1'),
-        p2: getPlayerState('p2')
+        p2: getPlayerState('p2'),
+        p3: getPlayerState('p3'),
+        p4: getPlayerState('p4')
     };
 
     // Guardamos todo en formato JSON en el navegador
@@ -1614,16 +1639,16 @@ function saveGameState() {
 }
 
 function getPlayerState(p) {
-    
-    const playerClass = p === 'p1' ? '1' : '2';
+    // Extracción dinámica para soportar p1, p2, p3, p4
+    const playerClass = p.replace('p', ''); 
 
     return {
-        name: document.querySelector(`.player-${playerClass} .name-input`).value,
-        faction: document.getElementById(`${p}-faction`).value,
-        // Detectamos el estado de la TacOp leyendo la interfaz visual
-        cp: document.getElementById(`${p}-cp`).innerText,
-        critVp: document.getElementById(`${p}-crit-vp`).innerText,
-        killsCurrentTP: document.getElementById(`${p}-kills-current-tp`).innerText,
+        name: document.querySelector(`.player-${playerClass} .name-input`)?.value || "",
+        faction: document.getElementById(`${p}-faction`)?.value || "",
+        team: document.getElementById(`${p}-team`)?.value || "A", // Leemos el equipo
+        cp: document.getElementById(`${p}-cp`)?.innerText || "2",
+        critVp: document.getElementById(`${p}-crit-vp`)?.innerText || "0",
+        killsCurrentTP: document.getElementById(`${p}-kills-current-tp`)?.innerText || "0",
         killOpVP: gameState[p].killOpVP,
         strategicPloys: (gameState[p] && gameState[p].strategicPloys) ? gameState[p].strategicPloys : { 1: [], 2: [], 3: [], 4: [] },
         equipment: getPlayerEquipment(p)
@@ -1636,7 +1661,7 @@ function loadGameState() {
     if (!savedStateStr) return;
 
     try {
-        gameState.loading = true; // <-- NUEVO: Encender bandera antes de tocar el DOM
+        gameState.loading = true; 
         const state = JSON.parse(savedStateStr);
 
         // 1. Restaurar Globals
@@ -1645,52 +1670,28 @@ function loadGameState() {
 
         if (state.killzone) {
             document.getElementById('killzoneSelect').value = state.killzone;
-            updateMapOptions(); // CRÍTICO: Reconstruye el DOM del selector de mapas para la killzone restaurada
+            updateMapOptions(); 
         }
 
         if (state.map) {
             document.getElementById('mapSelect').value = state.map;
         }
 
-        // Conservar la propiedad loading al restaurar el estado interno
         if (state.internalGameState) {
             gameState = state.internalGameState;
             gameState.loading = true;
         }
 
-        // 2. Restaurar Jugadores
+        // 2. Restaurar Jugadores (AÑADIDOS P3 Y P4)
         restorePlayerState('p1', state.p1);
         restorePlayerState('p2', state.p2);
+        restorePlayerState('p3', state.p3);
+        restorePlayerState('p4', state.p4);
 
-        // 3. Restaurar Interfaz de Operaciones Primarias Secretas
-        if (gameState.revealed) {
-            document.getElementById('p1-btn-secret').classList.add('d-none');
-            document.getElementById('p2-btn-secret').classList.add('d-none');
-            document.getElementById('btn-reveal-global').classList.add('d-none');
-
-            const mapNames = { 'critop': 'Crit Op', 'tacop': 'Tac Op', 'killop': 'Kill Op' };
-
-            ['p1', 'p2'].forEach(p => {
-                let pBadge = document.getElementById(`${p}-revealed-primary`);
-                pBadge.innerText = mapNames[gameState[p].primary];
-                pBadge.classList.remove('d-none');
-                document.getElementById(`${p}-primary-bonus-display`).classList.remove('d-none');
-            });
-        } else {
-            ['p1', 'p2'].forEach(p => {
-                if (gameState[p] && gameState[p].primary) {
-                    const btn = document.getElementById(`${p}-btn-secret`);
-                    btn.classList.remove('btn-warning');
-                    btn.classList.add('btn-success');
-                    btn.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Fijada 🔒';
-                }
-            });
-        }
-
-        gameState.loading = false; // <-- NUEVO: Apagar bandera, la UI ya es estable y fiel al guardado
+        gameState.loading = false; 
         mostrarNotificacion("Partida cargada exitosamente.");
     } catch (e) {
-        gameState.loading = false; // <-- NUEVO: Asegurar apagado si el JSON está corrupto
+        gameState.loading = false; 
         console.error("Error cargando partida guardada:", e);
         localStorage.removeItem('killTeamMatchState');
     }
@@ -1699,40 +1700,49 @@ function loadGameState() {
 function restorePlayerState(p, pState) {
     if (!pState) return;
 
-    // 1. Solución Escalable: Extraemos el número directamente del prefijo ('p1' -> '1', 'p3' -> '3')
     const playerClass = p.replace('p', ''); 
     
     const nameInput = document.querySelector(`.player-${playerClass} .name-input`);
     if (nameInput) nameInput.value = pState.name || "";
 
-    // 2. Restaurar contadores estándar
+    // Restaurar Facción, su Imagen y el Botón de Reglas
+    if (pState.faction) {
+        const factionSelect = document.getElementById(`${p}-faction`);
+        if (factionSelect) factionSelect.value = pState.faction;
+        
+        const imgEl = document.getElementById(`${p}-faction-img`);
+        if (imgEl) imgEl.src = `./resources/facciones/${pState.faction}.png`;
+
+        const rulesBtn = document.getElementById(`${p}-btn-faction-rules`);
+        if (rulesBtn) rulesBtn.disabled = !pState.faction || !dataFactions[pState.faction];
+    }
+
+    // Restaurar Equipo en la Interfaz y en Memoria
+    const teamSelect = document.getElementById(`${p}-team`);
+    if (teamSelect) teamSelect.value = pState.team || "A";
+    if (!gameState[p]) {
+        gameState[p] = { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'A', killOpVP: 0 };
+    }
+    gameState[p].team = pState.team || "A";
+
     const cpEl = document.getElementById(`${p}-cp`);
     if (cpEl) cpEl.innerText = pState.cp || "2";
     
     const critEl = document.getElementById(`${p}-crit-vp`);
     if (critEl) critEl.innerText = pState.critVp || "0";
 
-    // 3. Restaurar nuevo sistema KillOp (TP actual y Total Acumulado)
     const killsTpEl = document.getElementById(`${p}-kills-current-tp`);
     if (killsTpEl) killsTpEl.innerText = pState.killsCurrentTP || "0";
-
-    // 4. Restaurar el objeto de estado en memoria (Limpiando residuos de Primary)
-    if (!gameState[p]) {
-        gameState[p] = { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: '', killOpVP: 0 };
-    }
     
-    // Inyectar el acumulado de KillOp guardado a la memoria RAM y al DOM
     gameState[p].killOpVP = pState.killOpVP || 0;
     const killTotalEl = document.getElementById(`${p}-killop-total`);
     if (killTotalEl) killTotalEl.innerText = gameState[p].killOpVP;
 
-    // Restaurar ardides estratégicos
     if (pState.strategicPloys) {
         gameState[p].strategicPloys = pState.strategicPloys;
     }
     updateActiveStrategicPloysDisplay(p);
 
-    // Restaurar equipamiento
     if (pState.equipment && Array.isArray(pState.equipment)) {
         gameState[p].equipment = pState.equipment;
     } else if (!gameState[p].equipment) {
@@ -1752,6 +1762,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.name-input').forEach(input => {
         input.addEventListener('blur', saveGameState);
+    });
+    // Persistir cambios en los selectores de equipo
+    document.querySelectorAll('select[id$="-team"]').forEach(select => {
+        select.addEventListener('change', saveGameState);
     });
 
     // NUEVO: Detectar cuando el usuario cambia manualmente el mapa para guardarlo

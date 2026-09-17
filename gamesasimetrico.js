@@ -2,6 +2,7 @@
 
 // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
 let gameState = {
+    playerCount: 4, // Control de modo de juego
     p1: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'A', killOpVP: 0 },
     p2: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'B', killOpVP: 0 },
     p3: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'C', killOpVP: 0 },
@@ -14,7 +15,7 @@ function showMatchResult() {
     let teams = {};
     
     // Recopilar totales previniendo la duplicación de la KillOp compartida
-    ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+    getActivePlayers().forEach(p => {
         const playerCard = document.querySelector(`.player-${p.replace('p', '')}`);
         if (playerCard) {
             let critScore = parseInt(document.getElementById(`${p}-crit-vp`)?.innerText) || 0;
@@ -141,8 +142,9 @@ function updateCounter(elementId, amount, max = 99) {
         }
     }
 }
+
 function calculateTotals() {
-    ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+    getActivePlayers().forEach(p => {
         if (gameState[p]) {
             let crit = parseInt(document.getElementById(`${p}-crit-vp`)?.innerText) || 0;
             let kill = gameState[p].killOpVP || 0;
@@ -154,6 +156,13 @@ function calculateTotals() {
             if (totalEl) totalEl.innerText = grandTotal;
         }
     });
+    
+    // Garantizar que si el J4 está inactivo, su total visual quede en 0
+    if (gameState.playerCount === 3) {
+        const p4TotalEl = document.getElementById('p4-total-vp');
+        if (p4TotalEl) p4TotalEl.innerText = "0";
+    }
+    
     saveGameState();
 }
 
@@ -639,7 +648,7 @@ function calculateKillOpAsymmetric() {
     let teamsData = {};
 
     // 1. Recolectar a los jugadores presentes y agrupar sus bajas por Alianza (Equipo)
-    ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+    getActivePlayers().forEach(p => {
         const killEl = document.getElementById(`${p}-kills-current-tp`);
         const teamSelect = document.getElementById(`${p}-team`);
 
@@ -1616,13 +1625,14 @@ function showTacOpDetails(playerPrefix) {
 
 function saveGameState() {
 
-    // NUEVO: Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardamos estados corruptos
+    // Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardamos estados corruptos
     if (gameState.loading || Object.keys(dataFactions).length === 0) return;
 
     // Si los datos aún no cargan de los JSON, no guardamos estados vacíos
     if (Object.keys(dataFactions).length === 0) return;
 
     const state = {
+        playerCount: gameState.playerCount,
         globalCritOp: document.getElementById('global-critop') ? document.getElementById('global-critop').value : "",
         killzone: document.getElementById('killzoneSelect') ? document.getElementById('killzoneSelect').value : "",
         map: document.getElementById('mapSelect') ? document.getElementById('mapSelect').value : "",
@@ -1666,6 +1676,14 @@ function loadGameState() {
 
         // 1. Restaurar Globals
         if (state.globalCritOp) document.getElementById('global-critop').value = state.globalCritOp;
+        
+        if (state.playerCount) {
+            gameState.playerCount = state.playerCount;
+            const radioBtn = document.getElementById(`mode${state.playerCount}p`);
+            if (radioBtn) radioBtn.checked = true;
+            togglePlayerMode(state.playerCount, false);
+        }
+        
         if (state.tp) document.getElementById(state.tp).checked = true;
 
         if (state.killzone) {
@@ -2028,4 +2046,29 @@ function showTerrainModal() {
     document.getElementById('terrainModalBody').innerHTML = html;
     const modal = new bootstrap.Modal(document.getElementById('terrainViewModal'));
     modal.show();
+}
+
+function getActivePlayers() {
+    return gameState.playerCount === 3 ? ['p1', 'p2', 'p3'] : ['p1', 'p2', 'p3', 'p4'];
+}
+
+function togglePlayerMode(count, shouldSave = true) {
+    gameState.playerCount = count;
+    const p4Container = document.getElementById('p4-container');
+    
+    if (p4Container) {
+        if (count === 3) {
+            p4Container.classList.add('d-none');
+            // Purgar los puntos del Jugador 4 para que no afecten los totales si se ocultó a mitad de partida
+            if (gameState.p4) gameState.p4.killOpVP = 0;
+            const critVpEl = document.getElementById('p4-crit-vp');
+            const killsTpEl = document.getElementById('p4-kills-current-tp');
+            if (critVpEl) critVpEl.innerText = "0";
+            if (killsTpEl) killsTpEl.innerText = "0";
+        } else {
+            p4Container.classList.remove('d-none');
+        }
+    }
+    
+    if (shouldSave) saveGameState();
 }

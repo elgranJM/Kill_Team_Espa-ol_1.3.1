@@ -30,13 +30,17 @@
             border-color: #dc3545;
         }
 
-        .player-3 { 
-            border-color: #198754; 
-        } /* Verde Bootstrap */
+        .player-3 {
+            border-color: #198754;
+        }
 
-        .player-4 { 
-            border-color: #ffc107; 
-        } /* Amarillo Bootstrap */
+        /* Verde Bootstrap */
+
+        .player-4 {
+            border-color: #ffc107;
+        }
+
+        /* Amarillo Bootstrap */
 
         .name-input {
             font-size: 1.5rem;
@@ -381,6 +385,23 @@
                                 onclick="randomizeMap()" title="Mapa al Azar" disabled>
                                 <i class="bi bi-dice-5-fill"></i>
                             </button>
+                        </div>
+
+                        <!-- Selector de Cantidad de Jugadores -->
+                        <div class="input-group mt-3 shadow-sm">
+                            <span class="input-group-text bg-dark text-white border-dark fw-bold"
+                                style="min-width: 110px;">
+                                <i class="bi bi-people-fill me-1"></i> Jugadores
+                            </span>
+                            <div class="btn-group flex-grow-1" role="group">
+                                <input type="radio" class="btn-check" name="playerCountRadio" id="mode3p"
+                                    autocomplete="off" checked onchange="togglePlayerMode(3)">
+                                <label class="btn btn-outline-dark fw-bold" for="mode3p">3 Jugadores</label>
+
+                                <input type="radio" class="btn-check" name="playerCountRadio" id="mode4p"
+                                    autocomplete="off" onchange="togglePlayerMode(4)">
+                                <label class="btn btn-outline-dark fw-bold" for="mode4p">4 Jugadores</label>
+                            </div>
                         </div>
 
                     </div>
@@ -917,7 +938,7 @@
                     </div>
 
                     <!-- ==================== JUGADOR 4 ==================== -->
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6" id="p4-container">
                         <div class="bg-white p-4 rounded shadow-sm player-card player-4 h-100">
 
                             <div class="d-flex align-items-center justify-content-center mb-3 flex-wrap">
@@ -1023,7 +1044,8 @@
                             <!-- Crit Op -->
                             <div class="op-section border-warning">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <span class="fw-bold text-dark"><i class="bi bi-crosshair text-warning me-2"></i>Crit
+                                    <span class="fw-bold text-dark"><i
+                                            class="bi bi-crosshair text-warning me-2"></i>Crit
                                         Op (Máx 6)</span>
                                     <div class="d-flex align-items-center">
                                         <button class="btn btn-outline-danger counter-btn"

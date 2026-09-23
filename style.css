@@ -41,9 +41,32 @@
 
 /* Sobrescribir el color azul predeterminado de Bootstrap para las nav-pills activas */
 .nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-    background-color: #ff7f00 !important; 
+.nav-pills .show>.nav-link {
+    background-color: #ff7f00 !important;
     color: #ffffff !important;
+}
+
+.bg-dark-soft {
+    background-color: #343a40 !important;
+}
+
+.icon-yes,
+.icon-no {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.icon-yes {
+    background-image: url('resources/game_rules_files/yes.svg');
+}
+
+.icon-no {
+    background-image: url('resources/game_rules_files/no.svg');
 }
 
 .shape-badge {

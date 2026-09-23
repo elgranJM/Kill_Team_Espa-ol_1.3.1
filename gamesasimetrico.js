@@ -71,12 +71,15 @@ function resetGame() {
 
 // Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal de reinicio
 function executeResetGame() {
+    // Mapeo de equipos por defecto (Todos contra todos)
+    const defaultTeams = { 'p1': 'A', 'p2': 'B', 'p3': 'C', 'p4': 'D' };
+
     // 1. Reset de Estado Lógico Interno para los 4
     ['p1', 'p2', 'p3', 'p4'].forEach(p => {
         gameState[p] = { 
             strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, 
             equipment: [], 
-            team: document.getElementById(`${p}-team`)?.value || 'A', 
+            team: defaultTeams[p], // Asignar el equipo por defecto
             killOpVP: 0 
         };
     });
@@ -100,6 +103,10 @@ function executeResetGame() {
 
         const rulesBtn = document.getElementById(`${p}-btn-faction-rules`);
         if (rulesBtn) rulesBtn.disabled = true;
+
+        // Resetear el selector de equipos en el DOM
+        const teamSelect = document.getElementById(`${p}-team`);
+        if (teamSelect) teamSelect.value = defaultTeams[p];
         
         const idsToReset = [`${p}-crit-vp`, `${p}-kills-current-tp`, `${p}-killop-total`];
         idsToReset.forEach(id => {

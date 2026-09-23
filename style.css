@@ -1,6 +1,93 @@
-/* Add these new styles to the end of your style.css file */
+/* CSS */
+.btn-naranja {
+    background-color: #ff7f00;
+    /* Tu tono naranja */
+    border-color: #e67300;
+    color: #fff;
+}
 
-#year-select {
+.btn-naranja:hover,
+.btn-naranja:focus {
+    background-color: #e67300;
+    border-color: #cc6600;
+    color: #fff;
+}
+
+.text-naranja {
+    color: #ff7f00 !important;
+}
+
+/* Estilo Outline Naranja */
+.btn-outline-naranja {
+    color: #ff7f00;
+    border-color: #ff7f00;
+    background-color: transparent;
+}
+
+.btn-outline-naranja:hover,
+.btn-outline-naranja:focus {
+    background-color: #ff7f00;
+    border-color: #ff7f00;
+    color: #fff;
+    /* El texto se vuelve blanco al rellenarse */
+}
+
+.btn-outline-naranja:active,
+.btn-outline-naranja.active {
+    background-color: #e67300;
+    border-color: #e67300;
+    color: #fff;
+}
+
+/* Sobrescribir el color azul predeterminado de Bootstrap para las nav-pills activas */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #ff7f00 !important; 
+    color: #ffffff !important;
+}
+
+.shape-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.table-attributes th {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+.table-attributes td {
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #1e1e24 0%, #0a0a0c 100%);
+    color: #ffffff;
+    padding: 4rem 2rem;
+    border-bottom: 4px solid #dc4d0c;
+}
+
+.feature-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    color: #dc4d0c;
     margin-bottom: 1rem;
 }
 

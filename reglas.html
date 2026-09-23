@@ -13,30 +13,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .shape-badge {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 2rem;
-            height: 2rem;
-            font-size: 1rem;
-            margin-right: 0.5rem;
-        }
-
-        .table-attributes th {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-        }
-
-        .table-attributes td {
-            text-align: center;
-            font-weight: bold;
-            vertical-align: middle;
-        }
-    </style>
+    
 </head>
 
 <body class="bg-light">
@@ -108,7 +85,7 @@
 
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 border-bottom">
-                    <h1 class="h2 text-primary"><i class="bi bi-book-half me-3"></i>Reglas de Juego</h1>
+                    <h1 class="h2 text-naranja"><i class="bi bi-book-half me-3"></i>Reglas de Juego</h1>
                     <p class="text-muted mb-0 d-none d-md-block">Manual de Referencia Completo</p>
                 </div>
 
@@ -154,7 +131,7 @@
                             <div class="accordion" id="rulesAccordion">
                                 <!-- Título de Sección -->
                                 <div class="rule-section">
-                                    <h3 class="mb-3 text-dark fw-bold border-start border-5 border-primary ps-3">1.
+                                    <h3 class="mb-3 text-dark fw-bold border-start border-5 border-naranja ps-3">1.
                                         Principios Básicos</h3>
                                     <div class="accordion" id="rulesAccordion">
                                     </div>
@@ -166,7 +143,7 @@
                                         <button class="accordion-button fw-bold text-dark fs-5" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseMedicion"
                                             aria-expanded="true" aria-controls="collapseMedicion">
-                                            <i class="bi bi-ruler text-primary me-3"></i> 1.1 Medición y Tiradas de
+                                            <i class="bi bi-ruler text-naranja me-3"></i> 1.1 Medición y Tiradas de
                                             Dados
                                         </button>
                                     </h2>
@@ -610,7 +587,7 @@
                                             <div class="card h-100 border-0 shadow-sm bg-light">
                                                 <div class="card-body">
                                                     <div class="h6 fw-bold text-dark mb-2"><i
-                                                            class="bi bi-radar me-2 text-primary"></i>Reacción</div>
+                                                            class="bi bi-radar me-2 text-naranja"></i>Reacción</div>
                                                     <p class="card-text small mb-0">Si todos tus agentes están usados
                                                         pero los
                                                         de tu oponente no, cuando te tocase activar un agente, elige un
@@ -648,7 +625,7 @@
                                             <div class="card h-100 border-0 shadow-sm bg-light">
                                                 <div class="card-body">
                                                     <div class="h6 fw-bold text-dark mb-2"><i
-                                                            class="bi bi-radar me-2 text-primary"></i>Zona de Control
+                                                            class="bi bi-radar me-2 text-naranja"></i>Zona de Control
                                                     </div>
                                                     <p class="card-text small mb-0">La Zona de Control es el área de
                                                         amenaza
@@ -713,7 +690,7 @@
                                                     </ul>
                                                     <div
                                                         class="alert alert-secondary py-2 mb-3 small border-0 shadow-sm">
-                                                        <i class="bi bi-info-circle me-1 text-primary"></i>
+                                                        <i class="bi bi-info-circle me-1 text-naranja"></i>
                                                         <em><strong>Regla de
                                                                 Cobertura:</strong> Un agente está a cubierto si hay
                                                             terreno
@@ -765,7 +742,7 @@
                                                         cuerpo con uno de tus propios agentes.</p>
                                                     <div
                                                         class="alert alert-secondary py-2 mb-3 small border-0 shadow-sm">
-                                                        <i class="bi bi-info-circle me-1 text-primary"></i>
+                                                        <i class="bi bi-info-circle me-1 text-naranja"></i>
                                                         <em><strong>Situación de 3 o más jugadores:</strong> en caso de
                                                             haber 3
                                                             jugadores o más, y el agente activo se encuentra eligiendo
@@ -826,7 +803,7 @@
                                             </p>
 
                                             <div class="alert alert-secondary py-2 mb-3 small border-0 shadow-sm">
-                                                <i class="bi bi-info-circle me-1 text-primary"></i>
+                                                <i class="bi bi-info-circle me-1 text-naranja"></i>
                                                 <em><strong>Excepción (Asomarse):</strong> Si el objetivo está a 1" o
                                                     menos del terreno pesado que bloquea la visión, cuenta como si
                                                     estuviera asomado o interactuando con el terreno, por lo que
@@ -1946,11 +1923,11 @@
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Configuración de Capítulos para las armas
             const chapterTitles = {
-                "precision": { title: "1. Modificadores de Precisión", icon: "bi-crosshair text-primary" },
-                "repeticion": { title: "2. Repeticiones de Dados", icon: "bi-arrow-clockwise text-primary" },
-                "antidefensa": { title: "3. Penetración y Anti-Defensa", icon: "bi-shield-slash text-primary" },
-                "dano-area": { title: "4. Daño Directo y Área de Efecto", icon: "bi-fire text-primary" },
-                "reglas-especiales": { title: "5. Restricciones y Reglas Especiales", icon: "bi-exclamation-octagon text-primary" }
+                "precision": { title: "1. Modificadores de Precisión", icon: "bi-crosshair text-naranja" },
+                "repeticion": { title: "2. Repeticiones de Dados", icon: "bi-arrow-clockwise text-naranja" },
+                "antidefensa": { title: "3. Penetración y Anti-Defensa", icon: "bi-shield-slash text-naranja" },
+                "dano-area": { title: "4. Daño Directo y Área de Efecto", icon: "bi-fire text-naranja" },
+                "reglas-especiales": { title: "5. Restricciones y Reglas Especiales", icon: "bi-exclamation-octagon text-naranja" }
             };
 
             // 2. Fetch de datos asíncrono
@@ -2078,7 +2055,7 @@
                     if (Array.isArray(kzData.rules) && kzData.rules.length > 0) {
                         rulesHtml = `
                             <div class="mb-4">
-                                <h4 class="text-primary border-bottom pb-1">
+                                <h4 class="text-naranja border-bottom pb-1">
                                     <i class="bi bi-book-half me-2"></i>Reglas Especiales
                                 </h4>
                                 <div class="row row-cols-1 g-3">

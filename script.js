@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         factionTacops: {},   // tacops.json (Mapeo Facción -> Arquetipos)
         generalTacops: {},   // tacopsgenerales.json (Detalle de las misiones)
         operatives: {},
-        equipment: []        // Inicializado como Array para la nueva estructura
+        equipment: []        // Inicializado como Array
     };
 
     // --- Nueva Categorización: Tipos de Facción ---
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const opName = opNameElement.textContent.toLowerCase();
                 const matchesSearch = opName.includes(searchTerm);
                 // Si tiene la clase de borde azul, está seleccionado
-                const isSelected = card.classList.contains('border-primary');
+                const isSelected = card.classList.contains('border-naranja');
 
                 // Lógica combinada: Coincide con texto Y (no está activo el switch O está seleccionado)
                 if (matchesSearch && (!showOnlySelected || isSelected)) {
@@ -763,8 +763,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Retorno del componente
             return `
         <div class="col-12 col-md-6 mb-4">
-            <div class="equipment-card h-100 shadow-sm border border-danger rounded overflow-hidden"> 
-                <div class="p-2 bg-danger text-white text-center">
+            <div class="equipment-card h-100 shadow-sm border border-dark rounded overflow-hidden"> 
+                <div class="p-2 bg-dark text-white text-center">
                     <h6 class="mb-0 fw-bold text-uppercase">${item.name}</h6>
                 </div>
                 <div class="p-3 bg-light text-dark">

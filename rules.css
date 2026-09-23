@@ -1,4 +1,8 @@
 /* Game Rules Section */
+:root {
+  --bs-primary: #fd7e14; /* Código hexadecimal del naranja de Bootstrap */
+  --bs-primary-rgb: 253, 126, 20;
+}
 
 #rules-search-input {
     margin-bottom: 1rem;

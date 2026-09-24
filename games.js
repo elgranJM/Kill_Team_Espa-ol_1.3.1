@@ -1,5 +1,4 @@
 
-
 // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
 let gameState = {
     p1: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] },

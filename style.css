@@ -886,11 +886,32 @@ body.dark-mode .tacop.card {
     border-bottom: 1px solid var(--bs-dark-orange);
     color: var(--bs-dark-orange);
 }
+/* Pestañas inactivas: texto e iconos claros sobre el fondo oscuro */
+#factionTabs .nav-link {
+    color: #ced4da;
+    border-color: transparent;
+}
+
+#factionTabs .nav-link:hover {
+    color: #ff7f00; /* Efecto hover en naranja táctico */
+}
+
+/* Pestaña ACTIVA: bloque blanco con letras e icono en negro puro */
+#factionTabs .nav-link.active {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #ffffff #ffffff #ffffff;
+}
 
 .crit-op[data-type="action"],
 .tacop,
 .unique-actions-section {
-    border: 1px solid var(--bs-orange) !important;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.tacop {
+    border: 1px solid var(--bs-) !important;
     border-radius: 5px;
     margin-bottom: 1rem;
 }

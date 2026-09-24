@@ -562,70 +562,73 @@ document.addEventListener('DOMContentLoaded', () => {
             const archData = archetypeConfig[op.archetype] || { color: '#666', icon: '', name: op.archetype };
 
             let specialImage = '';
-            if (op.name === 'Flanco' || key === 'Flanco') {
-                specialImage = `<div class="text-center"><img src="./resources/game_rules_files/flank_tacop-1.png" class="img-fluid mt-2 mb-2 rounded border" alt="Diagrama de Flanco" style="max-height:150px;"></div>`;
-            }
 
+            // Adaptado a la nueva estructura visual
             let additionalRulesHtml = '';
             if (op.additional_rules) {
                 if (Array.isArray(op.additional_rules)) {
-                    additionalRulesHtml = `<ul class="mb-2 ps-3 small text-muted">${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul>`;
+                    additionalRulesHtml = `<div class="victory-points mb-3"><div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2">Reglas Adicionales</div><ul class="mb-2 ps-3 small text-muted">${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul></div>`;
                 } else {
-                    additionalRulesHtml = `<div class="mb-2 small text-muted">${op.additional_rules}</div>`;
+                    additionalRulesHtml = `<div class="victory-points mb-3"><div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2">Reglas Adicionales</div><div class="mb-2 small text-muted">${op.additional_rules}</div></div>`;
                 }
             }
 
+            // Adaptado para extraer límites de puntuación como en tacops.html
             let vpHtml = '';
             if (op.victoy_points) {
                 if (Array.isArray(op.victoy_points)) {
-                    vpHtml = `<ul class="mb-0 ps-3">${op.victoy_points.map(vp => `<li>${vp}</li>`).join('')}</ul>`;
+                    const vpList = [...op.victoy_points];
+                    let limitText = '';
+                    if (vpList[vpList.length - 1] && vpList[vpList.length - 1].includes("No puedes obtener más de")) {
+                        limitText = `<p class="fst-italic text-danger small mt-2 mb-0">${vpList.pop()}</p>`;
+                    }
+                    vpHtml = `<ul class="text-start small mb-1 ps-3 text-muted">${vpList.map(vp => `<li>${vp}</li>`).join('')}</ul>${limitText}`;
                 } else {
-                    vpHtml = `<div>${op.victoy_points}</div>`;
+                    vpHtml = `<p class="small mb-0 text-start text-muted">${op.victoy_points}</p>`;
                 }
             }
 
+            // Adaptado a la tarjeta de acción única
             const missionAction = op.action_mission_name ? `
-                <div class="crit-op" data-type="action">
+                <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2">Acción de Misión</div>
+                <div class="unique-actions-section">
                     <div class="header">
                         <div>${op.action_mission_name}</div>
                         <div class="ap-box">${op.action_mission_cost}</div>
                     </div>
-                    <div class="content">
-                        ${op.action_mission_yes ? `
-                            <p>
-                                <span class="icon icon-yes"></span> 
-                                ${op.action_mission_yes}
-                            </p>` : ''}
-                        ${op.action_mission_no ? `
-                            <p>
-                                <span class="icon icon-no"></span> 
-                                ${op.action_mission_no}
-                            </p>` : ''}
+                    <div class="content small">
+                        ${op.action_mission_yes ? `<p><span class="icon icon-yes"></span> <span>${op.action_mission_yes}</span></p>` : ''}
+                        ${op.action_mission_no ? `<p><span class="icon icon-no"></span> <span>${op.action_mission_no}</span></p>` : ''}
                     </div>
                 </div>` : '';
-            return `
 
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 border-0 shadow-sm tacop-card">
-                    <div class="card-header text-white d-flex justify-content-between align-items-center" style="background-color: ${archData.color};">
-                        <span class="fw-bold">${op.name}</span>
-                        <img src="./resources/game_rules_files/${archData.icon}" width="24" style="filter: brightness(0) invert(1);">
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <div class="mb-2 small"><strong>Revelar:</strong> ${op.Reveal}</div>
-                        ${additionalRulesHtml}
-                        ${specialImage}
-                        ${missionAction}
-                        <div class="mt-auto pt-3 border-top">
-                            <strong class="text-primary">Puntos de Victoria:</strong>
-                            <div class="small">${vpHtml}</div>
+            // El bloque HTML literal idéntico a tacops.html (sin el icono de favoritos)
+            return `
+                <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container fade-in">
+                    <div class="tacop card shadow-sm h-100 ${op.archetype} border-0">
+                        <div class="archetype position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center" style="background-color: ${archData.color};">
+                            <img src="./resources/game_rules_files/${archData.icon}" class="svg-white" alt="Icono ${archData.name}" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
+                            <span>${archData.name.toUpperCase()}</span>
+                        </div>
+                        <div class="middle p-3 d-flex flex-column h-100 bg-light text-start">
+                            <h4 class="name fw-bold text-dark mb-3 text-center">${op.name}</h4>
+                            <div class="mission-container pt-0 flex-grow-1">
+                                <div class="victory-points mb-3">
+                                    <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2">Revelar</div>
+                                    <div class="small text-muted">${op.Reveal}</div>
+                                </div>
+                                ${additionalRulesHtml}
+                                ${specialImage}
+                                ${missionAction}
+                                <div class="victory-points mt-auto">
+                                    <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2">Puntos de Victoria</div>
+                                    <div class="small">${vpHtml}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-footer text-center py-1 text-white small" style="background-color: ${archData.color}; opacity: 0.9;">
-                        ${archData.name}
-                    </div>
                 </div>
-            </div>`;
+            `;
         }).join('');
 
         containers.tacops.innerHTML = `<div class="row justify-content-center">${html}</div>`;

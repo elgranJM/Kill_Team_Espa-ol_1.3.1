@@ -92,7 +92,7 @@
             </div>
 
             <!-- Main Content Area -->
-            <main class="col-12 px-md-4 py-4">
+            <main class="col-12 px-md-4 py-4 bg-dark">
 
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 border-bottom">
@@ -101,13 +101,14 @@
                 </div>
 
                 <!-- Selectores de Facción -->
-                <div class="bg-white p-4 rounded shadow-sm mb-4">
+                <div class="bg-white p-4 rounded shadow-sm mb-4 bg-dark-soft">
                     <div class="tab-pane fade show active" id="factions-pane" role="tabpanel">
-                        <h3>Reglas de Facción</h3>
+                        <h3 class="text-white">Reglas de Facción</h3>
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <!-- UPDATED: Selector changed from Year/Edition to Faction Type -->
-                                <label for="faction-type-select" class="form-label">Filtrar por Tipo de Facción:</label>
+                                <label for="faction-type-select" class="form-label text-light">Filtrar por Tipo de
+                                    Facción:</label>
                                 <select class="form-select" id="faction-type-select">
                                     <option value="" selected>Todas las facciones</option>
                                     <option value="Imperio">Imperio</option>
@@ -116,7 +117,7 @@
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <label for="faction-select" class="form-label">Seleccionar Comando:</label>
+                                <label for="faction-select" class="form-label text-light">Seleccionar Comando:</label>
                                 <select class="form-select" id="faction-select">
                                     <option selected>Elige un Comando...</option>
                                 </select>
@@ -127,35 +128,35 @@
                     <!-- Pestañas (Tabs) Internas de la Facción -->
                     <ul class="nav nav-tabs mb-4" id="factionTabs" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active fw-bold text-naranja" id="faction-info-tab"
-                                data-bs-toggle="tab" data-bs-target="#faction-info-pane" type="button" role="tab"
+                            <button class="nav-link active fw-bold" id="faction-info-tab" data-bs-toggle="tab"
+                                data-bs-target="#faction-info-pane" type="button" role="tab"
                                 aria-controls="faction-info-pane" aria-selected="true">
                                 <i class="bi bi-info-circle me-2"></i>Reglas de Facción
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link fw-bold text-dark" id="datacards-tab" data-bs-toggle="tab"
+                            <button class="nav-link fw-bold" id="datacards-tab" data-bs-toggle="tab"
                                 data-bs-target="#datacards-pane" type="button" role="tab" aria-controls="datacards-pane"
                                 aria-selected="false">
                                 <i class="bi bi-people-fill me-2"></i>Agentes
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link fw-bold text-dark" id="ploys-tab" data-bs-toggle="tab"
+                            <button class="nav-link fw-bold" id="ploys-tab" data-bs-toggle="tab"
                                 data-bs-target="#ploys-pane" type="button" role="tab" aria-controls="ploys-pane"
                                 aria-selected="false">
                                 <i class="bi bi-lightning-charge-fill me-2"></i>Ardides
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link fw-bold text-dark" id="equipment-tab" data-bs-toggle="tab"
+                            <button class="nav-link fw-bold" id="equipment-tab" data-bs-toggle="tab"
                                 data-bs-target="#equipment-pane" type="button" role="tab" aria-controls="equipment-pane"
                                 aria-selected="false">
                                 <i class="bi bi-tools me-2"></i>Equipamiento
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link fw-bold text-dark" id="faction-tacops-tab" data-bs-toggle="tab"
+                            <button class="nav-link fw-bold" id="faction-tacops-tab" data-bs-toggle="tab"
                                 data-bs-target="#faction-tacops-pane" type="button" role="tab"
                                 aria-controls="faction-tacops-pane" aria-selected="false">
                                 <i class="bi bi-bookmark-star-fill me-2"></i>TacOps
@@ -166,7 +167,7 @@
                     <!-- Contenido de las Pestañas -->
                     <div class="tab-content" id="factionTabsContent">
                         <!-- Reglas de Facción -->
-                        <div class="tab-pane fade show active bg-white p-4 rounded shadow-sm" id="faction-info-pane"
+                        <div class="tab-pane fade show active bg-secondary p-4 rounded shadow-sm" id="faction-info-pane"
                             role="tabpanel" aria-labelledby="faction-info-tab">
                             <div class="text-center text-muted p-5">
                                 <i class="bi bi-arrow-up-circle fs-1 d-block mb-3"></i>
@@ -189,13 +190,13 @@
                                     <div class="form-check form-switch d-inline-block">
                                         <input class="form-check-input border-dark" type="checkbox" role="switch"
                                             id="filter-selected-switch">
-                                        <label class="form-check-label fw-bold text-dark"
+                                        <label class="form-check-label fw-bold text-white"
                                             for="filter-selected-switch">Solo seleccionados</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <div id="datacards-container" class="row justify-content-center g-3">
+                            <div id="datacards-container" class="row justify-content-center g-3 bg-secondary">
                                 <div class="col-12 text-center text-muted mt-5">
                                     <p>Selecciona un Comando en el menú superior para ver sus operativos.</p>
                                 </div>
@@ -207,19 +208,19 @@
                         </div>
 
                         <!-- Ardides (Ploys) -->
-                        <div class="tab-pane fade bg-white p-4 rounded shadow-sm" id="ploys-pane" role="tabpanel"
+                        <div class="tab-pane fade bg-secondary p-4 rounded shadow-sm" id="ploys-pane" role="tabpanel"
                             aria-labelledby="ploys-tab">
                             <!-- Los ardides se renderizan aquí -->
                         </div>
 
                         <!-- Equipamiento -->
-                        <div class="tab-pane fade bg-white p-4 rounded shadow-sm" id="equipment-pane" role="tabpanel"
+                        <div class="tab-pane fade bg-secondary p-4 rounded shadow-sm" id="equipment-pane" role="tabpanel"
                             aria-labelledby="equipment-tab">
                             <!-- El equipamiento se renderiza aquí -->
                         </div>
 
                         <!-- TacOps de Facción -->
-                        <div class="tab-pane fade bg-white p-4 rounded shadow-sm" id="faction-tacops-pane"
+                        <div class="tab-pane fade bg-secondary p-4 rounded shadow-sm" id="faction-tacops-pane"
                             role="tabpanel" aria-labelledby="faction-tacops-tab">
                             <!-- Las TacOps específicas se renderizan aquí -->
                         </div>

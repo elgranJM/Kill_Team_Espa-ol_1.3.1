@@ -46,7 +46,7 @@ body.dark-mode .timeline::before {
 /* Timeline content */
 .timeline-content {
     margin-left: 60px;
-    background: #f8f9fa;
+    background: #a2a3a3;
     padding: 1.5rem;
     border-radius: 0.25rem;
 }

@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const opName = opNameElement.textContent.toLowerCase();
                 const matchesSearch = opName.includes(searchTerm);
                 // Si tiene la clase de borde azul, está seleccionado
-                const isSelected = card.classList.contains('border-naranja');
+                const isSelected = card.classList.contains('border-primary');
 
                 // Lógica combinada: Coincide con texto Y (no está activo el switch O está seleccionado)
                 if (matchesSearch && (!showOnlySelected || isSelected)) {
@@ -696,11 +696,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 descHtml = `<p>${item.description}</p>`;
             }
 
-            
+
             // Armas (si el arreglo 'weapon' existe y tiene elementos)
             let weaponHtml = '';
             if (item.weapon && item.weapon.length > 0) {
-                
+
                 // Mapeamos el arreglo de armas para generar múltiples filas <tr>
                 const rowsHtml = item.weapon.map(w => `
                     <tr>

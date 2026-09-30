@@ -467,28 +467,28 @@
   {
     "id_equip": 53,
     "faction": "deathwatch",
-    "name": "ESPOSAS DE BIODETECCIÓN SANCTUS-V",
-    "description": "Una vez durante la activación de cada agente DEATHWATCH amigo, antes o después de que realice una acción, si no está dentro del área de control de agentes enemigos puedes usar esta regla. Si lo haces, selecciona uno de los siguientes: <ul><li>Ese agente amigo recupera D3 heridas perdidas.</li></ul> <ul><li>Elimina cualquier cambio en el atributo de LPA de ese agente amigo.</li></ul> <ul><li>Elimina una de las siguientes fichas que tenga ese agente amigo (antes de que se resuelvan los efectos de activación de esa ficha, si es relevante): Fragmento de Neutrones, Veneno, Terrorquímica.</li></ul>"
+    "name": "Brazaletes de Bioescrutinio Sanctus-V",
+    "description": "Una vez durante la activación de cada agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo, antes o después de que realice una acción, si no se encuentra en la zona de control de agentes enemigos puedes usar esta regla. Si lo haces, elige una de las siguientes opciones: <ul><li>Ese agente amigo recupera hasta 1D3 heridas perdidas.</li><li>Retira cualesquiera cambios al atributo LPA de ese agente amigo.</li><li>Retira una de las siguientes fichas que tenga ese agente amigo (antes de que los efectos de activación de esa ficha se resuelvan, si ello es relevante): fragmento de neutrones, Veneno, Terrotoxinas.</li></ul>"
   },
   {
     "id_equip": 54,
     "faction": "deathwatch",
-    "name": "SERVO-ESCLAVO ESCRUTADOR",
-    "description": "<p>Una vez por Punto de Inflexión, durante la activación de un agente DEATHWATCH amigo, puedes usar esta regla. Si lo haces, durante esa activación, ese agente puede realizar una acción de misión por 1 PA menos.</p> <p>Tener un agente enemigo dentro de su área de control no impide que ese agente amigo realice esa acción de misión. Sin embargo, después de hacerlo, tú y tu adversario tiráis un dado; si tu adversario gana, no puedes usar este equipamiento por el resto de la batalla.</p>"
+    "name": "Servosiervo Escrutavoro",
+    "description": "<p>Una vez por punto de inflexión, durante la activación de un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo, puedes usar esta regla. Si lo haces, durante dicha activación ese agente puede realizar una acción de misión por 1 PA menos.</p> <p>Tener a un agente enemigo en su zona de control no impide que ese agente amigo realice dicha acción de misión. En tal circunstancia, después de que lo haya hecho, tú y tu oponente debéis hacer una tirada de desempate. Si tu oponente la gana, no podrás usar esta pieza de equipo durante el resto de la batalla.</p>"
   },
   {
     "id_equip": 55,
     "faction": "deathwatch",
-    "name": "RESERVA DE MUNICIÓN",
-    "description": "Una vez por batalla, puedes usar la regla de facción Munición Especial para hasta dos acciones de <b>Disparar</b> durante un Punto de Inflexión, pero debes seleccionar diferentes reglas de arma para ambos usos. Esto tiene prioridad sobre las reglas normales de Munición Especial.", 
+    "name": "Reserva de Munición",
+    "description": "Una vez por batalla, puedes usar la regla de facción Munición especial para hasta dos acciones de <b>Disparar</b> durante un punto de inflexión, pero debes elegir reglas de armas distintas para ambos usos. Esto tiene preferencia sobre las reglas normales de Munición especial.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 56,
     "faction": "deathwatch",
-    "name": "ARMAS DIGITALES",
-    "description": "Una vez por Punto de Inflexión, cuando un agente DEATHWATCH amigo realice la acción de Combatir, al inicio del paso de Tirar Dados de Ataque puedes usar esta regla. Si lo haces, inflige 1 de daño al agente enemigo en esa secuencia.", 
+    "name": "Armas Digitales",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo realice una acción de <b>Combatir</b>, al inicio del paso de Tirar dados de ataque puedes usar esta regla. Si lo haces, inflige 1 daño al agente enemigo en esa secuencia.", 
     "weapon": [],
     "action": []
   },

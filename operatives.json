@@ -1659,7 +1659,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, LÍDER",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, LÍDER",
             "peana": "25"
         },
         {
@@ -1728,7 +1728,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, KELERMORFO",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, KELERMORFO",
             "peana": "32"
         },
         {
@@ -1765,7 +1765,7 @@
             "abilities": [
                 {
                     "name": "Espadachín experto",
-                    "description": "Este agente puede realizar dos acciones de <b>Combatir</b> durante su activación. Cada vez que este agente termina una acción de <b>Combatir</b>, si ya no está en la de zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso si ya ha realizado una acción de <b>Cargar</b> durante esa activación), pero no puede mover más de 3\" durante esa acción. Hacer eso no le impide realizar la acción de <b>Correr</b> más tarde durante esa activación."
+                    "description": "Este agente puede realizar dos acciones de <b>Combatir</b> durante su activación. Cada vez que este agente termina una acción de <b>Combatir</b>, si ya no está en la zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso si ya ha realizado una acción de <b>Cargar</b> durante esa activación), pero no puede mover más de 3\" durante esa acción. Hacer eso no le impide realizar la acción de <b>Correr</b> más tarde durante esa activación."
                 },
                 {
                     "name": "Golpe veloz",
@@ -1777,7 +1777,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, LOCUS",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, LOCUS",
             "peana": "32"
         },
         {
@@ -1824,7 +1824,7 @@
             "abilities": [],
             "uniqueActions": [
                 {
-                    "name": "Apuntar a punto débil",
+                    "name": "APUNTAR A PUNTO DÉBIL",
                     "cost": "1 PA",
                     "description": [
                         "Hasta el final de la activación de este agente, el perfil inmóvil de su rifle de francotirador de Sanctus tiene la regla de armas Letal 5+."
@@ -1832,7 +1832,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
                 {
-                    "name": "Familiar escrutaalmas",
+                    "name": "FAMILIAR ESCRUTAALMAS",
                     "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final de la batalla, o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), ese agente enemigo obtiene una de tus fichas de Escrutaalmas. Cuando este agente dispara contra un agente enemigo que tenga una de tus fichas de Escrutaalmas, todos los perfiles del rifle de francotirador de Sanctus de este agente tienen la regla de armas Saturación y ese agente enemigo no puede estar ofuscado."
@@ -1840,7 +1840,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, SANCTUS, FRANCOTIRADOR",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, SANCTUS, FRANCOTIRADOR",
             "peana": "32"
         },
         {
@@ -1867,20 +1867,20 @@
             "abilities": [
                 {
                     "name": "Sombra reptante",
-                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de ocultarse. Siempre que este agente realice la acción de <b>Combatir</b>, puede realizar inmediatamente una acción libre de <b>Correr</b> o <b>Retroceder</b> (con la segunda, no puede mover más de 3\"), incluso si ha realizado una acción que le impide realizar esas acciones."
+                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de <b>Ocultarse</b>. Siempre que este agente realice la acción de <b>Combatir</b>, puede realizar inmediatamente una acción libre de <b>Correr</b> o <b>Retroceder</b> (con la segunda, no puede mover más de 3\"), incluso si ha realizado una acción que le impide realizar esas acciones."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "Asesinar",
-                    "cost": "2 LPA",
+                    "name": "ASESINAR",
+                    "cost": "2 PA",
                     "description": [
                         "Elige un agente enemigo para el que este agente no sea visible. Realiza una acción libre de <b>Cargar</b> con este agente, pero que no exceda su atributo Movimiento (es decir, no le sumes 2\"), y debe terminar esa acción en la zona de control de ese agente enemigo. A continuación, realiza inmediatamente una acción libre de <b>Combatir</b> con este agente contra ese agente enemigo. La primera vez que golpees durante esa acción, puedes resolver inmediatamente otro de tus éxitos como un golpe (antes que tu oponente)."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de trabarse."
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de <b>Trabarse</b>."
                 },
                 {
-                    "name": "Familiar escrutaalmas",
+                    "name": "FAMILIAR ESCRUTAALMAS",
                     "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final de la batalla, o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), ese agente enemigo obtiene una de tus fichas de Escrutaalmas. Cuando este agente combate o contraataca contra un agente enemigo que tenga una de tus fichas de Escrutaalmas, su biodaga de Sanctus tiene las reglas de armas Brutal y Equilibrada."
@@ -1888,7 +1888,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, SANCTUS, ZARPA",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, SANCTUS, ZARPA",
             "peana": "32"
         },
         {
@@ -1922,7 +1922,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -1947,14 +1947,14 @@
                     "stats": {
                         "A": "3",
                         "HP/HA": "4+",
-                        "Dñ": "3/4",
+                        "Dñ": "2/3",
                         "RA": "-"
                     }
                 }
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, TIRADOR",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, TIRADOR",
             "peana": "25"
         },
         {
@@ -2016,6 +2016,16 @@
                         "Dñ": "4/4",
                         "RA": "Alcance 6\", Aturdidora, Críticos de penetración 1, Pesada (solo Correr)"
                     }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
                 }
             ],
             "abilities": [
@@ -2025,7 +2035,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, TIRADOR PESADO",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, TIRADOR PESADO",
             "peana": "32"
         },
         {
@@ -2076,11 +2086,11 @@
                 },
                 {
                     "name": "Derrocar a los opresores",
-                    "description": "Una vez por punto de inflexión, cuando un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado es incapacitado estando a 6\" o menos de este agente y visible para él, puede o bien realizar una acción libre de <b>Disparar</b> (puedes cambiar su orden para ello), o bien puedes usar un ardid de tiroteo Un plan gestado hace generaciones por 0PM si ese agente incapacitado es el agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo especificado. A continuación es retirado de la zona de aniquilación de forma normal."
+                    "description": "Una vez por punto de inflexión, cuando un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado es incapacitado estando a 6\" o menos de este agente y visible para él, puedes usar esta regla. Si lo haces, antes de retirar ese agente de la zona de aniquilación, puede o bien realizar una acción libre de <b>Disparar</b> (puedes cambiar su orden para ello), o bien puedes usar el ardid de tiroteo Un plan gestado hace generaciones por 0PM si ese agente incapacitado es el agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo especificado. A continuación es retirado de la zona de aniquilación de forma normal."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, PORTADOR DEL ICONO",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, PORTADOR DEL ICONO",
             "peana": "25"
         },
         {
@@ -2112,6 +2122,16 @@
                         "Dñ": "3/3",
                         "RA": "Alcance 6\""
                     }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
                 }
             ],
             "abilities": [
@@ -2121,7 +2141,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, COMBATIENTE",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, COMBATIENTE",
             "peana": "25"
         }
     ],

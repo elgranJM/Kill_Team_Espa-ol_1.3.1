@@ -2957,7 +2957,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Fuego Cruzado",
-        "description": "Siempre que un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo dispare contra un agente que otro agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo ya ha disparado durante este punto de inflexión, las armas a distancia de ese primer agente amigo tienen la regla de armas Certera 1.",
+        "description": "Cuando un agente <span class=\"faction\">FILOSIERPE</span> amigo dispare contra un agente contra el que otro agente <span class=\"faction\">FILOSIERPE</span> amigo ya haya disparado durante este punto de inflexión, las armas a distancia de ese primer agente amigo tienen la regla de armas Certera 1.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2965,8 +2965,8 @@
         "faction": "wyrmblade",
         "type": "strategic",
         "cps": "1PM",
-        "name": "El Día Está Cerca",
-        "description": "Siempre que un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo sea activado, si su orden se cambia de Ocultación a Trabarse, hasta el final de esa activación:\n<ul>\n\t<li>Sus armas a distancia tienen la regla de armas Desgarradora.</li>\n\t<li>Suma 1 al atributo de Atq de sus armas de combate (hasta un máximo de 5).</li>\n</ul>\n",
+        "name": "El Momento es Inminente",
+        "description": "Siempre que un agente <span class=\"faction\">FILOSIERPE</span> amigo sea activado, si su orden cambia de <b>Ocultarse</b> a <b>Trabarse</b>, hasta el final de dicha activación:\n<ul>\n\t<li>Sus armas a distancia tienen la regla de armas Desgarradora.</li>\n\t<li>Suma 1 al atributo Ataque de sus armas de combate (hasta un máximo de 5).</li>\n</ul>\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2974,8 +2974,8 @@
         "faction": "wyrmblade",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Uno Con Las Sombras",
-        "description": "Siempre que un agente dispare contra un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo que tenga una orden de Ocultación, si el terreno Ligero está interpuesto, ese agente amigo está ofuscado (a menos que el terreno Ligero interpuesto esté a 1\" de cualquiera de los agentes).",
+        "name": "Uno con las Sombras",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">FILOSIERPE</span> amigo que tenga una orden de <b>Ocultarse</b>, si hay terreno Ligero interpuesto, ese agente amigo está ofuscado (a menos que el terreno Ligero interpuesto esté a 1\" o menos de alguno de los dos agentes).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2983,8 +2983,8 @@
         "faction": "wyrmblade",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Desviar y Desaparecer",
-        "description": "Hasta tres agentes de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigos pueden realizar inmediatamente una acción gratuita de <b>Correr</b> o <b>Cargar</b> en un orden de tu elección (elige por separado para cada uno, y para la última, no puede moverse más de 3\"). Si un agente <b>AGENTE DEL CULTO</b> de la <span class=\"faction\">HOJA DE LA SIERPE</span> es seleccionado para este ardid, cuenta como dos agentes, y puede realizar una acción gratuita de <b>Retroceder</b> en su lugar (no puede moverse más de 3\"); si lo hace, resta 1 de su atributo de LPA hasta el final de su próxima activación.",
+        "name": "Distraer y Desvanecerse",
+        "description": "Hasta tres agentes <span class=\"faction\">FILOSIERPE</span> amigos pueden realizar inmediatamente una acción libre de <b>Correr</b> o <b>Cargar</b> en el orden que elijas (elige por separado para cada uno, y en el segundo caso, no puede mover más de 3\"). Si un agente <b>ACTIVO DEL CULTO</b> <span class=\"faction\">FILOSIERPE</span> es elegido para este ardid, cuenta como dos agentes, y puede realizar una acción libre de <b>Retroceder</b> en su lugar (pero no puede mover más de 3\"); si lo hace, resta 1 a su atributo LPA hasta el final de su siguiente activación.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2993,7 +2993,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Serpiente Enroscada",
-        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo dispare o combatiendo, después de tirar tus dados de ataque. Si la orden de ese agente amigo cambió de Ocultación a Trabarse al inicio de esa activación y esta es la primera vez que realiza la acción <b>Disparar</b> o <b>Combatir</b> durante esa activación, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar. Ten en cuenta que este ardid no puede entrar en efecto más de una vez por activación (no puedes usarlo durante la acción <b>Disparar</b> y <b>Combatir</b> en la misma activación).",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">FILOSIERPE</span> amigo dispare o combata, tras tirar tus dados de ataque. Si la orden de ese agente amigo ha cambiado de <b>Ocultarse</b> a <b>Trabarse</b> al inicio de esa activación y es la primera vez que realiza la acción de <b>Disparar</b> o <b>Combatir</b> durante esa activación, puedes guardar uno de tus éxitos normales como éxito crítico en su lugar. Ten en cuenta que este ardid no puede tener efecto más de una vez por activación (no puedes usarlo tanto en la acción de <b>Disparar</b> como en la de <b>Combatir</b> en la misma activación).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -3001,8 +3001,8 @@
         "faction": "wyrmblade",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Un Plan de Generaciones",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>NEÓFITO</b> de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo sea incapacitado. Puede realizar una acción de misión gratuita antes de ser retirado de la zona de aniquilación.",
+        "name": "Un Plan Gestado Hace Generaciones",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo resulte incapacitado. Puede realizar una acción libre de misión antes de ser retirado de la zona de aniquilación.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -3010,8 +3010,8 @@
         "faction": "wyrmblade",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Escabullirse en la Oscuridad",
-        "description": "Usa este ardid de tiroteo al final de la activación de un agente de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo. Si ese agente tiene una orden de Trabarse, cámbiala a Ocultación. No puedes usar este ardid para cada agente amigo más de una vez por batalla.\n",
+        "name": "Desvanecerse en la Oscuridad",
+        "description": "Usa este ardid de tiroteo al final de la activación de un agente <span class=\"faction\">FILOSIERPE</span> amigo. Si ese agente tiene una orden de <b>Trabarse</b>, cámbiala a <b>Ocultarse</b>. No puedes usar este ardid con cada agente amigo más de una vez por batalla.\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -3020,7 +3020,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Lealtad Incuestionable",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>AGENTE DEL CULTO</b> de la <span class=\"faction\">HOJA DE LA SIERPE</span> o <b>LÍDER</b> de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <b>NEÓFITO</b> de la <span class=\"faction\">HOJA DE LA SIERPE</span> amigo (excluyendo <b>LÍDER</b>) visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas <b>Estallido o Torrente</b>.</p>\n",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>ACTIVO DEL CULTO</b> <span class=\"faction\">FILOSIERPE</span> o <b>LÍDER</b> <span class=\"faction\">FILOSIERPE</span> sea tomado como blanco válido de una acción de <b>Disparar</b>, o sea elegido para combatir contra él durante una acción de <b>Combatir</b>. Elige un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo distinto (que no sea <b>LÍDER</b>), a 3\" o menos de ese primer agente amigo y visible para él, para ser tomado como blanco válido o para combatir en su lugar (según sea apropiado), incluso aunque normalmente no fuera válido para ello. Si la acción era de <b>Combatir</b>, se considerará que ese otro agente se encuentra en la zona de control del agente combatiente mientras dure esa acción. Si es la acción de <b>Disparar</b>, ese otro agente solo está a cubierto u ofuscado si el blanco original lo estaba.\n\n<p>Este ardid no tiene efecto si es una acción de <b>Disparar</b> y el arma a distancia tiene las reglas de armas <b>Área</b> o <b>Ráfaga</b>.</p>\n",
         "typename": "Ardid de Tiroteo"
     },
     {

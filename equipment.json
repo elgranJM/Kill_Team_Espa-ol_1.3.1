@@ -936,14 +936,14 @@
     "id_equip": 118,
     "faction": "wyrmblade",
     "name": "Cargas Explosivas",
-    "description": "Una vez por Punto de Inflexión, un agente WYRMBLADE NEOPHYTE amigo puede usar la siguiente arma a distancia:",
+    "description": "Una vez por punto de inflexión, un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo puede usar la siguiente arma a distancia:",
     "weapon": [
       {
-        "w_name": "Cargas Explosivas",
+        "w_name": "Carga explosiva",
         "ATK": "4",
         "HIT": "4+",
         "DMG": "3/5",
-        "rules": "-"
+        "rules": "Alcance 4\", Área 1\", Saturación"
       }
     ],
     "action": []
@@ -951,11 +951,11 @@
   {
     "id_equip": 119,
     "faction": "wyrmblade",
-    "name": "Cuchillos de Culto",
-    "description": "Los agentes WYRMBLADE NEOPHYTE amigos tienen la siguiente arma de combate:",
+    "name": "Cuchillos del Culto",
+    "description": "Los agentes <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigos tienen la siguiente arma de combate:",
     "weapon": [
       {
-        "w_name": "Cuchillos de Culto",
+        "w_name": "Cuchillo de culto",
         "ATK": "3",
         "HIT": "4+",
         "DMG": "3/4",
@@ -968,7 +968,7 @@
     "id_equip": 120,
     "faction": "wyrmblade",
     "name": "Reflectores",
-    "description": "Siempre que un agente WYRMBLADE amigo esté disparando, el objetivo no puede estar Ofuscado si es visible y está a 6\" o menos de un agente WYRMBLADE NEOPHYTE amigo que no esté dentro del área de control de agentes enemigos.", 
+    "description": "Siempre que un agente <span class=\"faction\">FILOSIERPE</span> amigo dispare, el blanco no puede estar ofuscado si está a 6\" o menos de un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo, es visible para él, y ese agente amigo no está en la zona de control de agentes enemigos.", 
     "weapon": [],
     "action": []
   },
@@ -976,7 +976,7 @@
     "id_equip": 121,
     "faction": "wyrmblade",
     "name": "Trampas Explosivas",
-    "description": "Este equipamiento te permite seleccionar dos minas (ver equipamiento universal). No puedes seleccionar también ese equipamiento de forma normal (es decir, para tener tres), y los agentes WYRMBLADE amigos son ignorados para los efectos de tus minas (es decir, no pueden activarlas ni recibir daño de ellas). Esto tiene prioridad sobre las reglas normales de minas.", 
+    "description": "Este equipo te permite elegir dos minas (ver equipo universal). No puedes elegir además ese equipo de forma normal (es decir, para tener tres), y los agentes <span class=\"faction\">FILOSIERPE</span> amigos ignoran sus efectos (no pueden activarlas ni sufrir daño causado por estas). Esto tiene preferencia sobre las reglas normales de las minas.", 
     "weapon": [],
     "action": []
   },

@@ -871,8 +871,8 @@
   {
     "id_equip": 110,
     "faction": "blooded",
-    "name": "Sigilo del Caos",
-    "description": "El ardid de tiroteo Recompensa Ganada te cuesta 0PM.", 
+    "name": "Sello del Caos",
+    "description": "El ardid de tiroteo Recompensa merecida te cuesta 0 PM.", 
     "weapon": [],
     "action": []
   },
@@ -880,7 +880,7 @@
     "id_equip": 111,
     "faction": "blooded",
     "name": "Trofeos Siniestros",
-    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra, o contraataque contra un agente BLOODED amigo que tenga una de tus fichas de Sangriento y esté a 2” o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.", 
+    "description": "Cuando un agente enemigo dispara, combate o contraataca contra un agente <span class=\"faction\">UNGIDO</span> amigo que tenga una de tus fichas de Ungido y se encuentre a 2\" o menos de él, tu oponente no puede repetir los resultados de 1 en sus dados de ataque.", 
     "weapon": [],
     "action": []
   },
@@ -888,15 +888,15 @@
     "id_equip": 112,
     "faction": "blooded",
     "name": "Símbolos de Adoración Sangrienta",
-    "description": "Siempre que un agente BLOODED amigo termine una acción, si no fue incapacitado pero infligió daño a cualquier agente enemigo durante esa acción, recupera 1 herida perdida.", 
+    "description": "Cada vez que un agente <span class=\"faction\">UNGIDO</span> amigo termina una acción, si durante esa acción no ha quedado incapacitado pero ha infligido daños a algún agente enemigo, recupera 1 herida perdida.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 113,
     "faction": "blooded",
-    "name": "Hojas Perversas",
-    "description": "Añade 1 a ambos atributos de Daño de la bayoneta, bayoneta y escudo, y hoja improvisada de cada agente BLOODED amigo para la batalla.", 
+    "name": "Cuchillas Viles",
+    "description": "Durante esta batalla, suma 1 a ambos atributos de Daño de cada bayoneta, bayoneta y escudo, y hoja improvisada de los agentes <span class=\"faction\">UNGIDO</span> amigos.", 
     "weapon": [],
     "action": []
   },

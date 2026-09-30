@@ -869,7 +869,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "POSICIONES DE FRANCOTIRADOR",
-        "description": "Siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo esté a más de 6\" de agentes enemigos <span class=\"text-warning-emphasis\">y a 1\" de terreno Pesado</span>, el perfil estacionario de su rifle (si tiene) tiene la regla de armas Silenciosa.",
+        "description": "Cuando un agente <span class=\"faction\">RÁTIDO</span> amigo esté a más de 6\" de agentes enemigos y esté a 1\" o menos de terreno Pesado, el perfil inmóvil de su rifle (si lo tiene) tiene la regla de arma Silenciosa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -877,8 +877,8 @@
         "faction": "ratling",
         "type": "strategic",
         "cps": "1PM",
-        "name": "DISPAROS CERTEROS",
-        "description": "Siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo dispare contra un agente enemigo a más de 6\" de él, si ese agente amigo no ha realizado la acción <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> durante la activación, o es un contraataque, su rifle (si tiene) tiene la regla de armas Equilibrada.",
+        "name": "TIRADORES EXPERTOS",
+        "description": "Cuando un agente <span class=\"faction\">RÁTIDO</span> amigo dispare a un agente enemigo a más de 6\" de él, si ese agente amigo no ha realizado la acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> durante la activación, o es un contraataque, su rifle (si lo tiene) tiene la regla de arma Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -886,8 +886,8 @@
         "faction": "ratling",
         "type": "strategic",
         "cps": "1PM",
-        "name": "ESCURRIDIZO",
-        "description": "Siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo (excluyendo <b>OGRYN</b> o <b>BULLGRYN</b>) tenga una orden de Ocultación y esté en cobertura, no puede ser seleccionado como un blanco válido, teniendo precedencia sobre todas las demás reglas (p. ej. terreno de Ventaja), excepto estar a 2\" o menos.",
+        "name": "ARTERO",
+        "description": "Cuando un agente <span class=\"faction\">RÁTIDO</span> amigo (salvo <b>OGRETE</b> o <b>TOROGRETE</b>) tenga una orden de <b>Ocultarse</b> y esté a cubierto, no se le podrá seleccionar como blanco válido, lo que tiene preferencia ante todas las demás reglas (p. ej. Buscadora, terreno Aventajado) excepto estar a 2\" o menos.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -895,8 +895,8 @@
         "faction": "ratling",
         "type": "strategic",
         "cps": "1PM",
-        "name": "ASALTO DE PRIMERA LÍNEA",
-        "description": "Siempre que un agente <b>BULLGRYN</b> <span class=\"faction\">RÁTIDO</span> amigo o <b>OGRYN</b> <span class=\"faction\">RÁTIDO</span> amigo dispare dentro de, combatiendo dentro de, o contraataque dentro del territorio de tu oponente o a 3\" de un marcador de objetivo, sus armas tienen la regla de armas Equilibrada.",
+        "name": "ASALTO DE VANGUARDIA",
+        "description": "Cuando un agente <b>TOROGRETE</b> <span class=\"faction\">RÁTIDO</span> amigo u <b>OGRETE</b> <span class=\"faction\">RÁTIDO</span> amigo dispare, combata o contraataque dentro del territorio de tu oponente o a 3\" o menos de un marcador de objetivo, sus armas tienen la regla de arma Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -904,8 +904,8 @@
         "faction": "ratling",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Instintos de Supervivencia",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo dispare o combatiendo a un agente <span class=\"faction\">RÁTIDO</span> amigo (excluyendo <b>OGRYN</b> o <b>BULLGRYN</b>) y estés asignando un dado para bloquear. Si es un éxito normal, puede bloquear un éxito crítico no resuelto; si es un éxito crítico, puede bloquear dos éxitos no resueltos (normales o críticos).",
+        "name": "INSTINTO DE SUPERVIVENCIA",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo dispare o combata contra un agente <span class=\"faction\">RÁTIDO</span> amigo (salvo <b>OGRETE</b> o <b>TOROGRETE</b>) y estés asignando un dado para bloquear. Si es un éxito normal, puede bloquear un éxito crítico no resuelto; si es un éxito crítico, puede bloquear dos éxitos no resueltos (normales o críticos).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -913,8 +913,8 @@
         "faction": "ratling",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Tiro Certero",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RÁTIDO</span> amigo esté realizando la acción <b>Disparar</b> con un rifle y estés seleccionando un blanco válido. Tener otros agentes <span class=\"faction\">RÁTIDO</span> amigos dentro del rango de control de un agente enemigo no impide que ese agente enemigo sea seleccionado.",
+        "name": "TIRADOR DE PRIMERA",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RÁTIDO</span> amigo realice la acción <b>Disparar</b> con un rifle y selecciones un blanco válido. Tener otros agentes <span class=\"faction\">RÁTIDO</span> amigos en la zona de control de un agente enemigo no impide que se pueda seleccionar a ese agente enemigo.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -922,8 +922,8 @@
         "faction": "ratling",
         "type": "tactical",
         "cps": "1PM",
-        "name": "LADRÓN",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">RÁTIDO</span> amigo (excluyendo <b>OGRYN</b> o <b>BULLGRYN</b>). Hasta el final de esa activación, ese agente no tiene que controlar un marcador para realizar la acción <b>Recoger Marcador</b> o acciones de misión que generalmente lo requieren (teniendo precedencia sobre las condiciones de esa acción — solo necesita disputar el marcador), y tener un agente enemigo dentro de su zona de control no le impide hacerlo.\n",
+        "name": "LATROCINIO",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">RÁTIDO</span> amigo (salvo <b>OGRETE</b> o <b>TOROGRETE</b>). Hasta el final de esa activación, ese agente no debe controlar un marcador para realizar las acciones de <b>Recoger marcador</b> o de misión que suelen requerir esta condición (tiene prioridad sobre las condiciones de esa acción, ya que solo necesita disputar el marcador), y tener un agente enemigo en su zona de control no le impide hacerlo.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -932,7 +932,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "DISPARAR Y ESCONDERSE",
-        "description": "Usa este ardid de tiroteo después de que un agente <span class=\"faction\">RÁTIDO</span> amigo que tiene una orden de Trabarse realice la acción <b>Disparar</b> con un rifle. Si está a más de 3\" de agentes enemigos, o no es visible para ningún agente enemigo, puedes cambiar su orden a <b>Ocultación</b>.\n\n\n\n\n\n",
+        "description": "Usa este ardid de tiroteo después de que un agente <span class=\"faction\">RÁTIDO</span> amigo que tenga una orden de <b>Trabarse</b> realice la acción de <b>Disparar</b> con un rifle. Si está a más de 3\" de los agentes enemigos, o no es visible para ningún agente enemigo, puedes cambiar su orden por <b>Ocultarse</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {

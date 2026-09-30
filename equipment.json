@@ -157,24 +157,24 @@
   {
     "id_equip": 17,
     "faction": "ratling",
-    "name": "Orbes de Santificación",
-    "description": "Al final del paso de Seleccionar agentes, lanza un D3. Si el resultado es: <ul><li>1. Pierdes 1PM.</li></ul> <ul><li>2. Ganas 1PM.</li></ul> <ul><li>3. Tu adversario pierde 1PM.</li></ul>", 
+    "name": "Artículos Robados",
+    "description": "Al final del paso de Elegir agentes, tira 1D3. Si el resultado es: <ul><li>1, pierdes 1PM.</li><li>2, ganas 1PM.</li><li>3, tu oponente pierde 1PM.</li></ul>", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 18,
     "faction": "ratling",
-    "name": "Raciones Hurtadas",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente <span class=\"faction\">RATIDOS</span> amigo esté disparando con un rifle y hayas lanzado tus dados de ataque, puedes usar esta regla si no has usado el equipamiento Ronda de la Suerte durante esta activación. Si lo haces, mejora el atributo de Impacto de su rifle en 1 hasta el final de esa secuencia.", 
+    "name": "Raciones Afanadas",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDO</span> amigo esté disparando con un rifle y hayas tirado tus dados de ataque, puedes usar esta regla si no has usado el equipo Bala de la Suerte durante esta activación. Si lo haces, mejora en 1 el atributo Impactar de su rifle hasta el final de esa secuencia.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 19,
     "faction": "ratling",
-    "name": "Ronda de la Suerte",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente <span class=\"faction\">RATIDOS</span> amigo esté disparando con un rifle y hayas lanzado tus dados de ataque, puedes usar esta regla si no has usado el equipamiento Raciones Hurtadas en esta activación. Si lo haces, esa arma tiene la regla de armas Severa para esa secuencia.", 
+    "name": "Bala de la Suerte",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDO</span> amigo dispare con un rifle y hayas tirado tus dados de ataque, puedes usar esta regla. Si lo haces, esa arma tiene la regla de arma Severa para esa secuencia.", 
     "weapon": [],
     "action": []
   },
@@ -182,7 +182,7 @@
     "id_equip": 20,
     "faction": "ratling",
     "name": "Armadura Improvisada",
-    "description": "Siempre que un agente esté disparando a un agente BULLGRYN <span class=\"faction\">RATIDOS</span> amigo o a un agente OGRYN <span class=\"faction\">RATIDOS</span> amigo, sus resultados de dados de defensa de 5+ son éxitos críticos.", 
+    "description": "Siempre que un agente dispare a un agente <b>TOROGRETE</b> <span class=\"faction\">RÁTIDO</span> amigo o a un agente <b>OGRETE</b> <span class=\"faction\">RÁTIDO</span> amigo, los resultados de los dados de defensa de 5+ son éxitos críticos.", 
     "weapon": [],
     "action": []
   },

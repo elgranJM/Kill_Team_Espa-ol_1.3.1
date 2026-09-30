@@ -6281,11 +6281,11 @@
         },
         {
           "name": "Designación de blanco",
-          "description": "<b>GAMBITO ESTRATÉGICO</b>. Selecciona un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDOS</span> amigo dispare a ese agente enemigo con un rifle, esa arma tiene la regla de arma Letal 5+."
+          "description": "<b>GAMBITO ESTRATÉGICO</b>. Selecciona un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDO</span> amigo dispare a ese agente enemigo con un rifle, esa arma tiene la regla de arma Letal 5+."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RÁTIDOS</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, CONSEGUIDOR",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, CONSEGUIDOR",
       "peana": "25"
     },
     {
@@ -6312,15 +6312,15 @@
       "abilities": [
         {
           "name": "Alerta temprana",
-          "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción en la que se mueva o se despliegue, puedes interrumpir esa activación o reacción y usar esta regla. Si lo haces, cada agente <span class=\"faction\">RÁTIDOS</span> amigo (salvo OGRETE y TOROGRETE) a 6\" o menos de este agente y a 2\" o menos de ese agente enemigo puede realizar una acción libre de <b>Correr</b> o una acción libre de <b>Retroceder</b>, pero no puede moverse más de 3\". En cualquier caso, cada uno no puede terminar ese movimiento a 2\" o menos de un agente enemigo a menos que no sea visible para ninguno de los agentes enemigos cuando termine ese movimiento."
+          "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción en la que se mueva o se despliegue, puedes interrumpir esa activación o reacción y usar esta regla. Si lo haces, cada agente <span class=\"faction\">RÁTIDO</span> amigo (salvo OGRETE y TOROGRETE) a 6\" o menos de este agente y a 2\" o menos de ese agente enemigo puede realizar una acción libre de <b>Correr</b> o una acción libre de <b>Retroceder</b>, pero no puede moverse más de 3\". En cualquier caso, cada uno no puede terminar ese movimiento a 2\" o menos de un agente enemigo a menos que no sea visible para ninguno de los agentes enemigos cuando termine ese movimiento (si esto no es posible para un agente, no puede moverse)."
         },
         {
           "name": "Bestia",
-          "description": "Este agente no puede realizar ninguna acción que no sea Carga, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b> y <b>Reposicionarse</b>. No puede usar armas que no figuren en su tarjeta de datos."
+          "description": "Este agente no puede realizar ninguna acción que no sea Carga, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b> y <b>Reposicionarse</b>. No puede usar armas que no figuren en su tarjeta de datos."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RÁTIDOS</span>, IMPERIUM, ASTRA MILITARUM, CHUCHO DE BATALLA",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, CHUCHO DE BATALLA",
       "peana": "25"
     },
     {
@@ -6434,7 +6434,7 @@
         },
         {
           "name": "Bruto",
-          "description": "Cuando tu oponente elija un blanco válido, si este agente tiene una orden de Ocultarse, no puede usar terreno Ligero como cobertura."
+          "description": "Cuando tu oponente elija un blanco válido, si este agente tiene una orden de Ocultarse, no puede usar terreno Ligero como cobertura. Si bien esto puede permitir que este agente se convierta en blanco (suponiendo que sea visible), no elimina su salvación de cobertura (si la tiene)."
         }
       ],
       "uniqueActions": [],
@@ -6545,7 +6545,7 @@
         },
         {
           "name": "Mina",
-          "description": "Las minas que selecciones del equipo universal infligen 2D3+3 de daño en su lugar, y los agentes <span class=\"faction\">RÁTIDOS</span> amigos (salvo OGRETE y TOROGRETE) se ignoran a todos sus efectos."
+          "description": "Las minas que selecciones del equipo universal infligen 2D3+3 de daño en su lugar, y los agentes <span class=\"faction\">RÁTIDO</span> amigos (salvo OGRETE y TOROGRETE) se ignoran a todos sus efectos (es decir, no pueden activarlas ni recibir daño por ellas). Esto tiene prioridad sobre las reglas normales de las minas."
         }
       ],
       "uniqueActions": [],
@@ -6576,7 +6576,7 @@
           "name": "Filoarma",
           "type": "melee",
           "stats": {
-            "A": "4",
+            "A": "3",
             "HP/HA": "3+",
             "Dñ": "3/5",
             "RA": "Equilibrada"
@@ -6701,7 +6701,7 @@
       "abilities": [
         {
           "name": "Escapar",
-          "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción, puedes interrumpir esa activación o reacción y realizar una acción libre de <b>Correr</b> con este agente."
+          "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción, puedes interrumpir esa activación o reacción y realizar una acción libre de <b>Correr</b> con este agente. Ten en cuenta que este agente no puede usar la regla de facción <b>Escabullirse</b> (en su lugar tiene esta regla)."
         }
       ],
       "uniqueActions": [
@@ -6810,7 +6810,7 @@
           "name": "AVISTAR",
           "cost": "1 PA",
           "description": [
-            "<b>APOYO</b>. Selecciona un agente enemigo visible para este agente. Una vez durante este punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDOS</span> amigo a 3\" o menos de este agente dispare a ese agente enemigo, puedes usar este efecto: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul><ul><li>Ese agente enemigo no está ofuscado.</li></ul>"
+            "<b>APOYO</b>. Selecciona un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li><li>Ese agente enemigo no está ofuscado.</li></ul>"
           ],
           "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo."
         }
@@ -6920,7 +6920,7 @@
           "name": "INTERCEPTAR COMUNICACIONES",
           "cost": "1 PA",
           "description": [
-            "<b>APOYO</b>. Selecciona otro agente <span class=\"faction\">RÁTIDOS</span> amigo visible y a 6\" o menos de este agente. Hasta el final de su próxima activación, suma 1 al atributo LPA de ese agente."
+            "<b>APOYO</b>. Selecciona otro agente <span class=\"faction\">RÁTIDO</span> amigo visible y a 6\" o menos de este agente. Hasta el final de su próxima activación, suma 1 al atributo LPA de ese agente."
           ],
           "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo."
         }

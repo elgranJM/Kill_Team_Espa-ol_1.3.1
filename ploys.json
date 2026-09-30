@@ -1156,8 +1156,8 @@
         "faction": "blooded",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Muerte Gloriosa",
-        "description": "Selecciona un agente enemigo visible para un agente <span class=\"faction\">ENSANGRENTADO</span> amigo. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo dispare, combatiendo o contraataque contra ese agente enemigo, sus armas tienen la regla de armas Incesante, o Implacable si ese agente disparando, combatiendo o contraataque tiene una de tus fichas de Ensangrentado.",
+        "name": "Ejecución Gloriosa",
+        "description": "Elige un agente enemigo que sea visible para un agente <span class=\"faction\">UNGIDO</span> amigo. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">UNGIDO</span> amigo dispare, combata o contraataque contra ese agente enemigo, sus armas tienen la regla de arma Incesante, o Implacable si el agente que dispara, combate o contraataca tiene una de tus fichas de Ungido.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1166,7 +1166,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Aspirante Temerario",
-        "description": "Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que esté totalmente dentro del territorio de tu oponente y no tenga una de tus fichas de Ensangrentado dispare o combatiendo, sus armas tienen la regla de armas Certera 1. <p>Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que tenga una de tus fichas de Ensangrentado esté totalmente dentro del territorio de tu oponente, sus armas tienen la regla de armas Castigadora.</p>",
+        "description": "Cuando un agente <span class=\"faction\">UNGIDO</span> amigo que se encuentre completamente dentro del territorio de tu oponente y no tenga una de tus fichas de Ungido dispare o combata, sus armas tienen la regla de arma Certera 1. <p>Si un agente <span class=\"faction\">UNGIDO</span> amigo que tenga una de tus fichas de Ungido está completamente dentro del territorio de tu oponente, sus armas tienen la regla de arma Castigadora.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1174,8 +1174,8 @@
         "faction": "blooded",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Tesón Malévolo",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que tenga una de tus fichas de Ensangrentado o esté totalmente dentro del territorio de tu oponente, puedes repetir uno de tus dados de defensa.",
+        "name": "Aguante Malévolo",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">UNGIDO</span> amigo que tenga una de tus fichas de Ungido o se encuentre completamente dentro del territorio de tu oponente, puedes repetir uno de tus dados de defensa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1183,8 +1183,8 @@
         "faction": "blooded",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Desaparición Amarga",
-        "description": "Siempre que un agente <span class=\"faction\">ENSANGRENTADO</span> amigo sea incapacitado <span class=\"text-info-emphasis\">, antes de que sea retirado de la zona de aniquilación, </span> tira un 1D3: con un 3 (o 2+ si ese agente amigo tiene una de tus fichas de Ensangrentado), inflige daño igual al resultado a un agente enemigo visible para y a 2\" de ese agente amigo.",
+        "name": "Final Rencoroso",
+        "description": "Siempre que un agente <span class=\"faction\">UNGIDO</span> amigo resulte incapacitado, antes de retirarlo de la zona de aniquilación, tira 1D3: con un 3 (o 2+ si ese agente amigo tiene una de tus fichas de Ungido), inflige tantos daños como el resultado de la tirada a un agente enemigo a 2\" o menos del mismo y visible para él.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1192,8 +1192,8 @@
         "faction": "blooded",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Indiferencia Cruel",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ENSANGRENTADO</span> amigo realice la acción <b>Disparar</b> y estés seleccionando un blanco válido. Tener otros agentes <span class=\"faction\">ENSANGRENTADO</span> amigos dentro del rango de control de un agente enemigo no impide que ese agente enemigo sea seleccionado. Hasta el final de esa acción, siempre que descartes un dado de ataque como un fallo, inflige daño igual al resultado del dado a un agente amigo de tu elección dentro del rango de control del objetivo.",
+        "name": "Frío Desinterés",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">UNGIDO</span> amigo realice una acción de <b>Disparar</b> y estés eligiendo un blanco válido. Tener otros agentes <span class=\"faction\">UNGIDO</span> amigos en la zona de control de un agente enemigo no te impide elegir a dicho agente enemigo. Hasta el final de esa acción, siempre que descartes un dado de ataque como fallo, inflige daño igual al resultado del dado a un agente amigo a tu elección dentro de la zona de control del blanco.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1202,7 +1202,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Favor Oscuro",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que tiene una de tus fichas de Ensangrentado sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige otro agente <span class=\"faction\">ENSANGRENTADO</span> amigo visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar. Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. <span class=\"text-info-emphasis\">si es la acción <b>Disparar</b>, ese otro agente solo está en cobertura u ofuscado si el objetivo original lo estaba.</span>\n<p> Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas Estallido o Torrente.</p>",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">UNGIDO</span> amigo que tenga una de tus fichas de Ungido sea elegido como blanco válido de una acción de <b>Disparar</b>, o sea elegido para combatir contra él durante la acción de <b>Combatir</b>. Elige un agente <span class=\"faction\">UNGIDO</span> amigo distinto a 3\" o menos de ese primer agente amigo y visible para él, para que en su lugar se convierta en el blanco válido o sea el elegido para combatir contra él, según sea apropiado (aunque normalmente no fuera válido para ello). Si la acción era de <b>Combatir</b>, se considerará que ese otro agente se encuentra en la zona de control del agente que combate mientras dure esa acción. Si es la acción de <b>Disparar</b>, ese otro agente solo está a cubierto u ofuscado si el blanco original lo estaba.\n<p>Este ardid no tiene ningún efecto si la acción era de <b>Disparar</b> y el arma a distancia en cuestión tiene la regla de arma Área o Ráfaga.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1210,8 +1210,8 @@
         "faction": "blooded",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Momento de Reputación",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ENSANGRENTADO</span> amigo que esté bajo la <b>MIRADA DE LOS DIOSES</b>, antes o después de que realice una acción. Hasta el final de la activación de ese agente, suma 1 a su atributo de LPA.",
+        "name": "Momento de Importancia",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">UNGIDO</span> amigo que esté bajo la <b>MIRADA DE LOS DIOSES</b>, antes o después de que realice una acción. Hasta el final de la activación de dicho agente, suma 1 a su atributo LPA.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1219,8 +1219,8 @@
         "faction": "blooded",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Recompensa Ganada",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo sea incapacitado por un agente <span class=\"faction\">ENSANGRENTADO</span> amigo a 2\" de él que tenga una de tus fichas de Ensangrentado. Ganas una ficha de Ensangrentado.",
+        "name": "Recompensa Merecida",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo resulte incapacitado por un agente <span class=\"faction\">UNGIDO</span> amigo que se encuentre a 2\" o menos del mismo y tenga una de tus fichas de Ungido. Obtienes una ficha de Ungido.",
         "typename": "Ardid de Tiroteo"
     },
     {

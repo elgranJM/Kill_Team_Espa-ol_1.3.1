@@ -22417,7 +22417,7 @@
             },
             "weapons": [
                 {
-                    "name": "Pistola Automática",
+                    "name": "Pistola automática",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22427,7 +22427,7 @@
                     }
                 },
                 {
-                    "name": "Pistola Bólter",
+                    "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22447,7 +22447,7 @@
                     }
                 },
                 {
-                    "name": "Pistola Láser",
+                    "name": "Pistola láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22457,7 +22457,7 @@
                     }
                 },
                 {
-                    "name": "Pistola de Plasma (Normal)",
+                    "name": "Pistola de plasma (normal)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22467,7 +22467,7 @@
                     }
                 },
                 {
-                    "name": "Pistola de Plasma (Sobrecarga)",
+                    "name": "Pistola de plasma (sobrecarga)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22477,7 +22477,7 @@
                     }
                 },
                 {
-                    "name": "Espada Sierra",
+                    "name": "Espada sierra",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22487,7 +22487,7 @@
                     }
                 },
                 {
-                    "name": "Hoja Improvisada",
+                    "name": "Hoja improvisada",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22497,7 +22497,7 @@
                     }
                 },
                 {
-                    "name": "Arma de Energía",
+                    "name": "Arma de energía",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22523,7 +22523,7 @@
                     "description": "Una vez por punto de inflexión, cuando un agente UNGIDO amigo con una de tus fichas de Ungido sea incapacitado estando a 6\" o menos de este agente, puedes recuperar esa ficha."
                 },
                 {
-                    "name": "Liderar por la Fuerza",
+                    "name": "Liderar por la fuerza",
                     "description": "Mientras este agente tenga una de tus fichas de Ungido, o esté completamente en el territorio del oponente, se considerará que está bajo la MIRADA DE LOS DIOSES."
                 }
             ],
@@ -22542,7 +22542,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser",
+                    "name": "Rifle láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22552,7 +22552,7 @@
                     }
                 },
                 {
-                    "name": "Bomba Diabólyka",
+                    "name": "Bomba diabólyka",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22575,11 +22575,11 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y Penetración (ver equipo universal). Eso no cuenta para su limite de usos. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Eso no cuenta para su límite de usos (p. ej. si también has seleccionado esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
                 },
                 {
-                    "name": "Deceso Explosivo",
-                    "description": " Si este agente queda incapacitado, antes de retirarlo de la zona de aniquilación, puedes usar esta regla. Si lo haces, tira dos D6, o un D6 si este agente se encuentra en la zona de control de un agente enemigo. Si algún resultado es un 4+, inflige 1D3+2 daños a cada agente a 2\" o menos de este agente y visible para él. Si este agente no ha usado su bomba diabólyka durante la batalla, en su lugar inflige 1D6+2 daños."
+                    "name": "Deceso explosivo",
+                    "description": "Si este agente queda incapacitado, antes de retirarlo de la zona de aniquilación, puedes usar esta regla. Si lo haces, tira dos D6, o un D6 si este agente se encuentra en la zona de control de un agente enemigo. Si algún resultado es un 4+, inflige 1D3+2 daños a cada agente a 2\" o menos de este agente y visible para él (tira por separado por cada uno). Si este agente no ha usado su bomba diabólyka durante la batalla, en su lugar inflige 1D6+2 daños."
                 }
             ],
             "uniqueActions": [],
@@ -22597,24 +22597,24 @@
             },
             "weapons": [
                 {
-                    "name": "Arma de Energía y Cuchilla",
+                    "name": "Arma de energía y cuchilla",
                     "type": "melee",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Incesante, Letal 5+, Ofrenda de Sangre<span class=\"faction\">*</span>"
+                        "RA": "Incesante, Letal 5+, Ofrenda de sangre<span class=\"faction\">*</span>"
                     }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Alimento Impío",
+                    "name": "Alimento impío",
                     "description": "Si este agente combate o contraataca e incapacita al agente enemigo en esa secuencia, recupera hasta 1D3 heridas perdidas. Esto se acumula con el equipo Símbolos de adoración sangrienta."
                 },
                 {
-                    "name": "<span class=\"faction\">*</span>Ofrenda de Sangre",
-                    "description": "Cada vez que este agente combate o contraataca con su arma, la primera vez que golpeas con un éxito crítico durante esa secuencia obtienes una ficha de Ungido."
+                    "name": "<span class=\"faction\">*</span>Ofrenda de sangre",
+                    "description": "Cada vez que este agente combate o contraataca con esta arma, la primera vez que golpeas con un éxito crítico durante esa secuencia obtienes una ficha de Ungido."
                 }
             ],
             "uniqueActions": [],
@@ -22632,7 +22632,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser",
+                    "name": "Rifle láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22652,7 +22652,7 @@
                     }
                 },
                 {
-                    "name": "Aguja de Estimulantes",
+                    "name": "Aguja de estimulantes",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -22664,12 +22664,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Dosis Regulares",
+                    "name": "Dosis regulares",
                     "description": "Al final del paso de Elegir agentes, si este agente es elegido para desplegarse, puedes elegir otro agente UNGIDO amigo para que obtenga una regla de ESTIMULANTES en esta batalla (salvo Revitalizado)."
                 },
                 {
                     "name": "Reglas de ESTIMULANTES",
-                    "description": "<ul><li><b>Revitalizado:</b> El agente recupera 2D3 heridas perdidas</li></ul> <ul><li><b>Enfurecido:</b>  Las armas de combate del agente tienen la regla de arma Implacable</li></ul> <ul><li><b>Fortificado:</b>  Siempre que un dado de ataque inflija 3 o más daños al agente, tira 1D6. Con un 5+, resta 1 a ese daño infligido.</li></ul>"
+                    "description": "<ul><li><b>Revitalizado:</b> El agente recupera hasta 2D3 heridas perdidas.</li><li><b>Enfurecido:</b> Las armas de combate del agente tienen la regla de arma Implacable.</li><li><b>Fortificado:</b> Siempre que un dado de ataque inflija 3 o más daños al agente, tira 1D6. Con un 5+, resta 1 a ese daño infligido.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -22696,7 +22696,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser",
+                    "name": "Rifle láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22724,7 +22724,7 @@
                     "description": [
                         "<b>APOYO</b>. Elige un agente UNGIDO amigo distinto (salvo OGRETE) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
-                    "description_no": "Esta agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
                 {
                     "name": "ACTUACIÓN SACRÍLEGA",
@@ -22749,7 +22749,7 @@
             },
             "weapons": [
                 {
-                    "name": "Pistola Bólter",
+                    "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22759,7 +22759,7 @@
                     }
                 },
                 {
-                    "name": "Puño de Energía",
+                    "name": "Puño de energía",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22771,8 +22771,8 @@
             ],
             "abilities": [
                 {
-                    "name": "Disciplina Rigurosa",
-                    "description": "<ul><li>Mientras un agente UNGIDO amigo se encuentre a 6\" o menos de este agente, puedes ignorar cualquier cambio a sus atributos por estar lesionado (incluyendo a los atributos de sus armas).</li></ul> <ul><li>Siempre que un agente UNGIDO amigo se active a 6\" o menos de este agente, puedes ignorar cualquier cambio a los atributos de ese agente por estar lesionado hasta el final de su activación (incluidos los atributos de sus armas.</li></ul>"
+                    "name": "Disciplina rigurosa",
+                    "description": "<ul><li>Mientras un agente UNGIDO amigo se encuentre a 6\" o menos de este agente, puedes ignorar cualquier cambio a sus atributos por estar lesionado (incluyendo a los atributos de sus armas).</li><li>Siempre que un agente UNGIDO amigo se active a 6\" o menos de este agente, puedes ignorar cualquier cambio a los atributos de ese agente por estar lesionado hasta el final de su activación (incluidos los atributos de sus armas).</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -22780,7 +22780,7 @@
                     "name": "IMPONER ORDEN",
                     "cost": "1 PA",
                     "description": [
-                        "Elige otro agente UNGIDO amigo a 3\" o menos de este agente y visible para él. Ese agente puede realizar inmediatamente una acción de 1PA gratis, pero no puede moverse más de 2\" durante esa acción. Si el agente amigo elegido es un COMUNICADOR, no puede realizar las acciones Actuación sacrílega ni Señal."
+                        "Elige otro agente UNGIDO amigo a 3\" o menos de este agente y visible para él. Ese agente puede realizar inmediatamente una acción libre de 1PA, pero no puede moverse más de 2\" durante esa acción. Si el agente amigo elegido es un COMUNICADOR, no puede realizar las acciones Actuación sacrílega ni Señal."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -22799,7 +22799,7 @@
             },
             "weapons": [
                 {
-                    "name": "Cuchillas de Desollar",
+                    "name": "Cuchillas de desollar",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22812,11 +22812,11 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Acechar",
-                    "description": "Cuando este agente combate o contraataca con su arma, si hay terreno Ligero o Pesado en su zona de control, esta arma tiene la regla de arma Letal 5+."
+                    "description": "Cuando este agente combate o contraataca con esta arma, si hay terreno Ligero o Pesado en su zona de control, esta arma tiene la regla de arma Letal 5+."
                 },
                 {
                     "name": "Mezquino",
-                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de ocultarse. Si este agente queda incapacitado durante la acción de <b>Combatir</b>, puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de retirarlo de la zona de aniquilación."
+                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de <b>Ocultarse</b>. Si este agente queda incapacitado durante la acción de <b>Combatir</b>, puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de retirarlo de la zona de aniquilación."
                 }
             ],
             "uniqueActions": [],
@@ -22844,7 +22844,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Frag)",
+                    "name": "Lanzagranadas (frag)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22854,7 +22854,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22864,7 +22864,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de Fusión",
+                    "name": "Rifle de fusión",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22874,7 +22874,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de Plasma (Normal)",
+                    "name": "Rifle de plasma (normal)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22884,7 +22884,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de Plasma (Sobrecarga)",
+                    "name": "Rifle de plasma (sobrecarga)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22906,7 +22906,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "UNGIDO, CAOS, TIRADOR",
+            "keywords": "<span class=\"faction\">UNGIDO</span>, CAOS, TIRADOR",
             "peana": "25"
         },
         {
@@ -22920,7 +22920,7 @@
             },
             "weapons": [
                 {
-                    "name": "Maza de Energía y Garra Mutante",
+                    "name": "Maza de energía y garra mutante",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22932,16 +22932,16 @@
             ],
             "abilities": [
                 {
-                    "name": "Avalancha de Músculo",
+                    "name": "Avalancha de músculo",
                     "description": "Cada vez que este agente termine su movimiento durante una acción de <b>Cargar</b>, puedes infligir 1D3 daños a un agente enemigo en su zona de control."
                 },
                 {
-                    "name": "Potenciación Química",
+                    "name": "Potenciación química",
                     "description": "Puedes ignorar cualquier cambio al atributo LPA de este agente, y además no se ve afectado por las reglas de arma Aturdidora y Choque de agentes enemigos."
                 },
                 {
                     "name": "Grandote",
-                    "description": "Cuando tu oponente elige un blanco válido, si este agente tiene una orden de ocultarse no se considera a cubierto debido a terreno Ligero. Esto puede permitir que el agente sea tomado como blanco, pero no le niega la salvación por cobertura."
+                    "description": "Cuando tu oponente elige un blanco válido, si este agente tiene una orden de <b>Ocultarse</b> no se considera a cubierto debido a terreno Ligero. Esto puede permitir que el agente sea tomado como blanco (suponiendo que sea visible), pero no le niega la salvación por cobertura de la que disponga."
                 },
                 {
                     "name": "Zoquete",
@@ -22963,7 +22963,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser Telescópico (Móvil)",
+                    "name": "Rifle láser telescópico (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22973,7 +22973,7 @@
                     }
                 },
                 {
-                    "name": "Rifle Láser Telescópico (Inmóvil)",
+                    "name": "Rifle láser telescópico (inmóvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22995,12 +22995,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Capa de Camuflaje",
-                    "description": "Siempre que un agente dispare contra este agente, si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional. No se acumula con terreno Aventajado."
+                    "name": "Capa de camuflaje",
+                    "description": "Siempre que un agente dispare contra este agente, si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado."
                 },
                 {
-                    "name": "Un Nombre Susurrado en Sangre",
-                    "description": "Puedes usar este <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Elige un agente enemigo. Cuando este agente dispare contra dicho agente, se considerará que tiene una ficha de Ungido y está bajo la MIRADA DE LOS DIOSES."
+                    "name": "Un nombre susurrado en sangre",
+                    "description": "Puedes usar este <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Elige un agente enemigo. Cuando este agente dispare contra dicho agente enemigo, se considerará que tiene una de tus fichas de Ungido y está bajo la MIRADA DE LOS DIOSES."
                 }
             ],
             "uniqueActions": [],
@@ -23018,7 +23018,7 @@
             },
             "weapons": [
                 {
-                    "name": "Garrote Pesado",
+                    "name": "Garrote pesado",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -23059,7 +23059,7 @@
                     }
                 },
                 {
-                    "name": "Bayoneta y Escudo",
+                    "name": "Bayoneta y escudo",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -23076,7 +23076,7 @@
                 },
                 {
                     "name": "Escudarse",
-                    "description": "Cada vez que este agente es activado, puedes usar esta regla. Si lo haces, hasta el inicio de la siguiente activación de este agente: <ul><li>Resta 2\" a su atributo Movimiento.</li></ul> <ul><li>Cuando un agente dispare a este agente, puedes repetir cualquiera de tus dados de defensa.</li></ul>"
+                    "description": "Cada vez que este agente es activado, puedes usar esta regla. Si lo haces, hasta el inicio de la siguiente activación de este agente: <ul><li>Resta 2\" a su atributo Movimiento.</li><li>Cuando un agente dispare a este agente, puedes repetir cualquiera de tus dados de defensa.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -23094,7 +23094,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser",
+                    "name": "Rifle láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -23116,7 +23116,7 @@
             ],
             "abilities": [
                 {
-                    "name": "Activación en Grupo",
+                    "name": "Activación en grupo",
                     "description": "Cuando este agente quede usado, debes activar a continuación otro agente SOLDADO UNGIDO amigo apostado (si es posible) antes de que active tu oponente. Cuando ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
                 }
             ],

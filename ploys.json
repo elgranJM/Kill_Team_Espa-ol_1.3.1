@@ -221,7 +221,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "EL ESCUDO QUE MATA",
-        "description": "Siempre que un agente <span class=\"faction\">DEATHWATCH</span> amigo esté dentro del territorio de tu oponente, el Daño <b>Normal</b> y <b>Crítico</b> de <b>4+</b> inflige <b>1</b> menos de daño en él.\n",
+        "description": "Siempre que un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo esté completamente en el territorio de tu oponente, todo daño normal o crítico de 4 o más le inflige 1 daño menos.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -230,7 +230,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Y NO CONOCERÁN EL MIEDO",
-        "description": "Puedes ignorar cualquier cambio en los atributos de los agentes <span class=\"faction\">DEATHWATCH</span> amigos por estar <b>lesionados</b> (incluyendo los atributos de sus armas).\n",
+        "description": "Puedes ignorar algunos o todos los cambios a los atributos de los agentes <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigos por estar <b>lesionados</b> (incluyendo los atributos de sus armas).\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -239,7 +239,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "TÁCTICAS DE MISIÓN",
-        "description": "Selecciona <b>Ocultación</b> o <b>Trabarse</b>. Siempre que un agente <span class=\"faction\">DEATHWATCH</span> amigo dispare o combatiendo contra un agente enemigo que tenga esa orden, las armas de ese agente amigo tienen la regla de armas <b>Equilibrada</b>.\n",
+        "description": "Elige <b>Ocultarse</b> o <b>Trabarse</b>. Siempre que un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo dispare, combata o contraataque contra un agente enemigo que tenga esa orden, las armas de ese agente amigo tienen la regla de armas <b>Equilibrada</b>.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -248,7 +248,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "LA LARGA VIGILIA",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">DEATHWATCH</span> amigo que esté dentro de tu territorio, puedes <b>repetir</b> uno de tus dados de defensa.\n",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo que se encuentre completamente en tu territorio, puedes <b>repetir</b> uno de tus dados de defensa.\n",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -256,8 +256,8 @@
         "faction": "deathwatch",
         "type": "tactical",
         "cps": "1PM",
-        "name": "NO SUFRAS AL ALIENÍGENA",
-        "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para un agente <span class=\"faction\">DEATHWATCH</span> amigo, si está disparando o combatiendo contra un agente que no tiene la clave CAOS o IMPERIO. Puedes repetir cualquiera de tus dados de ataque.\n",
+        "name": "NO TOLERES AL ALIENÍGENA",
+        "description": "Usa este ardid de tiroteo tras tirar tus dados de ataque por un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo, si está disparando, combatiendo o contraatacando contra un agente enemigo que no tiene ni la clave <b>CAOS</b> ni la clave <b>IMPERIUM</b>. Puedes repetir cualesquiera de tus dados de ataque.\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -265,8 +265,8 @@
         "faction": "deathwatch",
         "type": "tactical",
         "cps": "1PM",
-        "name": "RASTREO POR AUSPICATOR",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">DEATHWATCH</span> amigo esté contraatacando, antes de que realice cualquier acción. Puedes cambiar su orden.\n",
+        "name": "RASTREO AUSPICATOR",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo esté contraatacando, antes de que empiece a realizar acciones. Puedes cambiar su orden.\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -274,8 +274,8 @@
         "faction": "deathwatch",
         "type": "tactical",
         "cps": "1PM",
-        "name": "ESCANEO AUSPEX AVANZADO",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">DEATHWATCH</span> amigo realice la acción <b>Disparar</b>. Hasta el final de la activación/contraataque, sus armas a distancia tienen la regla de armas <b>Saturar</b> y los agentes enemigos no pueden estar <b>ofuscados</b>.\n",
+        "name": "LECTURAS DE ÁUSPEX AVANZADAS",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo realice una acción de <b>Disparar</b>. Hasta el final de la activación/contraataque, sus armas a distancia tienen la regla de armas <b>Saturación</b> y los agentes enemigos no pueden estar <b>ofuscados</b>.\n",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -284,7 +284,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "FISIOLOGÍA TRANSHUMANA",
-        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente <span class=\"faction\">DEATHWATCH</span> amigo, en el paso <b>Tirar Dados de Defensa</b>. Puedes retener uno de tus éxitos normales como un <b>éxito crítico</b> en su lugar.\n",
+        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo, en el paso de <b>Tirar dados de defensa</b>. Puedes guardar uno de tus éxitos normales como <b>éxito crítico</b> en su lugar.\n",
         "typename": "Ardid de Tiroteo"
     },
     {

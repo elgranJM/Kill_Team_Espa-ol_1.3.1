@@ -152,21 +152,21 @@
             "faction": "deathwatch",
             "type": "team",
             "name": "Agentes",
-            "description": "5 agentes <span class=\"faction\">DEATHWATCH</span> elegido de la siguiente lista:\n\n<ul> <li><b>SARGENTO DE LA GUARDIA</b></li> <li><b>ÉGIDA</b></li> <li><b>MAESTRO DE LA ESPADA</b></li> <li><b>BOMBARDA</b></li> <li><b>BRECHADOR</b></li> <li><b>DEMOLEDOR</b></li> <li><b>DISRUPTOR</b></li> <li><b>TIRADOR</b></li> <li><b>COBRADOR DE CABEZAS</b></li> <li><b>MATAHORDAS</b></li> <li><b>TIRADOR</b></li> </ul> <p>Tu comando solo puede incluir cada agente en esta lista una vez, y solo puede incluir hasta un agente <b>GRAVIS</b>.</p>"
+            "description": "5 agentes <span class=\"faction\">VIGÍA DE LA MUERTE</span> elegidos de la siguiente lista:\n\n<ul> <li><b>SARGENTO VIGÍA</b></li> <li><b>ÉGIDA</b></li> <li><b>ESPADERO</b></li> <li><b>BOMBARDERO</b></li> <li><b>IRRUPTOR</b></li> <li><b>DEMOLEDOR</b></li> <li><b>DISRUPTOR</b></li> <li><b>TIRADOR</b></li> <li><b>CORTACABEZAS</b></li> <li><b>MATAHORDAS</b></li> <li><b>OJO PRECISO</b></li> </ul> <p>Tu comando solo puede incluir a cada agente de esta lista una vez, y solo puede incluir hasta un agente <b>GRAVIS</b>.</p>"
         },
         {
             "id_racial": 21,
             "faction": "deathwatch",
             "type": "racial",
-            "name": "VETERANO ASTARTES",
-            "description": "<p>Durante la activación de cada agente <span class=\"faction\">DEATHWATCH</span> amigo, puede realizar dos acciones de <b>Disparar</b> o dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b> y se Elige un <b>lanzagranadas auxiliar</b>, <b>cañón frag</b>, <b>incinerador de plasma pesado</b>, <b>bólter pesado infernus</b>, <b>pistola de plasma</b> o <b>rifle bólter silencioso</b> para ambas, se debe gastar 1 <b>PA</b> adicional para la segunda acción.</p> <p>Cada agente <span class=\"faction\">DEATHWATCH</span> amigo puede <b>contraatacar</b> independientemente de su orden. Siempre que lo haga, puede realizar una <b>acción adicional de 1PA gratis</b> durante ese contraataque, pero ambas acciones deben ser diferentes.</p>"
+            "name": "ASTARTES VETERANOS",
+            "description": "<p>Durante la activación de cada agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo, este puede realizar o bien dos acciones de <b>Disparar</b>, o bien dos acciones de <b>Combatir</b>. Si son dos acciones de <b>Disparar</b> y se elige un <b>lanzagranadas auxiliar</b>, <b>cañón frag</b>, <b>incinerador de plasma pesado</b>, <b>bólter pesado infernus</b>, <b>pistola de plasma</b> o <b>rifle bólter silencio</b> para ambas, o si se elige una <b>bomba de fusión</b> para cualquiera de ellas, debe gastarse 1 <b>PA</b> adicional para la segunda acción.</p> <p>Cada agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo puede <b>contraatacar</b> independientemente de su orden. Cuando lo haga, puede realizar una <b>acción libre</b> adicional de 1PA durante ese contraataque, pero ambas acciones deben ser diferentes y no puedes realizar las acciones de <b>Combatir</b> y <b>Disparar</b> durante el mismo contraataque.</p>"
         },
         {
             "id_racial": 22,
             "faction": "deathwatch",
             "type": "racial",
             "name": "MUNICIÓN ESPECIAL",
-            "description": "<p>Una vez por punto de inflexión, cuando un agente <span class=\"faction\">DEATHWATCH</span> amigo esté realizando la acción <b>Disparar</b>, en el paso <b>elegir Arma</b>, puedes usar esta regla. Si lo haces, Elige una de las siguientes <b>reglas de armas</b> para que las armas a distancia de ese agente la tengan hasta el final de la acción. Esta regla no se puede usar con <b>granadas explosivas</b> (ver equipamiento universal) o <b>bombas de fusión</b>.</p> <ul> <li><b>Área 1\"</b> (no puedes elegir esto si el perfil de arma que se está usando tiene la regla de armas <b>Rafága</b>)</li> <li><b>Devastadora 1</b></li> <li><b>Letal 5+</b></li> <li><b>Penetración 1</b></li> <li><b>Desgarradora</b></li> <li><b>Saturación</b></li> <li><b>Severa</b></li> </ul>"
+            "description": "<p>Una vez por punto de inflexión, cuando un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo esté realizando la acción <b>Disparar</b>, en el paso de <b>Elegir arma</b>, puedes usar esta regla. Si lo haces, elige una de las siguientes <b>reglas de armas</b> para que las armas a distancia de ese agente la tengan hasta el final de la acción. Esta regla no se puede usar con <b>granadas explosivas</b> (ver equipo universal) o <b>bombas de fusión</b>.</p> <ul> <li><b>Área 1\"</b> (no puedes elegir esto si el perfil de arma que se está usando tiene la regla de armas <b>Ráfaga</b>)</li> <li><b>Devastadora 1</b></li> <li><b>Letal 5+</b></li> <li><b>Críticos de penetración 1</b></li> <li><b>Desgarradora</b></li> <li><b>Saturación</b></li> <li><b>Severa</b></li> </ul>"
         }
     ],
     "elucidian-starstrider": [

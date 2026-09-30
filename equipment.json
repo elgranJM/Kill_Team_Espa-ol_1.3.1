@@ -34,8 +34,8 @@
   {
     "id_equip": 5,
     "faction": "tempestus-aquilons",
-    "name": "Daga Tempestus",
-    "description": "Los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos (excluyendo SERVO-SENTRY) tienen la siguiente arma de combate:",
+    "name": "Dagas Tempestus",
+    "description": "Los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos (salvo <b>SERVOCENTINELA</b>) tienen la siguiente arma de combate:",
     "weapon": [
       {
         "w_name": "Daga Tempestus",
@@ -51,15 +51,15 @@
     "id_equip": 6,
     "faction": "tempestus-aquilons",
     "name": "Estimulantes de Combate",
-    "description": "Puedes ignorar cualquier cambio en el atributo de Movimiento de los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos por estar lesionados.", 
+    "description": "Puedes ignorar cualquier cambio al atributo Movimiento de los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos por estar lesionados.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 7,
     "faction": "tempestus-aquilons",
-    "name": "Augurio de Despliegue",
-    "description": "Una vez durante la batalla, cuando se active un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo que haya sido desplegado en lo alto, puedes mover uno de tus marcadores de Despliegue de nuevo. No puede moverse más cerca de la zona de despliegue de tu adversario.", 
+    "name": "Augurio Preinserción",
+    "description": "Una vez durante la batalla, al activar un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo desplegado en las alturas, antes de decidir si el agente aterriza o es usado, puedes mover de nuevo uno de tus marcadores de descenso. No obstante, no puede moverse más cerca de lo que está de la zona de descenso de tu oponente.", 
     "weapon": [],
     "action": []
   },
@@ -67,7 +67,7 @@
     "id_equip": 8,
     "faction": "tempestus-aquilons",
     "name": "Supervisor Remoto",
-    "description": "Una vez durante la batalla, al realizar la tirada para decidir la iniciativa, puedes repetir tu D6.", 
+    "description": "Una vez por batalla, tras desempatar para decidir la iniciativa, puedes repetir tu D6.", 
     "weapon": [],
     "action": []
   },

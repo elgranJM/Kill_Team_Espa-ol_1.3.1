@@ -1084,8 +1084,8 @@
         "faction": "tempestus-aquilons",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Ofensiva Repentina",
-        "description": "Cuenta el número de agentes <span class=\"faction\">AQUILON TEMPESTUS</span> amigos que no están incapacitados, luego divide el resultado a la mitad (redondeando hacia arriba) para obtener x. Hasta el final de su activación, las armas de los agentes <span class=\"faction\">AQUILON TEMPESTUS</span> amigos tienen la regla de armas <b>Equilibrada</b> si son los primeros agentes amigos activados en este punto de inflexión igual a x. Por ejemplo, si tienes cinco agentes, los primeros tres agentes amigos activados se beneficiarán.",
+        "name": "Ofensiva Súbita",
+        "description": "Cuenta el número de agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos que no están incapacitados, y a continuación reduce ese número a la mitad (redondeando al alza), para obtener un resultado de x. Hasta el final de su activación, las armas de los x primeros agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos en ser activados durante este punto de inflexión tienen la regla de armas <b>Equilibrada</b>. Por ejemplo, si tienes cinco agentes se beneficiarán los primeros tres agentes amigos activados.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1093,8 +1093,8 @@
         "faction": "tempestus-aquilons",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Mantener Ímpetu",
-        "description": "Siempre que un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo dispare o combatiendo contra un agente enemigo preparado, sus armas tienen la regla de armas <b>Severa</b>.",
+        "name": "Mantener la Dinámica",
+        "description": "Siempre que un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo dispare a o combata contra un agente enemigo apostado, las armas de ese agente amigo tienen la regla de arma <b>Severa</b>.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1102,8 +1102,8 @@
         "faction": "tempestus-aquilons",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Ojo Arriba",
-        "description": "Selecciona un agente enemigo. Ese agente y todos los demás agentes enemigos a 3\" de él ganan una de tus fichas de <b>Detectado</b> hasta el final del punto de inflexión. Siempre que un agente enemigo con una ficha de Detectado dispare contra un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo, puedes repetir uno de tus dados de defensa. Si está combatiendo o contraataque contra un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo, uno de tus bloqueos puede asignarse para bloquear dos éxitos no resueltos (en lugar de uno).",
+        "name": "Ojos Vigilantes",
+        "description": "Elige un agente enemigo. Dicho agente y todos los demás agentes enemigos a 3\" o menos de él ganan una de tus fichas de <b>Detectado</b> hasta el final del punto de inflexión. Siempre que un agente enemigo con una ficha de Detectado:<ul><li>Dispare contra un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo, puedes repetir uno de tus dados de defensa.</li><li>Combata o contraataque contra un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo, uno de tus bloqueos puede asignarse a bloquear dos de los éxitos sin resolver (en lugar de solo uno).</li></ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1111,8 +1111,8 @@
         "faction": "tempestus-aquilons",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Desplegar y Asegurar",
-        "description": "Selecciona un marcador. <span class=\"text-info-emphasis\">Hasta el paso de Preparar del próximo punto de inflexión, al</span> determinar el control de ese marcador, trata el atributo de LPA total de los agentes <span class=\"faction\">AQUILONES TEMPESTUS</span> amigos que lo disputan como 1 mayor, siempre y cuando al menos un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo realmente lo dispute. Siempre que un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo esté a 3\" de ese marcador, suma 1 al atributo de Atq de sus armas de combate (hasta un máximo de 4).",
+        "name": "Descender y Asegurar",
+        "description": "Elige un marcador.<ul><li>Hasta el paso de Preparación del siguiente punto de inflexión, al determinar el control de ese marcador, trata el atributo LPA total de los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos que lo estén disputando como si fuera 1 punto mayor, siempre y cuando haya al menos un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo disputándolo.</li><li>Mientras un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo se encuentre a 3\" o menos de ese marcador, suma 1 al atributo Ataque de sus armas de combate (hasta un máximo de 4).</li></ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1120,8 +1120,8 @@
         "faction": "tempestus-aquilons",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Despliegue Caliente",
-        "description": "Usa este ardid de tiroteo después de tirar dados de ataque para un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo <span class=\"text-info-emphasis\"> que esté totalmente dentro del territorio de tu oponente, o</span> <span class=\"text-info-emphasis\"> que haya aterrizado o caído desde terreno de Ventaja al menos 2\" más alto que el suelo de la zona de aniquilación</span> durante esta activación. Si el objetivo está a 6\" de él, puedes repetir cualquiera de tus dados de ataque.",
+        "name": "Inserción en Zona Caliente",
+        "description": "Usa este ardid de tiroteo tras tirar los dados de ataque por un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo que esté completamente en el territorio de tu oponente, o que haya aterrizado o se haya dejado caer desde terreno Aventajado al menos 2\" por encima del suelo de la zona de aniquilación durante esta activación. Si el blanco está a 6\" o menos de él, puedes repetir cualesquiera de tus dados de ataque.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1130,7 +1130,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Ajustar Coordenadas",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo aterrice. Puedes colocarlo a 5\" de uno de tus marcadores de Despliegue (midiendo solo la distancia horizontal), teniendo precedencia sobre el requisito de distancia normal. No puede realizar las acciones <b>Correr</b>, <b>Combatir</b> o <b>Disparar</b> durante este punto de inflexión.",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo aterrice. Puedes desplegarlo a 5\" o menos en horizontal de uno de tus marcadores de descenso. Esto tiene preferencia sobre el requisito normal de distancia. No puede realizar acciones de <b>Combatir</b>, <b>Correr</b> o <b>Disparar</b> durante este punto de inflexión.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1138,8 +1138,8 @@
         "faction": "tempestus-aquilons",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Ejemplares Tempestus",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo (excluyendo <b>SERVO-CENTINELA</b> y cualquier agente con un atributo de LPA mayor que 2). Durante esa activación puede realizar la acción <b>Recoger Marcador</b>, <b>Colocar Marcador</b>, o una acción de misión por 1 PA menos.",
+        "name": "Tempestus Ejemplares",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo (salvo <b>SERVOCENTINELA</b> o cualquier agente con un atributo LPA mayor de 2). Durante esa activación, puede realizar la acción <b>Colocar marcador</b>, <b>Recoger marcador</b> o una acción de misión por 1 PA menos.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1148,7 +1148,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Progena",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">AQUILÓN TEMPESTUS</span> amigo (excluyendo <b>SERVO-CENTINELA</b>) sea activado. Recupera 2D3 heridas perdidas, y durante esa activación puedes ignorar cualquier cambio en su atributo de LPA.",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo (salvo <b>SERVOCENTINELA</b>) sea activado. Recupera 2D3 heridas perdidas, y durante esa activación puedes ignorar cualquier cambio a su atributo LPA.",
         "typename": "Ardid de Tiroteo"
     },
     {

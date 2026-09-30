@@ -4160,7 +4160,7 @@
     "tempestus-aquilons": [
         {
             "id": "aquilon-tempestor",
-            "name": "TEMPESTOR AQUILÓN",
+            "name": "TEMPESTOR AQUILON",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -4232,12 +4232,12 @@
             "abilities": [
                 {
                     "name": "Veterano tempestus",
-                    "description": "Una vez por batalla, puedes usar o bien un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">TEMPESTUS AQUILÓN</span> especificado, o bien el ardid de tiroteo Repetición de mando por 0PM si este es el agente por el que se han tirado los dados de ataque o defensa."
+                    "description": "Una vez por batalla, puedes usar o bien un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">TEMPESTUS AQUILON</span> especificado, o bien el ardid de tiroteo Repetición de mando por 0PM si este es el agente por el que se han tirado los dados de ataque o defensa."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "Mando",
+                    "name": "MANDO",
                     "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo distinto (salvo <b>SERVOCENTINELA</b>) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
@@ -4250,7 +4250,7 @@
         },
         {
             "id": "aquilon-grenadier",
-            "name": "GRANADERO AQUILÓN",
+            "name": "GRANADERO AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4292,7 +4292,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, Penetración, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente use una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, perforantes, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando este agente use una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -4301,7 +4301,7 @@
         },
         {
             "id": "aquilon-pistolier",
-            "name": "PISTOLERO AQUILÓN",
+            "name": "PISTOLERO AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4347,7 +4347,7 @@
                 },
                 {
                     "name": "Tirotear",
-                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados (incluyendo a este, si procede), este agente puede realizar una acción libre de <b>Disparar</b> (para ello, cambia su orden a trabarse), pero solo puede tomar como blanco a ese agente enemigo con sus pistolas láser potenciadas (concentrado), y solo puedes tirar tantos dados de ataque como los dados de ataque descartados del oponente más 1 (hasta un máximo de 4)."
+                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados (incluyendo a este, si procede), este agente puede realizar una acción libre de <b>Disparar</b> (para ello, cambia su orden a <b>Trabarse</b>), pero solo puede tomar como blanco a ese agente enemigo con sus pistolas láser potenciadas (concentrado), y solo puedes tirar tantos dados de ataque como los dados de ataque descartados del oponente más 1 (hasta un máximo de 4)."
                 }
             ],
             "uniqueActions": [],
@@ -4356,7 +4356,7 @@
         },
         {
             "id": "aquilon-gunner",
-            "name": "TIRADOR AQUILÓN",
+            "name": "TIRADOR AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4412,7 +4412,7 @@
         },
         {
             "id": "aquilon-marksman",
-            "name": "OJO PRECISO AQUILÓN",
+            "name": "OJO PRECISO AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4464,7 +4464,7 @@
             "abilities": [
                 {
                     "name": "Ventaja de francotirador",
-                    "description": "Siempre que este agente esté en terreno Aventajado y dispare contra un agente que tenga una orden de trabarse y se encuentre al menos 2\" por debajo de él, todos los perfiles de su rifle láser telescópico potenciado tienen la regla de arma Severa."
+                    "description": "Siempre que este agente esté en terreno Aventajado y dispare contra un agente que tenga una orden de <b>Trabarse</b> y se encuentre al menos 2\" por debajo de él, todos los perfiles de su rifle láser telescópico potenciado tienen la regla de arma Severa."
                 },
                 {
                     "name": "<span class=\"faction\">*</span>Posición oculta",
@@ -4477,7 +4477,7 @@
         },
         {
             "id": "aquilon-precursor",
-            "name": "PRECURSOR AQUILÓN",
+            "name": "PRECURSOR AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4513,7 +4513,7 @@
                 },
                 {
                     "name": "Enérgico",
-                    "description": "Siempre que este agente realice la acción de <b>Combatir</b> o <b>Disparar</b>, puede realizar inmediatamente después una acción libre de <b>Correr</b>. Puede hacerlo incluso si ha realizado una acción de <b>Cargar</b> durante esta activación, pero solo puede usar la distancia restante que le quedase de esa acción de <b>Cargar</b> (hasta un máximo de 3\")."
+                    "description": "Siempre que este agente realice la acción de <b>Combatir</b> o <b>Disparar</b>, puede realizar inmediatamente después una acción libre de <b>Correr</b>. Puede hacerlo incluso si ha realizado una acción de <b>Cargar</b> durante esta activación."
                 }
             ],
             "uniqueActions": [],
@@ -4522,7 +4522,7 @@
         },
         {
             "id": "servo-sentry",
-            "name": "SERVOCENTINELA AQUILÓN",
+            "name": "SERVOCENTINELA AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "4\"",
@@ -4551,7 +4551,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -4597,7 +4597,7 @@
         },
         {
             "id": "aquilon-soldier",
-            "name": "SOLDADO AQUILÓN",
+            "name": "SOLDADO AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",

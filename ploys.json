@@ -1589,7 +1589,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Venimos a por Vosotros",
-        "description": "Siempre que un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo sea activado, si la primera acción que realiza durante esa activación es la acción <b>Cargar</b>, cuando termine su movimiento durante esa acción, puedes infligir 1D3 de daño a un agente enemigo dentro de su zona de control.",
+        "description": "Cuando un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo es activado, si la primera acción que lleva a cabo durante esa activación es una acción de <b>Cargar</b>, al terminar su movimiento durante dicha acción puedes infligir 1D3 daños a un agente enemigo en su zona de control.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1598,7 +1598,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "La Caza Negra",
-        "description": "Siempre que un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo dispare, combatiendo o contraataque contra un agente enemigo herido, puedes repetir uno de tus dados de ataque.",
+        "description": "Cuando un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo dispara, combate o contraataca contra un agente enemigo herido, puedes repetir uno de tus dados de ataque.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1606,8 +1606,8 @@
         "faction": "nemesis-claw",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Visión de Presa",
-        "description": "Siempre que estés seleccionando un blanco válido para un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo, los agentes enemigos a 6\" de él no pueden usar terreno Ligero para cobertura. Aunque esto puede permitir que tales agentes sean seleccionados como objetivo (asumiendo que son visibles), no elimina su salvación por cobertura (si la hay).",
+        "name": "Avistar la Presa",
+        "description": "Siempre que un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo realice una acción de <b>Disparar</b>, puedes usar esta regla. Si lo haces, hasta el final de esa acción, las armas a distancia de ese agente amigo tienen las reglas de armas Alcance 6\" y Buscadora.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1615,8 +1615,8 @@
         "faction": "nemesis-claw",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Regreso a la Oscuridad",
-        "description": "Un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo puede realizar inmediatamente una acción gratuita de <b>Retroceder</b> o <b>Reposicionarse</b>, pero debe terminar ese movimiento con terreno Pesado dentro de su zona de control, o cualquier parte de su peana debajo de terreno de Ventaja. Además, <span class=\"text-warning-emphasis\">no puede moverse más de 4\" durante esa acción y</span> no puede terminar ese movimiento más cerca de agentes enemigos <span class=\"text-info-emphasis\">(en una zona de aniquilación que usa las reglas de combate cerrado, p. ej. zona de aniquilación: Gallowdark, ignora terreno de Muro al determinar esto).</span>\n",
+        "name": "Volver a la Oscuridad",
+        "description": "Un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo puede realizar de inmediato una acción libre de <b>Retroceder</b> o <b>Reposicionarse</b>, pero debe terminar dicho movimiento con terreno Pesado en su zona de control, o con cualquier parte de su peana debajo de terreno Aventajado. Además, no puede mover más de 4\" durante esa acción y no puede terminar ese movimiento más cerca de agentes enemigos de lo que estaba (en una zona de aniquilación que use las reglas de combate cerrado, p. ej. Zona de aniquilación: Horcasombría, ignora el terreno Muro al determinar esto).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1624,8 +1624,8 @@
         "faction": "nemesis-claw",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Grito Vox",
-        "description": "Usa este ardid de tiroteo cuando tu oponente fuera a activar un agente enemigo. Tu oponente no puede activar a ese agente durante esta activación. Si no hay otros agentes enemigos elegibles para ser activados, este ardid no tiene efecto. Este ardid te cuesta 1 PM adicional por cada vez anterior que lo hayas usado durante la batalla (p. ej. 1PM la primera vez que lo usarías, 2PM la segunda vez, etc.).",
+        "name": "Vocogrito",
+        "description": "Usa este ardid de tiroteo cuando tu oponente vaya a activar un agente enemigo visible para un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo. Tira 1D6: si el resultado es mayor que el atributo LPA de ese agente enemigo, tu oponente no puede activarlo durante esta activación, pero, si el resultado es menor o igual al atributo LPA de ese agente enemigo, este ardid no se usa, recuperas los PM gastados y no puedes volver a usarlo durante este punto de inflexión. Si no hay otros agentes enemigos que elegir para ser activados, este ardid no tiene efecto.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1634,7 +1634,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Muerte al Falso Emperador",
-        "description": "Usa este ardid de tiroteo <span class=\"text-info-emphasis\">después de tirar tus dados de ataque para</span> un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo, <span class=\"text-info-emphasis\">si está</span> disparando, combatiendo o contraataque contra un agente <span class=\"text-info-emphasis\">que tiene</span> la clave <b>IMPERIO</b>. Las armas de ese agente amigo tienen la regla de armas Incesante hasta el final de esa secuencia; si ese agente enemigo también tiene la clave <b>ADEPTUS ASTARTES</b>, las armas de ese agente amigo tienen la regla de armas Implacable hasta el final de esa secuencia en su lugar.",
+        "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo, si está disparando, combatiendo o contraatacando contra un agente enemigo que tiene la clave <b>IMPERIUM</b>. Las armas de ese agente amigo tienen la regla de arma Incesante hasta el final de esa secuencia; si el agente enemigo en cuestión tiene también la clave <b>ADEPTUS ASTARTES</b>, en su lugar las armas de ese agente amigo tienen la regla de arma Implacable hasta el final de esa secuencia.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1642,8 +1642,8 @@
         "faction": "nemesis-claw",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Proclividad para el Asesinato",
-        "description": "Usa este ardid de tiroteo después de que un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo incapacite a un agente enemigo dentro de su zona de control. Ese agente amigo puede realizar inmediatamente una acción gratuita de <b>Cargar</b> o <b>Correr</b> (para la primera, no puede moverse más de 3\"), incluso si ha realizado una acción que le impide realizar esas acciones.",
+        "name": "Predisposición Homicida",
+        "description": "Usa este ardid de tiroteo después de que un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo incapacite a un agente enemigo dentro de su zona de control. Ese agente amigo puede realizar de inmediato una acción libre de <b>Cargar</b> o de <b>Correr</b> (en el primer caso, no puede mover más de 3\"), incluso si ha realizado una acción que le impida realizar acciones de <b>Cargar</b> o de <b>Correr</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1651,8 +1651,8 @@
         "faction": "nemesis-claw",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Luchador Sucio",
-        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">GARRA NÉMESIS</span> amigo esté contraataque, al inicio del paso Resolver Dados de Ataque. Puedes resolver uno de tus éxitos antes del orden normal. Si lo haces, no puedes resolver ningún otro éxito durante esa secuencia.",
+        "name": "Luchador Rastrero",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo contraataque, al inicio del paso de Resolver dados de ataque. Puedes resolver uno de tus éxitos antes del orden normal. Si lo haces, no puedes resolver ningún otro éxito durante esa secuencia.",
         "typename": "Ardid de Tiroteo"
     },
     {

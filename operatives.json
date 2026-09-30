@@ -9357,7 +9357,7 @@
           }
         },
         {
-          "name": "Puño de energia",
+          "name": "Puño de energía",
           "type": "melee",
           "stats": {
             "A": "5",
@@ -9367,7 +9367,7 @@
           }
         },
         {
-          "name": "Maza de energia",
+          "name": "Maza de energía",
           "type": "melee",
           "stats": {
             "A": "5",
@@ -9377,12 +9377,12 @@
           }
         },
         {
-          "name": "Arma de energia",
+          "name": "Arma de energía",
           "type": "melee",
           "stats": {
             "A": "5",
             "HP/HA": "3+",
-            "Dñ": "6/6",
+            "Dñ": "4/6",
             "RA": "Letal 5+"
           }
         }
@@ -9390,20 +9390,20 @@
       "abilities": [
         {
           "name": "Clarividencia",
-          "description": "<b>PSÍQUICA.</b> En el pase de preparación de cada fase de estrategia, ganas 1D3 puntos de Clarividencia. Al final de cada punto de inflexión, descarta tus puntos de Claridivencia. Puedes gastar tus puntos de Clarividencia en la fase de tiroteo tal como se indica a continuación (no puedes usar cada una de las siguientes reglas más de una vez por punto de inflexión): Corazonada (puedes gastar 1 punto para saltarte una activación) o Portento (puedes gastar 1 punto para ignorar el daño normal de un dado de ataque)."
+          "description": "<b>PSÍQUICA</b>. En el paso de preparación de cada fase de estrategia, ganas 1D3 puntos de Clarividencia. Al final de cada punto de inflexión, descarta tus puntos de Clarividencia. Puedes gastar tus puntos de Clarividencia en la fase de tiroteo tal como se indica a continuación (no puedes usar cada una de las siguientes reglas más de una vez por punto de inflexión):<ul><li><b>Corazonada:</b> <b>PSÍQUICA</b>. Cuando sea tu turno de activar un agente amigo, puedes gastar 1 de tus puntos de Clarividencia para saltarte esa activación.</li><li><b>Portento:</b> <b>PSÍQUICA</b>. Cuando un dado de ataque inflige Daño normal a este agente, puedes gastar 1 de tus puntos de Clarividencia para ignorar ese daño infligido.</li></ul>No puedes ganar ni gastar tus puntos de Clarividencia si este agente está incapacitado."
         }
       ],
       "uniqueActions": [
         {
-          "name": "Premonición",
+          "name": "PREMONICIÓN",
           "cost": "1 PA",
           "description": [
-            "<b>PSÍQUICA.</b> Gasta 1 de tus puntos de Clarividencia para ganar 1 PM."
+            "<b>PSÍQUICA</b>. Gasta 1 de tus puntos de Clarividencia para ganar 1PM."
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
         }
       ],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, LÍDER, VISIONARIO",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, LÍDER, VISIONARIO",
       "peana": "32"
     },
     {
@@ -9443,7 +9443,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "2/0",
-            "RA": "Alcance 6\", Área 2\", Devastadora 3, Limitada 1, Saturación, Terrortoxinas"
+            "RA": "Alcance 6\", Área 2\", Devastadora 3, Limitada 1, Saturación, Terrortoxinas<span class=\"faction\">*</span>"
           }
         },
         {
@@ -9453,14 +9453,14 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "3/5",
-            "RA": "Terrortoxinas"
+            "RA": "Terrortoxinas<span class=\"faction\">*</span>"
           }
         }
       ],
       "abilities": [
         {
-          "name": "Terrortoxinas",
-          "description": "En el paso de resolver dados de ataque, si infliges daño con algún éxito crítico, el agente contra el que se esté usando esta arma gana una de tus fichas de Terrortoxinas (si no tiene ya una)."
+          "name": "<span class=\"faction\">*</span>Terrortoxinas",
+          "description": "En el paso de resolver dados de ataque, si infliges daño con algún éxito crítico, incluido como resultado de la regla de armas Devastadora, el agente contra el que se esté usando esta arma gana una de tus fichas de Terrortoxinas (si no tiene ya una)."
         },
         {
           "name": "Veneno de terrortoxinas",
@@ -9469,15 +9469,15 @@
       ],
       "uniqueActions": [
         {
-          "name": "Envenenar Objetivo",
+          "name": "ENVENENAR OBJETIVO",
           "cost": "1 PA",
           "description": [
-            "Elige un marcador de objetivo que controle este agente; este gana una de tus fichas de Terrortoxinas. La primera vez que ese marcador de objetivo esté en la zona de control de un agente enemigo que no tenga una de tus fichas de Terrortoxinas, ese agente gana esa ficha de Terrortoxinas, y a continuación inflígele 2D3 daños."
+            "Elige un marcador de objetivo que controle este agente; este gana una de tus fichas de Terrortoxinas. No puede ser un marcador de objetivo que esté en la zona de control de agentes enemigos o que tenga ya una de tus fichas de Terrortoxinas. La primera vez que un agente enemigo que no tenga ninguna de tus fichas de Terrotoxinas dispute ese marcador de objetivo, ese agente gana esa ficha de Terrortoxinas, y a continuación inflígele 2D3 daños (si es durante una acción, al final de dicha acción)."
           ],
-          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni sobre objetivos que ya tengan fichas o estén en zona de control enemiga."
+          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, SIEMBRAMIEDOS",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, SIEMBRAMIEDOS",
       "peana": "32"
     },
     {
@@ -9553,7 +9553,7 @@
       ],
       "abilities": [],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, TIRADOR",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, TIRADOR",
       "peana": "32"
     },
     {
@@ -9603,11 +9603,11 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "3/5",
-            "RA": "Area 2\", Pesada (solo Reposicionarse)"
+            "RA": "Área 2\", Pesada (solo Reposicionarse)"
           }
         },
         {
-          "name": "Lanzamisiles (Perforante)",
+          "name": "Lanzamisiles (perforante)",
           "type": "ranged",
           "stats": {
             "A": "4",
@@ -9629,7 +9629,7 @@
       ],
       "abilities": [],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, TIRADOR PESADO",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, TIRADOR PESADO",
       "peana": "32"
     },
     {
@@ -9664,7 +9664,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, AULLADOR",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, AULLADOR",
       "peana": "32"
     },
     {
@@ -9705,11 +9705,11 @@
         },
         {
           "name": "Tirano de los pozos de desollado",
-          "description": "Cuando este agente combate o contraataca, el Daño Normal y Critico de 3 o más le inflige 1 daño menos."
+          "description": "Cuando este agente combate o contraataca, el daño normal y crítico de 3 o más le inflige 1 daño menos."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, ROBAPIELES",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, ROBAPIELES",
       "peana": "32"
     },
     {
@@ -9754,12 +9754,12 @@
           "name": "IMITACIÓN DESCONCERTANTE",
           "cost": "1 PA",
           "description": [
-            "<b>PSÍQUICA.</b> Elige un agente enemigo a 6\" o menos de este agente, y elige una opción (una vez por batalla cada una): <ul><li>Resta 1 a su atributo LPA hasta el final de su siguiente activación.</li></ul> <ul><li>Cambia su orden.</li></ul> <ul><li>Realiza una acción libre de <b>Correr</b> con él (tú indicas dónde se mueve).</li></ul>"
+            "<b>PSÍQUICA</b>. Elige un agente enemigo a 6\" o menos de este agente, y a continuación elige una de las siguientes opciones para ese agente enemigo (solo puedes elegir cada opción una vez por batalla):<ul><li>Hasta el final de su siguiente activación, resta 1 a su atributo LPA.</li><li>Cambia su orden.</li><li>Realiza una acción libre de <b>Correr</b> con él (indica a tu oponente la localización a la que se moverá).</li></ul>"
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, VENTRILOKAR",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, VENTRILOKAR",
       "peana": "32"
     },
     {
@@ -9816,11 +9816,11 @@
       "abilities": [
         {
           "name": "Atormentador cruel",
-          "description": "Cuando este agente dispara, combata o contraataca contra un agente enemigo lesionado o contra un agente enemigo con un atributo Heridas de 7 o menos, las armas de este agente tienen la regia de arma Letal 5+."
+          "description": "Cuando este agente dispare, combata o contraataca contra un agente enemigo lesionado o contra un agente enemigo con un atributo Heridas de 7 o menos, las armas de este agente tienen la regla de arma Letal 5+."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, COMBATIENTE",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, COMBATIENTE",
       "peana": "32"
     }
   ],

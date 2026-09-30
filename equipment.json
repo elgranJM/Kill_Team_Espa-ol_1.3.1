@@ -672,23 +672,23 @@
     "id_equip": 86,
     "faction": "nemesis-claw",
     "name": "Piel Desollada",
-    "description": "Piel Desollada: Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente NEMESIS CLAW amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.", 
+    "description": "Cuando un agente enemigo dispara, combate o contraataca contra un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo a 2\" o menos de él, tu oponente no puede repetir sus dados de ataque con resultados de 1.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 87,
     "faction": "nemesis-claw",
-    "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente NEMESIS CLAW amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).", 
+    "name": "Cepo de Cadena",
+    "description": "Cuando un agente enemigo vaya a realizar una acción de <b>Retroceder</b> mientras se encuentra en la zona de control de un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo, si no hay otros agentes enemigos en la zona de control de ese agente amigo, puedes usar esta regla. En tal caso, tira dos D6, o un D6 si ese agente enemigo tiene un atributo Heridas mayor que el del agente amigo en cuestión. Si sacas algún 4+, el agente enemigo no puede realizar esa acción durante esta activación/reacción (y no gasta PA en ella), y no puedes usar esta regla de nuevo durante este punto de inflexión.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 88,
     "faction": "nemesis-claw",
-    "name": "Trofeo Macabro",
-    "description": "Trofeo Macabro: Una vez por batalla, cuando un agente NEMESIS CLAW amigo incapacita a un agente enemigo a 2\" o menos de él, gana una de tus fichas de Trofeo Macabro (si no tiene ya una). Siempre que un agente NEMESIS CLAW amigo que tenga una de tus fichas de Trofeo Macabro sea visible y esté a 2\" o menos de un agente enemigo, resta 1 del atributo de Atq de las armas de ese agente enemigo.", 
+    "name": "Trofeo Atroz",
+    "description": "Una vez por batalla, cuando un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo incapacite a un agente enemigo a 2\" o menos de él, puedes usar esta regla. Si lo haces, ese agente amigo obtiene una de tus fichas de Trofeo atroz (si no tiene ya una). Cuando un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo que tenga una de tus fichas de Trofeo atroz se encuentre a 2\" o menos de un agente enemigo y sea visible para él, resta 1 al atributo Ataque de las armas de ese agente enemigo.", 
     "weapon": [],
     "action": []
   },
@@ -696,7 +696,7 @@
     "id_equip": 89,
     "faction": "nemesis-claw",
     "name": "Inhibidores de Comunicaciones",
-    "description": "Inhibidores de Comunicaciones: Siempre que un agente enemigo esté a 3\" o menos de un agente NEMESIS CLAW amigo, el atributo de LPA de ese agente enemigo no puede ser incrementado. Ten en cuenta que esto no afecta a los atributos de LPA que ya han sido cambiados.", 
+    "description": "Siempre que un agente enemigo esté a 3\" o menos de un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo, no se puede aumentar el atributo LPA de ese agente enemigo. Ten en cuenta que esto no afecta a los atributos LPA que ya hayan sido cambiados.", 
     "weapon": [],
     "action": []
   },

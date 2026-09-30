@@ -1659,7 +1659,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, LÍDER",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, LÍDER",
             "peana": "25"
         },
         {
@@ -1728,7 +1728,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, KELERMORFO",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, KELERMORFO",
             "peana": "32"
         },
         {
@@ -1765,7 +1765,7 @@
             "abilities": [
                 {
                     "name": "Espadachín experto",
-                    "description": "Este agente puede realizar dos acciones de <b>Combatir</b> durante su activación. Cada vez que este agente termina una acción de <b>Combatir</b>, si ya no está en la de zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso si ya ha realizado una acción de <b>Cargar</b> durante esa activación), pero no puede mover más de 3\" durante esa acción. Hacer eso no le impide realizar la acción de <b>Correr</b> más tarde durante esa activación."
+                    "description": "Este agente puede realizar dos acciones de <b>Combatir</b> durante su activación. Cada vez que este agente termina una acción de <b>Combatir</b>, si ya no está en la zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso si ya ha realizado una acción de <b>Cargar</b> durante esa activación), pero no puede mover más de 3\" durante esa acción. Hacer eso no le impide realizar la acción de <b>Correr</b> más tarde durante esa activación."
                 },
                 {
                     "name": "Golpe veloz",
@@ -1777,7 +1777,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, LOCUS",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, LOCUS",
             "peana": "32"
         },
         {
@@ -1824,7 +1824,7 @@
             "abilities": [],
             "uniqueActions": [
                 {
-                    "name": "Apuntar a punto débil",
+                    "name": "APUNTAR A PUNTO DÉBIL",
                     "cost": "1 PA",
                     "description": [
                         "Hasta el final de la activación de este agente, el perfil inmóvil de su rifle de francotirador de Sanctus tiene la regla de armas Letal 5+."
@@ -1832,7 +1832,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
                 {
-                    "name": "Familiar escrutaalmas",
+                    "name": "FAMILIAR ESCRUTAALMAS",
                     "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final de la batalla, o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), ese agente enemigo obtiene una de tus fichas de Escrutaalmas. Cuando este agente dispara contra un agente enemigo que tenga una de tus fichas de Escrutaalmas, todos los perfiles del rifle de francotirador de Sanctus de este agente tienen la regla de armas Saturación y ese agente enemigo no puede estar ofuscado."
@@ -1840,7 +1840,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, SANCTUS, FRANCOTIRADOR",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, SANCTUS, FRANCOTIRADOR",
             "peana": "32"
         },
         {
@@ -1867,20 +1867,20 @@
             "abilities": [
                 {
                     "name": "Sombra reptante",
-                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de ocultarse. Siempre que este agente realice la acción de <b>Combatir</b>, puede realizar inmediatamente una acción libre de <b>Correr</b> o <b>Retroceder</b> (con la segunda, no puede mover más de 3\"), incluso si ha realizado una acción que le impide realizar esas acciones."
+                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de <b>Ocultarse</b>. Siempre que este agente realice la acción de <b>Combatir</b>, puede realizar inmediatamente una acción libre de <b>Correr</b> o <b>Retroceder</b> (con la segunda, no puede mover más de 3\"), incluso si ha realizado una acción que le impide realizar esas acciones."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "Asesinar",
-                    "cost": "2 LPA",
+                    "name": "ASESINAR",
+                    "cost": "2 PA",
                     "description": [
                         "Elige un agente enemigo para el que este agente no sea visible. Realiza una acción libre de <b>Cargar</b> con este agente, pero que no exceda su atributo Movimiento (es decir, no le sumes 2\"), y debe terminar esa acción en la zona de control de ese agente enemigo. A continuación, realiza inmediatamente una acción libre de <b>Combatir</b> con este agente contra ese agente enemigo. La primera vez que golpees durante esa acción, puedes resolver inmediatamente otro de tus éxitos como un golpe (antes que tu oponente)."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de trabarse."
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de <b>Trabarse</b>."
                 },
                 {
-                    "name": "Familiar escrutaalmas",
+                    "name": "FAMILIAR ESCRUTAALMAS",
                     "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo visible para este agente. Hasta el final de la batalla, o hasta que un agente amigo realice esta acción de nuevo (lo que ocurra antes), ese agente enemigo obtiene una de tus fichas de Escrutaalmas. Cuando este agente combate o contraataca contra un agente enemigo que tenga una de tus fichas de Escrutaalmas, su biodaga de Sanctus tiene las reglas de armas Brutal y Equilibrada."
@@ -1888,7 +1888,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, SANCTUS, ZARPA",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, ACTIVO DEL CULTO, SANCTUS, ZARPA",
             "peana": "32"
         },
         {
@@ -1922,7 +1922,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -1947,14 +1947,14 @@
                     "stats": {
                         "A": "3",
                         "HP/HA": "4+",
-                        "Dñ": "3/4",
+                        "Dñ": "2/3",
                         "RA": "-"
                     }
                 }
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, TIRADOR",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, TIRADOR",
             "peana": "25"
         },
         {
@@ -2016,6 +2016,16 @@
                         "Dñ": "4/4",
                         "RA": "Alcance 6\", Aturdidora, Críticos de penetración 1, Pesada (solo Correr)"
                     }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
                 }
             ],
             "abilities": [
@@ -2025,7 +2035,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, TIRADOR PESADO",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, TIRADOR PESADO",
             "peana": "32"
         },
         {
@@ -2076,11 +2086,11 @@
                 },
                 {
                     "name": "Derrocar a los opresores",
-                    "description": "Una vez por punto de inflexión, cuando un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado es incapacitado estando a 6\" o menos de este agente y visible para él, puede o bien realizar una acción libre de <b>Disparar</b> (puedes cambiar su orden para ello), o bien puedes usar un ardid de tiroteo Un plan gestado hace generaciones por 0PM si ese agente incapacitado es el agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo especificado. A continuación es retirado de la zona de aniquilación de forma normal."
+                    "description": "Una vez por punto de inflexión, cuando un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado es incapacitado estando a 6\" o menos de este agente y visible para él, puedes usar esta regla. Si lo haces, antes de retirar ese agente de la zona de aniquilación, puede o bien realizar una acción libre de <b>Disparar</b> (puedes cambiar su orden para ello), o bien puedes usar el ardid de tiroteo Un plan gestado hace generaciones por 0PM si ese agente incapacitado es el agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo especificado. A continuación es retirado de la zona de aniquilación de forma normal."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, PORTADOR DEL ICONO",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, PORTADOR DEL ICONO",
             "peana": "25"
         },
         {
@@ -2112,6 +2122,16 @@
                         "Dñ": "3/3",
                         "RA": "Alcance 6\""
                     }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
                 }
             ],
             "abilities": [
@@ -2121,7 +2141,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">FILOSIERPES</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, COMBATIENTE",
+            "keywords": "<span class=\"faction\">FILOSIERPE</span>, TIRÁNIDO, CULTO GENESTEALER, NEÓFITO, COMBATIENTE",
             "peana": "25"
         }
     ],
@@ -4160,7 +4180,7 @@
     "tempestus-aquilons": [
         {
             "id": "aquilon-tempestor",
-            "name": "TEMPESTOR AQUILÓN",
+            "name": "TEMPESTOR AQUILON",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -4232,12 +4252,12 @@
             "abilities": [
                 {
                     "name": "Veterano tempestus",
-                    "description": "Una vez por batalla, puedes usar o bien un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">TEMPESTUS AQUILÓN</span> especificado, o bien el ardid de tiroteo Repetición de mando por 0PM si este es el agente por el que se han tirado los dados de ataque o defensa."
+                    "description": "Una vez por batalla, puedes usar o bien un ardid de tiroteo por 0PM si este es el agente <span class=\"faction\">TEMPESTUS AQUILON</span> especificado, o bien el ardid de tiroteo Repetición de mando por 0PM si este es el agente por el que se han tirado los dados de ataque o defensa."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "Mando",
+                    "name": "MANDO",
                     "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo distinto (salvo <b>SERVOCENTINELA</b>) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
@@ -4250,7 +4270,7 @@
         },
         {
             "id": "aquilon-grenadier",
-            "name": "GRANADERO AQUILÓN",
+            "name": "GRANADERO AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4292,7 +4312,7 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, Penetración, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente use una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, perforantes, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando este agente use una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [],
@@ -4301,7 +4321,7 @@
         },
         {
             "id": "aquilon-pistolier",
-            "name": "PISTOLERO AQUILÓN",
+            "name": "PISTOLERO AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4347,7 +4367,7 @@
                 },
                 {
                     "name": "Tirotear",
-                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados (incluyendo a este, si procede), este agente puede realizar una acción libre de <b>Disparar</b> (para ello, cambia su orden a trabarse), pero solo puede tomar como blanco a ese agente enemigo con sus pistolas láser potenciadas (concentrado), y solo puedes tirar tantos dados de ataque como los dados de ataque descartados del oponente más 1 (hasta un máximo de 4)."
+                    "description": "Siempre que un agente enemigo a 8\" o menos de este agente dispare contra él, lleva la cuenta de cada dado de ataque que se haya descartado como fallo. Tras la acción, antes de retirar a los agentes incapacitados (incluyendo a este, si procede), este agente puede realizar una acción libre de <b>Disparar</b> (para ello, cambia su orden a <b>Trabarse</b>), pero solo puede tomar como blanco a ese agente enemigo con sus pistolas láser potenciadas (concentrado), y solo puedes tirar tantos dados de ataque como los dados de ataque descartados del oponente más 1 (hasta un máximo de 4)."
                 }
             ],
             "uniqueActions": [],
@@ -4356,7 +4376,7 @@
         },
         {
             "id": "aquilon-gunner",
-            "name": "TIRADOR AQUILÓN",
+            "name": "TIRADOR AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4412,7 +4432,7 @@
         },
         {
             "id": "aquilon-marksman",
-            "name": "OJO PRECISO AQUILÓN",
+            "name": "OJO PRECISO AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4464,7 +4484,7 @@
             "abilities": [
                 {
                     "name": "Ventaja de francotirador",
-                    "description": "Siempre que este agente esté en terreno Aventajado y dispare contra un agente que tenga una orden de trabarse y se encuentre al menos 2\" por debajo de él, todos los perfiles de su rifle láser telescópico potenciado tienen la regla de arma Severa."
+                    "description": "Siempre que este agente esté en terreno Aventajado y dispare contra un agente que tenga una orden de <b>Trabarse</b> y se encuentre al menos 2\" por debajo de él, todos los perfiles de su rifle láser telescópico potenciado tienen la regla de arma Severa."
                 },
                 {
                     "name": "<span class=\"faction\">*</span>Posición oculta",
@@ -4477,7 +4497,7 @@
         },
         {
             "id": "aquilon-precursor",
-            "name": "PRECURSOR AQUILÓN",
+            "name": "PRECURSOR AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -4513,7 +4533,7 @@
                 },
                 {
                     "name": "Enérgico",
-                    "description": "Siempre que este agente realice la acción de <b>Combatir</b> o <b>Disparar</b>, puede realizar inmediatamente después una acción libre de <b>Correr</b>. Puede hacerlo incluso si ha realizado una acción de <b>Cargar</b> durante esta activación, pero solo puede usar la distancia restante que le quedase de esa acción de <b>Cargar</b> (hasta un máximo de 3\")."
+                    "description": "Siempre que este agente realice la acción de <b>Combatir</b> o <b>Disparar</b>, puede realizar inmediatamente después una acción libre de <b>Correr</b>. Puede hacerlo incluso si ha realizado una acción de <b>Cargar</b> durante esta activación."
                 }
             ],
             "uniqueActions": [],
@@ -4522,7 +4542,7 @@
         },
         {
             "id": "servo-sentry",
-            "name": "SERVOCENTINELA AQUILÓN",
+            "name": "SERVOCENTINELA AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "4\"",
@@ -4551,7 +4571,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -4597,7 +4617,7 @@
         },
         {
             "id": "aquilon-soldier",
-            "name": "SOLDADO AQUILÓN",
+            "name": "SOLDADO AQUILON",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -6281,11 +6301,11 @@
         },
         {
           "name": "Designación de blanco",
-          "description": "<b>GAMBITO ESTRATÉGICO</b>. Selecciona un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDOS</span> amigo dispare a ese agente enemigo con un rifle, esa arma tiene la regla de arma Letal 5+."
+          "description": "<b>GAMBITO ESTRATÉGICO</b>. Selecciona un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDO</span> amigo dispare a ese agente enemigo con un rifle, esa arma tiene la regla de arma Letal 5+."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RÁTIDOS</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, CONSEGUIDOR",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, CONSEGUIDOR",
       "peana": "25"
     },
     {
@@ -6312,15 +6332,15 @@
       "abilities": [
         {
           "name": "Alerta temprana",
-          "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción en la que se mueva o se despliegue, puedes interrumpir esa activación o reacción y usar esta regla. Si lo haces, cada agente <span class=\"faction\">RÁTIDOS</span> amigo (salvo OGRETE y TOROGRETE) a 6\" o menos de este agente y a 2\" o menos de ese agente enemigo puede realizar una acción libre de <b>Correr</b> o una acción libre de <b>Retroceder</b>, pero no puede moverse más de 3\". En cualquier caso, cada uno no puede terminar ese movimiento a 2\" o menos de un agente enemigo a menos que no sea visible para ninguno de los agentes enemigos cuando termine ese movimiento."
+          "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción en la que se mueva o se despliegue, puedes interrumpir esa activación o reacción y usar esta regla. Si lo haces, cada agente <span class=\"faction\">RÁTIDO</span> amigo (salvo OGRETE y TOROGRETE) a 6\" o menos de este agente y a 2\" o menos de ese agente enemigo puede realizar una acción libre de <b>Correr</b> o una acción libre de <b>Retroceder</b>, pero no puede moverse más de 3\". En cualquier caso, cada uno no puede terminar ese movimiento a 2\" o menos de un agente enemigo a menos que no sea visible para ninguno de los agentes enemigos cuando termine ese movimiento (si esto no es posible para un agente, no puede moverse)."
         },
         {
           "name": "Bestia",
-          "description": "Este agente no puede realizar ninguna acción que no sea Carga, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b> y <b>Reposicionarse</b>. No puede usar armas que no figuren en su tarjeta de datos."
+          "description": "Este agente no puede realizar ninguna acción que no sea Carga, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b> y <b>Reposicionarse</b>. No puede usar armas que no figuren en su tarjeta de datos."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RÁTIDOS</span>, IMPERIUM, ASTRA MILITARUM, CHUCHO DE BATALLA",
+      "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, CHUCHO DE BATALLA",
       "peana": "25"
     },
     {
@@ -6434,7 +6454,7 @@
         },
         {
           "name": "Bruto",
-          "description": "Cuando tu oponente elija un blanco válido, si este agente tiene una orden de Ocultarse, no puede usar terreno Ligero como cobertura."
+          "description": "Cuando tu oponente elija un blanco válido, si este agente tiene una orden de Ocultarse, no puede usar terreno Ligero como cobertura. Si bien esto puede permitir que este agente se convierta en blanco (suponiendo que sea visible), no elimina su salvación de cobertura (si la tiene)."
         }
       ],
       "uniqueActions": [],
@@ -6545,7 +6565,7 @@
         },
         {
           "name": "Mina",
-          "description": "Las minas que selecciones del equipo universal infligen 2D3+3 de daño en su lugar, y los agentes <span class=\"faction\">RÁTIDOS</span> amigos (salvo OGRETE y TOROGRETE) se ignoran a todos sus efectos."
+          "description": "Las minas que selecciones del equipo universal infligen 2D3+3 de daño en su lugar, y los agentes <span class=\"faction\">RÁTIDO</span> amigos (salvo OGRETE y TOROGRETE) se ignoran a todos sus efectos (es decir, no pueden activarlas ni recibir daño por ellas). Esto tiene prioridad sobre las reglas normales de las minas."
         }
       ],
       "uniqueActions": [],
@@ -6576,7 +6596,7 @@
           "name": "Filoarma",
           "type": "melee",
           "stats": {
-            "A": "4",
+            "A": "3",
             "HP/HA": "3+",
             "Dñ": "3/5",
             "RA": "Equilibrada"
@@ -6701,7 +6721,7 @@
       "abilities": [
         {
           "name": "Escapar",
-          "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción, puedes interrumpir esa activación o reacción y realizar una acción libre de <b>Correr</b> con este agente."
+          "description": "Una vez por punto de inflexión, después de que un agente enemigo realice una acción, puedes interrumpir esa activación o reacción y realizar una acción libre de <b>Correr</b> con este agente. Ten en cuenta que este agente no puede usar la regla de facción <b>Escabullirse</b> (en su lugar tiene esta regla)."
         }
       ],
       "uniqueActions": [
@@ -6810,7 +6830,7 @@
           "name": "AVISTAR",
           "cost": "1 PA",
           "description": [
-            "<b>APOYO</b>. Selecciona un agente enemigo visible para este agente. Una vez durante este punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDOS</span> amigo a 3\" o menos de este agente dispare a ese agente enemigo, puedes usar este efecto: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li></ul><ul><li>Ese agente enemigo no está ofuscado.</li></ul>"
+            "<b>APOYO</b>. Selecciona un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">RÁTIDO</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero).</li><li>Ese agente enemigo no está ofuscado.</li></ul>"
           ],
           "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo."
         }
@@ -6920,7 +6940,7 @@
           "name": "INTERCEPTAR COMUNICACIONES",
           "cost": "1 PA",
           "description": [
-            "<b>APOYO</b>. Selecciona otro agente <span class=\"faction\">RÁTIDOS</span> amigo visible y a 6\" o menos de este agente. Hasta el final de su próxima activación, suma 1 al atributo LPA de ese agente."
+            "<b>APOYO</b>. Selecciona otro agente <span class=\"faction\">RÁTIDO</span> amigo visible y a 6\" o menos de este agente. Hasta el final de su próxima activación, suma 1 al atributo LPA de ese agente."
           ],
           "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo."
         }
@@ -9337,7 +9357,7 @@
           }
         },
         {
-          "name": "Puño de energia",
+          "name": "Puño de energía",
           "type": "melee",
           "stats": {
             "A": "5",
@@ -9347,7 +9367,7 @@
           }
         },
         {
-          "name": "Maza de energia",
+          "name": "Maza de energía",
           "type": "melee",
           "stats": {
             "A": "5",
@@ -9357,12 +9377,12 @@
           }
         },
         {
-          "name": "Arma de energia",
+          "name": "Arma de energía",
           "type": "melee",
           "stats": {
             "A": "5",
             "HP/HA": "3+",
-            "Dñ": "6/6",
+            "Dñ": "4/6",
             "RA": "Letal 5+"
           }
         }
@@ -9370,20 +9390,20 @@
       "abilities": [
         {
           "name": "Clarividencia",
-          "description": "<b>PSÍQUICA.</b> En el pase de preparación de cada fase de estrategia, ganas 1D3 puntos de Clarividencia. Al final de cada punto de inflexión, descarta tus puntos de Claridivencia. Puedes gastar tus puntos de Clarividencia en la fase de tiroteo tal como se indica a continuación (no puedes usar cada una de las siguientes reglas más de una vez por punto de inflexión): Corazonada (puedes gastar 1 punto para saltarte una activación) o Portento (puedes gastar 1 punto para ignorar el daño normal de un dado de ataque)."
+          "description": "<b>PSÍQUICA</b>. En el paso de preparación de cada fase de estrategia, ganas 1D3 puntos de Clarividencia. Al final de cada punto de inflexión, descarta tus puntos de Clarividencia. Puedes gastar tus puntos de Clarividencia en la fase de tiroteo tal como se indica a continuación (no puedes usar cada una de las siguientes reglas más de una vez por punto de inflexión):<ul><li><b>Corazonada:</b> <b>PSÍQUICA</b>. Cuando sea tu turno de activar un agente amigo, puedes gastar 1 de tus puntos de Clarividencia para saltarte esa activación.</li><li><b>Portento:</b> <b>PSÍQUICA</b>. Cuando un dado de ataque inflige Daño normal a este agente, puedes gastar 1 de tus puntos de Clarividencia para ignorar ese daño infligido.</li></ul>No puedes ganar ni gastar tus puntos de Clarividencia si este agente está incapacitado."
         }
       ],
       "uniqueActions": [
         {
-          "name": "Premonición",
+          "name": "PREMONICIÓN",
           "cost": "1 PA",
           "description": [
-            "<b>PSÍQUICA.</b> Gasta 1 de tus puntos de Clarividencia para ganar 1 PM."
+            "<b>PSÍQUICA</b>. Gasta 1 de tus puntos de Clarividencia para ganar 1PM."
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
         }
       ],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, LÍDER, VISIONARIO",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, LÍDER, VISIONARIO",
       "peana": "32"
     },
     {
@@ -9423,7 +9443,7 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "2/0",
-            "RA": "Alcance 6\", Área 2\", Devastadora 3, Limitada 1, Saturación, Terrortoxinas"
+            "RA": "Alcance 6\", Área 2\", Devastadora 3, Limitada 1, Saturación, Terrortoxinas<span class=\"faction\">*</span>"
           }
         },
         {
@@ -9433,14 +9453,14 @@
             "A": "5",
             "HP/HA": "3+",
             "Dñ": "3/5",
-            "RA": "Terrortoxinas"
+            "RA": "Terrortoxinas<span class=\"faction\">*</span>"
           }
         }
       ],
       "abilities": [
         {
-          "name": "Terrortoxinas",
-          "description": "En el paso de resolver dados de ataque, si infliges daño con algún éxito crítico, el agente contra el que se esté usando esta arma gana una de tus fichas de Terrortoxinas (si no tiene ya una)."
+          "name": "<span class=\"faction\">*</span>Terrortoxinas",
+          "description": "En el paso de resolver dados de ataque, si infliges daño con algún éxito crítico, incluido como resultado de la regla de armas Devastadora, el agente contra el que se esté usando esta arma gana una de tus fichas de Terrortoxinas (si no tiene ya una)."
         },
         {
           "name": "Veneno de terrortoxinas",
@@ -9449,15 +9469,15 @@
       ],
       "uniqueActions": [
         {
-          "name": "Envenenar Objetivo",
+          "name": "ENVENENAR OBJETIVO",
           "cost": "1 PA",
           "description": [
-            "Elige un marcador de objetivo que controle este agente; este gana una de tus fichas de Terrortoxinas. La primera vez que ese marcador de objetivo esté en la zona de control de un agente enemigo que no tenga una de tus fichas de Terrortoxinas, ese agente gana esa ficha de Terrortoxinas, y a continuación inflígele 2D3 daños."
+            "Elige un marcador de objetivo que controle este agente; este gana una de tus fichas de Terrortoxinas. No puede ser un marcador de objetivo que esté en la zona de control de agentes enemigos o que tenga ya una de tus fichas de Terrortoxinas. La primera vez que un agente enemigo que no tenga ninguna de tus fichas de Terrotoxinas dispute ese marcador de objetivo, ese agente gana esa ficha de Terrortoxinas, y a continuación inflígele 2D3 daños (si es durante una acción, al final de dicha acción)."
           ],
-          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni sobre objetivos que ya tengan fichas o estén en zona de control enemiga."
+          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, SIEMBRAMIEDOS",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, SIEMBRAMIEDOS",
       "peana": "32"
     },
     {
@@ -9533,7 +9553,7 @@
       ],
       "abilities": [],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, TIRADOR",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, TIRADOR",
       "peana": "32"
     },
     {
@@ -9583,11 +9603,11 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "3/5",
-            "RA": "Area 2\", Pesada (solo Reposicionarse)"
+            "RA": "Área 2\", Pesada (solo Reposicionarse)"
           }
         },
         {
-          "name": "Lanzamisiles (Perforante)",
+          "name": "Lanzamisiles (perforante)",
           "type": "ranged",
           "stats": {
             "A": "4",
@@ -9609,7 +9629,7 @@
       ],
       "abilities": [],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, TIRADOR PESADO",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, TIRADOR PESADO",
       "peana": "32"
     },
     {
@@ -9644,7 +9664,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, AULLADOR",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, AULLADOR",
       "peana": "32"
     },
     {
@@ -9685,11 +9705,11 @@
         },
         {
           "name": "Tirano de los pozos de desollado",
-          "description": "Cuando este agente combate o contraataca, el Daño Normal y Critico de 3 o más le inflige 1 daño menos."
+          "description": "Cuando este agente combate o contraataca, el daño normal y crítico de 3 o más le inflige 1 daño menos."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, ROBAPIELES",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, ROBAPIELES",
       "peana": "32"
     },
     {
@@ -9734,12 +9754,12 @@
           "name": "IMITACIÓN DESCONCERTANTE",
           "cost": "1 PA",
           "description": [
-            "<b>PSÍQUICA.</b> Elige un agente enemigo a 6\" o menos de este agente, y elige una opción (una vez por batalla cada una): <ul><li>Resta 1 a su atributo LPA hasta el final de su siguiente activación.</li></ul> <ul><li>Cambia su orden.</li></ul> <ul><li>Realiza una acción libre de <b>Correr</b> con él (tú indicas dónde se mueve).</li></ul>"
+            "<b>PSÍQUICA</b>. Elige un agente enemigo a 6\" o menos de este agente, y a continuación elige una de las siguientes opciones para ese agente enemigo (solo puedes elegir cada opción una vez por batalla):<ul><li>Hasta el final de su siguiente activación, resta 1 a su atributo LPA.</li><li>Cambia su orden.</li><li>Realiza una acción libre de <b>Correr</b> con él (indica a tu oponente la localización a la que se moverá).</li></ul>"
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, VENTRILOKAR",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, PSÍQUICO, VENTRILOKAR",
       "peana": "32"
     },
     {
@@ -9796,11 +9816,11 @@
       "abilities": [
         {
           "name": "Atormentador cruel",
-          "description": "Cuando este agente dispara, combata o contraataca contra un agente enemigo lesionado o contra un agente enemigo con un atributo Heridas de 7 o menos, las armas de este agente tienen la regia de arma Letal 5+."
+          "description": "Cuando este agente dispare, combata o contraataca contra un agente enemigo lesionado o contra un agente enemigo con un atributo Heridas de 7 o menos, las armas de este agente tienen la regla de arma Letal 5+."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">GARRA NEMESIS</span>, CAOS, ASTARTES HEREJES, COMBATIENTE",
+      "keywords": "<span class=\"faction\">GARRA NÉMESIS</span>, CAOS, ASTARTES HEREJES, COMBATIENTE",
       "peana": "32"
     }
   ],
@@ -18982,7 +19002,7 @@
     "deathwatch": [
         {
             "id": "watch-sergeant",
-            "name": "SARGENTO DE LA GUARDIA",
+            "name": "SARGENTO VIGÍA",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19028,7 +19048,7 @@
                 },
                 {
                     "name": "Mando estratégico",
-                    "description": "Puedes hacer cada una de las siguientes cosas una vez por batalla si este agente se encuentra en la zona de aniquilación: <ul><li>Usar un ardid de estrategia <span class=\"faction\">VIGÍA DE LA MUERTE</span> por 0 PM</li></ul> <ul><li>Usar un ardid de tiroteo <span class=\"faction\">VIGÍA DE LA MUERTE</span> por 0 PM.</li></ul>"
+                    "description": "Puedes hacer cada una de las siguientes cosas una vez por batalla si este agente se encuentra en la zona de aniquilación: <ul><li>Usar un ardid de estrategia <span class=\"faction\">VIGÍA DE LA MUERTE</span> por 0 PM.</li><li>Usar un ardid de tiroteo <span class=\"faction\">VIGÍA DE LA MUERTE</span> por 0 PM.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -19037,7 +19057,7 @@
         },
         {
             "id": "aegis",
-            "name": "VIGÍA DE LA MUERTE VETERANO AEGIS",
+            "name": "VETERANO ÉGIDA",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19056,7 +19076,7 @@
                     }
                 },
                 {
-                    "name": "Maza de energia y escudo de tormenta",
+                    "name": "Maza de energía y escudo de tormenta",
                     "type": "melee",
                     "stats": {
                         "A": "5",
@@ -19077,12 +19097,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, AEGIS",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, ÉGIDA",
             "peana": "32"
         },
         {
             "id": "blademaster",
-            "name": "VIGÍA DE LA MUERTE VETERANO MAESTRO DE LOS FILOS",
+            "name": "VETERANO ESPADERO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19132,12 +19152,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, MAESTRO DE LOS FILOS",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, ESPADERO",
             "peana": "32"
         },
         {
             "id": "bombard",
-            "name": "VIGÍA DE LA MUERTE VETERANO BOMBARDERO",
+            "name": "VETERANO BOMBARDERO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "5\"",
@@ -19193,7 +19213,7 @@
         },
         {
             "id": "breacher",
-            "name": "VIGÍA DE LA MUERTE IRRUPTOR VETERANO",
+            "name": "VETERANO IRRUPTOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "5\"",
@@ -19212,7 +19232,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas auxiliar (Perforante)",
+                    "name": "Lanzagranadas auxiliar (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19222,7 +19242,7 @@
                     }
                 },
                 {
-                    "name": "Rifle bolter tormenta infernal",
+                    "name": "Rifle bólter tormenta infernal",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19254,12 +19274,12 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGIAS DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, GRAVIS, IRRUPTOR",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, GRAVIS, IRRUPTOR",
             "peana": "40"
         },
         {
             "id": "demolisher",
-            "name": "VIGÍA DE LA MUERTE VETERANO DEMOLEDOR",
+            "name": "VETERANO DEMOLEDOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19295,7 +19315,7 @@
                 },
                 {
                     "name": "Fuerza agresiva",
-                    "description": "Siempre que este agente combata o contraataque, todo daño normal o critico de 3 o más le inflige 1 daño menos. No acumulable con El escudo que mata."
+                    "description": "Siempre que este agente combata o contraataque, todo daño normal o crítico de 3 o más le inflige 1 daño menos. Esto no es acumulable con el ardid estratégico <b>El escudo que mata</b>."
                 }
             ],
             "uniqueActions": [],
@@ -19304,7 +19324,7 @@
         },
         {
             "id": "disruptor",
-            "name": "VIGÍA DE LA MUERTE VETERANO DISRUPTOR",
+            "name": "VETERANO DISRUPTOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -19336,20 +19356,20 @@
             "abilities": [
                 {
                     "name": "Omniinterferidor avanzado",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo visible para este agente o a 6\" o menos de él, y a continuación tira 1D6. En la fase de tiroteo del punto de inflexión, dicho agente enemigo no puede ser activado ni realizar acciones hasta que se dé una de las siguientes circunstancias: <ul><li>Tu oponente ha activado a un número de agentes enemigos igual al resultado del 1D6.</li></ul> <ul><li>Es el último agente enemigo en ser activado.</li></ul>"
+                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo visible para este agente o a 6\" o menos de él, y a continuación tira 1D6. En la fase de tiroteo del punto de inflexión, dicho agente enemigo no puede ser activado ni realizar acciones hasta que se dé una de las siguientes circunstancias: <ul><li>Tu oponente ha activado a un número de agentes enemigos igual al resultado del 1D6.</li><li>Es el último agente enemigo en ser activado.</li></ul>"
                 },
                 {
                     "name": "Triangulación Auspex",
-                    "description": "<ul>El ardid de tiroteo Lecturas de Auspex avanzadas te costará 0 PM cuando se den las dos siguientes circunstancias:</ul> Este agente no se encuentra en la zona de control de los agentes enemigos. El blanco de esa acción de <b>Disparar</b> (el blanco principal, en caso de que proceda) es visible para este agente. <ul>Ten en cuenta que no es necesario que sea este agente quien realice la acción de <b>Disparar</b>, y que cualquier acción de <b>Disparar</b> subsiguiente durante esa activación/reacción debe cumplir los mismos requisitos (o ese ardid no tiene efecto en las acciones de <b>Disparar</b> subsiguientes)</ul>"
+                    "description": "El ardid de tiroteo <b>Lecturas de Áuspex avanzadas</b> te costará 0 PM cuando se den las dos siguientes circunstancias: <ul><li>Este agente no está en la zona de control de agentes enemigos.</li><li>El blanco de esa acción de <b>Disparar</b> (el blanco principal, en caso de que proceda) es visible para este agente.</li></ul> Ten en cuenta que no es necesario que sea este agente quien realice la acción de <b>Disparar</b>, y que cualquier acción de <b>Disparar</b> subsiguiente durante esa activación/reacción debe cumplir los mismos requisitos (o ese ardid no tiene efecto en las acciones de <b>Disparar</b> subsiguientes)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGIAS DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, DISRUPTOR",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, DISRUPTOR",
             "peana": "32"
         },
         {
             "id": "gunner",
-            "name": "VIGÍA DE LA MUERTE VETERANO TIRADOR",
+            "name": "VETERANO TIRADOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19405,7 +19425,7 @@
         },
         {
             "id": "headtaker",
-            "name": "VIGÍA DE LA MUERTE VETERANO CORTACABEZAS",
+            "name": "VETERANO CORTACABEZAS",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -19436,12 +19456,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Paracaidas gravitatorio y lanzagarfios",
+                    "name": "Paracaídas gravitatorio y lanzagarfios",
                     "description": "Cuando este agente esté trepando, considera la distancia vertical como 2\" (sin importar lo lejos que se mueva verticalmente el agente en realidad). Cuando este agente se deje caer, ignora la distancia vertical."
                 },
                 {
                     "name": "Cortacabezas clandestino",
-                    "description": "Este agente puede realizar la acción de <b>Cargar</b> mientras tenga una orden de ocultarse. Cuando este agente combata contra un agente para el que no era visible al inicio de la activación/reacción, la primera vez que golpees durante esa secuencia puedes resolver de inmediato otro de tus éxitos como un golpe (antes que tu oponente)."
+                    "description": "Este agente puede realizar la acción de <b>Cargar</b> mientras tenga una orden de <b>Ocultarse</b>. Cuando este agente combata contra un agente para el que no era visible al inicio de la activación/reacción, la primera vez que golpees durante esa secuencia puedes resolver de inmediato otro de tus éxitos como un golpe (antes que tu oponente)."
                 }
             ],
             "uniqueActions": [],
@@ -19450,7 +19470,7 @@
         },
         {
             "id": "horde-slayer",
-            "name": "VIGÍA DE LA MUERTE VETERANO MATAHORDAS",
+            "name": "VETERANO MATAHORDAS",
             "stats": {
                 "LPA": "3",
                 "MOVER": "5\"",
@@ -19489,7 +19509,7 @@
                     }
                 },
                 {
-                    "name": "Bolter pesado infernus (munición de barrido)",
+                    "name": "Bólter pesado infernus (munición de barrido)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19516,7 +19536,7 @@
         },
         {
             "id": "marksman",
-            "name": "VIGÍA DE LA MUERTE VETERANO OJO PRECISO",
+            "name": "VETERANO OJO PRECISO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19525,7 +19545,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle bolter silencio (móvil)",
+                    "name": "Rifle bólter silencio (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19558,11 +19578,11 @@
             "abilities": [
                 {
                     "name": "Tirador vigilante",
-                    "description": "Este agente puede realizar la acción Ponerse en guardia durante su activación independientemente de la zona de aniquilación (ver las reglas de combate cerrado, KillTeam: Mundo Necrópolis ). Al usar las reglas de combate cerrado, una vez por punto de inflexión después de que este agente realice una acción libre de <b>Disparar</b> estando en guardia, puede realizar de inmediato una acción libre de En guardia. No obstante, si la hace no podrá reaccionar durante ese punto de inflexión (ni ponerse En guardia dos veces si sufre una reacción)."
+                    "description": "Este agente puede realizar la acción <b>Ponerse en guardia</b> durante su activación independientemente de la zona de aniquilación (ver las reglas de combate cerrado, Kill Team: Mundo Necrópolis). Al usar las reglas de combate cerrado, una vez por punto de inflexión después de que este agente realice una acción libre de <b>Disparar</b> estando en guardia, puede realizar de inmediato una acción libre de <b>Ponerse en guardia</b>. No obstante, si la hace no podrá reaccionar durante ese punto de inflexión (ni <b>Ponerse en guardia</b> dos veces si sufre una reacción)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGIAS DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, OJO PRECISO",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, OJO PRECISO",
             "peana": "32"
         }
     ],
@@ -22417,7 +22437,7 @@
             },
             "weapons": [
                 {
-                    "name": "Pistola Automática",
+                    "name": "Pistola automática",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22427,7 +22447,7 @@
                     }
                 },
                 {
-                    "name": "Pistola Bólter",
+                    "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22447,7 +22467,7 @@
                     }
                 },
                 {
-                    "name": "Pistola Láser",
+                    "name": "Pistola láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22457,7 +22477,7 @@
                     }
                 },
                 {
-                    "name": "Pistola de Plasma (Normal)",
+                    "name": "Pistola de plasma (normal)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22467,7 +22487,7 @@
                     }
                 },
                 {
-                    "name": "Pistola de Plasma (Sobrecarga)",
+                    "name": "Pistola de plasma (sobrecarga)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22477,7 +22497,7 @@
                     }
                 },
                 {
-                    "name": "Espada Sierra",
+                    "name": "Espada sierra",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22487,7 +22507,7 @@
                     }
                 },
                 {
-                    "name": "Hoja Improvisada",
+                    "name": "Hoja improvisada",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22497,7 +22517,7 @@
                     }
                 },
                 {
-                    "name": "Arma de Energía",
+                    "name": "Arma de energía",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22523,7 +22543,7 @@
                     "description": "Una vez por punto de inflexión, cuando un agente UNGIDO amigo con una de tus fichas de Ungido sea incapacitado estando a 6\" o menos de este agente, puedes recuperar esa ficha."
                 },
                 {
-                    "name": "Liderar por la Fuerza",
+                    "name": "Liderar por la fuerza",
                     "description": "Mientras este agente tenga una de tus fichas de Ungido, o esté completamente en el territorio del oponente, se considerará que está bajo la MIRADA DE LOS DIOSES."
                 }
             ],
@@ -22542,7 +22562,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser",
+                    "name": "Rifle láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22552,7 +22572,7 @@
                     }
                 },
                 {
-                    "name": "Bomba Diabólyka",
+                    "name": "Bomba diabólyka",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22575,11 +22595,11 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y Penetración (ver equipo universal). Eso no cuenta para su limite de usos. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Eso no cuenta para su límite de usos (p. ej. si también has seleccionado esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
                 },
                 {
-                    "name": "Deceso Explosivo",
-                    "description": " Si este agente queda incapacitado, antes de retirarlo de la zona de aniquilación, puedes usar esta regla. Si lo haces, tira dos D6, o un D6 si este agente se encuentra en la zona de control de un agente enemigo. Si algún resultado es un 4+, inflige 1D3+2 daños a cada agente a 2\" o menos de este agente y visible para él. Si este agente no ha usado su bomba diabólyka durante la batalla, en su lugar inflige 1D6+2 daños."
+                    "name": "Deceso explosivo",
+                    "description": "Si este agente queda incapacitado, antes de retirarlo de la zona de aniquilación, puedes usar esta regla. Si lo haces, tira dos D6, o un D6 si este agente se encuentra en la zona de control de un agente enemigo. Si algún resultado es un 4+, inflige 1D3+2 daños a cada agente a 2\" o menos de este agente y visible para él (tira por separado por cada uno). Si este agente no ha usado su bomba diabólyka durante la batalla, en su lugar inflige 1D6+2 daños."
                 }
             ],
             "uniqueActions": [],
@@ -22597,24 +22617,24 @@
             },
             "weapons": [
                 {
-                    "name": "Arma de Energía y Cuchilla",
+                    "name": "Arma de energía y cuchilla",
                     "type": "melee",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/6",
-                        "RA": "Incesante, Letal 5+, Ofrenda de Sangre<span class=\"faction\">*</span>"
+                        "RA": "Incesante, Letal 5+, Ofrenda de sangre<span class=\"faction\">*</span>"
                     }
                 }
             ],
             "abilities": [
                 {
-                    "name": "Alimento Impío",
+                    "name": "Alimento impío",
                     "description": "Si este agente combate o contraataca e incapacita al agente enemigo en esa secuencia, recupera hasta 1D3 heridas perdidas. Esto se acumula con el equipo Símbolos de adoración sangrienta."
                 },
                 {
-                    "name": "<span class=\"faction\">*</span>Ofrenda de Sangre",
-                    "description": "Cada vez que este agente combate o contraataca con su arma, la primera vez que golpeas con un éxito crítico durante esa secuencia obtienes una ficha de Ungido."
+                    "name": "<span class=\"faction\">*</span>Ofrenda de sangre",
+                    "description": "Cada vez que este agente combate o contraataca con esta arma, la primera vez que golpeas con un éxito crítico durante esa secuencia obtienes una ficha de Ungido."
                 }
             ],
             "uniqueActions": [],
@@ -22632,7 +22652,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser",
+                    "name": "Rifle láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22652,7 +22672,7 @@
                     }
                 },
                 {
-                    "name": "Aguja de Estimulantes",
+                    "name": "Aguja de estimulantes",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -22664,12 +22684,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Dosis Regulares",
+                    "name": "Dosis regulares",
                     "description": "Al final del paso de Elegir agentes, si este agente es elegido para desplegarse, puedes elegir otro agente UNGIDO amigo para que obtenga una regla de ESTIMULANTES en esta batalla (salvo Revitalizado)."
                 },
                 {
                     "name": "Reglas de ESTIMULANTES",
-                    "description": "<ul><li><b>Revitalizado:</b> El agente recupera 2D3 heridas perdidas</li></ul> <ul><li><b>Enfurecido:</b>  Las armas de combate del agente tienen la regla de arma Implacable</li></ul> <ul><li><b>Fortificado:</b>  Siempre que un dado de ataque inflija 3 o más daños al agente, tira 1D6. Con un 5+, resta 1 a ese daño infligido.</li></ul>"
+                    "description": "<ul><li><b>Revitalizado:</b> El agente recupera hasta 2D3 heridas perdidas.</li><li><b>Enfurecido:</b> Las armas de combate del agente tienen la regla de arma Implacable.</li><li><b>Fortificado:</b> Siempre que un dado de ataque inflija 3 o más daños al agente, tira 1D6. Con un 5+, resta 1 a ese daño infligido.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -22696,7 +22716,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser",
+                    "name": "Rifle láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22724,7 +22744,7 @@
                     "description": [
                         "<b>APOYO</b>. Elige un agente UNGIDO amigo distinto (salvo OGRETE) a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
-                    "description_no": "Esta agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
                 {
                     "name": "ACTUACIÓN SACRÍLEGA",
@@ -22749,7 +22769,7 @@
             },
             "weapons": [
                 {
-                    "name": "Pistola Bólter",
+                    "name": "Pistola bólter",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22759,7 +22779,7 @@
                     }
                 },
                 {
-                    "name": "Puño de Energía",
+                    "name": "Puño de energía",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22771,8 +22791,8 @@
             ],
             "abilities": [
                 {
-                    "name": "Disciplina Rigurosa",
-                    "description": "<ul><li>Mientras un agente UNGIDO amigo se encuentre a 6\" o menos de este agente, puedes ignorar cualquier cambio a sus atributos por estar lesionado (incluyendo a los atributos de sus armas).</li></ul> <ul><li>Siempre que un agente UNGIDO amigo se active a 6\" o menos de este agente, puedes ignorar cualquier cambio a los atributos de ese agente por estar lesionado hasta el final de su activación (incluidos los atributos de sus armas.</li></ul>"
+                    "name": "Disciplina rigurosa",
+                    "description": "<ul><li>Mientras un agente UNGIDO amigo se encuentre a 6\" o menos de este agente, puedes ignorar cualquier cambio a sus atributos por estar lesionado (incluyendo a los atributos de sus armas).</li><li>Siempre que un agente UNGIDO amigo se active a 6\" o menos de este agente, puedes ignorar cualquier cambio a los atributos de ese agente por estar lesionado hasta el final de su activación (incluidos los atributos de sus armas).</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -22780,7 +22800,7 @@
                     "name": "IMPONER ORDEN",
                     "cost": "1 PA",
                     "description": [
-                        "Elige otro agente UNGIDO amigo a 3\" o menos de este agente y visible para él. Ese agente puede realizar inmediatamente una acción de 1PA gratis, pero no puede moverse más de 2\" durante esa acción. Si el agente amigo elegido es un COMUNICADOR, no puede realizar las acciones Actuación sacrílega ni Señal."
+                        "Elige otro agente UNGIDO amigo a 3\" o menos de este agente y visible para él. Ese agente puede realizar inmediatamente una acción libre de 1PA, pero no puede moverse más de 2\" durante esa acción. Si el agente amigo elegido es un COMUNICADOR, no puede realizar las acciones Actuación sacrílega ni Señal."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -22799,7 +22819,7 @@
             },
             "weapons": [
                 {
-                    "name": "Cuchillas de Desollar",
+                    "name": "Cuchillas de desollar",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22812,11 +22832,11 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Acechar",
-                    "description": "Cuando este agente combate o contraataca con su arma, si hay terreno Ligero o Pesado en su zona de control, esta arma tiene la regla de arma Letal 5+."
+                    "description": "Cuando este agente combate o contraataca con esta arma, si hay terreno Ligero o Pesado en su zona de control, esta arma tiene la regla de arma Letal 5+."
                 },
                 {
                     "name": "Mezquino",
-                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de ocultarse. Si este agente queda incapacitado durante la acción de <b>Combatir</b>, puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de retirarlo de la zona de aniquilación."
+                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de <b>Ocultarse</b>. Si este agente queda incapacitado durante la acción de <b>Combatir</b>, puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de retirarlo de la zona de aniquilación."
                 }
             ],
             "uniqueActions": [],
@@ -22844,7 +22864,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Frag)",
+                    "name": "Lanzagranadas (frag)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22854,7 +22874,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22864,7 +22884,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de Fusión",
+                    "name": "Rifle de fusión",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22874,7 +22894,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de Plasma (Normal)",
+                    "name": "Rifle de plasma (normal)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22884,7 +22904,7 @@
                     }
                 },
                 {
-                    "name": "Rifle de Plasma (Sobrecarga)",
+                    "name": "Rifle de plasma (sobrecarga)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22906,7 +22926,7 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "UNGIDO, CAOS, TIRADOR",
+            "keywords": "<span class=\"faction\">UNGIDO</span>, CAOS, TIRADOR",
             "peana": "25"
         },
         {
@@ -22920,7 +22940,7 @@
             },
             "weapons": [
                 {
-                    "name": "Maza de Energía y Garra Mutante",
+                    "name": "Maza de energía y garra mutante",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -22932,16 +22952,16 @@
             ],
             "abilities": [
                 {
-                    "name": "Avalancha de Músculo",
+                    "name": "Avalancha de músculo",
                     "description": "Cada vez que este agente termine su movimiento durante una acción de <b>Cargar</b>, puedes infligir 1D3 daños a un agente enemigo en su zona de control."
                 },
                 {
-                    "name": "Potenciación Química",
+                    "name": "Potenciación química",
                     "description": "Puedes ignorar cualquier cambio al atributo LPA de este agente, y además no se ve afectado por las reglas de arma Aturdidora y Choque de agentes enemigos."
                 },
                 {
                     "name": "Grandote",
-                    "description": "Cuando tu oponente elige un blanco válido, si este agente tiene una orden de ocultarse no se considera a cubierto debido a terreno Ligero. Esto puede permitir que el agente sea tomado como blanco, pero no le niega la salvación por cobertura."
+                    "description": "Cuando tu oponente elige un blanco válido, si este agente tiene una orden de <b>Ocultarse</b> no se considera a cubierto debido a terreno Ligero. Esto puede permitir que el agente sea tomado como blanco (suponiendo que sea visible), pero no le niega la salvación por cobertura de la que disponga."
                 },
                 {
                     "name": "Zoquete",
@@ -22963,7 +22983,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser Telescópico (Móvil)",
+                    "name": "Rifle láser telescópico (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22973,7 +22993,7 @@
                     }
                 },
                 {
-                    "name": "Rifle Láser Telescópico (Inmóvil)",
+                    "name": "Rifle láser telescópico (inmóvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22995,12 +23015,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Capa de Camuflaje",
-                    "description": "Siempre que un agente dispare contra este agente, si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional. No se acumula con terreno Aventajado."
+                    "name": "Capa de camuflaje",
+                    "description": "Siempre que un agente dispare contra este agente, si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado."
                 },
                 {
-                    "name": "Un Nombre Susurrado en Sangre",
-                    "description": "Puedes usar este <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Elige un agente enemigo. Cuando este agente dispare contra dicho agente, se considerará que tiene una ficha de Ungido y está bajo la MIRADA DE LOS DIOSES."
+                    "name": "Un nombre susurrado en sangre",
+                    "description": "Puedes usar este <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Elige un agente enemigo. Cuando este agente dispare contra dicho agente enemigo, se considerará que tiene una de tus fichas de Ungido y está bajo la MIRADA DE LOS DIOSES."
                 }
             ],
             "uniqueActions": [],
@@ -23018,7 +23038,7 @@
             },
             "weapons": [
                 {
-                    "name": "Garrote Pesado",
+                    "name": "Garrote pesado",
                     "type": "melee",
                     "stats": {
                         "A": "4",
@@ -23059,7 +23079,7 @@
                     }
                 },
                 {
-                    "name": "Bayoneta y Escudo",
+                    "name": "Bayoneta y escudo",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -23076,7 +23096,7 @@
                 },
                 {
                     "name": "Escudarse",
-                    "description": "Cada vez que este agente es activado, puedes usar esta regla. Si lo haces, hasta el inicio de la siguiente activación de este agente: <ul><li>Resta 2\" a su atributo Movimiento.</li></ul> <ul><li>Cuando un agente dispare a este agente, puedes repetir cualquiera de tus dados de defensa.</li></ul>"
+                    "description": "Cada vez que este agente es activado, puedes usar esta regla. Si lo haces, hasta el inicio de la siguiente activación de este agente: <ul><li>Resta 2\" a su atributo Movimiento.</li><li>Cuando un agente dispare a este agente, puedes repetir cualquiera de tus dados de defensa.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -23094,7 +23114,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle Láser",
+                    "name": "Rifle láser",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -23116,7 +23136,7 @@
             ],
             "abilities": [
                 {
-                    "name": "Activación en Grupo",
+                    "name": "Activación en grupo",
                     "description": "Cuando este agente quede usado, debes activar a continuación otro agente SOLDADO UNGIDO amigo apostado (si es posible) antes de que active tu oponente. Cuando ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
                 }
             ],

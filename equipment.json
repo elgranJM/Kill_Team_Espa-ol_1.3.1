@@ -34,8 +34,8 @@
   {
     "id_equip": 5,
     "faction": "tempestus-aquilons",
-    "name": "Daga Tempestus",
-    "description": "Los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos (excluyendo SERVO-SENTRY) tienen la siguiente arma de combate:",
+    "name": "Dagas Tempestus",
+    "description": "Los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos (salvo <b>SERVOCENTINELA</b>) tienen la siguiente arma de combate:",
     "weapon": [
       {
         "w_name": "Daga Tempestus",
@@ -51,15 +51,15 @@
     "id_equip": 6,
     "faction": "tempestus-aquilons",
     "name": "Estimulantes de Combate",
-    "description": "Puedes ignorar cualquier cambio en el atributo de Movimiento de los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos por estar lesionados.", 
+    "description": "Puedes ignorar cualquier cambio al atributo Movimiento de los agentes <span class=\"faction\">TEMPESTUS AQUILON</span> amigos por estar lesionados.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 7,
     "faction": "tempestus-aquilons",
-    "name": "Augurio de Despliegue",
-    "description": "Una vez durante la batalla, cuando se active un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo que haya sido desplegado en lo alto, puedes mover uno de tus marcadores de Despliegue de nuevo. No puede moverse más cerca de la zona de despliegue de tu adversario.", 
+    "name": "Augurio Preinserción",
+    "description": "Una vez durante la batalla, al activar un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo desplegado en las alturas, antes de decidir si el agente aterriza o es usado, puedes mover de nuevo uno de tus marcadores de descenso. No obstante, no puede moverse más cerca de lo que está de la zona de descenso de tu oponente.", 
     "weapon": [],
     "action": []
   },
@@ -67,7 +67,7 @@
     "id_equip": 8,
     "faction": "tempestus-aquilons",
     "name": "Supervisor Remoto",
-    "description": "Una vez durante la batalla, al realizar la tirada para decidir la iniciativa, puedes repetir tu D6.", 
+    "description": "Una vez por batalla, tras desempatar para decidir la iniciativa, puedes repetir tu D6.", 
     "weapon": [],
     "action": []
   },
@@ -157,24 +157,24 @@
   {
     "id_equip": 17,
     "faction": "ratling",
-    "name": "Orbes de Santificación",
-    "description": "Al final del paso de Seleccionar agentes, lanza un D3. Si el resultado es: <ul><li>1. Pierdes 1PM.</li></ul> <ul><li>2. Ganas 1PM.</li></ul> <ul><li>3. Tu adversario pierde 1PM.</li></ul>", 
+    "name": "Artículos Robados",
+    "description": "Al final del paso de Elegir agentes, tira 1D3. Si el resultado es: <ul><li>1, pierdes 1PM.</li><li>2, ganas 1PM.</li><li>3, tu oponente pierde 1PM.</li></ul>", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 18,
     "faction": "ratling",
-    "name": "Raciones Hurtadas",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente <span class=\"faction\">RATIDOS</span> amigo esté disparando con un rifle y hayas lanzado tus dados de ataque, puedes usar esta regla si no has usado el equipamiento Ronda de la Suerte durante esta activación. Si lo haces, mejora el atributo de Impacto de su rifle en 1 hasta el final de esa secuencia.", 
+    "name": "Raciones Afanadas",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDO</span> amigo esté disparando con un rifle y hayas tirado tus dados de ataque, puedes usar esta regla si no has usado el equipo Bala de la Suerte durante esta activación. Si lo haces, mejora en 1 el atributo Impactar de su rifle hasta el final de esa secuencia.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 19,
     "faction": "ratling",
-    "name": "Ronda de la Suerte",
-    "description": "Una vez por Punto de Inflexión, siempre que un agente <span class=\"faction\">RATIDOS</span> amigo esté disparando con un rifle y hayas lanzado tus dados de ataque, puedes usar esta regla si no has usado el equipamiento Raciones Hurtadas en esta activación. Si lo haces, esa arma tiene la regla de armas Severa para esa secuencia.", 
+    "name": "Bala de la Suerte",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RÁTIDO</span> amigo dispare con un rifle y hayas tirado tus dados de ataque, puedes usar esta regla. Si lo haces, esa arma tiene la regla de arma Severa para esa secuencia.", 
     "weapon": [],
     "action": []
   },
@@ -182,7 +182,7 @@
     "id_equip": 20,
     "faction": "ratling",
     "name": "Armadura Improvisada",
-    "description": "Siempre que un agente esté disparando a un agente BULLGRYN <span class=\"faction\">RATIDOS</span> amigo o a un agente OGRYN <span class=\"faction\">RATIDOS</span> amigo, sus resultados de dados de defensa de 5+ son éxitos críticos.", 
+    "description": "Siempre que un agente dispare a un agente <b>TOROGRETE</b> <span class=\"faction\">RÁTIDO</span> amigo o a un agente <b>OGRETE</b> <span class=\"faction\">RÁTIDO</span> amigo, los resultados de los dados de defensa de 5+ son éxitos críticos.", 
     "weapon": [],
     "action": []
   },
@@ -467,28 +467,28 @@
   {
     "id_equip": 53,
     "faction": "deathwatch",
-    "name": "ESPOSAS DE BIODETECCIÓN SANCTUS-V",
-    "description": "Una vez durante la activación de cada agente DEATHWATCH amigo, antes o después de que realice una acción, si no está dentro del área de control de agentes enemigos puedes usar esta regla. Si lo haces, selecciona uno de los siguientes: <ul><li>Ese agente amigo recupera D3 heridas perdidas.</li></ul> <ul><li>Elimina cualquier cambio en el atributo de LPA de ese agente amigo.</li></ul> <ul><li>Elimina una de las siguientes fichas que tenga ese agente amigo (antes de que se resuelvan los efectos de activación de esa ficha, si es relevante): Fragmento de Neutrones, Veneno, Terrorquímica.</li></ul>"
+    "name": "Brazaletes de Bioescrutinio Sanctus-V",
+    "description": "Una vez durante la activación de cada agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo, antes o después de que realice una acción, si no se encuentra en la zona de control de agentes enemigos puedes usar esta regla. Si lo haces, elige una de las siguientes opciones: <ul><li>Ese agente amigo recupera hasta 1D3 heridas perdidas.</li><li>Retira cualesquiera cambios al atributo LPA de ese agente amigo.</li><li>Retira una de las siguientes fichas que tenga ese agente amigo (antes de que los efectos de activación de esa ficha se resuelvan, si ello es relevante): fragmento de neutrones, Veneno, Terrotoxinas.</li></ul>"
   },
   {
     "id_equip": 54,
     "faction": "deathwatch",
-    "name": "SERVO-ESCLAVO ESCRUTADOR",
-    "description": "<p>Una vez por Punto de Inflexión, durante la activación de un agente DEATHWATCH amigo, puedes usar esta regla. Si lo haces, durante esa activación, ese agente puede realizar una acción de misión por 1 PA menos.</p> <p>Tener un agente enemigo dentro de su área de control no impide que ese agente amigo realice esa acción de misión. Sin embargo, después de hacerlo, tú y tu adversario tiráis un dado; si tu adversario gana, no puedes usar este equipamiento por el resto de la batalla.</p>"
+    "name": "Servosiervo Escrutavoro",
+    "description": "<p>Una vez por punto de inflexión, durante la activación de un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo, puedes usar esta regla. Si lo haces, durante dicha activación ese agente puede realizar una acción de misión por 1 PA menos.</p> <p>Tener a un agente enemigo en su zona de control no impide que ese agente amigo realice dicha acción de misión. En tal circunstancia, después de que lo haya hecho, tú y tu oponente debéis hacer una tirada de desempate. Si tu oponente la gana, no podrás usar esta pieza de equipo durante el resto de la batalla.</p>"
   },
   {
     "id_equip": 55,
     "faction": "deathwatch",
-    "name": "RESERVA DE MUNICIÓN",
-    "description": "Una vez por batalla, puedes usar la regla de facción Munición Especial para hasta dos acciones de <b>Disparar</b> durante un Punto de Inflexión, pero debes seleccionar diferentes reglas de arma para ambos usos. Esto tiene prioridad sobre las reglas normales de Munición Especial.", 
+    "name": "Reserva de Munición",
+    "description": "Una vez por batalla, puedes usar la regla de facción Munición especial para hasta dos acciones de <b>Disparar</b> durante un punto de inflexión, pero debes elegir reglas de armas distintas para ambos usos. Esto tiene preferencia sobre las reglas normales de Munición especial.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 56,
     "faction": "deathwatch",
-    "name": "ARMAS DIGITALES",
-    "description": "Una vez por Punto de Inflexión, cuando un agente DEATHWATCH amigo realice la acción de Combatir, al inicio del paso de Tirar Dados de Ataque puedes usar esta regla. Si lo haces, inflige 1 de daño al agente enemigo en esa secuencia.", 
+    "name": "Armas Digitales",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">VIGÍA DE LA MUERTE</span> amigo realice una acción de <b>Combatir</b>, al inicio del paso de Tirar dados de ataque puedes usar esta regla. Si lo haces, inflige 1 daño al agente enemigo en esa secuencia.", 
     "weapon": [],
     "action": []
   },
@@ -672,23 +672,23 @@
     "id_equip": 86,
     "faction": "nemesis-claw",
     "name": "Piel Desollada",
-    "description": "Piel Desollada: Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente NEMESIS CLAW amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.", 
+    "description": "Cuando un agente enemigo dispara, combate o contraataca contra un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo a 2\" o menos de él, tu oponente no puede repetir sus dados de ataque con resultados de 1.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 87,
     "faction": "nemesis-claw",
-    "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente NEMESIS CLAW amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).", 
+    "name": "Cepo de Cadena",
+    "description": "Cuando un agente enemigo vaya a realizar una acción de <b>Retroceder</b> mientras se encuentra en la zona de control de un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo, si no hay otros agentes enemigos en la zona de control de ese agente amigo, puedes usar esta regla. En tal caso, tira dos D6, o un D6 si ese agente enemigo tiene un atributo Heridas mayor que el del agente amigo en cuestión. Si sacas algún 4+, el agente enemigo no puede realizar esa acción durante esta activación/reacción (y no gasta PA en ella), y no puedes usar esta regla de nuevo durante este punto de inflexión.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 88,
     "faction": "nemesis-claw",
-    "name": "Trofeo Macabro",
-    "description": "Trofeo Macabro: Una vez por batalla, cuando un agente NEMESIS CLAW amigo incapacita a un agente enemigo a 2\" o menos de él, gana una de tus fichas de Trofeo Macabro (si no tiene ya una). Siempre que un agente NEMESIS CLAW amigo que tenga una de tus fichas de Trofeo Macabro sea visible y esté a 2\" o menos de un agente enemigo, resta 1 del atributo de Atq de las armas de ese agente enemigo.", 
+    "name": "Trofeo Atroz",
+    "description": "Una vez por batalla, cuando un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo incapacite a un agente enemigo a 2\" o menos de él, puedes usar esta regla. Si lo haces, ese agente amigo obtiene una de tus fichas de Trofeo atroz (si no tiene ya una). Cuando un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo que tenga una de tus fichas de Trofeo atroz se encuentre a 2\" o menos de un agente enemigo y sea visible para él, resta 1 al atributo Ataque de las armas de ese agente enemigo.", 
     "weapon": [],
     "action": []
   },
@@ -696,7 +696,7 @@
     "id_equip": 89,
     "faction": "nemesis-claw",
     "name": "Inhibidores de Comunicaciones",
-    "description": "Inhibidores de Comunicaciones: Siempre que un agente enemigo esté a 3\" o menos de un agente NEMESIS CLAW amigo, el atributo de LPA de ese agente enemigo no puede ser incrementado. Ten en cuenta que esto no afecta a los atributos de LPA que ya han sido cambiados.", 
+    "description": "Siempre que un agente enemigo esté a 3\" o menos de un agente <span class=\"faction\">GARRA NÉMESIS</span> amigo, no se puede aumentar el atributo LPA de ese agente enemigo. Ten en cuenta que esto no afecta a los atributos LPA que ya hayan sido cambiados.", 
     "weapon": [],
     "action": []
   },
@@ -871,8 +871,8 @@
   {
     "id_equip": 110,
     "faction": "blooded",
-    "name": "Sigilo del Caos",
-    "description": "El ardid de tiroteo Recompensa Ganada te cuesta 0PM.", 
+    "name": "Sello del Caos",
+    "description": "El ardid de tiroteo Recompensa merecida te cuesta 0 PM.", 
     "weapon": [],
     "action": []
   },
@@ -880,7 +880,7 @@
     "id_equip": 111,
     "faction": "blooded",
     "name": "Trofeos Siniestros",
-    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra, o contraataque contra un agente BLOODED amigo que tenga una de tus fichas de Sangriento y esté a 2” o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.", 
+    "description": "Cuando un agente enemigo dispara, combate o contraataca contra un agente <span class=\"faction\">UNGIDO</span> amigo que tenga una de tus fichas de Ungido y se encuentre a 2\" o menos de él, tu oponente no puede repetir los resultados de 1 en sus dados de ataque.", 
     "weapon": [],
     "action": []
   },
@@ -888,15 +888,15 @@
     "id_equip": 112,
     "faction": "blooded",
     "name": "Símbolos de Adoración Sangrienta",
-    "description": "Siempre que un agente BLOODED amigo termine una acción, si no fue incapacitado pero infligió daño a cualquier agente enemigo durante esa acción, recupera 1 herida perdida.", 
+    "description": "Cada vez que un agente <span class=\"faction\">UNGIDO</span> amigo termina una acción, si durante esa acción no ha quedado incapacitado pero ha infligido daños a algún agente enemigo, recupera 1 herida perdida.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 113,
     "faction": "blooded",
-    "name": "Hojas Perversas",
-    "description": "Añade 1 a ambos atributos de Daño de la bayoneta, bayoneta y escudo, y hoja improvisada de cada agente BLOODED amigo para la batalla.", 
+    "name": "Cuchillas Viles",
+    "description": "Durante esta batalla, suma 1 a ambos atributos de Daño de cada bayoneta, bayoneta y escudo, y hoja improvisada de los agentes <span class=\"faction\">UNGIDO</span> amigos.", 
     "weapon": [],
     "action": []
   },
@@ -936,14 +936,14 @@
     "id_equip": 118,
     "faction": "wyrmblade",
     "name": "Cargas Explosivas",
-    "description": "Una vez por Punto de Inflexión, un agente WYRMBLADE NEOPHYTE amigo puede usar la siguiente arma a distancia:",
+    "description": "Una vez por punto de inflexión, un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo puede usar la siguiente arma a distancia:",
     "weapon": [
       {
-        "w_name": "Cargas Explosivas",
+        "w_name": "Carga explosiva",
         "ATK": "4",
         "HIT": "4+",
         "DMG": "3/5",
-        "rules": "-"
+        "rules": "Alcance 4\", Área 1\", Saturación"
       }
     ],
     "action": []
@@ -951,11 +951,11 @@
   {
     "id_equip": 119,
     "faction": "wyrmblade",
-    "name": "Cuchillos de Culto",
-    "description": "Los agentes WYRMBLADE NEOPHYTE amigos tienen la siguiente arma de combate:",
+    "name": "Cuchillos del Culto",
+    "description": "Los agentes <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigos tienen la siguiente arma de combate:",
     "weapon": [
       {
-        "w_name": "Cuchillos de Culto",
+        "w_name": "Cuchillo de culto",
         "ATK": "3",
         "HIT": "4+",
         "DMG": "3/4",
@@ -968,7 +968,7 @@
     "id_equip": 120,
     "faction": "wyrmblade",
     "name": "Reflectores",
-    "description": "Siempre que un agente WYRMBLADE amigo esté disparando, el objetivo no puede estar Ofuscado si es visible y está a 6\" o menos de un agente WYRMBLADE NEOPHYTE amigo que no esté dentro del área de control de agentes enemigos.", 
+    "description": "Siempre que un agente <span class=\"faction\">FILOSIERPE</span> amigo dispare, el blanco no puede estar ofuscado si está a 6\" o menos de un agente <b>NEÓFITO</b> <span class=\"faction\">FILOSIERPE</span> amigo, es visible para él, y ese agente amigo no está en la zona de control de agentes enemigos.", 
     "weapon": [],
     "action": []
   },
@@ -976,7 +976,7 @@
     "id_equip": 121,
     "faction": "wyrmblade",
     "name": "Trampas Explosivas",
-    "description": "Este equipamiento te permite seleccionar dos minas (ver equipamiento universal). No puedes seleccionar también ese equipamiento de forma normal (es decir, para tener tres), y los agentes WYRMBLADE amigos son ignorados para los efectos de tus minas (es decir, no pueden activarlas ni recibir daño de ellas). Esto tiene prioridad sobre las reglas normales de minas.", 
+    "description": "Este equipo te permite elegir dos minas (ver equipo universal). No puedes elegir además ese equipo de forma normal (es decir, para tener tres), y los agentes <span class=\"faction\">FILOSIERPE</span> amigos ignoran sus efectos (no pueden activarlas ni sufrir daño causado por estas). Esto tiene preferencia sobre las reglas normales de las minas.", 
     "weapon": [],
     "action": []
   },

@@ -18982,7 +18982,7 @@
     "deathwatch": [
         {
             "id": "watch-sergeant",
-            "name": "SARGENTO DE LA GUARDIA",
+            "name": "SARGENTO VIGÍA",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19028,7 +19028,7 @@
                 },
                 {
                     "name": "Mando estratégico",
-                    "description": "Puedes hacer cada una de las siguientes cosas una vez por batalla si este agente se encuentra en la zona de aniquilación: <ul><li>Usar un ardid de estrategia <span class=\"faction\">VIGÍA DE LA MUERTE</span> por 0 PM</li></ul> <ul><li>Usar un ardid de tiroteo <span class=\"faction\">VIGÍA DE LA MUERTE</span> por 0 PM.</li></ul>"
+                    "description": "Puedes hacer cada una de las siguientes cosas una vez por batalla si este agente se encuentra en la zona de aniquilación: <ul><li>Usar un ardid de estrategia <span class=\"faction\">VIGÍA DE LA MUERTE</span> por 0 PM.</li><li>Usar un ardid de tiroteo <span class=\"faction\">VIGÍA DE LA MUERTE</span> por 0 PM.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -19037,7 +19037,7 @@
         },
         {
             "id": "aegis",
-            "name": "VIGÍA DE LA MUERTE VETERANO AEGIS",
+            "name": "VETERANO ÉGIDA",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19056,7 +19056,7 @@
                     }
                 },
                 {
-                    "name": "Maza de energia y escudo de tormenta",
+                    "name": "Maza de energía y escudo de tormenta",
                     "type": "melee",
                     "stats": {
                         "A": "5",
@@ -19077,12 +19077,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, AEGIS",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, ÉGIDA",
             "peana": "32"
         },
         {
             "id": "blademaster",
-            "name": "VIGÍA DE LA MUERTE VETERANO MAESTRO DE LOS FILOS",
+            "name": "VETERANO ESPADERO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19132,12 +19132,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, MAESTRO DE LOS FILOS",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, ESPADERO",
             "peana": "32"
         },
         {
             "id": "bombard",
-            "name": "VIGÍA DE LA MUERTE VETERANO BOMBARDERO",
+            "name": "VETERANO BOMBARDERO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "5\"",
@@ -19193,7 +19193,7 @@
         },
         {
             "id": "breacher",
-            "name": "VIGÍA DE LA MUERTE IRRUPTOR VETERANO",
+            "name": "VETERANO IRRUPTOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "5\"",
@@ -19212,7 +19212,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas auxiliar (Perforante)",
+                    "name": "Lanzagranadas auxiliar (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19222,7 +19222,7 @@
                     }
                 },
                 {
-                    "name": "Rifle bolter tormenta infernal",
+                    "name": "Rifle bólter tormenta infernal",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19254,12 +19254,12 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGIAS DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, GRAVIS, IRRUPTOR",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, GRAVIS, IRRUPTOR",
             "peana": "40"
         },
         {
             "id": "demolisher",
-            "name": "VIGÍA DE LA MUERTE VETERANO DEMOLEDOR",
+            "name": "VETERANO DEMOLEDOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19295,7 +19295,7 @@
                 },
                 {
                     "name": "Fuerza agresiva",
-                    "description": "Siempre que este agente combata o contraataque, todo daño normal o critico de 3 o más le inflige 1 daño menos. No acumulable con El escudo que mata."
+                    "description": "Siempre que este agente combata o contraataque, todo daño normal o crítico de 3 o más le inflige 1 daño menos. Esto no es acumulable con el ardid estratégico <b>El escudo que mata</b>."
                 }
             ],
             "uniqueActions": [],
@@ -19304,7 +19304,7 @@
         },
         {
             "id": "disruptor",
-            "name": "VIGÍA DE LA MUERTE VETERANO DISRUPTOR",
+            "name": "VETERANO DISRUPTOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -19336,20 +19336,20 @@
             "abilities": [
                 {
                     "name": "Omniinterferidor avanzado",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo visible para este agente o a 6\" o menos de él, y a continuación tira 1D6. En la fase de tiroteo del punto de inflexión, dicho agente enemigo no puede ser activado ni realizar acciones hasta que se dé una de las siguientes circunstancias: <ul><li>Tu oponente ha activado a un número de agentes enemigos igual al resultado del 1D6.</li></ul> <ul><li>Es el último agente enemigo en ser activado.</li></ul>"
+                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo visible para este agente o a 6\" o menos de él, y a continuación tira 1D6. En la fase de tiroteo del punto de inflexión, dicho agente enemigo no puede ser activado ni realizar acciones hasta que se dé una de las siguientes circunstancias: <ul><li>Tu oponente ha activado a un número de agentes enemigos igual al resultado del 1D6.</li><li>Es el último agente enemigo en ser activado.</li></ul>"
                 },
                 {
                     "name": "Triangulación Auspex",
-                    "description": "<ul>El ardid de tiroteo Lecturas de Auspex avanzadas te costará 0 PM cuando se den las dos siguientes circunstancias:</ul> Este agente no se encuentra en la zona de control de los agentes enemigos. El blanco de esa acción de <b>Disparar</b> (el blanco principal, en caso de que proceda) es visible para este agente. <ul>Ten en cuenta que no es necesario que sea este agente quien realice la acción de <b>Disparar</b>, y que cualquier acción de <b>Disparar</b> subsiguiente durante esa activación/reacción debe cumplir los mismos requisitos (o ese ardid no tiene efecto en las acciones de <b>Disparar</b> subsiguientes)</ul>"
+                    "description": "El ardid de tiroteo <b>Lecturas de Áuspex avanzadas</b> te costará 0 PM cuando se den las dos siguientes circunstancias: <ul><li>Este agente no está en la zona de control de agentes enemigos.</li><li>El blanco de esa acción de <b>Disparar</b> (el blanco principal, en caso de que proceda) es visible para este agente.</li></ul> Ten en cuenta que no es necesario que sea este agente quien realice la acción de <b>Disparar</b>, y que cualquier acción de <b>Disparar</b> subsiguiente durante esa activación/reacción debe cumplir los mismos requisitos (o ese ardid no tiene efecto en las acciones de <b>Disparar</b> subsiguientes)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGIAS DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, DISRUPTOR",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, DISRUPTOR",
             "peana": "32"
         },
         {
             "id": "gunner",
-            "name": "VIGÍA DE LA MUERTE VETERANO TIRADOR",
+            "name": "VETERANO TIRADOR",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19405,7 +19405,7 @@
         },
         {
             "id": "headtaker",
-            "name": "VIGÍA DE LA MUERTE VETERANO CORTACABEZAS",
+            "name": "VETERANO CORTACABEZAS",
             "stats": {
                 "LPA": "3",
                 "MOVER": "7\"",
@@ -19436,12 +19436,12 @@
             ],
             "abilities": [
                 {
-                    "name": "Paracaidas gravitatorio y lanzagarfios",
+                    "name": "Paracaídas gravitatorio y lanzagarfios",
                     "description": "Cuando este agente esté trepando, considera la distancia vertical como 2\" (sin importar lo lejos que se mueva verticalmente el agente en realidad). Cuando este agente se deje caer, ignora la distancia vertical."
                 },
                 {
                     "name": "Cortacabezas clandestino",
-                    "description": "Este agente puede realizar la acción de <b>Cargar</b> mientras tenga una orden de ocultarse. Cuando este agente combata contra un agente para el que no era visible al inicio de la activación/reacción, la primera vez que golpees durante esa secuencia puedes resolver de inmediato otro de tus éxitos como un golpe (antes que tu oponente)."
+                    "description": "Este agente puede realizar la acción de <b>Cargar</b> mientras tenga una orden de <b>Ocultarse</b>. Cuando este agente combata contra un agente para el que no era visible al inicio de la activación/reacción, la primera vez que golpees durante esa secuencia puedes resolver de inmediato otro de tus éxitos como un golpe (antes que tu oponente)."
                 }
             ],
             "uniqueActions": [],
@@ -19450,7 +19450,7 @@
         },
         {
             "id": "horde-slayer",
-            "name": "VIGÍA DE LA MUERTE VETERANO MATAHORDAS",
+            "name": "VETERANO MATAHORDAS",
             "stats": {
                 "LPA": "3",
                 "MOVER": "5\"",
@@ -19489,7 +19489,7 @@
                     }
                 },
                 {
-                    "name": "Bolter pesado infernus (munición de barrido)",
+                    "name": "Bólter pesado infernus (munición de barrido)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19516,7 +19516,7 @@
         },
         {
             "id": "marksman",
-            "name": "VIGÍA DE LA MUERTE VETERANO OJO PRECISO",
+            "name": "VETERANO OJO PRECISO",
             "stats": {
                 "LPA": "3",
                 "MOVER": "6\"",
@@ -19525,7 +19525,7 @@
             },
             "weapons": [
                 {
-                    "name": "Rifle bolter silencio (móvil)",
+                    "name": "Rifle bólter silencio (móvil)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -19558,11 +19558,11 @@
             "abilities": [
                 {
                     "name": "Tirador vigilante",
-                    "description": "Este agente puede realizar la acción Ponerse en guardia durante su activación independientemente de la zona de aniquilación (ver las reglas de combate cerrado, KillTeam: Mundo Necrópolis ). Al usar las reglas de combate cerrado, una vez por punto de inflexión después de que este agente realice una acción libre de <b>Disparar</b> estando en guardia, puede realizar de inmediato una acción libre de En guardia. No obstante, si la hace no podrá reaccionar durante ese punto de inflexión (ni ponerse En guardia dos veces si sufre una reacción)."
+                    "description": "Este agente puede realizar la acción <b>Ponerse en guardia</b> durante su activación independientemente de la zona de aniquilación (ver las reglas de combate cerrado, Kill Team: Mundo Necrópolis). Al usar las reglas de combate cerrado, una vez por punto de inflexión después de que este agente realice una acción libre de <b>Disparar</b> estando en guardia, puede realizar de inmediato una acción libre de <b>Ponerse en guardia</b>. No obstante, si la hace no podrá reaccionar durante ese punto de inflexión (ni <b>Ponerse en guardia</b> dos veces si sufre una reacción)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">VIGIAS DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, OJO PRECISO",
+            "keywords": "<span class=\"faction\">VIGÍA DE LA MUERTE</span>, IMPERIUM, ADEPTUS ASTARTES, OJO PRECISO",
             "peana": "32"
         }
     ],

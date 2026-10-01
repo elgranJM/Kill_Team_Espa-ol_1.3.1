@@ -229,8 +229,8 @@
   {
     "id_equip": 25,
     "faction": "novitiates",
-    "name": "Icono de Fe",
-    "description": "Una vez por Punto de Inflexión, puedes usar hasta dos <b>ACTOS DE FE</b> durante una secuencia, pero cada uno debe ser distinto. Esto tiene prioridad sobre las reglas normales de <b>ACTOS DE FE</b>.", 
+    "name": "Icono de la Fe",
+    "description": "Una vez por punto de inflexión, puedes usar hasta dos <b>ACTOS DE FE</b> durante una secuencia, pero cada uno debe ser distinto. Esto tiene preferencia sobre las reglas normales de <b>ACTOS DE FE</b>.", 
     "weapon": [],
     "action": []
   },
@@ -238,15 +238,15 @@
     "id_equip": 26,
     "faction": "novitiates",
     "name": "Proyectiles Santificados",
-    "description": "Siempre que una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un bólter reliquia, una pistola automática, una pistola bólter reliquia o un rifle automático, si gastas un Punto de Fe, esa arma tiene la regla de armas Críticos de Penetración 1 hasta el final de esa secuencia.", 
+    "description": "Siempre que una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un bólter reliquia, una pistola automática, una pistola bólter reliquia o un rifle automático, si gastas un punto de fe, esa arma tendrá la regla de armas Críticos de penetración 1 hasta el final de esa secuencia.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 27,
     "faction": "novitiates",
-    "name": "Autocastigador",
-    "description": "Una vez por Punto de Inflexión, cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare, combata o contraataque, en el paso de Tirar Dados de Ataque, puedes inflingir 1-3 de daño a ese agente amiga (pero no lo suficiente para incapacitarla). Si lo haces, durante esa secuencia puedes usar gratis un <b>ACTO DE FE</b> cuyo coste en Puntos de Fe no sea mayor que el daño que has inflingido mediante esta regla.", 
+    "name": "Autocastigadores",
+    "description": "Una vez por punto de inflexión, cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare, combata o contraataque, en el paso de Tirar dados de ataque puedes infligir 1-3 daños a esa agente amiga (pero no lo suficiente como para incapacitarla). Si lo haces, durante esa secuencia puedes usar gratis un <b>ACTO DE FE</b> cuyo coste en puntos de fe no sea mayor que el daño que has infligido mediante esta regla.", 
     "weapon": [],
     "action": []
   },

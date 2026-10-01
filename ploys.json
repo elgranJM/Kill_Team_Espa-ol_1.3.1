@@ -734,7 +734,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Defensoras de la Fe",
-        "description": "Siempre que un agente dispare, combata o contraataque contra una agente <span class=\"faction\">NOVICIA</span> amiga que dispute un marcador de objetivo, en el paso de Resolver Dados de Ataque de esa secuencia, puedes reducir a la mitad (redondeando a un mínimo de 2) el daño infligido a esa agente amiga por un éxito normal.",
+        "description": "Siempre que un agente dispare, combata o contraataque contra una agente <span class=\"faction\">NOVICIA</span> amiga que dispute algún marcador de objetivo o uno de tus marcadores de misión, en el paso de Resolver dados de ataque de esa secuencia puedes reducir a la mitad (redondeando al alza y hasta un mínimo de 2) el daño infligido a esa agente amiga por un éxito normal.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -743,7 +743,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Rejuvenecimiento Bendito",
-        "description": "Siempre que gastes Puntos de Fe, al final de esa acción, la agente amiga en la que los gastaste puede recuperar hasta 1D3 heridas perdidas. Ten en cuenta que este ardid no tiene ningun efecto si esa agente amiga quedó incapacitada durante esa acción, o si el <b>ACTO DE FE</b> no cuesta ningún Punto de Fe, p. ej. gracias al equipo Autocastigadores.",
+        "description": "Siempre que gastes puntos de fe, al final de esa acción, la agente amiga en la que los gastaste puede recuperar hasta 1D3 heridas perdidas. Ten en cuenta que este ardid no tiene ningún efecto si esa agente amiga quedó incapacitada durante esa acción, o si el <b>ACTO DE FE</b> no cuesta ningún punto de fe, p. ej., gracias al equipo Autocastigadores.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -761,7 +761,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Martirio Glorioso",
-        "description": "Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga resulte incapacitada. Por cada agente enemigo a 2\" o menos de ella y visible para ella, ganas 1 Punto de Fe e infliges 1D3 daños a dicho agente enemigo (tira por cada uno por separado).",
+        "description": "Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga resulte incapacitada, antes de retirarla de la zona de aniquilación. Por cada agente enemigo a 2\" o menos de ella y visible para ella, ganas 1 punto de fe e infliges 1D3 daños a dicho agente enemigo (tira por cada uno por separado).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -770,7 +770,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Inmolación Ardiente",
-        "description": "<p>Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un lanzallamas del Ministorum e inflinjas daño con algun éxito crítico. El blanco recibe una de tus fichas de Inmolación (si no tenía ya una). Siempre que un agente con una de tus fichas de Inmolación sea activado:</p>\n\n<ul>\n  <li>Inflingele 1D3 daños.</li>\n  <li>Su jugador controlador puede restar 1 al LPA de dicho agente hasta el final de esa activación para retirar esa ficha. Esto debe hacerse antes de que el agente con la ficha de Inmolación realice ninguna acción durante esa activación.</li>\n</ul>",
+        "description": "<p>Usa este ardid de tiroteo cuando una agente <span class=\"faction\">NOVICIA</span> amiga dispare con un lanzallamas del Ministorum e inflijas daño con algún éxito crítico. El blanco recibe una de tus fichas de Inmolación (si no tenía ya una). Siempre que un agente con una de tus fichas de Inmolación sea activado:</p>\n\n<ul>\n  <li>Inflígele 1D3 daños.</li>\n  <li>Su jugador controlador puede restar 1 al LPA de dicho agente hasta el final de esa activación para retirar esa ficha. Esto debe hacerse antes de que el agente con la ficha de Inmolación realice ninguna acción durante esa activación.</li>\n</ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -779,7 +779,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Aura Cegadora",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo realice una acción <b>Disparar</b> y tome como blanco válido una agente <span class=\"faction\">NOVICIA</span> amiga. Hasta el final de esa activación o reacción, si la agente amiga tomada como blanco se encuentra a más de 2\" del agente enemigo en cuestión, tu oponente no puede tomarla como blanco válido. Si no hay otros blancos válidos que tu oponente pueda elegir, esa acción termina (ten en cuenta que no se cancela, por lo que ese agente sigue habiéndola realizado). Este ardid no tiene ningún efecto si la agente no es un blanco elegido (p.ej., si es un blanco secundario de un arma de Área).",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo realice una acción de <b>Disparar</b> y tome como blanco válido una agente <span class=\"faction\">NOVICIA</span> amiga. Hasta el final de esa activación o contraataque, si la agente amiga tomada como blanco se encuentra a más de 2\" del agente enemigo en cuestión, tu oponente no puede tomarla como blanco válido. Si no hay otros blancos válidos que tu oponente pueda elegir, esa acción termina (ten en cuenta que no se cancela, por lo que ese agente sigue habiéndola realizado). Este ardid no tiene ningún efecto si la agente no es un blanco elegido (p.ej., si es un blanco secundario de un arma de Área).",
         "typename": "Ardid de Tiroteo"
     },
     {

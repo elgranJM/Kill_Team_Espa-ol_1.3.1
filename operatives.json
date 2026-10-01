@@ -8791,7 +8791,7 @@
       "abilities": [
         {
           "name": "Ejemplo inspirador",
-          "description": "Siempre que esta agente incapacite a un agente enemigo, ganas 1 Punto de Fe, o 2 Puntos de Fe si ese agente enemigo tenía un atributo Heridas de 12 o más. Esta regla no tiene efecto cuando se usa el ardid de tiroteo Martirio glorioso."
+          "description": "Siempre que esta agente incapacite a un agente enemigo, ganas 1 punto de fe, o 2 puntos de fe si ese agente enemigo tenía un atributo Heridas de 12 o más. Esta regla no tiene efecto cuando se usa el ardid de tiroteo Martirio glorioso."
         }
       ],
       "uniqueActions": [],
@@ -8832,7 +8832,7 @@
       "abilities": [
         {
           "name": "Vara nulificadora",
-          "description": "Las armas a distancia <b>PSÍQUICAS</b> no pueden infligir daños a esta agente. A efectos de acciones <b>PSÍQUICAS</b>, esta agente no puede ser elegida y nunca se considera que esta dentro de la distancia requerida de esas acciones. Mientras un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones <b>PSÍQUICAS</b> ni usar reglas adicionales <b>PSÍQUICAS</b>.</li></ul> <ul><li>Ese agente no puede usar armas a distancia <b>PSÍQUICAS</b>.</li></ul> <ul><li>Las armas de combate <b>PSÍQUICAS</b> no tienen reglas de armas y no pueden tener atributos Daño mayores que 3/4</li></ul>"
+          "description": "Las armas a distancia <b>PSÍQUICAS</b> no pueden infligir daños a esta agente. A efectos de acciones <b>PSÍQUICAS</b>, esta agente no puede ser elegida y nunca se considera que está dentro de la distancia requerida de esas acciones. Mientras un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones <b>PSÍQUICAS</b> ni usar reglas adicionales <b>PSÍQUICAS</b>.</li><li>Ese agente no puede usar armas a distancia <b>PSÍQUICAS</b>.</li><li>Las armas de combate <b>PSÍQUICAS</b> no tienen reglas de armas y no pueden tener atributos Daño mayores que 3/4.</li></ul>"
         },
         {
           "name": "<span class=\"faction\">*</span>Anti<b>PSÍQUICO</b>",
@@ -8877,7 +8877,7 @@
       "abilities": [],
       "uniqueActions": [
         {
-          "name": "Retórica estimulante",
+          "name": "RETÓRICA ESTIMULANTE",
           "cost": "1 PA",
           "description": [
             "<b>APOYO</b>. Elige una agente <span class=\"faction\">NOVICIA</span> amiga distinta a 6\" o menos de esta agente y visible para ella, o a 6\" o menos de tu marcador de Autotransmisora. Hasta el final de la siguiente activación de esa agente, suma 1 a su atributo LPA (hasta un máximo de 3 después de haber calculado todos los cambios al atributo LPA)."
@@ -8885,10 +8885,10 @@
           "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         },
         {
-          "name": "Autotransmisora",
-          "cost": "0 LPA",
+          "name": "AUTOTRANSMISORA",
+          "cost": "0 PA",
           "description": [
-            "Si tu marcador de Autotransmisora no se encuentra en la zona de aniquilación, colócalo a 8\" o menos en horizontal de esta agente; en caso contrario, muéve tu marcador de Autotransmisora hasta 8\" en horizontal. Si esta agente es retirada de la zona de aniquilación, retira tu marcador de Autotransmisora de la zona de aniquilación.",
+            "Si tu marcador de Autotransmisora no se encuentra en la zona de aniquilación, colócalo a 8\" o menos en horizontal de esta agente; en caso contrario, mueve tu marcador de Autotransmisora hasta 8\" en horizontal. Si esta agente es retirada de la zona de aniquilación, retira tu marcador de Autotransmisora de la zona de aniquilación.",
             "Siempre que un agente enemigo a 3\" o menos de tu marcador de Autotransmisora dispare, combata o contraataque, tu oponente no puede repetir sus dados de ataque."
           ],
           "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
@@ -8972,10 +8972,10 @@
       "abilities": [],
       "uniqueActions": [
         {
-          "name": "Inculcar a latigazos",
+          "name": "INCULCAR A LATIGAZOS",
           "cost": "1 PA",
           "description": [
-            "Elige una agente <span class=\"faction\">NOVICIA</span> amiga distinta (salvo <b>SUPERIORA</b>) a 3\" o menos de esta agente, visible para ella y que no estuviera ya beneficiándose de los efectos de esta acción. Hasta el final de la siguiente activación de esa agente, suma 1\" a su atributo Movimiento y puede realizar dos acciones de <b>Combatir</b> durante dicha activación, una de las cuales puede ser libre."
+            "Elige una agente <span class=\"faction\">NOVICIA</span> amiga distinta (salvo <b>SUPERIORA</b>) a 3\" o menos de esta agente, visible para ella y que no estuviera ya beneficiándose de los efectos de esta acción. Hasta el final de la siguiente activación de esa agente, suma 1 a su atributo LPA, suma 1\" a su atributo Movimiento, y puede realizar dos acciones de <b>Combatir</b> durante su siguiente activación, y una de ellas puede ser libre."
           ],
           "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
@@ -9017,12 +9017,12 @@
       "abilities": [
         {
           "name": "¡Sanitaria!",
-          "description": "La primera vez durante cada punto de inflexión que otra agente <span class=\"faction\">NOVICIA</span> amiga vaya a resultar incapacitada mientras era visible para esta agente y estaba a 3\" o menos de ella, puedes usar esta regla siempre que ni esta ni esa agente estén en la zona de control de algún agente enemigo. Si lo haces, esa agente amiga no queda incapacitada, le queda 1 herida y no puede resultar incapacitada durante el resto de la acción. Después de esa acción, esa agente amiga puede entonces realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de esta agente. Resta 1 a los atributos LPA de esta y de esa agente hasta el final de sus próximas activaciones respectivamente, y si esta regla fue usada durante la activación de esa agente amiga, esa activación termina. No puedes usar esta regla si esta agente resulta incapacitada, o si es una acción de <b>Disparar</b> y esta agente sería un blanco primario o secundario."
+          "description": "La primera vez durante cada punto de inflexión que otra agente <span class=\"faction\">NOVICIA</span> amiga vaya a resultar incapacitada mientras es visible para esta agente y estaba a 3\" o menos de ella, puedes usar esta regla siempre que ni esta ni esa agente estén en la zona de control de algún agente enemigo. Si lo haces, esa agente amiga no queda incapacitada, le queda 1 herida y no puede resultar incapacitada durante el resto de la acción. Después de esa acción, esa agente amiga puede entonces realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de esta agente. Resta 1 a los atributos LPA de esta y de esa agente hasta el final de sus próximas activaciones respectivamente, y si esta regla fue usada durante la activación de esa agente amiga, esa activación termina. No puedes usar esta regla si esta agente resulta incapacitada, o si es una acción de <b>Disparar</b> y esta agente iba a ser el blanco primario o secundario."
         }
       ],
       "uniqueActions": [
         {
-          "name": "Herramientas de cirujana",
+          "name": "HERRAMIENTAS DE CIRUJANA",
           "cost": "1 PA",
           "description": [
             "Elige una agente <span class=\"faction\">NOVICIA</span> amiga en la zona de control de esta agente para que recupere hasta 2D3 heridas perdidas. No puede ser una agente en la que se haya usado la regla ¡Sanitaria! durante este punto de inflexión."
@@ -9087,7 +9087,7 @@
       "abilities": [
         {
           "name": "Fe militante",
-          "description": " Siempre que esta agente dispare, combata o contraataque, si usas un <b>ACTO DE FE</b> durante esa secuencia y un agente enemigo resulta incapacitado, recuperas los puntos de fe que has gastado en ese <b>ACTO DE FE</b>. Si usas el equipo Icono de la fe, solo recuperas los puntos de fe por uno de esos <b>ACTO DE FE</b> (a tu elección)."
+          "description": "Siempre que esta agente dispare, combata o contraataque, si usas un <b>ACTO DE FE</b> durante esa secuencia y un agente enemigo resulta incapacitado, recuperas los puntos de fe que has gastado en ese <b>ACTO DE FE</b>. Si usas el equipo Icono de la fe, solo recuperas los puntos de fe por uno de esos <b>ACTOS DE FE</b> (a tu elección)."
         }
       ],
       "uniqueActions": [],
@@ -9163,7 +9163,7 @@
       "abilities": [
         {
           "name": "Ejemplo implacable",
-          "description": "Siempre que esta agente incapacite a un agente enemigo apostado que se encuentre en su zona de control, ganas 1 punto de fe, o 2 puntos de fe si ese agente enemigo tenia un atributo Heridas de 12 o más."
+          "description": "Siempre que esta agente incapacite a un agente enemigo apostado que se encuentre en su zona de control, ganas 1 punto de fe, o 2 puntos de fe si ese agente enemigo tenía un atributo Heridas de 12 o más."
         },
         {
           "name": "Himnos gloriosos",
@@ -9253,7 +9253,7 @@
       "abilities": [
         {
           "name": "Purgar con llamas",
-          "description": "Una vez por punto de inflexión, puedes usar el ardid de tiroteo Inmolación por OPM si esta es la agente <span class=\"faction\">NOVICIA</span> amiga especificada."
+          "description": "Una vez por punto de inflexión, puedes usar el ardid de tiroteo Inmolación por 0PM si esta es la agente <span class=\"faction\">NOVICIA</span> amiga especificada."
         }
       ],
       "uniqueActions": [],
@@ -9299,7 +9299,7 @@
       ],
       "uniqueActions": [
         {
-          "name": "Alzar Icono",
+          "name": "ALZAR ICONO",
           "cost": "1 PA",
           "description": [
             "Ganas 1 punto de fe. Si esta agente controla un marcador de objetivo, además ganas tantos puntos de fe como el número del punto de inflexión actual."

@@ -2309,7 +2309,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Enfrentamiento Oculto",
-        "description": "Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo dispare, si está en cobertura desde la perspectiva del objetivo, sus armas tienen la regla de armas Equilibrada. Ten en cuenta que tu oponente aún determina las líneas de visión para esto (es decir, deciden desde qué punto de la peana de su agente se trazan las líneas de visión).",
+        "description": "Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo dispare, si está tras cobertura desde la perspectiva del blanco, las armas de ese agente amigo tienen la regla de arma Equilibrada. Ten en cuenta que tu oponente sigue determinando las líneas de tiro para esto (es decir, decide desde qué punto de la peana de su agente se trazan las líneas de tiro).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2317,8 +2317,8 @@
         "faction": "yaegirs",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Manejo de la Espada Magistral",
-        "description": "Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo esté combatiendo, o tenga una orden de Ocultación y esté contraataque,<span class=\"text-info-emphasis\"> suma 1 al atributo de Atq\nde sus armas de combate (hasta un máximo de 4) y tienen</span> la regla de armas Equilibrada<span class=\"text-info-emphasis\">; si el arma ya tiene esa regla de arma\n, tiene la regla de armas Incesante en lugar de Equilibrada.</span>",
+        "name": "Esgrima Maestra",
+        "description": "Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo combata, o contraataque mientras tiene una orden de Ocultarse, suma 1 al atributo Ataque de sus armas de combate (hasta un máximo de 4) y estas tienen la regla de arma Equilibrada; si el arma tiene ya esa regla de arma, tiene la regla de arma Incesante en lugar de Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2326,8 +2326,8 @@
         "faction": "yaegirs",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Supervivientes Duros",
-        "description": "La primera vez que un dado de ataque inflija daño a cada agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo durante el Punto de Inflexión en el paso Resolver Dados de Ataque, puedes reducir a la mitad ese daño infligido (redondeando hacia arriba, hasta un mínimo de 2).",
+        "name": "Supervivientes Curtidos",
+        "description": "La primera vez que un dado de ataque inflija daño a cada agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo durante el punto de inflexión, en el paso de resolver dados de ataque, puedes dividir a la mitad el daño infligido (redondeando al alza, hasta un mínimo de 2).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2336,7 +2336,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "En Posición",
-        "description": "Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo tenga una orden de Ocultación y esté en cobertura, no puede ser seleccionado como un blanco válido, teniendo precedencia sobre todas las demás reglas (p. ej. Buscadora, terreno de Ventaja), excepto estar a 2\" o menos.",
+        "description": "Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado) salvo estar a 2\" o menos.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2344,8 +2344,8 @@
         "faction": "yaegirs",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Defensa Acérrima",
-        "description": "Usa este Ardid de Tiroteo cuando un agente enemigo termine un movimiento dentro del rango de control de un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo. Elige otro agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo visible para y a 6\" de ese agente amigo, pero que no esté en sí mismo dentro del rango de control de agentes enemigos. El agente seleccionado puede realizar una acción de Disparar gratuita. Durante esa acción: <ul><li>Puede apuntar a ese agente enemigo aunque esté dentro del rango de control de un agente amigo.</li><li>Otros agentes enemigos no pueden ser seleccionados como un blanco válido.</li><li><span class=\"text-decoration-line-through text-info-emphasis\">Empeora el atributo de Impacto de sus armas en 1.</span></li><li>No puedes seleccionar una granada frag o krak, o un arma con la regla de armas Estallido o Devastadora x\" (p. ej. Devastadora 1\").</li></ul>",
+        "name": "Defensa Férrea",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo termine una acción de <b>Cargar</b> en la zona de control de un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo. Elige un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo distinto a 6\" o menos de ese agente y visible para él, pero que no se encuentre en la zona de control de agentes enemigos. El agente elegido puede realizar una acción libre de <b>Disparar</b>. Durante esa acción:<ul><li>Puede tomar como blanco a ese agente enemigo aunque esté en la zona de control de un agente amigo.</li><li>No se pueden tomar otros agentes enemigos como blancos válidos.</li><li>No puedes elegir una granada frag o granada perforante, ni un arma con la regla de arma Área o x\" Devastadora x (es decir, Devastadora con una distancia).</li></ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2353,8 +2353,8 @@
         "faction": "yaegirs",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Robusto",
-        "description": "Usa este Ardid de Tiroteo cuando un agente dispare contra un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo, cuando recojas tus dados de defensa. Cambia los éxitos críticos retenidos del atacante a éxitos normales (cualquier regla de armas que ya hayan resuelto no se ve afectada, p. ej. Perforante Críticos).",
+        "name": "Recios",
+        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo, cuando reúnas tus dados de defensa. Cambia los éxitos críticos guardados de tu atacante por éxitos normales (cualquier regla de arma que ya se haya resuelto no se ve afectada, p. ej., Críticos de penetración).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2362,8 +2362,8 @@
         "faction": "yaegirs",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Vínculos que Unen",
-        "description": "Usa este Ardid de Tiroteo cuando un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo sea activado. Elige otro agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo preparado visible para y a 3\" de ese agente. Cuando ese primer agente amigo esté agotado, puedes activar a ese otro agente amigo antes de que active tu oponente. <p>Ningún agente puede ser un agente <b>BOMBAST</b> si su <b>GAMBITO ESTRATÉGICO</b> Negociación Wroughtlock ha sido usado este punto de inflexión.</p>",
+        "name": "Todo lo que Nos Liga",
+        "description": "Usa este ardid de tiroteo cuando se active un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo. Elige otro agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo apostado a 3\" o menos de ese agente y visible para él. En cuanto el primer agente quede usado, puedes activar a ese otro agente amigo antes de que active tu oponente, y cuando ese segundo agente amigo quede usado, el oponente puede activar normalmente.<p>Si se ha utilizado el <b>GAMBITO ESTRATÉGICO</b> Negociación implacable de un <b>FANFARRÓN</b> este punto de inflexión, este no puede ser ninguno de esos dos agentes.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2371,8 +2371,8 @@
         "faction": "yaegirs",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Ningún Pariente Atrás",
-        "description": "Usa este Ardid de Tiroteo cuando un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo sea incapacitado. Antes de que ese agente sea retirado de la zona de aniquilación, retira tu marcador de Pariente Caído de la zona de aniquilación (si hay alguno), luego colócalo dentro del rango de control de ese agente. Ese agente luego es incapacitado de manera normal. <p>Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo a 3\" de tu marcador de Pariente Caído dispare, combatiendo o contraataque, en el paso Tirar Dados de Ataque, puedes retener uno de tus fallos como un éxito normal o uno de tus éxitos normales como un éxito crítico en su lugar.</p>",
+        "name": "No se Abandona a la Familia",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo quede incapacitado. Antes de retirar al agente de la zona de aniquilación, retira tu marcador de Familiar caído de la zona de aniquilación (de haberlo), y a continuación colócalo en la zona de control de ese agente. A continuación, ese agente es retirado de la zona de aniquilación de forma normal.<p>Cuando un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo a 3\" o menos de tu marcador de Familiar caído dispare, combata o contraataque, en el paso de tirar dados de ataque, puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo, o, en su lugar, guardar uno de tus éxitos normales como un éxito crítico.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {

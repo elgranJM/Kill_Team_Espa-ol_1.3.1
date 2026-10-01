@@ -955,21 +955,21 @@
             "faction": "yaegirs",
             "type": "team",
             "name": "Agentes",
-            "description": "<p>1 agente <b>THEYN</b> <span class=\"faction\">YAEGIR HERNKYN</span></p>9 agentes <span class=\"faction\">YAEGIR HERNKYN</span> elegido de la siguiente lista:<ul><li><b>ESPADACHÍN</b></li><li><b>BOMBAST</b></li><li><b>TIRADOR</b></li><li><b>ROMPEHIERRO</b></li><li><b>RIFLERO</b></li><li><b>RASTREADOR</b></li><li><b>COMBATIENTE</b> equipado con una de las siguientes opciones:<ul><li>Revólver bólter, cuchillo de plasma</li><li>Escopeta bólter; puños</li></ul></li></ul><p>Salvo agentes <b>COMBATIENTE</b>, tu comando solo puede incluir cada agente de arriba una vez.</p>"
+            "description": "<p>1 agente <b>THEYN</b> <span class=\"faction\">YAEGIR HERNKYN</span></p>\n<p>9 agentes <span class=\"faction\">YAEGIR HERNKYN</span> elegidos de la siguiente lista:</p>\n<ul>\n  <li><b>FILOFAMILIAR</b></li>\n  <li><b>FANFARRÓN</b></li>\n  <li><b>TIRADOR</b></li>\n  <li><b>FERROBRAEK</b></li>\n  <li><b>RIFLEFAMILIAR</b></li>\n  <li><b>RASTREADOR</b></li>\n  <li><b>COMBATIENTE</b> con una de las siguientes opciones:\n    <ul>\n      <li>Rebóltver; cuchillo de plasma</li>\n      <li>Escopeta bólter; puños</li>\n    </ul>\n  </li>\n</ul>\n<p>Salvo agentes <b>COMBATIENTE</b>, tu comando solo puede incluir uno de cada uno de los agentes de esta lista.</p>"
         },
         {
             "id_racial": 125,
             "faction": "yaegirs",
             "type": "racial",
-            "name": "Ingenioso",
-            "description": "<p>En el paso de Preparar de cada fase de Estrategia después de la primera, ganas puntos de Ingenio determinados por el número de agentes <span class=\"faction\">YAEGIR HERNKYN</span> amigos en la zona de aniquilación que no están en la zona de control de agentes enemigos. Al final de cada punto de inflexión, descarta tus puntos de Ingenio.</p><div class=\"weapons-table col-12 p-0 pt-2 position-relative\"><table><tbody><tr><th>Agentes</th><th>Puntos de Ingenio</th></tr><tr><td>6+</td><td>2</td></tr><tr><td>3-5</td><td>1</td></tr><tr><td>0-2</td><td>0</td></tr></tbody></table></div><p>Siempre que un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo que no está en la zona de control de agentes enemigos sea activado, puedes gastar 1 de tus puntos de Ingenio para hacer una de las siguientes:</p><ul><li>Hasta el final de su activación, suma 1 a su atributo de LPA.</li><li>Recupera D3+1 heridas perdidas.</li></ul>"
+            "name": "Habilidosos",
+            "description": "<p>En el paso de preparación de cada fase de estrategia después de la primera, obtienes puntos de Habilidosos en función del número de agentes <span class=\"faction\">YAEGIR HERNKYN</span> amigos en la zona de aniquilación que no estén en la zona de control de agentes enemigos. Al final de cada punto de inflexión, descarta tus puntos de Habilidosos.</p><div class=\"weapons-table col-12 p-0 pt-2 position-relative\"><table><tbody><tr><th>Agentes</th><th>Puntos de Habilidosos</th></tr><tr><td>5+</td><td>2</td></tr><tr><td>1-4</td><td>1</td></tr></tbody></table></div><p>Puedes gastar 1 de tus puntos de Habilidosos durante cada activación de cada agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo para hacer una de las siguientes cosas:</p><ul><li>Antes o después de que realice una acción, si no está dentro de la zona de control de los agentes enemigos puedes usar esta regla. En tal caso, suma 1 al atributo LPA de ese agente amigo hasta el final de su activación.</li><li>Cuando se active, si no está dentro de la zona de control de los agentes enemigos recupera hasta 1D3+1 heridas perdidas.</li></ul>"
         },
         {
             "id_racial": 126,
             "faction": "yaegirs",
             "type": "racial",
             "name": "Exploradores Intrépidos",
-            "description": "<p><b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Cada agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo totalmente dentro de tu zona de descenso puede realizar inmediatamente una acción gratuita de Reposicionarse. Cada uno que lo haga debe terminar ese movimiento totalmente a 4\" de tu zona de descenso.</p>"
+            "description": "<p><b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Cada agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo completamente dentro de tu zona de descenso puede efectuar inmediatamente una acción libre de <b>Reposicionarse</b>. Cada uno que lo haga deberá terminar ese movimiento completamente a 4\" o menos de tu zona de descenso.</p>"
         }
     ],
     "xv26-battlesuits": [

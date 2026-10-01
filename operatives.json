@@ -14813,7 +14813,7 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "5+",
-                        "Dñ": "2/2",
+                        "Dñ": "2/3",
                         "RA": "-"
                     }
                 },
@@ -14831,11 +14831,11 @@
             "abilities": [
                 {
                     "name": "Aventurero veterano",
-                    "description": "En el paso de preparación de cada fase de estrategia, si este agente está en la zona de aniquilación y no está dentro de la zona de control de agentes enemigos, obtienes 1 punto de Habilidosos."
+                    "description": "En el paso de preparación de cada fase de estrategia, si este agente está en la zona de aniquilación y no tiene agentes enemigos en su zona de control, obtienes 1 punto de Habilidosos."
                 },
                 {
                     "name": "Convicción total",
-                    "description": "La primera vez que este agente quedaría incapacitado durante la batalla, no queda incapacitado, le queda 1 herida restante y no puede ser incapacitado durante el resto de la acción. Todos los dados de ataque restantes se descartan. (incluyendo los tuyos si este agente está combatiendo o contraatacando)."
+                    "description": "La primera vez que este agente quedaría incapacitado durante la batalla, no queda incapacitado, le queda 1 herida restante y no puede ser incapacitado durante el resto de la acción. Todos los dados de ataque restantes se descartan (incluyendo los tuyos si este agente está combatiendo o contraatacando)."
                 }
             ],
             "uniqueActions": [],
@@ -14876,7 +14876,7 @@
             "abilities": [
                 {
                     "name": "Acechador",
-                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de ocultarse."
+                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de Ocultarse."
                 },
                 {
                     "name": "Dureza incontrolable",
@@ -14884,7 +14884,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">YAEGIR HERNKYN</span>G, LIGAS DE LOS VOTANN, FILOFAMILIAR",
+            "keywords": "<span class=\"faction\">YAEGIR HERNKYN</span>, LIGAS DE LOS VOTANN, FILOFAMILIAR",
             "peana": "28"
         },
         {
@@ -14921,7 +14921,7 @@
             "abilities": [
                 {
                     "name": "Negociación implacable",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Este agente puede efectuar inmediatamente una acción libre de <b>Disparar</b> (si tiene una orden de ocultarse, puedes cambiarla por trabarse para hacerlo)."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Este agente puede efectuar inmediatamente una acción libre de <b>Disparar</b> (si tiene una orden de Ocultarse, puedes cambiarla por Trabarse para hacerlo)."
                 },
                 {
                     "name": "Asesino descarado",
@@ -14929,7 +14929,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">YAEGIR HERNKYN</span>D, LIGAS DE LOS VOTANN, FANFARRÓN",
+            "keywords": "<span class=\"faction\">YAEGIR HERNKYN</span>, LIGAS DE LOS VOTANN, FANFARRÓN",
             "peana": "28"
         },
         {
@@ -14986,7 +14986,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Bípode",
-                    "description": "Cuando este agente dispara con esta arma, si no se ha movido durante la activación o si es una reacción, esta arma tiene la regla de arma Incesante. Ten en cuenta que este agente no tiene prohibido moverse tras <b>Disparar</b>."
+                    "description": "Cuando este agente dispara con esta arma, si no se ha movido durante la activación o si es un contraataque, esta arma tiene la regla de arma Incesante. Ten en cuenta que este agente no tiene prohibido moverse tras disparar."
                 }
             ],
             "uniqueActions": [],
@@ -15027,15 +15027,15 @@
             "abilities": [
                 {
                     "name": "Campo de minas",
-                    "description": "Tienes 5 marcadores de Campo de minas para la batalla. En el reverso, 3 son minas AP-Pex y 2 están en blanco. Coloca dichos marcadores como un elemento de equipo. Cada uno se coloca bocabajo (sin revelar su naturaleza) a más de 2\" de todo otro marcador, punto de acceso, y terreno Accesible, y a más de 6\" de la zona de descenso del oponente y de tus otros marcadores de Campo de minas. Cada vez que este agente sea apostado, si no está en la zona de control de agentes enemigos, puede reprogramar uno de tus marcadores de Campo de minas dados la vuelta que esté en su zona de control (voltea el marcador de nuevo)."
+                    "description": "Tienes 5 marcadores de Campo de minas para la batalla. En el reverso, 3 son minas AP-Pex y 2 están en blanco. Coloca dichos marcadores como un elemento de equipo. Cada uno debe colocarse boca abajo (no se revelan sus especificaciones), a más de 2\" de todo otro marcador, punto de acceso y terreno Accesible, y a más de 6\" de la zona de descenso de tu oponente y de tus otros marcadores de Campo de minas. Cada vez que este agente sea apostado, si no está en la zona de control de agentes enemigos, puede reprogramar uno de tus marcadores de Campo de minas dados la vuelta que esté en su zona de control (voltea el marcador de nuevo)."
                 },
                 {
                     "name": "Minas AP-Pex",
-                    "description": " Cuando uno de tus marcadores de Campo de minas bocabajo esté en la zona de control de un agente enemigo pero no en la zona de control de agentes <span class=\"faction\">YAEGIR HERNKYN</span> amigos, voltéalo. Si está en blanco, no hay efecto. Si es una mina AP-Pex, inflige 3 de daño a ese agente enemigo y tira 1D6: si el resultado es menor que el atributo Salvación del agente enemigo, inflígele daños adicionales iguales al resultado del dado; independientemente del resultado, si no resulta incapacitado, termina su acción, aunque no esté resuelta del todo. Si no puede ser colocado, muévelo el mínimo para poder hacerlo. En cualquier caso, deja el marcador donde está."
+                    "description": "Cuando uno de tus marcadores de Campo de minas bocabajo esté en la zona de control de un agente enemigo pero no en la zona de control de agentes <span class=\"faction\">YAEGIR HERNKYN</span> amigos, voltéalo. Si está en blanco, no hay efecto. Si es una mina AP-Pex, inflige 3 de daño a ese agente enemigo y tira 1D6: si el resultado es menor que el atributo Salvación del agente enemigo, inflígele daños adicionales iguales al resultado del dado; independientemente del resultado, si no resulta incapacitado, termina su acción, aunque no esté resuelta del todo. Si no puede ser colocado, muévelo el mínimo para poder hacerlo. En cualquier caso, deja el marcador donde está."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">YAEGIR HERNKYN</span>D, LIGAS DE LOS VOTANN, FERROBRAEK",
+            "keywords": "<span class=\"faction\">YAEGIR HERNKYN</span>, LIGAS DE LOS VOTANN, FERROBRAEK",
             "peana": "28"
         },
         {
@@ -15092,15 +15092,15 @@
             "abilities": [
                 {
                     "name": "Capa de wërketela",
-                    "description": "Cuando un agente dispara contra este agente: <ul><li>ignora la regla de arma Saturación.</li></ul> <ul><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una adicional o una como éxito crítico. No se acumula con terreno Aventajado.</li></ul>"
+                    "description": "Cuando un agente dispara contra este agente:<ul><li>Ignora la regla de arma Saturación.</li><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li></ul>"
                 },
                 {
                     "name": "<span class=\"faction\">*</span>Posición oculta",
-                    "description": "Este agente solo puede usar esta arma la primera vez que realiza una acción de <b>Disparar</b> durante la batalla. "
+                    "description": "Este agente solo puede usar esta arma la primera vez que realiza una acción de <b>Disparar</b> durante la batalla."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">YAEGIR HERNKYN</span>G, LIGAS DE LOS VOTANN, RIFLEFAMILIAR",
+            "keywords": "<span class=\"faction\">YAEGIR HERNKYN</span>, LIGAS DE LOS VOTANN, RIFLEFAMILIAR",
             "peana": "28"
         },
         {
@@ -15147,7 +15147,7 @@
             "abilities": [
                 {
                     "name": "Visor panespectral",
-                    "description": "Cuando este agente dispara contra un agente a 6\" o menos de él: <ul><li>las armas de este agente tienen la regla de arma Buscadora (Ligero).</li></ul> <ul><li>Ese agente no puede estar ofuscado.</li></ul>"
+                    "description": "Cuando este agente dispara contra un agente a 6\" o menos de él: <ul><li>Las armas de este agente tienen la regla de arma Buscadora (Ligero).</li><li>Ese agente no puede estar ofuscado.</li></ul>"
                 },
                 {
                     "name": "Rastreador",
@@ -15194,7 +15194,7 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "5+",
-                        "Dñ": "2/2",
+                        "Dñ": "2/3",
                         "RA": "-"
                     }
                 },
@@ -15222,7 +15222,7 @@
             "abilities": [
                 {
                     "name": "Intrépido",
-                    "description": "Cada vez que gastes un punto de Habilidosos por este agente, las siguientes reglas tienen prioridad: <ul><li>si sumas 1 a su atributo LPA, dura hasta el inicio de su siguiente activación.</li></ul> <ul><li>Si recupera heridas perdidas, recupera hasta 4.</li></ul>"
+                    "description": "Cada vez que gastes un punto de Habilidosos por este agente, las siguientes reglas tienen prioridad:<ul><li>Si sumas 1 a su atributo LPA, en su lugar dura hasta el inicio de su siguiente activación.</li><li>Si recupera heridas perdidas, en su lugar recupera hasta 4.</li></ul>"
                 }
             ],
             "uniqueActions": [],

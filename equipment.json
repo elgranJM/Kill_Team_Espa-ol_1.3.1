@@ -1278,11 +1278,11 @@
   {
     "id_equip": 154,
     "faction": "yaegirs",
-    "name": "Cuchillo de Plasma",
-    "description": "Los agentes HERNKYN YAEGIR amigos tienen la siguiente arma de combate: Cuchillo de Plasma. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión, y esa arma tiene la regla de armas Equilibrada para la batalla.",
+    "name": "Cuchillos de Plasma",
+    "description": "Los agentes <span class=\"faction\">YAEGIR HERNKYN</span> amigos tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en esos casos, usa la mejor versión, y esa arma tiene la regla de arma Equilibrada durante esta batalla.",
     "weapon": [
       {
-        "w_name": "Cuchillo de Plasma",
+        "w_name": "Cuchillo de plasma",
         "ATK": "3",
         "HIT": "4+",
         "DMG": "3/5",
@@ -1295,23 +1295,23 @@
     "id_equip": 155,
     "faction": "yaegirs",
     "name": "Cartuchos Bólter Estabilizados",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HERNKYN YAEGIR amigo esté realizando la acción de <b>Disparar</b> con una escopeta bólter (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora el atributo de Impacto de esa arma en 1 y añade 1 a ambos atributos de Daño.", 
+    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo realice una acción de <b>Disparar</b> y elijas una escopeta bólter (largo alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, mejora en 1 el atributo Impactar de esa arma, suma 1 a sus dos atributos Daño, y esa arma tiene la regla de arma Certera 1.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 156,
     "faction": "yaegirs",
-    "name": "Cartuchos Bólter Tormenta de Fuego",
-    "description": "Una vez por Punto de Inflexión, cuando un agente HERNKYN YAEGIR amigo esté realizando la acción de <b>Disparar</b> con una escopeta bólter (corto alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Explosión 1\".", 
+    "name": "Cartuchos Bólter Tormenta de Llamas",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo realice una acción de <b>Disparar</b> y elijas una escopeta bólter (corto alcance), puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Área 1\".", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 157,
     "faction": "yaegirs",
-    "name": "Subtraje de KV-Ceramida",
-    "description": "Siempre que un agente esté disparando a un agente HERNKYN YAEGIR amigo, si el arma a distancia en esa secuencia tiene la regla de armas Explosión o Torrente, puedes repetir uno de tus dados de defensa. Además, los agentes HERNKYN YAEGIR amigos no se ven afectados por la regla de armas Devastadora x\" (es decir, Devastadora con una distancia) a menos que sean el objetivo durante esa secuencia.", 
+    "name": "Mono de Ceramida-KV",
+    "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">YAEGIR HERNKYN</span> amigo, si el arma a distancia en esa secuencia tiene la regla de arma Área o Ráfaga, puedes repetir uno de tus dados de defensa. Además, los agentes <span class=\"faction\">YAEGIR HERNKYN</span> amigos no se ven afectados por la regla de arma x\" Devastadora x (es decir, Devastadora con una distancia) a menos que sean el blanco en esa secuencia.", 
     "weapon": [],
     "action": []
   },

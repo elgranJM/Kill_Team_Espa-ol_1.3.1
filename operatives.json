@@ -5065,11 +5065,11 @@
             "abilities": [
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar o bien dos acciones de <b>Disparar</b> o bien dos acciones de <b>Combatir</b>. Si han sido dos acciones de <b>Disparar</b>, debe elegirse al menos para una de ellas una escopeta Astartes, una pistola bólter o un bólter. Este agente puede reaccionar sea cual sea su orden."
+                    "description": "Durante la activación de este agente, puede realizar o bien dos acciones de <b>Disparar</b> o bien dos acciones de <b>Combatir</b>. Si han sido dos acciones de <b>Disparar</b>, debe elegirse al menos para una de ellas una escopeta Astartes, una pistola bólter o un bólter. Este agente puede contraatacar sea cual sea su orden."
                 },
                 {
                     "name": "Guía y experiencia",
-                    "description": "Una vez durante cada una de las activaciones de este agente, puedes elegir un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo distinto visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                    "description": "Una vez durante cada una de las activaciones de este agente, puedes elegir un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo en la zona de aniquilación. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                 }
             ],
             "uniqueActions": [],
@@ -5086,6 +5086,16 @@
                 "HERIDAS": "10"
             },
             "weapons": [
+                {
+                    "name": "Pistola bólter",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\""
+                    }
+                },
                 {
                     "name": "Bólter pesado (concentrado)",
                     "type": "ranged",
@@ -5117,7 +5127,7 @@
                     }
                 },
                 {
-                    "name": "Lanzamisiles (Perforante)",
+                    "name": "Lanzamisiles (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -5137,7 +5147,12 @@
                     }
                 }
             ],
-            "abilities": [],
+            "abilities": [
+                {
+                    "name": "Bípode de armas pesadas",
+                    "description": "Siempre que este agente dispare con un arma de su tarjeta de datos, si no ha movido durante la activación, o si es un contraataque, esa arma tiene la regla de arma Incesante; si el arma ya la tiene (p. ej., por el ardid de estrategia Emboscada), pasa a tener la regla de arma Implacable. Ten en cuenta que este agente no tiene prohibido moverse tras disparar."
+                }
+            ],
             "uniqueActions": [],
             "keywords": "<span class=\"faction\">ESCUADRA DE EXPLORADORES</span>, IMPERIUM, ADEPTUS ASTARTES, TIRADOR PESADO",
             "peana": "28"
@@ -5196,12 +5211,12 @@
             "abilities": [
                 {
                     "name": "Capa de camuflaje",
-                    "description": "Cuando un agente dispare contra este agente: <ul><li>Ignora la regla de arma Saturación. </li></ul> <ul><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li></ul>"
+                    "description": "Cuando un agente dispare contra este agente:<ul><li>Ignora la regla de arma Saturación.</li><li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o puedes guardar una salvación por cobertura como éxito crítico en su lugar. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li></ul>"
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "OPTICA",
+                    "name": "ÓPTICA",
                     "cost": "1 PA",
                     "description": [
                         "Hasta el inicio de la siguiente activación de este agente, siempre que dispare, los agentes enemigos no pueden estar ofuscados."
@@ -5246,11 +5261,11 @@
             "abilities": [
                 {
                     "name": "Lanzagarfios",
-                    "description": " Siempre que este agente trepe, puedes tratar la distancia vertical como 2\" (sin importar la distancia real que mueva en vertical dicho agente)."
+                    "description": "Siempre que este agente trepe, puedes tratar la distancia vertical como 2\" (sin importar la distancia real que mueva en vertical dicho agente)."
                 },
                 {
                     "name": "Asalto con lanzagarfios",
-                    "description": " Siempre que este gente realice una acción de <b>Cargar</b> en su activación, si durante esa acción trepa, se deja caer, salta o su peana se mueve bajo terreno Aventajado, sus armas de combate tienen la regla de arma Letal 3+ hasta el final de dicha activación."
+                    "description": "Siempre que este agente realice una acción de <b>Cargar</b> en su activación, si durante esa acción trepa, se deja caer, salta o su peana se mueve bajo terreno Aventajado, sus armas de combate tienen la regla de arma Letal 3+ hasta el final de dicha activación."
                 }
             ],
             "uniqueActions": [],
@@ -5294,7 +5309,7 @@
                     "name": "RASTREAR ENEMIGO",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo usado a 8\" o menos de este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a ese agente enemigo, las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero)."
+                        "Elige un agente enemigo a 8\" o menos de este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare a ese agente enemigo, las armas a distancia de ese agente amigo tienen la regla de arma Buscadora (Ligero)."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -5374,7 +5389,7 @@
             "abilities": [
                 {
                     "name": "Equipo adaptable",
-                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p> <p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada de humo</b>.</li></ul></p> <p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada aturdidora</b>.</li></ul></p> <p>Las reglas de esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acción (p.ej. si también has elegido esas granadas como equipo).</p>"
+                    "description": "<p>Puedes llevar a cabo cada una de las siguientes opciones una vez por punto de inflexión:</p><ul><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada de humo</b>.</li><li>Un agente <b>COMBATIENTE</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo puede realizar la acción de <b>Granada aturdidora</b>.</li></ul><p>Las reglas de esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acción (p. ej., si también has elegido esas granadas como equipo).</p>"
                 }
             ],
             "uniqueActions": [],

@@ -75,10 +75,10 @@
     "id_equip": 9,
     "faction": "scouts",
     "name": "Filopuñales",
-    "description": "Los agentes <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigos tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
+    "description": "Los agentes <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigos tienen la siguiente arma de combate. Ten en cuenta que algunos agentes ya tienen esta arma pero con mejores atributos; en esos casos, usa la mejor versión.",
     "weapon": [
       {
-        "w_name": "Filopuñales",
+        "w_name": "Filopuñal",
         "ATK": "3",
         "HIT": "3+",
         "DMG": "4/5",
@@ -99,15 +99,15 @@
     "id_equip": 11,
     "faction": "scouts",
     "name": "Oculares Trazablancos",
-    "description": "Hasta dos veces por Punto de Inflexión, cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté realizando la acción de <b>Disparar</b> y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, sus armas a distancia tienen las reglas de arma Letal 5+ y Saturación.", 
+    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo realice una acción de <b>Disparar</b> y estés eligiendo un blanco válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción las armas a distancia de ese agente amigo tienen las reglas de armas Letal 5+ y Saturación.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 12,
     "faction": "scouts",
-    "name": "Bípode de Arma Pesada",
-    "description": "Siempre que un agente <b>TIRADOR PESADO</b> <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté disparando con un bólter pesado o un lanzamisiles, si no se ha movido durante la activación, o si es una reacción, esa arma tiene la regla de armas Incesante; si el arma ya tiene esa regla, obtiene la regla de armas Implacable. Ten en cuenta que el agente no tiene restringido moverse después de <b>Disparar</b>.", 
+    "name": "Vocoenlace Táctico",
+    "description": "Una vez por punto de inflexión, puedes usar el ardid de tiroteo Entrenamiento Astartes o Aspirante Envalentonado por 0PM si un agente <b>SARGENTO</b> amigo está en la zona de aniquilación.", 
     "weapon": [],
     "action": []
   },

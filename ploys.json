@@ -1013,7 +1013,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Enfrentamiento de Guerrilla",
-        "description": "Siempre que un agente enemigo dispare contra un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo, si ese agente amigo está en cobertura y a más de 6\" de agentes enemigos a los que es visible, puedes repetir uno de tus dados de defensa.",
+        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo que esté a cubierto y a más de 6\" de todo agente enemigo para el que sea visible, puedes repetir uno de tus dados de defensa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1021,8 +1021,8 @@
         "faction": "scouts",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Emboscada de Disparos",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare durante su activación, si su orden cambió de Ocultación a Trabarse al inicio de esa activación, o no era visible para agentes enemigos al inicio de esa activación: <ul><li>Sus armas a distancia tienen la regla de armas Equilibrada.</li><li>Si el objetivo está agotado, sus armas a distancia tienen la regla de armas Incesante en su lugar.</li></ul>",
+        "name": "Emboscada",
+        "description": "Siempre que un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo dispare o combata durante su activación, si su orden se ha cambiado de Ocultarse a Trabarse al inicio de esa activación, o si no era visible para los agentes enemigos al inicio de esa activación:<ul><li>Las armas de ese agente amigo tienen la regla de arma Equilibrada.</li><li>Si el blanco está usado, las armas de ese agente amigo tienen, en su lugar, la regla de arma Incesante.</li></ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1030,8 +1030,8 @@
         "faction": "scouts",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Emboscada de Cuchillas",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo esté combatiendo durante su activación, si su orden cambió de Ocultación a Trabarse al inicio de esa activación, o no era visible para agentes enemigos al inicio de esa activación: <ul><li>Sus armas de combate tienen la regla de armas Incesante.</li><li>Si el objetivo está agotado, sus armas de combate también tienen la regla de armas Desgarradora.</li></ul>",
+        "name": "Entrenamiento Adaptativo",
+        "description": "Puedes cambiar la orden de hasta 1D3 agentes <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigos que estén a más de 4\" de todo agente enemigo.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1040,7 +1040,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Reubicación Sigilosa",
-        "description": "Selecciona un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo a más de 6\" de agentes enemigos. Puedes realizar inmediatamente una acción gratuita de <b>Correr</b> con ese agente y/o cambiar su orden. No puedes usar este Ardid de Estrategia en el primer Punto de Inflexión.",
+        "description": "Hasta 1D3 agentes <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigos que tengan una orden de Ocultarse y estén a más de 4\" de agentes enemigos pueden realizar inmediatamente una acción de <b>Correr</b> como acción libre. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1049,7 +1049,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Entrenamiento Astartes",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo. Hasta el final de esa activación, ese agente puede realizar dos acciones de <b>Combatir</b>, o dos acciones de <b>Disparar</b> si se selecciona una escopeta Astartes, pistola bólter o bólter para al menos una de ellas.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo. Hasta el final de dicha activación, ese agente puede elegir una de las siguientes opciones:<ul><li>Realizar dos acciones de <b>Combatir</b>.</li><li>Realizar dos acciones de <b>Disparar</b>, si para realizar al menos una de ellas elige un bólter, una escopeta Astartes o una pistola bólter.</li><li>Realizar dos acciones de <b>Disparar</b> con un bólter pesado, un lanzamisiles o un rifle de francotirador, pero gastando 1 PA adicional por la segunda acción.</li></ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1057,8 +1057,8 @@
         "faction": "scouts",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Fisiología Bruta",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo. Hasta el inicio de su próxima activación, puedes ignorar cualquier cambio en los atributos de ese agente por estar lesionado (incluyendo los atributos de sus armas).",
+        "name": "Fisiología Excepcional",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo, antes o después de que realice una acción. Hasta el inicio de su siguiente activación, añade 1\" a su atributo Movimiento y puedes ignorar cualquier cambio a los atributos de este agente por estar lesionado (incluyendo a los atributos de sus armas).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1067,7 +1067,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Aspirante Envalentonado",
-        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo realice la acción <b>Combatir</b> o <b>Disparar</b>, <span class=\"text-decoration-line-through text-warning-emphasis\">al final del paso Tirar Dados de Ataque</span> <span class=\"text-warning-emphasis\">después de cualquier repetición de tirada.</span>. Si es el primer agente amigo en realizar cualquiera de esas acciones durante este punto de inflexión, o si el agente enemigo en esa acción (objetivo primario, si es relevante) tiene un atributo de Heridas mayor que ese agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.\n",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo realice una acción de <b>Disparar</b> o <b>Combatir</b>, después de repetir cualquier tirada. Si es el primer agente amigo en realizar alguna de esas dos acciones durante este punto de inflexión, o si el agente enemigo en esa acción (como blanco principal, si es relevante) tiene un atributo Heridas mayor que ese agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo, puedes guardar uno de tus éxitos normales como un éxito crítico en su lugar.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1076,7 +1076,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Posición Encubierta",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo. Hasta el inicio de su próxima activación, mientras ese agente tenga una orden de Ocultación y esté en cobertura, no puede ser seleccionado como un blanco válido, teniendo precedencia sobre todas las demás reglas (p. ej., Buscadora, terreno de Ventaja) excepto estar a 2\" o menos.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ESCUADRA DE EXPLORADORES</span> amigo. Hasta el inicio de su siguiente activación, mientras este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado) salvo estar a 2\" o menos.",
         "typename": "Ardid de Tiroteo"
     },
     {

@@ -1111,39 +1111,39 @@
   {
     "id_equip": 138,
     "faction": "pathfinders",
-    "name": "Óptica de Análisis de Objetivos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo (excluyendo DRONE) esté realizando la acción de <b>Disparar</b> y estés seleccionando un Blanco Válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, si el objetivo tiene al menos una de tus fichas de Luz de Marcado, se trata como si tuviera una más. Si el arma a distancia tiene la regla de armas Explosión o Torrente, solo el objetivo principal se ve afectado.", 
+    "name": "Visor de Análisis de Tiro",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) esté realizando una acción de <b>Disparar</b> y estés eligiendo un blanco válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, si el blanco tiene al menos una de tus fichas de Marcador telemétrico, se le trata como si tuviera una más. Si el arma a distancia tiene la regla de arma Área o Ráfaga, solo se ve afectado el blanco principal.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 139,
     "faction": "pathfinders",
-    "name": "Luz de Marcado de Alta Intensidad",
-    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo (excluyendo MV7 MARKER DRONE) realice la acción de Luz de Marcado, puedes usar esta regla. Si lo haces, el agente enemigo que selecciones gana dos de tus fichas de Luz de Marcado (en lugar de una).", 
+    "name": "Marcador Telemétrico de Alta Intensidad",
+    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON TELEMÉTRICO MV7</b>) realice una acción de Marcador telemétrico, puedes usar esta regla. Si lo haces, el agente enemigo que has elegido gana dos de tus fichas de Marcador telemétrico (en lugar de una).", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 140,
     "faction": "pathfinders",
-    "name": "Enlace de Sondeo Orbital",
-    "description": "Una vez por Punto de Inflexión, cuando un agente PATHFINDER amigo realice la acción de Luz de Marcado, puedes usar esta regla. Si lo haces, puedes seleccionar un agente enemigo en la zona de aniquilación para que gane una de tus fichas de Luz de Marcado en su lugar (no necesita ser visible). Esto no es acumulativo con las reglas Luz de Marcado de Alta Intensidad o Analizar.", 
+    "name": "Enlace de Rastreo Orbital",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo realice la acción de Marcador telemétrico, puedes usar esta regla. Si lo haces, en su lugar puedes elegir un agente enemigo en la zona de aniquilación para que gane una de tus fichas de Marcador telemétrico (no necesita ser visible). Esto no es acumulativo con las reglas Marcador telemétrico de alta intensidad o Analizar.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 141,
     "faction": "pathfinders",
-    "name": "Granada de Fotones",
-    "description": "Una vez por Punto de Inflexión, un agente PATHFINDER amigo que tenga la acción de Luz de Marcado en su tarjeta de datos (excluyendo DRONE) puede realizar la siguiente acción única:", 
+    "name": "Granada Fotónica",
+    "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">RASTREADOR</span> amigo que tenga la acción de Marcador telemétrico en su tarjeta de datos (salvo <b>DRON</b>) puede realizar la siguiente acción única:", 
     "weapon": [],
     "action": [
       {
-        "action_name": "Granada de Fotones",
+        "action_name": "GRANADA FOTÓNICA",
         "action_cost": "1 PA",
-        "action_yes": ["Selecciona un Blanco Válido para este agente y lanza un D6: con un 3+, hasta el final de la siguiente activación de ese agente, resta 2\" de su atributo de Movimiento y no puede realizar la acción de Moverse con Cuidado."],
-        "action_no": "Un agente no puede realizar esta acción mientras esté dentro del área de control de un agente enemigo."
+        "action_yes": ["Elige un agente enemigo visible para este agente y tira 1D6: con 3+, hasta el final de la siguiente activación de ese agente, resta 2\" a su atributo Movimiento."],
+        "action_no": "Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
       }
     ]
   },

@@ -2597,7 +2597,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Barrido de Reconocimiento",
-        "description": "Selecciona un borde de la zona de aniquilación (excluyendo el tuyo). Cada agente <span class=\"faction\">RASTREADOR</span> amigo que esté totalmente a 6\" de ese borde puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección, pero cada uno que lo haga debe terminar ese movimiento totalmente a 6\" de un borde de la zona de aniquilación (excluyendo el tuyo). <span class=\"text-warning-emphasis\">No puedes usar este ardid durante el primer punto de inflexión.</span>",
+        "description": "Elige un borde de la zona de aniquilación (salvo el tuyo propio). Cada agente <span class=\"faction\">RASTREADOR</span> amigo que se encuentre a 6\" o menos de ese borde puede realizar de inmediato una acción libre de <b>Correr</b>, pero debe terminar dicho movimiento completamente a 6\" o menos de un borde de la zona de aniquilación (salvo el tuyo propio). No puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2606,7 +2606,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Fuego de Supresión",
-        "description": "Siempre que un agente enemigo esté realizando la acción <b>Disparar</b>, si el objetivo (el objetivo primario si el arma tiene las reglas de arma Estallido o Torrente) no es el blanco válido más cercano, tu oponente no puede repetir sus dados de ataque. Ignora a los agentes <span class=\"faction\">RASTREADOR</span> amigos que tengan una orden de Ocultación o estén ofuscados al determinar esto.",
+        "description": "Cuando un agente enemigo realice una acción de <b>Disparar</b>, si el blanco (el blanco principal si el arma tiene las reglas de arma Área o Ráfaga) no es el blanco válido más cercano, tu oponente no puede repetir sus dados de ataque. Al determinar esto, ignora a los agentes <span class=\"faction\">RASTREADOR</span> amigos que tengan una orden de <b>Ocultarse</b> o estén ofuscados.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2614,8 +2614,8 @@
         "faction": "pathfinders",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Vinculados",
-        "description": "Siempre que un agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>) dispare o contraataque con un arma a distancia (ver ardid de tiroteo Fusilamiento a Quemarropa), si está a 3\" de otro agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>), las armas a distancia de ese primer agente amigo tienen la regla de armas Certera 1.",
+        "name": "Vínculo",
+        "description": "Cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) dispare o contraataque con un arma a distancia (ver el ardid de tiroteo Descarga a bocajarro), si está a 3\" o menos de otro agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>), las armas a distancia de ese primer agente amigo tienen la regla de arma Certera 1.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2624,7 +2624,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "¡A Cubierto!",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">RASTREADOR</span> amigo, si puedes retener alguna salvación por cobertura, mejora el atributo de Salvación de ese agente amigo en 1.",
+        "description": "Cuando un agente dispare contra un agente <span class=\"faction\">RASTREADOR</span> amigo, si puedes guardar alguna salvación por cobertura, mejora en 1 el atributo Salvación de ese agente amigo.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2632,8 +2632,8 @@
         "faction": "pathfinders",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Una Causa Digna",
-        "description": "Usa este ardid de tiroteo al inicio de la Fase de Tiroteo. Un agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>) puede realizar inmediatamente una acción de misión gratuita.",
+        "name": "Una Causa Valiosa",
+        "description": "Usa este ardid de tiroteo al inicio de la fase de tiroteo. Un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) puede realizar de inmediato una acción libre de misión.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2642,7 +2642,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Fuego de Apoyo",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RASTREADOR</span> amigo esté realizando la acción Disparar y estés seleccionando un blanco válido a 6\" de él. Tener otros agentes <span class=\"faction\">RASTREADOR</span> amigos dentro del rango de control de un agente enemigo no impide que ese agente enemigo sea seleccionado.",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RASTREADOR</span> amigo realice una acción de <b>Disparar</b> y elijas un blanco válido a 6\" o menos del mismo. Tener a otros agentes <span class=\"faction\">RASTREADOR</span> amigos en la zona de control de un agente enemigo no impide elegir a ese agente enemigo.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2650,8 +2650,8 @@
         "faction": "pathfinders",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Protocolos de Salvador",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>) sea seleccionado como el blanco válido de una acción Disparar. Elige un agente <b>DRON</b> <span class=\"faction\">RASTREADOR</span> amigo visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido en su lugar (incluso si normalmente no sería válido para esto). <span class=\"text-info-emphasis\">Ese agente <b>DRON</b> amigo solo está en cobertura u ofuscado si el objetivo original lo estaba</span>. Este ardid no tiene efecto si el arma a distancia tiene la regla de armas Estallido o Torrente.",
+        "name": "Protocolos de Salvamento",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) sea elegido como blanco válido de una acción de <b>Disparar</b>. Elige un agente <b>DRON</b> <span class=\"faction\">RASTREADOR</span> amigo a 3\" o menos de ese primer agente amigo y visible para él, para que se convierta en el blanco válido en su lugar (aunque normalmente no fuera válido para ello). Ese agente <b>DRON</b> amigo solo está a cubierto u ofuscado si el blanco original lo está. Este ardid no tiene efecto si el arma a distancia tiene las reglas de arma Área o Ráfaga.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2659,8 +2659,8 @@
         "faction": "pathfinders",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Fusilamiento a Quemarropa",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (excluyendo <b>DRON</b>) esté contraatacando, si no estaba dentro del rango de control de agentes enemigos al inicio de esa activación/contraataque. Puedes usar una de sus armas a distancia como un arma cuerpo a cuerpo (excluyendo un arma que tenga la palabra 'granada' en su nombre) durante esa secuencia. Si lo haces, no puedes bloquear durante esa secuencia, y las siguientes reglas de arma no tienen efecto en sus armas hasta el final de esa secuencia: Devastadora, Perforante, Torrente.\n<span class=\"text-info-emphasis\"> Si ese agente amigo está preparado, tiene una orden de Trabarse y\nestá contraataque con un arma de pulso, tú resuelves el primer dado de ataque\n(es decir, defensor en lugar de atacante)</span>",
+        "name": "Descarga a Bocajarro",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) contraataque, si al inicio de esa activación o contraataque no estaba en la zona de control de agentes enemigos. Puedes usar una de sus armas a distancia como arma de combate (salvo un arma que incluya la palabra \"granada\" en su nombre) durante esa secuencia. Si lo haces, no puedes bloquear durante esa secuencia, y las siguientes reglas de arma no tienen efecto en sus armas hasta el final de esa secuencia: Devastadora, Penetración, Ráfaga. Si ese agente amigo está apostado, tiene una orden de <b>Trabarse</b> y está contraatacando con un arma de inducción, resuelves tú el primer dado de ataque (es decir, el defensor antes que el atacante).",
         "typename": "Ardid de Tiroteo"
     },
     {

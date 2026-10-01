@@ -7933,12 +7933,12 @@
       "abilities": [
         {
           "name": "Arte de la guerra",
-          "description": "<b>GAMBITO ESTRATÉGICO</b> una vez por batalla si este agente está en la zona de aniquilación. Elige una de las siguientes opciones y aplica sus reglas hasta el final del punto de inflexión: Mont'ka (Suma 1\" al atributo Movimiento de los agentes RASTREADOR amigos) o Kauyon (Los agentes RASTREADOR amigos pueden realizar una acción libre de Marcador telemétrico durante su activación si tienen una orden de ocultarse)."
+          "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Elige una de las siguientes opciones y aplica sus reglas hasta el final del punto de inflexión. No puedes elegir cada opción más de una vez por batalla:<ul><li><b>Mont'ka:</b> Suma 1\" al atributo Movimiento de los agentes <span class=\"faction\">RASTREADOR</span> amigos.</li><li><b>Kauyon:</b> Los agentes <span class=\"faction\">RASTREADOR</span> amigos pueden realizar una acción libre de Marcador telemétrico durante su activación si tienen una orden de <b>Ocultarse</b>.</li></ul>"
         }
       ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
@@ -7946,7 +7946,7 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, LÍDER, SHAS'UI",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, LÍDER, SHAS'UI",
       "peana": "25"
     },
     {
@@ -7988,7 +7988,7 @@
       ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
@@ -7996,7 +7996,7 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, AGUERRIDO",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, AGUERRIDO",
       "peana": "25"
     },
     {
@@ -8030,10 +8030,15 @@
           }
         }
       ],
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Visión multidimensional",
+          "description": "Siempre que este agente dispara, los agentes enemigos no pueden estar ofuscados."
+        }
+      ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
@@ -8041,23 +8046,15 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         },
         {
-          "name": "Visión multidimensional",
-          "cost": "1 PA",
-          "description": [
-            "Hasta el inicio de la siguiente activación de este agente, cuando dispare, los agentes enemigos no pueden estar ofuscados."
-          ],
-          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
-        },
-        {
-          "name": "Interferir sistemas",
+          "name": "INTERFERIR SISTEMAS",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Hasta el final de la siguiente activación de ese agente, resta 1 a su atributo LPA."
           ],
-          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de ocultarse."
+          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de <b>Ocultarse</b>."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, INTERFERIDOR TRANSPECTRAL",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, INTERFERIDOR TRANSPECTRAL",
       "peana": "25"
     },
     {
@@ -8113,7 +8110,7 @@
       ],
       "abilities": [],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, EXPERTO EN ARMAS",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, EXPERTO EN ARMAS",
       "peana": "25"
     },
     {
@@ -8160,12 +8157,12 @@
       "abilities": [
         {
           "name": "Especialista granadero",
-          "description": "Este agente puede usar granadas frag y Penetración (ver equipo universal). Eso no cuenta para su límite de usos. Cuando haga tal cosa, mejora en 1 el atributo Impactar de esa arma."
+          "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Eso no cuenta para su límite de usos (p. ej. si también has seleccionado esas granadas como equipo para otros agentes). Cuando haga tal cosa, mejora en 1 el atributo Impactar de esa arma."
         }
       ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
@@ -8173,7 +8170,7 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, GRANADERO DE ASALTO",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, GRANADERO DE ASALTO",
       "peana": "25"
     },
     {
@@ -8224,7 +8221,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, OJO PRECISO",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, OJO PRECISO",
       "peana": "25"
     },
     {
@@ -8261,7 +8258,7 @@
       "abilities": [],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
@@ -8269,15 +8266,15 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         },
         {
-          "name": "Señal",
+          "name": "SEÑAL",
           "cost": "1 PA",
           "description": [
-            "<b>APOYO</b>. Elige un agente RASTREADOR amigo distinto a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+            "<b>APOYO</b>. Elige un agente <span class=\"faction\">RASTREADOR</span> amigo distinto a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, TÉCNICO DE COMUNICACIONES",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, TÉCNICO DE COMUNICACIONES",
       "peana": "25"
     },
     {
@@ -8314,12 +8311,12 @@
       "abilities": [
         {
           "name": "¡Sanitario!",
-          "description": "La primera vez durante cada punto de inflexión que otro agente RASTREADOR amigo (salvo DRON) vaya a resultar incapacitado mientras era visible para este agente y estaba a 3\" o menos de él, puedes usar esta regla. Si lo haces, ese agente amigo no queda incapacitado, le queda 1 herida y no puede resultar incapacitado durante el resto de la acción. Resta 1 a los atributos LPA de ambos hasta el final de sus próximas activaciones."
+          "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) vaya a resultar incapacitado mientras era visible para este agente y estaba a 3\" o menos de él, puedes usar esta regla siempre que ni este ni ese agente estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no queda incapacitado, le queda 1 herida y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede entonces realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Resta 1 a los atributos LPA de este y de ese agente hasta el final de sus próximas activaciones respectivamente, y si esta regla fue usada durante la activación de ese agente amigo, esa activación termina. No puedes usar esta regla si este agente está incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
         }
       ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
@@ -8327,16 +8324,16 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         },
         {
-          "name": "Botiquín",
+          "name": "BOTIQUÍN",
           "cost": "1 PA",
           "description": [
-            "Elige un agente RASTREADOR amigo (salvo DRON) en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas.",
+            "Elige un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas.",
             "No puede ser un agente con el que se haya usado la regla ¡Sanitario! durante este punto de inflexión."
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, MÉDICO, TÉCNICO SANITARIO",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, MÉDICO, TÉCNICO SANITARIO",
       "peana": "25"
     },
     {
@@ -8373,12 +8370,12 @@
       "abilities": [
         {
           "name": "Controlador de drones",
-          "description": "Mientras este agente esté en la zona de aniquilación: Suma 2\" al atributo Movimiento de los agentes DRON RASTREADOR amigos. El ardid de tiroteo Protocolos de salvamento te cuesta 0 PM."
+          "description": "Mientras este agente esté en la zona de aniquilación:<ul><li>Suma 2\" al atributo Movimiento de los agentes <b>DRON</b> <span class=\"faction\">RASTREADOR</span> amigos.</li><li>El ardid de tiroteo Protocolos de salvamento te cuesta 0PM.</li></ul>"
         }
       ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
@@ -8386,16 +8383,16 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         },
         {
-          "name": "Pilotaje remoto",
+          "name": "PILOTAJE REMOTO",
           "cost": "1 PA",
           "description": [
-            "Un agente DRON RASTREADOR amigo puede realizar de inmediato una acción libre, pero no puede mover más de 2\" durante esa acción. Esa acción puede ser una que normalmente esté restringida por su regla de dron.",
+            "Un agente <b>DRON</b> <span class=\"faction\">RASTREADOR</span> amigo puede realizar de inmediato una acción libre, pero no puede mover más de 2\" durante esa acción. Esa acción puede ser una que normalmente esté restringida por su regla de dron (esto tiene preferencia sobre dicha regla).",
             "Este agente puede realizar esta acción más de una vez durante su activación pero, si lo hace, el mismo agente DRON no podrá realizar la misma acción libre más de una vez por activación."
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, CONTROLADOR DE DRONES",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, CONTROLADOR DE DRONES",
       "peana": "25"
     },
     {
@@ -8432,23 +8429,23 @@
       "abilities": [
         {
           "name": "Activación en grupo",
-          "description": "Cuando este agente quede usado, debes activar a continuación otro agente SHAS'LA RASTREADOR amigo apostado (si es posible) antes de que active tu oponente."
+          "description": "Cuando este agente quede usado, debes activar a continuación otro agente <b>SHAS'LA</b> <span class=\"faction\">RASTREADOR</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
         },
         {
           "name": "Valor en primera línea",
-          "description": "Este agente puede realizar la acción de Marcador telemétrico aún estando en la zona de control de un agente enemigo. Además, puede realizar la acción de <b>Retroceder</b> por 1 PA menos."
+          "description": "Este agente puede realizar la acción de Marcador telemétrico aún estando en la zona de control de un agente enemigo (lo cual tiene preferencia sobre las condiciones normales de la acción Marcador telemétrico). Además, este agente puede realizar la acción de <b>Retroceder</b> por 1PA menos."
         }
       ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ]
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, SHAS'LA",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, SHAS'LA",
       "peana": "25"
     },
     {
@@ -8495,16 +8492,16 @@
       "abilities": [
         {
           "name": "Analizar",
-          "description": "Siempre que este agente realice la acción de Marcador telemétrico, cada otro agente enemigo visible para este agente y que esté a 3\" o menos del agente enemigo elegido gana también una de tus fichas de Marcador telemétrico."
+          "description": "Siempre que este agente realice la acción de Marcador telemétrico, cada otro agente enemigo visible para este agente y que esté a 3\" o menos del agente enemigo que hayas elegido para esa acción gana también una de tus fichas de Marcador telemétrico."
         },
         {
           "name": "Dron",
-          "description": "Solo puede realizar <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Marcador telemétrico, <b>Reposicionarse</b> y <b>Disparar</b>. Su LPA cuenta como 1 menos para el control de objetivos."
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro)."
@@ -8512,7 +8509,7 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, DRON DE RECONOCIMIENTO MB3, DRON",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, DRON DE RECONOCIMIENTO MB3, DRON",
       "peana": "32"
     },
     {
@@ -8549,11 +8546,11 @@
       "abilities": [
         {
           "name": "Dron",
-          "description": "Solo puede realizar <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Marcador telemétrico, <b>Reposicionarse</b> y <b>Disparar</b>. Su LPA cuenta como 1 menos para el control de objetivos."
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, DRON DE COMBATE MV1, DRON",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, DRON DE COMBATE MV1, DRON",
       "peana": "32"
     },
     {
@@ -8580,15 +8577,15 @@
       "abilities": [
         {
           "name": "Generador de escudos",
-          "description": "Ignora la regla Penetración. Una vez por punto de inflexión, puede ignorar el daño normal de un dado de ataque. Protocolos de salvamento cuesta 0 PM."
+          "description": "<ul><li>Este agente ignora la regla de arma Penetración.</li><li>Una vez por punto de inflexión, cuando un dado de ataque inflija daño normal a este agente, puedes ignorar ese daño infligido.</li><li>Puedes usar el ardid de tiroteo Protocolos de salvamento por 0PM si este agente es el agente <b>DRON</b> especificado.</li></ul>"
         },
         {
           "name": "Dron",
-          "description": "Solo puede realizar <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Marcador telemétrico, <b>Reposicionarse</b> y <b>Disparar</b>. Su LPA cuenta como 1 menos para el control de objetivos."
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, DRON DE DEFENSA MV4, DRON",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, DRON DE DEFENSA MV4, DRON",
       "peana": "32"
     },
     {
@@ -8615,16 +8612,16 @@
       "abilities": [
         {
           "name": "Marcador telemétrico de alta intensidad",
-          "description": "Siempre que este agente realice la acción de Marcador telemétrico, el agente enemigo elegido ganará dos fichas de Marcador telemétrico (en lugar de una)."
+          "description": "Siempre que este agente realice la acción de Marcador telemétrico, el agente enemigo elegido ganará dos de tus fichas de Marcador telemétrico (en lugar de una)."
         },
         {
           "name": "Dron",
-          "description": "Solo puede realizar <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Marcador telemétrico, <b>Reposicionarse</b> y <b>Disparar</b>. Su LPA cuenta como 1 menos para el control de objetivos."
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [
         {
-          "name": "Marcador telemétrico",
+          "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
             "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro)."
@@ -8632,7 +8629,7 @@
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, DRON TELEMÉTRICO MV7, DRON",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, DRON TELEMÉTRICO MV7, DRON",
       "peana": "32"
     },
     {
@@ -8659,19 +8656,19 @@
       "abilities": [
         {
           "name": "Dron",
-          "description": "Solo puede realizar <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Marcador telemétrico, <b>Reposicionarse</b> y <b>Disparar</b>. Su LPA cuenta como 1 menos para el control de objetivos."
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [
         {
-          "name": "Acelerador de inducción",
+          "name": "ACELERADOR DE INDUCCIÓN",
           "cost": "1 PA",
           "description": [
-            "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado, cuando otro agente RASTREADOR amigo dispare con un arma de inducción a 3\" o menos de este agente, dicha arma tiene Letal 5+ y Severa."
+            "Hasta el inicio de la siguiente activación de este agente, o hasta que quede incapacitado (lo que ocurra antes), cuando otro agente <span class=\"faction\">RASTREADOR</span> amigo dispare con un arma de inducción a 3\" o menos de este agente, dicha arma tiene las reglas de arma Letal 5+ y Severa."
           ]
         }
       ],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, DRON ACELERADOR DE INDUCCIÓN MV31, DRON",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, DRON ACELERADOR DE INDUCCIÓN MV31, DRON",
       "peana": "32"
     },
     {
@@ -8698,15 +8695,15 @@
       "abilities": [
         {
           "name": "Inhibidor de gravedad",
-          "description": "Ralentiza el movimiento enemigo a 6\" (trata la distancia como 2\" adicionales). Además, empeora en 1 el atributo Impactar de las armas de combate enemigas a esa distancia."
+          "description": "<ul><li>Siempre que un agente enemigo realice una acción en la que se mueva (salvo <b>Correr</b>), si fuera a moverse a un punto a 6\" o menos de este agente y visible para él, trata la distancia como 2\" adicionales e ignora las distancias adicionales de las reglas de terreno Obstructor y Accesible.</li><li>Siempre que un agente enemigo combate o contraataca estando a 6\" o menos de este agente y visible para él, empeora en 1 el atributo Impactar de las armas de combate de ese agente enemigo. Esto se acumula con estar lesionado.</li></ul>"
         },
         {
           "name": "Dron",
-          "description": "Solo puede realizar <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Marcador telemétrico, <b>Reposicionarse</b> y <b>Disparar</b>. Su LPA cuenta como 1 menos para el control de objetivos."
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">RASTREADORES</span>, IMPERIO T'AU, DRON ANTIGRAVEDAD MV33, DRON",
+      "keywords": "<span class=\"faction\">RASTREADOR</span>, IMPERIO T'AU, DRON ANTIGRAVEDAD MV33, DRON",
       "peana": "32"
     }
   ],

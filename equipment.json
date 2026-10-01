@@ -1151,10 +1151,10 @@
     "id_equip": 142,
     "faction": "mandrakes",
     "name": "Dardos de Hueso",
-    "description": "Una vez por Punto de Inflexión, un agente MANDRAKE amigo puede usar la siguiente arma a distancia:",
+    "description": "Una vez por punto de inflexión, una agente <span class=\"faction\">MANDRÁGORAS</span> amiga puede usar la siguiente arma a distancia:",
     "weapon": [
       {
-        "w_name": "Dardos de Hueso",
+        "w_name": "Dardo de hueso",
         "ATK": "4",
         "HIT": "3+",
         "DMG": "2/4",
@@ -1166,24 +1166,24 @@
   {
     "id_equip": 143,
     "faction": "mandrakes",
-    "name": "Glifo de Sombra",
-    "description": "Una vez por Punto de Inflexión, cuando un agente MANDRAKE amigo sea activado EN LAS SOMBRAS, puedes usar esta regla. Si lo haces, hasta el inicio de su siguiente activación, mientras ese agente tenga una orden de Ocultarse y esté en cobertura, no puede ser seleccionado como un Blanco Válido, teniendo prioridad sobre todas las demás reglas (P. ej. Búsqueda, terreno Elevado) excepto estar a 2\" o menos.", 
+    "name": "Glifo Sombrío",
+    "description": "Una vez por punto de inflexión, cuando una agente <span class=\"faction\">MANDRÁGORAS</span> amiga se active estando <b>ENSOMBRECIDA</b>, puedes usar esta regla. Si lo haces, hasta el inicio de su siguiente activación, mientras esa agente tenga una orden de <b>Ocultarse</b> y esté tras cobertura, no puede ser elegida como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej. Buscadora, terreno Aventajado) salvo estar a 2\" o menos.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 144,
     "faction": "mandrakes",
-    "name": "Gema del Alma",
-    "description": "Una vez por Punto de Inflexión, cuando un agente MANDRAKE amigo esté realizando la acción de <b>Disparar</b> y selecciones un fuego brujo, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de armas Explosión 1\".", 
+    "name": "Gema de Alma",
+    "description": "Una vez por punto de inflexión, cuando una agente <span class=\"faction\">MANDRÁGORAS</span> amiga realice una acción de <b>Disparar</b> y elijas un rayo impío, puedes usar esta regla. Si lo haces, hasta el final de esa acción, esa arma tiene la regla de arma Área 1\".", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 145,
     "faction": "mandrakes",
-    "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente MANDRAKE amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación/reacción (no se gastan PA en ella).", 
+    "name": "Cepo de Cadena",
+    "description": "Cada vez que un agente enemigo vaya a efectuar una acción de <b>Retroceder</b> estando en la zona de control de una agente <span class=\"faction\">MANDRÁGORAS</span> amiga, si no hay otros agentes enemigos dentro de la zona de control de esa agente amiga, puedes usar esta regla. Si lo haces, tira dos D6, o 1D6 si ese agente enemigo tiene un atributo Heridas mayor que esa agente amiga. Si cualquier resultado es 4+, dicho agente enemigo no puede realizar esa acción durante esta activación o reacción (no se gastan PA en ella), y no puedes volver a usar esta regla durante este punto de inflexión.", 
     "weapon": [],
     "action": []
   },

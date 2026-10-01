@@ -9833,13 +9833,13 @@
             },
             "weapons": [
                 {
-                    "name": "Rayo impía",
+                    "name": "Rayo impío",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Rompealmas"
+                        "RA": "Rompealmas<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -9856,15 +9856,15 @@
             "abilities": [
                 {
                     "name": "Susurros atormentadores",
-                    "description": "Cada vez que un oponente vaya a activar un agente enemigo a 6\" o menos de esta agente, puedes tirar 1D6 (no puedes hacerlo si también interrumpiste la activación de ese agente con la regla adicional Persecución obsesiva del agente FAUCES FÚNEBRES durante este punto de inflexión): si el resultado es mayor que el atributo LPA de ese agente enemigo, no puede activarlo durante esta activación. Si no hay otros agentes enemigos elegibles para ser activados, esta regla no tiene efecto."
+                    "description": "Cada vez que un oponente vaya a activar un agente enemigo a 6\" o menos de esta agente, puedes tirar 1D6 (no puedes hacerlo si ya has interrumpido la activación de ese agente con esta regla o la regla adicional Persecución obsesiva del agente <b>FAUCES FÚNEBRES</b> durante este punto de inflexión): si el resultado es mayor que el atributo LPA de ese agente enemigo, no puede activarlo durante esta activación. Si no hay otros agentes enemigos elegibles para ser activados, esta regla no tiene efecto."
                 },
                 {
                     "name": "Oubliex",
-                    "description": "Cada vez que este agente es apostado, o si esta agente incapacita a un agente enemigo con su marchitador, se activa su oubliex. Si su oubliex está activo y un dado de ataque inflige daño a este agente, puedes tirar 1D6: con 5+, ignora el daño infligido por ese dado de ataque y su oubliex se desactiva."
+                    "description": "Cada vez que esta agente es apostada, o si esta agente incapacita a un agente enemigo con su marchitador, se activa su oubliex. Si su oubliex está activo y un dado de ataque inflige daño a esta agente, puedes tirar 1D6: con 5+, ignora el daño infligido por ese dado de ataque y su oubliex se desactiva."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">MANDRAGORAS</span>, AELDARI, DRUKHARI, LÍDER, NOCTURNA",
+            "keywords": "<span class=\"faction\">MANDRÁGORAS</span>, AELDARI, DRUKHARI, LÍDER, NOCTURNA",
             "peana": "28"
         },
         {
@@ -9884,7 +9884,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Área 2\", Rompealmas"
+                        "RA": "Área 2\", Rompealmas<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -9894,7 +9894,7 @@
                         "A": "5",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Letal 5+, Rompealmas"
+                        "RA": "Letal 5+, Rompealmas<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -9911,7 +9911,7 @@
             "abilities": [
                 {
                     "name": "Fuegoimpío",
-                    "description": "Cuando una agente <span class=\"faction\">MANDRAGORAS</span> amiga dispare a un agente enemigo que tenga una de tus fichas de Fuegoimpío, suma 1 a los dos atributos Daño de las armas a distancia de esa agente amiga, y además tienen la regla de arma Saturación. Cuando un agente dispare a una agente <span class=\"faction\">MANDRAGORAS</span> amiga que tenga una de tus fichas de Fuegoimpío, resta 1 (hasta un mínimo de 1) a los dos atributos Daño de las armas a distancia de ese agente."
+                    "description": "Cuando una agente <span class=\"faction\">MANDRÁGORAS</span> amiga dispare a un agente enemigo que tenga una de tus fichas de Fuegoimpío, suma 1 a los dos atributos Daño de las armas a distancia de esa agente amiga, y además tienen la regla de arma Saturación. Cuando un agente dispare a una agente <span class=\"faction\">MANDRÁGORAS</span> amiga que tenga una de tus fichas de Fuegoimpío, resta 1 (hasta un mínimo de 1) a los dos atributos Daño de las armas a distancia de ese agente."
                 }
             ],
             "uniqueActions": [
@@ -9924,7 +9924,7 @@
                     "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">MANDRAGORAS</span>, AELDARI, DRUKHARI, ABISAL",
+            "keywords": "<span class=\"faction\">MANDRÁGORAS</span>, AELDARI, DRUKHARI, ABISAL",
             "peana": "28"
         },
         {
@@ -9938,13 +9938,13 @@
             },
             "weapons": [
                 {
-                    "name": "Rayo impía",
+                    "name": "Rayo impío",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Rompealmas"
+                        "RA": "Rompealmas<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -9961,7 +9961,7 @@
             "abilities": [
                 {
                     "name": "Cosecha de almas",
-                    "description": "Cada vez que un agente enemigo quede incapacitado como resultado de la regla Cobrarse una parte o el filo impío de esta agente, obtienes 1 punto de Cosecha de almas, o dos si ese agente enemigo tenía un atributo LPA de 3 o más. Cada vez que una agente <span class=\"faction\">MANDRAGORAS</span> amiga sea activada, puedes gastar 1 de tus puntos de Cosecha de almas para o bien sumar 1 a su atributo LPA hasta el final de la batalla, o bien curarle 2D3 heridas perdidas."
+                    "description": "Cada vez que un agente enemigo quede incapacitado como resultado de la regla Cobrarse una parte o el filo impío de esta agente, obtienes 1 punto de Cosecha de almas, o 2 si ese agente enemigo tenía un atributo LPA de 3 o más. Cada vez que una agente <span class=\"faction\">MANDRÁGORAS</span> amiga sea activada, puedes gastar 1 de tus puntos de Cosecha de almas para o bien sumar 1 a su atributo LPA hasta el final de la batalla, o bien curarle 2D3 heridas perdidas. Ten en cuenta que puedes gastar tus puntos de Cosecha de almas aunque esta agente esté incapacitada."
                 },
                 {
                     "name": "Cobrarse una parte",
@@ -9969,7 +9969,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">MANDRAGORAS</span>, AELDARI, DRUKHARI, CATADORA DE CARNES",
+            "keywords": "<span class=\"faction\">MANDRÁGORAS</span>, AELDARI, DRUKHARI, CATADORA DE CARNES",
             "peana": "28"
         },
         {
@@ -9983,13 +9983,13 @@
             },
             "weapons": [
                 {
-                    "name": "Rayo impía",
+                    "name": "Rayo impío",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Rompealmas"
+                        "RA": "Rompealmas<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -9999,7 +9999,7 @@
                         "A": "5",
                         "HP/HA": "2+",
                         "Dñ": "2/2",
-                        "RA": "Alcance 6\", Aturdidora, Buscadora (Ligero), Devastadora 2, Rompealmas"
+                        "RA": "Alcance 6\", Aturdidora, Buscadora (Ligero), Devastadora 2, Rompealmas<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -10016,20 +10016,20 @@
             "abilities": [
                 {
                     "name": "Persecución obsesiva",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo. Hasta el paso de preparación de la siguiente fase de estrategia, obtiene tu ficha de Persecución obsesiva. La siguiente vez que tu oponente vaya a activar un agente enemigo con tu ficha de Persecución obsesiva, si este agente está apostado, puedes activar este agente primero. Durante esa activación, esta agente debe<b>Combatir</b> o dispara contra ese agente enemigo (si no le es posible hacerlo, la activación se cancela)."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo. Hasta el paso de preparación de la siguiente fase de estrategia, obtiene tu ficha de Persecución obsesiva. La siguiente vez que tu oponente vaya a activar un agente enemigo con tu ficha de Persecución obsesiva, si esta agente está apostada, puedes activar esta agente primero (no puedes hacerlo si también tiraste para evitar la activación de ese agente con la regla adicional Susurros atormentadores del agente <b>NOCTURNA</b> durante este punto de inflexión). Si lo haces, durante esa activación, esta agente debe combatir o disparar contra ese agente enemigo, y hasta que lo haga no puede combatir o disparar contra ningún otro agente (si no le es posible hacerlo, la activación de esta agente se cancela). Después de completar la activación de esta agente, tu oponente activa ese agente enemigo (si es posible), o activa un agente enemigo diferente si no puede."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "PROYECCIÓN PAREIDOLICA",
+                    "name": "PROYECCIÓN PAREIDÓLICA",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo que sea un blanco válido para esta agente o que esté ENSOMBRECIDO. Hasta el inicio de la siguiente activación de esta agente, hasta que quede incapacitada o hasta que efectúe esta acción de nuevo (lo que ocurra antes), empeora en 1 el atributo Imp de las armas de ese agente enemigo y resta 2\" a su atributo Movimiento (esto no se acumula con las lesiones). No se puede sumar nada al atributo LPA de ese agente enemigo (retira todos los cambios positivos que tenga su atributo LPA)."
+                        "Elige un agente enemigo que sea un blanco válido para esta agente o que esté <b>ENSOMBRECIDO</b>. Hasta el inicio de la siguiente activación de esta agente, hasta que quede incapacitada o hasta que efectúe esta acción de nuevo (lo que ocurra antes), empeora en 1 el atributo Imp de las armas de ese agente enemigo y resta 2\" a su atributo Movimiento (esto no se acumula con las lesiones)."
                     ],
                     "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo, a menos que el único agente enemigo en cuya zona de control se encuentre sea el elegido para esta acción."
                 }
             ],
-            "keywords": "<span class=\"faction\">MANDRAGORAS</span>, AELDARI, DRUKHARI, FAUCES FUNEBRES",
+            "keywords": "<span class=\"faction\">MANDRÁGORAS</span>, AELDARI, DRUKHARI, FAUCES FÚNEBRES",
             "peana": "28"
         },
         {
@@ -10043,13 +10043,13 @@
             },
             "weapons": [
                 {
-                    "name": "Rayo impía",
+                    "name": "Rayo impío",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Rompealmas"
+                        "RA": "Rompealmas<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -10066,7 +10066,7 @@
             "abilities": [
                 {
                     "name": "Portal sombrío",
-                    "description": "Cuando esta agente realiza una acción de <b>Reposicionarse</b> usando un PORTAL SOMBRÍO, puedes retirar tus marcadores de Portal sombrío de la zona de aniquilación, y a continuación colocar uno en la zona de control de esta agente antes de que sea retirada y otro después de ser desplegada. Cada agente <span class=\"faction\">MANDRAGORAS</span> amiga puede usar un PASO SOMBRÍO cada punto de inflexión si uno de tus marcadores de Portal sombrío está en su zona de control al ser retirada y el otro al ser desplegada."
+                    "description": "Cuando esta agente realiza una acción de <b>Reposicionarse</b> usando un <b>PASO SOMBRÍO</b> (ver regla de facción), puedes usar esta regla. Si lo haces, retira tus marcadores de Portal sombrío de la zona de aniquilación (de haberlos), y a continuación coloca uno de tus marcadores de Portal sombrío en la zona de control de esta agente antes de que sea retirada y otro en su zona de control después de que sea desplegada.<p>Cada agente <span class=\"faction\">MANDRÁGORAS</span> amiga puede usar un <b>PASO SOMBRÍO</b> cada punto de inflexión (con prioridad sobre una vez por punto de inflexión) si uno de tus marcadores de Portal sombrío está en la zona de control de esa agente cuando es retirada y el otro lo está cuando es desplegada. Ten en cuenta que las agentes amigas pueden hacer tal cosa aunque esta agente haya quedado incapacitada, y hacerlo no evita que otra agente use un <b>PASO SOMBRÍO</b> de forma normal.</p>"
                 }
             ],
             "uniqueActions": [
@@ -10074,12 +10074,12 @@
                     "name": "TEJER LAS TINIEBLAS",
                     "cost": "1 PA",
                     "description": [
-                        "Retira tu marcador de Tejer las tinieblas de la zona de aniquilación (de haberlo). A continuacion coloca tu marcador de Tejer las tinieblas visible para esta agente, o en un terreno Aventajado de un elemento de terreno visible para esta agente. Ese marcador crea un área de humo con el mismo tamaño y efectos que una <b>Granada de humo</b>, excepto que no la retiras en el siguiente punto de inflexión. Si esta agente queda incapacitada, retira tu marcador de Tejer las tinieblas."
+                        "Retira tu marcador de Tejer las tinieblas de la zona de aniquilación (de haberlo). A continuación coloca tu marcador de Tejer las tinieblas visible para esta agente, o en un terreno Aventajado de un elemento de terreno visible para esta agente. Ese marcador crea un área de humo con el mismo tamaño y efectos que una <b>Granada de humo</b>, excepto que no la retiras en el siguiente punto de inflexión. Si esta agente queda incapacitada, retira tu marcador de Tejer las tinieblas de la zona de aniquilación."
                     ],
                     "description_no": "Esta agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">MANDRAGORAS</span>, AELDARI, DRUKHARI, TEJESOMBRAS",
+            "keywords": "<span class=\"faction\">MANDRÁGORAS</span>, AELDARI, DRUKHARI, TEJESOMBRAS",
             "peana": "28"
         },
         {
@@ -10093,13 +10093,13 @@
             },
             "weapons": [
                 {
-                    "name": "Rayo impía",
+                    "name": "Rayo impío",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "3/4",
-                        "RA": "Rompealmas"
+                        "RA": "Rompealmas<span class=\"faction\">*</span>"
                     }
                 },
                 {
@@ -10116,11 +10116,11 @@
             "abilities": [
                 {
                     "name": "Guerrera sombría",
-                    "description": "Cuando esta agente esté ENSOMBRECIDA, suma 1 al atributo Daño crítico de su filo trémulo."
+                    "description": "Cuando esta agente esté <b>ENSOMBRECIDA</b>, suma 1 al atributo Daño crítico de su filo trémulo."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">MANDRAGORAS</span>, AELDARI, DRUKHARI, COMBATIENTE",
+            "keywords": "<span class=\"faction\">MANDRÁGORAS</span>, AELDARI, DRUKHARI, COMBATIENTE",
             "peana": "28"
         }
     ],

@@ -536,35 +536,35 @@
             "faction": "mandrakes",
             "type": "team",
             "name": "Agentes",
-            "description": "<p>1 <b>DEMONIO NOCTURNO</b> <span class=\"faction\">MANDRÁGORA</span></p>8 agentes <span class=\"faction\">MANDRÁGORA</span> elegido de la siguiente lista:<ul><li><b>ABISAL</b></li><li><b>ELEGIDOR DE LA CARNE</b></li><li><b>FAUCES DE ENDECHA</b></li><li><b>TEJEDOR DE SOMBRAS</b></li><li><b>COMBATIENTE</b></li></ul><p>Excepto los agentes <b>COMBATIENTE</b>, tu comando solo puede incluir cada agente de arriba una vez.</p>"
+            "description": "<p>1 agente <b>NOCTURNA</b> <span class=\"faction\">MANDRÁGORAS</span></p>8 agentes <span class=\"faction\">MANDRÁGORAS</span> elegidas de la siguiente lista:<ul><li><b>ABISAL</b></li><li><b>CATADORA DE CARNES</b></li><li><b>FAUCES FÚNEBRES</b></li><li><b>TEJESOMBRAS</b></li><li><b>COMBATIENTE</b></li></ul><p>Salvo agentes <b>COMBATIENTE</b>, tu comando solo puede incluir una de cada una de las agentes de esta lista.</p>"
         },
         {
             "id_racial": 70,
             "faction": "mandrakes",
             "type": "racial",
-            "name": "Dentro de la Sombra",
-            "description": "Un agente está <b>DENTRO DE LA SOMBRA</b> si se cumple alguna de las siguientes condiciones:<ul><li>Está a 1\" de terreno Pesado que no es más bajo que él.</li><li>Cualquier parte de su peana está debajo de terreno Aventajado.</li><li>Un marcador de Portal de Sombras está dentro de su rango de control (ver agente <b>TEJEDOR DE SOMBRAS</b>).</li></ul>"
+            "name": "Ensombrecido",
+            "description": "Una agente está <b>ENSOMBRECIDA</b> si se cumple alguna de las siguientes condiciones:<ul><li>Está a 1\" o menos de terreno Pesado que no está por debajo de ella.</li><li>Cualquier parte de su peana está debajo de un terreno Aventajado.</li><li>Hay un marcador de Portal sombrío dentro de su zona de control (ver agente <b>TEJESOMBRAS</b>).</li></ul>"
         },
         {
             "id_racial": 71,
             "faction": "mandrakes",
             "type": "racial",
-            "name": "Paso de Sombras",
-            "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">MANDRÁGORA</span> amigo <b>DENTRO DE LA SOMBRA</b> puede usar un <b>PASO DE SOMBRAS</b> cuando realiza la acción <b>Reposicionarse</b>. Si lo hace, no lo muevas. En su lugar, retíralo de la zona de aniquilación y colócalo de nuevo <b>DENTRO DE LA SOMBRA</b> en una ubicación donde pueda ser colocado. Cuando lo coloques de nuevo, no puede:<ul><li>Estar en la zona de control de un agente enemigo.</li><li>Ser un blanco válido para un agente enemigo.</li><li>Realizar la acción <b>Disparar</b> o <b>Combatir</b> hasta el inicio del siguiente punto de inflexión.</li></ul>"
+            "name": "Paso Sombrío",
+            "description": "Una vez por punto de inflexión, una agente <span class=\"faction\">MANDRÁGORAS</span> amiga <b>ENSOMBRECIDA</b> puede usar un <b>PASO SOMBRÍO</b> cuando realice una acción de <b>Reposicionarse</b>. Si lo hace, no la muevas. En su lugar, retírala de la zona de aniquilación y vuelve a desplegarla <b>ENSOMBRECIDA</b> en una ubicación en la que pueda ser colocada. Cuando vuelvas a desplegarla, no puede:<ul><li>Estar en la zona de control de ningún agente enemigo.</li><li>Ser un blanco válido para un agente enemigo.</li><li>Realizar acciones de <b>Disparar</b> o <b>Combatir</b> hasta el inicio del siguiente punto de inflexión.</li></ul>"
         },
         {
             "id_racial": 72,
             "faction": "mandrakes",
             "type": "racial",
-            "name": "Entidades Umbrías",
-            "description": "Siempre que un agente dispara a un agente <span class=\"faction\">MANDRÁGORA</span> amigo, ignora la regla de armas Penetración. Siempre que un agente <span class=\"faction\">MANDRÁGORA</span> amigo esté <b>DENTRO DE LA SOMBRA</b>, mejora su atributo de Salvación en 1."
+            "name": "Entes Umbríos",
+            "description": "Cada vez que un agente dispare contra una agente <span class=\"faction\">MANDRÁGORAS</span> amiga, ignora la regla de arma Penetración. Cuando una agente <span class=\"faction\">MANDRÁGORAS</span> amiga esté <b>ENSOMBRECIDA</b>, mejora en 1 su atributo Salvación."
         },
         {
             "id_racial": 73,
             "faction": "mandrakes",
             "type": "racial",
-            "name": "Golpe de Alma",
-            "description": "<p>Algunas armas en las reglas de este equipo tienen la regla de armas Golpe de Alma a continuación:</p><p><b><span class=\"faction\">*</span>Golpe de Alma:</b> Los dados de defensa exitosos se determinan de manera diferente. Cada resultado que sea igual o menor que el atributo de LPA del objetivo es un éxito y se retiene. Cada resultado que sea mayor que el atributo de LPA del objetivo es un fallo y se descarta. Cada resultado de 1 es siempre un éxito crítico. Cada otro éxito es un éxito normal. Cada resultado de 6 es siempre un fallo.</p><p><i>Nota del Diseñador: Muchas de las reglas de este comando se refieren al atributo de LPA de un agente enemigo. Este sería el atributo de LPA en el momento en que la regla surte efecto (es decir, incluyendo cambios).</i></p>"
+            "name": "Rompealmas",
+            "description": "<p>Algunas armas en las reglas de este comando tienen la regla de arma Rompealmas, que se explica a continuación:</p><p><b><span class=\"faction\">*</span>Rompealmas:</b> Los dados de defensa con éxito se determinan de forma diferente. Cada resultado igual o menor al atributo LPA del blanco es un éxito y se guarda. Cada resultado mayor que el atributo LPA del blanco es un fallo y se descarta. Todo resultado de 1 es siempre un éxito crítico. Los demás éxitos son éxitos normales. Todo resultado de 6 es siempre un fallo.</p><p><i>Nota de diseño: Muchas de las reglas de este comando hacen referencia al atributo LPA de un agente enemigo. Este sería el atributo LPA en el momento en que tiene efecto la regla (es decir, incluyendo cambios).</i></p>"
         }
     ],
     "nemesis-claw": [

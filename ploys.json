@@ -2525,7 +2525,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Horror Reptante",
-        "description": "Después de la activación de cada agente enemigo, antes de que se active el siguiente agente, puedes realizar una acción gratuita de <b>Correr</b> con un agente <span class=\"faction\">MANDRÁGORA</span> amigo que tenga una orden de Ocultación si comienza y termina esa acción <b>DENTRO DE LA SOMBRA</b>. No puedes usar este ardid durante el primer punto de inflexión, y cada agente amigo solo puede ser seleccionado para este ardid una vez por punto de inflexión.",
+        "description": "Tras la activación de cada agente enemigo, antes de que se active el siguiente agente, una agente <span class=\"faction\">MANDRÁGORAS</span> amiga que tenga una orden de <b>Ocultarse</b> puede efectuar una acción libre de <b>Correr</b> si empieza y termina esa acción <b>ENSOMBRECIDA</b>. No puedes usar este ardid durante el primer punto de inflexión, y cada agente amiga solo puede ser elegida para este ardid una vez por punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2533,8 +2533,8 @@
         "faction": "mandrakes",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Sudario Crepuscular",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">MANDRÁGORA</span> amigo <b>DENTRO DE LA SOMBRA</b>, puedes retener uno de tus dados de defensa como un éxito normal sin tirarlo (además de una salvación por cobertura, si la hay).",
+        "name": "Mortaja de Crepúsculo",
+        "description": "Cada vez que un agente dispara contra una agente <span class=\"faction\">MANDRÁGORAS</span> amiga que esté <b>ENSOMBRECIDA</b>, puedes guardar uno de tus dados de defensa como éxito normal sin tirarlo (además de la salvación por cobertura, si dispones de ella).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2542,8 +2542,8 @@
         "faction": "mandrakes",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Hoja en la Oscuridad",
-        "description": "Cada agente <span class=\"faction\">MANDRÁGORA</span> amigo puede realizar la acción <b>Cargar</b> mientras tiene una orden de Ocultación si comienza o termina esa acción <b>DENTRO DE LA SOMBRA</b>.",
+        "name": "Filo en la Oscuridad",
+        "description": "Cada agente <span class=\"faction\">MANDRÁGORAS</span> amiga puede efectuar acciones de <b>Cargar</b> aún teniendo una orden de <b>Ocultarse</b> si empieza o termina esa acción <b>ENSOMBRECIDA</b>.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2551,8 +2551,8 @@
         "faction": "mandrakes",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Pesadilla Ineludible",
-        "description": "Siempre que un agente <span class=\"faction\">MANDRÁGORA</span> amigo dispare, combatiendo o contraataque, si está <b>DENTRO DE LA SOMBRA</b>, puedes repetir uno de tus dados de ataque.",
+        "name": "Pesadilla Inescapable",
+        "description": "Cada vez que una agente <span class=\"faction\">MANDRÁGORAS</span> amiga dispare, combata o contraataque, si está <b>ENSOMBRECIDA</b>, puedes repetir uno de tus dados de ataque.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2560,8 +2560,8 @@
         "faction": "mandrakes",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Deslizarse Fuera de la Vista",
-        "description": "Usa este ardid de tiroteo al final de la activación de cualquier agente. Elige un agente <span class=\"faction\">MANDRÁGORA</span> amigo que tenga una orden de Trabarse y esté <b>DENTRO DE LA SOMBRA</b>. Cambia la orden de ese agente a Ocultación.",
+        "name": "Desaparición Sibilina",
+        "description": "Usa este ardid de tiroteo al final de la activación de cualquier agente. Elige una agente <span class=\"faction\">MANDRÁGORAS</span> amiga con una orden de <b>Trabarse</b> y que esté <b>ENSOMBRECIDA</b>. Cambia la orden de esa agente por <b>Ocultarse</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2570,7 +2570,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Festín de Almas",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">MANDRÁGORA</span> amigo dispare, combatiendo o contraataque contra un agente enemigo a 6\" de él, al final del paso Resolver Dados de Ataque. Ese agente amigo recupera un número de heridas perdidas igual al atributo de LPA de ese agente enemigo, multiplicado por el número de tus dados de ataque que infligieron daño durante esa secuencia. El exceso de dados de ataque se ignora (es decir, si el agente enemigo es incapacitado antes de que se resuelvan los dados de ataque restantes).",
+        "description": "Usa este ardid de tiroteo cuando una agente <span class=\"faction\">MANDRÁGORAS</span> amiga dispare, combata o contraataque contra un agente enemigo a 6\" o menos de ella, al final del paso de Resolver dados de ataque. Esa agente amiga recupera un número de heridas perdidas igual al atributo LPA del agente enemigo, multiplicado por el número de tus dados de ataque que infligieran daño durante esa secuencia. El exceso de dados de ataque se ignora (es decir, si el agente enemigo queda incapacitado antes de que se resuelvan los dados de ataque restantes). No puedes usar este ardid si esa agente <span class=\"faction\">MANDRÁGORAS</span> amiga es incapacitada.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2578,8 +2578,8 @@
         "faction": "mandrakes",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Ningún Lugar Donde Esconderse",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">MANDRÁGORA</span> amigo, cuando realice una acción en la que se mueva. Hasta el final de esa activación, ese agente puede moverse a través de partes de elementos de terreno como si no estuvieran allí, pero debe terminar esos movimientos en una ubicación donde pueda ser colocado.",
+        "name": "No Hay Donde Esconderse",
+        "description": "Usa este ardid de tiroteo durante la activación de una agente <span class=\"faction\">MANDRÁGORAS</span> amiga, cuando realice una acción en la que se mueva. Hasta el final de esa activación, esa agente puede moverse a través de partes de elementos de terreno como si no estuvieran ahí, pero no puede mover más que su atributo Movimiento si es una acción de <b>Cargar</b> y debe terminar esos movimientos en una ubicación en la que pueda ser colocada.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2587,8 +2587,8 @@
         "faction": "mandrakes",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Mordisco de la Sombra",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo realice la acción <b>Combatir</b> en una activación en la que realizó la acción <b>Cargar</b>, y seleccione a un agente <span class=\"faction\">MANDRÁGORA</span> amigo <b>DENTRO DE LA SOMBRA</b> para combatir contra él. En el paso Resolver Dados de Ataque de esa secuencia, tú resuelves el primer dado de ataque (es decir, defensor en lugar de atacante).",
+        "name": "Mordisco de las Sombras",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo efectúe una acción de <b>Combatir</b> en una activación en la que haya efectuado una acción de <b>Cargar</b>, y elija combatir contra una agente <span class=\"faction\">MANDRÁGORAS</span> amiga <b>ENSOMBRECIDA</b>. En el paso de Resolver dados de ataque de esa secuencia, tú resuelves el primer dado de ataque (es decir, el defensor antes que el atacante).",
         "typename": "Ardid de Tiroteo"
     },
     {

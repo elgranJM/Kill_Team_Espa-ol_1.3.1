@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'farstalker-kinband', 'hearthkyn-salvager', 'hierotek', 'kabalite',
             'kommandos', 'mandrakes', 'pathfinders', 'raveners', 'vespid-stingwings',
             'void-dancer-troupe', 'wrecka-krew', 'wyrmblade', 'yaegirs',
-            'xv26-battlesuits'
+            'xv26-battlesuits', 'exodite-dragon-masters'
         ]
     };
 
@@ -121,7 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'wrecka-krew': 'Demoledorez',
         'wyrmblade': 'FiloSierpe',
         'yaegirs': 'Yaegirs Hernkyn',
-        'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo'
+        'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo',
+        'exodite-dragon-masters': 'Señores Dragoneros Exoditas'
     };
 
     // --- Inicialización ---

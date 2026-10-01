@@ -1641,6 +1641,38 @@
     "action":[]
   },
   {
+      "id_equip": 205,
+      "faction": "exodite-dragon-masters",
+      "name": "Armadura de Escamas de Dragón",
+      "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> <b>MONTADO</b> amigo, en el paso de tirar dados de defensa puedes guardar uno de tus éxitos normales como un éxito crítico en su lugar.",
+      "weapon": [],
+      "action": []
+  },
+  {
+      "id_equip": 206,
+      "faction": "exodite-dragon-masters",
+      "name": "Talismanes del Clan",
+      "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> <b>MONTADO</b> amigo dispare, combata o contraataque, si obtienes dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.",
+      "weapon": [],
+      "action": []
+  },
+  {
+      "id_equip": 207,
+      "faction": "exodite-dragon-masters",
+      "name": "Matrices Cristalinas de Lileath",
+      "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> amigo realice una acción de <b>Disparar</b> y elijas una carabina solar o un perfil de su rifle largo, puedes usar esta regla. Si lo haces, hasta el final de esa activación, esa arma tiene la regla de arma Penetración 1.",
+      "weapon": [],
+      "action": []
+  },
+  {
+      "id_equip": 208,
+      "faction": "exodite-dragon-masters",
+      "name": "Joyas Espirituales",
+      "description": "Siempre que un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> <b>MONTADO</b> amigo resulte incapacitado, ganas 1PM.",
+      "weapon": [],
+      "action": []
+  },
+  {
     "id_equip": 194,
     "faction": "universal",
     "name": "1 DEPÓSITO DE MUNICIÓN",

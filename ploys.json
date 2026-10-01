@@ -3231,6 +3231,78 @@
         "typename":"Ardid de Tiroteo"
     },
     {
+        "id_ploy": 476,
+        "faction": "exodite-dragon-masters",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Precisión Veloz",
+        "description": "Siempre que un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> amigo dispare, si tiene <b>VELOCIDAD 4+</b>, sus armas a distancia tienen la regla de armas Equilibrada.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 477,
+        "faction": "exodite-dragon-masters",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Furia de Draco",
+        "description": "Siempre que un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> amigo combata:\n<ul>\n  <li>Si tiene <b>VELOCIDAD 4+</b>, sus armas de combate tienen la regla de arma Equilibrada.</li>\n  <li>Si tiene <b>VELOCIDAD 7+</b>, sus armas de combate tienen la regla de arma Incesante.</li>\n</ul>",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 478,
+        "faction": "exodite-dragon-masters",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Evasión Sinuosa",
+        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> amigo a más de 6\" de él, si ese agente amigo tiene <b>VELOCIDAD 4+</b> o <b>7+</b>, tu oponente no puede repetir sus dados de ataque.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 479,
+        "faction": "exodite-dragon-masters",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Chocar y Derribar",
+        "description": "Una vez durante la activación de cada agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> <b>MONTADO</b> amigo, al terminar el movimiento de la acción de <b>Esprintar</b>:\n<ul>\n  <li>Si se ha movido 4\" o más durante esa acción, puedes infligir 1 daño a 1 agente enemigo en su zona de control.</li>\n  <li>Si se ha movido 7\" o más durante esa acción, o si es un agente <b>FILO DEL CLAN</b>, puedes, en su lugar, infligir 1D3 daños a 1 agente enemigo en su zona de control.</li>\n</ul>",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 480,
+        "faction": "exodite-dragon-masters",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Espíritu de Supervivencia",
+        "description": "Usa este ardid de tiroteo durante la activación o el contraataque de un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> <b>MONTADO</b> amigo, antes o después de realizar una acción. Hasta el inicio de su siguiente activación, puedes ignorar cualquier cambio a los atributos de las armas de ese agente por estar lesionado.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 481,
+        "faction": "exodite-dragon-masters",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Salto",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> <b>MONTADO</b> amigo realice la acción de <b>Esprintar</b>. En lugar de mover ese agente, retíralo de la zona de aniquilación y redespliégalo en un lugar donde pueda colocarse a 1\" en horizontal de su posición original. Esta distancia no puede medirse a través de elementos de terreno de una altura superior a 2\", y ese agente no puede desplegarse en un terreno Aventajado a una altura superior a 2\" sobre el suelo de la zona de aniquilación. Se considera que ese agente ha movido 3\" a efectos de calcular su movimiento restante y tiene <b>VELOCIDAD 3-</b>.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 482,
+        "faction": "exodite-dragon-masters",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Hambre Feral",
+        "description": "Usa este ardid de tiroteo después de tirar los dados de ataque de un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> amigo, si está combatiendo con sus colmillos y espolones o con sus colmillos y espolones de dracocorcel contra un agente enemigo herido. Puedes repetir cualquiera de tus dados de ataque.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 483,
+        "faction": "exodite-dragon-masters",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Jinetes Expertos",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> <b>MONTADO</b> amigo realice la acción de <b>Esprintar</b> durante su activación. Durante esa acción, ese agente puede realizar la acción de <b>Recoger marcador</b>, <b>Colocar marcador</b> o una acción de misión (puedes determinar el control durante esa acción para ello), y mover la distancia restante que le quede de esa acción de <b>Esprintar</b> después de realizarla.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
         "id_ploy": 460,
         "faction": "xv26-battlesuits",
         "type": "strategic",

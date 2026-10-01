@@ -24948,5 +24948,237 @@
             "keywords": "<span class=\"faction\">INSIDIADORA CELESTE</span>, IMPERIUM, ADEPTA SORORITAS, COMBATIENTE",
             "peana": "32"
         }
+    ],
+    "exodite-dragon-masters": [
+        {
+            "id": "clanblade",
+            "name": "SEÑOR DRAGONERO FILO DEL CLAN",
+            "stats": {
+                "LPA": "4",
+                "MOVER": "12\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "24"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina solar",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 1"
+                    }
+                },
+                {
+                    "name": "Colmillos y espolones de dracocorcel",
+                    "type": "melee",
+                    "stats": {
+                        "A": "6",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Brutal"
+                    }
+                },
+                {
+                    "name": "Filos lunares",
+                    "type": "melee",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Letal 5+"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Escudo de escamas",
+                    "description": "Siempre que un agente dispare contra este agente, si no se guardan dados de ataque como éxitos críticos, empeora en 1 el x de la regla de armas Penetración (si lo hay). Eso significa que Penetración 1 se ignora."
+                },
+                {
+                    "name": "Mejoras de Filo del Clan",
+                    "description": "Al elegir este agente para la batalla, elige hasta 2 reglas de Mejora de Filo del Clan distintas (ver Reglas de facción) y añádelas a su tarjeta de datos durante esta batalla."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SEÑOR DRAGONERO EXODITA</span>, AELDARI, MONTADO, FILO DEL CLAN",
+            "peana": "75x42"
+        },
+        {
+            "id": "leystalker",
+            "name": "SEÑOR DRAGONERO LEYACECHADOR",
+            "stats": {
+                "LPA": "4",
+                "MOVER": "12\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "24"
+            },
+            "weapons": [
+                {
+                    "name": "Rifle largo (inmóvil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 3, Apuntada<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Rifle largo (móvil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 1"
+                    }
+                },
+                {
+                    "name": "Colmillos y espolones de dracocorcel",
+                    "type": "melee",
+                    "stats": {
+                        "A": "6",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Brutal"
+                    }
+                },
+                {
+                    "name": "Filo de caza",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Letal 5+"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "<span class=\"faction\">*</span>Apuntada",
+                    "description": "Este agente no puede usar esta arma durante una activación en la que haya movido más de 3\" y no puede moverse más de 3\" durante una activación en la que haya usado esta arma. Esta regla de arma no impide la acción de <b>Ponerse en guardia</b>."
+                },
+                {
+                    "name": "Escama oscura implacable",
+                    "description": "Puedes ignorar cualquier cambio al atributo Impactar del arma colmillos y espolones de dracocorcel de este agente por estar lesionado."
+                },
+                {
+                    "name": "Mejoras de Leyacechador",
+                    "description": "Al elegir este agente para la batalla, elige hasta 2 reglas de Mejora de Leyacechador distintas (ver Reglas de facción) y añádelas a su tarjeta de datos durante esta batalla."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SEÑOR DRAGONERO EXODITA</span>, AELDARI, MONTADO, LEYACECHADOR",
+            "peana": "75x42"
+        },
+        {
+            "id": "stonesinger",
+            "name": "SEÑOR DRAGONERO CANTARROCA",
+            "stats": {
+                "LPA": "4",
+                "MOVER": "12\"",
+                "SALVACIÓN": "3+",
+                "HERIDAS": "24"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina solar",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 1"
+                    }
+                },
+                {
+                    "name": "Escupitajo de draco de cresta venenosa",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Alcance 8\", Ráfaga 2\", Severa"
+                    }
+                },
+                {
+                    "name": "Báculo pétreo",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "<b>PSÍQUICA</b>, Aturdidora, Choque, Letal 5+"
+                    }
+                },
+                {
+                    "name": "Colmillos y espolones de dracocorcel",
+                    "type": "melee",
+                    "stats": {
+                        "A": "6",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Brutal"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Mejoras de Cantarroca",
+                    "description": "Al elegir este agente para la batalla, elige hasta 2 reglas de Mejora de Cantarroca distintas (ver Reglas de facción) y añádelas a su tarjeta de datos durante esta batalla."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "CANCIÓN DE RENOVACIÓN",
+                    "cost": "1PA",
+                    "description": [
+                        "<b>PSÍQUICA</b>. Elige 1 agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> amigo visible para este agente. Ese agente recupera hasta 2D3 heridas perdidas.",
+                        "<b>PSÍQUICA</b>. Alternativamente, cada agente <span class=\"faction\">SEÑOR DRAGONERO EXODITA</span> amigo puede recuperar hasta 1D3 heridas perdidas."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
+                }
+            ],
+            "keywords": "<span class=\"faction\">SEÑOR DRAGONERO EXODITA</span>, AELDARI, MONTADO, PSÍQUICO, CANTARROCA",
+            "peana": "75x42"
+        },
+        {
+            "id": "drakolithe",
+            "name": "DRACOLITA",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "8\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "7"
+            },
+            "weapons": [
+                {
+                    "name": "Colmillos y espolones",
+                    "type": "melee",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Desgarradora"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Evasión sobrenatural",
+                    "description": "Siempre que este agente realice la acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, si termina dicha acción a más de 2\" de su ubicación anterior, pasa a tener <b>VELOCIDAD 4+</b>. Si termina a más de 5\" de su ubicación anterior, en su lugar pasa a tener <b>VELOCIDAD 7+</b>. Al finalizar su activación, si no ha llegado a <b>VELOCIDAD 4+</b> o <b>7+</b> durante dicha activación, pasa a tener <b>VELOCIDAD 3-</b>. Ten en cuenta que se trata de la distancia desde la ubicación anterior, no de la distancia recorrida (es decir, no puede simplemente regresar a su ubicación anterior y pasar a tener una alta <b>VELOCIDAD</b>)."
+                },
+                {
+                    "name": "Bestia",
+                    "description": "Este agente no puede realizar ninguna acción aparte de <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Ponerse en guardia</b>, <b>Recoger marcador</b>, <b>Colocar marcador</b>, <b>Reposicionarse</b> y acciones de misión. Este agente no puede realizar las acciones de <b>Recoger marcador</b>, <b>Colocar marcador</b>, ni acciones de misión a menos que haya un agente <b>LEYACECHADOR</b> amigo que no esté incapacitado. Además, no puede usar armas que no estén en su tarjeta de datos."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">SEÑOR DRAGONERO EXODITA</span>, AELDARI, DRACOLITA",
+            "peana": "32"
+        }
     ]
 }

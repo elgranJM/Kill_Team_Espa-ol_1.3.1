@@ -221,7 +221,8 @@ const factionTranslations = {
     'wrecka-krew': 'Demoledorez',
     'wyrmblade': 'FiloSierpe',
     'yaegirs': 'Yaegirs Hernkyn',
-    'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo'
+    'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo',
+    'exodite-dragon-masters': 'Señores Dragoneros Exoditas'
 };
 
 // Traducciones visuales para los arquetipos

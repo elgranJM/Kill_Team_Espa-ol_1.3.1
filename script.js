@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'hunter-clade', 'imperial-navy-breachers', 'inquisitorial-agent',
             'kasrkin', 'novitiates', 'phobos', 'ratling', 'sanctifiers',
             'scouts', 'tempestus-aquilons', 'wolf-scouts', 'strike-force-variel',
-            'exaction-squad', 'veteran-guardsmen', 'celestian-insidiants'
+            'exaction-squad', 'veteran-guardsmen', 'celestian-insidiants',
+            'spectre-squad'
         ],
         'Caos': [
             'blooded', 'chaos-cult', 'fellgor-ravagers', 'gellerpox',
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'exaction-squad': 'Escuadra de Exacción',
         'veteran-guardsmen': 'Korps de la Muerte',
         'celestian-insidiants': 'Insidiadora Celeste',
+        'spectre-squad': 'Escuadra Espectro',
 
         'blooded': 'Ungidos',
         'chaos-cult': 'Culto del Caos',

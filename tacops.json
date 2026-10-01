@@ -290,5 +290,11 @@
             "recon",
             "seek-destroy"
         ]
+    },
+    "spectre-squad":{
+        "archetypes":[
+            "infiltration",
+            "recon"
+        ]
     }
 }

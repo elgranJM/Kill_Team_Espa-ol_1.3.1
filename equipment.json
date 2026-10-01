@@ -1673,6 +1673,55 @@
       "action": []
   },
   {
+      "id_equip": 209,
+      "faction": "spectre-squad",
+      "name": "Fuego de Francotirador",
+      "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo puede usar la siguiente arma a distancia:",
+      "weapon": [
+          {
+              "w_name": "Fuego de francotirador",
+              "ATK": "4",
+              "HIT": "3+",
+              "DMG": "3/3",
+              "rules": "Devastadora 2, Pesada (solo Correr), Saturación, Silenciosa"
+          }
+      ],
+      "action": []
+  },
+  {
+      "id_equip": 210,
+      "faction": "spectre-squad",
+      "name": "Triangulación por Vídeo",
+      "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo realice una acción de <b>Disparar</b> y estés eligiendo un blanco válido, puedes usar esta regla. Si lo haces, ese blanco no puede estar ofuscado si se cumple alguna de las siguientes condiciones:<ul><li>También es un blanco válido para otro agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo.</li><li>Está a 6\" o menos de un agente <b>VOCOBALIZA</b> amigo.</li></ul>",
+      "weapon": [],
+      "action": []
+  },
+  {
+      "id_equip": 211,
+      "faction": "spectre-squad",
+      "name": "Bengala de Señales",
+      "description": "<b>GAMBITO ESTRATÉGICO</b>. Un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo puede realizar inmediatamente una acción libre de <b>Granada aturdidora</b> (ver equipo universal). Realizar esta acción mediante esta regla no cuenta para sus límites de acción (es decir, si también eliges esa granada del equipo). Cuando el atributo LPA de un agente enemigo cambia como resultado de este <b>GAMBITO ESTRATÉGICO</b>, no puedes usar este equipo durante el resto de la batalla.",
+      "weapon": [],
+      "action": []
+  },
+  {
+      "id_equip": 212,
+      "faction": "spectre-squad",
+      "name": "Camuflaje Avanzado",
+      "description": "Los agentes <span class=\"faction\">ESCUADRA ESPECTRO</span> amigos (salvo <b>VOCOBALIZA</b>) pueden realizar esta acción única:",
+      "weapon": [],
+      "action": [
+          {
+              "action_name": "CAMUFLAJE AVANZADO",
+              "action_cost": "1 PA",
+              "action_yes": [
+                  "Hasta el inicio de su siguiente activación, mientras este agente tenga una orden de Ocultarse y esté en cobertura, no se le puede elegir como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado) salvo estar a 2\" o menos."
+              ],
+              "action_no": "Este agente no puede realizar esta acción si está a 3\" o menos de un agente enemigo y es visible para él."
+          }
+      ]
+  },
+  {
     "id_equip": 194,
     "faction": "universal",
     "name": "1 DEPÓSITO DE MUNICIÓN",

@@ -3303,6 +3303,78 @@
         "typename": "Ardid de Tiroteo"
     },
     {
+        "id_ploy": 484,
+        "faction": "spectre-squad",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Desaparecer",
+        "description": "1 agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo puede realizar inmediatamente una acción libre de <b>Reposicionarse</b>. No puede terminar ese movimiento más cerca de agentes enemigos o de la zona de descenso del oponente (salvo si lo termina completamente dentro de tu zona de descenso) y no puede realizar esa acción de nuevo durante el punto de inflexión. En una zona de aniquilación que use las reglas de combate cerrado (p. ej., Mundo Necrópolis), ignora el terreno de muro al determinar la cercanía.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 485,
+        "faction": "spectre-squad",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Enfrentamiento Oculto",
+        "description": "Siempre que un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo dispare, si está tras cobertura desde la perspectiva del blanco, sus armas tienen la regla de arma Equilibrada. Ten en cuenta que tu oponente sigue determinando las líneas de tiro para esto (es decir, decide desde qué punto de la peana de su agente se trazan las líneas de tiro).",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 486,
+        "faction": "spectre-squad",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Descarga en Emboscada",
+        "description": "Siempre que se active un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo, si está a más de 3\" de todo agente enemigo y no es un blanco válido para los agentes enemigos antes de determinar su orden, sus armas a distancia (salvo el perfil supresión de una ametralladora) tienen la regla de armas Devastadora 1 hasta el final de esa activación. Si esa arma ya tiene la regla de arma Devastadora X, en su lugar, suma 1 a la X de Devastadora X.",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 487,
+        "faction": "spectre-squad",
+        "type": "strategic",
+        "cps": "1PM",
+        "name": "Paciencia",
+        "description": "En la fase de tiroteo de este punto de inflexión aplica una de las siguientes opciones:\n<ul>\n  <li>Una vez, cuando sea tu turno de activar un agente amigo, puedes ignorar esa activación. No puedes hacerlo hasta después de la primera activación de tu oponente.</li>\n  <li>Cuando un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo realiza la acción de <b>Disparar</b> o <b>Combatir</b> durante su activación, si es el último agente amigo en activarse en este punto de inflexión, sus armas tienen la regla de armas Incesante para esa acción.</li>\n</ul>",
+        "typename": "Ardid de Estrategia"
+    },
+    {
+        "id_ploy": 488,
+        "faction": "spectre-squad",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Esquivar",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo. Durante esa activación, ese agente puede realizar una acción de <b>Retroceder</b> por 1PA menos.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 489,
+        "faction": "spectre-squad",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Asesinos Silenciosos",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo antes o después de que realice una acción, si tiene una orden de Ocultarse y no es un blanco válido para los agentes enemigos. Hasta el final de esa activación, puede realizar la acción de <b>Cargar</b> mientras tenga una orden de Ocultarse, y la primera vez que golpee puede infligir 3 daños adicionales, pero no puede resolver ningún otro éxito en esa secuencia.",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 490,
+        "faction": "spectre-squad",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Reacciones Instantáneas",
+        "description": "Usa este ardid de tiroteo después de que un agente enemigo con una orden de Ocultarse realice una acción durante su activación, si está a 8\" o menos de un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo. Puedes usar la regla de facción Habilidades de campo de élite para interrumpir esa activación con ese agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo independientemente de la orden de ese agente enemigo (esto tiene preferencia sobre las reglas normales).",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
+        "id_ploy": 491,
+        "faction": "spectre-squad",
+        "type": "tactical",
+        "cps": "1PM",
+        "name": "Defensa Preparada",
+        "description": "Utiliza este ardid de tiroteo cuando un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo con una orden de Ocultarse o que esté apostado contraataque. Aplica una de las siguientes opciones:\n<ul>\n  <li>Al inicio del paso de resolver dados de ataque, puedes resolver uno de tus éxitos antes del orden normal. Si lo haces, ese éxito debe usarse para bloquear.</li>\n  <li>Cada uno de tus bloqueos puede asignarse a bloquear dos éxitos no resueltos (en lugar de uno).</li>\n</ul>\n<p>No puedes usar este ardid en una activación en la que hayas interrumpido con la regla de facción Habilidades de campo de élite.</p>",
+        "typename": "Ardid de Tiroteo"
+    },
+    {
         "id_ploy": 460,
         "faction": "xv26-battlesuits",
         "type": "strategic",

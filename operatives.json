@@ -25180,5 +25180,654 @@
             "keywords": "<span class=\"faction\">SEÑOR DRAGONERO EXODITA</span>, AELDARI, DRACOLITA",
             "peana": "32"
         }
+    ],
+    "spectre-squad": [
+        {
+            "id": "veteran-sergeant",
+            "name": "ESPECTRO SARGENTO VETERANO",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "9"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina láser con mirilla",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Desgarradora, Letal 5+"
+                    }
+                },
+                {
+                    "name": "Brazo biónico",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [],
+            "uniqueActions": [
+                {
+                    "name": "ASIGNAR MISIÓN",
+                    "cost": "0PA",
+                    "description": [
+                        "Elige un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo usado (salvo <b>VOCOBALIZA</b>) visible para este agente que no haya interrumpido la activación de un agente enemigo con la regla de facción Habilidades de campo de élite en este punto de inflexión. Hasta el final del punto de inflexión, ese agente amigo puede hacerlo aunque esté usado (esto tiene preferencia sobre las reglas normales). Sin embargo, si lo hace, no puede contraatacar durante el punto de inflexión, ni realizar la acción de <b>Reposicionarse</b> si ya lo ha hecho este punto de inflexión."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, LÍDER, SARGENTO VETERANO",
+            "peana": "28"
+        },
+        {
+            "id": "field-medicae",
+            "name": "ESPECTRO MEDICAE DE CAMPO",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina láser",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Desgarradora"
+                    }
+                },
+                {
+                    "name": "Rifle láser pesado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Pesada (solo Reposicionarse), Letal 5+"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "¡Sanitario!",
+                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo (salvo <b>VOCOBALIZA</b>) vaya a resultar incapacitado mientras sea visible para este agente y esté a 3\" o menos de él, puedes usar esta regla siempre que ni este ni ese agente estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no queda incapacitado, le queda 1 herida y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Resta 1 a los atributos LPA de este y de ese agente hasta el final de sus próximas activaciones respectivamente, y si esta regla se ha usado durante la activación de ese agente amigo, esa activación termina. No puedes usar esta regla si este agente está incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "BOTIQUÍN",
+                    "cost": "0PA",
+                    "description": [
+                        "Elige 1 agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo (salvo <b>VOCOBALIZA</b>) en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas. No puede ser un agente con el que se haya usado la regla ¡Sanitario! durante este punto de inflexión."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, MEDICAE DE CAMPO",
+            "peana": "28"
+        },
+        {
+            "id": "grenadier",
+            "name": "ESPECTRO GRANADERO",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina láser",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Desgarradora"
+                    }
+                },
+                {
+                    "name": "Rifle láser pesado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Pesada (solo Reposicionarse), Letal 5+"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Granadero",
+                    "description": "Este agente puede usar granadas frag, perforantes y de humo (ver equipo universal). Hacerlo no cuenta de cara a los usos limitados que tengas (es decir, si también eliges esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
+                },
+                {
+                    "name": "Mina de fusión",
+                    "description": "Este agente lleva tu marcador de Mina de fusión. Puede realizar la acción de <b>Recoger marcador</b> con ese marcador, y cuando realiza la acción de <b>Colocar marcador</b> con ese marcador, puede realizar inmediatamente una acción libre de <b>Correr</b>. Ese marcador no puede colocarse en la zona de control de un agente enemigo (si este agente queda incapacitado mientras lleva ese marcador y el marcador no puede colocarse, se retira junto a este agente)."
+                },
+                {
+                    "name": "Mina de proximidad",
+                    "description": "La primera vez que tu marcador de Mina de fusión quede en la zona de control de otro agente, retira ese marcador e inflige 2D6+3 daños a ese agente; si no resulta incapacitado, termina su acción (si estaba realizando una), aunque los efectos de la misma no se hayan completado. Si no puede ser colocado, muévelo la distancia mínima hasta que se pueda. Ten en cuenta que este agente se ignora en lo que respecta a estos efectos (no puede activar el marcador ni sufrir daño debido a él)."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, GRANADERO",
+            "peana": "28"
+        },
+        {
+            "id": "guide",
+            "name": "ESPECTRO GUÍA",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina láser",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Desgarradora"
+                    }
+                },
+                {
+                    "name": "Rifle láser pesado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Pesada (solo Reposicionarse), Letal 5+"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Zona preparada",
+                    "description": "Puedes elegir 1 opción de equipo adicional, pero debe ser Depósito de munición o una opción de equipo que sea elemento de terreno (ver terreno universal)."
+                },
+                {
+                    "name": "Explorar terreno",
+                    "description": "Los elementos de terreno en tu territorio o a 3\" o menos de este agente se consideran explorados por agentes <span class=\"faction\">ESCUADRA ESPECTRO</span> amigos. Una vez en cada una de sus activaciones, los agentes <span class=\"faction\">ESCUADRA ESPECTRO</span> amigos pueden hacer una de estas opciones:<ul><li>Ignorar la primera distancia vertical de 2\" que mueva al trepar una vez si el elemento de terreno está explorado por agentes <span class=\"faction\">ESCUADRA ESPECTRO</span> amigos.</li><li>Realizar la acción de <b>Operar portillo</b> por 1PA menos si el punto de acceso está explorado por agentes <span class=\"faction\">ESCUADRA ESPECTRO</span> amigos.</li></ul>"
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, GUÍA",
+            "peana": "28"
+        },
+        {
+            "id": "gunner",
+            "name": "ESPECTRO TIRADOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Rifle de fusión",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "6/3",
+                        "RA": "Alcance 6\", Devastadora 4, Penetración 2"
+                    }
+                },
+                {
+                    "name": "Rifle de plasma (normal)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "4/6",
+                        "RA": "Penetración 1"
+                    }
+                },
+                {
+                    "name": "Rifle de plasma (sobrecarga)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "5/6",
+                        "RA": "Letal 5+, Penetración 1, Sobrecalentamiento"
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, TIRADOR",
+            "peana": "28"
+        },
+        {
+            "id": "heavy-gunner",
+            "name": "ESPECTRO TIRADOR PESADO",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Lanzamisiles (frag)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/5",
+                        "RA": "Área 2\", Pesada"
+                    }
+                },
+                {
+                    "name": "Lanzamisiles (perforante)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "5/7",
+                        "RA": "Pesada, Penetración 1"
+                    }
+                },
+                {
+                    "name": "Pistola láser",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Equipo artillero",
+                    "description": "Siempre que se active este agente, si un agente <b>CARGADOR</b> amigo está en su zona de control, hasta el final de esa activación todos los perfiles de su lanzamisiles tienen la regla de armas Pesada (solo Correr) en lugar de simplemente Pesada."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, TIRADOR PESADO",
+            "peana": "28"
+        },
+        {
+            "id": "loader",
+            "name": "ESPECTRO CARGADOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Pistola láser",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Alcance 8\""
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Asistencia en combate",
+                    "description": "Siempre que otro agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo en la zona de control de este agente dispare, puedes repetir 1 de tus dados de ataque."
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "CARGAR ARMA",
+                    "cost": "1PA",
+                    "description": [
+                        "Elige 1 agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo en la zona de control de este agente que esté a más de 3\" de todo agente enemigo. Ese agente amigo puede realizar inmediatamente una acción libre de <b>Disparar</b> (salvo <b>Ponerse en guardia</b>), y puedes cambiar su orden para hacerlo."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo, al contraatacar, o durante una activación en la que realizó la acción de <b>Cargar</b>, <b>Correr</b> o <b>Disparar</b> (o viceversa)."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, CARGADOR",
+            "peana": "28"
+        },
+        {
+            "id": "sharpshooter",
+            "name": "ESPECTRO FRANCOTIRADOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Rifle láser telescópico (inmóvil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 3, Pesada"
+                    }
+                },
+                {
+                    "name": "Rifle láser telescópico (móvil)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "-"
+                    }
+                },
+                {
+                    "name": "Rifle láser telescópico (oculto)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "2+",
+                        "Dñ": "3/3",
+                        "RA": "Devastadora 3, Pesada, Silenciosa, Posición oculta<span class=\"faction\">*</span>"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "<span class=\"faction\">*</span>Posición oculta",
+                    "description": "Este agente solo puede usar esta arma la primera vez que realiza una acción de <b>Disparar</b> durante la batalla."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, FRANCOTIRADOR",
+            "peana": "28"
+        },
+        {
+            "id": "stub-gunner",
+            "name": "ESPECTRO AMETRALLADOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Ametralladora (barrido)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Pesada (solo Correr), Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Ametralladora (concentrado)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "3+",
+                        "Dñ": "3/4",
+                        "RA": "Pesada (solo Correr)"
+                    }
+                },
+                {
+                    "name": "Ametralladora (supresión)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "5",
+                        "HP/HA": "5+",
+                        "Dñ": "0/0",
+                        "RA": "Aturdidora, Buscadora (Ligero), Letal 5+, Pesada, Ráfaga 1\""
+                    }
+                },
+                {
+                    "name": "Puños",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Fuego de supresión",
+                    "description": "Siempre que un agente enemigo esté a 3\" o menos de este agente y sea visible para él, si este agente tiene una orden de Trabarse y no tiene agentes enemigos en su zona de control, resta 1 al atributo Ataques de las armas de ese agente enemigo (hasta un mínimo de 1). Esta regla no tiene efecto si este agente ha realizado la acción de <b>Cargar</b> en este punto de inflexión."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, AMETRALLADOR",
+            "peana": "28"
+        },
+        {
+            "id": "trooper",
+            "name": "ESPECTRO SOLDADO",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina láser",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Desgarradora"
+                    }
+                },
+                {
+                    "name": "Rifle láser pesado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Pesada (solo Reposicionarse), Letal 5+"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [
+                {
+                    "name": "Mente fría",
+                    "description": "Una vez por punto de inflexión, 1 agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo con esta regla puede interrumpir la activación de un agente enemigo con la regla de facción Habilidades de campo de élite por 0PHC (esto tiene preferencia sobre las reglas normales)."
+                }
+            ],
+            "uniqueActions": [],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, SOLDADO",
+            "peana": "28"
+        },
+        {
+            "id": "vox-operator",
+            "name": "ESPECTRO VOCOOPERADOR",
+            "stats": {
+                "LPA": "2",
+                "MOVER": "6\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "8"
+            },
+            "weapons": [
+                {
+                    "name": "Carabina láser",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Desgarradora"
+                    }
+                },
+                {
+                    "name": "Rifle láser pesado",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "3+",
+                        "Dñ": "2/3",
+                        "RA": "Pesada (solo Reposicionarse), Letal 5+"
+                    }
+                },
+                {
+                    "name": "Culata",
+                    "type": "melee",
+                    "stats": {
+                        "A": "3",
+                        "HP/HA": "4+",
+                        "Dñ": "2/3",
+                        "RA": "-"
+                    }
+                }
+            ],
+            "abilities": [],
+            "uniqueActions": [
+                {
+                    "name": "SEÑAL",
+                    "cost": "1PA",
+                    "description": [
+                        "<b>APOYO</b>. Elige 1 agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo (salvo <b>VOCOBALIZA</b>) distinto visible para este agente. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, VOCOOPERADOR",
+            "peana": "28"
+        },
+        {
+            "id": "vox-relay-beacon",
+            "name": "ESPECTRO VOCOBALIZA",
+            "stats": {
+                "LPA": "1",
+                "MOVER": "0\"",
+                "SALVACIÓN": "5+",
+                "HERIDAS": "3"
+            },
+            "weapons": [],
+            "abilities": [
+                {
+                    "name": "Despliegue previo",
+                    "description": "En el paso de desplegar agentes, puedes desplegar este agente fuera de tu zona de descenso. Despliégalo en un lugar donde pueda colocarse, completamente dentro de tu territorio y a más de 2\" de todo marcador y equipo que sea elemento de terreno."
+                },
+                {
+                    "name": "Prescindible",
+                    "description": "<p>Este agente solo puede realizar la acción de <b>Señal</b>. No puede contraatacar ni asistir en un combate.</p><p>Este agente no puede disputar marcadores ni áreas de la zona de aniquilación, y se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y PV que requieran que agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/es incapacitado; al determinar cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.).</p><p>Los agentes pueden moverse a través de este agente. Tu oponente siempre puede ignorar la zona de control de este agente. Siempre que un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo realice la acción de <b>Disparar</b> y elijas un blanco válido, puedes ignorar la zona de control de este agente. Ten en cuenta que, si se ignora, la zona de control no es mutua.</p>"
+                }
+            ],
+            "uniqueActions": [
+                {
+                    "name": "SEÑAL",
+                    "cost": "1PA",
+                    "description": [
+                        "Elige 1 agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo distinto a 6\" o menos de este agente. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, VOCOBALIZA",
+            "peana": "25"
+        }
     ]
 }

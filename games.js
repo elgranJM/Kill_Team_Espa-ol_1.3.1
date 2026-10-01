@@ -389,6 +389,7 @@ const factionTranslations = {
     'exaction-squad': 'Escuadra de Exacción',
     'veteran-guardsmen': 'Korps de la Muerte',
     'celestian-insidiants': 'Insidiadora Celeste',
+    'spectre-squad': 'Escuadra Espectro',
     'blooded': 'Ungidos',
     'chaos-cult': 'Culto del Caos',
     'fellgor-ravagers': 'Expoliagores Impíos',

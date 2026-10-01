@@ -775,16 +775,16 @@
   {
     "id_equip": 98,
     "faction": "gellerpox",
-    "name": "Alimañas Mutoides",
-    "description": "Después de revelar esta opción de equipamiento, añade cuatro agentes GELLERPOX INFECTED MUTOID VERMIN a tu kill team para la batalla.", 
+    "name": "Alimañas Mutantes",
+    "description": "Tras revelar esta opción de equipo, añade 4 agentes <b>ALIMAÑA MUTANTE</b> <span class=\"faction\">INFECTADO GELLER</span> a tu comando para esta batalla.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 99,
     "faction": "gellerpox",
-    "name": "Suministros Contaminados",
-    "description": "Después de revelar esta opción de equipamiento, lanza 2D6: con un 7+, retira una de las opciones de equipamiento seleccionadas por tu adversario; de lo contrario, ese jugador retira una de sus propias opciones de equipamiento seleccionadas. No pueden seleccionar ese equipamiento de nuevo durante la secuencia de juego (P. ej. en el paso de Exploración de Operaciones Aprobadas). No puedes seleccionar esta opción de equipamiento después del paso de Seleccionar agentes.", 
+    "name": "Reservas Contaminadas",
+    "description": "Tras revelar esta opción de equipo, tira 2D6: con 7+, retira una de las opciones de equipo elegidas de tu oponente; en caso contrario, ese jugador retira una de sus propias opciones de equipo elegidas. No puede volver a elegir ese equipo durante la secuencia de juego (p. ej., en el paso de explorar de las Operaciones aprobadas). No puedes elegir esta opción de equipo tras el paso de elegir agentes.", 
     "weapon": [],
     "action": []
   },
@@ -792,7 +792,7 @@
     "id_equip": 100,
     "faction": "gellerpox",
     "name": "Síntomas Mutados",
-    "description": "Una vez por batalla, cuando actives a un agente GELLERPOX INFECTED amigo, puedes seleccionar una TECNO-MALDICIÓN adicional para que ese agente la gane hasta el final del Punto de Inflexión (debe ser diferente de tu TECNO-MALDICIÓN existente). Ten en cuenta que si una regla se refiere a un agente enemigo siendo afectado por tu regla de TECNO-MALDICIÓN seleccionada (P. ej. la regla Esparcir los Regalos Gloriosos del agente VULGRAR THRICE-CURSED), también es afectado por tu regla de TECNO-MALDICIÓN adicional.", 
+    "description": "Una vez por batalla, cuando activas un agente <span class=\"faction\">INFECTADO GELLER</span> amigo, puedes elegir un <b>TECNOMALEFICIO</b> para que ese agente lo obtenga hasta el final del punto de inflexión (debe ser distinto de tu <b>TECNOMALEFICIO</b> ya existente). Ten en cuenta que si una regla menciona que un agente enemigo se ve afectado por la regla <b>TECNOMALEFICIO</b> que has elegido (p. ej., la regla Esparcir los gloriosos dones del agente <b>VULGRAR TRIMALDITO</b>), también se verá afectado por tu regla <b>TECNOMALEFICIO</b> adicional.", 
     "weapon": [],
     "action": []
   },
@@ -800,7 +800,7 @@
     "id_equip": 101,
     "faction": "gellerpox",
     "name": "Fuelles de Plaga",
-    "description": "Siempre que un agente esté disparando a un agente GELLERPOX INFECTED NIGHTMARE HULK amigo que esté a más de 6\" de él, puedes retener uno de tus resultados de dados de defensa de 3 como un éxito normal en lugar de descartarlo.", 
+    "description": "Siempre que un agente dispare contra un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLER</span> amigo que esté a más de 6\" de él, puedes guardar 1 de tus dados de defensa con un resultado de 3 como éxito normal en lugar de descartarlo.", 
     "weapon": [],
     "action": []
   },

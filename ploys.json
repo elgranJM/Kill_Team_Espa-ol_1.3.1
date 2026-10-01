@@ -1372,8 +1372,8 @@
         "faction": "gellerpox",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Determinación Plagada",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo (excluyendo <b>ALIMAÑAS MUTOIDES</b>) que tenga una orden de Trabarse, puedes repetir uno de tus dados de defensa.",
+        "name": "Determinación Infecta",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">INFECTADO GELLER</span> amigo (salvo <b>ALIMAÑA MUTANTE</b>) que tenga una orden de Trabarse, puedes repetir uno de tus dados de defensa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1381,8 +1381,8 @@
         "faction": "gellerpox",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Bendiciones de Infección",
-        "description": "Siempre que un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo esté combatiendo o contraataque, <span class=\"text-info-emphasis\">puedes hacer una de las siguientes:</span>\n\n<br />• <span class=\"text-info-emphasis\">Si</span> sacas tres o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.\n<br />• <span class=\"text-info-emphasis\">Si sacas tres o más éxitos, puedes descartar uno de tus fallos para retener uno de tus éxitos normales como un éxito crítico en su lugar.</span>",
+        "name": "Bendición de Infección",
+        "description": "Siempre que un agente <span class=\"faction\">INFECTADO GELLER</span> amigo combata o contraataque, puedes hacer una de las siguientes cosas:<ul><li>Si sacas tres o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.</li><li>Si sacas tres o más éxitos, puedes descartar uno de tus fallos para guardar uno de tus éxitos normales como un éxito crítico en su lugar.</li></ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1390,8 +1390,8 @@
         "faction": "gellerpox",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Atraído por el Zumbido",
-        "description": "Selecciona un marcador de objetivo. Siempre que un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo realice la acción <b>Reposicionarse</b> o <b>Cargar</b> durante su activación, puedes usar esta regla. Si lo haces, suma 1\" a su atributo de Movimiento hasta el final de esa activación, pero debe terminar ese movimiento <span class=\"text-info-emphasis\">a 2\" de ese marcador de objetivo.</span>",
+        "name": "Atraídos por el Zumbido",
+        "description": "Elige un marcador de objetivo. Siempre que un agente <span class=\"faction\">INFECTADO GELLER</span> amigo realice una acción de <b>Reposicionarse</b> o <b>Cargar</b> durante su activación, puedes usar esta regla. Si lo haces, suma 1\" a su atributo Movimiento hasta el final de esa activación, pero debe terminar dicho movimiento a 2\" o menos de ese marcador de objetivo.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1400,7 +1400,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Emanaciones de Óxido",
-        "description": "Siempre que un agente enemigo esté dentro del rango de control \nde agentes <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigos, \nempeora el atributo de Impacto de las armas de ese agente enemigo \nen 1. Esto no es acumulativo con estar lesionado.",
+        "description": "Siempre que un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLER</span> amigo esté combatiendo o contraatacando, tu oponente no puede guardar los resultados de 3 como éxitos.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1408,8 +1408,8 @@
         "faction": "gellerpox",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Tecnología Repugnante",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo dispare contra un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo. Las armas a distancia de ese agente tienen la regla de armas Sobrecalentada hasta el final de esa secuencia; si el arma ya tiene esa regla de arma, cuando tu oponente tire un D6 para esa regla de arma, puedes sumar o restar 1 del resultado. Ten en cuenta que para esto último puedes ver el resultado de la tirada de tu oponente para la regla de armas Sobrecalentada antes de decidir usar este ardid.",
+        "name": "Tecnología Repulsiva",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo dispare contra un agente <span class=\"faction\">INFECTADO GELLER</span> amigo. Las armas a distancia de ese agente tienen la regla de armas Sobrecalentamiento hasta el final de esa secuencia; si el arma tiene ya esa regla de armas, cuando tu oponente tira 1D6 por dicha regla, puedes sumar o restar 1 al resultado. Ten en cuenta que en ese segundo caso, puedes esperar a ver el resultado de la tirada de Sobrecalentamiento de tu oponente antes de decidir si usar este ardid.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1417,8 +1417,8 @@
         "faction": "gellerpox",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Embestida",
-        "description": "Usa este ardid de tiroteo durante la activación o \ncontraataque de un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigo, antes o después de que realice una acción. Durante esa activación/contraataque:<ul>\n<li>Puede moverse a través de agentes enemigos y dentro de su zona de control.</li>\n<li>Puede realizar las acciones <b>Cargar</b> y <b>Reposicionarse</b> mientras está dentro del rango de control de un agente enemigo, y puede salir del rango de control de ese agente para hacerlo (pero luego se aplican los requisitos normales para ese movimiento).</li></ul>",
+        "name": "Irrumpir",
+        "description": "Usa este ardid de tiroteo durante la activación o contraataque de un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLER</span> amigo, antes o después de que realice una acción. Durante esa activación/contraataque:<ul>\n<li>Puede mover a través de agentes enemigos y de su zona de control.</li>\n<li>Puede realizar acciones de <b>Cargar</b> y <b>Reposicionarse</b> aún estando en la zona de control de un agente enemigo, y al hacerlo puede abandonar la zona de control de dicho agente (pero luego se siguen aplicando los requisitos normales para ese movimiento).</li></ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1426,8 +1426,8 @@
         "faction": "gellerpox",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Desaparición Putrefacta",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">INFECTADO GELLERPOX</span> amigo (excluyendo <b>ALIMAÑAS MUTOIDES</b>) sea incapacitado<span class=\"text-info-emphasis\">, antes de que sea retirado de la zona de aniquilación.</span>. Inflige 1 de daño (o 1D3 de daño en su lugar si ese agente amigo es una <b>MOLE DE PESADILLA</b>) a cada agente enemigo visible para y a 2\" de ese agente amigo.",
+        "name": "Defunción Pútrida",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">INFECTADO GELLER</span> amigo (salvo <b>ALIMAÑA MUTANTE</b>) resulte incapacitado, antes de retirarlo de la zona de aniquilación. Inflige 1 daño (o en su lugar, 1D3 daños si ese agente amigo es una <b>MOLE DE PESADILLA</b>) a cada agente enemigo a 2\" o menos de ese agente amigo y visible para él.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1435,8 +1435,8 @@
         "faction": "gellerpox",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Embestida Aterradora",
-        "description": "Usa este ardid de tiroteo después de que un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLERPOX</span> amigo realice la acción <b>Combatir</b>, si no está incapacitado. Puede realizar inmediatamente una acción de <b>Combatir</b> gratuita (no tienes que seleccionar al mismo agente enemigo para combatir). Esto tiene precedencia sobre las restricciones de acción.",
+        "name": "Acometida Terrorífica",
+        "description": "Usa este ardid de tiroteo después de que un agente <b>MOLE DE PESADILLA</b> <span class=\"faction\">INFECTADO GELLER</span> amigo realice una acción de <b>Combatir</b>, si no resulta incapacitado. Puede realizar inmediatamente una acción libre de <b>Combatir</b> (y no hace falta que elijas al mismo agente enemigo para combatir contra él). Esto tiene preferencia sobre las restricciones de acción.",
         "typename": "Ardid de Tiroteo"
     },
     {

@@ -16820,15 +16820,15 @@
       "abilities": [
         {
           "name": "Esparcir los gloriosos dones",
-          "description": "<b>GAMBITO ESTRATÉGICO</b> de una vez por batalla. Elige un marcador de objetivo que este agente controle para que obtenga una de tus fichas de Tecnomaleficio. No puede ser un marcador de objetivo en la zona de control de algún agente enemigo. Mientras ese marcador de objetivo esté en la zona de control de un agente enemigo, ese agente enemigo es afectado por tu regla de TECNOMALEFICIO elegida y una regla adicional determinada por tu TECNOMALEFICIO. No puedes usar este <b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de control de un agente enemigo. <ul><li>Tuercecañón: No hay efecto adicional</li></ul> <ul><li>Oxipúas aullantes: Este TECNOMALEFICIO inflige 2 daños a ese agente enemigo (en lugar de 1).</li></ul> <ul><li>Vocoestática viral: Siempre que ese agente enemigo sea activado, resta 1 a su atributo LPA hasta el final de su activación.</li></ul>"
+          "description": "<b>GAMBITO ESTRATÉGICO</b> de una vez por batalla. Elige un marcador de objetivo que este agente controle para que obtenga una de tus fichas de Tecnomaleficio. No puede ser un marcador de objetivo en la zona de control de algún agente enemigo. Mientras ese marcador de objetivo esté en la zona de control de un agente enemigo, ese agente enemigo es afectado por tu regla de <b>TECNOMALEFICIO</b> elegida y una regla adicional determinada por tu <b>TECNOMALEFICIO</b>, como se lista debajo. No puedes usar este <b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de control de un agente enemigo.<ul><li><b>Tuercecañón:</b> No hay efecto adicional.</li><li><b>Oxipúas aullantes:</b> Este <b>TECNOMALEFICIO</b> inflige 2 daños a ese agente enemigo (en lugar de 1).</li><li><b>Vocoestática viral:</b> Siempre que ese agente enemigo sea activado, resta 1 a su atributo LPA hasta el final de su activación.</li></ul>"
         },
         {
           "name": "<span class=\"faction\">*</span>Mecanizada",
-          "description": "Al final del paso de elegir agentes, si este agente es elegido para el despliegue, elige hasta dos de las siguientes mejoras o reglas de armas para que las tenga esta arma durante la batalla: sumar 1 al atributo Daño normal, sumar 1 al atributo Daño critico, Brutal, Desgarradora, Equilibrada, Letal 5+."
+          "description": "Al final del paso de elegir agentes, si este agente es elegido para el despliegue, elige hasta dos de las siguientes mejoras o reglas de armas para que las tenga esta arma durante la batalla: sumar 1 al atributo Daño normal, sumar 1 al atributo Daño crítico, Brutal, Desgarradora, Equilibrada, Letal 5+."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">INFECTADO GELLERS</span>, CAOS, MOLE DE PESADILLA, LÍDER, VULGRAR TRIMALDITO",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, MOLE DE PESADILLA, LÍDER, VULGRAR TRIMALDITO",
       "peana": "40"
     },
     {
@@ -16843,7 +16843,7 @@
       "weapons": [
         {
           "name": "Tentáculos mutantes",
-          "type": "melee",
+          "type": "ranged",
           "stats": {
             "A": "5",
             "HP/HA": "4+",
@@ -16852,7 +16852,7 @@
           }
         },
         {
-          "name": "Garra y tentaculos mutantes (corte)",
+          "name": "Garra y tentáculos mutantes (corte)",
           "type": "melee",
           "stats": {
             "A": "6",
@@ -16868,22 +16868,22 @@
             "A": "4",
             "HP/HA": "4+",
             "Dñ": "3/4",
-            "RA": "Barrido"
+            "RA": "Barrido<span class=\"faction\">*</span>"
           }
         }
       ],
       "abilities": [
         {
           "name": "<span class=\"faction\">*</span>Barrido",
-          "description": "Siempre que esta agente realiza una acción de <b>Combatir</b> y eliges este perfil de arma, si no resulta incapacitado, puede realizar inmediatamente a continuación una acción libre de <b>Combatir</b>, pero debes elegir este perfil de arma y solo puede <b>Combatir</b> contra cada agente enemigo en su zona de control una vez por activación o reacción usando este perfil de arma. Esto tiene preferencia sobre las restricciones de acciones, y puedes seguir realizando acciones libres de <b>Combatir</b> hasta que este agente resulte incapacitado o haya combatido contra cada agente enemigo en su zona de control."
+          "description": "Siempre que este agente realiza una acción de <b>Combatir</b> y eliges este perfil de arma, si no resulta incapacitado, puede realizar inmediatamente a continuación una acción libre de <b>Combatir</b>, pero debes elegir este perfil de arma y solo puede combatir contra cada agente enemigo en su zona de control una vez por activación o contraataque usando este perfil de arma. Esto tiene preferencia sobre las restricciones de acciones, y puedes seguir realizando acciones libres de <b>Combatir</b> hasta que este agente resulte incapacitado o haya combatido contra cada agente enemigo en su zona de control."
         },
         {
           "name": "Agarre con tentáculos",
-          "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 1D6, sumando 1 al resultado si ese agente enemigo tiene un atributo Heridas de 8 o menos: con 4+, ese agente enemigo no puede realizar esa acción durante esa activación/reacción (los PA gastados no se recuperan)."
+          "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 1D6, sumando 1 al resultado si ese agente enemigo tiene un atributo Heridas de 8 o menos: con 4+, ese agente enemigo no puede realizar esa acción durante esa activación/contraataque (los PA gastados no se recuperan)."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">INFECTADO GELLERS</span>, CAOS, MOLE DE PESADILLA, ENGENDRO ABOTARGADO",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, MOLE DE PESADILLA, ENGENDRO ABOTARGADO",
       "peana": "40"
     },
     {
@@ -16920,11 +16920,11 @@
       "abilities": [
         {
           "name": "Chillidos horripilantes",
-          "description": "<ul>Mientras un agente enemigo esté a 3\" o menos de este agente, tu oponente debe gastar 1 PA adicional para que ese agente enemigo realice la acción de <b>Recoger marcador</b> o acciones de misión.</ul> <ul>Al determinar el control de un marcador, considera el atributo LPA total de los agentes enemigos que lo estén disputando como si fuera 1 menos si al menos uno de esos agentes enemigos está a 3\" o menos de este agente. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto.</ul>"
+          "description": "<p>Mientras un agente enemigo esté a 3\" o menos de este agente, tu oponente debe gastar 1 PA adicional para que ese agente enemigo realice la acción de <b>Recoger marcador</b> o acciones de misión.</p><p>Al determinar el control de un marcador, considera el atributo LPA total de los agentes enemigos que lo estén disputando como si fuera 1 menos si al menos uno de esos agentes enemigos está a 3\" o menos de este agente. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio es acumulable con esto.</p>"
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">INFECTADO GELLERS</span>, CAOS, MOLE DE PESADILLA, AULLACARNES",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, MOLE DE PESADILLA, AULLACARNES",
       "peana": "40"
     },
     {
@@ -16955,7 +16955,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">INFECTADO GELLERS</span>, CAOS, MOLE DE PESADILLA, ZANCATERROR",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, MOLE DE PESADILLA, ZANCATERROR",
       "peana": "40"
     },
     {
@@ -17006,11 +17006,11 @@
         },
         {
           "name": "Máscaras de Gellercausto",
-          "description": "Siempre que un dado de ataque vaya a infligir Daño critico a este agente, puedes decidir que ese dado inflija Daño normal en su lugar."
+          "description": "Siempre que un dado de ataque vaya a infligir Daño crítico a este agente, puedes decidir que ese dado inflija Daño normal en su lugar."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">INFECTADO GELLERS</span>, CAOS, MUTANTE",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, MUTANTE",
       "peana": "25"
     },
     {
@@ -17047,11 +17047,11 @@
       "abilities": [
         {
           "name": "Daemónico",
-          "description": "Cuando un agente dispare contra este agente, ignora la regia de arma Penetración."
+          "description": "Cuando un agente dispare contra este agente, ignora la regla de arma Penetración."
         },
         {
           "name": "Pequeño",
-          "description": "Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas. Siempre que este agente tenga una orden de Ocultarse y esté en cobertura, no puede ser elegido como blanco válido salvo estar a 2\" o menos."
+          "description": "Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas. Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado) salvo estar a 2\" o menos."
         },
         {
           "name": "Activación en grupo",
@@ -17059,7 +17059,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">INFECTADO GELLERS</span>, CAOS, FERRONURGLETE",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, FERRONURGLETE",
       "peana": "25"
     },
     {
@@ -17073,7 +17073,7 @@
       },
       "weapons": [
         {
-          "name": "Proboscide chupasangres",
+          "name": "Probóscide chupasangres",
           "type": "melee",
           "stats": {
             "A": "2",
@@ -17094,7 +17094,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">INFECTADO GELLERS</span>, CAOS, ALIMAÑA MUTANTE, MALDIPULGA",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, ALIMAÑA MUTANTE, MALDIPULGA",
       "peana": "25"
     },
     {
@@ -17135,7 +17135,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "INFECTADO GELLER, CAOS, ALIMAÑA MUTANTE, ENJAMBRE CEGADOR",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, ALIMAÑA MUTANTE, ENJAMBRE CEGADOR",
       "peana": "25"
     },
     {
@@ -17180,7 +17180,7 @@
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">INFECTADO GELLERS</span>, CAOS, ALIMAÑA MUTANTE, PLAGUSANO",
+      "keywords": "<span class=\"faction\">INFECTADO GELLER</span>, CAOS, ALIMAÑA MUTANTE, PLAGUSANO",
       "peana": "25"
     }
   ],

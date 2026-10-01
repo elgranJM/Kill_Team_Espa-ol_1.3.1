@@ -2093,7 +2093,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Degolladores",
-        "description": "<span class=\"text-info-emphasis\">Suma 1 al atributo de Ataques de las armas de combate de los agentes <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigos</span> (hasta un máximo de 5).",
+        "description": "Suma 1 al atributo Ataques de las armas de combate de los agentes <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigos (hasta un máximo de 5).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2102,7 +2102,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Pícaro",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo:\n<ul>\n  <li>Ignora la regla de armas Saturación.</li>\n  <li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional, o en su lugar, puedes guardar una salvación por cobertura como un éxito crítico. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno de Aventajado.</li>\n</ul>",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo:\n<ul>\n  <li>Ignora la regla de armas Saturación.</li>\n  <li>Si puedes guardar alguna salvación por cobertura, puedes guardar una salvación por cobertura adicional o, en su lugar, puedes guardar una salvación por cobertura como éxito crítico. Esto no se acumula con las salvaciones por cobertura mejoradas debido a terreno Aventajado.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2110,8 +2110,8 @@
         "faction": "farstalker-kinband",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Tomar Como Presa",
-        "description": "Siempre que un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo dispare durante una activación en la que no haya realizado una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, sus armas a distancia tienen las reglas de arma Equilibrada y Severa<span class=\"text-info-emphasis\">, salvo si el arma ya tenía la regla de armas Equilibrada, en cuyo caso tiene las reglas de arma Incesante y Severa.</span>. Ten en cuenta que ese agente no tiene restringido realizar esas acciones después de disparar.",
+        "name": "Tomar como Presa",
+        "description": "Siempre que un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo dispare durante una activación en la que no haya realizado una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, sus armas a distancia tienen las reglas de arma Equilibrada y Severa; si el arma ya tenía la regla Equilibrada, tiene, en su lugar, las reglas de arma Incesante y Severa. Ten en cuenta que ese agente no tiene restringido realizar esas acciones después de disparar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2120,7 +2120,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Brincar",
-        "description": "Durante la activación de cada agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo, puedes ignorar la primera distancia vertical de 2\" que recorra al trepar hacia arriba.",
+        "description": "Durante la activación de cada agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo, puedes ignorar la primera distancia vertical de 2\" que recorra en 1 acción de Trepar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2129,7 +2129,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Emboscada Salvaje",
-        "description": "Usa este ardid de tiroteo durante la acción <b>Combatir</b>, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo apostado que tenga terreno Ligero o Pesado en su zona de control sea elegido para combatir contra él. En el paso de Resolver Dados de Ataque de esa secuencia, tú resuelves el primer dado de ataque (es decir, el defensor antes que el atacante).\n",
+        "description": "Usa este ardid de tiroteo durante una acción de <b>Combatir</b>, cuando un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo apostado que tenga terreno Ligero o Pesado en su zona de control sea elegido para combatir contra él. En el paso de resolver dados de ataque de esa secuencia, tú resuelves el primer dado de ataque (es decir, el defensor antes que el atacante).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2138,7 +2138,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Escabullirse",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo<span class=\"text-info-emphasis\">, antes o después de que realice\nuna acción</span>. Durante esa activación, dicho agente puede realizar una acción de <b>Retroceder</b> por 1 PA menos.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo, antes o después de que realice una acción. Durante esa activación, dicho agente puede realizar una acción de <b>Retroceder</b> por 1 PA menos.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2147,7 +2147,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Hurtar",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo. Hasta el final de esa activación, no hara falta que dicho agente controle un marcador para realizar una acción de <b>Recoger Marcador</b> o acciones de misión que normalmente lo requieran (lo cual tiene preferencia sobre las condiciones de esa acción; solo tiene que disputar el marcador).",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">BANDAESTIRPE ACECHANTE</span> amigo. Hasta el final de esa activación, no hará falta que dicho agente controle un marcador para realizar una acción de <b>Recoger marcador</b> o acciones de misión que normalmente lo requieran (lo cual tiene preferencia sobre las condiciones de esa acción; solo tiene que disputar el marcador).",
         "typename": "Ardid de Tiroteo"
     },
     {

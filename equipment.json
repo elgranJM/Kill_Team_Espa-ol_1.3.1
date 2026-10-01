@@ -1558,7 +1558,7 @@
   {
     "id_equip": 186,
     "faction": "murderwing",
-    "name": "FILOALETAS",
+    "name": "Filoaletas",
     "description": "Los agentes <span class=\"faction\">ALA ASESINA</span> amigos pueden realizar la siguiente acción única:", 
     "weapon": [],
     "action": [
@@ -1573,7 +1573,7 @@
   {
     "id_equip": 187,
     "faction": "murderwing",
-    "name": "ARMADURA CON GARRAS",
+    "name": "Armadura con Garras",
     "description": "Los agentes <span class=\"faction\">ALA ASESINA</span> amigos pueden realizar la siguiente acción única:", 
     "weapon": [],
     "action": [
@@ -1588,7 +1588,7 @@
   {
     "id_equip": 188,
     "faction": "murderwing",
-    "name": "COMBUSTIBLE DISFORME",
+    "name": "Combustible Disforme",
     "description": "Una vez por punto de inflexión, cuando un agente enemigo termine la acción de <b>Retroceder</b> durante su activación, si al menos un agente <span class=\"faction\">ALA ASESINA</span> amigo se encontraba en su zona de control al inicio de esa acción, puedes usar esta regla. Uno de esos agentes amigos puede realizar de inmediato una acción libre de <b>Reposicionarse</b> o <b>Cargar</b>, pero no puede usar más de 3\" de distancia de movimiento. Ten en cuenta que si el agente enemigo no realiza la acción de <b>Retroceder</b> durante su propia activación, esto no tiene efecto.", 
     "weapon": [],
     "action": []
@@ -1596,15 +1596,15 @@
   {
     "id_equip": 189,
     "faction": "murderwing",
-    "name": "VOCOEMISORES",
+    "name": "Vocoemisores",
     "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">ALA ASESINA</span> amigo puede realizar la siguiente acción única:", 
     "weapon": [],
     "action": [
       {
       "action_name": "VOCOGRITO",
       "action_cost": "1 PA",
-      "action_yes": ["Cada agente enemigo a 3\" o menos de este agente hace un chequeo de aturdimiento. Para ello, tira 1D6: con 3+, resta 1 a su atributo LPA hasta el final de su siguiente activación."],
-      "action_no": "Un agente no puede realizar esta acción si tiene una orden de ocultarse."
+      "action_yes": ["Cada agente enemigo a 2\" o menos de este agente hace un chequeo de aturdimiento. Para ello, tira 1D6: con 3+, resta 1 a su atributo LPA hasta el final de su siguiente activación."],
+      "action_no": "Un agente no puede realizar esta acción si tiene una orden de Ocultarse."
       }
     ]
   },

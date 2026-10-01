@@ -7018,11 +7018,11 @@
       "abilities": [
         {
           "name": "Bendición del Abuelo",
-          "description": "Siempre que un agente enemigo que tenga 1 de tus fichas de veneno pierda alguna herida a 7\" o menos de este agente, este agente recupera tantas heridas como las perdidas por ese agente (hasta un máximo de 3 heridas perdidas por punto de inflexión, y solo si este agente no está incapacitado)."
+          "description": "Siempre que un agente enemigo que tenga 1 de tus fichas de veneno pierda alguna herida a 7\" o menos de este agente, este agente recupera hasta tantas heridas como las perdidas por ese agente (hasta un máximo de 3 heridas perdidas por punto de inflexión, y solo si este agente no está incapacitado)."
         },
         {
           "name": "<span class=\"faction\">*</span>Tóxica",
-          "description": "Siempre que este agente usa esta arma contra un agente enemigo que tenga una de tus fichas de Veneno, suma 1 a ambos atributos de Daño de esta arma."
+          "description": "Siempre que este agente use esta arma contra un agente enemigo que tenía una de tus fichas de Veneno al inicio de esa acción, suma 1 a los dos atributos Daño de esta arma."
         }
       ],
       "uniqueActions": [],
@@ -7063,11 +7063,11 @@
       "abilities": [
         {
           "name": "Granadero",
-          "description": "Este agente puede usar granadas de plaga y perforantes (ver equipo de facción y universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma y las granadas de plaga tienen la regla de arma Tóxica (ver debajo)"
+          "description": "Este agente puede usar granadas de plaga y perforantes (ver equipo de facción y universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma y las granadas de plaga tienen la regla de arma Tóxica (ver debajo)."
         },
         {
           "name": "<span class=\"faction\">*</span>Tóxica",
-          "description": "Siempre que este agente usa esta arma contra un agente enemigo que tenga una de tus fichas de Veneno, suma 1 a ambos atributos de Daño de esta arma."
+          "description": "Siempre que este agente use esta arma contra un agente enemigo que tenía una de tus fichas de Veneno al inicio de esa acción, suma 1 a los dos atributos Daño de esta arma."
         }
       ],
       "uniqueActions": [],
@@ -7084,6 +7084,16 @@
         "HERIDAS": "14"
       },
       "weapons": [
+        {
+          "name": "Pistola bólter",
+          "type": "ranged",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "Alcance 8\""
+          }
+        },
         {
           "name": "Mayal de corrupción",
           "type": "melee",
@@ -7103,7 +7113,7 @@
           "description": [
             "Inflige 1D3+2 daños a cada otro agente que esté a 2\" o menos de este agente y sea visible para él. Tira por separado por cada uno: si se trata de un agente enemigo y el resultado del D3 es 3, ese agente enemigo obtiene además una de tus fichas de Veneno (si no tiene una ya)."
           ],
-          "description_no": "A efectos de las restricciones de acciones y la regla de facción Astartes, esta acción se trata como una acción de <b>Combatir</b>. Este agente no puede realizar esta acción mientras tenga una orden de ocultarse."
+          "description_no": "A efectos de las restricciones de acciones y la regla de facción Astartes, esta acción se trata como una acción de <b>Combatir</b>. Este agente no puede realizar esta acción mientras tenga una orden de Ocultarse."
         }
       ],
       "keywords": "<span class=\"faction\">MARINE DE PLAGA</span>, CAOS, ASTARTES HEREJES, LUCHADOR",
@@ -7119,6 +7129,16 @@
         "HERIDAS": "14"
       },
       "weapons": [
+        {
+          "name": "Pistola bólter",
+          "type": "ranged",
+          "stats": {
+            "A": "4",
+            "HP/HA": "3+",
+            "Dñ": "3/4",
+            "RA": "Alcance 8\""
+          }
+        },
         {
           "name": "Regurgitador de plaga",
           "type": "ranged",
@@ -7183,7 +7203,7 @@
         },
         {
           "name": "Icono del contagio",
-          "description": "Si este agente está en el territorio del oponente, el ardid de estrategia Contagio te cuesta 0PM."
+          "description": "Siempre que este agente esté en el territorio del oponente, el ardid de estrategia Contagio te cuesta 0PM."
         }
       ],
       "uniqueActions": [],
@@ -7245,7 +7265,7 @@
           "name": "VITALIDAD PÚTRIDA",
           "cost": "1 PA",
           "description": [
-            "<b>PSÍQUICA.</b> Elige un agente amigo a 3\" o menos de este agente y visible para él, y luego tira 2D6. Si el resultado es 7, el agente elegido recupera 7 heridas perdidas; En caso contrario, el agente elegido recupera tantas heridas perdidas como el resultado más elevado entre ambos D6."
+            "<b>PSÍQUICA.</b> Elige un agente amigo a 3\" o menos de este agente y visible para él, y luego tira 2D6: si el resultado es 7, el agente elegido recupera 7 heridas perdidas; en caso contrario, el agente elegido recupera tantas heridas perdidas como el resultado más elevado entre ambos D6."
           ],
           "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
         }
@@ -7291,7 +7311,7 @@
         },
         {
           "name": "<span class=\"faction\">*</span>Tóxica",
-          "description": "Siempre que este agente usa esta arma contra un agente enemigo que tenga una de tus fichas de Veneno, suma 1 a ambos atributos de Daño de esta arma."
+          "description": "Siempre que este agente use esta arma contra un agente enemigo que tenía una de tus fichas de Veneno al inicio de esa acción, suma 1 a los dos atributos Daño de esta arma."
         }
       ],
       "uniqueActions": [],

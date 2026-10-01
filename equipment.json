@@ -743,24 +743,24 @@
   {
     "id_equip": 94,
     "faction": "goremongers",
-    "name": "Tótem Sangriento",
-    "description": "Antes de la batalla, puedes colocar uno de tus marcadores de Tótem Sangriento totalmente dentro de tu territorio y a más de 2\" de otros marcadores (excluyendo tu marcador de Cadáver Sangriento). Siempre que un agente enemigo a 3\" o menos de tu marcador de Tótem Sangriento esté disparando, combatiendo o contraataque, tu adversario no puede repetir sus dados de ataque.", 
+    "name": "Tótem Sanguinolento",
+    "description": "Antes de la batalla, puedes desplegar uno de tus marcadores de Tótem sanguinolento completamente dentro de tu territorio y a más de 2\" de otros marcadores (salvo tu marcador de Cadáver ensangrentado). Cuando un agente enemigo a 3\" o menos de tu marcador de Tótem sanguinolento dispare, combata o contraataque, tu oponente no podrá repetir sus dados de ataque.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 95,
     "faction": "goremongers",
-    "name": "Cadáver Sangriento",
-    "description": "Antes de la batalla, puedes colocar uno de tus marcadores de Cadáver Sangriento totalmente dentro de tu territorio y a más de 2\" de otros marcadores (excluyendo tu marcador de Tótem Sangriento). Los agentes GOREMONGER amigos pueden realizar la acción de Recoger Marcador en ese marcador. En el paso de Preparación de cada Fase de Estrategia, puedes incrementar el TANQUE DE SANGRE de un agente GOREMONGER amigo que controle ese marcador, a menos que ese agente amigo esté dentro del área de control de un agente enemigo.", 
+    "name": "Cadáver Ensangrentado",
+    "description": "Antes de la batalla, puedes desplegar hasta uno de tus marcadores de Cadáver ensangrentado completamente dentro de tu territorio y a más de 2\" de otros marcadores (salvo tu marcador de Tótem sanguinolento). Los agentes <span class=\"faction\">SIEMBRASANGRE</span> amigos pueden realizar la acción <b>Recoger marcador</b> sobre ese marcador. En el paso de preparación de cada fase de estrategia, puedes incrementar el <b>DEPÓSITO SANGRIENTO</b> de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo que controle dicho marcador, a menos que ese agente amigo se encuentre en la zona de control de un agente enemigo.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 96,
     "faction": "goremongers",
-    "name": "Sigilo del Caos",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente GOREMONGER amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, empeora el valor x de la regla de armas Perforante en 1 (si la tiene) hasta el final de esa secuencia. Ten en cuenta que Penetración 1 sería, por tanto, ignorada.", 
+    "name": "Sello del Caos",
+    "description": "Una vez por punto de inflexión, cuando un agente enemigo dispare contra un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, al inicio del paso de Tirar dados de defensa puedes usar esta regla. Si lo haces, hasta el final de esa secuencia empeora en 1 la x de la regla de armas Penetración (si la hay). Eso significa que Penetración 1 se ignoraría.", 
     "weapon": [],
     "action": []
   },
@@ -768,7 +768,7 @@
     "id_equip": 97,
     "faction": "goremongers",
     "name": "Cadenas de Muñeca",
-    "description": "Una vez por Punto de Inflexión, cuando un agente GOREMONGER amigo realice la acción de <b>Disparar</b> y estés seleccionando un arma a distancia, puedes usar esta regla. Si lo haces, hasta el final de esa acción, las siguientes armas de combate se tratan como armas a distancia con la regla de armas Alcance 2\": espada sierra, guja sierra, gran hacha sierra (ignora su regla de armas Brutal), desgarradores de pico.", 
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo realice la acción de <b>Disparar</b> y selecciones un arma a distancia, puedes usar esta regla. Si lo haces, hasta el final de esa acción las siguientes armas de combate se tratan como armas a distancia con la regla de armas Alcance 2\": cuchilla sierra, archa sierra, gran hacha sierra (ignora su regla de armas Brutal), picos destripadores. Si esa arma de combate tiene las reglas de armas Equilibrada o Implacable debido al ardid de estrategia Violencia Mejorada, tiene esas reglas de armas mientras sea un arma a distancia.", 
     "weapon": [],
     "action": []
   },

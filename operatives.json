@@ -16420,7 +16420,7 @@
     "goremongers": [
     {
       "id": "blood-herald",
-      "name": "HERALDO DE SANGRE <span class=\"faction\">SIEMBRASANGRE</span>",
+      "name": "HERALDO DE SANGRE SIEMBRASANGRE",
       "stats": {
         "LPA": "2",
         "MOVER": "7\"",
@@ -16452,15 +16452,15 @@
       "abilities": [
         {
           "name": "Favor de Khorne",
-          "description": "Una vez durante cada una de las activaciones de este agente, antes o después de que realice una acción, si su DEPÓSITO SANGRIENTO está vacío, puedes incrementar su DEPÓSITO SANGRIENTO."
+          "description": "Una vez durante cada una de las activaciones de este agente, antes o después de que realice una acción, si su <b>DEPÓSITO SANGRIENTO</b> está vacío, puedes incrementar su <b>DEPÓSITO SANGRIENTO</b>."
         },
         {
           "name": "Apoteosis inminente",
-          "description": "Una vez por batalla, cuando un dado de ataque inflija daño normal a este agente, puedes ignorar ese daño infligido."
+          "description": "Una vez por batalla, cuando un dado de ataque inflija Daño normal a este agente, puedes ignorar ese daño infligido."
         }
       ],
       "uniqueActions": [],
-      "keywords": "<span class=\"faction\">SIEMBRASANGRE</span>, CAOS, LIDER, HERALDO DE SANGRE",
+      "keywords": "<span class=\"faction\">SIEMBRASANGRE</span>, CAOS, LÍDER, HERALDO DE SANGRE",
       "peana": "32"
     },
     {
@@ -16497,7 +16497,7 @@
       "abilities": [
         {
           "name": "Ansia de sangre obsesiva",
-          "description": "1 vez durante cada una de las activaciones de este agente, cuando este agente termine una acción de <b>Combatir</b>, si ya no tiene agentes enemigos en su zona de control, puedes usar esta regla. Si lo haces, si ya no se encuentra en la zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso aunque ya haya realizado la acción de <b>Cargar</b> durante esa activación), pero no puede moverse más de 2\" durante esa acción. Hacerlo no le impide realizar una acción de <b>Cargar</b>, <b>Correr</b> o <b>Reposicionarse</b> más tarde durante esa activación"
+          "description": "Una vez por punto de inflexión, cuando un agente con esta regla termina una acción de <b>Combatir</b>, si ya no tiene agentes enemigos en su zona de control, puedes usar esta regla. Si lo haces, si ya no se encuentra en la zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Cargar</b> (incluso aunque ya haya realizado la acción de <b>Cargar</b> durante esa activación), pero no puede moverse más de 2\" durante esa acción. Hacerlo no le impide realizar una acción de <b>Cargar</b>, <b>Correr</b> o <b>Reposicionarse</b> más tarde durante esa activación."
         }
       ],
       "uniqueActions": [],
@@ -16538,17 +16538,17 @@
       "abilities": [
         {
           "name": "<span class=\"faction\">*</span>Ritual",
-          "description": "Cuando este agente utilice esta arma, la primera vez durante esa secuencia que inflijas daño a un agente en su zona de control, puedes incrementar el DEPÓSITO SANGRIENTO de este agente. Ten en cuenta que esto es acumulativo con las reglas normales para incrementar su DEPÓSITO SANGRIENTO (es decir, si incapacita a un agente en su zona de control)."
+          "description": "Cuando este agente utilice esta arma, la primera vez durante esa secuencia que inflijas daño a un agente en su zona de control, puedes incrementar el <b>DEPÓSITO SANGRIENTO</b> de este agente. Ten en cuenta que esto es acumulativo con las reglas normales para incrementar su <b>DEPÓSITO SANGRIENTO</b> (es decir, si incapacita a un agente en su zona de control)."
         }
       ],
       "uniqueActions": [
         {
           "name": "RITUAL DE TRANSFUSIÓN",
-          "cost": "1PA",
+          "cost": "1 PA",
           "description": [
-            "Disminuye el DEPÓSITO SANGRIENTO de este agente. En lugar de usar una regla SANGUAVITAE, puedes incrementar el DEPÓSITO SANGRIENTO de otro agente <span class=\"faction\">SIEMBRASANGRE</span> amigo distinto a 8\" o menos de este agente."
+            "Disminuye el <b>DEPÓSITO SANGRIENTO</b> de este agente. En lugar de usar una regla <b>SANGUAVITAE</b>, puedes incrementar el <b>DEPÓSITO SANGRIENTO</b> de otro agente <span class=\"faction\">SIEMBRASANGRE</span> amigo distinto a 8\" o menos de este agente."
           ],
-          "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si su DEPÓSITO SANGRIENTO está vacío,"
+          "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si su <b>DEPÓSITO SANGRIENTO</b> está vacío."
         }
       ],
       "keywords": "<span class=\"faction\">SIEMBRASANGRE</span>, CAOS, CAZASANGRE",
@@ -16581,7 +16581,7 @@
             "A": "4",
             "HP/HA": "3+",
             "Dñ": "4/5",
-            "RA": "Alcance 8\", Aturdidora, Atraer<span class=\"faction\">*</span>, Acosar<span class=\"faction\">*</span>"
+            "RA": "Críticos de penetración 1, Alcance 8\", Aturdidora, Atraer<span class=\"faction\">*</span>"
           }
         },
         {
@@ -16598,14 +16598,19 @@
       "abilities": [
         {
           "name": "<span class=\"faction\">*</span>Atraer",
-          "description": "Cuando este agente dispare con esta arma, al inicio del paso de Resolver dados de ataque (antes de infligir daño), puedes mover al blanco hasta x\". X es tu número total de dados de ataque no bloqueados exitosos, multiplicado por 2. El blanco debe ser movido a una localización en la que pueda ser colocado tan cerca de este agente como sea posible, determinada por las x\" que decidas usar. El movimiento debe hacerse en uno o más incrementos en linea recta, y cada incremento se redondeará siempre al alza hasta la pulgada más cercana. Cuando el blanco se deje caer durante dicho movimiento, ignora la distancia vertical."
-        },
-        {
-          "name": "<span class=\"faction\">*</span>Acosar",
-          "description": "Cuando este agente dispare con esta arma, durante el paso de Resolver dados de ataque, tras haber resuelto la regia de armas Atraer (si has elegido hacerlo), puedes descartar cualesquiera de tus dados de ataque no bloqueados. En otras palabras, puedes elegir no infligir daño con cualesquiera de ellos."
+          "description": "Cuando este agente dispare con esta arma, al inicio del paso de Resolver dados de ataque (antes de infligir daño), puedes mover al blanco hasta x\". X es tu número total de dados de ataque no bloqueados exitosos, multiplicado por 2. El blanco debe ser movido a una localización en la que pueda ser colocado tan cerca de este agente como sea posible, determinada por las x\" que decidas usar. El movimiento debe hacerse en uno o más incrementos en línea recta, y cada incremento se redondeará siempre al alza hasta la pulgada más cercana. Cuando el blanco se deje caer durante dicho movimiento, ignora la distancia vertical. A continuación puedes descartar cualquiera de tus dados de ataque exitosos no bloqueados (en otras palabras, puedes elegir no infligir daño con cualquier cantidad de ellos)."
         }
       ],
-      "uniqueActions": [],
+      "uniqueActions": [
+        {
+          "name": "ALIMENTADO POR LAS VÍSCERAS",
+          "cost": "1 PA",
+          "description": [
+            "Disminuye el <b>DEPÓSITO SANGRIENTO</b> de este agente. Hasta que use cualquier perfil de su clavacarnes, todos estos perfiles tienen la regla de armas Severa."
+          ],
+          "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o si su <b>DEPÓSITO SANGRIENTO</b> está vacío."
+        }
+      ],
       "keywords": "<span class=\"faction\">SIEMBRASANGRE</span>, CAOS, EMPALADOR",
       "peana": "32"
     },
@@ -16643,17 +16648,17 @@
       "abilities": [
         {
           "name": "Incitar a la caza",
-          "description": "<ul>Cuando este agente incapacite a un agente enemigo desde más de 2\" de distancia, antes de que ese agente enemigo sea retirado de la zona de aniquilación, puedes incrementar el DEPÓSITO SANGRIENTO de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo a 8\" o menos de ese agente enemigo.</ul> <ul>Cuando este agente inflija daño a un agente enemigo con cualquiera de los perfiles de sus pistolas automáticas dobles pero no lo incapacite, ese agente enemigo gana una de tus fichas de Ampollas (si no tiene ya una). Durante la activación o reacción de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, antes o después de que realice una acción, si se encuentra a 8\" o menos de un agente enemigo que tenga una de tus fichas de Ampollas puedes retirar esa ficha e incrementar el DEPÓSITO SANGRIENTO de ese agente amigo.</ul>"
+          "description": "<p>Cuando este agente incapacite a un agente enemigo desde más de 2\" de distancia, antes de que ese agente enemigo sea retirado de la zona de aniquilación, puedes incrementar el <b>DEPÓSITO SANGRIENTO</b> de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo a 8\" o menos de ese agente enemigo.</p><p>Cuando este agente inflija daño a un agente enemigo con cualquiera de los perfiles de sus pistolas automáticas dobles pero no lo incapacite, ese agente enemigo gana una de tus fichas de Ampollas (si no tiene ya una). Durante la activación o contraataque de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, antes o después de que realice una acción, si se encuentra a 8\" o menos de un agente enemigo que tenga una de tus fichas de Ampollas puedes retirar esa ficha e incrementar el <b>DEPÓSITO SANGRIENTO</b> de ese agente amigo.</p>"
         }
       ],
       "uniqueActions": [
         {
-          "name": "<b>Correr</b> Y AMETRALLAR",
-          "cost": "1PA",
+          "name": "CORRER Y AMETRALLAR",
+          "cost": "1 PA",
           "description": [
             "Realiza una acción libre de <b>Correr</b> y una acción libre de <b>Disparar</b> con este agente en cualquier orden. Solo puedes elegir unas pistolas automáticas dobles para esa acción de <b>Disparar</b>."
           ],
-          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de ocultarse."
+          "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, o si tiene una orden de Ocultarse."
         }
       ],
       "keywords": "<span class=\"faction\">SIEMBRASANGRE</span>, CAOS, INCITADOR",
@@ -16738,11 +16743,11 @@
       "abilities": [
         {
           "name": "Garfios de escalada",
-          "description": "Siempre que este agente trepa hacia arriba, puedes considerar la distancia vertical como 2\" (sin importar la distancia real que mueva en vertical dicho agente)."
+          "description": "Siempre que este agente trepe, puedes tratar la distancia vertical como 2\" (sin importar la distancia real que mueva en vertical dicho agente)."
         },
         {
           "name": "Acechar en tejados",
-          "description": "Cuando este agente combata durante una activación en la que se haya dejado caer desde terreno Aventajado al menos 2\" por encima del suelo de la zona de aniquilación, o cuando este agente combate contra un agente enemigo que se encuentre en terreno Aventajado al menos 2\" por encima del suelo de la zona de aniquilación, las armas de combate de este agente tienen la regla de armas Implacable."
+          "description": "Siempre que este agente combata durante una activación en la que se haya dejado caer desde terreno Aventajado al menos 2\" por encima del suelo de la zona de aniquilación, o siempre que este agente combata contra un agente enemigo que esté en terreno Aventajado al menos 2\" por encima del suelo de la zona de aniquilación, las armas de combate de este agente tienen la regla de armas Implacable."
         }
       ],
       "uniqueActions": [],

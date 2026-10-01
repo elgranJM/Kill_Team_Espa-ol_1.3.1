@@ -1444,8 +1444,8 @@
         "faction": "goremongers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "VIOLENCIA MEJORADA",
-        "description": "Siempre que el <b>TANQUE DE SANGRE</b> de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo esté:\n<ul>\n    <li>A la mitad, sus armas de combate tienen la regla de armas <b>Equilibrada</b>.</li>\n    <li>Lleno, sus armas de combate tienen la regla de armas <b>Implacable</b>.</li>\n</ul>",
+        "name": "Violencia Mejorada",
+        "description": "Cuando el <b>DEPÓSITO SANGRIENTO</b> de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo esté:\n<ul>\n    <li>Medio lleno, sus armas de combate tienen la regla de armas Equilibrada.</li>\n    <li>Lleno, sus armas de combate tienen la regla de armas Implacable.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1453,8 +1453,8 @@
         "faction": "goremongers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "RESISTENCIA AUMENTADA",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, si el <b>TANQUE DE SANGRE</b> de ese agente amigo está:\n<ul>\n    <li>A la mitad, puedes repetir uno de tus dados de defensa.</li>\n    <li>Lleno, puedes repetir cualquiera de tus dados de defensa.</li>\n</ul>",
+        "name": "Resistencia Aumentada",
+        "description": "Cuando un agente dispare contra un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, si el <b>DEPÓSITO SANGRIENTO</b> de ese agente amigo está:\n<ul>\n    <li>Medio lleno, puedes repetir uno de tus dados de defensa.</li>\n    <li>Lleno, puedes repetir cualesquiera de tus dados de defensa.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1462,8 +1462,8 @@
         "faction": "goremongers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "TENACIDAD SANGRIENTA",
-        "description": "Siempre que un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo esté combatiendo o contraataque, la primera vez que tu oponente lo golpee durante esa secuencia, reduce a la mitad el daño infligido (redondeando hacia arriba).\n",
+        "name": "Tenacidad Sangrienta",
+        "description": "Cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo combata o contraataque, la primera vez que tu oponente golpee durante esa secuencia, reduce a la mitad el daño infligido (redondeando al alza y hasta un mínimo de 2).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1471,8 +1471,8 @@
         "faction": "goremongers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "CAZA DE SANGRE",
-        "description": "Selecciona un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo. Si tiene una orden de <b>Ocultación</b>, cámbiala a <b>Trabarse</b>. Luego puede realizar inmediatamente una acción de <b>Cargar</b> gratuita, pero no puede moverse más de 3\" durante esa acción.",
+        "name": "Cazar por la Sangre",
+        "description": "Elige un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo. Si tiene una orden de <b>Ocultarse</b>, cámbiala a <b>Trabarse</b>. A continuación, puede realizar de inmediato una acción libre de <b>Cargar</b>, pero no puede moverse más de 3\" durante dicha acción.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1480,8 +1480,8 @@
         "faction": "goremongers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "AGRESIÓN DESENFRENADA",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo esté combatiendo durante una activación en la que realizó la acción <b>Cargar</b>, al final del paso Tirar Dados de Ataque. Hasta el final de esa secuencia, las armas de combate de ese agente tienen la regla de armas <b>Severa</b>.",
+        "name": "Agresión Desenfrenada",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo combata durante una activación en la que haya realizado una acción de <b>Cargar</b>, al final del paso de Tirar dados de ataque. Hasta el final de esa secuencia, las armas de combate de ese agente tienen la regla de armas Severa.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1489,8 +1489,8 @@
         "faction": "goremongers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "SED DE SANGRE",
-        "description": "Usa este ardid de tiroteo cuando fueras a contraatacar. Puedes hacerlo con un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo que tenga una orden de <b>Ocultación</b>, pero debes cambiar su orden a <b>Trabarse</b> y solo puede realizar la acción <b>Cargar</b>, <b>Combatir</b> o <b>Disparar</b> durante ese contraataque.\n",
+        "name": "Ansia de Sangre",
+        "description": "Usa este ardid de tiroteo cuando vayas a contraatacar. Puedes hacerlo con un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo que tenga una orden de <b>Ocultarse</b>, pero antes de que contraataque debes cambiar su orden a <b>Trabarse</b> y durante ese contraataque no podrá llevar a cabo acciones que no sean <b>Cargar</b>, <b>Combatir</b> o <b>Disparar</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1498,8 +1498,8 @@
         "faction": "goremongers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "DESAPARICIÓN DESTRUCTIVA",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo sea incapacitado. Inflige daño determinado por el <b>TANQUE DE SANGRE</b> de ese agente amigo a un agente enemigo dentro del rango de control de ese agente amigo. Inflige:\n<ul>\n    <li>D3 si está vacío.</li>\n    <li>D3+1 si está a la mitad.</li>\n    <li>D3+2 si está lleno.</li>\n</ul>",
+        "name": "Morir Matando",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo resulte incapacitado, antes de retirarlo de la zona de aniquilación. Inflige daño, determinado por el <b>DEPÓSITO SANGRIENTO</b> de ese agente amigo, a un agente enemigo en la zona de control de ese agente amigo. Inflígele:\n<ul>\n    <li>1D3 si está vacío.</li>\n    <li>1D3+1 si está medio lleno.</li>\n    <li>1D3+2 si está lleno.</li>\n</ul>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1507,8 +1507,8 @@
         "faction": "goremongers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "LACERAR CARNE",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo con un <b>TANQUE DE SANGRE</b> vacío sea activado o contraataque. Aumenta el <b>TANQUE DE SANGRE</b> de ese agente. Al final de esa activación o contraataque, disminuye su <b>TANQUE DE SANGRE</b> (no puedes usar esta disminución para usar una regla <b>SANGUAVITAE</b>); si no puedes disminuir su <b>TANQUE DE SANGRE</b>, inflige 1D3 de daño a él.",
+        "name": "Lacerar Carne",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo con un <b>DEPÓSITO SANGRIENTO</b> vacío sea activado o contraataque. Incrementa el <b>DEPÓSITO SANGRIENTO</b> de ese agente. Al final de esa activación o contraataque, disminuye su <b>DEPÓSITO SANGRIENTO</b> (no puedes aprovechar esta disminución para usar una regla <b>SANGUAVITAE</b>); si no puedes disminuir el <b>DEPÓSITO SANGRIENTO</b>, inflígele 1D3 daños.",
         "typename": "Ardid de Tiroteo"
     },
     {

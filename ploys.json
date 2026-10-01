@@ -293,7 +293,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Proximidad Letal",
-        "description": "Siempre que un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo dispare contra un agente a 6\" de él, las armas a distancia de ese agente amigo (excluyendo armas de <b>RECURSO DE APOYO CORSARIO</b>) tienen la regla de armas Equilibrada.",
+        "description": "Siempre que un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo dispare contra un agente a 6\" o menos de él, las armas a distancia de ese agente amigo (salvo armas <b>ACTIVO DE APOYO PRIVADO</b>) tienen la regla de armas Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -301,8 +301,8 @@
         "faction": "elucidian-starstrider",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Reclamar Zona",
-        "description": "Coloca tu marcador de Reclamo en la zona de aniquilación. Siempre que un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo dispare, combatiendo o contraataque contra un agente enemigo que esté a 3\" de ese marcador, las armas de ese agente amigo tienen la regla de armas Certera 1. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador.",
+        "name": "Reclamar Propiedad",
+        "description": "Coloca tu marcador de Reclamación en la zona de aniquilación. Siempre que un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo dispare, combata o contraataque contra un agente enemigo que esté a 3\" o menos de ese marcador, en el paso de tirar dados de ataque, puedes guardar uno de tus fallos como éxito normal en lugar de descartarlo, o guardar uno de tus éxitos normales como éxito crítico en su lugar. En el paso de preparación de la siguiente fase de estrategia, retira ese marcador. Al final del punto de inflexión, elimina tu marcador de Reclamación de la zona de aniquilación.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -311,7 +311,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Exploradores Impávidos",
-        "description": "La primera vez que un dado de ataque inflija daño a cada agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo durante el punto de inflexión en el paso Resolver Dados de Ataque, puedes dividir a la mitad ese daño infligido (redondeando hacia arriba, hasta un mínimo de 2).",
+        "description": "La primera vez que un dado de ataque inflija daño a cada agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo durante el punto de inflexión, en el paso de resolver dados de ataque, puedes dividir a la mitad el daño infligido (redondeando al alza, hasta un mínimo de 2).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -320,7 +320,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Marcha Rápida",
-        "description": "Siempre que un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo realice la acción Reposicionarse durante su activación, puedes usar esta regla. Si lo haces, suma 1\" a su atributo de Movimiento hasta el final de esa activación, pero debe terminar ese movimiento más cerca de la zona de descenso de tu oponente y no puede usar un <b>RECURSO DE APOYO CORSARIO</b> durante esa activación.",
+        "description": "Siempre que un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo realice una acción de <b>Reposicionarse</b> durante su activación, puedes usar esta regla. Si lo haces, suma 1\" a su atributo Movimiento hasta el final de esa activación, pero debe terminar ese movimiento más cerca de la zona de descenso de tu oponente y no puede usar un <b>ACTIVO DE APOYO PRIVADO</b> durante esa activación.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -328,8 +328,8 @@
         "faction": "elucidian-starstrider",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Armas Combinadas",
-        "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo, si está disparando a un agente enemigo que ha recibido disparos de otro agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo durante este punto de inflexión. Puedes repetir cualquiera de tus dados de ataque. No puedes usar este ardid mientras disparas con un <b>RECURSO DE APOYO CORSARIO</b>.",
+        "name": "Disparos Combinados",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo dispare, tras tirar tus dados de ataque. Si ha disparado contra un agente enemigo contra el que ya ha disparado otro agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo durante este punto de inflexión, puedes repetir cualquiera de tus dados de ataque. No puedes usar este ardid al disparar con un <b>ACTIVO DE APOYO PRIVADO</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -337,8 +337,8 @@
         "faction": "elucidian-starstrider",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Superviviente",
-        "description": "Usa este ardid de tiroteo cuando se active un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> amigo que no esté dentro del rango de control de agentes enemigos. Ese agente amigo recupera \nhasta 1D3+2 heridas perdidas. No puedes usar este ardid para cada agente amigo más de una vez por batalla.",
+        "name": "Preparacionista",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo sea activado y no esté en la zona de control de agentes enemigos. Ese agente amigo recupera un máximo de 1D3+2 heridas perdidas y durante esa activación puedes ignorar cualquier cambio a su atributo LPA. No puedes usar este ardid más de una vez por batalla para cada agente amigo.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -347,7 +347,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Gran Resistencia",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> <b>NAVIS</b> amigo. Hasta el final de la activación, suma 1 a su atributo de LPA.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <b>ARMADA</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo. Hasta el final de la activación, suma 1 a su atributo LPA.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -355,8 +355,8 @@
         "faction": "elucidian-starstrider",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Bien Entrenados",
-        "description": "Usa este ardid de tiroteo cuando se active un agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> <b>NAVIS</b> amigo. Elige otro agente <span class=\"faction\">STARSTRIDER ELUCIDIANO</span> <b>NAVIS</b> amigo preparado visible para y a 3\" de ese agente. Cuando ese primer agente amigo esté agotado, puedes activar a ese otro agente amigo antes de que active tu oponente. Cuando ese otro agente esté agotado, tu oponente activa entonces de manera normal.",
+        "name": "Bien Adiestrados",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>ARMADA</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo sea activado. Elige otro agente <b>ARMADA</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo apostado a 3\" o menos de ese agente y visible para él. Cuando ese primer agente amigo quede usado, puedes activar el otro agente amigo antes de que active tu oponente. Tras usar a ese agente, tu oponente se activa de forma normal.",
         "typename": "Ardid de Tiroteo"
     },
     {

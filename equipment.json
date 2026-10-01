@@ -435,16 +435,16 @@
   {
     "id_equip": 49,
     "faction": "elucidian-starstrider",
-    "name": "Subtraje Blindado",
-    "description": "Siempre que un agente esté disparando a un agente ELUCIDIAN STARSTRIDER amigo que tenga un atributo de Salvación de 5+ (excluyendo CANID), puedes retener uno de tus resultados de dados de defensa de 4 como un éxito normal.", 
+    "name": "Mono Blindado",
+    "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo que tenga un atributo Salvación de 5+ (salvo <b>CÁNIDO</b>), puedes guardar uno de tus dados de defensa con un resultado de 4 como un éxito normal.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 50,
     "faction": "elucidian-starstrider",
-    "name": "Condensadores Sobrecargados",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente ELUCIDIAN STARSTRIDER amigo esté realizando la acción de <b>Disparar</b> y selecciones una pistola láser o rifle láser, puedes usar esta regla. Si lo haces, hasta el final del Punto de Inflexión, añade 1 a ambos atributos de Daño de esa arma y tiene las reglas de arma Caliente y Críticos de Penetración 1. Ten en cuenta que las pistolas láser reliquia están excluidas de esta regla.", 
+    "name": "Baterías Potenciadas",
+    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo realice una acción de <b>Disparar</b> y selecciones una pistola láser, pistola láser reliquia o rifle láser, puedes usar esta regla. Si lo haces, hasta el final del punto de inflexión, suma 1 a ambos atributos Daño de esa arma y tiene las reglas de armas Sobrecalentamiento y Críticos de penetración 1.", 
     "weapon": [],
     "action": []
   },
@@ -452,15 +452,15 @@
     "id_equip": 51,
     "faction": "elucidian-starstrider",
     "name": "Enlace de Coordenadas Mejorado",
-    "description": "Siempre que un agente ELUCIDIAN STARSTRIDER amigo esté usando un RECURSO DE APOYO CORSARIO, si el objetivo está a 6\" o menos de un agente ELUCIDIAN STARSTRIDER NAVIS amigo, el objetivo no puede estar Ofuscado y esa arma tiene la regla de armas Saturación.", 
+    "description": "Siempre que un agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo realice una acción de <b>Disparar</b> con un <b>ACTIVO DE APOYO PRIVADO</b>, si el blanco está a 6\" o menos de un agente <b>ARMADA</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo, el blanco no puede estar ofuscado y el arma tiene la regla de armas Saturación.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 52,
     "faction": "elucidian-starstrider",
-    "name": "Artillería Rápida",
-    "description": "Una vez por batalla, al seleccionar un RECURSO DE APOYO CORSARIO, puedes seleccionar uno que ya haya sido usado durante la batalla. Esto tiene prioridad sobre las reglas normales de RECURSOS DE APOYO CORSARIO.", 
+    "name": "Artillería Rauda",
+    "description": "Una vez por batalla, al elegir un <b>ACTIVO DE APOYO PRIVADO</b>, puedes elegir uno que ya haya sido usado durante la batalla. Esto tiene preferencia sobre las reglas normales de <b>ACTIVOS DE APOYO PRIVADOS</b>.", 
     "weapon": [],
     "action": []
   },

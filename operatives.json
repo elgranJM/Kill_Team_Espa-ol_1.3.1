@@ -23615,11 +23615,11 @@
                 },
                 {
                     "name": "Reputación que mantener",
-                    "description": "La primera vez que esta agente incapacita a un agente enemigo durante la batalla, puedes o bien obtener 1 PM adicional, o usar una regla , <b>PATENTE COMERCIAL</b> adicional (hasta cuatro usos por batalla, en lugar de tres). Ten en cuenta que sigues sin poder usar una misma regla , <b>PATENTE COMERCIAL</b> más de una vez por batalla."
+                    "description": "La primera vez que esta agente incapacita a un agente enemigo durante la batalla, puedes o bien obtener 1 PM adicional, o usar una regla <b>PATENTE COMERCIAL</b> adicional (hasta cinco usos por batalla, en lugar de cuatro). Ten en cuenta que sigues sin poder usar una misma regla <b>PATENTE COMERCIAL</b> más de una vez por batalla."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, LIDER, ELUCIA VHANE",
+            "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, LÍDER, ELUCIA VHANE",
             "peana": "25"
         },
         {
@@ -23646,11 +23646,11 @@
             "abilities": [
                 {
                     "name": "Bestia",
-                    "description": "Este agente no puede realizar ninguna acción que no sea <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, Traer, Ponerse en guardia, <b>Reposicionarse</b>, <b>Recoger marcador</b> y <b>Colocar marcador</b>. No puede usar ninguna arma que no figure en su tarjeta de datos."
+                    "description": "Este agente no puede realizar ninguna acción que no sea <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>Traer</b>, <b>Ponerse en guardia</b>, <b>Reposicionarse</b>, <b>Recoger marcador</b> y <b>Colocar marcador</b>. No puede usar ninguna arma que no figure en su tarjeta de datos."
                 },
                 {
                     "name": "Compañero leal",
-                    "description": "Siempre que un agente enemigo realiza la acción de <b>Combatir</b>, si este agente es un agente válido contra el que<b>Combatir</b>, puedes obligarle a elegir a este agente para<b>Combatir</b> contra él. Siempre que un agente enemigo termina la acción de <b>Cargar</b> en la zona de control de otro agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo a 3\" o menos de este agente, si este agente no se encuentra en la zona de control de algún agente enemigo, este agente puede realizar inmediatamente una acción libre de <b>Cargar</b>, pero debe terminar dicho movimiento en la zona de control de ese agente enemigo."
+                    "description": "Siempre que un agente enemigo realiza la acción de <b>Combatir</b>, si este agente es un agente válido contra el que combatir, puedes obligarle a elegir a este agente para combatir contra él. Siempre que un agente enemigo termina la acción de <b>Cargar</b> en la zona de control de otro agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo a 3\" o menos de este agente, si este agente no se encuentra en la zona de control de algún agente enemigo, este agente puede realizar inmediatamente una acción libre de <b>Cargar</b> (para ello, puedes cambiar su orden a Trabarse), pero debe terminar dicho movimiento en la zona de control de ese agente enemigo."
                 }
             ],
             "uniqueActions": [
@@ -23662,7 +23662,7 @@
                     ]
                 }
             ],
-            "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, CANIDO",
+            "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, CÁNIDO",
             "peana": "25"
         },
         {
@@ -23686,7 +23686,7 @@
                     }
                 },
                 {
-                    "name": "Arma de energia",
+                    "name": "Arma de energía",
                     "type": "melee",
                     "stats": {
                         "A": "5",
@@ -23769,7 +23769,7 @@
                     "name": "CALIBRAR VOLTAGHEIST",
                     "cost": "0 PA",
                     "description": [
-                        "Elige uno de los siguientes efectos para que esté activo hasta el inicio de la siguiente activación de este agente, hasta que quede incapacitado o hasta que realice de nuevo esta acción (lo que ocurra primero): <ul><li>Carga: La pistola electrizante de este agente tiene la regla de armas Letal 4+.</li></ul> <ul><li>Campo: Siempre que un agente enemigo termina una acción de <b>Cargar</b>, <b>Correr</b>, <b>Reposicionarse</b> o <b>Retroceder</b> a 4\" o menos de este agente y visible para él, inflige 1D6 daños a dicho agente enemigo.</li></ul>"
+                        "Elige uno de los siguientes efectos para que esté activo hasta el inicio de la siguiente activación de este agente, hasta que quede incapacitado o hasta que realice de nuevo esta acción (lo que ocurra primero): <ul><li><b>Carga:</b> La pistola electrizante de este agente tiene la regla de armas Letal 4+.</li><li><b>Campo:</b> Siempre que un agente enemigo termina una acción de <b>Cargar</b>, <b>Correr</b>, <b>Reposicionarse</b> o <b>Retroceder</b> a 4\" o menos de este agente y visible para él, inflige 1D6 daños a dicho agente enemigo.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -23811,7 +23811,7 @@
             "abilities": [
                 {
                     "name": "¡Sanitario!",
-                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo vaya a resultar incapacitado estando a 3\" o menos de este agente y visible para él, puedes usar esta regla, siempre que ninguno de los dos agentes amigos implicados estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le quedan 3 heridas restantes y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Si esta regla se usó durante la activación del otro agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado , o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
+                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo vaya a resultar incapacitado estando a 3\" o menos de este agente y visible para él, puedes usar esta regla, siempre que ninguno de los dos agentes amigos implicados estén en la zona de control de algún agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le quedan 3 heridas restantes y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Si esta regla se usó durante la activación del otro agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
                 },
                 {
                     "name": "Yelmo normalizador",
@@ -23885,7 +23885,7 @@
             "abilities": [
                 {
                     "name": "Imponer disciplina",
-                    "description": "<b>APOYO</b>. Mientras un agente Armada <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo distinto esté a 3\" o menos de este agente, las armas a distancia de ese agente amigo (salvo armas <b>ACTIVO DE <b>APOYO</b> PRIVADO</b>) tienen la regla de arma Equilibrada; si un arma ya tiene esa regla de arma, tiene la regla de arma Incesante en lugar de Equilibrada."
+                    "description": "<b>APOYO</b>. Mientras un agente <b>ARMADA</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo distinto esté a 3\" o menos de este agente, las armas a distancia de ese agente amigo (salvo armas <b>ACTIVO DE APOYO PRIVADO</b>) tienen la regla de arma Equilibrada; si un arma ya tiene esa regla de arma, tiene la regla de arma Incesante en lugar de Equilibrada."
                 },
                 {
                     "name": "Robusto",
@@ -23959,11 +23959,11 @@
             "abilities": [
                 {
                     "name": "Tripulación",
-                    "description": "Una vez por punto de inflexión, cuando fueras a reaccionar, si no has usado un <b>ACTIVO DE <b>APOYO</b> PRIVADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, puedes reaccionar con un agente <b>INFANTE DEL VACÍO</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo que tenga una orden de ocultarse, pero durante esa reacción solo puedes realizar acciones de <b>Disparar</b>, y debes usar un <b>ACTIVO DE APOYO PRIVADO</b> para ello."
+                    "description": "Una vez por punto de inflexión, cuando fueras a contraatacar, si no has usado un <b>ACTIVO DE APOYO PRIVADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, puedes contraatacar con un agente <b>INFANTE DEL VACÍO</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo que tenga una orden de Ocultarse, pero durante ese contraataque solo puedes realizar acciones de <b>Disparar</b>, y debes usar un <b>ACTIVO DE APOYO PRIVADO</b> para ello."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, ARMADA, <b>INFANTE DEL VACÍO</b>",
+            "keywords": "<span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span>, IMPERIUM, ARMADA, INFANTE DEL VACÍO",
             "peana": "25"
         }
     ],

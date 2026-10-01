@@ -1318,11 +1318,11 @@
   {
     "id_equip": 158,
     "faction": "hearthkyn-salvager",
-    "name": "Cuchillo de Plasma",
-    "description": "Los agentes HEARTHKYN SALVAGER amigos tienen la siguiente arma de combate. Ten en cuenta que el agente FIELD MEDIC ya tiene esta arma pero con mejores atributos; en ese caso, usa la mejor versión:",
+    "name": "Cuchillos de Plasma",
+    "description": "Los agentes <span class=\"faction\">SUCESOR RECUPERADOR</span> amigos tienen la siguiente arma de combate. Ten en cuenta que el agente <b>MÉDICO DE CAMPO</b> ya tiene esta arma pero con mejores atributos; en ese caso, usa la mejor versión.",
     "weapon": [
       {
-        "w_name": "Cuchillo de Plasma",
+        "w_name": "Cuchillo de plasma",
         "ATK": "3",
         "HIT": "4+",
         "DMG": "3/5",
@@ -1334,24 +1334,24 @@
   {
     "id_equip": 159,
     "faction": "hearthkyn-salvager",
-    "name": "Herramienta de Excavación",
-    "description": "Los agentes HEARTHKYN SALVAGER amigos pueden realizar la acción de Recoger Marcador por 1 PA menos, y no tienen que controlar el marcador para hacerlo (teniendo prioridad sobre las condiciones de esa acción – solo necesitan disputar el marcador).", 
+    "name": "Herramientas de Excavación",
+    "description": "Los agentes <span class=\"faction\">SUCESOR RECUPERADOR</span> amigos pueden realizar la acción <b>Recoger marcador</b> por 1 PA menos, y no tienen que controlar el marcador para hacer esto (lo cual tiene preferencia sobre las condiciones de esa acción – solo necesitan disputar el marcador).", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 160,
     "faction": "hearthkyn-salvager",
-    "name": "Equipos de Escalada",
-    "description": "Siempre que un agente HEARTHKYN SALVAGER amigo esté escalando, trata la distancia vertical como 1\" menos (hasta un mínimo de 2\"). Ten en cuenta que esto no tiene efecto al usar terreno de equipamiento de escalera, que trata la distancia vertical como 1\" (pero tendría efecto si el agente continuara escalando otro elemento de terreno).", 
+    "name": "Anclajes",
+    "description": "Durante la activación de cada agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo, puedes hacer una de las siguientes cosas:<ul><li>Cuando ese agente trepe, puedes tratar la distancia vertical como si fuera 2\" (sin importar cuánto mueva en vertical el agente realmente).</li><li>Cuando ese agente se deje caer, ignora la distancia vertical.</li></ul>", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 161,
     "faction": "hearthkyn-salvager",
-    "name": "Escritura de Reclamación",
-    "description": "Una vez por batalla, si los agentes HEARTHKYN SALVAGER amigos disputan dos o más marcadores de objetivo, después de tirar para decidir la iniciativa, puedes usar esta regla. Si lo haces puedes repetir tu dado.", 
+    "name": "Mandato de Reclamación",
+    "description": "Una vez por batalla, si los agentes <span class=\"faction\">SUCESOR RECUPERADOR</span> amigos disputan dos o más marcadores de objetivo, tras desempatar para determinar la iniciativa, puedes usar esta regla. Si lo haces, puedes repetir tu tirada.", 
     "weapon": [],
     "action": []
   },

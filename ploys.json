@@ -2236,8 +2236,8 @@
         "faction": "hearthkyn-salvager",
         "type": "strategic",
         "cps": "1PM",
-        "name": "La Necesidad Guarda",
-        "description": "Selecciona un marcador de objetivo o uno de tus marcadores de misión.<ul>\n<li>Siempre que se determine el control de ese marcador, trata el atributo de LPA total de los agentes <span class=\"faction\">SALVADOR HEARTHKYN</span> amigos que lo disputan como 1 mayor si al menos un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo de LPA, por lo que cualquier cambio es acumulativo con esto.</li>\n<li>Siempre que un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo esté a 3\" de ese marcador, suma 1 al atributo de Atq de sus armas de combate (hasta un máximo de 4).</li>\n</ul>",
+        "name": "La Necesidad Mantiene",
+        "description": "Elige un marcador de objetivo o uno de tus marcadores de misión.<ul>\n<li>Al determinar el control de ese marcador, trata el atributo LPA total de los agentes <span class=\"faction\">SUCESOR RECUPERADOR</span> amigos que lo disputen como si fuera 1 punto mayor si al menos un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo LPA, de modo que cualquier cambio es acumulativo con esto.</li>\n<li>Cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo se encuentre a 3\" o menos de ese marcador, suma 1 al atributo Ataque de sus armas de combate (hasta un máximo de 4); si el arma ya tiene un atributo Ataque de 4, obtiene la regla de armas Equilibrada.</li>\n</ul>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2245,8 +2245,8 @@
         "faction": "hearthkyn-salvager",
         "type": "strategic",
         "cps": "1PM",
-        "name": "El Trabajo Gana",
-        "description": "Selecciona un marcador de objetivo o uno de tus marcadores de misión. Siempre que un agente enemigo esté a 3\" de ese marcador, trátalo como si tuviera una ficha de Rencor adicional.",
+        "name": "El Trabajo Obtiene",
+        "description": "Elige un marcador de objetivo o uno de tus marcadores de misión. Cuando un agente enemigo se encuentre a 3\" o menos de ese marcador, trátalo como si tuviera una ficha de Agravio adicional.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2254,8 +2254,8 @@
         "faction": "hearthkyn-salvager",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Defensa Forjada",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo, en el paso Tirar Dados de Defensa, si sacas dos o más fallos, puedes repetir uno de ellos.",
+        "name": "Defensa Templada",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo, si sacaste 0-1 éxitos (incluyendo las repeticiones), puedes guardar 1 de tus fallos como un éxito en su lugar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2263,8 +2263,8 @@
         "faction": "hearthkyn-salvager",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Potencia de Fuego Próxima",
-        "description": "Siempre que un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo dispare contra un agente enemigo a 6\" de él, mejora el atributo de Impacto de las armas a distancia de ese agente amigo en 1 (hasta un máximo de 3+).\n<p><span class=\"text-warning-emphasis\">Esto puede permitirte aplicar o eliminar el cambio de atributo de Impacto durante una acción (esto tiene precedencia sobre las reglas básicas).</span></p>",
+        "name": "Potencia de Fuego Cercana",
+        "description": "Cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo dispare contra un agente enemigo a 6\" o menos de él, mejora en 1 el atributo Impactar de las armas a distancia de ese agente amigo (hasta un máximo de 3+). Esto puede permitirte aplicar o retirar el cambio al atributo Impactar durante una acción (esto tiene prioridad sobre las reglas básicas).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2272,8 +2272,8 @@
         "faction": "hearthkyn-salvager",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Los Ancestros Miran",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo. Hasta el final de esa activación, ese agente puede realizar una acción gratuita de <b>Disparar</b> o una acción gratuita de <b>Combatir</b>",
+        "name": "Los Ancestros Nos Observan",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo. Hasta el final de esa activación, el agente en cuestión puede realizar o bien una acción libre de <b>Combatir</b> o bien una acción libre de <b>Disparar</b> y puedes ignorar cualquier cambio a los atributos de arma de ese agente por estar lesionado.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2281,8 +2281,8 @@
         "faction": "hearthkyn-salvager",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Vale la Pena",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo sea incapacitado. Puede realizar una acción de misión gratuita antes de ser retirado de la zona de aniquilación.",
+        "name": "Esfuerzo Final",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo resulte incapacitado. Puede realizar una acción libre de misión antes de ser retirado de la zona de aniquilación.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2291,7 +2291,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Robusto",
-        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo, cuando recojas tus dados de defensa. Cambia los éxitos críticos retenidos del atacante a éxitos normales (cualquier regla de armas que ya hayan resuelto no se ve afectada, p. ej. Perforante Críticos).",
+        "description": "Usa este ardid de tiroteo cuando un agente dispare contra un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo, cuando reúnas tus dados de defensa. Cambia los éxitos críticos guardados de tu atacante por éxitos normales (cualquier regla de armas que ya se haya resuelto no se ve afectada, p. ej., Críticos de penetración).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2299,8 +2299,8 @@
         "faction": "hearthkyn-salvager",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Trabarse para Adquirir",
-        "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para un agente <span class=\"faction\">SALVADOR HEARTHKYN</span> amigo, si está disparando o combatiendo contra un agente enemigo que controla un marcador de objetivo o uno de tus marcadores de misión. Puedes repetir cualquiera de tus dados de ataque.",
+        "name": "Trabarse por la Recompensa",
+        "description": "Usa este ardid de tiroteo tras tirar tus dados de ataque por un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo, si dispara o combate contra un agente enemigo que controle un marcador de objetivo o uno de tus marcadores de misión. Puedes repetir la tirada de algunos o todos tus dados de ataque.",
         "typename": "Ardid de Tiroteo"
     },
     {

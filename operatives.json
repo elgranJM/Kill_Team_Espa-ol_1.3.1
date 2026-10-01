@@ -15296,7 +15296,7 @@
                     "type": "ranged",
                     "stats": {
                         "A": "4",
-                        "HP/HA": "4+",
+                        "HP/HA": "3+",
                         "Dñ": "3/4",
                         "RA": "Alcance 8\", Críticos de penetración 1"
                     }
@@ -15338,7 +15338,7 @@
         },
         {
             "id": "hearthkyn-dozr",
-            "name": "SUCESOR BULLDOZER",
+            "name": "SUCESOR BULLDÔZER",
             "stats": {
                 "LPA": "2",
                 "MOVER": "5\"",
@@ -15370,7 +15370,7 @@
             "abilities": [
                 {
                     "name": "Peleador",
-                    "description": "Cuando este agente combata o contraataque: <ul><li>Los agentes enemigos no pueden asistir.</li></ul> <ul><li>Si este agente resulta incapacitado, durante esa secuencia puedes golpear al agente enemigo con uno de tus éxitos sin resolver, antes de que sea retirado de la zona de aniquilación.</li></ul> <ul><li>El Daño normal de 4 o más le inflige 1 daño menos.</li></ul>"
+                    "description": "Cuando este agente combata o contraataque: <ul><li>Los agentes enemigos no pueden asistir.</li><li>Si este agente resulta incapacitado, durante esa secuencia puedes golpear al agente enemigo con uno de tus éxitos sin resolver, antes de que sea retirado de la zona de aniquilación.</li><li>El Daño normal de 4 o más le inflige 1 daño menos.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -15383,7 +15383,7 @@
                     "description_no": "Este agente no puede realizar esta acción a menos que haya un agente enemigo en su zona de control."
                 }
             ],
-            "keywords": "<span class=\"faction\">SUCESOR RECUPERADOR</span>, LIGAS DE LOS VOTANN, BULLDOZER",
+            "keywords": "<span class=\"faction\">SUCESOR RECUPERADOR</span>, LIGAS DE LOS VOTANN, BULLDÔZER",
             "peana": "28"
         },
         {
@@ -15420,7 +15420,7 @@
             "abilities": [
                 {
                     "name": "¡Sanitario!",
-                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo vaya a resultar incapacitado mientras es visible para este agente y se encuentra a 3\" o menos de él, puedes usar esta regla, siempre y cuando ni este ni el otro agente se encuentren en la zona de control de un agente enemigo. Si lo haces, ese agente amigo no queda incapacitado, le queda 1 herida, y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, puede realizar una acción libre de <b>Correr</b>, pero debe terminarla dentro de la zona de control de este agente. Resta 1 a los atributos LPA de este y ese agente hasta el final de sus respectivas siguientes activaciones, y si esta regla se usa durante la activación de ese agente amigo, dicha activación finaliza. No puedes usar esta regla si este agente está incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
+                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo vaya a resultar incapacitado mientras es visible para este agente y se encuentra a 3\" o menos de él, puedes usar esta regla, siempre y cuando ni este ni el otro agente se encuentren en la zona de control de un agente enemigo. Si lo haces, ese agente amigo no queda incapacitado, le queda 1 herida, y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, puede realizar una acción libre de <b>Correr</b>, pero debe terminarla dentro de la zona de control de este agente. Resta 1 a los atributos LPA de este y ese agente hasta el final de sus respectivas siguientes activaciones, y si esta regla se usa durante la activación de ese agente amigo, dicha activación finaliza. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
                 }
             ],
             "uniqueActions": [
@@ -15480,12 +15480,12 @@
             "abilities": [
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag, Penetración, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas. Cuando este agente usa una granada frag o Penetración, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag, perforantes, de humo y aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando este agente usa una granada frag o perforante, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [
                 {
-                    "name": "GRANADA ESPECIAL VÄYR-3",
+                    "name": "GRANADA ESPECIAL VÂYR-3",
                     "cost": "1 PA",
                     "description": [
                         "Coloca uno de tus marcadores de Granada especial a 6\" o menos de este agente. Debe ser visible para este agente, o encontrarse en el terreno aventajado de un elemento de terreno que sea visible para este agente. Cuando un agente se encuentre a 3\" o menos de ese marcador de Granada especial, el jugador que controla a dicho agente debe gastar 1PA adicional para que ese agente realice la acción de <b>Recoger marcador</b> y las acciones de misión.",
@@ -15538,6 +15538,16 @@
                     }
                 },
                 {
+                    "name": "Cañón rotativo LasMAX (barrido)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "4/5",
+                        "RA": "Incesante, Pesada (solo Reposicionarse), Saturación, Ráfaga 1\""
+                    }
+                },
+                {
                     "name": "Lanzamisiles L7 (área)",
                     "type": "ranged",
                     "stats": {
@@ -15545,6 +15555,16 @@
                         "HP/HA": "4+",
                         "Dñ": "3/5",
                         "RA": "Área 2\""
+                    }
+                },
+                {
+                    "name": "Lanzamisiles L7 (concentrado)",
+                    "type": "ranged",
+                    "stats": {
+                        "A": "4",
+                        "HP/HA": "4+",
+                        "Dñ": "5/6",
+                        "RA": "Penetración 1"
                     }
                 },
                 {
@@ -15570,8 +15590,8 @@
             ],
             "abilities": [
                 {
-                    "name": "Haz",
-                    "description": "<ul>Cuando este agente dispare con esta arma, cada éxito crítico guardado inflige inmediatamente 1D3 daños a cada otro agente que se encuentre a lo largo de una (y solo una) línea de haz (tira por separado por cada agente), pero el blanco no resulta afectado. Un agente se encuentra a lo largo de una línea de haz si se puede trazar una línea desde este agente hasta la peana de dicho agente, atravesando la peana del blanco original pero sin atravesar terreno Pesado.</ul> <ul>En este ejemplo, el agente A es el blanco. Los agentes B y C se encuentran a lo largo de la línea del haz, pero el agente D no.</ul>"
+                    "name": "<span class=\"faction\">*</span>Haz",
+                    "description": "Cuando este agente dispare con esta arma, cada éxito crítico guardado inflige inmediatamente 1D3 daños a cada otro agente que se encuentre a lo largo de una (y solo una) línea de haz (tira por separado por cada agente), pero el blanco no resulta afectado. Un agente se encuentra a lo largo de una línea de haz si se puede trazar una línea desde este agente hasta la peana de dicho agente, atravesando la peana del blanco original pero sin atravesar terreno Pesado."
                 }
             ],
             "uniqueActions": [],
@@ -15583,7 +15603,7 @@
             "name": "SUCESOR CON PROPULSOR DE SALTO",
             "stats": {
                 "LPA": "2",
-                "MOVER": "8",
+                "MOVER": "8\"",
                 "SALVACIÓN": "3+",
                 "HERIDAS": "8"
             },
@@ -15612,7 +15632,7 @@
             "abilities": [
                 {
                     "name": "Propulsor de salto",
-                    "description": "Cuando este agente realice una acción en la que se mueva, puede VOLAR. Si lo hace, no lo muevas. En lugar de eso, retíralo de la zona de aniquilación y vuelve a colocarlo completamente a una distancia de su localización original igual o menor a su atributo Movimiento (o a 3\" o menos si era un movimiento de <b>Correr</b>) horizontalmente (en una zona de aniquilación que use Combate cerrado, como Horcacaída, esta distancia no se puede medir sobre o a través de terreno Muro, y ese agente no puede desplegarse al otro lado de un punto de acceso, es decir, no puede volar a través de una escotilla). Ten en cuenta que no gana distancia adicional al realizar la acción <b>Cargar</b>. Debe desplegarse en una localización en la que pueda ser colocado y, a menos que la acción sea <b>Cargar</b>, no puede desplegarse en la zona de control de un agente enemigo."
+                    "description": "Cuando este agente realice una acción en la que se mueva, puede <b>VOLAR</b>. Si lo hace, no lo muevas. En lugar de eso, retíralo de la zona de aniquilación y vuelve a colocarlo completamente a una distancia de su localización original igual o menor a su atributo Movimiento (o a 3\" o menos si era un movimiento de <b>Correr</b>) en horizontal (en una zona de aniquilación que use Combate cerrado, como Horcacaída, esta distancia no se puede medir sobre o a través de terreno Muro, y ese agente no puede desplegarse al otro lado de un punto de acceso, es decir, no puede volar a través de una escotilla). Ten en cuenta que no gana distancia adicional al realizar la acción de <b>Cargar</b>. Debe desplegarse en una localización en la que pueda ser colocado y, a menos que la acción sea <b>Cargar</b>, no puede desplegarse en la zona de control de un agente enemigo."
                 },
                 {
                     "name": "<span class=\"faction\">*</span>Impacto brutal",
@@ -15688,7 +15708,7 @@
         },
         {
             "id": "hearthkyn-kognitaar",
-            "name": "SUCESOR ANALISTA",
+            "name": "SUCESOR ANÂLISTA",
             "stats": {
                 "LPA": "2",
                 "MOVER": "5\"",
@@ -15730,7 +15750,7 @@
             "abilities": [
                 {
                     "name": "Táctico",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Coloca o bien tu marcador de Ataque o bien tu marcador de Defensa en la zona de aniquilación. Cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo dispare, combata o contraataque contra un agente enemigo que se encuentre a 3\" o menos de tu marcador de Ataque, puedes repetir la tirada de uno de tus dados de ataque. Cuando un agente enemigo dispare contra un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo que se encuentre a 3\" o menos de tu marcador de Defensa, puedes repetir la tirada de uno de tus dados de Defensa. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador."
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Coloca o bien tu marcador de Ataque o bien tu marcador de Defensa en la zona de aniquilación. Cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo dispare, combata o contraataque contra un agente enemigo que se encuentre a 3\" o menos de tu marcador de Ataque, las armas de ese agente amigo tienen la regla de armas Equilibrada. Cuando un agente enemigo dispare contra un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo que se encuentre a 3\" o menos de tu marcador de Defensa, puedes repetir la tirada de uno de tus dados de Defensa. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador."
                 }
             ],
             "uniqueActions": [
@@ -15744,12 +15764,12 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">SUCESOR RECUPERADOR</span>, LIGAS DE LOS VOTANN, ANALISTA",
+            "keywords": "<span class=\"faction\">SUCESOR RECUPERADOR</span>, LIGAS DE LOS VOTANN, ANÂLISTA",
             "peana": "28"
         },
         {
             "id": "hearthkyn-lokatr",
-            "name": "SUCESOR LOCALIZADOR",
+            "name": "SUCESOR LOCÂLIZADOR",
             "stats": {
                 "LPA": "2",
                 "MOVER": "5\"",
@@ -15794,7 +15814,7 @@
                     "name": "AVISTAR",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo a 3\" o menos de este agente dispare contra el agente enemigo elegido, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de este agente amigo tienen la regla de armas Buscadora (ligera).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
+                        "<b>APOYO</b>. Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo a 3\" o menos de este agente dispare contra el agente enemigo elegido, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de este agente amigo tienen la regla de armas Buscadora (ligera).</li><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
@@ -15802,12 +15822,12 @@
                     "name": "ESCANEO PANESPECTRAL",
                     "cost": "1 PA",
                     "description": [
-                        "Coloca tu marcador de Escaneo panespectral en la zona de aniquilación. Cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo dispare contra un agente enemigo a 3\" o menos de ese marcador, las armas a distancia de ese agente amigo tienen la regla de armas Saturación. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador. "
+                        "Coloca tu marcador de Escaneo panespectral en la zona de aniquilación. Cuando un agente <span class=\"faction\">SUCESOR RECUPERADOR</span> amigo dispare contra un agente enemigo a 3\" o menos de ese marcador, las armas a distancia de ese agente amigo tienen la regla de armas Saturación. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">SUCESOR RECUPERADOR</span>, LIGAS DE LOS VOTANN, LOCALIZADOR",
+            "keywords": "<span class=\"faction\">SUCESOR RECUPERADOR</span>, LIGAS DE LOS VOTANN, LOCÂLIZADOR",
             "peana": "28"
         },
         {
@@ -15854,7 +15874,7 @@
             "abilities": [
                 {
                     "name": "Buenos suministros",
-                    "description": "Puedes seleccionar una opción de equipo adicional."
+                    "description": "Puedes seleccionar una opción de equipo adicional, y en el paso de preparación de la primera fase de estrategia, obtienes 1PM adicional."
                 },
                 {
                     "name": "¡Yo me encargo!",
@@ -15909,7 +15929,7 @@
             "abilities": [
                 {
                     "name": "Asegurar restos",
-                    "description": "Siempre que un agente enemigo dispare, combata o contraataque contra este agente, si este agente disputa un marcador de objetivo o uno de tus marcadores de misión, resta 1 al daño infligido debido a uno de los éxitos."
+                    "description": "Siempre que un agente enemigo dispare, combata o contraataque contra este agente, si este agente disputa un marcador de objetivo o uno de tus marcadores de misión, en el paso de Resolver dados de ataque puedes restar 1 al daño infligido a ese agente debido a uno de los éxitos."
                 }
             ],
             "uniqueActions": [],

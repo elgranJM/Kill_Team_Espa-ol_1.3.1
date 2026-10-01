@@ -1486,11 +1486,11 @@
   {
     "id_equip": 178,
     "faction": "brood-brothers",
-    "name": "Cuchillo de Culto",
-    "description": "Los agentes BROOD BROTHER BROODGUARD amigos tienen la siguiente arma de combate:",
+    "name": "Cuchillos del Culto",
+    "description": "Los agentes <b>GUARDIA DE PROGENIE</b> <span class=\"faction\">HERMANO DE PROGENIE</span> amigos tienen la siguiente arma de combate:",
     "weapon": [
       {
-        "w_name": "Cuchillo de Culto",
+        "w_name": "Cuchillo de culto",
         "ATK": "3",
         "HIT": "4+",
         "DMG": "3/4",
@@ -1502,16 +1502,16 @@
   {
     "id_equip": 179,
     "faction": "brood-brothers",
-    "name": "Talismán de Culto",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente BROOD BROTHER amigo (excluyendo PATRIARCH), en el paso de Tirar Dados de Defensa, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.", 
+    "name": "Talismán del Culto",
+    "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo (que no sea <b>PATRIARCA</b>), en el paso de Tirar dados de defensa, puedes guardar uno de tus éxitos normales como un éxito crítico en su lugar.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 180,
     "faction": "brood-brothers",
-    "name": "Disfraz Encubierto",
-    "description": "Después de revelar esta opción de equipamiento, lanza un D3. Como un <b>GAMBITO ESTRATÉGICO</b> en el primer Punto de Inflexión, un número de agentes BROOD BROTHER BROODGUARD amigos igual al resultado que estén totalmente dentro de tu zona de despliegue pueden realizar inmediatamente una acción de Reposicionarse gratuita, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de despliegue.", 
+    "name": "Disfraces",
+    "description": "Tras revelar esta opción de equipo, tira 1D3. Como <b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión, un número de agentes <b>GUARDIA DE PROGENIE</b> <span class=\"faction\">HERMANO DE PROGENIE</span> amigos igual al resultado de la tirada que estén completamente dentro de tu zona de descenso pueden realizar de inmediato una acción libre de <b>Reposicionarse</b>, pero deben terminar ese movimiento completamente a 3\" o menos de tu zona de descenso.", 
     "weapon": [],
     "action": []
   },
@@ -1519,7 +1519,7 @@
     "id_equip": 181,
     "faction": "brood-brothers",
     "name": "Vigía",
-    "description": "<b>GAMBITO ESTRATÉGICO</b>: Selecciona un agente enemigo visible para un agente BROOD BROTHER amigo para que gane una de tus fichas de Fuego Cruzado.", 
+    "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo visible para un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo para que gane una de tus fichas de Fuego cruzado.", 
     "weapon": [],
     "action": []
   },

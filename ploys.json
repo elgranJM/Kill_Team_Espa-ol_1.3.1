@@ -1876,8 +1876,8 @@
         "faction": "brood-brothers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Invasivo",
-        "description": "Durante la activación de cada agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo, puedes ignorar la primera distancia vertical de 2\" que mueven durante una escalada.",
+        "name": "Penetrante",
+        "description": "Durante la activación de cada agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo, puedes ignorar la primera distancia vertical de 2\" que recorra trepando.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1885,8 +1885,8 @@
         "faction": "brood-brothers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Alzamiento",
-        "description": "La primera vez que cada agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo realiza la acción Disparar o Combatir durante cada una de sus activaciones, si su orden cambió de Ocultación a Trabarse al inicio de esa activación, el agente enemigo seleccionado como blanco válido para disparar o combatir gana una de tus fichas de Fuego Cruzado tan pronto como es seleccionado (en lugar de después de resolver tus dados de ataque). Este ardid no tiene efecto si ese agente amigo fue activado dentro del rango de control de un agente enemigo. Ten en cuenta que este ardid no puede entrar en efecto más de una vez por activación (no puedes usarlo durante la acción de Disparar y Combatir en la misma activación).",
+        "name": "Revuelta",
+        "description": "La primera vez que cada agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo realice una acción de <b>Disparar</b> o <b>Combatir</b> durante cada una de sus activaciones, si su orden ha cambiado de <b>Ocultarse</b> a <b>Trabarse</b> al inicio de la activación, el agente enemigo elegido para combatir contra él o tomado como blanco válido gana una de tus fichas de Fuego cruzado al ser elegido (en lugar de después de resolver tus dados de ataque). Este ardid no tiene efecto si ese agente amigo ha sido activado estando en la zona de control de un agente enemigo. Ten en cuenta que este ardid no puede tener efecto más de una vez por activación (no puedes usarlo durante acciones de <b>Disparar</b> y de <b>Combatir</b> en la misma activación).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1894,8 +1894,8 @@
         "faction": "brood-brothers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Atrincherado",
-        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo, si puedes retener alguna salvación por cobertura como resultado de terreno Pesado, puedes retener una salvación por cobertura adicional.",
+        "name": "Empotrado",
+        "description": "Cuando un agente enemigo dispara contra un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo, si puedes guardar salvaciones por cobertura debido a terreno Pesado, puedes guardar una salvación por cobertura adicional.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1903,8 +1903,8 @@
         "faction": "brood-brothers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Devoción al Culto",
-        "description": "Siempre que un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (excluyendo <b>PATRIARCA</b>) sea incapacitado al combatir o Contraatacar, si tienes dados de ataque no resueltos, puedes tirar un D6: si el resultado es un éxito como si fuera el paso de Tirar Dados de Ataque de esa secuencia (es decir, usando la misma arma, pero sin repeticiones), puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos normales no resueltos, o cualquiera de tus éxitos en su lugar si el resultado del D6 es un éxito crítico. En cualquier caso, ese agente amigo es retirado de la zona de aniquilación después.",
+        "name": "Devoción hacia el Culto",
+        "description": "Cuando un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo (salvo <b>PATRIARCA</b>) quede incapacitado al combatir o contraatacar, si tienes algún éxito sin resolver, puedes tirar 1D6: si el resultado es un éxito como si fuera el paso de Tirar dados de ataque de esa secuencia (es decir, usando la misma arma, pero sin repeticiones), puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos normales sin resolver, o con cualquiera de tus éxitos en lugar de eso si el resultado del D6 es un éxito crítico. En cualquier caso, tras eso el agente amigo en cuestión es retirado de la zona de aniquilación.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1912,8 +1912,8 @@
         "faction": "brood-brothers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Coordinación Implacable",
-        "description": "Usa este Ardid de Tiroteo al seleccionar un blanco válido para un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo. Hasta el final de la acción, determina la visibilidad de manera normal, pero puedes determinar la interposición (para cobertura y ofuscado) desde otro agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo al que tanto ese agente amigo como el blanco válido potencial sean visibles, pero que no esté en sí mismo dentro del rango de control de agentes enemigos. <p><b>Nota del Diseñador:</b> El agente amigo no gana los beneficios adicionales de terreno de Ventaja si el otro agente amigo está en él (p. ej. para apuntar a un agente enemigo que tiene una orden de Ocultación que está en cobertura proporcionada solo por terreno Ligero).</p>",
+        "name": "Coordinación Despiadada",
+        "description": "Usa este ardid de tiroteo al elegir un blanco válido para un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo. Hasta el final de la acción, determina la visibilidad de manera normal, pero en cambio puedes determinar el terreno interpuesto (a efectos de cobertura y ofuscamiento) desde otro agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo que tenga visibles tanto al primer agente amigo como al posible blanco válido, pero que él mismo no esté en la zona de control de agentes enemigos. <p>Ten en cuenta que el agente amigo no gana los beneficios adicionales del terreno Aventajado en el que se encuentre el otro agente amigo (p. ej., tomar como blanco a un agente enemigo que tenga una orden de <b>Ocultarse</b> y esté a cubierto solo por terreno Ligero).</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1922,7 +1922,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Lealtad Incuestionable",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>LÍDER</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo sea seleccionado como el blanco válido de una acción Disparar o para combatir contra él durante la acción Combatir. Elige otro agente <b>GUARDIA DE LA PROGENIE</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (excluyendo <b>LÍDER</b>) visible para y a 3\" de ese agente <b>LÍDER</b> para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción. <p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas Estallido o Torrente.</p>",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>LÍDER</b> <span class=\"faction\">HERMANO DE PROGENIE</span> amigo sea elegido como el blanco válido de una acción de <b>Disparar</b> o para combatir contra él durante una acción de <b>Combatir</b>. Elige otro agente <b>GUARDIA DE PROGENIE</b> <span class=\"faction\">HERMANO DE PROGENIE</span> amigo (salvo <b>LÍDER</b>) a 3\" o menos de ese agente <b>LÍDER</b> y visible para él, para que sea el blanco válido o para combatir en su lugar (lo que sea apropiado), aunque normalmente no fuese un blanco válido para ello. Si se trata de una acción de <b>Combatir</b>, trata a ese otro agente como si estuviera en la zona de control del agente combatiente mientras dure esa acción. Si es la acción de <b>Disparar</b>, ese otro agente solo está a cubierto u ofuscado si el blanco original lo estaba. <p>Este ardid no tiene efecto si es una acción de <b>Disparar</b> y el arma a distancia tiene las reglas de arma Área o Ráfaga.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1931,7 +1931,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Idolatría",
-        "description": "Usa este Ardid de Tiroteo cuando un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (excluyendo <b>LÍDER</b>) a 6\" de un agente <b>LÍDER</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> o <b>PORTAICONO</b> <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo dispare, combatiendo o contraataque, en el paso Tirar Dados de Ataque. Puedes retener uno de tus fallos como un éxito normal en lugar de descartarlo, o retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo (salvo <b>LÍDER</b>) a 6\" o menos de un agente <b>LÍDER</b> <span class=\"faction\">HERMANO DE PROGENIE</span> o <b>PORTAICONO</b> <span class=\"faction\">HERMANO DE PROGENIE</span> amigo dispara, combate o contraataca, en el paso de tirar dados de ataque. Puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo, o en su lugar guardar uno de tus éxitos normales como un éxito crítico.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1939,8 +1939,8 @@
         "faction": "brood-brothers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Insidioso",
-        "description": "Usa este Ardid de Tiroteo después de una activación. Antes de la siguiente activación, puedes realizar una acción gratuita de <b>Correr</b> con un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo, siempre que no sea un blanco válido para un agente enemigo cuando comienza y termina esa acción. <span class=\"text-warning-emphasis\">No puedes usar este ardid durante el primer punto de inflexión.</span>",
+        "name": "Artero",
+        "description": "Usa este ardid de tiroteo después de una activación. Antes de la siguiente activación, un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo puede realizar una acción libre de <b>Correr</b>, siempre y cuando no sea un blanco válido para ningún agente enemigo cuando empiece y cuando termine esa acción. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Tiroteo"
     },
     {

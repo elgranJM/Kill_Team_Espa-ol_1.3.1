@@ -21603,7 +21603,7 @@
     "brood-brothers": [
         {
             "id": "brood-brother-commander",
-            "name": "COMANDANTE HERMANO DE LA PROGENIE",
+            "name": "COMANDANTE HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -21679,12 +21679,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, LÍDER, COMANDANTE",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, LÍDER, COMANDANTE",
             "peana": "25"
         },
         {
             "id": "brood-brother-agitator",
-            "name": "AGITADOR HERMANO DE LA PROGENIE",
+            "name": "AGITADOR HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -21706,20 +21706,20 @@
             "abilities": [
                 {
                     "name": "Devoto",
-                    "description": "Una vez por punto de inflexión, cuando este agente combata o contraataque, en el pase de Resolver dados de ataque puedes ignorar el daño que le haya infligido un éxito normal."
+                    "description": "Una vez por punto de inflexión, cuando este agente combata o contraataque, en el paso de Resolver dados de ataque puedes ignorar el daño que le haya infligido un éxito normal."
                 },
                 {
                     "name": "Emisor psirena",
-                    "description": "Cuando un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo dispare, combata o contrataque contra un agente enemigo a 6\" o menos de este agente, puedes repetir uno de tus dados de ataque."
+                    "description": "Cuando un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo dispare, combata o contraataque contra un agente enemigo a 6\" o menos de este agente, puedes repetir uno de tus dados de ataque."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, AGITADOR",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, AGITADOR",
             "peana": "25"
         },
         {
             "id": "brood-brother-gunner",
-            "name": "TIRADOR HERMANO DE LA PROGENIE",
+            "name": "TIRADOR HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -21748,7 +21748,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -21800,12 +21800,12 @@
             ],
             "abilities": [],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, TIRADOR",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, TIRADOR",
             "peana": "25"
         },
         {
             "id": "brood-brother-iconward",
-            "name": "PORTAICONO HERMANO DE LA PROGENIE",
+            "name": "PORTAICONO HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -21827,20 +21827,20 @@
             "abilities": [
                 {
                     "name": "Icono del culto",
-                    "description": " Al determinar el control de un marcador a 4\" o menos de este agente, trata el atributo LPA total de los agentes <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigos que lo disputen como si fuera 1 punto mayor si al menos un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo LPA, de modo que cualquier cambio es acumulativo con esto."
+                    "description": "Al determinar el control de un marcador a 4\" o menos de este agente, trata el atributo LPA total de los agentes <span class=\"faction\">HERMANO DE PROGENIE</span> amigos que lo disputen como si fuera 1 punto mayor si al menos un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo LPA, de modo que cualquier cambio es acumulativo con esto."
                 },
                 {
                     "name": "Devoción de la Mente progenie",
-                    "description": "Una vez por punto de inflexión, cuando un agente GUARDIA DE PROGENIE <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo apostado quede incapacitado siendo visible para este agente y a 6\" o menos de él, puedes usar esta regla. Si lo haces, antes de que ese agente sea retirado de la zona de aniquilación, puede realizar una acción de 1PA gratis (salvo<b>Combatir</b> y Explosivos), y puedes cambiar su orden para hacerlo. A continuación, es retirado de la zona de aniquilación de la manera normal. No puedes usar esta regla y la regla ¡Sanitario! (consulta la targeta de datos MÉDICO) en el mismo agente al mismo tiempo."
+                    "description": "Una vez por punto de inflexión, cuando un agente <b>GUARDIA DE PROGENIE</b> <span class=\"faction\">HERMANO DE PROGENIE</span> amigo apostado quede incapacitado siendo visible para este agente y a 6\" o menos de él, puedes usar esta regla. Si lo haces, antes de que ese agente sea retirado de la zona de aniquilación, puede realizar una acción de 1PA como acción libre (salvo <b>Combatir</b> y Explosivos), y puedes cambiar su orden para hacerlo. A continuación, es retirado de la zona de aniquilación de la manera normal. No puedes usar esta regla y la regla ¡Sanitario! (consulta la tarjeta de datos <b>MÉDICO</b>) en el mismo agente al mismo tiempo."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, PORTAICONO",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, PORTAICONO",
             "peana": "25"
         },
         {
             "id": "brood-brother-knife-fighter",
-            "name": "NAVAJERO HERMANO DE LA PROGENIE",
+            "name": "NAVAJERO HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -21862,7 +21862,7 @@
             "abilities": [
                 {
                     "name": "Asesino",
-                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de ocultarse."
+                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aún teniendo una orden de <b>Ocultarse</b>."
                 },
                 {
                     "name": "Contraataque",
@@ -21870,12 +21870,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, NAVAJERO",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, NAVAJERO",
             "peana": "25"
         },
         {
             "id": "brood-brother-medic",
-            "name": "MÉDICO HERMANO DE LA PROGENIE",
+            "name": "MÉDICO HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -21917,7 +21917,7 @@
             "abilities": [
                 {
                     "name": "¡Sanitario!",
-                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (salvo PATRIARCA) vaya a resultar incapacitado mientras es visible para este agente y se encuentra a 3\" o menos de él, puedes usar esta regla, siempre y cuando ni este ni el otro agente se encuentren en la zona de control de un agente enemigo. Si lo haces, ese agente amigo no queda incapacitado y le queda 1 herida y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar el movimiento dentro de la zona de control de este agente. Resta 1 a los atributos LPA de este y ese agente hasta el final de sus respectivas siguientes activaciones, y si esta regla se usó durante la activación de ese agente amigo, dicha activación finaliza. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
+                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo (salvo PATRIARCA) vaya a resultar incapacitado mientras es visible para este agente y se encuentra a 3\" o menos de él, puedes usar esta regla, siempre y cuando ni este ni el otro agente se encuentren en la zona de control de un agente enemigo. Si lo haces, ese agente amigo no queda incapacitado y le queda 1 herida y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar el movimiento dentro de la zona de control de este agente. Resta 1 a los atributos LPA de este y ese agente hasta el final de sus respectivas siguientes activaciones, y si esta regla se usó durante la activación de ese agente amigo, dicha activación finaliza. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
                 }
             ],
             "uniqueActions": [
@@ -21925,17 +21925,17 @@
                     "name": "BOTIQUÍN",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo (salvo PATRIARCA) en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas. No puede ser un agente en el que se haya usado la regla ¡Sanitario! durante este punto de inflexión."
+                        "Elige un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo (salvo PATRIARCA) en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas. No puede ser un agente en el que se haya usado la regla ¡Sanitario! durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, CULTO GENESTEALER, GUARDIA DE PROGENIE, MÉDICO",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, MÉDICO",
             "peana": "25"
         },
         {
             "id": "brood-brother-sapper",
-            "name": "ZAPADOR HERMANO DE LA PROGENIE",
+            "name": "ZAPADOR HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -21971,7 +21971,7 @@
                 },
                 {
                     "name": "Granadero",
-                    "description": "Este agente puede usar granadas frag y Penetración (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma."
+                    "description": "Este agente puede usar granadas frag y perforantes (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Cuando hace tal cosa, mejora en 1 el atributo Impactar de esa arma."
                 }
             ],
             "uniqueActions": [
@@ -21984,12 +21984,12 @@
                     "description_no": "Este agente no puede realizar esta acción más de dos veces por batalla, si está en la zona de control de un agente enemigo, o durante la misma activación en la que ha realizado una acción de <b>Cargar</b>, <b>Correr</b> o <b>Retroceder</b> (o viceversa)."
                 }
             ],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, CULTO GENESTEALER, GUARDIA DE PROGENIE, ZAPADOR",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, ZAPADOR",
             "peana": "25"
         },
         {
             "id": "brood-brother-sniper",
-            "name": "FRANCOTIRADOR HERMANO DE LA PROGENIE",
+            "name": "FRANCOTIRADOR HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -22045,12 +22045,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, FRANCOTIRADOR",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, FRANCOTIRADOR",
             "peana": "25"
         },
         {
             "id": "brood-brother-trooper",
-            "name": "SOLDADO HERMANO DE LA PROGENIE",
+            "name": "SOLDADO HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -22082,16 +22082,16 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente haya sido usado, a continuación debes activar a otro agente SOLDADO <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo apostado (si puedes) antes de que tu oponente active. Una vez que ese otro agente sea usado, tu oponente activa de manera normal (en otras palabras, con esta regla no puedes activar más de dos agentes sucesivos)."
+                    "description": "Cuando este agente haya sido usado, a continuación debes activar a otro agente SOLDADO <span class=\"faction\">HERMANO DE PROGENIE</span> amigo apostado (si puedes) antes de que tu oponente active. Una vez que ese otro agente sea usado, tu oponente activa de manera normal (en otras palabras, con esta regla no puedes activar más de dos agentes sucesivos)."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, SOLDADO",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, SOLDADO",
             "peana": "25"
         },
         {
             "id": "brood-brother-veteran",
-            "name": "VETERANO HERMANO DE LA PROGENIE",
+            "name": "VETERANO HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -22141,12 +22141,12 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, VETERANO",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, VETERANO",
             "peana": "25"
         },
         {
             "id": "brood-brother-vox-operator",
-            "name": "VOCOOPERADOR HERMANO DE LA PROGENIE",
+            "name": "VOCOOPERADOR HERMANO DE PROGENIE",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -22181,7 +22181,7 @@
                     "name": "SEÑAL",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente GUARDIA DE PROGENIE <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo distinto a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                        "<b>APOYO</b>. Elige un agente GUARDIA DE PROGENIE <span class=\"faction\">HERMANO DE PROGENIE</span> amigo distinto a 6\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 },
@@ -22194,7 +22194,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, CULTO GENESTEALER, GUARDIA DE PROGENIE, VOCOOPERADOR",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, GUARDIA DE PROGENIE, VOCOOPERADOR",
             "peana": "25"
         },
         {
@@ -22241,7 +22241,7 @@
             "abilities": [
                 {
                     "name": "Líder espiritual",
-                    "description": "Líder espiritual: <b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Elige una de las siguientes para que los agentes <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigos la tengan hasta el final del punto de inflexión o hasta que este agente sea incapacitado (lo que ocurra antes): <ul><li>Cuando un agente dispare contra un agente <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo, ignora la regla de arma Penetración</li></ul> <ul><li>Puedes ignorar algunos o todos los cambios a los atributos de los agentes <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigos por estar lesionados (incluyendo los atributos de sus armas).</li></ul> <ul><li>Puedes ignorar algunos o todos los cambios a los atributos LPA de los agentes <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigos.</li></ul>"
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Elige una de las siguientes para que los agentes <span class=\"faction\">HERMANO DE PROGENIE</span> amigos la tengan hasta el final del punto de inflexión o hasta que este agente sea incapacitado (lo que ocurra antes):<ul><li>Cuando un agente dispare contra un agente <span class=\"faction\">HERMANO DE PROGENIE</span> amigo, ignora la regla de arma Penetración.</li><li>Puedes ignorar algunos o todos los cambios a los atributos de los agentes <span class=\"faction\">HERMANO DE PROGENIE</span> amigos por estar lesionados (incluyendo los atributos de sus armas).</li><li>Puedes ignorar algunos o todos los cambios a los atributos LPA de los agentes <span class=\"faction\">HERMANO DE PROGENIE</span> amigos.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -22249,7 +22249,7 @@
                     "name": "SOBRECARGA TELEPÁTICA",
                     "cost": "1 PA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Elige un agente enemigo visible para este agente. Hasta el final de la siguiente activación de ese agente, resta 1 a su atributo LPA."
+                        "<b>PSÍQUICA</b>. Elige 1 agente enemigo que sea un blanco válido para este agente. Hasta el final de la siguiente activación de ese agente, resta 1 a su atributo LPA."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 },
@@ -22262,7 +22262,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, CULTO GENESTEALER, CONCILIÁBULO, PSÍQUICO, LÍDER, MAGUS",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, CONCILIÁBULO, PSÍQUICO, LÍDER, MAGUS",
             "peana": "32"
         },
         {
@@ -22293,7 +22293,7 @@
                 },
                 {
                     "name": "Monstruo",
-                    "description": "Este agente no puede usar armas que no figuren en su tarjeta de datos ni realizar acciones únicas (salvo Fundirse en la sombra y Control mental). Cuando tu oponente elige un blanco válido, si este agente tiene una orden de ocultarse no se considera a cubierto debido a terreno Ligero. Esto puede permitir que sea tomado como blanco (si es visible), pero no le niega la salvación por cobertura de que disponga."
+                    "description": "Este agente no puede usar armas que no figuren en su tarjeta de datos ni realizar acciones únicas (salvo Fundirse en la sombra y Control mental). Cuando tu oponente elige un blanco válido, si este agente tiene una orden de <b>Ocultarse</b> no se considera a cubierto debido a terreno Ligero. Esto puede permitir que sea tomado como blanco (si es visible), pero no le niega la salvación por cobertura de que disponga."
                 }
             ],
             "uniqueActions": [
@@ -22315,7 +22315,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, a menos que solo tenga a un agente enemigo en su zona de control y lo elija a él para esta acción."
                 }
             ],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, CONCILIÁBULO, PSÍQUICO, LÍDER, PATRIARCA",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, CONCILIÁBULO, PSÍQUICO, LÍDER, PATRIARCA",
             "peana": "50"
         },
         {
@@ -22342,11 +22342,11 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente haya sido usado, a continuación debes activar a otro agente FAMILIAR PSÍQUICO <span class=\"faction\">HERMANO DE LA PROGENIE</span> amigo apostado (si puedes) antes de que tu oponente active. Una vez que ese otro agente sea usado, tu oponente activa de manera normal."
+                    "description": "Cuando este agente haya sido usado, a continuación debes activar a otro agente FAMILIAR PSÍQUICO <span class=\"faction\">HERMANO DE PROGENIE</span> amigo apostado (si puedes) antes de que tu oponente active. Una vez que ese otro agente sea usado, tu oponente activa de manera normal."
                 },
                 {
                     "name": "Pequeño",
-                    "description": "Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas. Siempre que este agente tenga una orden de Ocultarse y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre toda otra regla (p. ej. Buscadora, Terreno aventajado) salvo estar a 2\" o menos. Este agente puede realizar la acción <b>Retroceder</b> por 1 PA menos."
+                    "description": "Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas. Siempre que este agente tenga una orden de <b>Ocultarse</b> y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej. Buscadora, terreno Aventajado) salvo estar a 2\" o menos. Este agente puede realizar la acción <b>Retroceder</b> por 1 PA menos."
                 },
                 {
                     "name": "Elusivo",
@@ -22354,7 +22354,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, FAMILIAR PSÍQUICO",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, FAMILIAR PSÍQUICO",
             "peana": "25"
         },
         {
@@ -22405,7 +22405,7 @@
                 },
                 {
                     "name": "Cerebro",
-                    "description": "Una vez por punto de inflexión, tras tirar para determinar la iniciativa, si este agente está en la zona de aniquilación puedes elegir una de las siguientes opciones (solo puedes elegir cada opción una vez por batalla): <ul><li>Sumar 1 al resultado de tu tirada.</li></ul> <ul><li>Si no tuviste la iniciativa en el punto de inflexión anterior, repetir tu tirada.</li></ul>"
+                    "description": "Una vez por punto de inflexión, tras tirar para determinar la iniciativa, si este agente está en la zona de aniquilación puedes elegir una de las siguientes opciones (solo puedes elegir cada opción una vez por batalla): <ul><li>Sumar 1 al resultado de tu tirada.</li><li>Si no tuviste la iniciativa en el punto de inflexión anterior, repetir tu tirada.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -22418,7 +22418,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni más de una vez por punto de inflexión."
                 }
             ],
-            "keywords": "<span class=\"faction\">HERMANO DE LA PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, CONCILIÁBULO, LÍDER, PRIMUS",
+            "keywords": "<span class=\"faction\">HERMANO DE PROGENIE</span>, TIRÁNIDO, CULTO GENESTEALER, CONCILIÁBULO, LÍDER, PRIMUS",
             "peana": "32"
         }
     ],

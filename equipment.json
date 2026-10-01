@@ -1454,15 +1454,15 @@
   {
     "id_equip": 174,
     "faction": "canoptek",
-    "name": "MANIPULADOR DE MATRIZ",
-    "description": "Una vez por batalla, durante la activación o reacción de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, puedes usar esta regla. Si lo haces, hasta el final de esa activación/reacción, un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se trata como si fuera tu cuarto marcador de <b>NODO DE OBELISCOS</b>.", 
+    "name": "Manipulador de Matriz",
+    "description": "Una vez por batalla, durante la activación o contraataque de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, puedes usar esta regla. Si lo haces, hasta el final de esa activación/contraataque, un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se trata como si fuera tu cuarto marcador de <b>NODO DE OBELISCOS</b>.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 175,
     "faction": "canoptek",
-    "name": "NODOS OBELISCO DESPIERTOS",
+    "name": "Nodos de Obeliscos Despiertos",
     "description": "Tras revelar esta opción de equipo, tira 1D3. Durante la batalla, por 0 PM puedes usar el ardid de tiroteo Animar Nodos de obeliscos tantas veces como el resultado de la tirada.", 
     "weapon": [],
     "action": []
@@ -1470,16 +1470,16 @@
   {
     "id_equip": 176,
     "faction": "canoptek",
-    "name": "ATAÚDES DE NANOESCARABAJOS",
-    "description": "Siempre que un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se active, recupera 1D3 heridas perdidas.", 
+    "name": "Ataúd de Nanoescarabajos",
+    "description": "Siempre que un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se active, recupera hasta 1D3 heridas perdidas.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 177,
     "faction": "canoptek",
-    "name": "CAMBIAFASES",
-    "description": "Una vez por Punto de Inflexión, cuando un agente dispare contra un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, al inicio del paso de Tirar Dados de Defensa, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia empeora en 1 la x de la regla de armas Penetración (si la hay). Eso significa que Penetración 1 se ignoraría.", 
+    "name": "Cambiafases",
+    "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, al inicio del paso de Tirar dados de defensa puedes usar esta regla. Si lo haces, hasta el final de esa secuencia empeora en 1 la x de la regla de armas Penetración (si la hay). Eso significa que Penetración 1 se ignoraría.", 
     "weapon": [],
     "action": []
   },

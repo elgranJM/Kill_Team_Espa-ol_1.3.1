@@ -1948,8 +1948,8 @@
         "faction": "canoptek",
         "type": "strategic",
         "cps": "1PM",
-        "name": "HIPERESCUDOS",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span>, si tu <b>MATRIZ DE NODOS DE OBELISCOS</b> está interpuesta, o si ese agente amigo se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes repetir tus dados de defensa de un mismo resultado (p. ej., todos los dados con un resultado 2).\n",
+        "name": "Hiperescudos",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, si tu <b>MATRIZ DE NODOS DE OBELISCOS</b> está interpuesta, o si ese agente amigo se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes repetir tus dados de defensa de un mismo resultado (p. ej., todos los dados con un resultado de 2).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1957,8 +1957,8 @@
         "faction": "canoptek",
         "type": "strategic",
         "cps": "1PM",
-        "name": "AMPLIFICACIÓN TRANSDINÁMICA",
-        "description": "Cuando un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo dispare, si tu <b>MATRIZ DE NODOS DE OBELISCOS</b> está interpuesta, o si el blanco se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, las armas de ese agente amigo tienen la regla de armas Incesante.\n",
+        "name": "Amplificación Transdinámica",
+        "description": "Cuando un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo dispare, si tu <b>MATRIZ DE NODOS DE OBELISCOS</b> está interpuesta, o si el blanco se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, las armas de ese agente amigo tienen la regla de armas Incesante.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1966,8 +1966,8 @@
         "faction": "canoptek",
         "type": "strategic",
         "cps": "1PM",
-        "name": "REPULSIÓN CRIPTOGRAVÍTICA",
-        "description": "Una vez por acción, la primera vez que un agente enemigo fuera a moverse dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, la distancia se trata como 1\" adicional. Ten en cuenta que esto significa que si un agente enemigo no tiene suficiente distancia de movimiento (es decir, si está al final de su movimiento), ese agente no puede moverse dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>.\n",
+        "name": "Repulsión Criptogravítica",
+        "description": "Una vez por acción, la primera vez que un agente enemigo fuera a moverse dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, la distancia se trata como 1\" adicional. Ten en cuenta que esto significa que si un agente enemigo no tiene suficiente distancia de movimiento (es decir, si está al final de su movimiento), ese agente no puede moverse dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1975,8 +1975,8 @@
         "faction": "canoptek",
         "type": "strategic",
         "cps": "1PM",
-        "name": "DRENAALMA",
-        "description": "Siempre que un agente enemigo se encuentre dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, o siempre que combata o contraataque contra un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo que se encuentre dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, resta 1 de ambos atributos de Daño de las armas de combate de ese agente enemigo (hasta un mínimo de 2) hasta el final de la activación/reacción. Ten en cuenta que esto significa que si el agente enemigo se mueve a través de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, aplica este cambio al final de esa acción de movimiento y hasta el final de la activación/reacción.\n",
+        "name": "Drenaalmas",
+        "description": "Siempre que un agente enemigo se encuentre dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, o siempre que combata o contraataque contra un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo que se encuentre dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, resta 1 a ambos atributos Daño de las armas de combate de ese agente enemigo (hasta un mínimo de 2) hasta el final de la activación/contraataque. Ten en cuenta que esto significa que si el agente enemigo se mueve a través de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, aplica este cambio al final de esa acción de movimiento y hasta el final de la activación/contraataque.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -1984,8 +1984,8 @@
         "faction": "canoptek",
         "type": "tactical",
         "cps": "1PM",
-        "name": "ESTALLIDO DE ESCUDOS",
-        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflinja Daño Normal a un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo. Si tu <b>MATRIZ DE NODOS DE OBELISCOS</b> está interpuesta, o ese agente amigo se encuentra dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, ignora ese daño infligido. Ten en cuenta que tu oponente determina la interposición (es decir, desde qué punto de la peana de su agente trazar las líneas de visión).\n",
+        "name": "Estallido de Escudos",
+        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflija Daño normal a un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo. Si tu <b>MATRIZ DE NODOS DE OBELISCOS</b> está interpuesta, o ese agente amigo se encuentra dentro de tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, ignora ese daño infligido. Ten en cuenta que tu oponente determina la interposición (es decir, a partir de qué punto de la peana de su agente traza las líneas de visión).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1993,8 +1993,8 @@
         "faction": "canoptek",
         "type": "tactical",
         "cps": "1PM",
-        "name": "ANIMAR NODOS DE OBELISCO",
-        "description": "Usa este ardid de tiroteo cuando sea tu turno de activar o reaccionar con un agente amigo. \n En su lugar, mueve cualquier número de tus marcadores de <b>NODO DE OBELISCOS</b>. Pueden moverse hasta 6\" combinados, y las distancias siempre se redondean hacia la pulgada más cercana (así pues, si mueves un marcador 1.5\", se trata como si lo hubieses movido 2\"). P. ej., puedes mover un marcador 6\", tres marcadores 1\" cada uno, o cualquier combinación que no exceda los 6\" en total. También puedes moverlos todos 0\" (ignorando esa activación, a efectos prácticos). En cualquier caso, tu oponente se activa de manera normal tras esto.\n",
+        "name": "Animar Nodos de Obeliscos",
+        "description": "Usa este ardid de tiroteo cuando sea tu turno de activar o contraatacar con un agente amigo. En su lugar, mueve cualquier número de tus marcadores de <b>NODO DE OBELISCOS</b>. Pueden moverse hasta 6\" combinados en horizontal, y las distancias siempre se redondean hacia la pulgada más cercana (así pues, si mueves un marcador 1,5\", se trata como si lo hubieses movido 2\"). P. ej., puedes mover un marcador 6\", tres marcadores 1\" cada uno, o cualquier combinación que no exceda los 6\" en total. También puedes moverlos todos 0\" (ignorando esa activación, a efectos prácticos). En cualquier caso, tu oponente se activa de manera normal tras esto.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2002,8 +2002,8 @@
         "faction": "canoptek",
         "type": "tactical",
         "cps": "1PM",
-        "name": "RESPUESTA NODAL",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, antes o después de que realice una acción. Puedes o bien cambiar uno de los ardides de estrategia que has usado durante este punto de inflexión (pagando solo los PM adicionales, si ese ardid cuesta más), o bien usar ahora un ardid de estratégia (pagando su coste en PM de manera normal).\n",
+        "name": "Respuesta Nodal",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, antes o después de que realice una acción. Puedes o bien cambiar uno de los ardides de estrategia que has usado durante este punto de inflexión (pagando solo los PM adicionales, si ese ardid cuesta más), o bien usar ahora un ardid de estrategia (pagando su coste en PM de manera normal).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2011,8 +2011,8 @@
         "faction": "canoptek",
         "type": "tactical",
         "cps": "1PM",
-        "name": "ESCLAVO PARA EL SACRIFICIO",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>GEOMANTE</b> <b>CÍRCULO CANOPTEK</b> amigo sea elegido para combatir contra él durante una acción de <b>Combatir</b> o como blanco válido de una acción de <b>Disparar</b>. Elige 1 agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> distinto a 3\" o menos de ese primer agente amigo y visible para él, para combatir contra él o para que se convierta en el blanco (aunque normalmente no fuera válido para ello). Si la acción era de <b>Combatir</b>, se considerará que ese otro agente se encuentra en la zona de control del agente que combate mientras dure esa acción. \n\nEste ardid no tiene efecto si es una acción de <b>Disparar</b> y el arma a distancia tiene las reglas de armas Área o Ráfaga.",
+        "name": "Esclavo para el Sacrificio",
+        "description": "Usa este ardid de tiroteo cuando un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo sea elegido para combatir contra él durante una acción de <b>Combatir</b> o como blanco válido de una acción de <b>Disparar</b>. Elige otro agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo a 3\" o menos de ese primer agente amigo y visible para él, para combatir contra él o para que se convierta en el blanco, según sea apropiado (aunque normalmente no fuera válido para ello). Si la acción era de <b>Combatir</b>, se considerará que ese otro agente se encuentra en la zona de control del agente que combate mientras dure esa acción. Si es una acción de <b>Disparar</b>, ese otro agente solo está a cubierto u ofuscado si el blanco original lo estaba.\n\nEste ardid no tiene efecto si es una acción de <b>Disparar</b> y el arma a distancia tiene las reglas de armas Área o Ráfaga.",
         "typename": "Ardid de Tiroteo"
     },
     {

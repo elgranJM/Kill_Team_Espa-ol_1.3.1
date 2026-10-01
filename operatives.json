@@ -15994,6 +15994,10 @@
                 {
                     "name": "Astucia",
                     "description": "En el paso de gambito de cada fase de estrategia, si este agente está en la zona de aniquilación y pasas en la primera oportunidad que tengas, ganas 1PM. Ignora cada <b>GAMBITO ESTRATÉGICO</b> del pack de misiones (si lo hay) al determinar esto."
+                },
+                {
+                    "name": "Ojo para la tortura",
+                    "description": "Una vez durante cada activación de este agente, si no tiene ninguna de tus fichas de Dolor cuando realiza una acción de <b>Combatir</b> o <b>Disparar</b>, puede obtener una de tus fichas de Dolor cuando elijas un blanco válido o un agente enemigo contra el que combatir."
                 }
             ],
             "uniqueActions": [],
@@ -16088,7 +16092,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">MANO DEL ARCONTE</span>, AELDARI, DRUKHARI, DUELISTA CARMESÍ KABALISTA",
+            "keywords": "<span class=\"faction\">MANO DEL ARCONTE</span>, AELDARI, DRUKHARI, DUELISTA CARMESÍ",
             "peana": "25"
         },
         {
@@ -16125,7 +16129,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Aguijón",
-                    "description": "Cuando un agente enemigo queda incapacitado por esta arma, antes de retirarlo de la zona de aniquilación, inflige 1D3 daños a cada otro agente a 2\" o menos ese agente enemigo y visible para él. Cada agente que quede subsiguientemente incapacitado debido a esta regla de armas provocará que esto vuelva a suceder."
+                    "description": "Cuando un agente enemigo queda incapacitado por esta arma, antes de retirarlo de la zona de aniquilación, inflige 1D3 daños a cada otro agente a 2\" o menos de ese agente enemigo y visible para él (tira por separado por cada uno). Cada agente que quede subsiguientemente incapacitado debido a esta regla de armas provocará que esto vuelva a suceder."
                 }
             ],
             "uniqueActions": [
@@ -16144,7 +16148,7 @@
         },
         {
             "id": "elixicant",
-            "name": "ELIXICANTE",
+            "name": "ELIXICANTE KABALISTA",
             "stats": {
                 "LPA": "2",
                 "MOVER": "7\"",
@@ -16186,7 +16190,7 @@
             "abilities": [
                 {
                     "name": "Drogas de combate",
-                    "description": "Al final del paso de Elegir agentes, si este agente es elegido para el despliegue, elige una de las siguientes reglas DROGA DE COMBATE, que tendrán los agentes <span class=\"faction\">MANO DEL ARCONTE</span> durante esta batalla: <ul><li><b>Dolorosa:</b> Cuando un dado de ataque inflija un daño de 3 o más a este agente, tira 1D6: con un 6, resta 1 al daño infligido.</li></ul> <ul><li><b>Adrenaluz: <b>GAMBITO ESTRATÉGICO</b>.</b> Elige un agente amigo que tenga esta DROGA DE COMBATE; ese agente obtiene una de tus fichas de Dolor.</li></ul> <ul><li><b>Velocet:</b> Puedes ignorar cualquier cambio al atributo Movimiento de este agente por estar lesionado.</li></ul>"
+                    "description": "Al final del paso de Elegir agentes, si este agente es elegido para el despliegue, elige una de las siguientes reglas <b>DROGA DE COMBATE</b>, que tendrán los agentes <span class=\"faction\">MANO DEL ARCONTE</span> durante esta batalla:<ul><li><b>Dolorosa:</b> Cuando un dado de ataque inflija un daño de 3 o más a este agente, tira 1D6: con un 6, resta 1 al daño infligido.</li><li><b>Adrenaluz:</b> En el paso de preparación de cada fase de estrategia, puedes elegir un agente amigo que tenga esta <b>DROGA DE COMBATE</b>; ese agente obtiene una de tus fichas de Dolor.</li><li><b>Velocet:</b> Puedes ignorar cualquier cambio al atributo Movimiento de este agente por estar lesionado.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -16194,7 +16198,7 @@
                     "name": "ADMINISTRAR DROGA",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo a 3\" o menos de esta agente y visible para él, y a continuación elige una de las siguientes opciones para ese agente amigo: <ul><li>Recupera hasta 2D3 heridas perdidas</li></ul> <ul><li>Elige una regla DROGA DE COMBATE distinta para que la tenga en esa batalla (esto reemplaza a la anterior).</li></ul>"
+                        "Elige un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo a 3\" o menos de esta agente y visible para él, y a continuación elige una de las siguientes opciones para ese agente amigo:<ul><li>Recupera hasta 2D3 heridas perdidas.</li><li>Elige una regla <b>DROGA DE COMBATE</b> distinta para que la tenga en esa batalla (esto reemplaza a la anterior).</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -16204,7 +16208,7 @@
         },
         {
             "id": "flayer",
-            "name": "DESPELLEJADOR",
+            "name": "DESPELLEJADOR KABALISTA",
             "stats": {
                 "LPA": "2",
                 "MOVER": "7\"",
@@ -16226,7 +16230,7 @@
             "abilities": [
                 {
                     "name": "Insensible al dolor",
-                    "description": " Los Daños normales y críticos de 3 o más infligen 1 daño menos a este agente."
+                    "description": "Los Daños normales y críticos de 3 o más infligen 1 daño menos a este agente."
                 },
                 {
                     "name": "<span class=\"faction\">*</span>Desollar",
@@ -16341,7 +16345,7 @@
         },
         {
             "id": "skysplinter-assassin",
-            "name": "ASESINO PARTECIELOS",
+            "name": "ASESINO PARTECIELOS KABALISTA",
             "stats": {
                 "LPA": "2",
                 "MOVER": "7\"",
@@ -16387,7 +16391,7 @@
                 },
                 {
                   "name": "Presagio",
-                  "description": "En el paso de Elegir agentes, cuando selecciones el equipo, puedes elegir un agente enemigo u otro agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo distinto (revela tu selección cuando reveles el equipo). Cuando se tiren dados de ataque o defensa por ese agente: <ul><li>Si es un agente enemigo, tu oponente debe repetir sus resultados de 6.</li></ul> <ul><li>Si es un agente amigo, puedes repetir cualesquiera de tus resultados de 1.</li></ul>"
+                    "description": "En el paso de Elegir agentes, cuando selecciones el equipo, puedes elegir un agente enemigo u otro agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo distinto (revela tu selección cuando reveles el equipo). Cuando se tiren dados de ataque o defensa por ese agente: <ul><li>Si es un agente enemigo, tu oponente debe repetir sus resultados de 6.</li><li>Si es un agente amigo, puedes repetir cualesquiera de tus resultados de 1.</li></ul>"
                 }
             ],
             "uniqueActions": [
@@ -16395,7 +16399,7 @@
                     "name": "MARCAR",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de este agente tienen la regla de armas Buscadora (Ligero).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado</li></ul>"
+                        "Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas a distancia de este agente tienen la regla de armas Buscadora (Ligero).</li><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
               }

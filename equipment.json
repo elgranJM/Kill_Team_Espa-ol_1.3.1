@@ -1358,24 +1358,24 @@
   {
     "id_equip": 162,
     "faction": "kabalite",
-    "name": "Trampa de Cadena",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente HAND OF THE ARCHON amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).", 
+    "name": "Cepo de Cadena",
+    "description": "Cuando un agente enemigo vaya a realizar una acción de <b>Retroceder</b> mientras se encuentra en la zona de control de un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo, si no hay otros agentes enemigos en la zona de control de ese agente amigo, puedes usar esta regla. En tal caso, tira dos D6, o un D6 si ese agente enemigo tiene un atributo Heridas mayor que el del agente amigo en cuestión. Si cualquier resultado es un 4+, dicho agente enemigo no puede realizar esa acción durante esta activación o reacción (no se gastan PA en ella), y no puedes volver a usar esta regla durante este punto de inflexión.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 163,
     "faction": "kabalite",
-    "name": "Hoja Perversa",
-    "description": "Añade 1 al atributo de Atq del abanico de hojas de los agentes HAND OF THE ARCHON amigos.", 
+    "name": "Hojas Mezquinas",
+    "description": "Suma 1 al atributo Ataque de las cuchillas por doquier de los agentes <span class=\"faction\">MANO DEL ARCONTE</span> amigos.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 164,
     "faction": "kabalite",
-    "name": "Recubrimiento de Toxinas",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté combatiendo o contraataque y estés seleccionando un arma de combate, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia, el arma de combate de ese agente tiene la regla de armas Letal 5+.", 
+    "name": "Cobertura Tóxica",
+    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo combata o contraataque y estés eligiendo un arma de combate, puedes usar esta regla. Si lo haces, hasta el final de esa secuencia el arma de combate de dicho agente tiene la regla de armas Letal 5+.", 
     "weapon": [],
     "action": []
   },
@@ -1383,7 +1383,7 @@
     "id_equip": 165,
     "faction": "kabalite",
     "name": "Veneno Refinado",
-    "description": "Hasta dos veces por Punto de Inflexión, siempre que un agente HAND OF THE ARCHON amigo esté realizando la acción de <b>Disparar</b> y selecciones una carabina cristalina, cañón cristalino, pistola cristalina, rifle cristalino o pistola aguijón, puedes usar esta regla. Si lo haces, hasta el final de esa acción, añade 1 al atributo de Daño Normal de esa arma.", 
+    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo realice la acción <b>Disparar</b> y elijas una carabina cristalina, un cañón cristalino, una pistola cristalina, un rifle cristalino o una pistola aguijón, puedes usar esta regla. Si lo haces, hasta el final de la acción suma 1 al atributo Daño normal de dicha arma.", 
     "weapon": [],
     "action": []
   },

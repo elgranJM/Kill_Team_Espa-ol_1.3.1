@@ -2164,7 +2164,7 @@
         "faction": "kabalite",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Artistas de la Espada",
+        "name": "Artistas de la Hoja",
         "description": "Las armas de combate de los agentes <span class=\"faction\">MANO DEL ARCONTE</span> amigos tienen la regla de armas Desgarradora.",
         "typename": "Ardid de Estrategia"
     },
@@ -2174,7 +2174,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Sádicos Despiadados",
-        "description": "Siempre que un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo dispare o combatiendo contra un agente enemigo herido, las armas de ese agente amigo tienen la regla de armas Equilibrada.",
+        "description": "Siempre que un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo dispare o combata contra un agente enemigo herido, las armas de dicho agente amigo tienen la regla de armas Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2183,7 +2183,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Desde la Oscuridad, Muerte",
-        "description": "Siempre que un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo sea activado, antes de determinar su orden, puedes seleccionar un agente enemigo para el cual ese agente amigo no sea un blanco válido. Hasta el final de esa activación, la primera vez que ese agente amigo dispare o combatiendo contra ese agente enemigo, puedes retener uno de tus éxitos normales como un éxito crítico en su lugar.",
+        "description": "Cuando un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo sea activado, antes de determinar su orden puedes elegir un agente enemigo para el que dicho agente amigo no sea un blanco válido. Hasta el final de esa activación, la primera vez que ese agente amigo dispare o combata contra ese agente enemigo, puedes guardar uno de tus éxitos normales como éxito crítico en su lugar.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2191,8 +2191,8 @@
         "faction": "kabalite",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Habitantes de la Noche",
-        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo que esté a más de 2\" de agentes enemigos, si terreno Pesado está interpuesto, o cualquier parte de la peana de ese agente amigo está debajo de terreno de Ventaja, puedes repetir uno de tus dados de defensa.",
+        "name": "Moradores de la Noche",
+        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo a más de 2\" de todo agente enemigo, si hay terreno Pesado o Ligero interpuesto o cualquier parte de la peana de ese agente amigo se encuentra bajo terreno Aventajado, puedes repetir uno de tus dados de defensa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -2201,7 +2201,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Engaño Cruel",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo<span class=\"text-info-emphasis\">, antes o después de que realice\nuna acción</span>. Durante esa activación, ese agente puede realizar la acción <b>Retroceder</b> por 1 PA menos.",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo, antes o después de que realice una acción. Durante esa activación, ese agente puede realizar una acción de <b>Retroceder</b> por 1 PA menos.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2209,8 +2209,8 @@
         "faction": "kabalite",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Plan Taimado",
-        "description": "Usa este ardid de tiroteo después de que un oponente use un ardid de tiroteo (excluyendo uno que cueste 0PM). La próxima vez que fueran a usar ese ardid, deben gastar 1 PM adicional para hacerlo (momento en el cual este efecto termina). No puedes usar este ardid de nuevo durante la batalla hasta que su efecto haya terminado.",
+        "name": "Argucia Retorcida",
+        "description": "Usa este ardid de tiroteo después de que un oponente utilice un ardid de tiroteo (excepto uno que cueste 0PM). La siguiente vez que fuera a usar ese ardid, debe gastar 1 PM adicional para hacerlo (y en ese momento este efecto termina). No puedes usar este ardid de nuevo durante la batalla hasta que su efecto haya terminado.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2219,7 +2219,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Arrogancia Atroz",
-        "description": "Usa este ardid de tiroteo cuando sea tu turno de activar un agente amigo. Puedes saltar esa activación.",
+        "description": "Usa este ardid de tiroteo cuando sea tu turno de activar un agente amigo. Puedes saltarte esa activación.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -2228,7 +2228,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Depredar a los Heridos",
-        "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo, si está disparando o combatiendo contra un agente enemigo herido. Puedes repetir cualquiera de tus dados de ataque.",
+        "description": "Usa este ardid de tiroteo tras tirar tus dados de ataque por un agente <span class=\"faction\">MANO DEL ARCONTE</span> amigo, si está disparando o combatiendo contra un agente enemigo herido. Puedes repetir cualquiera de tus dados de ataque.",
         "typename": "Ardid de Tiroteo"
     },
     {

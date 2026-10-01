@@ -148,8 +148,8 @@
         "faction": "veteran-guardsmen",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Guerra de Asedio",
-        "description": "Las armas a distancia de los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos ganan las reglas de arma Saturar <span class=\"text-info-emphasis\">y Certera 1</span>.",
+        "name": "Tácticas de Asedio",
+        "description": "Las armas a distancia de los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos tienen las reglas de arma Saturación y Certera 1.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -157,8 +157,8 @@
         "faction": "veteran-guardsmen",
         "type": "strategic",
         "cps": "1PM",
-        "name": "¡A Cubierto!",
-        "description": "Siempre que un agente enemigo dispare contra un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo, si puedes retener alguna salvación por cobertura, mejora el atributo de Salvación de ese agente amigo en 1 para ese disparo.",
+        "name": "Ponerse a Cubierto",
+        "description": "Cuando un agente dispare contra un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo, si puedes guardar alguna salvación por cobertura mejora en 1 el atributo Salvación de ese agente amigo.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -166,8 +166,8 @@
         "faction": "veteran-guardsmen",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Despejar la Línea",
-        "description": "<span class=\"text-info-emphasis\">Las armas de combate de los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos tienen la regla de armas Certera 1. Siempre que un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo esté combatiendo totalmente dentro de tu territorio, o siempre que esté contraataque, sus armas de combate también tienen la regla de armas Severa.</span>\n",
+        "name": "¡Acabad con Ellos!",
+        "description": "Las armas de combate de los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos tienen la regla de arma Certera 1. Siempre que un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo esté combatiendo completamente dentro de tu territorio o esté contraatacando, sus armas de combate tienen también la regla de arma Severa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -176,7 +176,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Reagruparse",
-        "description": "<b>APOYO</b>. Elige un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo que esté a más de 3\" de agentes enemigos. Cada otro agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo a 5\" de ese agente y no dentro del rango de control de agentes enemigos puede realizar inmediatamente una acción gratuita de <b>Correr</b> en un orden de tu elección, pero cada uno que lo haga debe terminar ese movimiento más cerca de ese agente. Ten en cuenta que un Dispositivo de Comunicaciones del equipamiento universal solo afecta la segunda distancia de esta regla.<p>No puedes usar este ardid y el <b>GAMBITO ESTRATÉGICO</b> del equipamiento de facción Cronómetro durante el mismo punto de inflexión.</p>",
+        "description": "<b>APOYO</b>. Elige un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo que se encuentre a más de 3\" de todo agente enemigo. Cada otro agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo a 5\" o menos de ese agente y que no se encuentre en la zona de control de agentes enemigos, puede realizar inmediatamente una acción libre de <b>Correr</b> en el orden que elijas. Sin embargo, los agentes que lo hagan deben terminar ese movimiento más cerca de lo que estaban de ese agente. Ten en cuenta que el equipo universal Aparato de comunicaciones solo afecta a la segunda distancia de esta regla.<p>No puedes usar este ardid y el <b>GAMBITO ESTRATÉGICO</b> del equipo de facción Cronómetro durante el mismo punto de inflexión.</p>",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -185,7 +185,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Liderazgo Inspirador",
-        "description": "<b>APOYO</b>. Usa este ardid de tiroteo durante la activación de un agente <b>MAESTRO VIGÍA</b> o <b>CONFIDENTE</b> <span class=\"faction\">KORPS DE LA MUERTE</span> amigo, antes o después de que realice una acción. Emite una <b>ORDEN DE GUARDIA</b>.",
+        "description": "<b>APOYO</b>. Usa este ardid de tiroteo durante la activación de un agente <b>VIGÍA</b> <span class=\"faction\">KORPS DE LA MUERTE</span> o <b>SÓLIDO</b> <span class=\"faction\">KORPS DE LA MUERTE</span> amigo, antes o después de que realice una acción. Ese agente da una <b>ORDEN DE GUARDIA</b>.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -193,8 +193,8 @@
         "faction": "veteran-guardsmen",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Armas Combinadas",
-        "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo. Si está disparando a un agente enemigo que ha recibido disparos de otro agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo durante este Punto de Inflexión, puedes repetir cualquiera de tus dados de ataque.",
+        "name": "Disparos Combinados",
+        "description": "Usa este ardid de tiroteo tras tirar tus dados de ataque por un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo, si está disparando contra un agente enemigo que haya sido blanco de disparos de otro agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo durante este punto de inflexión. Puedes repetir cualquiera de tus dados de ataque.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -202,8 +202,8 @@
         "faction": "veteran-guardsmen",
         "type": "tactical",
         "cps": "1PM",
-        "name": "En la Vida, Vergüenza",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo sea activado y se le dé una orden de Trabarse. Recibe cada <b>ORDEN DE GUARDIA</b>. Esto tiene precedencia sobre la regla normal de que los agentes no pueden beneficiarse de más de una <b>ORDEN DE GUARDIA</b> a la vez.",
+        "name": "Vergüenza en Vida",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo sea activado y reciba una orden de <b>Trabarse</b>. Recibe también todas las <b>ÓRDENES DE GUARDIA</b>. Esto tiene preferencia sobre la regla normal de que los agentes no pueden beneficiarse de más de una <b>ORDEN DE GUARDIA</b> a la vez.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -211,8 +211,8 @@
         "faction": "veteran-guardsmen",
         "type": "tactical",
         "cps": "1PM",
-        "name": "En la Muerte, Expiación",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo preparado sea incapacitado. Si no está dentro del rango de control de agentes enemigos, ese agente puede realizar inmediatamente una acción gratuita antes de ser retirado de la zona de aniquilación. <span class=\"text-info-emphasis\">Ten en cuenta que ese agente amigo está lesionado durante la duración de esa acción.</span>",
+        "name": "Expiación en la Muerte",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo apostado resulte incapacitado, si se encuentra fuera de la zona de control de todo agente enemigo. Antes de que sea retirado de la zona de aniquilación, puede realizar inmediatamente una acción libre y puedes cambiar su orden para ello. Recuerda que el agente amigo está lesionado durante toda esa acción.",
         "typename": "Ardid de Tiroteo"
     },
     {

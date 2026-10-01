@@ -19679,6 +19679,10 @@
                 {
                     "name": "Órdenes adaptativas",
                     "description": "Si este agente no da una ORDEN DE GUARDIA como <b>GAMBITO ESTRATÉGICO</b>, puedes usar el ardid de tiroteo Liderazgo inspirador por 0PM durante la activación de este agente."
+                },
+                {
+                    "name": "¡Abajo con él!",
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Elige un agente enemigo. Siempre que un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo dispare, combata o contraataque contra ese agente enemigo, las armas de ese agente amigo tienen la regla de arma Castigadora."
                 }
             ],
             "uniqueActions": [],
@@ -19854,7 +19858,7 @@
             ],
             "uniqueActions": [
                 {
-                    "name": "BOTIQUIN",
+                    "name": "BOTIQUÍN",
                     "cost": "1 PA",
                     "description": [
                         "Elige un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo en la zona de control de este agente para que recupere 2D3 heridas perdidas. No puede ser un agente con el que se haya usado la regla ¡Sanitario! durante este punto de inflexión."
@@ -19963,7 +19967,7 @@
                 },
                 {
                     "name": "<span class=\"faction\">*</span>Detonar",
-                    "description": "No elijas un blanco válido. En su lugar, dispara contra cada agente a 2\" o menos de tu marcador de Mina, salvo que haya terreno Pesado completamente interpuesto entre ese agente y ese marcador. Ninguno de esos agentes está a cubierto u ofuscado. Tira cada secuencia por separado en el orden que elijas. Esta arma no puede ser elegida si tu marcador de Mina no está en la zona de aniquilación. Al final de la acción, retira tu marcador de Mina de la zona de aniquilación. En una zona de aniquilación que use reglas de combate cerrado, esta arma tiene la regla de armas Letal 5+."
+                    "description": "No elijas un blanco válido. En su lugar, dispara contra cada agente a 2\" o menos de tu marcador de Mina, salvo que haya terreno Pesado completamente interpuesto entre ese agente y ese marcador. Ninguno de esos agentes está a cubierto u ofuscado. Tira cada secuencia por separado en el orden que elijas. Esta arma no puede ser elegida si tu marcador de Mina no está en la zona de aniquilación. Al final de la acción, retira tu marcador de Mina de la zona de aniquilación. En una zona de aniquilación que use reglas de combate cerrado (p. ej., Zona de aniquilación: Mundo Necrópolis), esta arma tiene la regla de armas Letal 5+."
                 }
             ],
             "uniqueActions": [],
@@ -20078,7 +20082,7 @@
                     "name": "OJEAR",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente enemigo visible para este agente. Una vez durante este punto de inflexión, cuando un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces: <ul><li>Las armas de ese agente amigo tienen la regla de armas Buscadora (ligera).</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
+                        "<b>APOYO</b>. Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, siempre que un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo a 3\" o menos de este agente dispare contra ese agente enemigo, puedes usar este efecto. Si lo haces:<ul><li>Las armas de ese agente amigo tienen la regla de armas Buscadora (Ligero).</li><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -20117,7 +20121,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -20206,7 +20210,7 @@
             "abilities": [
                 {
                     "name": "Matón",
-                    "description": "Una vez por punto de inflexión, cuando este agente combata o contraataque, en el paso de Resolver dados de ataque, puedes ignorar el daño que le haya infligido un éxito normal."
+                    "description": "Una vez por punto de inflexión, cuando este agente combata o contraataque, en el paso de Resolver dados de ataque, puedes ignorar el daño que le haya infligido un éxito normal. Si este agente resulta incapacitado durante una acción de <b>Combatir</b>, puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de retirar este agente de la zona de aniquilación."
                 }
             ],
             "uniqueActions": [],

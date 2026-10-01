@@ -495,11 +495,11 @@
   {
     "id_equip": 57,
     "faction": "veteran-guardsmen",
-    "name": "Hacha de Mano",
-    "description": "Los agentes DEATH KORPS amigos tienen la siguiente arma de combate:",
+    "name": "Hachas de Mano",
+    "description": "Los agentes <span class=\"faction\">KORPS DE LA MUERTE</span> amigos tienen la siguiente arma de combate:",
     "weapon": [
       {
-        "w_name": "Hacha de Mano",
+        "w_name": "Hacha de mano",
         "ATK": "3",
         "HIT": "4+",
         "DMG": "3/4",
@@ -512,23 +512,23 @@
     "id_equip": 58,
     "faction": "veteran-guardsmen",
     "name": "Cronómetro",
-    "description": "<p>GAMBITO ESTRATÉGICO una vez por batalla, en el primer o segundo Punto de Inflexión. Cada agente DEATH KORPS amigo totalmente dentro de tu territorio puede realizar inmediatamente una acción de Moverse con Cuidado (Dash) gratuita en un orden de tu elección pero debe terminar ese movimiento más cerca de la zona de despliegue de un adversario o del borde de la zona de aniquilación.</p> <p>No puedes usar este GAMBITO ESTRATÉGICO y el ardid estratégico Reagruparse durante el mismo Punto de Inflexión.</p>", 
+    "description": "<p><b>GAMBITO ESTRATÉGICO</b> una vez por batalla, en el primer o segundo punto de inflexión. Cada agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo que se encuentre completamente dentro de tu territorio puede realizar inmediatamente una acción libre de <b>Correr</b> en el orden que elijas, pero debe terminarla más cerca de lo que estaba de la zona de descenso o del borde de la zona de aniquilación de un oponente.</p> <p>No puedes usar este <b>GAMBITO ESTRATÉGICO</b> y el ardid de estrategia Reagruparse durante el mismo punto de inflexión.</p>", 
     "weapon": [],
     "action":[]
   },
   {
     "id_equip": 59,
     "faction": "veteran-guardsmen",
-    "name": "Cuentas de Comunicación",
-    "description": "Siempre que un agente DEATH KORPS WATCHMASTER o CONFIDANT amigo emita una ORDEN DE GUARDIA, puedes usar esta regla. Si lo haces, en lugar de que cada agente DEATH KORPS amigo a 6” reciba la orden, puedes seleccionar un agente DEATH KORPS amigo para recibir esa orden", 
+    "name": "Comunicador Portátil",
+    "description": "Siempre que un agente <b>VIGÍA</b> <span class=\"faction\">KORPS DE LA MUERTE</span> amigo o un agente <b>SÓLIDO</b> <span class=\"faction\">KORPS DE LA MUERTE</span> amigo da una <b>ORDEN DE GUARDIA</b>, puedes usar esta regla. Si lo haces, en lugar de que cada agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo a 6\" o menos de él reciba la orden, puedes elegir un agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo para que reciba esa orden.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 60,
     "faction": "veteran-guardsmen",
-    "name": "Bombardeo de Gas",
-    "description": "GAMBITO ESTRATÉGICO una vez por batalla. Coloca tu marcador de Gas en la zona de aniquilación; no puede colocarse debajo de terreno Elevado. Siempre que un agente esté a 3” de ese marcador, resta 1 de su atributo de LPA. En el paso de Preparación de la siguiente Fase de Estrategia, retira ese marcador. Ten en cuenta que el atributo de LPA de un agente solo cambia mientras está a 3\" de ese marcador. Si se mueve a más de 3\" de ese marcador, su atributo de LPA ya no es cambiado por esta regla.", 
+    "name": "Bombardeo con Gas",
+    "description": "<b>GAMBITO ESTRATÉGICO</b> una vez por batalla. Coloca tu marcador de Gas en la zona de aniquilación; no puede colocarse bajo terreno Aventajado. Siempre que un agente se encuentre a 3\" o menos de ese marcador, resta 1 a su atributo LPA. En el paso de Preparación de la siguiente fase de estrategia, retira ese marcador. Ten en cuenta que el atributo LPA de un agente solo cambia mientras se encuentre a 3\" o menos de ese marcador. Si se mueve a más de 3\" de ese marcador, su atributo LPA ya no se ve modificado por esta regla.", 
     "weapon": [],
     "action": []
   },

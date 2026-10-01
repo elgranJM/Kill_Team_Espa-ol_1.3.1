@@ -11857,7 +11857,7 @@
             "abilities": [
                 {
                     "name": "Tomos inquisitoriales",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación y/o cuando este agente se active. Elige una de las siguientes reglas TOMO INQUISITORIAL para que la tenga este agente, y una para que la tenga un agente BIBLIOCRÁNEO <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo (pueden ser la misma, e ignora la regla queno hayas elegido para cada agente): <ul><li><b>Acusación:</b> Siempre que un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo dispare, combata o contraataque contra un agente enemigo a 2\" o menos de este agente, suma 1 al atributo Ataques de las armas de ese agente amigo.</li></ul> <ul><li><b>Santificación:</b> Siempre que un agente enemigo dispare, combata o contraataque contra un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo a 2\" o menos de este agente, resta 1 al atributo Ataques de las armas de ese agente enemigo.</li></ul>"                
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación y/o cuando este agente se active. Elige una de las siguientes reglas <b>TOMO INQUISITORIAL</b> para que la tenga este agente, y otra para otro agente <b>BIBLIOCRÁNEO</b> <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo (no pueden ser la misma, e ignora la regla que no hayas elegido para cada agente):<ul><li><b>Acusación:</b> Siempre que un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo dispare, combata o contraataque contra un agente enemigo a 2\" o menos de algún agente amigo con esta regla, suma 1 al atributo Ataques de las armas de ese agente amigo.</li><li><b>Santificación:</b> Siempre que un agente enemigo dispare, combata o contraataque contra un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo a 2\" o menos de algún agente amigo con esta regla, resta 1 al atributo Ataques de las armas de ese agente enemigo.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -11877,11 +11877,11 @@
             "abilities": [
                 {
                     "name": "Tomo consagrado",
-                    "description": "Este agente puede tener una regla TOMO INQUISITORIAL (ver tarjeta de datos del INTERROGADOR). Ten en cuenta que mantiene dicha regla aunque ese agente INTERROGADOR amigo sea retirado de la zona de aniquilación. "
+                    "description": "Este agente puede tener una regla TOMO INQUISITORIAL (ver tarjeta de datos del INTERROGADOR). Ten en cuenta que mantiene dicha regla aunque ese agente INTERROGADOR amigo sea retirado de la zona de aniquilación."
                 },
                 {
                     "name": "Máquina",
-                    "description": "<ul><li>Las únicas acciones que puede realizar este agente son <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b> y <b>Reposicionarse</b></li></ul> <ul><li>No puede <b>Contraatacar</b> ni asistir en un combate.</li></ul> <ul><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y se encuentra tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p. ej., terreno Aventajado).</li></ul>"
+                    "description": "<ul><li>Las únicas acciones que puede realizar este agente son <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b> y <b>Reposicionarse</b>.</li><li>No puede contraatacar ni asistir en un combate.</li><li>Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 inferior. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto.</li><li>Siempre que este agente tenga una orden de <b>Ocultarse</b> y esté tras cobertura, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej. Buscadora, terreno Aventajado) salvo estar a 2\" o menos.</li></ul>"
                 },
                 {
                     "name": "Prescindible",
@@ -11923,7 +11923,7 @@
                     "description": "Cada vez, después de la primera, que tu oponente use cada ardid durante la batalla (salvo Repetición de mando), si este agente está en la zona de aniquilación, obtienes 1PM (hasta un máximo de 2PM por punto de inflexión)."
                 },
                 {
-                    "name": "Armamiento ligero",
+                    "name": "Armamento ligero",
                     "description": "Este agente no puede usar ningún arma que no esté en su tarjeta de datos, ni realizar acciones únicas."
                 },
                 {
@@ -11979,7 +11979,7 @@
             "abilities": [
                 {
                     "name": "Cazador",
-                    "description": "Puede realizar la acción de <b>Cargar</b> incluso con orden de ocultarse."
+                    "description": "Este agente puede realizar una acción de <b>Cargar</b> aun teniendo una orden de <b>Ocultarse</b>."
                 },
                 {
                     "name": "Ahí se las den todas",
@@ -12024,7 +12024,7 @@
             "abilities": [
                 {
                     "name": "Sin escapatoria",
-                    "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 1D6, restando 1 al resultado si ese agente enemigo tiene un atributo Heridas más alto que este agente y sumando 1 si ese agente enemigo está herido: con 4+, ese agente enemigo no puede efectuar esa acción durante esa activación o reacción (los PA gastados no se recuperan)"
+                    "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 1D6, restando 1 al resultado si ese agente enemigo tiene un atributo Heridas más alto que este agente y sumando 1 si ese agente enemigo está herido: con 4+, ese agente enemigo no puede efectuar esa acción durante esa activación o reacción (los PA gastados no se recuperan)."
                 },
                 {
                     "name": "Extraer información",
@@ -12077,7 +12077,7 @@
                     "name": "COACCIONAR",
                     "cost": "1PA",
                     "description": [
-                        "Elige un agente enemigo que sea un blanco válido para este agente y esté a 6\" o menos de él; a continuación, elige una regla adicional (incluida una acción única) que tenga el agente enemigo en su tarjeta de datos (excepto una regla de arma). Hasta el final de la siguiente activación de ese agente enemigo, se considera que no tiene dicha regla adicional."
+                        "Elige un agente enemigo que sea un blanco válido para este agente y esté a 6\" o menos de él; a continuación, elige una regla adicional (incluida una acción única) que tenga el agente enemigo en su tarjeta de datos (excepto una regla de arma o una regla que indica que se ignora a efectos de las operaciones de asesinato/eliminación). Hasta el final de la siguiente activación de ese agente enemigo, se considera que no tiene dicha regla adicional."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
@@ -12122,7 +12122,7 @@
                     "description": "Al determinar el control de un marcador, trata el atributo LPA de este agente como si fuera 1 mayor. Ten en cuenta que esto no es un cambio a su atributo LPA, de modo que cualquier cambio será acumulable con esto."
                 },
                 {
-                    "name": "Armamiento ligero",
+                    "name": "Armamento ligero",
                     "description": "Este agente no puede usar ningún arma que no esté en su tarjeta de datos."
                 }
             ],
@@ -12131,7 +12131,7 @@
                     "name": "ADIVINACIÓN",
                     "cost": "1PA",
                     "description": [
-                        "<b>PSÍQUICA.</b> Elige un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo a 6\" o menos de este agente; a continuación elige uno de los siguientes efectos para que dure hasta el inicio de la siguiente activación de este agente, hasta que quede incapacitado o hasta que realice esta acción otra vez (lo que ocurra antes): <ul><li><b>Guía: <b>PSÍQUICA.</b> Siempre que el agente elegido dispare, combata o contraataque, en el paso de tirar dados de ataque, puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo, o en su lugar guardar uno de tus éxitos normales como un éxito crítico.</li></ul> <ul><li><b>Protección: <b>PSÍQUICA.</b> Siempre que un agente dispare contra el agente elegido, en el paso de tirar dados de defensa, puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo, o en su lugar guardar uno de tus éxitos normales como un éxito crítico.</li></ul>"
+                        "<b>PSÍQUICA</b>. Elige un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo a 6\" o menos de este agente; a continuación elige uno de los siguientes efectos para que dure hasta el inicio de la siguiente activación de este agente, hasta que quede incapacitado o hasta que realice esta acción otra vez (lo que ocurra antes):<ul><li><b>Guía:</b> <b>PSÍQUICA</b>. Siempre que el agente elegido dispare, combata o contraataque, en el paso de tirar dados de ataque, puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo, o en su lugar guardar uno de tus éxitos normales como un éxito crítico.</li><li><b>Protección:</b> <b>PSÍQUICA</b>. Siempre que un agente dispare contra el agente elegido, en el paso de tirar dados de defensa, puedes guardar uno de tus fallos como un éxito normal en lugar de descartarlo, o en su lugar guardar uno de tus éxitos normales como un éxito crítico.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
@@ -12141,7 +12141,7 @@
         },
         {
             "id": "inquisitorial-agent-penal-legionnaire",
-            "name": "OPERATIVO <span class=\"faction\">LEGIONARIO</span> PENAL",
+            "name": "OPERATIVO LEGIONARIO PENAL",
             "stats": {
                 "LPA": "2",
                 "MOVER": "6\"",
@@ -12177,11 +12177,11 @@
                 },
                 {
                     "name": "Cruel",
-                    "description": "Cuando este agente dispara, combate o contraataque contra un agente enemigo herido, las armas de este agente tienen la regla de arma Implacable."
+                    "description": "Cuando este agente dispara, combate o contraataca contra un agente enemigo herido, las armas de este agente tienen la regla de arma Implacable."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">OPERATIVO INQUISITORIAL</span>, IMPERIUM, INQUISICIÓN, <span class=\"faction\">LEGIONARIO</span> PENAL",
+            "keywords": "<span class=\"faction\">OPERATIVO INQUISITORIAL</span>, IMPERIUM, INQUISICIÓN, LEGIONARIO PENAL",
             "peana": "25"
         },
         {
@@ -12248,7 +12248,7 @@
                     "description": [
                         "Efectúa dos acciones libres de <b>Disparar</b> con este agente (esto tiene prioridad sobre restricciones de acción). Debes elegir un perfil de su pistola de plasma con mirilla para una acción y su pistola automática con silenciador para la otra (en cualquier orden)."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si tiene una orden de ocultarse."
+                    "description_no": "Este agente no puede realizar esta acción mientras tenga una orden de <b>Ocultarse</b>, o durante una activación en la que realizó la acción de <b>Disparar</b> (o viceversa)."
                 }
             ],
             "keywords": "<span class=\"faction\">OPERATIVO INQUISITORIAL</span>, IMPERIUM, INQUISICIÓN, PISTOLERO",
@@ -12288,7 +12288,7 @@
             "abilities": [
                 {
                     "name": "Propósito imparable",
-                    "description": " Si este agente queda incapacitado durante la acción de <b>Combatir</b>, puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de que sea retirado de la zona de aniquilación."
+                    "description": "Si este agente queda incapacitado durante la acción de <b>Combatir</b>, puedes golpear al agente enemigo en esa secuencia con uno de tus éxitos sin resolver antes de que sea retirado de la zona de aniquilación."
                 },
                 {
                     "name": "Fanático",
@@ -12373,7 +12373,7 @@
             "abilities": [
                 {
                     "name": "Lobotomizado",
-                    "description": " Cuando se active a este agente, si está a 3\" o menos de otro agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo (que no sea SERVIDOR DE ATAQUE) y es visible para él o viceversa, suma 1 al atributo LPA de este agente hasta el final de esa activación."
+                    "description": "Cuando se active a este agente, si está a 3\" o menos de otro agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo (que no sea SERVIDOR DE ATAQUE) y es visible para él o viceversa, suma 1 al atributo LPA de este agente hasta el final de esa activación."
                 }
             ],
             "uniqueActions": [],
@@ -12414,7 +12414,7 @@
             "abilities": [
                 {
                     "name": "Psíquicamente nula",
-                    "description": "Las armas a distancia PSÍQUICAS no pueden infligir daño a esta agente. A efectos de acciones PSÍQUICAS, esta agente no puede ser elegida y nunca se considera que está dentro de la distancia requerida de esas acciones. Siempre que un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones PSÍQUICAS o usar reglas adicionales PSÍQUICAS.</li></ul> <ul><li>Ese agente no puede usar armas a distancia PSÍQUICAS.</li></ul> <ul><li>Las armas de combate PSÍQUICAS no tienen reglas de arma y sus atributos Daño no pueden superar 3/4.</li></ul>"
+                    "description": "Las armas a distancia PSÍQUICAS no pueden infligir daño a esta agente. A efectos de acciones PSÍQUICAS, esta agente no puede ser elegida y nunca se considera que está dentro de la distancia requerida de esas acciones. Siempre que un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones PSÍQUICAS o usar reglas adicionales PSÍQUICAS.</li><li>Ese agente no puede usar armas a distancia PSÍQUICAS.</li><li>Las armas de combate PSÍQUICAS no tienen reglas de arma y sus atributos Daño no pueden superar 3/4.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -12445,7 +12445,7 @@
             "abilities": [
                 {
                     "name": "Psíquicamente nula",
-                    "description": "Las armas a distancia PSÍQUICAS no pueden infligir daño a esta agente. A efectos de acciones PSÍQUICAS, esta agente no puede ser elegida y nunca se considera que está dentro de la distancia requerida de esas acciones. Siempre que un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones PSÍQUICAS o usar reglas adicionales PSÍQUICAS.</li></ul> <ul><li>Ese agente no puede usar armas a distancia PSÍQUICAS.</li></ul> <ul><li>Las armas de combate PSÍQUICAS no tienen reglas de arma y sus atributos Daño no pueden superar 3/4.</li></ul>"
+                    "description": "Las armas a distancia PSÍQUICAS no pueden infligir daño a esta agente. A efectos de acciones PSÍQUICAS, esta agente no puede ser elegida y nunca se considera que está dentro de la distancia requerida de esas acciones. Siempre que un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones PSÍQUICAS o usar reglas adicionales PSÍQUICAS.</li><li>Ese agente no puede usar armas a distancia PSÍQUICAS.</li><li>Las armas de combate PSÍQUICAS no tienen reglas de arma y sus atributos Daño no pueden superar 3/4.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -12486,7 +12486,7 @@
             "abilities": [
                 {
                     "name": "Psíquicamente nula",
-                    "description": "Las armas a distancia PSÍQUICAS no pueden infligir daño a esta agente. A efectos de acciones PSÍQUICAS, esta agente no puede ser elegida y nunca se considera que está dentro de la distancia requerida de esas acciones. Siempre que un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones PSÍQUICAS o usar reglas adicionales PSÍQUICAS.</li></ul> <ul><li>Ese agente no puede usar armas a distancia PSÍQUICAS.</li></ul> <ul><li>Las armas de combate PSÍQUICAS no tienen reglas de arma y sus atributos Daño no pueden superar 3/4.</li></ul>"
+                    "description": "Las armas a distancia PSÍQUICAS no pueden infligir daño a esta agente. A efectos de acciones PSÍQUICAS, esta agente no puede ser elegida y nunca se considera que está dentro de la distancia requerida de esas acciones. Siempre que un agente esté a 6\" o menos de esta agente: <ul><li>Ese agente no puede realizar acciones PSÍQUICAS o usar reglas adicionales PSÍQUICAS.</li><li>Ese agente no puede usar armas a distancia PSÍQUICAS.</li><li>Las armas de combate PSÍQUICAS no tienen reglas de arma y sus atributos Daño no pueden superar 3/4.</li></ul>"
                 }
             ],
             "uniqueActions": [],
@@ -12524,7 +12524,7 @@
                     }
                 },
                 {
-                    "name": "Lanzagranadas (Perforante)",
+                    "name": "Lanzagranadas (perforante)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -12683,7 +12683,7 @@
             "abilities": [
                 {
                     "name": "Equipo adaptable",
-                    "description": "Puedes hacer cada una de las siguientes cosas una vez por punto de inflexión: Un agente VÁSTAGO TEMPESTUS SOLDADO <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo puede realizar la acción <b>Granada de humo</b>.</li></ul> <ul><li>Un agente VÁSTAGO TEMPESTUS SOLDADO <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo puede realizar la acción Granada aturdidora.</li></ul> <ul>Las reglas para esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acciones (es decir, si también eliges esas granadas como equipo).</ul>"
+                    "description": "Puedes hacer cada una de las siguientes cosas una vez por punto de inflexión:<ul><li>Un agente <b>VÁSTAGO TEMPESTUS SOLDADO</b> <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo puede realizar la acción <b>Granada de humo</b>.</li><li>Un agente <b>VÁSTAGO TEMPESTUS SOLDADO</b> <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo puede realizar la acción <b>Granada aturdidora</b>.</li></ul>Las reglas para esas acciones figuran en el equipo universal. Realizar esas acciones usando esta regla no cuenta para sus límites de acciones (es decir, si también eliges esas granadas como equipo)."
                 }
             ],
             "uniqueActions": [],

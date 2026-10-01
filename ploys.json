@@ -581,7 +581,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Denunciar",
-        "description": "Selecciona un agente enemigo y tira un 1D3. En la Fase de Tiroteo de este punto de inflexión, ese agente enemigo no puede ser activado o realizar acciones hasta que sea el último agente enemigo en ser activado, o tu oponente haya activado un número de agentes enemigos igual al resultado del 1D3 (lo que ocurra primero). Este ardid te cuesta 1 PM adicional por cada vez anterior que lo hayas usado durante la batalla (p. ej. 1PM la primera vez que lo usarías, 2PM la segunda vez, etc.).",
+        "description": "Elige un agente enemigo y tira 1D3. En la fase de tiroteo de este punto de inflexión, ese agente enemigo no puede ser activado ni realizar acciones hasta que sea el último agente enemigo en ser activado, o hasta que tu oponente haya activado un número de agentes enemigos igual al resultado del 1D3 (lo que ocurra primero). Este ardid te cuesta 1PM adicional por cada vez anterior que lo hayas usado durante la batalla (es decir, 1PM la primera vez, 2PM la segunda, etc.).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -590,7 +590,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Jurisdicción Irrefutable",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">AGENTE INQUISITORIAL</span> amigo que esté a 3\" de un marcador de objetivo, puedes repetir uno de tus dados de defensa. Si ese agente amigo disputa ese marcador, puedes repetir cualquiera de tus dados de defensa de un resultado en su lugar (p. ej. resultados de 2).",
+        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo que esté a 3\" o menos de un marcador de objetivo, puedes repetir uno de tus dados de defensa. Si ese agente amigo disputa ese marcador, puedes en su lugar repetir cualquiera de tus dados de defensa que tengan un resultado concreto (p. ej., resultados de 2).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -599,7 +599,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Escrutinio Intenso",
-        "description": "Siempre que estés seleccionando un blanco válido para un agente <span class=\"faction\">AGENTE INQUISITORIAL</span> amigo, los agentes enemigos a 4\" de él no pueden estar en cobertura (en lugar de 2\"). Aunque esto puede permitir que tales agentes sean seleccionados como objetivo (asumiendo que son visibles), no elimina su salvación por cobertura (si la hay), a menos que el agente <span class=\"faction\">AGENTE INQUISITORIAL</span> amigo esté a 2\" como es normal.",
+        "description": "Cuando vayas a elegir un blanco válido para un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo, los agentes enemigos a 4\" o menos de él no pueden estar a cubierto (en lugar de a 2\" o menos). Esto puede permitir que el agente sea tomado como blanco (suponiendo que sea visible), pero no le niega la salvación por cobertura de la que disponga, a menos que el agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo esté a 2\" o menos, como es habitual.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -607,8 +607,8 @@
         "faction": "inquisitorial-agent",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Presa",
-        "description": "Selecciona un agente enemigo para que sea tu presa para el punto de inflexión. Siempre que un agente <span class=\"faction\">AGENTE INQUISITORIAL</span> amigo dispare, combatiendo o contraataque contra tu objetivo presa, las armas de ese agente amigo tienen la regla de armas Incesante. Siempre que tu presa sea incapacitada, puedes seleccionar un nuevo agente enemigo para ser la presa. (Solo puedes seleccionar una presa a la vez, y puedes continuar haciéndolo durante este punto de inflexión.)",
+        "name": "La Presa",
+        "description": "Elige un agente enemigo para que sea tu presa durante el punto de inflexión. Siempre que un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> dispare, combata o contraataque contra tu presa, las armas de ese agente amigo tienen la regla de arma Incesante. Cuando tu presa quede incapacitada, puedes elegir un nuevo agente enemigo como tu presa (y puedes seguir haciéndolo durante este punto de inflexión).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -617,7 +617,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Autoridad Absoluta",
-        "description": "Usa este ardid de tiroteo durante la batalla, cuando un oponente use un Ardid de Estrategia o de tiroteo (excluyendo Repetición de Mando o uno que cueste 0PM). Su ardid no se usa, los PM gastados en él se reembolsan y no pueden usar ese ardid de nuevo durante su punto de inflexión. Este ardid no se puede usar para detener el mismo ardid más de una vez por batalla.",
+        "description": "Usa este ardid de tiroteo durante la batalla, cuando un oponente use un ardid de estrategia o de tiroteo (excepto Repetición de mando o uno que cueste 0PM). Su ardid no se usa, recupera el PM gastado en él y no podrá usar ese ardid de nuevo en este punto de inflexión. Este ardid no puede usarse para parar un mismo ardid más de una vez por batalla.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -625,8 +625,8 @@
         "faction": "inquisitorial-agent",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Implacable en la persecución",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo a 2\" de un agente <span class=\"faction\">AGENTE INQUISITORIAL</span> amigo preparado realice una acción en la que se mueva. Después de que se mueva, ese agente <span class=\"faction\">AGENTE INQUISITORIAL</span> amigo puede realizar una acción gratuita de Reposicionarse, pero debe terminar ese movimiento a 2\" de ese agente enemigo, o una acción gratuita de Cargar, pero debe terminar ese movimiento dentro del rango de control de ese agente enemigo. Si ninguna es posible, ese agente amigo no puede realizar esas acciones, este ardid no se usa y los PM gastados en él se reembolsan.\n  ",
+        "name": "Persecución Incansable",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo a 2\" o menos de un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo apostado realice una acción en la que se mueva. Después de que se mueva, ese agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo puede o bien realizar una acción libre de <b>Reposicionarse</b>, pero terminando ese movimiento a 2\" o menos de ese agente enemigo, o bien una acción libre de <b>Cargar</b>, pero debe terminar ese movimiento en la zona de control de ese agente enemigo. Si ninguna de las dos es posible, ese agente amigo no puede realizar esas acciones, este ardid no se usa y el PM gastado en él se recupera.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -635,7 +635,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "La Voluntad del Emperador",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">AGENTE INQUISITORIAL</span> amigo sea activado. Hasta el final de la activación de ese agente, puedes ignorar cualquier cambio en sus atributos (incluyendo los atributos de sus armas).",
+        "description": "Usa este ardid de tiroteo al activar un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo. Hasta el final de su activación, puedes ignorar cualquier cambio a los atributos de este agente (incluyendo a los atributos de sus armas).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -643,8 +643,8 @@
         "faction": "inquisitorial-agent",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Presencia Intimidante",
-        "description": "Usa este ardid de tiroteo cuando un agente enemigo visible para y a 3\" de un agente <span class=\"faction\">AGENTE INQUISITORIAL</span> amigo, o visible para y a 6\" de un agente MÍSTICO amigo, realice la acción Recoger Marcador o una acción de misión (excluyendo Operar Compuerta). Tu oponente debe gastar 1 PA adicional para que ese agente enemigo realice esa acción (si no puede o elige no hacerlo, los PA gastados en ella se reembolsan).",
+        "name": "Presencia Intimidatoria",
+        "description": "Usa este ardid de tiroteo cuando un agente enemigo a 3\" o menos de un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo y visible para él, o a 6\" o menos de un agente <b>MÍSTICO</b> amigo y visible para él, realiza una acción de <b>Recoger marcador</b> o una acción de misión (excepto Operar portillo). Tu oponente debe gastar 1PA adicional para que ese agente enemigo realice la acción (si no puede o decide no hacerlo, los PA gastados se recuperan).",
         "typename": "Ardid de Tiroteo"
     },
     {

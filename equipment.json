@@ -301,11 +301,11 @@
   {
     "id_equip": 33,
     "faction": "inquisitorial-agent",
-    "name": "Dagas de Combate",
-    "description": "Los agentes INQUISITORIAL AGENT amigos tienen la siguiente arma de combate. Siempre que un agente SISTER OF SILENCE amigo la esté usando, añade 1 a su atributo de Atq.",
+    "name": "Filodagas",
+    "description": "Los agentes <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigos tienen la siguiente arma de combate. Siempre que la use una agente <b>HERMANA DEL SILENCIO</b> amiga, suma 1 a su atributo Ataques.",
     "weapon": [
       {
-        "w_name": "Dagas de Combate",
+        "w_name": "Filodaga",
         "ATK": "3",
         "HIT": "4+",
         "DMG": "3/4",
@@ -317,24 +317,24 @@
   {
     "id_equip": 34,
     "faction": "inquisitorial-agent",
-    "name": "Roseta Inquisitorial",
-    "description": "Una vez por batalla, cuando un agente INQUISITORIAL AGENT amigo sea activado, si has usado el ardid estratégico Presa durante este Punto de Inflexión, puedes usar esta regla. Si lo haces, puedes seleccionar un nuevo agente enemigo para ser tu presa hasta el final del Punto de Inflexión.", 
+    "name": "Sello Inquisitorial",
+    "description": "Una vez por batalla, cuando se activa un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo, si has usado el ardid estratégico La presa durante este punto de inflexión, puedes usar esta regla. Si lo haces, puedes elegir un nuevo agente enemigo para que sea tu presa hasta el final del punto de inflexión.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 35,
     "faction": "inquisitorial-agent",
-    "name": "Trajes Blindados",
-    "description": "Siempre que un agente esté disparando a un agente INQUISITORIAL AGENT amigo (excluyendo TOME-SKULL) que tenga un atributo de Salvación de 5+, puedes retener uno de tus resultados de dados de defensa de 4 como un éxito normal.", 
+    "name": "Monos Blindados",
+    "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo (salvo <b>BIBLIOCRÁNEO</b>) que tenga un atributo Salvación de 5+, puedes guardar uno de tus dados de defensa con un resultado de 4 como un éxito normal.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 36,
     "faction": "inquisitorial-agent",
-    "name": "Servo-Cráneo",
-    "description": "Una vez por batalla, un agente INQUISITORIAL AGENT amigo puede realizar una acción de misión por 1 PA menos.", 
+    "name": "Servocráneo",
+    "description": "Una vez por batalla, un agente <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo puede realizar una acción de misión por 1 PA menos.", 
     "weapon": [],
     "action": []
   },

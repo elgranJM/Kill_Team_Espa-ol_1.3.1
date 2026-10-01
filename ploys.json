@@ -941,7 +941,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "El Emperador Protege",
-        "description": "Siempre que un agente dispare contra un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b>, puedes repetir cualquiera de tus dados de defensa de un resultado (p. ej. resultados de 2).\n",
+        "description": "Cuando un agente dispare contra un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b>, puedes repetir cualesquiera de tus dados de defensa que hayan obtenido un mismo resultado (p. ej., los resultados de 2).",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -950,7 +950,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Pelea Ferviente",
-        "description": "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b> esté combatiendo o contraataque, sus armas de combate tienen la regla de armas Incesante.\n",
+        "description": "Cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b> combata o contraataque, sus armas de combate tienen la regla de armas Incesante.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -958,8 +958,8 @@
         "faction": "sanctifiers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Persecución Celosa",
-        "description": "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté combatiendo durante una activación en la que ha realizado la acción <b>Cargar</b>, sus armas de combate tienen la regla de armas Letal 5+.\n",
+        "name": "Persecución Fanática",
+        "description": "Cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo combata durante una activación en la que haya realizado la acción de <b>Cargar</b>, sus armas de combate tienen la regla de armas Letal 5+.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -967,8 +967,8 @@
         "faction": "sanctifiers",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Reunir al Rebaño",
-        "description": "Cada agente <span class=\"faction\">SANTIFICADOR</span> amigo (excluyendo <b>ORADOR</b>) que se esté beneficiando del <b>SERMÓN</b> puede realizar inmediatamente una acción gratuita de <b>Correr</b> o <b>Retroceder</b> (para esta última, no puede moverse más de 3\"). Cada uno que lo haga debe terminar ese movimiento más cerca de un agente <b>ORADOR</b> amigo. No puedes usar este ardid durante el primer punto de inflexión.\n",
+        "name": "Arengar a los Fieles",
+        "description": "Cada agente <span class=\"faction\">SANTIFICADOR</span> amigo (salvo <b>ORADOR</b>) que se esté beneficiando del <b>SERMÓN</b> puede realizar inmediatamente una acción libre de <b>Correr</b> o de <b>Retroceder</b> en el orden que elijas (elige por separado para cada uno y, en el segundo caso, no puede moverse más de 3\"). Cada agente que haga esto debe terminar ese movimiento más cerca de y visible para (o viceversa) algún agente <b>ORADOR</b> amigo. No puedes usar este ardid durante el primer punto de inflexión.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -977,7 +977,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Rosarius",
-        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflija Daño Normal a un agente <span class=\"faction\">SANTIFICADOR</span> amigo. Ignora ese daño infligido.\n",
+        "description": "Usa este ardid de tiroteo cuando un dado de ataque inflija Daño normal a un agente <span class=\"faction\">SANTIFICADOR</span> amigo. Ignora ese daño infligido.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -986,7 +986,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Erradicación Ardiente",
-        "description": "Usa este ardid de tiroteo después de tirar tus dados de ataque para un agente <span class=\"faction\">SANTIFICADOR</span> amigo, si está disparando o combatiendo contra un agente enemigo que está a 3\" de un agente <b>ORADOR</b> amigo (o 6\" si el <b>ORADOR</b> es un <b>CONFESOR</b>). Puedes repetir cualquiera de tus dados de ataque.\n",
+        "description": "Usa este ardid de tiroteo tras tirar tus dados de ataque por un agente <span class=\"faction\">SANTIFICADOR</span> amigo, si está disparando o combatiendo contra un agente enemigo a 3\" o menos de un agente <b>ORADOR</b> amigo (o a 6\" o menos si el <b>ORADOR</b> es un <b>CONFESOR</b>). Puedes repetir cualesquiera de tus dados de ataque.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -994,8 +994,8 @@
         "faction": "sanctifiers",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Redimido a Través del Fuego",
-        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo que tiene un arma con la regla de armas Llamarada sea incapacitado. Cada agente enemigo visible para y a 2\" de él gana una de tus fichas de Llamarada (si no tiene ya una).\n",
+        "name": "Redimir Mediante el Fuego",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo que tenga un arma con la regla de armas Llamarada resulte incapacitado, antes de retirarlo de la zona de aniquilación. Cada agente enemigo a 2\" o menos de él y visible para él gana una de tus fichas de Llamarada (si no tiene ya una).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -1004,7 +1004,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Devoción Inquebrantable",
-        "description": "Usa este ardid de tiroteo cuando un agente <b>ORADOR</b> <span class=\"faction\">SANTIFICADOR</span> o <b>MILAGRERO</b> <span class=\"faction\">SANTIFICADOR</span> amigo sea seleccionado como el blanco válido de una acción <b>Disparar</b> o para combatir contra él durante la acción <b>Combatir</b>. Elige un agente <span class=\"faction\">SANTIFICADOR</span> amigo (excluyendo <b>CONFESOR, MILAGRERO</b> y <b>ORADOR</b>) visible para y a 3\" de ese primer agente amigo para convertirse en el blanco válido o para ser combatido en su lugar (como corresponda) (incluso si normalmente no sería válido para esto). Si es la acción <b>Combatir</b>, trata a ese otro agente como si estuviera dentro del rango de control del agente combatiente durante la duración de esa acción.\n\n<p>Este ardid no tiene efecto si es la acción <b>Disparar</b> y el arma a distancia tiene la regla de armas <b>Estallido</b> o <b>Torrente</b>.</p>",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente <b>ORADOR</b> <span class=\"faction\">SANTIFICADOR</span> o <b>MILAGRERO</b> <span class=\"faction\">SANTIFICADOR</span> amigo sea tomado como blanco válido de una acción de <b>Disparar</b>, o sea elegido para combatir contra él durante una acción de <b>Combatir</b>. Elige otro agente <span class=\"faction\">SANTIFICADOR</span> amigo (salvo <b>CONFESOR</b>, <b>MILAGRERO</b> y <b>ORADOR</b>), a 3\" o menos de ese primer agente amigo y visible para él, para que se convierta en el blanco válido o para combatir contra él en su lugar, según sea apropiado (incluso aunque normalmente no fuera válido para ello). Si la acción era de <b>Combatir</b>, se considerará que ese otro agente se encuentra en la zona de control del agente combatiente mientras dure esa acción. Si es una acción de <b>Disparar</b>, ese otro agente solo está a cubierto u ofuscado si lo estaba el blanco original.</p>\n<p>Este ardid no tiene efecto si es una acción de <b>Disparar</b> y el arma a distancia tiene las reglas de armas Área o Ráfaga.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {

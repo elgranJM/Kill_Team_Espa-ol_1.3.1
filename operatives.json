@@ -5407,15 +5407,15 @@
             "abilities": [
                 {
                     "name": "Liderar la procesión",
-                    "description": "En cada punto de inflexión tras el primero, cuando este agente sea un <b>ORADOR</b> y lleve a cabo una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> durante su activación, puedes usar esta regla antes de que se mueva. En tal caso, determina cada otro agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b> y que sea visible para este agente. Después de que este agente termine su acción, cada uno de esos otros agentes <span class=\"faction\">SANTIFICADOR</span> amigos puede realizar inmediatamente una acción libre de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> en el orden que prefieras (elige por separado para cada uno), pero cada uno no puede mover más de 3\" y debe terminar dicho movimiento en una ubicación en la que siga beneficiándose de <b>SERMÓN</b>. Si este agente queda incapacitado antes de que esta regla se resuelva completamente, por ejemplo debido a la interrupción de la acción de <b>Ponerse en guardia</b> (consulta las reglas de combate cerrado en el Libro básico de Kill Team), no lo retires de la zona de aniquilación hasta que esta regla haya sido resuelta completamente."
+                    "description": "En cada punto de inflexión tras el primero, cuando este agente sea un <b>ORADOR</b> y lleve a cabo una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> durante su activación, puedes usar esta regla antes de que se mueva. En tal caso, determina cada otro agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b> y que sea visible para este agente (o viceversa). Después de que este agente termine su acción, cada uno de esos otros agentes <span class=\"faction\">SANTIFICADOR</span> amigos puede realizar inmediatamente una acción libre de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b> en el orden que prefieras (elige por separado para cada uno), pero cada uno no puede mover más de 3\" o retirarse y desplegarse de nuevo a más de 3\" y debe terminar dicho movimiento en una ubicación en la que siga beneficiándose del <b>SERMÓN</b>. Si este agente queda incapacitado antes de que esta regla se resuelva completamente, por ejemplo debido a la interrupción de la acción de <b>Ponerse en guardia</b> (consulta las reglas de combate cerrado en el Libro básico de Kill Team), no lo retires de la zona de aniquilación hasta que esta regla haya sido resuelta completamente."
                 },
                 {
                     "name": "Declamar una orden",
-                    "description": "Cuando un agente enemigo vaya a realizar una acción durante una activación o reacción mientras se encuentre a 6\" o menos de este agente y sea visible para él, puedes usar esta regla. Si lo haces, tira 1D6: si el resultado es mayor que el atributo LPA de ese agente enemigo: <ul><li>No puede realizar esa acción durante esa activación o reacción (los PA gastados en ella no se recuperan). Si era una reacción, dicha reacción termina</li></ul> <ul><li>No puedes usar esta regla de nuevo durante la batalla.</li></ul>"
+                    "description": "Cuando un agente enemigo vaya a realizar una acción durante una activación o reacción mientras se encuentre a 6\" o menos de este agente y sea visible para él, puedes usar esta regla. Si lo haces, tira 1D6: si el resultado es mayor que el atributo LPA de ese agente enemigo: <ul><li>No puede realizar esa acción durante esa activación o reacción (los PA gastados en ella no se recuperan). Si era una reacción, dicha reacción termina.</li><li>No puedes usar esta regla de nuevo durante la batalla.</li></ul>"
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, LÍDER, CONFESOR",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, LÍDER, CONFESOR",
             "peana": "32"
         },
         {
@@ -5442,15 +5442,24 @@
             "abilities": [
                 {
                     "name": "Querubín",
-                    "description": "<ul><li> Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Eso no es un cambio a su atributo LPA, por lo que se acumula con otros cambios.</li></ul> <ul><li>Si este agente tiene una orden de ocultarse y se encuentra tras cobertura, no puede ser tomado como blanco válido, y esto tiene prioridad sobre todas las demás reglas (p.ej., Buscadora, terreno Aventajado) salvo estar a 2\" o menos</li></ul> <ul><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo <b>Incentivar</b>.</li></ul>"
+                    "description": "<ul><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Eso no es un cambio a su atributo LPA, por lo que se acumula con otros cambios.</li><li>Siempre que este agente tenga una orden de Ocultarse y esté a cubierto, no puede ser elegido como blanco válido, teniendo esto prioridad sobre todas las demás reglas (p. ej., Buscadora, terreno Aventajado) salvo estar a 2\" o menos.</li><li>Este agente no puede usar armas que no figuren en su tarjeta de datos, ni realizar acciones únicas salvo <b>Incentivar</b>.</li></ul>"
                 },
                 {
                     "name": "Volar",
                     "description": "Cuando este agente realice una acción de <b>Cargar</b>, <b>Retroceder</b> o <b>Reposicionarse</b>, puede <b>VOLAR</b>. Si lo hace, no lo muevas. En lugar de eso, retíralo de la zona de aniquilación y vuelve a colocarlo completamente a una distancia igual o menor a su atributo Movimiento de su localización original, midiendo solo la distancia horizontal (en una zona de aniquilación que utilice las reglas de combate cerrado, como por ejemplo Zona de aniquilación: Mundo Necrópolis, esta distancia no puede medirse por encima ni a través de terreno de Muro). Ten en cuenta que no gana distancia adicional al realizar la acción de <b>Cargar</b>. Debe ser desplegado en una ubicación en la que pueda ser colocado y, a menos que la acción sea de <b>Cargar</b>, no puede ser desplegado dentro de la zona de control de un agente enemigo."
                 }
             ],
-            "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, QUERUBÍN",
+            "uniqueActions": [
+                {
+                    "name": "INCENTIVAR",
+                    "cost": "1 PA",
+                    "description": [
+                        "<b>APOYO</b>. Elige otro agente <span class=\"faction\">SANTIFICADOR</span> amigo distinto (salvo <b>CONFESOR</b>, <b>ASESINO DEL CULTO DE LA MUERTE</b>, <b>MILAGRERO</b> y <b>ORADOR</b>) a 2\" o menos de este agente y visible para él. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
+                    ],
+                    "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
+                }
+            ],
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, QUERUBÍN",
             "peana": "25"
         },
         {
@@ -5474,7 +5483,7 @@
                     }
                 },
                 {
-                    "name": "Pistolas lanzallamas dobles (Ráfaga doble)",
+                    "name": "Pistolas lanzallamas dobles (ráfaga doble)",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -5497,7 +5506,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\"><sup>1</sup></span>Ráfaga doble",
-                    "description": "Elige hasta dos blancos válidos diferentes que no estén en la zona de control de ningún agente enemigo. Dispara con esta arma contra ambos en el orden que elijas (tira cada secuencia por separado). Ráfaga 0\" significa que no puedes elegir blancos secundarios, pero esta arma sigue teniendo la regla de armas Ráfaga a todos los demás efectos de reglas, como la regla Fortaleza condensada (ver Zona de aniquilación: Volkus, Libro básico de Kill Team)."
+                    "description": "Elige hasta dos blancos válidos diferentes que no estén en la zona de control de agentes amigos. Dispara con esta arma contra ambos en el orden que elijas (tira cada secuencia por separado). Ráfaga 0\" significa que no puedes elegir blancos secundarios, pero esta arma sigue teniendo la regla de armas Ráfaga a todos los demás efectos de reglas, como la regla Fortaleza condensada (ver Zona de aniquilación: Volkus, Libro básico de Kill Team)."
                 },
                 {
                     "name": "Batería de santificación",
@@ -5505,7 +5514,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, CONFLAGRADOR",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, CONFLAGRADOR",
             "peana": "25"
         },
         {
@@ -5555,7 +5564,7 @@
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, ASESINO DEL CULTO DE LA MUERTE",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, ASESINO DEL CULTO DE LA MUERTE",
             "peana": "25"
         },
         {
@@ -5586,11 +5595,11 @@
                 },
                 {
                     "name": "Cráneo nulificador",
-                    "description": "Cuando un agente enemigo se encuentre a 4\" o menos de este agente, no se puede sumar nada al atributo LPA de ese agente enemigo (retira todos los cambios positivos que tenga su atributo LPA). Si un agente enemigo a más de 4\" de este agente tiene un cambio de atributo LPA positivo y tu oponente gasta su último PA para mover a ese agente a 4\" o menos de este agente, esto puede causar que tu oponente haya gastado más PA que su atributo LPA; esto se permite en esta situación"
+                    "description": "Cuando un agente enemigo se encuentre a 4\" o menos de este agente, no se puede sumar nada al atributo LPA de ese agente enemigo (retira todos los cambios positivos que tenga su atributo LPA). Si un agente enemigo a más de 4\" de este agente tiene un cambio de atributo LPA positivo y tu oponente gasta su último PA para mover a ese agente a 4\" o menos de este agente, esto puede causar que tu oponente haya gastado más PA que su atributo LPA; esto se permite en esta situación."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, ABAD INSTRUCTOR",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, ABAD INSTRUCTOR",
             "peana": "25"
         },
         {
@@ -5635,7 +5644,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, PERSEGUIDOR",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, PERSEGUIDOR",
             "peana": "25"
         },
         {
@@ -5684,7 +5693,7 @@
                     "stats": {
                         "A": "2",
                         "HP/HA": "5+",
-                        "Dñ": "3/4",
+                        "Dñ": "1/2",
                         "RA": "-"
                     }
                 }
@@ -5700,7 +5709,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, MILAGRERO",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, MILAGRERO",
             "peana": "25"
         },
         {
@@ -5797,7 +5806,7 @@
             "abilities": [
                 {
                     "name": "Reliquia sagrada",
-                    "description": " Si este agente tiene una reliquia sagrada, siempre se beneficia de <b>SERMÓN</b>."
+                    "description": "Si este agente tiene una reliquia sagrada, siempre se beneficia del <b>SERMÓN</b>."
                 },
                 {
                     "name": "Extender la palabra del Dios Emperador",
@@ -5805,7 +5814,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, MISIONERO",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, MISIONERO",
             "peana": "25"
         },
         {
@@ -5846,7 +5855,7 @@
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, PREDICADOR",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, PREDICADOR",
             "peana": "25"
         },
         {
@@ -5883,15 +5892,15 @@
             "abilities": [
                 {
                     "name": "Icono del culto",
-                    "description": "Al determinar el control de un marcador a 4\" o menos de este agente, trata el atributo LPA total de los agentes <span class=\"faction\">SANTIFICADOR</span> amigos que lo disputen como si fuera 1 punto mayor si al menos un agent <span class=\"faction\">SANTIFICADOR</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo LPA, de modo que cualquier cambio es acumulativo con esto."
+                    "description": "Al determinar el control de un marcador a 4\" o menos de este agente, trata el atributo LPA total de los agentes <span class=\"faction\">SANTIFICADOR</span> amigos que lo disputen como si fuera 1 punto mayor si al menos un agente <span class=\"faction\">SANTIFICADOR</span> amigo disputa ese marcador. Ten en cuenta que esto no es un cambio al atributo LPA, de modo que cualquier cambio es acumulativo con esto."
                 },
                 {
                     "name": "Devoción del Culto Imperial",
-                    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">SANTIFICADOR</span>  amigo apostado resulte incapacitado mientras sea visible para este agente y esté a 6\" o menos de él, puedes usar esta regla. Si lo haces, antes de que ese agente sea retirado de la zona de aniquilación, puede realizar una acción libre (salvo <b>Combatir</b>), y puedes cambiar su orden para ello. A continuación, es retirado de la zona de aniquilación de manera normal."
+                    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo apostado resulte incapacitado mientras sea visible para este agente y esté a 6\" o menos de él, puedes usar esta regla. Si lo haces, antes de que ese agente sea retirado de la zona de aniquilación, puede realizar una acción libre (salvo <b>Combatir</b>), y puedes cambiar su orden para ello. A continuación, es retirado de la zona de aniquilación de manera normal."
                 }
             ],
             "uniqueActions": [],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, RELIQUIANTE",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, RELIQUIANTE",
             "peana": "25"
         },
         {
@@ -5905,7 +5914,7 @@
             },
             "weapons": [
                 {
-                    "name": "Baculo de almas",
+                    "name": "Báculo de almas",
                     "type": "melee",
                     "stats": {
                         "A": "3",
@@ -5926,12 +5935,12 @@
                     "name": "BOTIQUÍN",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">SANTIFICADORES</span> amigo en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas."
+                        "Elige un agente <span class=\"faction\">SANTIFICADOR</span> amigo en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
                 }
             ],
-            "keywords": "<span class=\"faction\">SANTIFICADORES</span>, IMPERIUM, ADEPTUS MINISTORUM, MÉDICO, SALVACIONISTA",
+            "keywords": "<span class=\"faction\">SANTIFICADOR</span>, IMPERIUM, ADEPTUS MINISTORUM, MÉDICO, SALVACIONISTA",
             "peana": "25"
         }
     ],

@@ -115,26 +115,26 @@
     "id_equip": 13,
     "faction": "sanctifiers",
     "name": "Orbes de Santificación",
-    "description": "Una vez por Punto de Inflexión, un agente <span class=\"faction\">SANTIFICADOR</span> amigo (excluyendo CHERUB, DEATH CULT ASSASSIN y MIRACULIST) puede realizar la siguiente acción única:", 
+    "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">SANTIFICADOR</span> amigo (salvo <b>QUERUBÍN</b>, <b>ASESINO DEL CULTO DE LA MUERTE</b> y <b>MILAGRERO</b>) puede realizar la siguiente acción única:", 
     "weapon": [],
     "action": [
       {
-      "action_name": "Orbe de Santificación",
+      "action_name": "ORBE DE SANTIFICACIÓN",
       "action_cost": "1 PA",
       "action_yes": [
-        "Selecciona un agente enemigo visible y a 6\" o menos de este agente. Ese agente y cada otro agente enemigo a 1\" o menos de él realiza una prueba de empapado. Para realizar una prueba de empapado, lanza un D6: con un 3+, gana una de tus fichas de Empapado.",
-        "Siempre que un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté disparando contra un agente que tenga una de tus fichas de Empapado con un arma que tenga la regla de armas Fuego, esa arma también tiene la regla de armas Búsqueda.",
-        "Después de que un agente <span class=\"faction\">SANTIFICADOR</span> amigo use un arma que tenga la regla de armas Fuego contra un agente enemigo que tenga una de tus fichas de Empapado, retira esa ficha (incluso si la regla de armas Búsqueda no fue usada)."
+        "Elige un agente enemigo a 6\" o menos de este agente y visible para él. Dicho agente y cada otro agente enemigo a 1\" o menos de él hace un chequeo de empapado. Para ello, tira 1D6: con 3+, gana una de tus fichas de Empapado.",
+        "Cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo dispare contra un agente que tenga una de tus fichas de Empapado con un arma que tenga la regla de armas Llamarada, esa arma tiene también la regla de armas Buscadora.",
+        "Después de que un agente <span class=\"faction\">SANTIFICADOR</span> amigo utilice un arma con la regla de armas Llamarada contra un agente enemigo que tenga una de tus fichas de Empapado, retira esa ficha (incluso aunque la regla de armas Buscadora no haya sido usada)."
       ],
-      "action_no": "Este agente no puede realizar esta acción mientras esté dentro del área de control de un agente enemigo."
+      "action_no": "Este agente no puede realizar esta acción si está en la zona de control de un agente enemigo."
       }
     ]
   },
   {
     "id_equip": 14,
     "faction": "sanctifiers",
-    "name": "Sello de Pureza",
-    "description": "Una vez por Punto de Inflexión, cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo esté disparando o combatiendo, si obtienes dos o más fallos, puedes descartar uno de ellos para retener otro como un éxito normal en su lugar.", 
+    "name": "Sellos de Pureza",
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">SANTIFICADOR</span> amigo dispare o combata, si sacas dos o más fallos, puedes descartar uno de ellos para guardar otro como un éxito normal en su lugar.", 
     "weapon": [],
     "action": []
   },
@@ -142,15 +142,15 @@
     "id_equip": 15,
     "faction": "sanctifiers",
     "name": "Textos de la Eclesiarquía",
-    "description": "En el paso de Preparación de cada Fase de Estrategia, lanza 3D6: si el resultado es menor que las heridas restantes de un agente ORATOR amigo, ganas 1PM. Ten en cuenta que esto se hace antes del paso de Gambito, por lo que si no hay un agente ORATOR válido, no puedes usar esta regla durante ese Punto de Inflexión (P. ej. durante el primer Punto de Inflexión).", 
+    "description": "En el paso de preparación de cada fase de estrategia, tira 3D6: si el resultado es menor que las heridas restantes de un agente <b>ORADOR</b> amigo, ganas 1PM. Ten en cuenta que esto se hace antes del paso de Gambito, de modo que si no hay un agente <b>ORADOR</b> válido, no puedes usar esta regla durante ese punto de inflexión (por ejemplo, durante el primer punto de inflexión).", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 16,
     "faction": "sanctifiers",
-    "name": "Símbolo del Culto Imperial",
-    "description": "Una vez por Punto de Inflexión, cuando un agente esté disparando a un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del SERMÓN, cuando recojas tus dados de defensa, puedes usar esta regla. Si lo haces, cambia uno de los éxitos críticos retenidos del atacante a un éxito normal (cualquier regla de armas que ya hayan resuelto no se ve afectada, P. ej. Críticos Perforantes).", 
+    "name": "Símbolos del Culto Imperial",
+    "description": "Una vez por punto de inflexión, cuando un agente dispare contra un agente <span class=\"faction\">SANTIFICADOR</span> amigo que se esté beneficiando del <b>SERMÓN</b>, cuando reúnas tus dados de defensa, puedes usar esta regla. Si lo haces, cambia a éxito normal uno de los éxitos críticos guardados por el atacante (las reglas de armas que ya hayan sido resueltas no se ven afectadas, como por ejemplo Críticos de penetración).", 
     "weapon": [],
     "action": []
   },

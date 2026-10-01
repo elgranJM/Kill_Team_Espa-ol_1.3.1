@@ -364,8 +364,8 @@
         "faction": "exaction-squad",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Dispensar Justicia",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté combatiendo o contraataque, si no se ha movido más que su atributo de Movimiento durante la activación, o si es un contraataque, sus armas de combate tienen la regla de armas Incesante.",
+        "name": "Impartir Justicia",
+        "description": "Cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo combata o contraataque, si no se ha movido más que su atributo Movimiento durante la activación, o si es un contraataque, sus armas de combate tienen la regla de armas Incesante.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -373,8 +373,8 @@
         "faction": "exaction-squad",
         "type": "strategic",
         "cps": "1PM",
-        "name": "La Culpa se Revela",
-        "description": "Siempre que estés seleccionando un blanco válido para un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, los agentes enemigos a 4\" de él no pueden estar en cobertura (en lugar de 2\"). Aunque esto puede permitir que tales agentes sean seleccionados como objetivo (asumiendo que son visibles), no elimina su salvación por cobertura (si la hay), a menos que el agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté a 2\" como es normal.",
+        "name": "La Culpa se Ve de Lejos",
+        "description": "Cuando vayas a elegir un blanco válido para un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, los agentes enemigos a 4\" o menos de él no pueden estar a cubierto (en lugar de a 2\" o menos). Esto puede permitir que el agente sea tomado como blanco (suponiendo que sea visible), pero no le niega la salvación por cobertura de la que disponga, a menos que el agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo se encuentre a 2\" o menos, como es habitual.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -382,8 +382,8 @@
         "faction": "exaction-squad",
         "type": "strategic",
         "cps": "1PM",
-        "name": "Jurisdicción Inviolable",
-        "description": "Siempre que un agente dispare contra un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo que esté a 2\" de un marcador de objetivo o un agente enemigo, puedes repetir uno de tus dados de defensa.",
+        "name": "Jurisdicción Protegida",
+        "description": "Cuando un agente dispare contra un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo a 2\" o menos de un marcador de objetivo o un agente enemigo, puedes repetir uno de tus dados de defensa.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -392,7 +392,7 @@
         "type": "strategic",
         "cps": "1PM",
         "name": "Decreto Terminal",
-        "description": "Siempre que un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo dispare contra un agente enemigo a 6\" de él, o siempre que un agente <b>ARTILLERO</b> de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo dispare, las armas a distancia de ese agente amigo tienen la regla de armas Equilibrada.",
+        "description": "Cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo dispare contra un agente enemigo a 6\" o menos de él, o cuando un agente <b>TIRADOR</b> <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> dispare, las armas a distancia de ese agente amigo tienen la regla de armas Equilibrada.",
         "typename": "Ardid de Estrategia"
     },
     {
@@ -400,8 +400,8 @@
         "faction": "exaction-squad",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Refuerzo Brutal",
-        "description": "Usa este ardid de tiroteo durante la activación de un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, antes o después de que realice una acción. Elige un agente enemigo dentro de su zona de control. Otro agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo puede realizar inmediatamente una acción de <b>Combatir</b> gratuita, pero solo puede combatir contra ese agente enemigo.",
+        "name": "Refuerzos Brutales",
+        "description": "Usa este ardid de tiroteo durante la activación de un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, antes o después de que realice una acción. Elige un agente enemigo en su zona de control. Otro agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo distinto puede realizar inmediatamente una acción libre de <b>Combatir</b>, pero solo puede combatir contra el agente enemigo elegido.",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -410,7 +410,7 @@
         "type": "tactical",
         "cps": "1PM",
         "name": "Orden de Ejecución",
-        "description": "<p>Usa este ardid de tiroteo cuando un agente enemigo realice una acción de misión (excluyendo <b>Operar Compuerta</b>). Alternativamente, úsalo al final de la Fase de Tiroteo y selecciona un agente enemigo que controle un marcador de objetivo.</p>\n\n<p>En cualquier caso, la próxima vez que tu oponente <span class=\"text-info-emphasis\">fuera a activar</span> ese agente enemigo, puedes interrumpir esa activación y activar un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo preparado. Si lo haces, durante esa activación, ese agente amigo debe combatir contra o disparar contra ese agente enemigo, y no puede hacerlo contra ningún otro agente enemigo hasta que lo haga (si esto no es posible, la activación de ese agente amigo se cancela).</p>\n\n<p>Después de completar la activación de ese agente amigo, continúa la activación de ese agente enemigo (si es posible). No puedes usar este ardid de tiroteo de nuevo hasta que ese agente enemigo sea activado o incapacitado.</p>",
+        "description": "<p>Usa este ardid de tiroteo cuando un agente enemigo realice una acción de misión (salvo <b>Operar portillo</b>). Como alternativa, úsalo al final de la fase de tiroteo y elige un agente enemigo que controle un marcador de objetivo.</p>\n\n<p>En cualquiera de los dos casos, la siguiente vez que tu oponente vaya a activar a ese agente enemigo, puedes interrumpir dicha activación y activar a un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo apostado. Si lo haces, durante dicha activación el agente amigo en cuestión deberá combatir o disparar contra ese agente enemigo, y hasta entonces no podrá hacerlo contra ningún otro agente enemigo (si esto no es posible, la activación del agente amigo en cuestión se cancelará).</p>\n\n<p>Tras completar la activación del agente amigo en cuestión, sigue con la activación de ese agente enemigo (si es posible). No puedes volver a usar este ardid de tiroteo hasta que ese agente enemigo sea activado o quede incapacitado.</p>",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -418,8 +418,8 @@
         "faction": "exaction-squad",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Castigo Exacto",
-        "description": "Usa este ardid de tiroteo después de que un agente enemigo dispare contra o combata contra un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo a 6\" de él, y ese agente amigo no sea incapacitado como resultado. Ese agente amigo puede realizar inmediatamente una acción gratuita de <b>Disparar</b> o <b>Combatir</b>, pero otros agentes enemigos no pueden ser seleccionados como blanco válido o para combatir durante esa acción (ten en cuenta que los objetivos secundarios de la regla de armas Estallido aún pueden ser seleccionados).",
+        "name": "Ejecutar Castigo",
+        "description": "Usa este ardid de tiroteo después de que un agente enemigo dispare o combata contra un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo a 6\" o menos de él, y ese agente amigo no quede incapacitado debido a ello. El agente amigo en cuestión puede realizar inmediatamente o bien una acción libre de <b>Combatir</b> o bien una acción libre de <b>Disparar</b>, pero durante dicha acción no se puede combatir contra otro agente enemigo distinto ni tomar como blanco de un disparo a otro agente enemigo distinto (los blancos secundarios de la regla de armas Área sí que pueden ser elegidos de manera normal).",
         "typename": "Ardid de Tiroteo"
     },
     {
@@ -427,8 +427,8 @@
         "faction": "exaction-squad",
         "type": "tactical",
         "cps": "1PM",
-        "name": "Largo Brazo de la Ley del Emperador",
-        "description": "Usa este ardid de tiroteo cuando un agente de la <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté realizando la acción <b>Disparar</b> y selecciones un arma con la regla de armas Alcance x (excluyendo granada frag o krak). Hasta el final de esa acción, suma 3\" a x.",
+        "name": "La Implacable Ley del Emperador",
+        "description": "Usa este ardid de tiroteo cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo realice la acción <b>Disparar</b> y hayas elegido un arma con la regla de armas Alcance x (salvo granada frag o perforante). Hasta el final de dicha acción, suma 3\" a la x.",
         "typename": "Ardid de Tiroteo"
     },
     {

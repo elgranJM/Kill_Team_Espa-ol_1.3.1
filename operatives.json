@@ -18386,7 +18386,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/4",
-                        "RA": "Letal 5+, Choque, Represor<span class=\"faction\">*</span>"
+                        "RA": "Choque, Letal 5+, Represor<span class=\"faction\">*</span>"
                     }
                 }
             ],
@@ -18397,13 +18397,13 @@
                 },
                 {
                     "name": "Nuncio Aquila",
-                    "description": "<ul><li>Cuando un agente enemigo se encuentre a 3\" o menos de tu marcador de Nuncio Aquila (o de este agente, si tu marcador de Nuncio Aquila no se encuentra en la zona de aniquilación), tu oponente debe gastar 1 PA adicional por ese agente enemigo para realizar la acción <b>Recoger marcador</b> y acciones de misión.</li></ul> <ul><li>Al determinar el control de un marcador, el atributo LPA total de los agentes enemigos que lo disputan se considera como si fuese 1 menos si hay por lo menos uno de esos agentes enemigos a 3\" o menos de tu marcador de Nuncio Aquila (o de este agente, si tu marcador de Nuncio Aquila no se encuentra en la zona de aniquilación). Ten en cuenta que esto no es un cambio al atributo LPA, por lo que cualquier cambio se acumula con esto.</li></ul>"
+                    "description": "<ul><li>Cuando un agente enemigo se encuentre a 3\" o menos de tu marcador de Nuncio Aquila (o de este agente, si tu marcador de Nuncio Aquila no se encuentra en la zona de aniquilación), tu oponente debe gastar 1 PA adicional por ese agente enemigo para realizar la acción <b>Recoger marcador</b> y acciones de misión.</li><li>Al determinar el control de un marcador, el atributo LPA total de los agentes enemigos que lo disputan se considera como si fuese 1 menos si hay por lo menos uno de esos agentes enemigos a 3\" o menos de tu marcador de Nuncio Aquila (o de este agente, si tu marcador de Nuncio Aquila no se encuentra en la zona de aniquilación). Ten en cuenta que esto no es un cambio al atributo LPA, por lo que cualquier cambio se acumula con esto.</li></ul>"
                 }
             ],
             "uniqueActions": [
                 {
                     "name": "DESPLEGAR NUNCIO AQUILA",
-                    "cost": "0PA",
+                    "cost": "0 PA",
                     "description": [
                         "Si tu marcador de Nuncio Aquila no se encuentra en la zona de aniquilación, colócalo a 6\" o menos horizontalmente de este agente; de lo contrario, mueve tu marcador de Nuncio Aquila hasta 6\" horizontalmente. Si este agente es retirado de la zona de aniquilación, retira también de la zona de aniquilación tu marcador de Nuncio Aquila."
                     ],
@@ -18457,13 +18457,13 @@
             "abilities": [
                 {
                     "name": "¡Sanitario!",
-                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo vaya a resultar incapacitado estando a 3\" o menos de este agente y visible para él, puedes usar esta regla, siempre que ninguno de los dos agentes amigos implicados estén en la zona de control de un agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le queda 1 herida, y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de agente. Resta 1 al LPA de ambos agentes hasta el final de sus siguientes activaciones respectivas, y si esta regla se usó durante la activación del otro agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
+                    "description": "La primera vez durante cada punto de inflexión que otro agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo vaya a resultar incapacitado estando a 3\" o menos de este agente y visible para él, puedes usar esta regla, siempre que ninguno de los dos agentes amigos implicados estén en la zona de control de un agente enemigo. Si lo haces, ese agente amigo no resulta incapacitado, le queda 1 herida, y no puede resultar incapacitado durante el resto de la acción. Después de esa acción, ese agente amigo puede realizar inmediatamente una acción libre de <b>Correr</b>, pero debe terminar ese movimiento en la zona de control de este agente. Resta 1 al LPA de ambos agentes hasta el final de sus siguientes activaciones respectivas, y si esta regla se usó durante la activación del otro agente amigo, esa activación termina. No puedes usar esta regla si este agente resulta incapacitado, o si es una acción de <b>Disparar</b> y este agente iba a ser el blanco primario o secundario."
                 }
             ],
             "uniqueActions": [
                 {
                     "name": "BOTIQUÍN",
-                    "cost": "1PA",
+                    "cost": "1 PA",
                     "description": [
                         "Elige un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo en la zona de control de este agente para que recupere hasta 2D3 heridas perdidas. No puede ser un agente en el que se haya usado la regla ¡Sanitario! durante este punto de inflexión."
                     ],
@@ -18586,19 +18586,19 @@
             "abilities": [
                 {
                     "name": "Instructor",
-                    "description": "Cuando este agente sea activado, puedes activar a la vez a un agente R-VR CIBERMASTÍN amigo apostado. Completa sus activaciones de acción en acción en cualquier orden."
+                    "description": "Cuando este agente sea activado, puedes activar a la vez a un agente <b>R-VR CIBERMASTÍN</b> <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo apostado. Completa sus activaciones de acción en acción en cualquier orden."
                 },
                 {
-                    "name": "Pauta de Ataque",
-                    "description": "<b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Elige una de las siguientes pautas de ataque para que la tenga en esa batalla un agente R-VR CIBERMASTÍN <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo: <ul><li><b>Agresivo:</b> Sus armas de combate tienen la regla de armas Implacable</li></ul> <ul><li><b>Ágil:</b> Suma 2\" a su atributo Movimiento.</li></ul> <ul><li><b>Defensivo:</b> Mejora en 1 su atributo Salvación</li></ul>"
+                    "name": "Pauta de ataque",
+                    "description": "<b>GAMBITO ESTRATÉGICO</b> en el primer punto de inflexión. Elige dos de las siguientes pautas de ataque para que las tenga en esa batalla un agente <b>R-VR CIBERMASTÍN</b> <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo:<ul><li><b>Agresivo:</b> Sus armas de combate tienen la regla de armas Implacable.</li><li><b>Ágil:</b> Suma 2\" a su atributo Movimiento.</li><li><b>Defensivo:</b> Mejora en 1 su atributo Salvación.</li></ul>"
                 }
             ],
             "uniqueActions": [
                 {
                     "name": "ORDEN R-VR",
-                    "cost": "0PA",
+                    "cost": "0 PA",
                     "description": [
-                        "Elige un agente R-VR CIBERMASTÍN <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo y cambia su pauta de ataque."
+                        "Elige un agente <b>R-VR CIBERMASTÍN</b> <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo y cambia una de sus pautas de ataque."
                     ]
                 }
             ],
@@ -18629,21 +18629,21 @@
             "abilities": [
                 {
                     "name": "Bestia",
-                    "description": "Este agente solo puede realizar acciones de Apresar, <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>,<b>Combatir</b>, En guardia, <b>Reposicionarse</b>, <b>Recoger marcador</b> y <b>Colocar marcador</b>. No puede usar ninguna arma que no aparezca en su tarjeta de datos."
+                    "description": "Este agente solo puede realizar acciones de <b>Apresar</b>, <b>Cargar</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b>, <b>En guardia</b>, <b>Reposicionarse</b>, <b>Recoger marcador</b> y <b>Colocar marcador</b>. No puede usar ninguna arma que no aparezca en su tarjeta de datos."
                 }
             ],
             "uniqueActions": [
                 {
                     "name": "APRESAR",
-                    "cost": "0PA",
+                    "cost": "0 PA",
                     "description": [
-                        "Elige un agente enemigo en la zona de control de este agente. Hasta que ese agente enemigo deje de estar en la zona de control de este agente, o hasta que este agente realice esta acción de nuevo, empeora en 1 el atributo Impactar de las armas de ese agente enemigo y dicho enemigo no puede realizar la acción <b>Retroceder</b>."
+                        "Elige un agente enemigo en la zona de control de este agente. Hasta que ese agente enemigo deje de estar en la zona de control de este agente, o hasta que este agente realice esta acción de nuevo (lo que ocurra antes), empeora en 1 el atributo Impactar de las armas de ese agente enemigo (esto no es acumulativo con estar lesionado); además, ese agente enemigo no puede realizar la acción <b>Retroceder</b>."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
+                    "description_no": "Este agente no puede realizar esta acción a menos que haya un agente enemigo en su zona de control."
                 }
             ],
             "keywords": "<span class=\"faction\">ESCUADRA DE EXACCIÓN</span>, IMPERIUM, ADEPTUS ARBITES, R-VR CIBERMASTÍN",
-            "peana": "28"
+            "peana": "25"
         },
         {
             "id": "exaction-gunner",
@@ -18659,9 +18659,9 @@
                     "name": "Lanzagranadas",
                     "type": "ranged",
                     "stats": {
-                        "A": "4",
+                        "A": "5",
                         "HP/HA": "4+",
-                        "Dñ": "4/6",
+                        "Dñ": "4/5",
                         "RA": "Penetración 1"
                     }
                 },
@@ -18692,7 +18692,7 @@
                         "A": "4",
                         "HP/HA": "3+",
                         "Dñ": "4/5",
-                        "RA": "Alcance 12\" Severa, Aturdidora"
+                        "RA": "Alcance 12\", Aturdidora, Severa"
                     }
                 },
                 {
@@ -18755,15 +18755,15 @@
             "abilities": [
                 {
                     "name": "Atento a todo",
-                    "description": "Una vez por activación de este agente, puede realizar la acción de <b>Recoger marcador</b>, <b>Colocar marcador</b>, Lentes de guía, o una acción de misión por 1 PA menos."
+                    "description": "Una vez por activación de este agente, puede realizar la acción de <b>Recoger marcador</b>, <b>Colocar marcador</b>, <b>Lentes de guía</b>, o una acción de misión por 1 PA menos."
                 }
             ],
             "uniqueActions": [
                 {
                     "name": "LENTES DE GUÍA",
-                    "cost": "1PA",
+                    "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo visible para este agente. Hasta el inicio de la siguiente activación de este agente, cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo dispare, combata o contraataque contra ese agente enemigo, las armas de ese agente tienen la regla de arma Letal 5+ y Severa."
+                        "Elige un agente enemigo visible para este agente. Hasta el inicio de la siguiente activación de este agente, hasta que este agente quede incapacitado o realice esta acción de nuevo (lo que ocurra antes), cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo dispare, combata o contraataque contra ese agente enemigo, las armas de ese agente amigo tienen las reglas de armas Letal 5+ y Severa."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -18787,7 +18787,7 @@
                     "stats": {
                         "A": "4",
                         "HP/HA": "2+",
-                        "Dñ": "4/6",
+                        "Dñ": "4/0",
                         "RA": "Devastadora 4, Pesada, Posición oculta<span class=\"faction\">*</span>, Silenciosa"
                     }
                 },
@@ -18831,7 +18831,7 @@
             "uniqueActions": [
                 {
                     "name": "ÓPTICA",
-                    "cost": "1PA",
+                    "cost": "1 PA",
                     "description": [
                         "Hasta el inicio de la siguiente activación de este agente, los perfiles oculta e inmóvil de su escopeta de verdugo tienen la regla de armas Letal 5+, y además cuando dispare con dicha arma los agentes enemigos no pueden estar ofuscados."
                     ],
@@ -18891,9 +18891,9 @@
             "uniqueActions": [
                 {
                     "name": "AVISTAR",
-                    "cost": "1PA",
+                    "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente enemigo visible para este agente. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo a 3\" o menos de este agente dispare contra el agente enemigo elegido, puedes usar este efecto. Si lo haces, <ul><li>Las armas a distancia de este agente tienen la regla de armas Buscadora (ligera)</li></ul> <ul><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
+                        "Elige un agente enemigo visible para este agente y a 8\" o menos de él. Hasta el final del punto de inflexión, cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo dispare contra el agente enemigo elegido, puedes usar este efecto. Si lo haces:<ul><li>Las armas a distancia de ese agente amigo tienen la regla de armas Buscadora (Ligero).</li><li>Ese agente enemigo no puede estar ofuscado.</li></ul>"
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -18986,7 +18986,7 @@
             "abilities": [
                 {
                     "name": "Vigilancia en combate cerrado",
-                    "description": "Este agente puede realizar la acción <b>Disparar</b> (salvo En guardia) mientras se encuentre en la zona de control de un agente enemigo, pero solo si no ha realizado la acción <b>Cargar</b> durante esa activación, o si es una reacción. Este agente no tiene prohibido realizar la acción de <b>Cargar</b> tras realizar la acción de <b>Disparar</b>."
+                    "description": "Este agente puede realizar la acción <b>Disparar</b> (salvo <b>En guardia</b>) mientras se encuentre en la zona de control de un agente enemigo, pero solo si no ha realizado la acción <b>Cargar</b> durante esa activación, o si es un contraataque. Este agente no tiene prohibido realizar la acción de <b>Cargar</b> tras realizar la acción de <b>Disparar</b>."
                 }
             ],
             "uniqueActions": [],
@@ -19038,7 +19038,7 @@
             "uniqueActions": [
                 {
                     "name": "SEÑAL",
-                    "cost": "1PA",
+                    "cost": "1 PA",
                     "description": [
                         "<b>APOYO</b>. Elige un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo distinto visible para este agente. Hasta el final de la siguiente activación de ese agente, suma 1 a su atributo LPA."
                     ],

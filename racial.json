@@ -198,28 +198,28 @@
             "faction": "exaction-squad",
             "type": "team",
             "name": "Agentes",
-            "description": "1 agente <b>PROCURADOR-EXACTOR</b> con una de las siguientes\nopciones:\n<ul>\n  <li>Escopeta de combate; porra de represión</li>\n  <li>Pistola escopeta; maza dominadora y escudo de asalto</li>\n</ul>\n10 agentes de <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> elegido de la\nsiguiente lista:\n<ul>\n  <li><b>CASTIGADOR</b></li>\n  <li><b>QUIRURGO</b></li>\n  <li><b>MAESTRO DE LA CORREA</b></li>\n  <li><b>CIBERMASTÍN R-VR</b></li>\n  <li><b>MALOCATOR</b></li>\n  <li><b>TIRADOR</b></li>\n  <li><b>REVELATUM</b></li>\n  <li><b>SUBDUCTOR</b></li>\n  <li><b>VIGILANTE</b></li>\n  <li><b>SIGNIFICADOR VOX</b></li>\n  <li>\n    <b>TIRADOR</b> equipado con una de las siguientes opciones:\n    <ul>\n      <li>Lanzagranadas; porra de represión</li>\n      <li>Ametralladora pesada; porra de represión</li>\n      <li>Webber; porra de represión</li>\n    </ul>\n  </li>\n</ul>\n<p>\nSalvo agentes <b>TIRADOR</b>, <b>SUBDUCTOR</b> y <b>VIGILANTE</b>, tu comando solo puede incluir cada agente en esta lista una vez. Tu comando solo puede incluir hasta dos agentes <b>TIRADOR</b> (cada uno debe tener una opción diferente) y hasta cuatro agentes <b>SUBDUCTOR</b>.\n</p>\n"
+            "description": "<p>1 agente <b>PROCTOJUEZ</b> <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> con una de las siguientes opciones:</p>\n<ul>\n  <li>Escopeta de combate; porra de supresión</li>\n  <li>Pistolón; mazo dominador y escudo de asalto</li>\n</ul>\n<p>10 agentes <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> elegidos de la siguiente lista:</p>\n<ul>\n  <li><b>CASTIGADOR</b></li>\n  <li><b>MARTIRIZADOR</b></li>\n  <li><b>AMO ADIESTRADOR</b></li>\n  <li><b>R-VR CIBERMASTÍN</b></li>\n  <li><b>DOCTOFORENSE</b></li>\n  <li><b>OJO PRECISO</b></li>\n  <li><b>REVELATUM</b></li>\n  <li><b>SOJUZGADOR</b></li>\n  <li><b>VIGILANTE</b></li>\n  <li><b>VOCOTRANSMISOR</b></li>\n  <li><b>TIRADOR</b> con una de las siguientes opciones:\n    <ul>\n      <li>Lanzagranadas; porra de supresión</li>\n      <li>Ametralladora pesada; porra de supresión</li>\n      <li>Lanzarredes; porra de supresión</li>\n    </ul>\n  </li>\n</ul>\n<p>Salvo agentes <b>TIRADOR</b>, <b>SOJUZGADOR</b> y <b>VIGILANTE</b>, tu comando solo puede incluir uno de cada uno de los agentes de esta lista. Tu comando solo puede incluir hasta dos agentes <b>TIRADOR</b> (cada uno debe tener una opción distinta) y hasta cuatro agentes <b>SOJUZGADOR</b>.</p>\n"
         },
         {
             "id_racial": 27,
             "faction": "exaction-squad",
             "type": "racial",
-            "name": "Eficiencia Implacable",
-            "description": "<p>Siempre que un agente de <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté disparando (excluyendo con granadas frag o krak) y estés Eligendo un blanco válido, puedes usar esta regla. Si lo haces, tener otros agentes de <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigos en la zona de control de un agente enemigo no impide que ese agente enemigo sea Elegido. </p>"
+            "name": "Eficiencia Despiadada",
+            "description": "<p>Cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo dispare (excepto si dispara una granada frag o perforante) y estés eligiendo un blanco válido, puedes usar esta regla. Si lo haces, tener a otros agentes <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigos dentro de la zona de control de un agente enemigo no impide que dicho agente enemigo sea elegido.</p>"
         },
         {
             "id_racial": 28,
             "faction": "exaction-squad",
             "type": "racial",
-            "name": "Reprimir",
-            "description": "<p>Algunas armas en las reglas de este equipo tienen la regla de armas Reprimir a continuación.</p>\n<p><b><span class=\"faction\">*</span>Reprimir:</b> Siempre que este agente esté usando este arma:</p>\n<ul>\n  <li>Cada uno de tus bloqueos puede asignarse para bloquear dos éxitos no resueltos (en lugar de uno).</li>\n  <li>Si este agente está tomando represalias, resuelves el primer dado de ataque (es decir, defensor en lugar de atacante).</li>\n</ul>"
+            "name": "Represor",
+            "description": "<p>Algunas armas que aparecen en las reglas de este comando tienen la regla de armas Represor, indicada abajo.</p>\n<p><b><span class=\"faction\">*</span>Represor:</b> Cuando este agente use esta arma:</p>\n<ul>\n  <li>Cada uno de tus bloqueos puede asignarse a bloquear dos éxitos no resueltos (en lugar de uno).</li>\n  <li>Si este agente está contraatacando, resuelve el primer dado de ataque (es decir, el defensor en lugar del atacante).</li>\n</ul>"
         },
         {
             "id_racial": 29,
             "faction": "exaction-squad",
             "type": "racial",
-            "name": "Marcado para la Justicia",
-            "description": "<b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo para que sea tu marca para el punto de inflexión. Siempre que un agente de <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo esté disparando, combatiendo o tomando represalias contra tu marca, las armas de ese agente amigo tienen la regla de armas Castigadora. Siempre que tu\nmarca sea incapacitada, puedes elegir un nuevo agente enemigo para que sea tu marca para el punto de inflexión (y puedes continuar haciéndolo durante este punto de inflexión)."
+            "name": "Marcado para Hacer Justicia",
+            "description": "<p><b>GAMBITO ESTRATÉGICO</b>. Elige un agente enemigo para que sea tu marca en ese punto de inflexión. Cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo dispare, combata o contraataque contra tu marca, las armas de ese agente amigo tienen la regla de armas Castigadora. Cuando tu marca quede incapacitada, puedes elegir a un nuevo agente enemigo para que sea tu marca en ese punto de inflexión (y puedes seguir haciéndolo durante este punto de inflexión).</p>"
         }
     ],
     "farstalker-kinband": [

@@ -405,14 +405,14 @@
   {
     "id_equip": 45,
     "faction": "exaction-squad",
-    "name": "Cartuchos de Edición Especial",
-    "description": "Hasta dos veces por Punto de Inflexión, cuando un agente EXACTION SQUAD amigo esté realizando la acción de <b>Disparar</b> y selecciones una escopeta de combate, escopeta verdugo, pistola escopeta con mira o pistola escopeta, puedes usar esta regla. Si lo haces, selecciona una de las siguientes reglas de arma para que esa arma la tenga hasta el final de esa acción: <ul><li>Saturación.</li></ul> <ul><li>Penetración 1, pero solo si el objetivo tiene un atributo de Salvación de 3+ o mejor.</li></ul> <ul><li>Torrente 1\", pero no puedes seleccionar más de un objetivo secundario.</li></ul>"
+    "name": "Proyectiles Especiales",
+    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo realice una acción de <b>Disparar</b> y elijas una escopeta de combate, una escopeta de verdugo, un pistolón con mira láser o un pistolón, puedes usar esta regla. Si lo haces, elige una de las siguientes reglas de armas para que la tenga el arma en cuestión hasta el final de esa acción:<ul><li>Saturación.</li><li>Penetración 1, pero solo si el blanco tiene un atributo Salvación de 3+ o mejor.</li><li>Ráfaga 1\", pero no puedes elegir más de un blanco secundario.</li></ul>"
   },
   {
     "id_equip": 46,
     "faction": "exaction-squad",
     "name": "Visor de Espejo Reforzado",
-    "description": "Puedes ignorar cualquier cambio en los atributos de LPA de los agentes EXACTION SQUAD amigos, y no se ven afectados por la regla de armas Choque de los agentes enemigos.", 
+    "description": "Puedes ignorar cualesquiera cambios a los atributos LPA de los agentes <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigos, que además no se ven afectados por la regla de armas Choque de los agentes enemigos.", 
     "weapon": [],
     "action": []
   },
@@ -420,15 +420,15 @@
     "id_equip": 47,
     "faction": "exaction-squad",
     "name": "Esposas",
-    "description": "Siempre que un agente enemigo fuera a realizar la acción de Destrabarse mientras está dentro del área de control de un agente EXACTION SQUAD amigo, si no hay otros agentes enemigos dentro del área de control de ese agente amigo, puedes usar esta regla. Si lo haces, lanza dos D6, o un D6 si ese agente enemigo tiene un atributo de Heridas mayor que ese agente amigo. Si algún resultado es un 4+, ese agente enemigo no puede realizar esa acción durante esa activación o reacción (no se gastan PA en ella).", 
+    "description": "Cuando un agente enemigo vaya a realizar una acción de <b>Retroceder</b> mientras se encuentra en la zona de control de un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, si no hay otros agentes enemigos en la zona de control de ese agente amigo, puedes usar esta regla. En tal caso, tira dos D6, o un D6 si ese agente enemigo tiene un atributo Heridas mayor que el del agente amigo en cuestión. Si algún resultado es un 4+, dicho agente enemigo no puede realizar esa acción durante esta activación o contraataque (no se gastan PA en ella), y no puedes usar esta regla otra vez durante este punto de inflexión.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 48,
     "faction": "exaction-squad",
-    "name": "Fósforo-Lumen Estroboscópico",
-    "description": "Siempre que un agente enemigo esté disparando contra, combatiendo contra o contraataque contra un agente EXACTION SQUAD amigo a 2\" o menos de él, tu adversario no puede repetir sus resultados de dados de ataque de 1.", 
+    "name": "Bengala Estroboscópica",
+    "description": "Cuando un agente enemigo dispare, combata o contraataque contra un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo a 2\" o menos de él, tu oponente no puede repetir los dados de ataque con resultados de 1.", 
     "weapon": [],
     "action": []
   },

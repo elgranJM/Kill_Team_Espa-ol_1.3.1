@@ -284,5 +284,17 @@
             "security",
             "seek-destroy"
         ]
+    },
+    "exodite-dragon-masters":{
+        "archetypes":[
+            "recon",
+            "seek-destroy"
+        ]
+    },
+    "spectre-squad":{
+        "archetypes":[
+            "infiltration",
+            "recon"
+        ]
     }
 }

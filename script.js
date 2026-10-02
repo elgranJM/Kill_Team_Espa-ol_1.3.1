@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'hunter-clade', 'imperial-navy-breachers', 'inquisitorial-agent',
             'kasrkin', 'novitiates', 'phobos', 'ratling', 'sanctifiers',
             'scouts', 'tempestus-aquilons', 'wolf-scouts', 'strike-force-variel',
-            'exaction-squad', 'veteran-guardsmen', 'celestian-insidiants'
+            'exaction-squad', 'veteran-guardsmen', 'celestian-insidiants',
+            'spectre-squad'
         ],
         'Caos': [
             'blooded', 'chaos-cult', 'fellgor-ravagers', 'gellerpox',
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'farstalker-kinband', 'hearthkyn-salvager', 'hierotek', 'kabalite',
             'kommandos', 'mandrakes', 'pathfinders', 'raveners', 'vespid-stingwings',
             'void-dancer-troupe', 'wrecka-krew', 'wyrmblade', 'yaegirs',
-            'xv26-battlesuits'
+            'xv26-battlesuits', 'exodite-dragon-masters'
         ]
     };
 
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'exaction-squad': 'Escuadra de Exacción',
         'veteran-guardsmen': 'Korps de la Muerte',
         'celestian-insidiants': 'Insidiadora Celeste',
+        'spectre-squad': 'Escuadra Espectro',
 
         'blooded': 'Ungidos',
         'chaos-cult': 'Culto del Caos',
@@ -121,7 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'wrecka-krew': 'Demoledorez',
         'wyrmblade': 'FiloSierpe',
         'yaegirs': 'Yaegirs Hernkyn',
-        'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo'
+        'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo',
+        'exodite-dragon-masters': 'Señores Dragoneros Exoditas'
     };
 
     // --- Inicialización ---

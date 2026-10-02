@@ -194,6 +194,7 @@ const factionTranslations = {
     'exaction-squad': 'Escuadra de Exacción',
     'veteran-guardsmen': 'Korps de la Muerte',
     'celestian-insidiants': 'Insidiadora Celeste',
+    'spectre-squad': 'Escuadra Espectro',
     'blooded': 'Ungidos',
     'chaos-cult': 'Culto del Caos',
     'fellgor-ravagers': 'Expoliagores Impíos',
@@ -221,7 +222,8 @@ const factionTranslations = {
     'wrecka-krew': 'Demoledorez',
     'wyrmblade': 'FiloSierpe',
     'yaegirs': 'Yaegirs Hernkyn',
-    'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo'
+    'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo',
+    'exodite-dragon-masters': 'Señores Dragoneros Exoditas'
 };
 
 // Traducciones visuales para los arquetipos

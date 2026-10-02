@@ -1,12 +1,28 @@
 
 // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
 let gameState = {
-    p1: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] },
-    p2: { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] },
+    p1: { 
+        primary: null, 
+        strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, 
+        equipment: [],
+        tpScores: {
+            crit: { 1: 0, 2: 0, 3: 0, 4: 0 },
+            tac: { 1: 0, 2: 0, 3: 0, 4: 0 }
+        }
+    },
+    p2: { 
+        primary: null, 
+        strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, 
+        equipment: [],
+        tpScores: {
+            crit: { 1: 0, 2: 0, 3: 0, 4: 0 },
+            tac: { 1: 0, 2: 0, 3: 0, 4: 0 }
+        }
+    },
     revealed: false,
     currentPlayerSelecting: 1,
     currentPlayerSelectingEquip: 'p1',
-    loading: false // <-- NUEVO: Bandera de control para evitar sobreescrituras en carga
+    loading: false
 };
 
 // Tabla de umbrales para Kill Op (100% fiel al reglamento entregado)
@@ -178,7 +194,7 @@ function executeResetGame() {
     gameState.p2.equipment = [];
     gameState.revealed = false;
 
-    // --- NUEVO: Reset de la Operación Crítica (CritOp) Global ---
+    // --- Reset de la Operación Crítica (CritOp) Global ---
     const globalCritOp = document.getElementById('global-critop');
     if (globalCritOp) {
         globalCritOp.value = ""; // Devuelve el selector a la opción por defecto ("Selecciona una CritOp...")
@@ -198,6 +214,11 @@ function executeResetGame() {
         // Forzar la actualización de TacOps para limpiar el listado y ocultar imágenes de facción antiguas
         if (typeof updateTacOps === 'function') {
             updateTacOps(p);
+        }
+
+        const archetypesDisplay = document.getElementById(`${p}-archetypes-display`);
+        if (archetypesDisplay) {
+            archetypesDisplay.innerHTML = "";
         }
 
         // Reestablecer el selector de TacOp al valor por defecto
@@ -272,11 +293,18 @@ function executeResetGame() {
 
 function updateCounter(elementId, amount, max = 99) {
     const el = document.getElementById(elementId);
-    let current = parseInt(el.innerText);
+    if (!el) return;
+
+    let current = parseInt(el.innerText) || 0;
     let newVal = current + amount;
 
     if (newVal >= 0 && newVal <= max) {
         el.innerText = newVal;
+
+        // CRÍTICO: Persistir inmediatamente ante cualquier suma o resta numérica
+        if (typeof saveGameState === 'function') {
+            saveGameState();
+        }
     }
 }
 
@@ -288,6 +316,61 @@ function calculatePlayerKillScore(kills, enemySize) {
         if (kills >= thresholds[i]) score++;
     }
     return score;
+}
+
+function changeMissionScore(playerPrefix, type, amount) {
+    const currentTP = getCurrentTurn();
+    const elementId = `${playerPrefix}-${type}-vp`;
+    const scoreEl = document.getElementById(elementId);
+    if (!scoreEl) return;
+
+    let currentScore = parseInt(scoreEl.innerText) || 0;
+
+    // Si es restar, se permite libremente hasta 0
+    if (amount < 0) {
+        if (currentScore > 0) {
+            updateCounter(elementId, amount, 6);
+            calculateTotals();
+        }
+        return;
+    }
+
+    // Validación de TacOp: Requiere estar revelada para poder sumar
+    if (type === 'tac') {
+        const isRevealed = !document.getElementById(`${playerPrefix}-revealed-badge-container`).classList.contains('d-none');
+        if (!isRevealed) {
+            mostrarNotificacion("Regla no cumplida: Debes revelar tu TacOp antes de poder registrar sus puntos de victoria.");
+            return;
+        }
+    }
+
+    // Obtener la llave de la misión seleccionada
+    let missionKey = "";
+    if (type === 'crit') {
+        missionKey = document.getElementById('global-critop')?.value;
+        if (!missionKey) {
+            mostrarNotificacion("Falta selección: Selecciona primero una CritOp para puntuar.");
+            return;
+        }
+    } else if (type === 'tac') {
+        missionKey = document.getElementById(`${playerPrefix}-tacop`)?.value;
+        if (!missionKey) {
+            mostrarNotificacion("Falta selección: Selecciona y fija tu TacOp antes de puntuar.");
+            return;
+        }
+    }
+
+    // Calcular el límite dinámico estricto para este TP según el JSON
+    const maxAllowedThisTP = calculateDynamicLimit(type, missionKey, currentTP);
+
+    if (currentScore + amount > maxAllowedThisTP) {
+        mostrarNotificacion(`Límite de misión alcanzado: Máximo ${maxAllowedThisTP} PV permitidos en el Punto de Inflexión ${currentTP}.`);
+        return;
+    }
+
+    // Si pasa las validaciones, suma y recalcula
+    updateCounter(elementId, amount, maxAllowedThisTP);
+    calculateTotals();
 }
 
 function calculateTotals() {
@@ -365,6 +448,28 @@ function validateKills(playerPrefix) {
     // Si las muertes actuales superan el nuevo tamaño rival, las reducimos al tope
     if (currentKills > enemySize) {
         killsDisplay.innerText = enemySize;
+    }
+}
+
+// Actualiza una pequeña etiqueta con el resumen del setup en la cabecera colapsable
+function updateSetupSummary() {
+    const critSelect = document.getElementById('global-critop');
+    const kzSelect = document.getElementById('killzoneSelect');
+    const mapSelect = document.getElementById('mapSelect');
+    const badge = document.getElementById('badgeResumenMision');
+    
+    if (!badge) return;
+
+    const critText = critSelect.selectedIndex > 0 ? critSelect.options[critSelect.selectedIndex].text : '';
+    const kzText = kzSelect.selectedIndex > 0 ? kzSelect.options[kzSelect.selectedIndex].text : '';
+    const mapText = mapSelect.selectedIndex > 0 ? mapSelect.options[mapSelect.selectedIndex].text : '';
+
+    if (critText || kzText) {
+        badge.innerText = `${critText || 'Sin CritOp'} | ${kzText || 'Sin Killzone'} ${mapText ? '(' + mapText + ')' : ''}`;
+        badge.className = 'badge bg-warning text-dark fw-bold small d-none d-md-inline';
+    } else {
+        badge.innerText = 'Setup inicial';
+        badge.className = 'badge bg-secondary fw-normal small d-none d-md-inline';
     }
 }
 
@@ -526,8 +631,7 @@ function updateTacOps(playerPrefix) {
     document.getElementById(`${playerPrefix}-tacop-container`)?.classList.add('d-flex');
     document.getElementById(`${playerPrefix}-tacop-status`)?.classList.add('d-none');
     document.getElementById(`${playerPrefix}-tacop-status`)?.classList.remove('d-flex');
-    document.getElementById(`${playerPrefix}-secret-badge`)?.classList.remove('d-none');
-    document.getElementById(`${playerPrefix}-btn-reveal-tacop`)?.classList.remove('d-none');
+    document.getElementById(`${playerPrefix}-btn-reveal-tacop`)?.classList.remove('d-none'); // Reestablecer botón
     document.getElementById(`${playerPrefix}-revealed-badge`)?.classList.add('d-none');
     let lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
     if (lockBtn) lockBtn.disabled = true;
@@ -616,17 +720,23 @@ function revealTacOp(playerPrefix) {
     const selectEl = document.getElementById(`${playerPrefix}-tacop`);
     const selectedText = selectEl.options[selectEl.selectedIndex].text;
 
-    document.getElementById(`${playerPrefix}-secret-badge`).classList.add('d-none');
-    document.getElementById(`${playerPrefix}-btn-reveal-tacop`).classList.add('d-none');
+    // Ocultar el botón de revelar
+    const btnReveal = document.getElementById(`${playerPrefix}-btn-reveal-tacop`);
+    if (btnReveal) btnReveal.classList.add('d-none');
 
+    // Asignar texto y mostrar el contenedor revelado
     const revealedBadge = document.getElementById(`${playerPrefix}-revealed-badge`);
-    revealedBadge.innerText = selectedText;
+    if (revealedBadge) {
+        revealedBadge.innerText = selectedText;
+        revealedBadge.classList.remove('d-none');
+    }
 
     const revealedContainer = document.getElementById(`${playerPrefix}-revealed-badge-container`);
-    revealedContainer.classList.remove('d-none');
-    revealedContainer.classList.add('d-flex');
+    if (revealedContainer) {
+        revealedContainer.classList.remove('d-none');
+        revealedContainer.classList.add('d-flex');
+    }
 
-    // NUEVO: Guardar estado cuando la misión secundaria se hace pública
     saveGameState();
 }
 
@@ -639,12 +749,40 @@ function getCurrentTurn() {
 }
 
 function calculateDynamicLimit(type, key, turn) {
-    if (type === 'crit' && dataCritOps[key]) {
-        const op = dataCritOps[key];
-        if (Array.isArray(op.limite_puntos) && op.limite_puntos[turn - 1] !== undefined) {
-            return op.limite_puntos[turn - 1];
-        }
+    let op = null;
+    if (type === 'crit' && dataCritOps) {
+        op = dataCritOps[key];
+    } else if (type === 'tac' && dataTacOps) {
+        op = dataTacOps[key];
     }
+
+    if (!op || !op.limite_puntos) {
+        return 6; // Límite general si la operación no define restricciones
+    }
+
+    let limiteData = op.limite_puntos;
+
+    // Si viene envuelto en un arreglo [ { ronda_1: ..., ... } ]
+    if (Array.isArray(limiteData) && limiteData.length > 0 && typeof limiteData[0] === 'object') {
+        limiteData = limiteData[0];
+    }
+
+    // Caso A: Estructura por Rondas del JSON ({ ronda_1: 0, ronda_2: 1, ... })
+    if (typeof limiteData === 'object' && !Array.isArray(limiteData)) {
+        let acumulado = 0;
+        for (let i = 1; i <= turn; i++) {
+            const puntosRonda = parseInt(limiteData[`ronda_${i}`]) || 0;
+            acumulado += puntosRonda;
+        }
+        return Math.min(6, acumulado);
+    }
+
+    // Caso B: Respaldo defensivo si viene como arreglo plano [0, 1, 3, 6]
+    if (Array.isArray(limiteData)) {
+        const val = limiteData[turn - 1];
+        return val !== undefined ? Math.min(6, parseInt(val) || 0) : 6;
+    }
+
     return 6;
 }
 
@@ -841,21 +979,22 @@ function syncStratSectionsHeight() {
     const c2 = document.getElementById('p2-active-strategic-ploys');
     if (!c1 || !c2) return;
 
-    // En dispositivos móviles (menor a 768px), las columnas van apiladas
+    // En dispositivos móviles (menor a 768px), las columnas van apiladas verticalmente
     if (window.innerWidth < 768) {
         c1.style.minHeight = 'auto';
         c2.style.minHeight = 'auto';
         return;
     }
 
-    // Resetear para medir altura natural
+    // Resetear para medir la altura natural real del contenido
     c1.style.minHeight = 'auto';
     c2.style.minHeight = 'auto';
 
     requestAnimationFrame(() => {
         const h1 = c1.scrollHeight || c1.offsetHeight;
         const h2 = c2.scrollHeight || c2.offsetHeight;
-        const maxH = Math.max(h1, h2, 52);
+        // Reducido de 52px a 36px para ajustarse exactamente a una fila compacta
+        const maxH = Math.max(h1, h2, 36);
 
         c1.style.minHeight = `${maxH}px`;
         c2.style.minHeight = `${maxH}px`;
@@ -882,7 +1021,7 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
     }
 
     if (activeList.length === 0) {
-        activeContainer.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-2"><small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small></div>';
+        activeContainer.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-1"><small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún ardid activo.</small></div>';
         syncStratSectionsHeight();
         return;
     }
@@ -892,26 +1031,30 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
         const ploy = dataPloys.find(p => p.id_ploy === ployId);
         if (!ploy) return;
 
+        // Tarjeta compacta: py-1 px-2 en lugar de p-2
         html += `
-                    <div class="active-ploy-card p-2 bg-white rounded border border-warning shadow-sm">
-                        <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="fw-bold text-dark small">
-                                <i class="bi bi-lightning-charge-fill text-warning me-1"></i>${ploy.name}
-                            </span>
-                            <div class="d-flex align-items-center gap-1">
-                                <span class="badge bg-dark" style="font-size: 0.7rem;">${ploy.cps || '1 PM'}</span>
-                                <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0" 
-                                    onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" 
-                                    title="Desactivar ardid y recuperar PM">
-                                    <i class="bi bi-x-circle-fill"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="text-dark small lh-sm" style="font-size: 0.82rem;">
-                            ${ploy.description}
-                        </div>
+            <div class="active-ploy-card py-1 px-2 bg-white rounded border border-warning shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-1 overflow-hidden me-2">
+                        <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0 flex-shrink-0" 
+                            onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" 
+                            title="Desactivar ardid y recuperar PM" style="line-height: 1;">
+                            <i class="bi bi-x-circle-fill" style="font-size: 0.8rem;"></i>
+                        </button>
+                        <span class="badge bg-dark flex-shrink-0 py-0 px-1" style="font-size: 0.65rem;">${ploy.cps || '1 PM'}</span>
+                        <span class="fw-bold text-dark text-truncate" style="font-size: 0.78rem;" title="${ploy.name}">
+                            <i class="bi bi-lightning-charge-fill text-warning me-1"></i>${ploy.name}
+                        </span>
                     </div>
-                `;
+                    <div class="flex-shrink-0">
+                        <button type="button" class="btn btn-outline-dark btn-sm py-0 px-2" 
+                            onclick="showPloyDetails(${ploy.id_ploy})" title="Ver descripción del ardid" style="font-size: 0.75rem;">
+                            <i class="bi bi-eye-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
     });
 
     activeContainer.innerHTML = html;
@@ -1207,7 +1350,8 @@ function syncEquipSectionsHeight() {
     requestAnimationFrame(() => {
         const h1 = c1.scrollHeight || c1.offsetHeight;
         const h2 = c2.scrollHeight || c2.offsetHeight;
-        const maxH = Math.max(h1, h2, 44);
+        // Reducido de 44px a 34px como altura base
+        const maxH = Math.max(h1, h2, 34);
 
         c1.style.minHeight = `${maxH}px`;
         c2.style.minHeight = `${maxH}px`;
@@ -1233,12 +1377,13 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
     }
 
     if (list.length === 0) {
-        container.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-2"><small class="text-muted fst-italic text-center">Ningún equipamiento seleccionado (hasta 4).</small></div>';
+        container.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-1"><small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún equipamiento seleccionado (hasta 4).</small></div>';
         syncEquipSectionsHeight();
         return;
     }
 
-    let html = '';
+    // Cuadrícula: 1 col en móviles pequeños, 2 cols en sm (>= 576px)
+    let html = '<div class="row row-cols-1 row-cols-sm-2 g-1">';
     list.forEach(equipId => {
         const item = dataEquipment.find(e => e.id_equip === equipId);
         if (!item) return;
@@ -1247,33 +1392,33 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
         const hasWeapons = item.weapon && item.weapon.length > 0;
         const hasActions = item.action && item.action.length > 0;
 
+        // Tarjeta compacta: py-1 px-2 y gap ajustado
         html += `
-                <!-- Indexador: Equipamiento Helper v1.0 -->
-                    <div class="active-equip-card p-2 bg-white rounded border ${playerPrefix === 'p1' ? 'border-primary' : 'border-danger'} border-opacity-50 shadow-sm">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center gap-1 overflow-hidden">
-                                <button type="button" class="btn btn-outline-danger btn-sm py-0 px-1 border-0" 
-                                    onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})" title="Quitar equipamiento">
-                                    <i class="bi bi-x-circle-fill"></i>
-                                </button>
-                                <span class="badge ${isUniversal ? 'bg-secondary' : (playerPrefix === 'p1' ? 'bg-primary' : 'bg-danger')} text-white" style="font-size: 0.7rem;">
-                                    ${isUniversal ? 'Universal' : 'Facción'}
-                                </span>
-                                <span class="fw-bold text-dark small text-truncate" style="font-size: 1rem;" title="${item.name}">${item.name}</span>
-                                ${hasWeapons ? '<span class="badge bg-dark" style="font-size: 0.85rem;" title="Armas"><i class="bi bi-crosshair"></i></span>' : ''}
-                                ${hasActions ? '<span class="badge bg-warning text-dark" style="font-size: 0.6rem;" title="Acción Única"><i class="bi bi-lightning-fill"></i></span>' : ''}
-                            </div>
-                            <div class="d-flex align-items-center gap-1 flex-shrink-0">
-                                <button type="button" class="btn btn-outline-dark btn-sm py-0 px-4" style="font-size: 1.15rem;" 
-                                    onclick="showEquipmentDetails(${item.id_equip})" title="Ver detalles y reglas completas">
-                                    <i class="bi bi-eye-fill"></i>
-                                </button>
-                                
-                            </div>
+            <div class="col">
+                <div class="active-equip-card py-1 px-2 bg-white rounded border ${playerPrefix === 'p1' ? 'border-primary' : 'border-danger'} border-opacity-50 shadow-sm h-100">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
+                        <div class="d-flex align-items-center gap-1 overflow-hidden">
+                            <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0 flex-shrink-0" 
+                                onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})" title="Quitar equipamiento" style="line-height: 1;">
+                                <i class="bi bi-x-circle-fill" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <span class="badge ${isUniversal ? 'bg-secondary' : (playerPrefix === 'p1' ? 'bg-primary' : 'bg-danger')} text-white flex-shrink-0 py-0 px-1" style="font-size: 0.6rem;">
+                                ${isUniversal ? 'Univ.' : 'Fac.'}
+                            </span>
+                            <span class="fw-bold text-dark text-truncate" style="font-size: 0.78rem;" title="${item.name}">${item.name}</span>
+                            ${hasWeapons ? '<span class="badge bg-dark flex-shrink-0 py-0 px-1" style="font-size: 0.65rem;" title="Armas"><i class="bi bi-crosshair"></i></span>' : ''}
+                            ${hasActions ? '<span class="badge bg-warning text-dark flex-shrink-0 py-0 px-1" style="font-size: 0.55rem;" title="Acción Única"><i class="bi bi-lightning-fill"></i></span>' : ''}
                         </div>
+                        <button type="button" class="btn btn-outline-dark btn-sm py-0 px-2 flex-shrink-0" 
+                            onclick="showEquipmentDetails(${item.id_equip})" title="Ver detalles y reglas completas" style="font-size: 0.75rem;">
+                            <i class="bi bi-eye-fill"></i>
+                        </button>
                     </div>
-                `;
+                </div>
+            </div>
+        `;
     });
+    html += '</div>';
 
     container.innerHTML = html;
     syncEquipSectionsHeight();
@@ -1305,7 +1450,33 @@ function showEquipmentDetails(equipId) {
     modal.show();
 }
 
-// 4. (Opcional pero recomendado) Función de validación masiva si el usuario cambia de turno hacia atrás
+function showPloyDetails(ployId) {
+    const ploy = dataPloys.find(p => p.id_ploy === ployId);
+    if (!ploy) return;
+
+    const modalTitleEl = document.getElementById('ployDetailModalTitle');
+    const modalBodyEl = document.getElementById('ployDetailModalBody');
+
+    if (modalTitleEl) {
+        modalTitleEl.innerHTML = `<i class="bi bi-hourglass-split text-warning me-2"></i>${ploy.name} <span class="badge bg-warning text-dark fs-6 ms-2">${ploy.cps || '1 PM'}</span>`;
+    }
+
+    if (modalBodyEl) {
+        modalBodyEl.innerHTML = `
+            <div class="p-3 bg-light rounded border border-warning border-opacity-50">
+                <div class="badge bg-dark mb-2 text-uppercase">Ardid de Estrategia</div>
+                <div class="text-dark lh-base small">
+                    ${ploy.description}
+                </div>
+            </div>
+        `;
+    }
+
+    const modal = new bootstrap.Modal(document.getElementById('strategicPloyDetailModal'));
+    modal.show();
+}
+
+// 4. Función de validación masiva si el usuario cambia de turno hacia atrás
 function validateAllScores() {
     ['p1', 'p2'].forEach(playerPrefix => {
         let currentTurn = getCurrentTurn();
@@ -1917,11 +2088,12 @@ function loadGameState() {
                 }
             });
         }
+        updateSetupSummary();
 
-        gameState.loading = false; // <-- NUEVO: Apagar bandera, la UI ya es estable y fiel al guardado
+        gameState.loading = false; // <-- Apagar bandera, la UI ya es estable y fiel al guardado
         mostrarNotificacion("Partida cargada exitosamente.");
     } catch (e) {
-        gameState.loading = false; // <-- NUEVO: Asegurar apagado si el JSON está corrupto
+        gameState.loading = false; // <-- Asegurar apagado si el JSON está corrupto
         console.error("Error cargando partida guardada:", e);
         localStorage.removeItem('killTeamMatchState');
     }
@@ -2257,4 +2429,35 @@ function showTerrainModal() {
     document.getElementById('terrainModalBody').innerHTML = html;
     const modal = new bootstrap.Modal(document.getElementById('terrainViewModal'));
     modal.show();
+}
+
+// --- SISTEMA DE VISUALIZACIÓN MÓVIL OPCIONAL ---
+function setMobilePlayerView(mode) {
+    const colP1 = document.getElementById('p1-column-wrapper');
+    const colP2 = document.getElementById('p2-column-wrapper');
+
+    if (!colP1 || !colP2) return;
+
+    // Solo opera si el ancho de pantalla es inferior a 768px
+    if (window.innerWidth >= 768) {
+        colP1.classList.remove('d-none');
+        colP2.classList.remove('d-none');
+        return;
+    }
+
+    if (mode === 'p1') {
+        colP1.classList.remove('d-none');
+        colP2.classList.add('d-none');
+    } else if (mode === 'p2') {
+        colP1.classList.add('d-none');
+        colP2.classList.remove('d-none');
+    } else {
+        // Modo 'all': despliega ambas tarjetas apiladas para scroll vertical normal
+        colP1.classList.remove('d-none');
+        colP2.classList.remove('d-none');
+    }
+
+    // Recalcular alturas si el usuario regresa a la vista completa
+    if (typeof syncStratSectionsHeight === 'function') syncStratSectionsHeight();
+    if (typeof syncEquipSectionsHeight === 'function') syncEquipSectionsHeight();
 }

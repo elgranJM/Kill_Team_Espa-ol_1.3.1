@@ -76,10 +76,10 @@ function executeResetGame() {
 
     // 1. Reset de Estado Lógico Interno para los 4
     ['p1', 'p2', 'p3', 'p4'].forEach(p => {
-        gameState[p] = { 
-            strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, 
-            equipment: [], 
-            team: document.getElementById(`${p}-team`)?.value || 'A', 
+        gameState[p] = {
+            strategicPloys: { 1: [], 2: [], 3: [], 4: [] },
+            equipment: [],
+            team: document.getElementById(`${p}-team`)?.value || 'A',
             killOpVP: 0,
             tpScores: { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } }
         };
@@ -1873,6 +1873,11 @@ function loadGameState() {
 
         updateSetupSummary();
 
+        // Forzar el renderizado correcto de la vista móvil o de PC tras restaurar a los jugadores
+        const checkedRadio = document.querySelector('input[name="mobileViewRadio"]:checked');
+        const mode = checkedRadio ? checkedRadio.id.replace('viewMode', '').toLowerCase() : 'all';
+        setMobilePlayerView(mode);
+
         gameState.loading = false; // Finalizar carga
         mostrarNotificacion("Partida asimétrica cargada exitosamente.");
     } catch (e) {
@@ -2268,11 +2273,21 @@ function getActivePlayers() {
 function togglePlayerMode(count, shouldSave = true) {
     gameState.playerCount = count;
     const p4Container = document.getElementById('p4-container');
+    const labelP4 = document.getElementById('labelViewModeP4');
+    const radioP4 = document.getElementById('viewModeP4');
 
     if (p4Container) {
         if (count === 3) {
             p4Container.classList.add('d-none');
-            // Purgar los puntos del Jugador 4 para que no afecten los totales si se ocultó a mitad de partida
+            if (labelP4) labelP4.classList.add('d-none'); // Ocultar botón J4 móvil
+
+            // Si estaba en la vista móvil de J4, regresarlo a "Todos"
+            if (radioP4 && radioP4.checked) {
+                document.getElementById('viewModeAll').checked = true;
+                setMobilePlayerView('all');
+            }
+
+            // Purgar los puntos del Jugador 4 para que no afecten los totales
             if (gameState.p4) gameState.p4.killOpVP = 0;
             const critVpEl = document.getElementById('p4-crit-vp');
             const killsTpEl = document.getElementById('p4-kills-current-tp');
@@ -2280,8 +2295,61 @@ function togglePlayerMode(count, shouldSave = true) {
             if (killsTpEl) killsTpEl.innerText = "0";
         } else {
             p4Container.classList.remove('d-none');
+            if (labelP4) labelP4.classList.remove('d-none'); // Mostrar botón J4 móvil
         }
     }
 
     if (shouldSave) saveGameState();
 }
+
+// --- SISTEMA DE VISUALIZACIÓN MÓVIL OPCIONAL ASIMÉTRICO ---
+function setMobilePlayerView(mode) {
+    const colP1 = document.getElementById('card-p1');
+    const colP2 = document.getElementById('card-p2');
+    const colP3 = document.getElementById('card-p3');
+    const colP4 = document.getElementById('p4-container');
+
+    if (!colP1 || !colP2 || !colP3 || !colP4) return;
+
+    // Si es PC/Tablet (>= 768px), forzamos a mostrar todas las que correspondan al modo (3 o 4)
+    if (window.innerWidth >= 768) {
+        colP1.classList.remove('d-none');
+        colP2.classList.remove('d-none');
+        colP3.classList.remove('d-none');
+        if (gameState.playerCount === 4) colP4.classList.remove('d-none');
+        else colP4.classList.add('d-none');
+        return;
+    }
+
+    // Modo Móvil (< 768px)
+    if (mode === 'all') {
+        colP1.classList.remove('d-none');
+        colP2.classList.remove('d-none');
+        colP3.classList.remove('d-none');
+        if (gameState.playerCount === 4) colP4.classList.remove('d-none');
+        else colP4.classList.add('d-none');
+    } else {
+        // Ocultar todas primero
+        colP1.classList.add('d-none');
+        colP2.classList.add('d-none');
+        colP3.classList.add('d-none');
+        colP4.classList.add('d-none');
+
+        // Mostrar solo la seleccionada
+        if (mode === 'p1') colP1.classList.remove('d-none');
+        if (mode === 'p2') colP2.classList.remove('d-none');
+        if (mode === 'p3') colP3.classList.remove('d-none');
+        if (mode === 'p4' && gameState.playerCount === 4) colP4.classList.remove('d-none');
+    }
+
+    // Recalcular alturas visuales
+    if (typeof syncStratSectionsHeight === 'function') syncStratSectionsHeight();
+    if (typeof syncEquipSectionsHeight === 'function') syncEquipSectionsHeight();
+}
+
+// Listener para ajustar automáticamente si se rota la pantalla o redimensiona
+window.addEventListener('resize', () => {
+    const checkedRadio = document.querySelector('input[name="mobileViewRadio"]:checked');
+    const mode = checkedRadio ? checkedRadio.id.replace('viewMode', '').toLowerCase() : 'all';
+    setMobilePlayerView(mode);
+});

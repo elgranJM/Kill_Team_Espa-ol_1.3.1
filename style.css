@@ -1249,3 +1249,268 @@ body.dark-mode .tacop.card {
         display: block !important;
     }
 }
+
+/* =================================================================== */
+/*  TRACKER DE PARTIDAS (1v1 y ASIMÉTRICO)                             */
+/* =================================================================== */
+
+:root {
+    --player1-color: #0b6be1; /* Azul Bootstrap */
+    --player2-color: #dc3545; /* Rojo Bootstrap */
+    --player3-color: #198754; /* Verde Bootstrap */
+    --player4-color: #ffc107; /* Amarillo Bootstrap */
+}
+
+/* Estilos de las Tarjetas de Jugador */
+.player-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    padding: 1.25rem !important; /* Margen unificado para PC */
+}
+
+.player-1 { border-color: var(--player1-color); }
+.player-2 { border-color: var(--player2-color); }
+.player-3 { border-color: var(--player3-color); }
+.player-4 { border-color: var(--player4-color); }
+
+.name-input {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    background: transparent;
+    width: 100%;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 2px;
+}
+
+.name-input:focus {
+    outline: none;
+    border-bottom-color: #333;
+}
+
+.counter-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score-display {
+    font-size: 1.8rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.vp-total-header,
+.vp-total {
+    font-size: 1.9rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* Contenedores Internos (.op-section) */
+.op-section {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.8rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Avatares */
+.faction-avatar {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+/* Ajustes para pantallas horizontales angostas (celulares en landscape) */
+@media (max-width: 992px) and (orientation: landscape) {
+    .player-card {
+        padding: 0.75rem !important;
+    }
+    .op-section {
+        padding: 0.45rem 0.6rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .counter-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+    .score-display {
+        font-size: 1.3rem;
+        min-width: 30px;
+    }
+    .name-input {
+        font-size: 1.2rem;
+    }
+}
+
+/* =================================================================== */
+/*  CONTENEDORES COMPACTOS DE ARDIDES Y EQUIPAMIENTO                   */
+/* =================================================================== */
+
+.strat-ploys-container {
+    min-height: 38px;
+    max-height: 90px;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #ffc107 #f8f9fa;
+    transition: min-height 0.2s ease;
+}
+
+.equip-list-container {
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #0b6be1 #f8f9fa;
+    transition: min-height 0.2s ease;
+}
+
+/* Scrollbars personalizados por jugador para equipos */
+.player-2 .equip-list-container { scrollbar-color: #dc3545 #f8f9fa; }
+.player-3 .equip-list-container { scrollbar-color: #198754 #f8f9fa; }
+.player-4 .equip-list-container { scrollbar-color: #ffc107 #f8f9fa; }
+
+.strat-ploys-container::-webkit-scrollbar,
+.equip-list-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.strat-ploys-container::-webkit-scrollbar-track,
+.equip-list-container::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.strat-ploys-container::-webkit-scrollbar-thumb { background-color: #ffc107; border-radius: 4px; }
+.equip-list-container::-webkit-scrollbar-thumb { background-color: #0b6be1; border-radius: 4px; }
+.player-2 .equip-list-container::-webkit-scrollbar-thumb { background-color: #dc3545; }
+.player-3 .equip-list-container::-webkit-scrollbar-thumb { background-color: #198754; }
+.player-4 .equip-list-container::-webkit-scrollbar-thumb { background-color: #ffc107; }
+
+/* Tarjetas Dinámicas Interactuables */
+.active-ploy-card,
+.active-equip-card,
+.equip-select-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.active-ploy-card { border-left: 4px solid #ffc107 !important; }
+.active-ploy-card:hover,
+.active-equip-card:hover { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); }
+
+.ploy-modal-card { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.ploy-modal-card.is-active { border-color: #198754 !important; background-color: #f8fff9; }
+
+.equip-select-card.is-selected {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 2px #198754 !important;
+}
+
+/* =================================================================== */
+/*  UTILIDADES Y MODALES ESPECÍFICOS                                   */
+/* =================================================================== */
+
+/* Pestañas de Reglas de Facción */
+#factionModalTabs .nav-link {
+    color: #198754;
+    transition: all 0.2s ease;
+}
+
+#factionModalTabs .nav-link:hover { background-color: #f1f3f5; }
+#factionModalTabs .nav-link.active {
+    background-color: #198754 !important;
+    color: #ffffff !important;
+}
+#factionModalTabs .nav-link.active i { color: #ffffff !important; }
+
+/* Visibilidad Obligatoria en PC (Controlador de Vista Móvil) */
+@media (min-width: 768px) {
+    .mobile-card-col { display: block !important; }
+}
+
+/* =================================================================== */
+/*  MODAL DE EQUIPAMIENTO: TABLAS Y ACCIONES ÚNICAS                    */
+/* =================================================================== */
+
+/* Tabla de Armas */
+.equip-weapon-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.equip-weapon-table th {
+    background-color: #212529; /* Negro/Gris oscuro */
+    color: white;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border: 1px solid #444;
+}
+
+.equip-weapon-table td {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+/* Caja de Acciones Únicas */
+.equip-action-box {
+    border: 2px solid #d35400; /* Borde naranja oscuro */
+    margin-top: 15px;
+}
+
+.equip-action-header {
+    background-color: #e67e22; /* Naranja Kill Team */
+    color: white;
+    padding: 5px 10px;
+}
+
+.equip-action-content {
+    background-color: #fff;
+    border-top: 1px solid #d35400;
+}
+
+/* Reglas Sí / No */
+.equip-action-yes {
+    background-color: #d4edda;
+    border-left: 5px solid #28a745;
+    color: #155724;
+    font-size: 0.9rem;
+}
+
+.equip-action-no {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+    color: #721c24;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* =================================================================== */
+/*  LÍNEA DE TIEMPO (SECUENCIA DE JUEGO)                               */
+/* =================================================================== */
+
+.timeline { list-style-type: none; position: relative; padding-left: 0; }
+.timeline-item { margin-bottom: 2rem; position: relative; }
+.timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 20px; width: 4px; background: #e9ecef; }
+body.dark-mode .timeline::before { background: #495057; }
+.timeline-icon { position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: #0d6efd; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; z-index: 1; }
+.timeline-content { margin-left: 60px; background: #a2a3a3; padding: 1.5rem; border-radius: 0.25rem; }
+body.dark-mode .timeline-content { background: #343a40; }
+.timeline-content h5 { margin-top: 0; }

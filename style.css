@@ -14,7 +14,8 @@
 }
 
 .text-naranja {
-    color: #ff8244 !important; /* ANTERIOR -> color: #ff7f00 !important; */
+    color: #ff8244 !important;
+    /* ANTERIOR -> color: #ff7f00 !important; */
 }
 
 /* Estilo Outline Naranja */
@@ -886,6 +887,7 @@ body.dark-mode .tacop.card {
     border-bottom: 1px solid var(--bs-dark-orange);
     color: var(--bs-dark-orange);
 }
+
 /* Pestañas inactivas: texto e iconos claros sobre el fondo oscuro */
 #factionTabs .nav-link {
     color: #ced4da;
@@ -893,7 +895,8 @@ body.dark-mode .tacop.card {
 }
 
 #factionTabs .nav-link:hover {
-    color: #ff7f00; /* Efecto hover en naranja táctico */
+    color: #ff7f00;
+    /* Efecto hover en naranja táctico */
 }
 
 /* Pestaña ACTIVA: bloque blanco con letras e icono en negro puro */
@@ -973,5 +976,276 @@ body.dark-mode .tacop.card {
 }
 
 .slot-secuencia {
-    background-color: #f4f4f4 !important; /* Fondo claro para el contenido de la secuencia, sobreescribe al color de timeline-content */
+    background-color: #f4f4f4 !important;
+    /* Fondo claro para el contenido de la secuencia, sobreescribe al color de timeline-content */
+}
+
+/* PARTIDAS */
+/* Estilos específicos para el Score Tracker */
+.player-card {
+    border: 1.5px solid transparent;
+    transition: all 0.3s ease;
+    padding: 0.15rem 0.5rem !important;
+}
+
+.player-1 {
+    border-color: #0b6be1;
+}
+
+.player-2 {
+    border-color: #dc3545;
+}
+
+.player-3 {
+    border-color: #198754;
+}
+
+/* Verde Bootstrap */
+
+.player-4 {
+    border-color: #ffc107;
+}
+
+/* Amarillo Bootstrap */
+
+.name-input {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    background: transparent;
+    width: 100%;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 2px;
+}
+
+.name-input:focus {
+    outline: none;
+    border-bottom-color: #333;
+}
+
+.vp-total-header {
+    font-size: 1.8rem;
+    /* Reducido de 2.2rem/3.5rem sin perder jerarquía */
+    font-weight: 900;
+    line-height: 1;
+}
+
+.faction-avatar {
+    width: 50px;
+    /* Reducido de 75px */
+    height: 50px;
+    object-fit: cover;
+    background-color: #ffffff;
+    flex-shrink: 0;
+}
+
+.counter-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score-display {
+    font-size: 1.8rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.vp-total {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.op-section {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Ajustes para pantallas horizontales angostas (celulares en horizontal) */
+@media (max-width: 992px) and (orientation: landscape) {
+    .player-card {
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        padding: 1rem !important;
+        /* Reemplaza el p-4 excesivo */
+    }
+
+    .vp-total {
+        font-size: 2.5rem;
+    }
+
+    .op-section {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 0.35rem;
+        padding: 0.45rem 0.6rem !important;
+        /* Antes: 1rem */
+        margin-bottom: 0.5rem !important;
+        /* Antes: 1rem */
+    }
+
+    .counter-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+    }
+
+    .score-display {
+        font-size: 1.3rem;
+        min-width: 30px;
+    }
+
+    .name-input {
+        font-size: 1.2rem;
+    }
+}
+
+/* Estilos de pestañas del Modal de Facción */
+#factionModalTabs .nav-link {
+    color: #198754;
+    transition: all 0.2s ease;
+}
+
+#factionModalTabs .nav-link:hover {
+    background-color: #f1f3f5;
+}
+
+#factionModalTabs .nav-link.active {
+    background-color: #198754 !important;
+    color: #ffffff !important;
+}
+
+#factionModalTabs .nav-link.active i {
+    color: #ffffff !important;
+}
+
+/* Estilos para el visor de misiones y acciones */
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.icon-yes {
+    background-image: url('./resources/game_rules_files/yes.svg');
+}
+
+.icon-no {
+    background-image: url('./resources/game_rules_files/no.svg');
+}
+
+/* Estilos para Ardides Estratégicos */
+.strat-ploys-container {
+    min-height: 52px;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #ffc107 #f8f9fa;
+    transition: min-height 0.2s ease;
+}
+
+.strat-ploys-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.strat-ploys-container::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.strat-ploys-container::-webkit-scrollbar-thumb {
+    background-color: #ffc107;
+    border-radius: 4px;
+}
+
+.active-ploy-card {
+    border-left: 4px solid #ffc107 !important;
+    transition: all 0.2s ease;
+}
+
+.active-ploy-card:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ploy-modal-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ploy-modal-card.is-active {
+    border-color: #198754 !important;
+    background-color: #f8fff9;
+}
+
+/* Estilos específicos para Equipamiento Táctico */
+.equip-list-container {
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #0b6be1 #f8f9fa;
+    transition: min-height 0.2s ease;
+}
+
+.equip-list-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.equip-list-container::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.equip-list-container::-webkit-scrollbar-thumb {
+    background-color: #0b6be1;
+    border-radius: 4px;
+}
+
+.player-2 .equip-list-container {
+    scrollbar-color: #dc3545 #f8f9fa;
+}
+
+.player-2 .equip-list-container::-webkit-scrollbar-thumb {
+    background-color: #dc3545;
+}
+
+.active-equip-card {
+    transition: all 0.2s ease;
+}
+
+.active-equip-card:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.equip-select-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.equip-select-card.is-selected {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 2px #198754 !important;
+}
+
+/* Asegura que en resoluciones de tablet y PC (>= 768px) ambas columnas sean siempre visibles */
+@media (min-width: 768px) {
+
+    #p1-column-wrapper,
+    #p2-column-wrapper {
+        display: block !important;
+    }
 }

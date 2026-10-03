@@ -13,7 +13,7 @@ let gameState = {
 // --- SISTEMA DE DECLARACIÓN DE VICTORIA ---
 function showMatchResult() {
     let teams = {};
-    
+
     // Recopilar totales previniendo la duplicación de la KillOp compartida
     getActivePlayers().forEach(p => {
         const playerCard = document.querySelector(`.player-${p.replace('p', '')}`);
@@ -21,7 +21,7 @@ function showMatchResult() {
             let critScore = parseInt(document.getElementById(`${p}-crit-vp`)?.innerText) || 0;
             let teamId = document.getElementById(`${p}-team`)?.value || 'A';
             let name = document.querySelector(`.player-${p.replace('p', '')} .name-input`)?.value.trim() || `Jugador ${p.replace('p', '')}`;
-            
+
             if (!teams[teamId]) {
                 // Inicializamos el puntaje del equipo con el KillOp compartido
                 let sharedKillOp = gameState[p] ? gameState[p].killOpVP : 0;
@@ -79,25 +79,26 @@ function executeResetGame() {
         gameState[p] = { 
             strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, 
             equipment: [], 
-            team: defaultTeams[p], // Asignar el equipo por defecto
-            killOpVP: 0 
+            team: document.getElementById(`${p}-team`)?.value || 'A', 
+            killOpVP: 0,
+            tpScores: { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } }
         };
     });
     gameState.revealed = false;
 
     const globalCritOp = document.getElementById('global-critop');
-    if (globalCritOp) globalCritOp.value = ""; 
+    if (globalCritOp) globalCritOp.value = "";
 
     // 2. Reset de Interfaz en Bucle Unificado
     ['p1', 'p2', 'p3', 'p4'].forEach((p) => {
         const playerNum = p.replace('p', '');
-        
+
         const nameInput = document.querySelector(`.player-${playerNum} .name-input`);
-        if(nameInput) nameInput.value = `Jugador ${playerNum}`;
-        
+        if (nameInput) nameInput.value = `Jugador ${playerNum}`;
+
         const factionSelect = document.getElementById(`${p}-faction`);
         if (factionSelect) factionSelect.value = "";
-        
+
         const imgEl = document.getElementById(`${p}-faction-img`);
         if (imgEl) imgEl.src = "./resources/facciones/blank.png";
 
@@ -107,7 +108,7 @@ function executeResetGame() {
         // Resetear el selector de equipos en el DOM
         const teamSelect = document.getElementById(`${p}-team`);
         if (teamSelect) teamSelect.value = defaultTeams[p];
-        
+
         const idsToReset = [`${p}-crit-vp`, `${p}-kills-current-tp`, `${p}-killop-total`];
         idsToReset.forEach(id => {
             const el = document.getElementById(id);
@@ -128,7 +129,7 @@ function executeResetGame() {
     calculateTotals();
 
     if (typeof localStorage !== 'undefined') {
-        localStorage.removeItem('killTeamMatchState');
+        localStorage.removeItem('killTeamMatchState_asymetric');
     }
 
     mostrarNotificacion("Partida reiniciada por completo. Tableros limpios.");
@@ -142,7 +143,7 @@ function updateCounter(elementId, amount, max = 99) {
 
     if (newVal >= 0 && newVal <= max) {
         el.innerText = newVal;
-        
+
         // Disparar la persistencia automáticamente con cualquier cambio numérico
         if (typeof saveGameState === 'function') {
             saveGameState();
@@ -150,26 +151,84 @@ function updateCounter(elementId, amount, max = 99) {
     }
 }
 
+function changeMissionScore(playerPrefix, type, amount) {
+    const currentTP = getCurrentTurn();
+    const elementId = `${playerPrefix}-${type}-vp`;
+    const scoreEl = document.getElementById(elementId);
+    if (!scoreEl) return;
+
+    let currentScore = parseInt(scoreEl.innerText) || 0;
+
+    // Asegurar estructura de tpScores en memoria para el modo asimétrico
+    if (!gameState[playerPrefix].tpScores) {
+        gameState[playerPrefix].tpScores = { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } };
+    }
+    if (!gameState[playerPrefix].tpScores[type]) {
+        gameState[playerPrefix].tpScores[type] = { 1: 0, 2: 0, 3: 0, 4: 0 };
+    }
+
+    let scoredInCurrentTP = gameState[playerPrefix].tpScores[type][currentTP] || 0;
+
+    // --- ACCIÓN DE RESTAR ---
+    if (amount < 0) {
+        if (currentScore > 0) {
+            // Descontar del registro del TP actual si tiene puntos registrados
+            if (scoredInCurrentTP > 0) {
+                gameState[playerPrefix].tpScores[type][currentTP]--;
+            }
+            updateCounter(elementId, amount, 6);
+            calculateTotals();
+        }
+        return;
+    }
+
+    // --- ACCIÓN DE SUMAR (VALIDACIONES ESTRICTAS) ---
+    let missionKey = document.getElementById('global-critop')?.value;
+    if (!missionKey) {
+        mostrarNotificacion("Falta selección: Selecciona primero una CritOp para puntuar.");
+        return;
+    }
+
+    // Regla 1 de Kill Team: Máximo 2 PV obtenibles por misión en un mismo TP
+    const maxPerTP = 2;
+    if (scoredInCurrentTP + amount > maxPerTP) {
+        mostrarNotificacion(`Límite por turno alcanzado: No puedes obtener más de ${maxPerTP} PV de esta operación en el TP ${currentTP}.`);
+        return;
+    }
+
+    // Regla 2 de Kill Team: Límite acumulado progresivo según el JSON
+    const maxAccumulatedThisTP = calculateDynamicLimit(type, missionKey, currentTP);
+    if (currentScore + amount > maxAccumulatedThisTP) {
+        mostrarNotificacion(`Límite acumulado alcanzado: Máximo ${maxAccumulatedThisTP} PV acumulados permitidos al finalizar el TP ${currentTP}.`);
+        return;
+    }
+
+    // Aplicar la suma en la memoria y en el DOM
+    gameState[playerPrefix].tpScores[type][currentTP] += amount;
+    updateCounter(elementId, amount, maxAccumulatedThisTP);
+    calculateTotals();
+}
+
 function calculateTotals() {
     getActivePlayers().forEach(p => {
         if (gameState[p]) {
             let crit = parseInt(document.getElementById(`${p}-crit-vp`)?.innerText) || 0;
             let kill = gameState[p].killOpVP || 0;
-            
+
             // En modo asimétrico solo se suma CritOp + KillOp
             let grandTotal = crit + kill;
-            
+
             const totalEl = document.getElementById(`${p}-total-vp`);
             if (totalEl) totalEl.innerText = grandTotal;
         }
     });
-    
+
     // Garantizar que si el J4 está inactivo, su total visual quede en 0
     if (gameState.playerCount === 3) {
         const p4TotalEl = document.getElementById('p4-total-vp');
         if (p4TotalEl) p4TotalEl.innerText = "0";
     }
-    
+
     saveGameState();
 }
 
@@ -271,7 +330,7 @@ async function initializeMatchData() {
         populateWeaponRules();
         loadGameState();
         calculateTotals();
-        
+
         // CORRECCIÓN: Bucle unificado para inicializar a los 4 jugadores
         ['p1', 'p2', 'p3', 'p4'].forEach(p => {
             updateActiveStrategicPloysDisplay(p);
@@ -285,6 +344,28 @@ async function initializeMatchData() {
     }
 }
 
+// Actualiza una pequeña etiqueta con el resumen del setup en la cabecera colapsable
+function updateSetupSummary() {
+    const critSelect = document.getElementById('global-critop');
+    const kzSelect = document.getElementById('killzoneSelect');
+    const mapSelect = document.getElementById('mapSelect');
+    const badge = document.getElementById('badgeResumenMision');
+
+    if (!badge) return;
+
+    const critText = (critSelect && critSelect.selectedIndex > 0) ? critSelect.options[critSelect.selectedIndex].text : '';
+    const kzText = (kzSelect && kzSelect.selectedIndex > 0) ? kzSelect.options[kzSelect.selectedIndex].text : '';
+    const mapText = (mapSelect && mapSelect.selectedIndex > 0) ? mapSelect.options[mapSelect.selectedIndex].text : '';
+
+    if (critText || kzText) {
+        badge.innerText = `${critText || 'Sin CritOp'} | ${kzText || 'Sin Killzone'} ${mapText ? '(' + mapText + ')' : ''}`;
+        badge.className = 'badge bg-warning text-dark fw-bold small text-truncate d-none d-md-inline-block';
+    } else {
+        badge.innerText = 'Setup Inicial';
+        badge.className = 'badge bg-secondary fw-normal small text-truncate d-none d-md-inline-block';
+    }
+}
+
 // Función para llenar el selector global de CritOps
 function populateCritOps() {
     const select = document.getElementById('global-critop');
@@ -293,13 +374,13 @@ function populateCritOps() {
     select.innerHTML = '<option value="" selected disabled>-- Selecciona Misión Manualmente --</option>';
 
     // Filtro por los IDs permitidos en el JSON
-    const allowedCritOps = ['1', '2', '3']; 
+    const allowedCritOps = ['1', '2', '3'];
 
     for (const [key, op] of Object.entries(dataCritOps)) {
         if (allowedCritOps.includes(op.id)) {
             const option = document.createElement('option');
-            option.value = key; 
-            option.textContent = op.name_es || key; 
+            option.value = key;
+            option.textContent = op.name_es || key;
             select.appendChild(option);
         }
     }
@@ -329,39 +410,39 @@ function populateFactions() {
 }
 
 // NUEVO: Escuchar el cambio de facción para habilitar botones, actualizar imagen y limpiar selecciones
-    document.querySelectorAll('select[id$="-faction"]').forEach(select => {
-        select.addEventListener('change', (e) => {
-            const playerPrefix = e.target.id.split('-')[0]; // Extrae "p1", "p2", "p3", "p4"
-            const factionKey = e.target.value;
+document.querySelectorAll('select[id$="-faction"]').forEach(select => {
+    select.addEventListener('change', (e) => {
+        const playerPrefix = e.target.id.split('-')[0]; // Extrae "p1", "p2", "p3", "p4"
+        const factionKey = e.target.value;
 
-            // 1. Habilitar el botón de Reglas de Facción
-            const rulesBtn = document.getElementById(`${playerPrefix}-btn-faction-rules`);
-            if (rulesBtn) {
-                rulesBtn.disabled = !factionKey || !dataFactions[factionKey];
-            }
+        // 1. Habilitar el botón de Reglas de Facción
+        const rulesBtn = document.getElementById(`${playerPrefix}-btn-faction-rules`);
+        if (rulesBtn) {
+            rulesBtn.disabled = !factionKey || !dataFactions[factionKey];
+        }
 
-            // 2. Actualizar la imagen circular de la facción
-            const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
-            if (imgEl) {
-                imgEl.src = `./resources/facciones/${factionKey}.png`;
-            }
+        // 2. Actualizar la imagen circular de la facción
+        const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
+        if (imgEl) {
+            imgEl.src = `./resources/facciones/${factionKey}.png`;
+        }
 
-            // 3. Limpiar equipamiento incompatible con la nueva facción (mantiene universales)
-            if (gameState[playerPrefix] && Array.isArray(gameState[playerPrefix].equipment)) {
-                gameState[playerPrefix].equipment = gameState[playerPrefix].equipment.filter(id => {
-                    const item = dataEquipment.find(eq => eq.id_equip === id);
-                    return item && (item.faction === 'universal' || item.faction === factionKey);
-                });
-            }
+        // 3. Limpiar equipamiento incompatible con la nueva facción (mantiene universales)
+        if (gameState[playerPrefix] && Array.isArray(gameState[playerPrefix].equipment)) {
+            gameState[playerPrefix].equipment = gameState[playerPrefix].equipment.filter(id => {
+                const item = dataEquipment.find(eq => eq.id_equip === id);
+                return item && (item.faction === 'universal' || item.faction === factionKey);
+            });
+        }
 
-            // 4. Actualizar la UI (Esto remueve el 'disabled' de los botones de equipamiento y ardides)
-            updateActiveStrategicPloysDisplay(playerPrefix);
-            updateSelectedEquipmentDisplay(playerPrefix);
-            
-            // 5. Guardar el estado inmediatamente
-            saveGameState();
-        });
+        // 4. Actualizar la UI (Esto remueve el 'disabled' de los botones de equipamiento y ardides)
+        updateActiveStrategicPloysDisplay(playerPrefix);
+        updateSelectedEquipmentDisplay(playerPrefix);
+
+        // 5. Guardar el estado inmediatamente
+        saveGameState();
     });
+});
 
 // --- SISTEMA DE GESTIÓN Y ACTIVACIÓN DE ARDIDES ESTRATÉGICOS ---
 
@@ -374,20 +455,31 @@ function getCurrentTurn() {
 function calculateDynamicLimit(type, key, turn) {
     if (type === 'crit' && dataCritOps[key]) {
         const op = dataCritOps[key];
-        if (Array.isArray(op.limite_puntos) && op.limite_puntos[turn - 1] !== undefined) {
-            return op.limite_puntos[turn - 1];
+        // Verificar que exista el arreglo y tenga al menos un objeto
+        if (op.limite_puntos && Array.isArray(op.limite_puntos) && op.limite_puntos.length > 0) {
+            const limitObj = op.limite_puntos[0];
+            let limit = 0;
+
+            // Sumamos los topes de manera acumulativa hasta el turno actual
+            for (let i = 1; i <= turn; i++) {
+                const rondaKey = `ronda_${i}`;
+                if (limitObj[rondaKey] !== undefined) {
+                    limit += limitObj[rondaKey];
+                }
+            }
+            return limit;
         }
     }
-    return 6;
+    return 6; // Límite general por defecto
 }
 
 function onTurningPointChange() {
     const currentTP = getCurrentTurn();
     document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = currentTP);
-    
+
     // CORRECCIÓN: Actualizar ardides para los 4 jugadores
     ['p1', 'p2', 'p3', 'p4'].forEach(p => updateActiveStrategicPloysDisplay(p));
-    
+
     validateAllScores();
     saveGameState();
 }
@@ -574,26 +666,38 @@ function deactivateStrategicPloy(playerPrefix, ployId) {
 function syncStratSectionsHeight() {
     const c1 = document.getElementById('p1-active-strategic-ploys');
     const c2 = document.getElementById('p2-active-strategic-ploys');
-    if (!c1 || !c2) return;
+    const c3 = document.getElementById('p3-active-strategic-ploys');
+    const c4 = document.getElementById('p4-active-strategic-ploys');
 
-    // En dispositivos móviles (menor a 768px), las columnas van apiladas
+    if (!c1 || !c2 || !c3 || !c4) return;
+
+    // En dispositivos móviles (menor a 768px), las columnas van apiladas verticalmente
     if (window.innerWidth < 768) {
         c1.style.minHeight = 'auto';
         c2.style.minHeight = 'auto';
+        c3.style.minHeight = 'auto';
+        c4.style.minHeight = 'auto';
         return;
     }
 
-    // Resetear para medir altura natural
+    // Resetear para medir la altura natural real del contenido
     c1.style.minHeight = 'auto';
     c2.style.minHeight = 'auto';
+    c3.style.minHeight = 'auto';
+    c4.style.minHeight = 'auto';
 
     requestAnimationFrame(() => {
         const h1 = c1.scrollHeight || c1.offsetHeight;
         const h2 = c2.scrollHeight || c2.offsetHeight;
-        const maxH = Math.max(h1, h2, 52);
+        const h3 = c3.scrollHeight || c3.offsetHeight;
+        const h4 = c4.scrollHeight || c4.offsetHeight;
+        // Reducido de 52px a 36px para ajustarse exactamente a una fila compacta
+        const maxH = Math.max(h1, h2, h3, h4, 36);
 
         c1.style.minHeight = `${maxH}px`;
         c2.style.minHeight = `${maxH}px`;
+        c3.style.minHeight = `${maxH}px`;
+        c4.style.minHeight = `${maxH}px`;
     });
 }
 
@@ -617,7 +721,7 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
     }
 
     if (activeList.length === 0) {
-        activeContainer.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-2"><small class="text-muted fst-italic text-center">Ningún ardid estratégico activo en este TP.</small></div>';
+        activeContainer.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-1"><small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún ardid estratégico activo en este TP.</small></div>';
         syncStratSectionsHeight();
         return;
     }
@@ -627,26 +731,30 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
         const ploy = dataPloys.find(p => p.id_ploy === ployId);
         if (!ploy) return;
 
+        // Tarjeta compacta
         html += `
-                    <div class="active-ploy-card p-2 bg-white rounded border border-warning shadow-sm">
-                        <div class="d-flex justify-content-between align-items-center mb-1">
-                            <span class="fw-bold text-dark small">
-                                <i class="bi bi-lightning-charge-fill text-warning me-1"></i>${ploy.name}
-                            </span>
-                            <div class="d-flex align-items-center gap-1">
-                                <span class="badge bg-dark" style="font-size: 0.7rem;">${ploy.cps || '1 PM'}</span>
-                                <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0" 
-                                    onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" 
-                                    title="Desactivar ardid y recuperar PM">
-                                    <i class="bi bi-x-circle-fill"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="text-dark small lh-sm" style="font-size: 0.82rem;">
-                            ${ploy.description}
-                        </div>
+            <div class="active-ploy-card py-1 px-2 bg-white rounded border border-warning shadow-sm">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-1 overflow-hidden me-2">
+                        <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0 flex-shrink-0" 
+                            onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" 
+                            title="Desactivar ardid y recuperar PM" style="line-height: 1;">
+                            <i class="bi bi-x-circle-fill" style="font-size: 0.8rem;"></i>
+                        </button>
+                        <span class="badge bg-dark flex-shrink-0 py-0 px-1" style="font-size: 0.65rem;">${ploy.cps || '1 PM'}</span>
+                        <span class="fw-bold text-dark text-truncate" style="font-size: 0.78rem;" title="${ploy.name}">
+                            <i class="bi bi-lightning-charge-fill text-warning me-1"></i>${ploy.name}
+                        </span>
                     </div>
-                `;
+                    <div class="flex-shrink-0">
+                        <button type="button" class="btn btn-outline-dark btn-sm py-0 px-2" 
+                            onclick="showPloyDetails(${ploy.id_ploy})" title="Ver descripción del ardid" style="font-size: 0.75rem;">
+                            <i class="bi bi-eye-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
     });
 
     activeContainer.innerHTML = html;
@@ -675,7 +783,7 @@ function calculateKillOpAsymmetric() {
 
     // Convertir a un arreglo para su ordenamiento
     let teamsArray = Object.values(teamsData);
-    if(teamsArray.length === 0) return;
+    if (teamsArray.length === 0) return;
 
     // 2. Ordenar descendente por cantidad de bajas TOTALES del equipo
     teamsArray.sort((a, b) => b.kills - a.kills);
@@ -842,10 +950,10 @@ function buildEquipmentCardInnerHtml(item) {
 
 function renderEquipmentSelectModal(playerPrefix) {
     const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
-    
+
     const playerNum = playerPrefix.replace('p', '');
     const playerName = document.querySelector(`.player-${playerNum} .name-input`).value.trim() || `Jugador ${playerNum}`;
-    
+
     const factionName = factionTranslations[factionKey] || factionKey;
     const currentEquipList = getPlayerEquipment(playerPrefix);
 
@@ -998,7 +1106,7 @@ function syncEquipSectionsHeight() {
     const c2 = document.getElementById('p2-selected-equipment-container');
     const c3 = document.getElementById('p3-selected-equipment-container');
     const c4 = document.getElementById('p4-selected-equipment-container');
-    
+
     if (!c1 || !c2 || !c3 || !c4) return;
 
     if (window.innerWidth < 768) {
@@ -1047,18 +1155,19 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
     }
 
     if (list.length === 0) {
-        container.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-2"><small class="text-muted fst-italic text-center">Ningún equipamiento seleccionado (hasta 4).</small></div>';
+        container.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-1"><small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún equipamiento seleccionado (hasta 4).</small></div>';
         syncEquipSectionsHeight();
         return;
     }
 
-    let html = '';
-    
-    // CORRECCIÓN: Determinar el color dinámico según el jugador
+    // Determinar el color dinámico según el jugador
     let colorClass = 'primary';
     if (playerPrefix === 'p2') colorClass = 'danger';
     if (playerPrefix === 'p3') colorClass = 'success';
     if (playerPrefix === 'p4') colorClass = 'warning';
+
+    // Iniciamos la cuadrícula: 1 col en móviles, 2 cols en pantallas sm o superiores
+    let html = '<div class="row row-cols-1 row-cols-sm-2 g-1">';
 
     list.forEach(equipId => {
         const item = dataEquipment.find(e => e.id_equip === equipId);
@@ -1068,33 +1177,34 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
         const hasWeapons = item.weapon && item.weapon.length > 0;
         const hasActions = item.action && item.action.length > 0;
 
+        // Tarjeta ultra compacta con flexbox interno para forzar en una sola línea
         html += `
-                <!-- Indexador: Equipamiento Helper v1.0 -->
-                    <div class="active-equip-card p-2 bg-white rounded border border-${colorClass} border-opacity-50 shadow-sm">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center gap-1 overflow-hidden">
-                                <button type="button" class="btn btn-outline-danger btn-sm py-0 px-1 border-0" 
-                                    onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})" title="Quitar equipamiento">
-                                    <i class="bi bi-x-circle-fill"></i>
-                                </button>
-                                <span class="badge ${isUniversal ? 'bg-secondary' : `bg-${colorClass}`} text-white" style="font-size: 0.7rem;">
-                                    ${isUniversal ? 'Universal' : 'Facción'}
-                                </span>
-                                <span class="fw-bold text-dark small text-truncate" style="font-size: 1rem;" title="${item.name}">${item.name}</span>
-                                ${hasWeapons ? '<span class="badge bg-dark" style="font-size: 0.85rem;" title="Armas"><i class="bi bi-crosshair"></i></span>' : ''}
-                                ${hasActions ? '<span class="badge bg-warning text-dark" style="font-size: 0.6rem;" title="Acción Única"><i class="bi bi-lightning-fill"></i></span>' : ''}
-                            </div>
-                            <div class="d-flex align-items-center gap-1 flex-shrink-0">
-                                <button type="button" class="btn btn-outline-dark btn-sm py-0 px-4" style="font-size: 1.15rem;" 
-                                    onclick="showEquipmentDetails(${item.id_equip})" title="Ver detalles y reglas completas">
-                                    <i class="bi bi-eye-fill"></i>
-                                </button>
-                                
-                            </div>
+            <div class="col">
+                <div class="active-equip-card py-1 px-2 bg-white rounded border border-${colorClass} border-opacity-50 shadow-sm h-100">
+                    <div class="d-flex justify-content-between align-items-center gap-1">
+                        <div class="d-flex align-items-center gap-1 overflow-hidden">
+                            <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0 flex-shrink-0" 
+                                onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})" title="Quitar equipamiento" style="line-height: 1;">
+                                <i class="bi bi-x-circle-fill" style="font-size: 0.8rem;"></i>
+                            </button>
+                            <span class="badge ${isUniversal ? 'bg-secondary' : `bg-${colorClass}`} text-white flex-shrink-0 py-0 px-1" style="font-size: 0.6rem;">
+                                ${isUniversal ? 'Univ.' : 'Fac.'}
+                            </span>
+                            <span class="fw-bold text-dark text-truncate" style="font-size: 0.78rem;" title="${item.name}">${item.name}</span>
+                            ${hasWeapons ? '<span class="badge bg-dark flex-shrink-0 py-0 px-1" style="font-size: 0.65rem;" title="Armas"><i class="bi bi-crosshair"></i></span>' : ''}
+                            ${hasActions ? '<span class="badge bg-warning text-dark flex-shrink-0 py-0 px-1" style="font-size: 0.55rem;" title="Acción Única"><i class="bi bi-lightning-fill"></i></span>' : ''}
                         </div>
+                        <button type="button" class="btn btn-outline-dark btn-sm py-0 px-2 flex-shrink-0" 
+                            onclick="showEquipmentDetails(${item.id_equip})" title="Ver detalles y reglas completas" style="font-size: 0.75rem;">
+                            <i class="bi bi-eye-fill"></i>
+                        </button>
                     </div>
-                `;
+                </div>
+            </div>
+        `;
     });
+
+    html += '</div>';
 
     container.innerHTML = html;
     syncEquipSectionsHeight();
@@ -1126,6 +1236,32 @@ function showEquipmentDetails(equipId) {
     modal.show();
 }
 
+function showPloyDetails(ployId) {
+    const ploy = dataPloys.find(p => p.id_ploy === ployId);
+    if (!ploy) return;
+
+    const modalTitleEl = document.getElementById('ployDetailModalTitle');
+    const modalBodyEl = document.getElementById('ployDetailModalBody');
+
+    if (modalTitleEl) {
+        modalTitleEl.innerHTML = `<i class="bi bi-hourglass-split text-warning me-2"></i>${ploy.name} <span class="badge bg-warning text-dark fs-6 ms-2">${ploy.cps || '1 PM'}</span>`;
+    }
+
+    if (modalBodyEl) {
+        modalBodyEl.innerHTML = `
+            <div class="p-3 bg-light rounded border border-warning border-opacity-50">
+                <div class="badge bg-dark mb-2 text-uppercase">Ardid de Estrategia</div>
+                <div class="text-dark lh-base small">
+                    ${ploy.description}
+                </div>
+            </div>
+        `;
+    }
+
+    const modal = new bootstrap.Modal(document.getElementById('strategicPloyDetailModal'));
+    modal.show();
+}
+
 // 4. Función de validación masiva si el usuario cambia de turno hacia atrás
 function validateAllScores() {
     ['p1', 'p2', 'p3', 'p4'].forEach(playerPrefix => {
@@ -1138,7 +1274,7 @@ function validateAllScores() {
             let limit = calculateDynamicLimit('crit', critKey, currentTurn);
             if (parseInt(critEl.innerText) > limit) critEl.innerText = limit;
         }
-        
+
     });
     calculateTotals();
 }
@@ -1631,35 +1767,9 @@ function showTacOpDetails(playerPrefix) {
 }
 
 // --- SISTEMA DE AUTOGUARDADO (LOCALSTORAGE) ---
-
-function saveGameState() {
-
-    // Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardamos estados corruptos
-    if (gameState.loading || Object.keys(dataFactions).length === 0) return;
-
-    // Si los datos aún no cargan de los JSON, no guardamos estados vacíos
-    if (Object.keys(dataFactions).length === 0) return;
-
-    const state = {
-        playerCount: gameState.playerCount,
-        globalCritOp: document.getElementById('global-critop') ? document.getElementById('global-critop').value : "",
-        killzone: document.getElementById('killzoneSelect') ? document.getElementById('killzoneSelect').value : "",
-        map: document.getElementById('mapSelect') ? document.getElementById('mapSelect').value : "",
-        tp: document.querySelector('input[name="tpRadio"]:checked').id,
-        internalGameState: gameState,
-        p1: getPlayerState('p1'),
-        p2: getPlayerState('p2'),
-        p3: getPlayerState('p3'),
-        p4: getPlayerState('p4')
-    };
-
-    // Guardamos todo en formato JSON en el navegador
-    localStorage.setItem('killTeamMatchState', JSON.stringify(state));
-}
-
 function getPlayerState(p) {
     // Extracción dinámica para soportar p1, p2, p3, p4
-    const playerClass = p.replace('p', ''); 
+    const playerClass = p.replace('p', '');
 
     return {
         name: document.querySelector(`.player-${playerClass} .name-input`)?.value || "",
@@ -1668,40 +1778,86 @@ function getPlayerState(p) {
         cp: document.getElementById(`${p}-cp`)?.innerText || "2",
         critVp: document.getElementById(`${p}-crit-vp`)?.innerText || "0",
         killsCurrentTP: document.getElementById(`${p}-kills-current-tp`)?.innerText || "0",
-        killOpVP: gameState[p].killOpVP,
+        killOpVP: gameState[p] ? gameState[p].killOpVP : 0,
+        tpScores: (gameState[p] && gameState[p].tpScores) ? gameState[p].tpScores : { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } },
         strategicPloys: (gameState[p] && gameState[p].strategicPloys) ? gameState[p].strategicPloys : { 1: [], 2: [], 3: [], 4: [] },
         equipment: getPlayerEquipment(p)
     };
 }
 
-function loadGameState() {
-    const savedStateStr = localStorage.getItem('killTeamMatchState');
+function saveGameState() {
+    // Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardar estados vacíos
+    if (gameState.loading || Object.keys(dataFactions).length === 0 || Object.keys(dataMaps).length === 0) return;
 
+    const globalCritOpVal = document.getElementById('global-critop') ? document.getElementById('global-critop').value : "";
+    const killzoneVal = document.getElementById('killzoneSelect') ? document.getElementById('killzoneSelect').value : "";
+    const mapVal = document.getElementById('mapSelect') ? document.getElementById('mapSelect').value : "";
+    const tpChecked = document.querySelector('input[name="tpRadio"]:checked');
+
+    const state = {
+        playerCount: gameState.playerCount,
+        globalCritOp: globalCritOpVal,
+        killzone: killzoneVal,
+        map: mapVal,
+        tp: tpChecked ? tpChecked.id : "tp1",
+        internalGameState: gameState,
+        p1: getPlayerState('p1'),
+        p2: getPlayerState('p2'),
+        p3: getPlayerState('p3'),
+        p4: getPlayerState('p4')
+    };
+
+    // CORRECCIÓN: Clave aislada para evitar colisiones con el modo 1v1
+    localStorage.setItem('killTeamMatchState_asymetric', JSON.stringify(state));
+}
+
+function loadGameState() {
+    // CORRECCIÓN: Leer exclusivamente la clave asimétrica
+    const savedStateStr = localStorage.getItem('killTeamMatchState_asymetric');
     if (!savedStateStr) return;
 
     try {
-        gameState.loading = true; 
+        gameState.loading = true; // Proteger contra sobreescrituras en cadena
         const state = JSON.parse(savedStateStr);
 
-        // 1. Restaurar Globals
-        if (state.globalCritOp) document.getElementById('global-critop').value = state.globalCritOp;
-        
+        // 1. Restaurar Globals y Modo de Juego
+        if (state.globalCritOp) {
+            const critSelect = document.getElementById('global-critop');
+            if (critSelect) critSelect.value = state.globalCritOp;
+        }
+
         if (state.playerCount) {
             gameState.playerCount = state.playerCount;
             const radioBtn = document.getElementById(`mode${state.playerCount}p`);
             if (radioBtn) radioBtn.checked = true;
-            togglePlayerMode(state.playerCount, false);
+            togglePlayerMode(state.playerCount, false); // false para no forzar guardado en bucle
         }
-        
-        if (state.tp) document.getElementById(state.tp).checked = true;
 
+        if (state.tp) {
+            const tpEl = document.getElementById(state.tp);
+            if (tpEl) tpEl.checked = true;
+        }
+
+        // Restaurar Killzone y construir mapas
         if (state.killzone) {
-            document.getElementById('killzoneSelect').value = state.killzone;
-            updateMapOptions(); 
+            const kzSelect = document.getElementById('killzoneSelect');
+            if (kzSelect) {
+                kzSelect.value = state.killzone;
+                updateMapOptions(false); // NO resetear el mapa en este instante
+            }
         }
 
-        if (state.map) {
-            document.getElementById('mapSelect').value = state.map;
+        // Restaurar Mapa guardado (después de haber poblado las opciones en updateMapOptions)
+        if (state.map !== undefined && state.map !== "") {
+            const mapSelect = document.getElementById('mapSelect');
+            if (mapSelect) {
+                mapSelect.value = state.map;
+                // Activar botón de ver mapa
+                const btnViewMap = document.getElementById('btnViewMap');
+                if (btnViewMap && mapSelect.value !== "") {
+                    btnViewMap.disabled = false;
+                }
+            }
         }
 
         if (state.internalGameState) {
@@ -1709,26 +1865,29 @@ function loadGameState() {
             gameState.loading = true;
         }
 
-        // 2. Restaurar Jugadores (AÑADIDOS P3 Y P4)
+        // 2. Restaurar Jugadores
         restorePlayerState('p1', state.p1);
         restorePlayerState('p2', state.p2);
         restorePlayerState('p3', state.p3);
         restorePlayerState('p4', state.p4);
 
-        gameState.loading = false; 
-        mostrarNotificacion("Partida cargada exitosamente.");
+        updateSetupSummary();
+
+        gameState.loading = false; // Finalizar carga
+        mostrarNotificacion("Partida asimétrica cargada exitosamente.");
     } catch (e) {
-        gameState.loading = false; 
+        gameState.loading = false;
         console.error("Error cargando partida guardada:", e);
-        localStorage.removeItem('killTeamMatchState');
+        //  Borrar la clave asimétrica
+        localStorage.removeItem('killTeamMatchState_asymetric');
     }
 }
 
 function restorePlayerState(p, pState) {
     if (!pState) return;
 
-    const playerClass = p.replace('p', ''); 
-    
+    const playerClass = p.replace('p', '');
+
     const nameInput = document.querySelector(`.player-${playerClass} .name-input`);
     if (nameInput) nameInput.value = pState.name || "";
 
@@ -1736,7 +1895,7 @@ function restorePlayerState(p, pState) {
     if (pState.faction) {
         const factionSelect = document.getElementById(`${p}-faction`);
         if (factionSelect) factionSelect.value = pState.faction;
-        
+
         const imgEl = document.getElementById(`${p}-faction-img`);
         if (imgEl) imgEl.src = `./resources/facciones/${pState.faction}.png`;
 
@@ -1754,16 +1913,22 @@ function restorePlayerState(p, pState) {
 
     const cpEl = document.getElementById(`${p}-cp`);
     if (cpEl) cpEl.innerText = pState.cp || "2";
-    
+
     const critEl = document.getElementById(`${p}-crit-vp`);
     if (critEl) critEl.innerText = pState.critVp || "0";
 
     const killsTpEl = document.getElementById(`${p}-kills-current-tp`);
     if (killsTpEl) killsTpEl.innerText = pState.killsCurrentTP || "0";
-    
+
     gameState[p].killOpVP = pState.killOpVP || 0;
     const killTotalEl = document.getElementById(`${p}-killop-total`);
     if (killTotalEl) killTotalEl.innerText = gameState[p].killOpVP;
+
+    if (pState.tpScores) {
+        gameState[p].tpScores = pState.tpScores;
+    } else if (!gameState[p].tpScores) {
+        gameState[p].tpScores = { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } };
+    }
 
     if (pState.strategicPloys) {
         gameState[p].strategicPloys = pState.strategicPloys;
@@ -1782,23 +1947,43 @@ function restorePlayerState(p, pState) {
 document.addEventListener('DOMContentLoaded', () => {
     initializeMatchData();
 
-    const btnRandomAll = document.getElementById('btn-random-all');
-    if (btnRandomAll) {
-        btnRandomAll.addEventListener('click', randomizeAll);
-    }
-
+    // Persistir nombres
     document.querySelectorAll('.name-input').forEach(input => {
         input.addEventListener('blur', saveGameState);
     });
-    // Persistir cambios en los selectores de equipo
+
+    // Persistir selector de equipos
     document.querySelectorAll('select[id$="-team"]').forEach(select => {
         select.addEventListener('change', saveGameState);
     });
 
-    // NUEVO: Detectar cuando el usuario cambia manualmente el mapa para guardarlo
+    // Listener único de CritOp
+    const critSelectEl = document.getElementById('global-critop');
+    if (critSelectEl) {
+        critSelectEl.addEventListener('change', () => {
+            validateAllScores();
+            updateSetupSummary();
+            saveGameState();
+        });
+    }
+
+    // Listener único de Killzone
+    const kzSelectEl = document.getElementById('killzoneSelect');
+    if (kzSelectEl) {
+        kzSelectEl.addEventListener('change', () => {
+            updateMapOptions(true);
+        });
+    }
+
+    // Listener único de Mapa
     const mapSelectEl = document.getElementById('mapSelect');
     if (mapSelectEl) {
-        mapSelectEl.addEventListener('change', saveGameState);
+        mapSelectEl.addEventListener('change', () => {
+            const btnViewMap = document.getElementById('btnViewMap');
+            if (btnViewMap) btnViewMap.disabled = (mapSelectEl.value === "");
+            updateSetupSummary();
+            saveGameState();
+        });
     }
 
     window.addEventListener('resize', () => {
@@ -1885,124 +2070,152 @@ function populateKillzonesDropdown() {
     }
 }
 
-// 2. Lógica de Cascada Estricta (Killzone -> Mapas)
-function updateMapOptions() {
-    const killzoneKey = document.getElementById('killzoneSelect').value;
+// 2. Lógica de Cascada Estricta (Killzone -> Mapas y Terrenos)
+function updateMapOptions(shouldResetMap = true) {
+    const killzoneSelect = document.getElementById('killzoneSelect');
+    const killzoneKey = killzoneSelect ? killzoneSelect.value : "";
     const mapSelect = document.getElementById('mapSelect');
     const btnRandomMap = document.getElementById('btnRandomMap');
     const btnViewMap = document.getElementById('btnViewMap');
     const btnViewTerrain = document.getElementById('btnViewTerrain');
 
-    mapSelect.innerHTML = '<option value="" selected disabled>-- Selecciona Mapa Manualmente --</option>';
+    if (!mapSelect) return;
 
-    if (!killzoneKey) {
+    const previousMapValue = mapSelect.value;
+    mapSelect.innerHTML = '<option value="" selected disabled>-- Mapa --</option>';
+
+    if (!killzoneKey || !dataMaps[killzoneKey]) {
         mapSelect.disabled = true;
-        btnRandomMap.disabled = true;
-        btnViewMap.disabled = true;
-        btnViewTerrain.disabled = true;
+        if (btnRandomMap) btnRandomMap.disabled = true;
+        if (btnViewMap) btnViewMap.disabled = true;
+        if (btnViewTerrain) btnViewTerrain.disabled = true;
+        updateSetupSummary();
+        saveGameState();
         return;
     }
 
-    // Activar los botones si hay una Killzone válida
+    // Activar selector y botón de aleatorizar mapa
     mapSelect.disabled = false;
-    btnRandomMap.disabled = false;
-    btnViewMap.disabled = false;
+    if (btnRandomMap) btnRandomMap.disabled = false;
 
     const killzone = dataMaps[killzoneKey];
-    // Activar el botón de terrenos SÓLO si existen datos válidos
-    if (killzone && Array.isArray(killzone.terrain) && killzone.terrain.length > 0) {
-        btnViewTerrain.disabled = false;
-    } else {
-        btnViewTerrain.disabled = true;
+
+    // Activar botón de terrenos SÓLO si terrain tiene piezas físicas
+    if (btnViewTerrain) {
+        if (Array.isArray(killzone.terrain) && killzone.terrain.length > 0) {
+            btnViewTerrain.disabled = false;
+        } else {
+            btnViewTerrain.disabled = true;
+        }
     }
 
-    if (killzone && killzone.maps) {
+    // Poblar las opciones de mapas de esta Killzone
+    if (killzone && Array.isArray(killzone.maps)) {
         killzone.maps.forEach((m, index) => {
             const option = document.createElement('option');
-            option.value = index;
+            option.value = String(index);
             option.textContent = `Mapa ${m.m_id}`;
             mapSelect.appendChild(option);
         });
     }
 
+    // Mantener mapa anterior si no se solicitó reinicio
+    if (!shouldResetMap && previousMapValue !== "") {
+        mapSelect.value = previousMapValue;
+    }
+
+    // El botón de ver mapa solo se activa si hay un mapa seleccionado
+    if (btnViewMap) {
+        btnViewMap.disabled = (mapSelect.value === "");
+    }
+
+    updateSetupSummary();
     saveGameState();
 }
 
 // 3. Motores de Aleatorización
 function randomizeCritOp() {
     const select = document.getElementById('global-critop');
+    if (!select) return;
     const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
     if (options.length > 0) {
         const randomOpt = options[Math.floor(Math.random() * options.length)];
         select.value = randomOpt.value;
-        select.dispatchEvent(new Event('change')); // Disparamos tu validador de puntuaciones
+        // Obliga a ejecutar el listener que valida scores y guarda
+        select.dispatchEvent(new Event('change'));
     }
 }
 
 function randomizeKillzone() {
     const select = document.getElementById('killzoneSelect');
+    if (!select) return;
     const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
     if (options.length > 0) {
         const randomOpt = options[Math.floor(Math.random() * options.length)];
         select.value = randomOpt.value;
-        updateMapOptions(); // Vital: Obligamos a la UI a pintar los mapas de esta Killzone
+        // Obliga a ejecutar updateMapOptions(true)
+        select.dispatchEvent(new Event('change'));
     }
 }
 
 function randomizeMap() {
-    const killzoneKey = document.getElementById('killzoneSelect').value;
+    const killzoneSelect = document.getElementById('killzoneSelect');
+    let killzoneKey = killzoneSelect ? killzoneSelect.value : "";
 
+    // Si no hay Killzone, forzamos su aleatorización primero
     if (!killzoneKey) {
         randomizeKillzone();
+        killzoneKey = killzoneSelect.value;
     }
 
     const select = document.getElementById('mapSelect');
+    if (!select) return;
+
     const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
     if (options.length > 0) {
         const randomOpt = options[Math.floor(Math.random() * options.length)];
         select.value = randomOpt.value;
-        select.dispatchEvent(new Event('change')); // NUEVO: Dispara el evento para interceptar el guardado
+        // Obliga a habilitar botones, actualizar resumen y guardar el estado
+        select.dispatchEvent(new Event('change'));
     }
 }
 
+// Aleatorizar Todo en Secuencia con propagación inmediata
 function randomizeAll() {
     randomizeCritOp();
     randomizeKillzone();
     randomizeMap();
 }
 
-// 4. Modal de Visualización de Mapa
+// 4. Modal de Visualización de Plano de Mapa
 function showMapModal() {
-    const killzoneKey = document.getElementById('killzoneSelect').value;
-    const mapIndex = document.getElementById('mapSelect').value;
+    const killzoneSelect = document.getElementById('killzoneSelect');
+    const mapSelect = document.getElementById('mapSelect');
 
-    if (killzoneKey && mapIndex !== "") {
+    const killzoneKey = killzoneSelect ? killzoneSelect.value : "";
+    const mapIndex = mapSelect ? mapSelect.value : "";
+
+    if (killzoneKey && mapIndex !== "" && dataMaps[killzoneKey] && dataMaps[killzoneKey].maps[mapIndex]) {
         const mapData = dataMaps[killzoneKey].maps[mapIndex];
         const killzoneName = dataMaps[killzoneKey].name;
 
-        // Inyectar datos
         document.getElementById('mapModalTitle').innerHTML = `<i class="bi bi-map me-2"></i>Mapa ${mapData.m_id} - ${killzoneName}`;
         document.getElementById('mapModalImg').src = mapData.m_img;
 
-        // Lanzar modal de Bootstrap
         const modal = new bootstrap.Modal(document.getElementById('mapViewModal'));
         modal.show();
     } else {
-        if (typeof mostrarNotificacion === 'function') {
-            mostrarNotificacion("Operación bloqueada: Debes elegir una Killzone y un Mapa para visualizar el plano.");
-        } else {
-            alert("Operación bloqueada: Debes elegir una Killzone y un Mapa para visualizar el plano.");
-        }
+        mostrarNotificacion("Falta selección: Debes elegir una Killzone y un Mapa para visualizar el plano.");
     }
 }
 
 // 5. Modal de Catálogo de Terrenos
 function showTerrainModal() {
-    const killzoneKey = document.getElementById('killzoneSelect').value;
+    const killzoneSelect = document.getElementById('killzoneSelect');
+    const killzoneKey = killzoneSelect ? killzoneSelect.value : "";
 
-    // Validación de seguridad (Programación Defensiva)
     if (!killzoneKey || !dataMaps[killzoneKey]) {
-        if (typeof mostrarNotificacion === 'function') mostrarNotificacion("Falta selección: Debes elegir una Killzone primero.");
+        mostrarNotificacion("Falta selección: Debes elegir una Killzone primero.");
         return;
     }
 
@@ -2010,48 +2223,39 @@ function showTerrainModal() {
     const terrainList = kzData.terrain;
 
     if (!Array.isArray(terrainList) || terrainList.length === 0) {
-        if (typeof mostrarNotificacion === 'function') mostrarNotificacion("Esta zona de aniquilación no cuenta con piezas de terreno específicas registradas.");
+        mostrarNotificacion("Esta zona de aniquilación no cuenta con piezas de terreno específicas registradas.");
         return;
     }
 
-    // Cabecera del Modal
     document.getElementById('terrainModalTitle').innerHTML = `<i class="bi bi-bricks text-secondary me-2"></i>Terrenos: ${kzData.name}`;
 
-    // Construcción de la Grilla de Terrenos
     let html = '<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">';
-
     terrainList.forEach(t => {
-        // Validar y construir los badges de tipo
         let typeBadges = '';
         if (Array.isArray(t.type)) {
-            typeBadges = t.type.map(tipo => `<span class="badge bg-dark m-1 shadow-sm" style="font-size: 0.75rem;">${tipo}</span>`).join('');
+            typeBadges = t.type.map(tipo => `<span class="badge bg-dark m-1 shadow-sm" style="font-size: 0.72rem;">${tipo}</span>`).join('');
         }
 
-        // Construir la tarjeta
         html += `
             <div class="col">
-                <div class="card h-100 shadow-sm border-secondary">    
-                    <div class="equipment-card h-100 shadow-sm border border-secondary rounded overflow-hidden"> 
-                        <div class="p-2 bg-secondary text-white text-center">
-                            <h6 class="mb-0 fw-bold text-uppercase">${t.t_id || 'N/A'}</h6>
+                <div class="card h-100 shadow-sm border border-secondary rounded overflow-hidden"> 
+                    <div class="p-2 bg-secondary text-white text-center">
+                        <h6 class="mb-0 fw-bold text-uppercase">${t.t_id || 'N/A'}</h6>
+                    </div>
+                    <div class="p-3 bg-light text-dark d-flex flex-column justify-content-between h-100">
+                        <div class="d-flex justify-content-center align-items-center mb-2" style="min-height: 100px;">
+                            ${t.t_img ? `<img src="${t.t_img}" alt="Pieza ${t.t_id}" class="img-fluid rounded" style="max-height: 100px; object-fit: contain;">` : '<span class="text-muted small fst-italic">Sin imagen</span>'}
                         </div>
-                        <div class="p-3 bg-light text-dark">
-                            <div class="card-body p-2 d-flex justify-content-center align-items-center bg-light">
-                                ${t.t_img ? `<img src="${t.t_img}" alt="Pieza ${t.t_id}" class="img-fluid rounded mb-2" style="max-height: 100px; object-fit: contain; margin: 0 auto;">` : ''}
-                            </div>
-                            <div>
-                                ${t.type.map(t => `<span class="badge bg-dark me-1 mb-1">${t}</span>`).join('')}
-                            </div>
+                        <div class="text-center border-top pt-2">
+                            ${typeBadges}
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         `;
     });
-
     html += '</div>';
 
-    // Inyección y llamado al Modal
     document.getElementById('terrainModalBody').innerHTML = html;
     const modal = new bootstrap.Modal(document.getElementById('terrainViewModal'));
     modal.show();
@@ -2064,7 +2268,7 @@ function getActivePlayers() {
 function togglePlayerMode(count, shouldSave = true) {
     gameState.playerCount = count;
     const p4Container = document.getElementById('p4-container');
-    
+
     if (p4Container) {
         if (count === 3) {
             p4Container.classList.add('d-none');
@@ -2078,6 +2282,6 @@ function togglePlayerMode(count, shouldSave = true) {
             p4Container.classList.remove('d-none');
         }
     }
-    
+
     if (shouldSave) saveGameState();
 }

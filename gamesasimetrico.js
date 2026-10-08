@@ -2278,7 +2278,11 @@ function togglePlayerMode(count, shouldSave = true) {
 
     if (p4Container) {
         if (count === 3) {
+            p4Container.classList.remove('d-md-block'); 
             p4Container.classList.add('d-none');
+            // 🚀 SOLUCIÓN DEFINITIVA: Forzar ocultación en línea para derrotar a style.css en PC
+            p4Container.style.setProperty('display', 'none', 'important'); 
+            
             if (labelP4) labelP4.classList.add('d-none'); // Ocultar botón J4 móvil
 
             // Si estaba en la vista móvil de J4, regresarlo a "Todos"
@@ -2295,6 +2299,10 @@ function togglePlayerMode(count, shouldSave = true) {
             if (killsTpEl) killsTpEl.innerText = "0";
         } else {
             p4Container.classList.remove('d-none');
+            p4Container.classList.add('d-md-block'); 
+            // 🚀 Liberar el bloqueo en línea para que se muestre en PC
+            p4Container.style.removeProperty('display'); 
+            
             if (labelP4) labelP4.classList.remove('d-none'); // Mostrar botón J4 móvil
         }
     }
@@ -2311,13 +2319,27 @@ function setMobilePlayerView(mode) {
 
     if (!colP1 || !colP2 || !colP3 || !colP4) return;
 
-    // Si es PC/Tablet (>= 768px), forzamos a mostrar todas las que correspondan al modo (3 o 4)
+    // Limpiar cualquier bloqueo en línea previo para evitar bugs al rotar la pantalla
+    colP1.style.removeProperty('display');
+    colP2.style.removeProperty('display');
+    colP3.style.removeProperty('display');
+    colP4.style.removeProperty('display');
+
+    // Si es PC/Tablet (>= 768px)
     if (window.innerWidth >= 768) {
         colP1.classList.remove('d-none');
         colP2.classList.remove('d-none');
         colP3.classList.remove('d-none');
-        if (gameState.playerCount === 4) colP4.classList.remove('d-none');
-        else colP4.classList.add('d-none');
+        
+        if (gameState.playerCount === 4) {
+            colP4.classList.remove('d-none');
+            colP4.classList.add('d-md-block');
+        } else {
+            colP4.classList.remove('d-md-block'); 
+            colP4.classList.add('d-none');
+            // 🚀 Forzar ocultación
+            colP4.style.setProperty('display', 'none', 'important');
+        }
         return;
     }
 
@@ -2326,13 +2348,21 @@ function setMobilePlayerView(mode) {
         colP1.classList.remove('d-none');
         colP2.classList.remove('d-none');
         colP3.classList.remove('d-none');
-        if (gameState.playerCount === 4) colP4.classList.remove('d-none');
-        else colP4.classList.add('d-none');
+        
+        if (gameState.playerCount === 4) {
+            colP4.classList.remove('d-none');
+        } else {
+            colP4.classList.remove('d-md-block');
+            colP4.classList.add('d-none');
+            // 🚀 Forzar ocultación
+            colP4.style.setProperty('display', 'none', 'important');
+        }
     } else {
         // Ocultar todas primero
         colP1.classList.add('d-none');
         colP2.classList.add('d-none');
         colP3.classList.add('d-none');
+        colP4.classList.remove('d-md-block');
         colP4.classList.add('d-none');
 
         // Mostrar solo la seleccionada

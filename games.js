@@ -1662,11 +1662,11 @@ function showFactionRules(playerPrefix) {
             // Roster / Composición de equipo
             teamItems.filter(item => item.type === "team").forEach(item => {
                 htmlRules += `
-                            <div class="card mb-3 border-dark shadow-sm">
-                                <div class="card-header bg-dark text-white fw-bold d-flex align-items-center">
+                            <div class="team-roster-box bg-dark text-white p-3 rounded mb-3 border border-secondary shadow-sm">
+                                <h6 class="fw-bold text-uppercase border-bottom border-secondary pb-2 mb-2">
                                     <i class="bi bi-people-fill me-2"></i>Composición de Equipo: ${item.name || 'Agentes'}
-                                </div>
-                                <div class="card-body bg-white small lh-base">
+                                </h6>
+                                <div class="operatives-list small lh-base">
                                     ${item.description}
                                 </div>
                             </div>
@@ -1678,11 +1678,11 @@ function showFactionRules(playerPrefix) {
             if (racialAbilities.length > 0) {
                 racialAbilities.forEach(rule => {
                     htmlRules += `
-                                <div class="card mb-3 border-success border-opacity-50 shadow-sm">
-                                    <div class="card-header bg-success text-white fw-bold d-flex align-items-center">
-                                        <i class="bi bi-shield-shaded me-2"></i>${rule.name}
+                                <div class="ability-card shadow-sm border border-dark rounded overflow-hidden mb-3">
+                                    <div class="p-2 bg-dark text-white d-flex align-items-center">
+                                        <i class="bi bi-shield-shaded me-2"></i><h6 class="mb-0 fw-bold">${rule.name}</h6>
                                     </div>
-                                    <div class="card-body bg-white small lh-base">
+                                    <div class="rules-text p-3 bg-white text-dark small lh-base">
                                         ${rule.description}
                                     </div>
                                 </div>
@@ -1716,18 +1716,26 @@ function showFactionRules(playerPrefix) {
 
             ploysList.forEach(ploy => {
                 const isStrat = ploy.type === 'strategic';
+                const headerClasses = isStrat ? 'bg-dark text-white' : 'bg-secondary text-white';
+                const typeLabel = isStrat ? 'Ardid de Estrategia' : 'Ardid de Tiroteo';
+                const badgeClass = isStrat ? 'bg-warning text-dark' : 'bg-info text-dark';
+
                 const cardHtml = `
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="card h-100 shadow-sm border ${isStrat ? 'border-warning' : 'border-info'}">
-                                    <div class="card-header ${isStrat ? 'bg-dark text-white' : 'bg-secondary text-white'} d-flex justify-content-between align-items-center py-2">
-                                        <span class="fw-bold text-uppercase small">${ploy.name}</span>
-                                        <span class="badge ${isStrat ? 'bg-warning text-dark' : 'bg-info text-dark'} fw-bold">${ploy.cps || '1 PM'}</span>
+                            <div class="col-12 col-md-6 mb-4">
+                                <div class="equipment-card h-100 shadow-sm border border-dark rounded overflow-hidden d-flex flex-column">
+                                    <!-- Cabecera: Nombre a la izquierda, Costo a la derecha -->
+                                    <div class="p-2 ${headerClasses} d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">${ploy.name}</h6>
+                                        <span class="badge bg-light text-dark shadow-sm px-2 py-1">${ploy.cps || '1 PM'}</span>
                                     </div>
-                                    <div class="card-body bg-white p-3">
-                                        <span class="badge ${isStrat ? 'bg-warning-subtle text-warning-emphasis border border-warning' : 'bg-info-subtle text-info-emphasis border border-info'} mb-2 small">
-                                            ${isStrat ? 'Ardid de Estrategia' : 'Ardid de Tiroteo'}
-                                        </span>
-                                        <div class="card-text small lh-sm text-dark">${ploy.description}</div>
+                                    <!-- Cuerpo: Etiqueta y Descripción compactadas -->
+                                    <div class="p-3 bg-light text-dark flex-grow-1">
+                                        <div class="mb-2">
+                                            <span class="badge ${badgeClass} shadow-sm">${typeLabel}</span>
+                                        </div>
+                                        <div class="equipment-description small">
+                                            ${ploy.description}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1833,8 +1841,8 @@ function showFactionRules(playerPrefix) {
 
                 htmlEquip += `
                             <div class="col-12 col-md-6 mb-4">
-                                <div class="equipment-card h-100 shadow-sm border border-danger rounded overflow-hidden">
-                                    <div class="p-2 bg-danger text-white text-center">
+                                <div class="equipment-card h-100 shadow-sm border border-dark rounded overflow-hidden">
+                                    <div class="p-2 bg-dark text-white text-center">
                                         <h6 class="mb-0 fw-bold text-uppercase">${item.name}</h6>
                                     </div>
                                     <div class="p-3 bg-light text-dark">

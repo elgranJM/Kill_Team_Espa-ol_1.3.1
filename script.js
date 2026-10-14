@@ -399,9 +399,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 .filter(r => r.type === 'racial' && r.name !== 'Arquetipos')
                 .map(rule => `
                 <div class="col-12 col-lg-10 mx-auto mb-3">
-                    <div class="ability-card">
-                        <h3 class="rules-title">${rule.name}</h3>
-                        <div class="rules-text">${rule.description}</div>
+                    <div class="ability-card shadow-sm border border-dark rounded overflow-hidden">
+                        <div class="p-2 bg-dark text-white">
+                            <h3 class="rules-title mb-0">${rule.name}</h3>
+                        </div>
+                        <div class="rules-text p-3 bg-white text-dark">
+                            ${rule.description}
+                        </div>
                     </div>
                 </div>`).join('');
         }

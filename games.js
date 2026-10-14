@@ -1,18 +1,18 @@
 
 // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
 let gameState = {
-    p1: { 
-        primary: null, 
-        strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, 
+    p1: {
+        primary: null,
+        strategicPloys: { 1: [], 2: [], 3: [], 4: [] },
         equipment: [],
         tpScores: {
             crit: { 1: 0, 2: 0, 3: 0, 4: 0 },
             tac: { 1: 0, 2: 0, 3: 0, 4: 0 }
         }
     },
-    p2: { 
-        primary: null, 
-        strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, 
+    p2: {
+        primary: null,
+        strategicPloys: { 1: [], 2: [], 3: [], 4: [] },
         equipment: [],
         tpScores: {
             crit: { 1: 0, 2: 0, 3: 0, 4: 0 },
@@ -457,7 +457,7 @@ function updateSetupSummary() {
     const kzSelect = document.getElementById('killzoneSelect');
     const mapSelect = document.getElementById('mapSelect');
     const badge = document.getElementById('badgeResumenMision');
-    
+
     if (!badge) return;
 
     const critText = critSelect.selectedIndex > 0 ? critSelect.options[critSelect.selectedIndex].text : '';
@@ -875,44 +875,55 @@ function renderStrategicPloysModal(playerPrefix) {
         let actionButtonHtml = '';
         if (isActive) {
             actionButtonHtml = `
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-success py-2 px-3 fw-bold"><i class="bi bi-check-circle-fill me-1"></i>Activo en TP ${currentTP}</span>
-                            <button type="button" class="btn btn-outline-danger btn-sm fw-bold" onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" title="Desactivar y reembolsar PM">
-                                <i class="bi bi-arrow-counterclockwise me-1"></i>Desactivar (+${cost} PM)
-                            </button>
-                        </div>
-                    `;
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-success py-2 px-3 fw-bold"><i class="bi bi-check-circle-fill me-1"></i>Activo en TP ${currentTP}</span>
+                    <button type="button" class="btn btn-outline-danger btn-sm fw-bold" onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" title="Desactivar y reembolsar PM">
+                        <i class="bi bi-arrow-counterclockwise me-1"></i>Desactivar (+${cost} PM)
+                    </button>
+                </div>
+            `;
         } else if (canAfford) {
             actionButtonHtml = `
-                        <button type="button" class="btn btn-warning btn-sm fw-bold px-3 shadow-sm" onclick="activateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})">
-                            <i class="bi bi-lightning-charge-fill me-1"></i>Activar (${cost} PM)
-                        </button>
-                    `;
+                <button type="button" class="btn btn-warning btn-sm fw-bold px-3 shadow-sm" onclick="activateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})">
+                    <i class="bi bi-lightning-charge-fill me-1"></i>Activar (${cost} PM)
+                </button>
+            `;
         } else {
             actionButtonHtml = `
-                        <button type="button" class="btn btn-secondary btn-sm fw-bold px-3 disabled" disabled title="Puntos de Mando insuficientes">
-                            <i class="bi bi-x-circle me-1"></i>PM Insuficiente (${cost} PM)
-                        </button>
-                    `;
+                <button type="button" class="btn btn-secondary btn-sm fw-bold px-3 disabled" disabled title="Puntos de Mando insuficientes">
+                    <i class="bi bi-x-circle me-1"></i>PM Insuficiente (${cost} PM)
+                </button>
+            `;
         }
 
         html += `
-                    <div class="col-12">
-                        <div class="card ploy-modal-card ${isActive ? 'is-active border-success' : 'border-secondary border-opacity-25'} shadow-sm">
-                            <div class="card-header ${isActive ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center py-2">
-                                <span class="fw-bold text-uppercase small"><i class="bi bi-shield-shaded me-1"></i>${ploy.name}</span>
-                                <span class="badge ${isActive ? 'bg-light text-success' : 'bg-warning text-dark'} fw-bold">${ploy.cps || '1 PM'}</span>
-                            </div>
-                            <div class="card-body bg-white p-3">
-                                <div class="card-text small lh-sm text-dark mb-3">${ploy.description}</div>
-                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
-                                    <small class="text-muted fst-italic">Ardid de Estrategia (Inicio de TP)</small>
-                                    ${actionButtonHtml}
-                                </div>
-                            </div>
+            <div class="col-12">
+                <div class="equipment-card ploy-modal-card h-100 shadow-sm border ${isActive ? 'is-active border-success border-2' : 'border-secondary border-opacity-25'} rounded overflow-hidden d-flex flex-column">
+                    <!-- Cabecera reestructurada con padding reducido y Flexbox -->
+                    <div class="p-2 ${isActive ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">
+                            <i class="bi bi-shield-shaded me-1"></i>${ploy.name}
+                        </h6>
+                        <span class="badge ${isActive ? 'bg-light text-success' : 'bg-warning text-dark'} shadow-sm px-2 py-1">
+                            ${ploy.cps || '1 PM'}
+                        </span>
+                    </div>
+                    
+                    <!-- Cuerpo convertido a flex-column para empujar el footer hacia abajo -->
+                    <div class="p-3 bg-light text-dark flex-grow-1 d-flex flex-column">
+                        <div class="equipment-description small lh-sm mb-3">
+                            ${ploy.description}
+                        </div>
+                                
+                        <!-- Sección inferior anclada abajo con mt-auto -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
+                            <small class="text-muted fst-italic">Ardid de Estrategia</small>
+                            ${actionButtonHtml}
                         </div>
                     </div>
-                `;
+                </div>
+            </div>
+        `;
     });
 
     html += '</div>';
@@ -1284,17 +1295,27 @@ function renderEquipmentGridHtml(items, playerPrefix, currentList, isUniversal) 
         }
 
         html += `
-                    <div class="col-12 col-lg-6">
-                        <div class="card h-100 equip-select-card ${isSelected ? 'is-selected border-success' : 'border-secondary border-opacity-25'} shadow-sm">
-                            <div class="card-header ${isSelected ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center py-2">
-                                <span class="fw-bold text-uppercase small"><i class="bi bi-tools me-1"></i>${item.name}</span>
-                                <span class="badge ${isSelected ? 'bg-light text-success' : 'bg-secondary text-white'} fw-bold">${isUniversal ? 'Universal' : 'Facción'}</span>
+                    <div class="col-12 col-lg-6 mb-3">
+                        <div class="equipment-card equip-select-card h-100 shadow-sm border ${isSelected ? 'is-selected border-success border-2' : 'border-secondary border-opacity-25'} rounded overflow-hidden d-flex flex-column">
+                            
+                            <!-- Cabecera sin padding nativo, usando tu estructura -->
+                            <div class="p-2 ${isSelected ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center">
+                                <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">
+                                    <i class="bi bi-tools me-1"></i>${item.name}
+                                </h6>
+                                <span class="badge ${isSelected ? 'bg-light text-success' : 'bg-secondary text-white'} shadow-sm px-2 py-1">
+                                    ${isUniversal ? 'Universal' : 'Facción'}
+                                </span>
                             </div>
-                            <div class="card-body bg-light p-3 d-flex flex-column justify-content-between">
-                                <div class="mb-3">
+                            
+                            <!-- Cuerpo Flexbox para empujar los controles abajo -->
+                            <div class="p-3 bg-light text-dark flex-grow-1 d-flex flex-column">
+                                <div class="equipment-description small mb-3">
                                     ${buildEquipmentCardInnerHtml(item)}
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center pt-2 border-top bg-light mt-auto">
+                                
+                                <!-- Sección inferior con controles (Seleccionar/Quitar) -->
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
                                     <small class="text-muted fst-italic">${isUniversal ? 'Equipo Global' : 'Exclusivo Facción'}</small>
                                     ${btnHtml}
                                 </div>
@@ -1543,33 +1564,28 @@ function showCritOpDetails() {
     // 2. Manejo de las Acciones de Misión
     let actionHtml = '';
     if (op.action_mission && op.action_mission.length > 0) {
-        // Iteramos por si hay más de una acción (como en la misión "Datos")
-        op.action_mission.forEach(am => {
-            if (am.action_mission_name) {
-                actionHtml += `
-                            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-                            <div class="unique-actions-section mb-3 shadow-sm rounded">
-                                <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
-                                    <div class="fw-bold">${am.action_mission_name}</div>
-                                    <div class="ap-box bg-secondary px-2 rounded small">${am.action_mission_cost}</div>
-                                </div>
-                                <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
-                                    ${am.action_mission_yes ? `
-                                    <p class="mb-2 d-flex align-items-start">
-                                        <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
-                                        <span>${am.action_mission_yes}</span>
-                                    </p>` : ''}
-            
-                                    ${am.action_mission_no ? `
-                                    <p class="mb-0 d-flex align-items-start">
-                                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
-                                        <span>${am.action_mission_no}</span>
-                                    </p>` : ''}
-                                </div>
-                            </div>
-                        `;
-            }
-        });
+        const accionesMapeadas = op.action_mission.map(am => {
+            if (!am.action_mission_name) return '';
+            return `
+                <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${am.action_mission_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${am.action_mission_cost}</div>
+                    </div>
+                    <div class="content p-2 small text-start">
+                        ${am.action_mission_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${am.action_mission_yes}</span></p>` : ''}
+                        ${am.action_mission_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${am.action_mission_no}</span></p>` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        if (accionesMapeadas) {
+            actionHtml = `
+                <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+                ${accionesMapeadas}
+            `;
+        }
     }
 
     // 3. Manejo de los Puntos de Victoria (Ojo con el nombre de la variable en tu JSON: victoy_points)
@@ -1908,27 +1924,18 @@ function showTacOpDetails(playerPrefix) {
     let actionHtml = '';
     if (op.action_mission_name) {
         actionHtml = `
-                    <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-                    <div class="unique-actions-section mb-3 shadow-sm rounded">
-                        <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
-                            <div class="fw-bold">${op.action_mission_name}</div>
-                            <div class="ap-box bg-secondary px-2 rounded small">${op.action_mission_cost}</div>
-                        </div>
-                        <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
-                            ${op.action_mission_yes ? `
-                            <p class="mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
-                                <span>${op.action_mission_yes}</span>
-                            </p>` : ''}
-    
-                            ${op.action_mission_no ? `
-                            <p class="mb-0 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1"></span> 
-                                <span>${op.action_mission_no}</span>
-                            </p>` : ''}
-                        </div>
-                    </div>
-                `;
+            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+            <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                    <div class="fw-bold">${op.action_mission_name}</div>
+                    <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${op.action_mission_cost}</div>
+                </div>
+                <div class="content p-2 small text-start">
+                    ${op.action_mission_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${op.action_mission_yes}</span></p>` : ''}
+                    ${op.action_mission_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${op.action_mission_no}</span></p>` : ''}
+                </div>
+            </div>
+        `;
     }
 
     // 3. Manejo de Puntos de Victoria (Soporta Arrays)

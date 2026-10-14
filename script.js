@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // ⚠️ NUEVO: Leer los agentes seleccionados de esta facción desde localStorage
+        // Leer los agentes seleccionados de esta facción desde localStorage
         const storageKey = `battlekit_roster_${factionKey}`;
         const selectedOps = JSON.parse(localStorage.getItem(storageKey)) || [];
 
@@ -461,16 +461,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     </p>` : '';
 
                     return `
-                <div class="unique-actions-section">
-                    <div class="header">
-                        <div>${a.name}</div>
-                        <div class="ap-box">${a.cost}</div>
-                    </div>
-                    <div class="content">
-                        ${descYes}
-                        ${descNo}
-                    </div>
-                </div>`;
+        <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+            <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                <div class="fw-bold">${a.name}</div>
+                <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.cost}</div>
+            </div>
+            <div class="content p-2 small">
+                ${descYes}
+                ${descNo}
+            </div>
+        </div>`;
                 }).join('') : '';
 
             // ⚠️ LÓGICA DE ESTADO VISUAL: Se calcula ANTES de imprimir el HTML
@@ -594,14 +594,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Adaptado a la tarjeta de acción única
             const missionAction = op.action_mission_name ? `
                 <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2">Acción de Misión</div>
-                <div class="unique-actions-section">
-                    <div class="header">
-                        <div>${op.action_mission_name}</div>
-                        <div class="ap-box">${op.action_mission_cost}</div>
+                <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${op.action_mission_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${op.action_mission_cost}</div>
                     </div>
-                    <div class="content small">
-                        ${op.action_mission_yes ? `<p><span class="icon icon-yes"></span> <span>${op.action_mission_yes}</span></p>` : ''}
-                        ${op.action_mission_no ? `<p><span class="icon icon-no"></span> <span>${op.action_mission_no}</span></p>` : ''}
+                    <div class="content p-2 small">
+                        ${op.action_mission_yes ? `<p class="mb-1"><span class="icon icon-yes"></span> <span>${op.action_mission_yes}</span></p>` : ''}
+                        ${op.action_mission_no ? `<p class="mb-0"><span class="icon icon-no"></span> <span>${op.action_mission_no}</span></p>` : ''}
                     </div>
                 </div>` : '';
 
@@ -647,22 +647,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         ploys.sort((a, b) => (a.type || '').localeCompare(b.type || ''));
-
+        
         const html = ploys.map(ploy => {
             const isStrategic = ploy.type === 'strategic';
-            const headerColor = isStrategic ? 'bg-dark' : 'bg-secondary';
+            // Configuración estricta de colores según tu solicitud
+            const headerClasses = isStrategic ? 'bg-dark text-white' : 'bg-secondary text-white';
             const typeLabel = isStrategic ? 'Ardid de Estrategia' : 'Ardid de Tiroteo';
 
             return `
-            <div class="col-12 col-md-6 mb-3">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-header ${headerColor} text-white d-flex justify-content-between align-items-center">
-                        <span class="fw-bold text-uppercase small">${ploy.name}</span>
-                        <span class="badge bg-light text-dark">${ploy.cps}</span>
+            <div class="col-12 col-md-6 mb-4">
+                <div class="equipment-card h-100 shadow-sm border border-dark rounded overflow-hidden d-flex flex-column"> 
+                    <!-- Cabecera: Nombre a la izquierda, Costo a la derecha -->
+                    <div class="p-2 ${headerClasses} d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">${ploy.name}</h6>
+                        <span class="badge bg-light text-dark shadow-sm px-2 py-1">${ploy.cps}</span>
                     </div>
-                    <div class="card-body">
-                        <span class="badge ${isStrategic ? 'bg-warning text-dark' : 'bg-info text-dark'} mb-2">${typeLabel}</span>
-                        <div class="card-text small">${ploy.description}</div>
+                    <!-- Cuerpo: Etiqueta y Descripción compactadas -->
+                    <div class="p-3 bg-light text-dark flex-grow-1">
+                        <div class="mb-2">
+                            <span class="badge ${isStrategic ? 'bg-warning text-dark' : 'bg-info text-dark'} shadow-sm">${typeLabel}</span>
+                        </div>
+                        <div class="equipment-description small">
+                            ${ploy.description}
+                        </div>
                     </div>
                 </div>
             </div>`;
@@ -754,12 +761,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Estructura de tarjeta consistente
                     return `
-                <div class="crit-op" data-type="action">
-                    <div class="header">
-                        <div>${a.action_name}</div>
-                        <div class="ap-box">${a.action_cost}</div>
+                <div class="unique-actions-section border border-dark rounded mt-2 mb-2 overflow-hidden">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${a.action_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.action_cost}</div>
                     </div>
-                    <div class="content">
+                    <div class="content p-2 small">
                         ${descYes}
                         ${descNo}
                     </div>

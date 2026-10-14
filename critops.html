@@ -162,32 +162,30 @@
 
                 // 2. Manejo de la Acción de Misión solicitada por el usuario
                 let actionHtml = '';
-                // Como en el JSON viene como array, extraemos el primer elemento si existe
+                // Iteramos dinámicamente sobre todo el arreglo para soportar múltiples acciones
                 if (op.action_mission && op.action_mission.length > 0) {
-                    const am = op.action_mission[0];
-                    if (am.action_mission_name) {
-                        // Incorporamos la estructura pedida + las clases Bootstrap de Flexbox
-                        actionHtml = `
-                            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-                            <div class="unique-actions-section mb-3 shadow-sm rounded">
-                                <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
-                                    <div class="fw-bold">${am.action_mission_name}</div>
-                                    <div class="ap-box bg-secondary px-2 rounded small">${am.action_mission_cost}</div>
-                                </div>
-                                <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
-                                    ${am.action_mission_yes ? `
-                                    <p class="mb-2 d-flex align-items-start">
-                                        <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
-                                        <span>${am.action_mission_yes}</span>
-                                    </p>` : ''}
                     
-                                    ${am.action_mission_no ? `
-                                    <p class="mb-0 d-flex align-items-start">
-                                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
-                                        <span>${am.action_mission_no}</span>
-                                    </p>` : ''}
+                    const accionesMapeadas = op.action_mission.map(am => {
+                        if (!am.action_mission_name) return '';
+                        return `
+                            <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                                <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                                    <div class="fw-bold">${am.action_mission_name}</div>
+                                    <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${am.action_mission_cost}</div>
+                                </div>
+                                <div class="content p-2 small text-start">
+                                    ${am.action_mission_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${am.action_mission_yes}</span></p>` : ''}
+                                    ${am.action_mission_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${am.action_mission_no}</span></p>` : ''}
                                 </div>
                             </div>
+                        `;
+                    }).join('');
+
+                    // Inyectamos el subtítulo solo si existen acciones renderizadas
+                    if (accionesMapeadas) {
+                        actionHtml = `
+                            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+                            ${accionesMapeadas}
                         `;
                     }
                 }

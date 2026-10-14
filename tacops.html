@@ -213,24 +213,15 @@
                 let actionHtml = '';
                 if (op.action_mission_name) {
                     actionHtml = `
-                        <div class="sub-header mt-3">Acción de Misión</div>
-                        <div class="unique-actions-section">
-                            <div class="header">
-                                <div>${op.action_mission_name}</div>
-                                <div class="ap-box">${op.action_mission_cost}</div>
+                        <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2">Acción de Misión</div>
+                        <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                            <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                                <div class="fw-bold">${op.action_mission_name}</div>
+                                <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${op.action_mission_cost}</div>
                             </div>
-                            <div class="content">
-                                ${op.action_mission_yes ? `
-                                <p>
-                                    <span class="icon icon-yes"></span> 
-                                    <span>${op.action_mission_yes}</span>
-                                </p>` : ''}
-                
-                                ${op.action_mission_no ? `
-                                <p>
-                                    <span class="icon icon-no"></span> 
-                                    ${op.action_mission_no}
-                                </p>` : ''}
+                            <div class="content p-2 small text-start">
+                                ${op.action_mission_yes ? `<p class="mb-1"><span class="icon icon-yes"></span> <span>${op.action_mission_yes}</span></p>` : ''}
+                                ${op.action_mission_no ? `<p class="mb-0"><span class="icon icon-no"></span> <span>${op.action_mission_no}</span></p>` : ''}
                             </div>
                         </div>
                     `;

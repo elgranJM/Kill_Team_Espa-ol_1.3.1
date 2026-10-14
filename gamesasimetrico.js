@@ -584,22 +584,34 @@ function renderStrategicPloysModal(playerPrefix) {
         }
 
         html += `
-                    <div class="col-12">
-                        <div class="card ploy-modal-card ${isActive ? 'is-active border-success' : 'border-secondary border-opacity-25'} shadow-sm">
-                            <div class="card-header ${isActive ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center py-2">
-                                <span class="fw-bold text-uppercase small"><i class="bi bi-shield-shaded me-1"></i>${ploy.name}</span>
-                                <span class="badge ${isActive ? 'bg-light text-success' : 'bg-warning text-dark'} fw-bold">${ploy.cps || '1 PM'}</span>
-                            </div>
-                            <div class="card-body bg-white p-3">
-                                <div class="card-text small lh-sm text-dark mb-3">${ploy.description}</div>
-                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
-                                    <small class="text-muted fst-italic">Ardid de Estrategia (Inicio de TP)</small>
-                                    ${actionButtonHtml}
-                                </div>
-                            </div>
+            <div class="col-12 mb-3">
+                <div class="equipment-card ploy-modal-card h-100 shadow-sm border ${isActive ? 'is-active border-success border-2' : 'border-secondary border-opacity-25'} rounded overflow-hidden d-flex flex-column">
+                            
+                    <!-- Cabecera reestructurada con padding reducido y Flexbox -->
+                    <div class="p-2 ${isActive ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">
+                            <i class="bi bi-shield-shaded me-1"></i>${ploy.name}
+                        </h6>
+                        <span class="badge ${isActive ? 'bg-light text-success' : 'bg-warning text-dark'} shadow-sm px-2 py-1">
+                            ${ploy.cps || '1 PM'}
+                        </span>
+                    </div>
+                        
+                    <!-- Cuerpo convertido a flex-column para empujar el footer hacia abajo -->
+                    <div class="p-3 bg-light text-dark flex-grow-1 d-flex flex-column">
+                        <div class="equipment-description small lh-sm mb-3">
+                            ${ploy.description}
+                        </div>
+                                
+                        <!-- Sección inferior anclada abajo con mt-auto -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
+                            <small class="text-muted fst-italic">Ardid de Estrategia</small>
+                            ${actionButtonHtml}
                         </div>
                     </div>
-                `;
+                </div>
+            </div>
+        `;
     });
 
     html += '</div>';
@@ -894,40 +906,24 @@ function buildEquipmentCardInnerHtml(item) {
     if (item.action && item.action.length > 0) {
         actionHtml = item.action.map(a => {
             const descYes = Array.isArray(a.action_yes)
-                ? a.action_yes.map(line => `
-                            <div class="equip-action-yes p-2 mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1 me-2"></span>
-                                <div>${line}</div>
-                            </div>`).join('')
-                : (a.action_yes ? `
-                            <div class="equip-action-yes p-2 mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1 me-2"></span>
-                                <div>${a.action_yes}</div>
-                            </div>` : '');
+                ? a.action_yes.map(line => `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${line}</span></p>`).join('')
+                : (a.action_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.action_yes}</span></p>` : '');
 
             const descNo = Array.isArray(a.action_no)
-                ? a.action_no.map(line => `
-                            <div class="equip-action-no p-2 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1 me-2"></span>
-                                <div>${line}</div>
-                            </div>`).join('')
-                : (a.action_no ? `
-                            <div class="equip-action-no p-2 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1 me-2"></span>
-                                <div>${a.action_no}</div>
-                            </div>` : '');
+                ? a.action_no.map(line => `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${line}</span></p>`).join('')
+                : (a.action_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${a.action_no}</span></p>` : '');
 
             return `
-                    <div class="equip-action-box shadow-sm mb-2">
-                        <div class="equip-action-header d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-uppercase">${a.action_name}</span>
-                            <span class="badge bg-dark">${a.action_cost}</span>
-                        </div>
-                        <div class="content bg-white p-2">
-                            ${descYes}
-                            ${descNo}
-                        </div>
-                    </div>`;
+                <div class="unique-actions-section border border-dark rounded mt-2 mb-2 overflow-hidden">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${a.action_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.action_cost}</div>
+                    </div>
+                    <div class="content p-2 small text-start">
+                        ${descYes}
+                        ${descNo}
+                    </div>
+                </div>`;
         }).join('');
     }
 
@@ -1050,24 +1046,34 @@ function renderEquipmentGridHtml(items, playerPrefix, currentList, isUniversal) 
         }
 
         html += `
-                    <div class="col-12 col-lg-6">
-                        <div class="card h-100 equip-select-card ${isSelected ? 'is-selected border-success' : 'border-secondary border-opacity-25'} shadow-sm">
-                            <div class="card-header ${isSelected ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center py-2">
-                                <span class="fw-bold text-uppercase small"><i class="bi bi-tools me-1"></i>${item.name}</span>
-                                <span class="badge ${isSelected ? 'bg-light text-success' : 'bg-secondary text-white'} fw-bold">${isUniversal ? 'Universal' : 'Facción'}</span>
-                            </div>
-                            <div class="card-body bg-light p-3 d-flex flex-column justify-content-between">
-                                <div class="mb-3">
-                                    ${buildEquipmentCardInnerHtml(item)}
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center pt-2 border-top bg-light mt-auto">
-                                    <small class="text-muted fst-italic">${isUniversal ? 'Equipo Global' : 'Exclusivo Facción'}</small>
-                                    ${btnHtml}
-                                </div>
-                            </div>
+            <div class="col-12 col-lg-6 mb-3">
+                <div class="equipment-card equip-select-card h-100 shadow-sm border ${isSelected ? 'is-selected border-success border-2' : 'border-secondary border-opacity-25'} rounded overflow-hidden d-flex flex-column">
+                            
+                    <!-- Cabecera sin padding nativo, usando tu estructura -->
+                    <div class="p-2 ${isSelected ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">
+                            <i class="bi bi-tools me-1"></i>${item.name}
+                        </h6>
+                        <span class="badge ${isSelected ? 'bg-light text-success' : 'bg-secondary text-white'} shadow-sm px-2 py-1">
+                            ${isUniversal ? 'Universal' : 'Facción'}
+                        </span>
+                    </div>
+                            
+                    <!-- Cuerpo Flexbox para empujar los controles abajo -->
+                    <div class="p-3 bg-light text-dark flex-grow-1 d-flex flex-column">
+                        <div class="equipment-description small mb-3">
+                            ${buildEquipmentCardInnerHtml(item)}
+                        </div>
+                                
+                        <!-- Sección inferior con controles (Seleccionar/Quitar) -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
+                            <small class="text-muted fst-italic">${isUniversal ? 'Equipo Global' : 'Exclusivo Facción'}</small>
+                            ${btnHtml}
                         </div>
                     </div>
-                `;
+                </div>
+            </div>
+        `;
     });
 
     html += '</div>';
@@ -1320,33 +1326,28 @@ function showCritOpDetails() {
     // 2. Manejo de las Acciones de Misión
     let actionHtml = '';
     if (op.action_mission && op.action_mission.length > 0) {
-        // Iteramos por si hay más de una acción (como en la misión "Datos")
-        op.action_mission.forEach(am => {
-            if (am.action_mission_name) {
-                actionHtml += `
-                            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-                            <div class="unique-actions-section mb-3 shadow-sm rounded">
-                                <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
-                                    <div class="fw-bold">${am.action_mission_name}</div>
-                                    <div class="ap-box bg-secondary px-2 rounded small">${am.action_mission_cost}</div>
-                                </div>
-                                <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
-                                    ${am.action_mission_yes ? `
-                                    <p class="mb-2 d-flex align-items-start">
-                                        <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
-                                        <span>${am.action_mission_yes}</span>
-                                    </p>` : ''}
-            
-                                    ${am.action_mission_no ? `
-                                    <p class="mb-0 d-flex align-items-start">
-                                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
-                                        <span>${am.action_mission_no}</span>
-                                    </p>` : ''}
-                                </div>
-                            </div>
-                        `;
-            }
-        });
+        const accionesMapeadas = op.action_mission.map(am => {
+            if (!am.action_mission_name) return '';
+            return `
+                <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${am.action_mission_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${am.action_mission_cost}</div>
+                    </div>
+                    <div class="content p-2 small text-start">
+                        ${am.action_mission_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${am.action_mission_yes}</span></p>` : ''}
+                        ${am.action_mission_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${am.action_mission_no}</span></p>` : ''}
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        if (accionesMapeadas) {
+            actionHtml = `
+                <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+                ${accionesMapeadas}
+            `;
+        }
     }
 
     // 3. Manejo de los Puntos de Victoria (Ojo con el nombre de la variable en tu JSON: victoy_points)
@@ -1627,145 +1628,6 @@ function showFactionRules(playerPrefix) {
     modal.show();
 }
 
-// --- SISTEMA DE VISUALIZACIÓN DE REGLAS (TARJETA TACOP) ---
-function showTacOpDetails(playerPrefix) {
-    const selectEl = document.getElementById(`${playerPrefix}-tacop`);
-    const tacKey = selectEl.value;
-
-    if (!tacKey) {
-        mostrarNotificacion("Falta selección: Por favor, selecciona primero tu Operación Táctica.");
-        return;
-    }
-
-    const op = dataTacOps[tacKey];
-    if (!op) return;
-
-    // Colores e iconos por arquetipo (Misma lógica de tacops.html)
-    const archName = archetypeTranslations[op.archetype] || op.archetype;
-
-    function getCustomColor(archetype) {
-        switch (archetype) {
-            case 'recon': return '#f05c22';
-            case 'security': return '#0b6be1';
-            case 'infiltration': return '#5f5f5f';
-            case 'seek-destroy': return '#bd0003';
-            default: return '#6c757d';
-        }
-    }
-
-    function getArchetypeIcon(archetype) {
-        switch (archetype) {
-            case 'recon': return './resources/game_rules_files/recon.svg';
-            case 'security': return './resources/game_rules_files/security.svg';
-            case 'infiltration': return './resources/game_rules_files/infiltration.svg';
-            case 'seek-destroy': return './resources/game_rules_files/seek-destroy.svg';
-            default: return '';
-        }
-    }
-
-    // 1. Manejo de Reglas Adicionales
-    let additionalRulesHtml = '';
-    if (op.additional_rules) {
-        if (Array.isArray(op.additional_rules)) {
-            additionalRulesHtml = `
-                        <div class="victory-points mb-3">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
-                            <ul class="small text-start text-muted ps-3 mb-0">${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul>
-                        </div>`;
-        } else {
-            additionalRulesHtml = `
-                        <div class="victory-points mb-3">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
-                            <p class="text-muted small text-start mb-0">${op.additional_rules}</p>
-                        </div>`;
-        }
-    }
-
-    // 2. Manejo de Acción de Misión
-    let actionHtml = '';
-    if (op.action_mission_name) {
-        actionHtml = `
-                    <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-                    <div class="unique-actions-section mb-3 shadow-sm rounded">
-                        <div class="header d-flex justify-content-between align-items-center bg-dark text-white p-2 rounded-top">
-                            <div class="fw-bold">${op.action_mission_name}</div>
-                            <div class="ap-box bg-secondary px-2 rounded small">${op.action_mission_cost}</div>
-                        </div>
-                        <div class="content p-3 border border-top-0 rounded-bottom text-start small bg-white">
-                            ${op.action_mission_yes ? `
-                            <p class="mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
-                                <span>${op.action_mission_yes}</span>
-                            </p>` : ''}
-    
-                            ${op.action_mission_no ? `
-                            <p class="mb-0 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1"></span> 
-                                <span>${op.action_mission_no}</span>
-                            </p>` : ''}
-                        </div>
-                    </div>
-                `;
-    }
-
-    // 3. Manejo de Puntos de Victoria (Soporta Arrays)
-    let vpHtml = '';
-    if (op.victoy_points) {
-        if (Array.isArray(op.victoy_points)) {
-            const vpList = [...op.victoy_points];
-            let limitText = '';
-            // Si el último elemento es un límite de texto, lo separamos para pintarlo rojo
-            if (vpList[vpList.length - 1] && vpList[vpList.length - 1].includes("No puedes obtener más de")) {
-                limitText = `<p class="fst-italic text-danger small mt-2 mb-0 text-start">${vpList.pop()}</p>`;
-            }
-            vpHtml = `
-                        <div class="victory-points mt-auto">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
-                            <ul class="text-start small mb-1 ps-3 text-muted">${vpList.map(vp => `<li>${vp}</li>`).join('')}</ul>
-                            ${limitText}
-                        </div>`;
-        } else {
-            vpHtml = `
-                        <div class="victory-points mt-auto">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
-                            <p class="small mb-0 text-start text-muted">${op.victoy_points}</p>
-                        </div>`;
-        }
-    }
-
-    // 4. Armar Modal
-    document.getElementById('tacOpModalTitle').innerHTML = `
-                <i class="bi bi-bookmark-star-fill text-primary me-2"></i>Detalles de TacOp
-            `;
-
-    const bodyEl = document.getElementById('tacOpModalBody');
-    bodyEl.innerHTML = `
-                <div class="card shadow border-0 bg-light mx-auto" style="max-width: 600px;">
-                    <div class="position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center shadow-sm" style="background-color: ${getCustomColor(op.archetype)}; font-size: 1.1rem;">
-                        <img src="${getArchetypeIcon(op.archetype)}" class="svg-white" alt="Icono" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
-                        <span>${archName.toUpperCase()}</span>
-                    </div>
-    
-                    <div class="p-4 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom text-center">
-                        <h4 class="name fw-bold text-dark mb-3 text-uppercase">${op.name}</h4>
-                        <div class="mission-container pt-0 flex-grow-1 d-flex flex-column text-start">
-                            <div class="victory-points mb-3">
-                                <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Revelar</div>
-                                <div class="small text-start text-muted">${op.Reveal}</div>
-                            </div>
-                            ${additionalRulesHtml}
-                            ${actionHtml}
-                            ${vpHtml}
-                        </div>
-                    </div>
-                </div>
-            `;
-
-    // 5. Mostrar Modal
-    const modal = new bootstrap.Modal(document.getElementById('tacOpInfoModal'));
-    modal.show();
-}
-
 // --- SISTEMA DE AUTOGUARDADO (LOCALSTORAGE) ---
 function getPlayerState(p) {
     // Extracción dinámica para soportar p1, p2, p3, p4
@@ -1997,18 +1859,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function validarSeleccionFacciom(event, playerPrefix) {
-    const factionSelect = document.getElementById(`${playerPrefix}-faction`);
-
-    // Si el valor está vacío (es decir, sigue en la opción por defecto)
-    if (!factionSelect.value) {
-        event.preventDefault(); // Evita que el <select> se despliegue
-        mostrarNotificacion("Debes elegir una facción para poder seleccionar una TacOp.");
-    }
-}
-
 // --- SISTEMA DE REFERENCIA RÁPIDA DE ARMAS ---
-
 function populateWeaponRules() {
     const container = document.getElementById('weaponRulesBody');
     if (!container) return;
@@ -2278,11 +2129,11 @@ function togglePlayerMode(count, shouldSave = true) {
 
     if (p4Container) {
         if (count === 3) {
-            p4Container.classList.remove('d-md-block'); 
+            p4Container.classList.remove('d-md-block');
             p4Container.classList.add('d-none');
             // 🚀 SOLUCIÓN DEFINITIVA: Forzar ocultación en línea para derrotar a style.css en PC
-            p4Container.style.setProperty('display', 'none', 'important'); 
-            
+            p4Container.style.setProperty('display', 'none', 'important');
+
             if (labelP4) labelP4.classList.add('d-none'); // Ocultar botón J4 móvil
 
             // Si estaba en la vista móvil de J4, regresarlo a "Todos"
@@ -2299,10 +2150,10 @@ function togglePlayerMode(count, shouldSave = true) {
             if (killsTpEl) killsTpEl.innerText = "0";
         } else {
             p4Container.classList.remove('d-none');
-            p4Container.classList.add('d-md-block'); 
+            p4Container.classList.add('d-md-block');
             // 🚀 Liberar el bloqueo en línea para que se muestre en PC
-            p4Container.style.removeProperty('display'); 
-            
+            p4Container.style.removeProperty('display');
+
             if (labelP4) labelP4.classList.remove('d-none'); // Mostrar botón J4 móvil
         }
     }
@@ -2330,12 +2181,12 @@ function setMobilePlayerView(mode) {
         colP1.classList.remove('d-none');
         colP2.classList.remove('d-none');
         colP3.classList.remove('d-none');
-        
+
         if (gameState.playerCount === 4) {
             colP4.classList.remove('d-none');
             colP4.classList.add('d-md-block');
         } else {
-            colP4.classList.remove('d-md-block'); 
+            colP4.classList.remove('d-md-block');
             colP4.classList.add('d-none');
             // 🚀 Forzar ocultación
             colP4.style.setProperty('display', 'none', 'important');
@@ -2348,7 +2199,7 @@ function setMobilePlayerView(mode) {
         colP1.classList.remove('d-none');
         colP2.classList.remove('d-none');
         colP3.classList.remove('d-none');
-        
+
         if (gameState.playerCount === 4) {
             colP4.classList.remove('d-none');
         } else {

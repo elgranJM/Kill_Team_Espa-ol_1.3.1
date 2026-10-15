@@ -1148,7 +1148,7 @@
             ],
             "uniqueActions": [
                 {
-                    "name": "Marcador telemétrico enfocado",
+                    "name": "<b>Marcador telemétrico</b> enfocado",
                     "cost": "1PA",
                     "description": ["Elige 1 agente enemigo visible para este agente. Una vez durante este punto de inflexión, cuando un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo dispare a ese agente enemigo, puedes usar este efecto. Si lo haces, mejora en 1 el atributo Impactar de las armas a distancia de la ficha de datos de ese agente amigo hasta el final de esa acción."],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
@@ -3021,7 +3021,7 @@
             },
             "weapons": [
                 {
-                    "name": "Descarga de flujo",
+                    "name": "Des<b>Carga</b> de flujo",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -4119,7 +4119,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Antorcha celeste",
-                    "description": "Un agente solo puede usar esta arma durante la acción de Asalto con antorcha celeste (ver reglas de acción <b>ASALTO CON ANTORCHA CELESTE</b>). Si lo hace, no elijas un blanco válido. En su lugar, dispara contra cada agente dentro de su zona de achicharramiento (excepto agentes que estén completamente bajo terreno Aventajado); no se consideran a cubierto ni ofuscados. Tira cada secuencia por separado en orden desde el agente más lejano al más cercano. La zona de achicharramiento es el área entre la posición actual y previa del agente. Se puede colocar temporalmente bajo este agente un marcador redondo de Antorcha celeste de 28 mm antes de moverlo, como ayuda a la hora de determinar esto."
+                    "description": "Un agente solo puede usar esta arma durante la acción de <b>Asalto con antorcha celeste</b> (ver reglas de acción <b>ASALTO CON ANTORCHA CELESTE</b>). Si lo hace, no elijas un blanco válido. En su lugar, dispara contra cada agente dentro de su zona de achicharramiento (excepto agentes que estén completamente bajo terreno Aventajado); no se consideran a cubierto ni ofuscados. Tira cada secuencia por separado en orden desde el agente más lejano al más cercano. La zona de achicharramiento es el área entre la posición actual y previa del agente. Se puede colocar temporalmente bajo este agente un marcador redondo de Antorcha celeste de 28 mm antes de moverlo, como ayuda a la hora de determinar esto."
                 }
             ],
             "uniqueActions": [
@@ -6360,7 +6360,7 @@
         },
         {
           "name": "Bestia",
-          "description": "Este agente no puede realizar ninguna acción que no sea Carga, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b> y <b>Reposicionarse</b>. No puede usar armas que no figuren en su tarjeta de datos."
+          "description": "Este agente no puede realizar ninguna acción que no sea <b>Carga</b>, <b>Correr</b>, <b>Retroceder</b>, <b>Combatir</b> y <b>Reposicionarse</b>. No puede usar armas que no figuren en su tarjeta de datos."
         }
       ],
       "uniqueActions": [],
@@ -6469,8 +6469,8 @@
       ],
       "abilities": [
         {
-          "name": "Carga de bayoneta",
-          "description": "Cuando este agente termine de moverse durante la acción de Carga, puedes infligir 1D3+1 de daño a un agente enemigo situado en su zona de control."
+          "name": "<b>Carga</b> de bayoneta",
+          "description": "Cuando este agente termine de moverse durante la acción de <b>Carga</b>, puedes infligir 1D3+1 de daño a un agente enemigo situado en su zona de control."
         },
         {
           "name": "Lento de entendederas",
@@ -6630,7 +6630,7 @@
       "abilities": [
         {
           "name": "Cazador",
-          "description": "Este agente puede realizar la acción de Carga mientras tenga una orden de Ocultarse. Si lo hace durante su activación, hasta el final de esa activación suma 1 al atributo Ataq. de su filoarma y esa arma de combate tiene la regla de arma Brutal."
+          "description": "Este agente puede realizar la acción de <b>Carga</b> mientras tenga una orden de Ocultarse. Si lo hace durante su activación, hasta el final de esa activación suma 1 al atributo Ataq. de su filoarma y esa arma de combate tiene la regla de arma Brutal."
         },
         {
           "name": "A la espera",
@@ -6695,7 +6695,7 @@
           "description": [
             "Selecciona un punto en un elemento de terreno visible para este agente, y a 6\" o menos de él. Retira a este agente de la zona de aniquilación y devuélvelo en una ubicación donde pueda colocarse, completamente a 6\" o menos horizontalmente de ese punto, pero no en la zona de control de un agente enemigo, y con ese punto visible para él."
           ],
-          "description_no": "Esta acción se considera de <b>Reposicionarse</b>. Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo, o durante una activación en la que haya realizado la acción de Carga, <b>Retroceder</b> o <b>Disparar</b> (o viceversa)."
+          "description_no": "Esta acción se considera de <b>Reposicionarse</b>. Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo, o durante una activación en la que haya realizado la acción de <b>Carga</b>, <b>Retroceder</b> o <b>Disparar</b> (o viceversa)."
         }
       ],
       "keywords": "<span class=\"faction\">RÁTIDO</span>, IMPERIUM, ASTRA MILITARUM, INCURSOR",
@@ -7977,7 +7977,7 @@
       "abilities": [
         {
           "name": "Arte de la guerra",
-          "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Elige una de las siguientes opciones y aplica sus reglas hasta el final del punto de inflexión. No puedes elegir cada opción más de una vez por batalla:<ul><li><b>Mont'ka:</b> Suma 1\" al atributo Movimiento de los agentes <span class=\"faction\">RASTREADOR</span> amigos.</li><li><b>Kauyon:</b> Los agentes <span class=\"faction\">RASTREADOR</span> amigos pueden realizar una acción libre de Marcador telemétrico durante su activación si tienen una orden de <b>Ocultarse</b>.</li></ul>"
+          "description": "<b>GAMBITO ESTRATÉGICO</b> si este agente está en la zona de aniquilación. Elige una de las siguientes opciones y aplica sus reglas hasta el final del punto de inflexión. No puedes elegir cada opción más de una vez por batalla:<ul><li><b>Mont'ka:</b> Suma 1\" al atributo Movimiento de los agentes <span class=\"faction\">RASTREADOR</span> amigos.</li><li><b>Kauyon:</b> Los agentes <span class=\"faction\">RASTREADOR</span> amigos pueden realizar una acción libre de <b>Marcador telemétrico</b> durante su activación si tienen una orden de <b>Ocultarse</b>.</li></ul>"
         }
       ],
       "uniqueActions": [
@@ -7985,7 +7985,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
@@ -8035,7 +8035,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
@@ -8085,7 +8085,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         },
@@ -8209,7 +8209,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
@@ -8305,7 +8305,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         },
@@ -8363,7 +8363,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         },
@@ -8422,7 +8422,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         },
@@ -8477,7 +8477,7 @@
         },
         {
           "name": "Valor en primera línea",
-          "description": "Este agente puede realizar la acción de Marcador telemétrico aún estando en la zona de control de un agente enemigo (lo cual tiene preferencia sobre las condiciones normales de la acción Marcador telemétrico). Además, este agente puede realizar la acción de <b>Retroceder</b> por 1PA menos."
+          "description": "Este agente puede realizar la acción de <b>Marcador telemétrico</b> aún estando en la zona de control de un agente enemigo (lo cual tiene preferencia sobre las condiciones normales de la acción Marcador telemétrico). Además, este agente puede realizar la acción de <b>Retroceder</b> por 1PA menos."
         }
       ],
       "uniqueActions": [
@@ -8485,7 +8485,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro). Si un agente realiza una acción de <b>Disparar</b> (salvo Ponerse en guardia) y esta acción durante la misma activación, solo puede tomar como blanco de esta acción al blanco de la acción de <b>Disparar</b> (y viceversa)."
           ]
         }
       ],
@@ -8536,11 +8536,11 @@
       "abilities": [
         {
           "name": "Analizar",
-          "description": "Siempre que este agente realice la acción de Marcador telemétrico, cada otro agente enemigo visible para este agente y que esté a 3\" o menos del agente enemigo que hayas elegido para esa acción gana también una de tus fichas de Marcador telemétrico."
+          "description": "Siempre que este agente realice la acción de <b>Marcador telemétrico</b>, cada otro agente enemigo visible para este agente y que esté a 3\" o menos del agente enemigo que hayas elegido para esa acción gana también una de tus fichas de Marcador telemétrico."
         },
         {
           "name": "Dron",
-          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, <b>Marcador telemétrico</b>, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [
@@ -8548,7 +8548,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
@@ -8590,7 +8590,7 @@
       "abilities": [
         {
           "name": "Dron",
-          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, <b>Marcador telemétrico</b>, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [],
@@ -8625,7 +8625,7 @@
         },
         {
           "name": "Dron",
-          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, <b>Marcador telemétrico</b>, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [],
@@ -8655,12 +8655,12 @@
       ],
       "abilities": [
         {
-          "name": "Marcador telemétrico de alta intensidad",
-          "description": "Siempre que este agente realice la acción de Marcador telemétrico, el agente enemigo elegido ganará dos de tus fichas de Marcador telemétrico (en lugar de una)."
+          "name": "<b>Marcador telemétrico</b> de alta intensidad",
+          "description": "Siempre que este agente realice la acción de <b>Marcador telemétrico</b>, el agente enemigo elegido ganará dos de tus fichas de <b>Marcador telemétrico</b> (en lugar de una)."
         },
         {
           "name": "Dron",
-          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, <b>Marcador telemétrico</b>, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [
@@ -8668,7 +8668,7 @@
           "name": "MARCADOR TELEMÉTRICO",
           "cost": "1 PA",
           "description": [
-            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de Marcador telemétrico (hasta un máximo de cuatro)."
+            "Elige un agente enemigo visible para este agente. Dicho agente enemigo gana una de tus fichas de <b>Marcador telemétrico</b> (hasta un máximo de cuatro)."
           ],
           "description_no": "Un agente no puede realizar esta acción si está en la zona de control de agentes enemigos."
         }
@@ -8700,7 +8700,7 @@
       "abilities": [
         {
           "name": "Dron",
-          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, <b>Marcador telemétrico</b>, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [
@@ -8743,7 +8743,7 @@
         },
         {
           "name": "Dron",
-          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, Marcador telemétrico, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
+          "description": "<ul><li>Este agente no puede realizar acciones que no sean <b>Cargar</b>, <b>Combatir</b>, <b>Correr</b>, <b>Disparar</b>, <b>Marcador telemétrico</b>, <b>Reposicionarse</b> o <b>Retroceder</b>, ni puede usar armas que no figuren en su tarjeta de datos.</li><li>Al determinar el control de un marcador de objetivo, trata el atributo LPA de este agente como si fuera 1 menos. Esto no es un cambio al atributo LPA, así que es acumulativo a otros cambios.</li><li>Al determinar qué es visible para este agente, el disco redondo en la parte superior de la miniatura es su cabeza.</li></ul>"
         }
       ],
       "uniqueActions": [],
@@ -9922,7 +9922,7 @@
             },
             "weapons": [
                 {
-                    "name": "Descarga impía (estallido)",
+                    "name": "Des<b>Carga</b> impía (estallido)",
                     "type": "ranged",
                     "stats": {
                         "A": "5",
@@ -9932,7 +9932,7 @@
                     }
                 },
                 {
-                    "name": "Descarga impía (quemadura)",
+                    "name": "Des<b>Carga</b> impía (quemadura)",
                     "type": "ranged",
                     "stats": {
                         "A": "5",
@@ -13100,7 +13100,7 @@
             },
             "weapons": [
                 {
-                    "name": "Carga de demolición",
+                    "name": "<b>Carga</b> de demolición",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -15492,7 +15492,7 @@
                     }
                 },
                 {
-                    "name": "Carga C8 HX",
+                    "name": "<b>Carga</b> C8 HX",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -16985,7 +16985,7 @@
       ],
       "abilities": [
         {
-          "name": "Carga con púas",
+          "name": "<b>Carga</b> con púas",
           "description": "Siempre que este agente termine de moverse durante una acción de <b>Cargar</b>, puedes infligir 1D3 daños a cada agente enemigo en su zona de control (tira por separado por cada uno)."
         }
       ],
@@ -17678,7 +17678,7 @@
                 },
                 {
                     "name": "Bomba de viruelas",
-                    "description": "Este agente puede usar granadas aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Siempre que un agente enemigo hace un chequeo de aturdimiento como resultado de que este agente realice una acción de Granada aturdidora, si el resultado es 3+, inflige también tanto daño a ese agente enemigo como la mitad del resultado del D6 (redondeando al alza)."
+                    "description": "Este agente puede usar granadas aturdidoras (ver equipo universal). Hacer esto no cuenta de cara a los usos limitados que tengas (es decir, si también seleccionas esas granadas como equipo para otros agentes). Siempre que un agente enemigo hace un chequeo de aturdimiento como resultado de que este agente realice una acción de <b>Granada aturdidora</b>, si el resultado es 3+, inflige también tanto daño a ese agente enemigo como la mitad del resultado del D6 (redondeando al alza)."
                 }
             ],
             "uniqueActions": [],
@@ -21477,7 +21477,7 @@
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 },
                 {
-                    "name": "SOBRECARGA CRANEAL",
+                    "name": "SOBRE<b>Carga</b> CRANEAL",
                     "cost": "1 PA",
                     "description": [
                         "Elige un agente enemigo a 3\" o menos de este agente y visible para él. Como alternativa, si este agente se encuentra en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>, puedes elegir un agente enemigo en tu <b>MATRIZ DE NODOS DE OBELISCOS</b>. Hasta el final de la siguiente activación de ese agente enemigo, resta 1 a su atributo LPA."
@@ -22021,7 +22021,7 @@
             },
             "weapons": [
                 {
-                    "name": "Carga de demolición",
+                    "name": "<b>Carga</b> de demolición",
                     "type": "ranged",
                     "stats": {
                         "A": "4",
@@ -22323,7 +22323,7 @@
             ],
             "uniqueActions": [
                 {
-                    "name": "SOBRECARGA TELEPÁTICA",
+                    "name": "SOBRE<b>Carga</b> TELEPÁTICA",
                     "cost": "1 PA",
                     "description": [
                         "<b>PSÍQUICA</b>. Elige 1 agente enemigo que sea un blanco válido para este agente. Hasta el final de la siguiente activación de ese agente, resta 1 a su atributo LPA."

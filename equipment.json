@@ -848,7 +848,7 @@
     "id_equip": 107,
     "faction": "chaos-cult",
     "name": "Disfraces",
-    "description": "Después de revelar esta opción de equipamiento, tira 1D3. Como un GAMBITO ESTRATÉGICO en el primer punto de inflexión, un número de agentes DEVOTO CULTO DEL CAOS amigos igual al resultado que estén totalmente dentro de tu zona de descenso pueden realizar inmediatamente una acción de Reposicionarse libre, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de descenso.", 
+    "description": "Después de revelar esta opción de equipamiento, tira 1D3. Como un GAMBITO ESTRATÉGICO en el primer punto de inflexión, un número de agentes DEVOTO CULTO DEL CAOS amigos igual al resultado que estén totalmente dentro de tu zona de descenso pueden realizar inmediatamente una acción de <b>Reposicionarse</b> libre, pero deben terminar ese movimiento totalmente a 3\" o menos de tu zona de descenso.", 
     "weapon": [],
     "action": []
   },
@@ -1112,15 +1112,15 @@
     "id_equip": 138,
     "faction": "pathfinders",
     "name": "Visor de Análisis de Tiro",
-    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) esté realizando una acción de <b>Disparar</b> y estés eligiendo un blanco válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, si el blanco tiene al menos una de tus fichas de Marcador telemétrico, se le trata como si tuviera una más. Si el arma a distancia tiene la regla de arma Área o Ráfaga, solo se ve afectado el blanco principal.", 
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON</b>) esté realizando una acción de <b>Disparar</b> y estés eligiendo un blanco válido, puedes usar esta regla. Si lo haces, hasta el final de esa acción, si el blanco tiene al menos una de tus fichas de <b>Marcador telemétrico</b>, se le trata como si tuviera una más. Si el arma a distancia tiene la regla de arma Área o Ráfaga, solo se ve afectado el blanco principal.", 
     "weapon": [],
     "action": []
   },
   {
     "id_equip": 139,
     "faction": "pathfinders",
-    "name": "Marcador Telemétrico de Alta Intensidad",
-    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON TELEMÉTRICO MV7</b>) realice una acción de Marcador telemétrico, puedes usar esta regla. Si lo haces, el agente enemigo que has elegido gana dos de tus fichas de Marcador telemétrico (en lugar de una).", 
+    "name": "<b>Marcador telemétrico</b> de Alta Intensidad",
+    "description": "Hasta dos veces por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo (salvo <b>DRON TELEMÉTRICO MV7</b>) realice una acción de <b>Marcador telemétrico</b>, puedes usar esta regla. Si lo haces, el agente enemigo que has elegido gana dos de tus fichas de <b>Marcador telemétrico</b> (en lugar de una).", 
     "weapon": [],
     "action": []
   },
@@ -1128,7 +1128,7 @@
     "id_equip": 140,
     "faction": "pathfinders",
     "name": "Enlace de Rastreo Orbital",
-    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo realice la acción de Marcador telemétrico, puedes usar esta regla. Si lo haces, en su lugar puedes elegir un agente enemigo en la zona de aniquilación para que gane una de tus fichas de Marcador telemétrico (no necesita ser visible). Esto no es acumulativo con las reglas Marcador telemétrico de alta intensidad o Analizar.", 
+    "description": "Una vez por punto de inflexión, cuando un agente <span class=\"faction\">RASTREADOR</span> amigo realice la acción de <b>Marcador telemétrico</b>, puedes usar esta regla. Si lo haces, en su lugar puedes elegir un agente enemigo en la zona de aniquilación para que gane una de tus fichas de <b>Marcador telemétrico</b> (no necesita ser visible). Esto no es acumulativo con las reglas <b>Marcador telemétrico</b> de alta intensidad o Analizar.", 
     "weapon": [],
     "action": []
   },
@@ -1136,7 +1136,7 @@
     "id_equip": 141,
     "faction": "pathfinders",
     "name": "Granada Fotónica",
-    "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">RASTREADOR</span> amigo que tenga la acción de Marcador telemétrico en su tarjeta de datos (salvo <b>DRON</b>) puede realizar la siguiente acción única:", 
+    "description": "Una vez por punto de inflexión, un agente <span class=\"faction\">RASTREADOR</span> amigo que tenga la acción de <b>Marcador telemétrico</b> en su tarjeta de datos (salvo <b>DRON</b>) puede realizar la siguiente acción única:", 
     "weapon": [],
     "action": [
       {
@@ -1875,8 +1875,8 @@
       {
       "action_name": "MOVERSE CON BARRICADA",
       "action_cost": "1 PA",
-      "action_yes": ["Igual que la acción de Reposicionarse salvo que el agente activo no puede moverse más que su atributo Movimiento menos 2\" y no puede trepar, dejarse caer ni saltar, ni usar reglas de comando que lo retiren y lo desplieguen de nuevo (p.ej. Propulsor de salto de los <span class=\"faction\">SUCESORES RECUPERADORES</span> o Paso sombrío de las <span class=\"faction\">MANDRÁGORAS</span> ).", "Antes de que este agente se mueva, retira la barricada portátil a la que está conectado. Después de que se mueva, despliega la barricada portátil de modo que esté conectada de nuevo, pero la barricada portátil no puede desplegarse a 2\" o menos de otros elementos de terreno de equipo, puntos de acceso o terreno accesible. Si esto no es posible, la barricada portátil no se vuelve a desplegar."],
-      "action_no": "Esta acción se trata como una acción de Reposicionarse. Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni en la misma activación en la que ha realizado una acción de Retroceder o Carga."
+      "action_yes": ["Igual que la acción de <b>Reposicionarse</b> salvo que el agente activo no puede moverse más que su atributo Movimiento menos 2\" y no puede trepar, dejarse caer ni saltar, ni usar reglas de comando que lo retiren y lo desplieguen de nuevo (p.ej. Propulsor de salto de los <span class=\"faction\">SUCESORES RECUPERADORES</span> o Paso sombrío de las <span class=\"faction\">MANDRÁGORAS</span> ).", "Antes de que este agente se mueva, retira la barricada portátil a la que está conectado. Después de que se mueva, despliega la barricada portátil de modo que esté conectada de nuevo, pero la barricada portátil no puede desplegarse a 2\" o menos de otros elementos de terreno de equipo, puntos de acceso o terreno accesible. Si esto no es posible, la barricada portátil no se vuelve a desplegar."],
+      "action_no": "Esta acción se trata como una acción de <b>Reposicionarse</b>. Un agente no puede realizar esta acción si está en la zona de control de un agente enemigo, ni en la misma activación en la que ha realizado una acción de <b>Retroceder</b> o Carga."
       }
     ],
     "img": [

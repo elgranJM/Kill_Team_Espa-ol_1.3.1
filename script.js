@@ -452,25 +452,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 op.uniqueActions.map(a => {
                     const descYes = Array.isArray(a.description)
                         ? a.description.map(line => `
-                        <p>
-                            <span class="icon icon-yes"></span> 
+                        <p class="action-desc d-flex align-items-start mb-1">
+                            <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
                             <span>${line}</span>
                         </p>`).join('')
-                        : `<p>${a.description}</p>`;
+                        : `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.description}</span></p>`;
 
                     const descNo = a.description_no ? `
-                    <p>
-                        <span class="icon icon-no"></span> 
-                        ${a.description_no}
+                    <p class="action-desc d-flex align-items-start mb-0">
+                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                        <span>${a.description_no}</span>
                     </p>` : '';
 
                     return `
-        <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+        <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
             <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
                 <div class="fw-bold">${a.name}</div>
                 <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.cost}</div>
             </div>
-            <div class="content p-2 small">
+            <div class="content small text-start p-2">
                 ${descYes}
                 ${descNo}
             </div>
@@ -598,14 +598,14 @@ document.addEventListener('DOMContentLoaded', () => {
             // Adaptado a la tarjeta de acción única
             const missionAction = op.action_mission_name ? `
                 <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2">Acción de Misión</div>
-                <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
                     <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
                         <div class="fw-bold">${op.action_mission_name}</div>
                         <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${op.action_mission_cost}</div>
                     </div>
-                    <div class="content p-2 small">
-                        ${op.action_mission_yes ? `<p class="mb-1"><span class="icon icon-yes"></span> <span>${op.action_mission_yes}</span></p>` : ''}
-                        ${op.action_mission_no ? `<p class="mb-0"><span class="icon icon-no"></span> <span>${op.action_mission_no}</span></p>` : ''}
+                    <div class="content small text-start p-2">
+                        ${op.action_mission_yes ? `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${op.action_mission_yes}</span></p>` : ''}
+                        ${op.action_mission_no ? `<p class="action-desc d-flex align-items-start mb-0"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${op.action_mission_no}</span></p>` : ''}
                     </div>
                 </div>` : '';
 
@@ -651,7 +651,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         ploys.sort((a, b) => (a.type || '').localeCompare(b.type || ''));
-        
+
         const html = ploys.map(ploy => {
             const isStrategic = ploy.type === 'strategic';
             // Configuración estricta de colores según tu solicitud
@@ -750,27 +750,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Mapeo de descripciones positivas (icon-yes)
                     const descYes = Array.isArray(a.action_yes)
                         ? a.action_yes.map(line => `
-                        <p>
-                            <span class="icon icon-yes"></span> 
+                        <p class="action-desc d-flex align-items-start mb-1">
+                            <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
                             <span>${line}</span>
                         </p>`).join('')
-                        : `<p><span class="icon icon-yes"></span> ${a.action_yes}</p>`;
+                        : `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.action_yes}</span></p>`;
 
                     // Mapeo de descripción negativa (icon-no)
                     const descNo = a.action_no ? `
-                    <p>
-                        <span class="icon icon-no"></span> 
-                        ${a.action_no}
+                    <p class="action-desc d-flex align-items-start mb-0">
+                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                        <span>${a.action_no}</span>
                     </p>` : '';
 
                     // Estructura de tarjeta consistente
                     return `
-                <div class="unique-actions-section border border-dark rounded mt-2 mb-2 overflow-hidden">
+                <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mt-2 mb-2">
                     <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
                         <div class="fw-bold">${a.action_name}</div>
                         <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.action_cost}</div>
                     </div>
-                    <div class="content p-2 small">
+                    <div class="content small text-start p-2">
                         ${descYes}
                         ${descNo}
                     </div>

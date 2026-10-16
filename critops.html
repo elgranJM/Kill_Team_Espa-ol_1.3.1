@@ -94,10 +94,17 @@
             <!-- Main Content Area -->
             <main class="col-12 px-md-4 py-4 bg-dark">
 
-                <div
+                <div id="page-header-print"
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4 border-bottom">
-                    <h1 class="h2" style="color: #ff5418;">Operaciones Críticas (CritOps)</h1>
-                    <p class="text-muted mb-0 d-none d-md-block">Misiones principales compartidas</p>
+                    <div>
+                        <h1 class="h2" style="color: #ff5418;">Operaciones Críticas (CritOps)</h1>
+                        <p class="text-muted mb-0 d-none d-md-block">Misiones principales compartidas</p>
+                    </div>
+                    <!-- Botón de Impresión -->
+                    <button class="btn btn-outline-secondary shadow-sm" data-bs-toggle="modal"
+                        data-bs-target="#printModal">
+                        <i class="bi bi-printer me-2"></i>Imprimir
+                    </button>
                 </div>
 
                 <!-- Contenedor dinámico de Tarjetas CritOps -->
@@ -153,8 +160,8 @@
                 let additionalRulesHtml = '';
                 if (op.aditional_rules) {
                     additionalRulesHtml = `
-                        <div class="victory-points mb-3">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
+                        <div class="victory-points-container">
+                            <div class="sub-header text-uppercase fw-bold border-bottom text-start">Reglas Adicionales</div>
                             <div class="small text-start text-muted lh-sm">${op.aditional_rules}</div>
                         </div>
                     `;
@@ -162,29 +169,26 @@
 
                 // 2. Manejo de la Acción de Misión solicitada por el usuario
                 let actionHtml = '';
-                // Iteramos dinámicamente sobre todo el arreglo para soportar múltiples acciones
                 if (op.action_mission && op.action_mission.length > 0) {
-                    
                     const accionesMapeadas = op.action_mission.map(am => {
                         if (!am.action_mission_name) return '';
                         return `
-                            <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                            <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
                                 <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
                                     <div class="fw-bold">${am.action_mission_name}</div>
                                     <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${am.action_mission_cost}</div>
                                 </div>
-                                <div class="content p-2 small text-start">
-                                    ${am.action_mission_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${am.action_mission_yes}</span></p>` : ''}
-                                    ${am.action_mission_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${am.action_mission_no}</span></p>` : ''}
+                                <div class="content small text-start p-2">
+                                    ${am.action_mission_yes ? `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${am.action_mission_yes}</span></p>` : ''}
+                                    ${am.action_mission_no ? `<p class="action-desc d-flex align-items-start mb-0"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${am.action_mission_no}</span></p>` : ''}
                                 </div>
                             </div>
                         `;
                     }).join('');
 
-                    // Inyectamos el subtítulo solo si existen acciones renderizadas
                     if (accionesMapeadas) {
                         actionHtml = `
-                            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
+                            <div class="sub-header text-uppercase fw-bold border-bottom text-start mt-display-only">Acción de Misión</div>
                             ${accionesMapeadas}
                         `;
                     }
@@ -195,7 +199,7 @@
                 if (op.victoy_points) {
                     vpHtml = `
                         <div class="victory-points mt-auto">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
+                            <div class="sub-header text-uppercase fw-bold border-bottom text-start">Puntos de Victoria</div>
                             <div class="small text-start lh-sm">${op.victoy_points}</div>
                         </div>
                     `;
@@ -203,7 +207,7 @@
 
                 // Generación de la Tarjeta final
                 return `
-                    <div class="col-xs-12 col-md-6 col-xl-4 text-center p-2 fade-in">
+                    <div class="col-xs-12 col-md-6 col-xl-4 text-center p-2 fade-in" data-op-id="${key}">
                         <div class="card shadow-sm h-100 border-0 bg-secondary-soft">
                             <!-- Cabecera Naranja Exclusiva de CritOp -->
                             <div class="position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center shadow-sm" style="background-color: #ff5418;">
@@ -211,7 +215,12 @@
                                 <span>&nbsp&nbspCRIT OP</span>
                             </div>
                             
-                            <div class="p-3 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom">
+                            <!-- Contenedor blanco con la nueva clase watermark-container -->
+                            <div class="p-3 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom watermark-container">
+                                
+                                <!-- Marca de Agua Absoluta -->
+                                <img src="./resources/marca-de-agua.png" class="watermark-img" alt="Símbolo de facción">
+                                
                                 <h4 class="name fw-bold text-dark mb-4">${op.name_es}</h4>
                                 <div class="mission-container pt-0 flex-grow-1 d-flex flex-column">
                                     ${additionalRulesHtml}
@@ -223,8 +232,158 @@
                     </div>
                 `;
             }
+
+            // --- LÓGICA DE IMPRESIÓN ---
+
+            // 1. Llenar el select múltiple
+            function populatePrintDropdown() {
+                const select = document.getElementById('specificPrintSelect');
+                select.innerHTML = ''; // Limpiamos para inyectar directo las opciones
+                for (const [key, op] of Object.entries(allCritOps)) {
+                    select.innerHTML += `<option value="${key}">${op.name_es}</option>`;
+                }
+            }
+
+            setTimeout(populatePrintDropdown, 100);
+
+            // 2. Controlar si el <select> está deshabilitado
+            window.togglePrintSelect = function () {
+                const isSpecific = document.getElementById('printSpecific').checked;
+                document.getElementById('specificPrintSelect').disabled = !isSpecific;
+            };
+
+            // Generador de Contraportadas
+            function generateBackCoverHtml() {
+                return `
+                    <div class="col-xs-12 col-md-6 col-xl-4 text-center p-2 fade-in back-cover-wrapper">
+                        <div class="card back-cover-card shadow-sm h-100 border-0 d-flex flex-column justify-content-between position-relative">
+                            <div class="stripe-top text-white fw-bold">
+                                <span>CRIT OP</span>
+                            </div>
+                            <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                                <img src="./resources/marca-de-agua-naranja.png" class="back-watermark" alt="CritOp Back">
+                            </div>
+                            <div class="stripe-bottom text-white fw-bold">
+                                <span>CRIT OP</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // 3. Ejecutar el filtrado (Soporte Multi-Select) y llamar a la impresora
+            window.executePrint = function () {
+                const isSpecific = document.getElementById('printSpecific').checked;
+                const includeBackCovers = document.getElementById('printBackCovers').checked;
+                const container = document.getElementById('critops-cards-container');
+                const allCards = container.querySelectorAll('[data-op-id]');
+                
+                let printedCount = 0;
+
+                // Limpieza de seguridad por si quedaron contraportadas anteriores
+                document.querySelectorAll('.back-cover-wrapper').forEach(el => el.remove());
+
+                if (isSpecific) {
+                    const selectEl = document.getElementById('specificPrintSelect');
+                    const selectedKeys = Array.from(selectEl.selectedOptions).map(opt => opt.value);
+
+                    if (selectedKeys.length === 0) {
+                        alert("Error: Debes seleccionar al menos una misión específica para imprimir.");
+                        return;
+                    }
+
+                    printedCount = selectedKeys.length;
+
+                    allCards.forEach(card => {
+                        if (selectedKeys.includes(card.getAttribute('data-op-id'))) {
+                            card.classList.remove('d-print-none');
+                        } else {
+                            card.classList.add('d-print-none');
+                        }
+                    });
+                } else {
+                    printedCount = allCards.length;
+                    allCards.forEach(card => card.classList.remove('d-print-none'));
+                }
+
+                // Inyectar las contraportadas si el usuario marcó la casilla
+                if (includeBackCovers && printedCount > 0) {
+                    for (let i = 0; i < printedCount; i++) {
+                        container.insertAdjacentHTML('beforeend', generateBackCoverHtml());
+                    }
+                }
+
+                const printModalEl = document.getElementById('printModal');
+                const modalInstance = bootstrap.Modal.getInstance(printModalEl);
+                modalInstance.hide();
+
+                setTimeout(() => {
+                    window.print();
+
+                    // Limpieza post-impresión para restaurar la pantalla
+                    document.querySelectorAll('.back-cover-wrapper').forEach(el => el.remove());
+
+                    if (isSpecific) {
+                        allCards.forEach(card => card.classList.remove('d-print-none'));
+                    }
+                }, 400);
+            };
         });
     </script>
+
+    <!-- Modal de Opciones de Impresión -->
+    <div class="modal fade" id="printModal" tabindex="-1" aria-labelledby="printModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title" id="printModalLabel"><i class="bi bi-printer me-2"></i>Imprimir Tarjetas
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-dark">
+                    <p class="small text-muted mb-4">Para garantizar que entren 6 tarjetas por hoja, en el diálogo de
+                        impresión asegúrate de seleccionar tamaño <strong>A4</strong> y activar los <strong>Gráficos de
+                            fondo</strong>.</p>
+
+                    <!-- CASILLA PARA CONTRAPORTADAS -->
+                    <div class="form-check form-switch mb-4 pb-3 border-bottom">
+                        <input class="form-check-input" type="checkbox" id="printBackCovers">
+                        <label class="form-check-label fw-bold" for="printBackCovers">
+                            Incluir contraportadas en la impresión
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="radio" name="printTarget" id="printAll" value="all"
+                            checked onchange="togglePrintSelect()">
+                        <label class="form-check-label fw-bold" for="printAll">
+                            Imprimir todas las misiones
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="printTarget" id="printSpecific"
+                            value="specific" onchange="togglePrintSelect()">
+                        <label class="form-check-label fw-bold" for="printSpecific">
+                            Imprimir misión específica
+                        </label>
+                    </div>
+                    <select class="form-select border-secondary" id="specificPrintSelect" multiple size="6" disabled>
+                        <!-- Las opciones se inyectarán por JS -->
+                    </select>
+                    <div class="form-text small text-muted mt-1">Mantén presionado Ctrl (o Cmd en Mac) para seleccionar
+                        varias tarjetas a la vez.</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="executePrint()">
+                        <i class="bi bi-printer-fill me-1"></i> Imprimir
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

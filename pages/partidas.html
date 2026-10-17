@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body class="bg-light">
@@ -77,12 +77,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="partidas.html">
+                            <a class="nav-link active shadow-sm" href="partidas.html">
                                 <i class="bi bi-list-ol me-2"></i> Partidas
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active shadow-sm" href="partidasasimetricas.html">
+                            <a class="nav-link text-dark" href="partidasasimetricas.html">
                                 <i class="bi bi-list-ol me-2"></i> Partidas Asimetricas
                             </a>
                         </li>
@@ -101,8 +101,9 @@
 
                 <!-- Panel Colapsable Compacto: Entorno y Misión (Generación) -->
                 <div class="card border-secondary mb-3 shadow-sm">
+                    <!-- Cabecera delgada: 3 zonas (Izquierda: Título/Toggle | Centro: Resumen | Derecha: Acción) -->
                     <div class="bg-dark text-white p-2 d-flex align-items-center justify-content-between">
-                        <!-- Izquierda: Toggle del Colapso -->
+                        <!-- 1. Izquierda: Disparador del Colapso -->
                         <button
                             class="btn btn-dark btn-sm text-white fw-bold d-flex align-items-center gap-2 p-0 border-0 flex-shrink-0"
                             type="button" data-bs-toggle="collapse" data-bs-target="#collapseGeneracion"
@@ -112,7 +113,7 @@
                             <span><i class="bi bi-globe me-1"></i>Entorno y Misión (Generación)</span>
                         </button>
 
-                        <!-- Centro: Resumen dinámico -->
+                        <!-- 2. Centro: Resumen dinámico alineado al medio -->
                         <div class="text-center px-2 flex-grow-1 overflow-hidden">
                             <span
                                 class="badge bg-warning text-dark fw-bold small text-truncate d-none d-md-inline-block"
@@ -121,22 +122,19 @@
                             </span>
                         </div>
 
-                        <!-- Derecha: Botón Aleatorizar Todo -->
+                        <!-- 3. Derecha: Botón de Aleatorizar compacto -->
                         <div class="flex-shrink-0">
                             <button class="btn btn-sm btn-warning shadow-sm fw-bold py-1 px-2" type="button"
-                                id="btn-random-all" onclick="randomizeAll()"
-                                title="Aleatorizar misión, killzone y mapa">
+                                onclick="randomizeAll()" title="Aleatorizar misión, killzone y mapa">
                                 <i class="bi bi-dice-5-fill me-1"></i>Aleatorizar Todo
                             </button>
                         </div>
                     </div>
 
-                    <!-- Contenedor colapsable -->
+                    <!-- Contenedor colapsable (inicia abierto con la clase 'show') -->
                     <div class="collapse show" id="collapseGeneracion">
                         <div class="card-body bg-light p-2 border-top border-secondary border-opacity-25">
-
-                            <!-- Fila de Selección: CritOp, Killzone y Mapa -->
-                            <div class="row row-cols-1 row-cols-md-3 g-2 mb-2">
+                            <div class="row row-cols-1 row-cols-md-3 g-2">
 
                                 <!-- 1. CritOp -->
                                 <div class="col">
@@ -146,7 +144,7 @@
                                             <i class="bi bi-crosshair me-1"></i>CritOp
                                         </span>
                                         <select class="form-select border-primary fw-bold text-center"
-                                            id="global-critop">
+                                            id="global-critop" onchange="validateAllScores(); updateSetupSummary();">
                                             <option value="" selected disabled>-- Misión --</option>
                                         </select>
                                         <button class="btn btn-warning fw-bold border-warning px-2" type="button"
@@ -154,7 +152,7 @@
                                             <i class="bi bi-info-circle-fill"></i>
                                         </button>
                                         <button class="btn btn-outline-primary px-2" type="button"
-                                            onclick="randomizeCritOp()" title="Misión al Azar">
+                                            onclick="randomizeCritOp(); updateSetupSummary();" title="Misión al Azar">
                                             <i class="bi bi-dice-5-fill"></i>
                                         </button>
                                     </div>
@@ -168,7 +166,7 @@
                                             <i class="bi bi-geo-alt-fill me-1"></i>Killzone
                                         </span>
                                         <select class="form-select border-secondary fw-bold text-center"
-                                            id="killzoneSelect">
+                                            id="killzoneSelect" onchange="updateMapOptions(); updateSetupSummary();">
                                             <option value="" selected disabled>-- Killzone --</option>
                                         </select>
                                         <button class="btn btn-secondary fw-bold border-secondary px-2" type="button"
@@ -177,7 +175,8 @@
                                             <i class="bi bi-bricks"></i>
                                         </button>
                                         <button class="btn btn-outline-secondary px-2" type="button"
-                                            onclick="randomizeKillzone()" title="Killzone al Azar">
+                                            onclick="randomizeKillzone(); updateSetupSummary();"
+                                            title="Killzone al Azar">
                                             <i class="bi bi-dice-5-fill"></i>
                                         </button>
                                     </div>
@@ -191,7 +190,7 @@
                                             <i class="bi bi-map me-1"></i>Mapa
                                         </span>
                                         <select class="form-select border-secondary fw-bold text-center" id="mapSelect"
-                                            disabled>
+                                            disabled onchange="updateSetupSummary(); saveGameState();">
                                             <option value="" selected disabled>-- Mapa --</option>
                                         </select>
                                         <button class="btn btn-info text-dark fw-bold border-info px-2" type="button"
@@ -200,36 +199,52 @@
                                             <i class="bi bi-eye-fill"></i>
                                         </button>
                                         <button class="btn btn-outline-secondary px-2" type="button" id="btnRandomMap"
-                                            onclick="randomizeMap()" title="Mapa al Azar" disabled>
+                                            onclick="randomizeMap(); updateSetupSummary();" title="Mapa al Azar"
+                                            disabled>
                                             <i class="bi bi-dice-5-fill"></i>
                                         </button>
                                     </div>
                                 </div>
 
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- Selector de Modo: 3 o 4 Jugadores -->
-                            <div
-                                class="d-flex justify-content-center pt-1 border-top border-secondary border-opacity-25">
-                                <div class="input-group input-group-sm shadow-sm" style="max-width: 320px;">
-                                    <span class="input-group-text bg-dark text-white border-dark fw-bold"
-                                        style="font-size: 0.75rem;">
-                                        <i class="bi bi-people-fill me-1"></i>Modo
-                                    </span>
-                                    <div class="btn-group btn-group-sm flex-grow-1" role="group">
-                                        <input type="radio" class="btn-check" name="playerCountRadio" id="mode3p"
-                                            autocomplete="off" onchange="togglePlayerMode(3)">
-                                        <label class="btn btn-outline-dark fw-bold py-1" for="mode3p"
-                                            style="font-size: 0.75rem;">3 Jugadores</label>
-
-                                        <input type="radio" class="btn-check" name="playerCountRadio" id="mode4p"
-                                            autocomplete="off" checked onchange="togglePlayerMode(4)">
-                                        <label class="btn btn-outline-dark fw-bold py-1" for="mode4p"
-                                            style="font-size: 0.75rem;">4 Jugadores</label>
-                                    </div>
-                                </div>
+                <div class="modal fade" id="mapViewModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content border-0 shadow-lg border-info border-top border-4">
+                            <div class="modal-header bg-dark text-white pb-2">
+                                <h5 class="modal-title fw-bold" id="mapModalTitle"></h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
                             </div>
+                            <div class="modal-body text-center bg-dark p-2">
+                                <img id="mapModalImg" src="" alt="Plano de la Zona de Aniquilación"
+                                    class="img-fluid rounded border border-secondary shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Modal de Visualización de Terrenos -->
+                <div class="modal fade" id="terrainViewModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                        <div class="modal-content border-0 shadow-lg border-secondary border-top border-4">
+                            <div class="modal-header bg-light pb-2 border-bottom-0">
+                                <h5 class="modal-title fw-bold text-dark" id="terrainModalTitle"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body bg-light pt-2" id="terrainModalBody">
+                                <!-- La grilla de terrenos se inyecta aquí -->
+                            </div>
+                            <div class="modal-footer bg-white border-top justify-content-center py-2">
+                                <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm"
+                                    data-bs-dismiss="modal">
+                                    <i class="bi bi-check2 me-2"></i>Entendido
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,10 +254,10 @@
                     <div
                         class="bg-white p-1 px-3 rounded shadow-sm border d-flex flex-wrap align-items-center justify-content-center gap-2">
 
-                        <!-- 1. Botón Calcular Kill Op Asimétrica -->
-                        <button type="button" class="btn btn-danger btn-sm fw-bold shadow-sm py-1 px-2"
-                            onclick="calculateKillOpAsymmetric()" title="Cerrar turno y puntuar Kill Op por equipos">
-                            <i class="bi bi-skull-fill me-1"></i>Puntuar KillOp
+                        <!-- 1. Botón Referencia Kill Op -->
+                        <button type="button" class="btn btn-outline-danger btn-sm fw-bold shadow-sm py-1 px-2"
+                            data-bs-toggle="modal" data-bs-target="#killOpModal" title="Ver tabla de umbrales Kill Op">
+                            <i class="bi bi-table me-1"></i>Tabla Kill Op
                         </button>
 
                         <div class="vr d-none d-sm-block my-1 text-secondary opacity-50"></div>
@@ -295,28 +310,18 @@
                         </div>
                         <div class="btn-group btn-group-sm w-100" role="group" aria-label="Modo de visualización móvil">
                             <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeAll" autocomplete="off" checked onchange="setMobilePlayerView('all')">
-                            <label class="btn btn-outline-secondary fw-bold py-1 px-1" for="viewModeAll" style="font-size: 0.75rem;" title="Ver todos (Scroll)">
-                                <i class="bi bi-arrows-vertical"></i> Todos
+                            <label class="btn btn-outline-secondary fw-bold py-1" for="viewModeAll" style="font-size: 0.75rem;">
+                                <i class="bi bi-arrows-vertical me-1"></i>Ambos (Scroll)
                             </label>
 
                             <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP1" autocomplete="off" onchange="setMobilePlayerView('p1')">
-                            <label class="btn btn-outline-primary fw-bold py-1 px-1" for="viewModeP1" style="font-size: 0.75rem;">
-                                J1
+                            <label class="btn btn-outline-primary fw-bold py-1" for="viewModeP1" style="font-size: 0.75rem;">
+                                <i class="bi bi-person-fill me-1"></i>Jugador 1
                             </label>
 
                             <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP2" autocomplete="off" onchange="setMobilePlayerView('p2')">
-                            <label class="btn btn-outline-danger fw-bold py-1 px-1" for="viewModeP2" style="font-size: 0.75rem;">
-                                J2
-                            </label>
-                            
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP3" autocomplete="off" onchange="setMobilePlayerView('p3')">
-                            <label class="btn btn-outline-success fw-bold py-1 px-1" for="viewModeP3" style="font-size: 0.75rem;">
-                                J3
-                            </label>
-
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP4" autocomplete="off" onchange="setMobilePlayerView('p4')">
-                            <label class="btn btn-outline-warning fw-bold text-dark py-1 px-1" for="viewModeP4" id="labelViewModeP4" style="font-size: 0.75rem;">
-                                J4
+                            <label class="btn btn-outline-danger fw-bold py-1" for="viewModeP2" style="font-size: 0.75rem;">
+                                <i class="bi bi-person-fill me-1"></i>Jugador 2
                             </label>
                         </div>
                     </div>
@@ -326,33 +331,22 @@
                 <div class="row g-4 mb-4">
 
                     <!-- ==================== JUGADOR 1 ==================== -->
-                    <div class="col-12 col-md-6 mobile-card-col" id="card-p1">
+                    <div class="col-12 col-md-6" id="p1-column-wrapper">
                         <div class="bg-white rounded shadow-sm player-card player-1 h-100">
-                            <!-- Cabecera J1 Optimizada: Avatar, Nombre, Equipo y Total PV a la derecha -->
+                            <!-- Cabecera J1 Optimizada: Avatar (50px), Nombre y Total PV -->
                             <div class="d-flex justify-content-between align-items-center mb-2 pb-1 border-bottom">
                                 <div class="d-flex align-items-center flex-grow-1 me-2 overflow-hidden">
-                                    <img id="p1-faction-img" src="./resources/facciones/blank.png" alt="Facción J1"
-                                        class="me-2 rounded-circle border border-secondary border-opacity-50 flex-shrink-0"
-                                        style="width: 58px; height: 58px; object-fit: cover; background-color: white;">
-                                    <div class="flex-grow-1 d-flex flex-column">
-                                        <input type="text" class="name-input text-primary text-start w-100 mb-1"
-                                            value="Jugador 1" placeholder="Nombre Jugador 1"
-                                            style="font-size: 1.25rem;">
-                                        <select
-                                            class="form-select form-select-sm fw-bold border-secondary shadow-sm py-0"
-                                            id="p1-team" style="max-width: 130px; font-size: 0.75rem;">
-                                            <option value="A" selected>Equipo A</option>
-                                            <option value="B">Equipo B</option>
-                                            <option value="C">Equipo C</option>
-                                            <option value="D">Equipo D</option>
-                                        </select>
+                                    <img id="p1-faction-img" src="../resources/facciones/blank.png" alt="Facción J1"
+                                        class="me-2 rounded-circle border border-secondary border-opacity-50 faction-avatar">
+                                    <div class="flex-grow-1">
+                                        <input type="text" class="name-input text-primary w-100" value="Atacante"
+                                            placeholder="Nombre Jugador 1">
                                     </div>
                                 </div>
                                 <div class="text-center ps-2 border-start flex-shrink-0">
                                     <div class="text-muted fw-bold text-uppercase"
-                                        style="font-size: 0.68rem; letter-spacing: 0.5px;">Total PV</div>
-                                    <div class="fw-black text-primary lh-1" id="p1-total-vp"
-                                        style="font-size: 1.9rem; font-weight: 900;">0</div>
+                                        style="font-size: 0.65rem; letter-spacing: 0.5px;">Total PV</div>
+                                    <div class="vp-total-header text-primary" id="p1-total-vp">0</div>
                                 </div>
                             </div>
 
@@ -363,14 +357,65 @@
                                         style="font-size: 0.75rem;">
                                         <i class="bi bi-person-vcard me-1"></i>Facción
                                     </span>
-                                    <select class="form-select form-select-sm border-dark fw-bold" id="p1-faction">
+                                    <select class="form-select form-select-sm border-dark fw-bold" id="p1-faction"
+                                        onchange="updateTacOps('p1')">
                                         <option value="" selected disabled>Selecciona tu facción...</option>
                                     </select>
-                                    <button class="btn btn-outline-primary fw-bold px-3 py-1" type="button"
+                                    <button class="btn btn-outline-success fw-bold px-3 py-1" type="button"
                                         id="p1-btn-faction-rules" onclick="showFactionRules('p1')" disabled
                                         title="Ver reglas y ardides de la facción">
                                         <i class="bi bi-book-half"></i>
                                     </button>
+                                </div>
+                            </div>
+
+                            <!-- Operación Táctica -->
+                            <div class="mb-2">
+                                <!-- Contenedor Activo de Selección (Se oculta al fijar) -->
+                                <div id="p1-tacop-container" class="d-flex flex-column gap-1">
+                                    <div class="input-group input-group-sm shadow-sm">
+                                        <span class="input-group-text bg-primary text-white fw-bold py-0 px-2"
+                                            style="font-size: 0.75rem;">
+                                            <i class="bi bi-crosshair me-1"></i>TacOp
+                                        </span>
+                                        <select class="form-select border-primary" id="p1-tacop"
+                                            onmousedown="validarSeleccionFacciom(event, 'p1')"
+                                            onchange="enableTacOpLock('p1')">
+                                            <option value="" selected disabled>Primero elige una facción...</option>
+                                        </select>
+                                        <button class="btn btn-outline-primary py-1 px-2" type="button"
+                                            id="p1-btn-info-tacop" onclick="showTacOpDetails('p1')" disabled
+                                            title="Ver detalles de la TacOp">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                        </button>
+                                        <button class="btn btn-dark fw-bold px-3 py-1" type="button"
+                                            id="p1-btn-lock-tacop" onclick="lockTacOp('p1')" disabled
+                                            title="Fijar TacOp en Secreto">
+                                            <i class="bi bi-lock-fill me-1"></i>Fijar
+                                        </button>
+                                    </div>
+                                    <small class="text-muted d-block ps-1" id="p1-archetypes-display"
+                                        style="font-size: 0.72rem;"></small>
+                                </div>
+
+                                <!-- Contenedor de Estado (Oculto / Revelado) -->
+                                <div id="p1-tacop-status" class="d-none flex-column gap-1">
+                                    <button class="btn btn-outline-primary btn-sm fw-bold w-100 shadow-sm py-1"
+                                        id="p1-btn-reveal-tacop" onclick="revealTacOp('p1')"
+                                        title="Clic para revelar la TacOp al oponente">
+                                        <i class="bi bi-incognito me-1"></i>TacOp Oculta 🔒 — Revelar 👁️
+                                    </button>
+
+                                    <div id="p1-revealed-badge-container"
+                                        class="d-none align-items-center justify-content-between alert alert-primary p-1 px-2 m-0 shadow-sm gap-2 border-primary">
+                                        <span id="p1-revealed-badge"
+                                            class="flex-grow-1 text-primary fw-bold small text-truncate"></span>
+                                        <button class="btn btn-primary btn-sm fw-bold px-2 py-0 shadow-sm flex-shrink-0"
+                                            onclick="showTacOpDetails('p1')"
+                                            title="Ver detalles y reglas completas de la TacOp">
+                                            <i class="bi bi-book-half me-1"></i>Ver Reglas
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -452,17 +497,35 @@
                                 </div>
                             </div>
 
-                            <!-- Fila de 2 Columnas: Crit Op y Kill Op -->
-                            <div class="row row-cols-1 row-cols-lg-2 g-2 mb-1 align-items-stretch">
+                            <!-- Selector de Operación Primaria (Secreta) -->
+                            <div
+                                class="mb-2 d-flex justify-content-between align-items-center bg-dark p-1 px-2 border rounded shadow-sm">
+                                <span class="fw-bold text-white text-uppercase" style="font-size: 0.75rem;">
+                                    <i class="bi bi-star-fill text-warning me-1"></i>Primaria (Secreta):
+                                </span>
+                                <button id="p1-btn-secret" class="btn btn-warning btn-sm fw-bold shadow-sm py-0 px-2"
+                                    style="font-size: 0.75rem;" onclick="openSecretModal(1)">Fijar en Secreto
+                                    🔒</button>
+                                <span id="p1-revealed-primary" class="badge bg-warning text-dark d-none px-2 py-1"
+                                    style="font-size: 0.75rem;"></span>
+                            </div>
+                            <div class="text-end mb-2 small text-success fw-bold d-none" id="p1-primary-bonus-display"
+                                style="font-size: 0.75rem;">
+                                +0 PV (Bono Primaria)
+                            </div>
+
+                            <!-- Fila de 3 Columnas Optimizada: Crit Op, Tac Op y Kill Op (J1) -->
+                            <div class="row row-cols-1 row-cols-lg-3 g-2 mb-2 align-items-stretch">
+
                                 <!-- 1. Crit Op -->
                                 <div class="col">
                                     <div class="op-section h-100 d-flex flex-column justify-content-between p-2 mb-0">
                                         <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
+                                            <span class="fw-bold text-dark" style="font-size: 0.78rem;">
                                                 <i class="bi bi-crosshair text-primary me-1"></i>Crit Op (Máx 6)
                                             </span>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-center my-auto">
+                                        <div class="d-flex align-items-center justify-content-center my-auto py-1">
                                             <button class="btn btn-outline-danger counter-btn"
                                                 style="width: 30px; height: 30px; font-size: 0.95rem;"
                                                 onclick="changeMissionScore('p1', 'crit', -1);">
@@ -479,74 +542,124 @@
                                     </div>
                                 </div>
 
-                                <!-- 2. Kill Op (Asimétrico) -->
+                                <!-- 2. Tac Op -->
+                                <div class="col">
+                                    <div class="op-section h-100 d-flex flex-column justify-content-between p-2 mb-0">
+                                        <div class="d-flex align-items-center justify-content-between mb-1">
+                                            <span class="fw-bold text-dark" style="font-size: 0.78rem;">
+                                                <i class="bi bi-bookmark-star text-primary me-1"></i>Tac Op (Máx 6)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center my-auto py-1">
+                                            <button class="btn btn-outline-danger counter-btn"
+                                                style="width: 30px; height: 30px; font-size: 0.95rem;"
+                                                onclick="changeMissionScore('p1', 'tac', -1);">
+                                                <i class="bi bi-dash"></i>
+                                            </button>
+                                            <span class="score-display mx-2 text-dark" id="p1-tac-vp"
+                                                style="font-size: 1.4rem; min-width: 26px;">0</span>
+                                            <button class="btn btn-outline-success counter-btn"
+                                                style="width: 30px; height: 30px; font-size: 0.95rem;"
+                                                onclick="changeMissionScore('p1', 'tac', 1);">
+                                                <i class="bi bi-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3. Kill Op (Con desglose completo intacto) -->
                                 <div class="col">
                                     <div
                                         class="op-section border-primary border-2 border-opacity-25 h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-skull-fill text-danger me-1"></i>Kill Op
-                                            </span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="text-primary fw-bold lh-sm"
-                                                style="font-size: 0.7rem;">Incapacitados<br>(TP Actual)</span>
-                                            <div class="d-flex align-items-center">
-                                                <button class="btn btn-outline-danger counter-btn"
-                                                    style="width: 28px; height: 28px; font-size: 0.9rem;"
-                                                    onclick="updateCounter('p1-kills-current-tp', -1, 99);">
-                                                    <i class="bi bi-dash"></i>
-                                                </button>
-                                                <span class="score-display mx-2 text-primary" id="p1-kills-current-tp"
-                                                    style="font-size: 1.3rem; min-width: 24px;">0</span>
-                                                <button class="btn btn-outline-success counter-btn"
-                                                    style="width: 28px; height: 28px; font-size: 0.9rem;"
-                                                    onclick="updateCounter('p1-kills-current-tp', 1, 99);">
-                                                    <i class="bi bi-plus"></i>
-                                                </button>
+                                        <div>
+                                            <!-- Encabezado compacto: Título + Selector de Rival -->
+                                            <div
+                                                class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
+                                                <span class="fw-bold text-dark" style="font-size: 0.78rem;">
+                                                    <i class="bi bi-skull-fill text-danger me-1"></i>Kill Op
+                                                </span>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-1"
+                                                        style="font-size: 0.7rem;">Rival:</span>
+                                                    <select
+                                                        class="form-select form-select-sm fw-bold py-0 ps-1 pe-3 text-center"
+                                                        id="p1-enemy-size"
+                                                        onchange="validateKills('p1'); calculateTotals()"
+                                                        style="font-size: 0.75rem; min-width: 52px; width: auto; height: 22px;">
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10" selected>10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- Fila de Bajas -->
+                                            <div class="d-flex align-items-center justify-content-between my-1">
+                                                <span class="text-danger fw-bold"
+                                                    style="font-size: 0.75rem;">Bajas:</span>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-outline-danger counter-btn"
+                                                        style="width: 26px; height: 26px; font-size: 0.85rem;"
+                                                        onclick="updateCounter('p1-kills', -1, parseInt(document.getElementById('p1-enemy-size').value)); calculateTotals();">
+                                                        <i class="bi bi-dash"></i>
+                                                    </button>
+                                                    <span class="score-display mx-2 text-danger" id="p1-kills"
+                                                        style="font-size: 1.25rem; min-width: 20px;">0</span>
+                                                    <button class="btn btn-outline-success counter-btn"
+                                                        style="width: 26px; height: 26px; font-size: 0.85rem;"
+                                                        onclick="updateCounter('p1-kills', 1, parseInt(document.getElementById('p1-enemy-size').value)); calculateTotals();">
+                                                        <i class="bi bi-plus"></i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="bg-white p-1 rounded border text-center d-flex justify-content-center align-items-center mt-1">
-                                            <span class="small fw-bold text-muted" style="font-size: 0.7rem;">Total Kill
-                                                Op: <strong id="p1-killop-total"
+
+                                        <!-- Desglose de Base, Bono de Mayoría y Total Kill Op -->
+                                        <div class="bg-white p-1 rounded border text-center d-flex justify-content-between align-items-center mt-1"
+                                            style="font-size: 0.7rem;">
+                                            <span class="text-muted">Base: <strong id="p1-kill-base"
+                                                    class="text-dark">0</strong></span>
+                                            <span id="p1-kill-bonus"
+                                                class="badge bg-warning text-dark d-none shadow-sm py-0 px-1"
+                                                style="font-size: 0.65rem;"
+                                                title="Bono reglamentario por tener más bajas que el rival">
+                                                <i class="bi bi-trophy-fill"></i> +1 Mayoría
+                                            </span>
+                                            <span class="fw-bold">Total: <strong id="p1-kill-total"
                                                     class="text-primary fs-6">0</strong></span>
                                         </div>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
 
                     <!-- ==================== JUGADOR 2 ==================== -->
-                    <div class="col-12 col-md-6 d-none d-md-block mobile-card-col" id="card-p2">
+                    <div class="col-12 col-md-6" id="p2-column-wrapper">
                         <div class="bg-white rounded shadow-sm player-card player-2 h-100">
-                            <!-- Cabecera J2 Optimizada: Avatar, Nombre, Equipo y Total PV a la derecha -->
+                            <!-- Cabecera J2 Optimizada: Avatar (50px), Nombre y Total PV -->
                             <div class="d-flex justify-content-between align-items-center mb-2 pb-1 border-bottom">
                                 <div class="d-flex align-items-center flex-grow-1 me-2 overflow-hidden">
-                                    <img id="p2-faction-img" src="./resources/facciones/blank.png" alt="Facción J2"
-                                        class="me-2 rounded-circle border border-secondary border-opacity-50 flex-shrink-0"
-                                        style="width: 58px; height: 58px; object-fit: cover; background-color: white;">
-                                    <div class="flex-grow-1 d-flex flex-column">
-                                        <input type="text" class="name-input text-danger text-start w-100 mb-1"
-                                            value="Jugador 2" placeholder="Nombre Jugador 2"
-                                            style="font-size: 1.25rem;">
-                                        <select
-                                            class="form-select form-select-sm fw-bold border-secondary shadow-sm py-0"
-                                            id="p2-team" style="max-width: 130px; font-size: 0.75rem;">
-                                            <option value="A">Equipo A</option>
-                                            <option value="B" selected>Equipo B</option>
-                                            <option value="C">Equipo C</option>
-                                            <option value="D">Equipo D</option>
-                                        </select>
+                                    <img id="p2-faction-img" src="../resources/facciones/blank.png" alt="Facción J2"
+                                        class="me-2 rounded-circle border border-secondary border-opacity-50 faction-avatar">
+                                    <div class="flex-grow-1">
+                                        <input type="text" class="name-input text-danger w-100" value="Defensor"
+                                            placeholder="Nombre Jugador 2">
                                     </div>
                                 </div>
                                 <div class="text-center ps-2 border-start flex-shrink-0">
                                     <div class="text-muted fw-bold text-uppercase"
-                                        style="font-size: 0.68rem; letter-spacing: 0.5px;">Total PV</div>
-                                    <div class="fw-black text-danger lh-1" id="p2-total-vp"
-                                        style="font-size: 1.9rem; font-weight: 900;">0</div>
+                                        style="font-size: 0.65rem; letter-spacing: 0.5px;">Total PV</div>
+                                    <div class="vp-total-header text-danger" id="p2-total-vp">0</div>
                                 </div>
                             </div>
 
@@ -557,14 +670,66 @@
                                         style="font-size: 0.75rem;">
                                         <i class="bi bi-person-vcard me-1"></i>Facción
                                     </span>
-                                    <select class="form-select form-select-sm border-dark fw-bold" id="p2-faction">
+                                    <select class="form-select form-select-sm border-dark fw-bold" id="p2-faction"
+                                        onchange="updateTacOps('p2')">
                                         <option value="" selected disabled>Selecciona tu facción...</option>
                                     </select>
-                                    <button class="btn btn-outline-danger fw-bold px-3 py-1" type="button"
+                                    <button class="btn btn-outline-success fw-bold px-3 py-1" type="button"
                                         id="p2-btn-faction-rules" onclick="showFactionRules('p2')" disabled
                                         title="Ver reglas y ardides de la facción">
                                         <i class="bi bi-book-half"></i>
                                     </button>
+                                </div>
+                            </div>
+
+                            <!-- Operación Táctica -->
+                            <div class="mb-2">
+                                <!-- Contenedor Activo de Selección (Se oculta al fijar) -->
+                                <div id="p2-tacop-container" class="d-flex flex-column gap-1">
+                                    <div class="input-group input-group-sm shadow-sm">
+                                        <span
+                                            class="input-group-text bg-primary text-white border-primary fw-bold py-0 px-2"
+                                            style="font-size: 0.75rem;">
+                                            <i class="bi bi-crosshair me-1"></i>TacOp
+                                        </span>
+                                        <select class="form-select border-primary" id="p2-tacop"
+                                            onmousedown="validarSeleccionFacciom(event, 'p2')"
+                                            onchange="enableTacOpLock('p2')">
+                                            <option value="" selected disabled>Primero elige una facción...</option>
+                                        </select>
+                                        <button class="btn btn-outline-primary py-1 px-2" type="button"
+                                            id="p2-btn-info-tacop" onclick="showTacOpDetails('p2')" disabled
+                                            title="Ver detalles de la TacOp">
+                                            <i class="bi bi-info-circle-fill"></i>
+                                        </button>
+                                        <button class="btn btn-dark fw-bold px-3 py-1" type="button"
+                                            id="p2-btn-lock-tacop" onclick="lockTacOp('p2')" disabled
+                                            title="Fijar TacOp en Secreto">
+                                            <i class="bi bi-lock-fill me-1"></i>Fijar
+                                        </button>
+                                    </div>
+                                    <small class="text-muted d-block ps-1" id="p2-archetypes-display"
+                                        style="font-size: 0.72rem;"></small>
+                                </div>
+
+                                <!-- Contenedor de Estado (Oculto / Revelado) -->
+                                <div id="p2-tacop-status" class="d-none flex-column gap-1">
+                                    <button class="btn btn-outline-danger btn-sm fw-bold w-100 shadow-sm py-1"
+                                        id="p2-btn-reveal-tacop" onclick="revealTacOp('p2')"
+                                        title="Clic para revelar la TacOp al oponente">
+                                        <i class="bi bi-incognito me-1"></i>TacOp Oculta 🔒 — Revelar 👁️
+                                    </button>
+
+                                    <div id="p2-revealed-badge-container"
+                                        class="d-none align-items-center justify-content-between alert alert-danger p-1 px-2 m-0 shadow-sm gap-2 border-danger">
+                                        <span id="p2-revealed-badge"
+                                            class="flex-grow-1 text-danger fw-bold small text-truncate"></span>
+                                        <button class="btn btn-danger btn-sm fw-bold px-2 py-0 shadow-sm flex-shrink-0"
+                                            onclick="showTacOpDetails('p2')"
+                                            title="Ver detalles y reglas completas de la TacOp">
+                                            <i class="bi bi-book-half me-1"></i>Ver Reglas
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -585,7 +750,8 @@
                                 <div id="p2-selected-equipment-container" class="equip-list-container">
                                     <div class="d-flex align-items-center justify-content-center h-100 py-1">
                                         <small class="text-muted fst-italic text-center"
-                                            style="font-size: 0.75rem;">Ningún equipamiento seleccionado (hasta
+                                            style="font-size: 0.75rem;">Ningún
+                                            equipamiento seleccionado (hasta
                                             4).</small>
                                     </div>
                                 </div>
@@ -646,17 +812,35 @@
                                 </div>
                             </div>
 
-                            <!-- Fila de 2 Columnas: Crit Op y Kill Op  -->
-                            <div class="row row-cols-1 row-cols-lg-2 g-2 mb-1 align-items-stretch">
+                            <!-- Selector de Operación Primaria (Secreta) -->
+                            <div
+                                class="mb-2 d-flex justify-content-between align-items-center bg-dark p-1 px-2 border rounded shadow-sm">
+                                <span class="fw-bold text-white text-uppercase" style="font-size: 0.75rem;">
+                                    <i class="bi bi-star-fill text-warning me-1"></i>Primaria (Secreta):
+                                </span>
+                                <button id="p2-btn-secret" class="btn btn-warning btn-sm fw-bold shadow-sm py-0 px-2"
+                                    style="font-size: 0.75rem;" onclick="openSecretModal(2)">Fijar en Secreto
+                                    🔒</button>
+                                <span id="p2-revealed-primary" class="badge bg-warning text-dark d-none px-2 py-1"
+                                    style="font-size: 0.75rem;"></span>
+                            </div>
+                            <div class="text-end mb-2 small text-success fw-bold d-none" id="p2-primary-bonus-display"
+                                style="font-size: 0.75rem;">
+                                +0 PV (Bono Primaria)
+                            </div>
+
+                            <!-- Fila de 3 Columnas Optimizada: Crit Op, Tac Op y Kill Op (J2) -->
+                            <div class="row row-cols-1 row-cols-lg-3 g-2 mb-2 align-items-stretch">
+
                                 <!-- 1. Crit Op -->
                                 <div class="col">
                                     <div class="op-section h-100 d-flex flex-column justify-content-between p-2 mb-0">
                                         <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
+                                            <span class="fw-bold text-dark" style="font-size: 0.78rem;">
                                                 <i class="bi bi-crosshair text-danger me-1"></i>Crit Op (Máx 6)
                                             </span>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-center my-auto">
+                                        <div class="d-flex align-items-center justify-content-center my-auto py-1">
                                             <button class="btn btn-outline-danger counter-btn"
                                                 style="width: 30px; height: 30px; font-size: 0.95rem;"
                                                 onclick="changeMissionScore('p2', 'crit', -1);">
@@ -673,376 +857,102 @@
                                     </div>
                                 </div>
 
-                                <!-- 2. Kill Op (Asimétrico) -->
+                                <!-- 2. Tac Op -->
+                                <div class="col">
+                                    <div class="op-section h-100 d-flex flex-column justify-content-between p-2 mb-0">
+                                        <div class="d-flex align-items-center justify-content-between mb-1">
+                                            <span class="fw-bold text-dark" style="font-size: 0.78rem;">
+                                                <i class="bi bi-bookmark-star text-danger me-1"></i>Tac Op (Máx 6)
+                                            </span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center my-auto py-1">
+                                            <button class="btn btn-outline-danger counter-btn"
+                                                style="width: 30px; height: 30px; font-size: 0.95rem;"
+                                                onclick="changeMissionScore('p2', 'tac', -1);">
+                                                <i class="bi bi-dash"></i>
+                                            </button>
+                                            <span class="score-display mx-2 text-dark" id="p2-tac-vp"
+                                                style="font-size: 1.4rem; min-width: 26px;">0</span>
+                                            <button class="btn btn-outline-success counter-btn"
+                                                style="width: 30px; height: 30px; font-size: 0.95rem;"
+                                                onclick="changeMissionScore('p2', 'tac', 1);">
+                                                <i class="bi bi-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3. Kill Op (Con desglose completo intacto) -->
                                 <div class="col">
                                     <div
                                         class="op-section border-danger border-2 border-opacity-25 h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-skull-fill text-danger me-1"></i>Kill Op
-                                            </span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="text-danger fw-bold lh-sm"
-                                                style="font-size: 0.7rem;">Incapacitados<br>(TP Actual)</span>
-                                            <div class="d-flex align-items-center">
-                                                <button class="btn btn-outline-danger counter-btn"
-                                                    style="width: 28px; height: 28px; font-size: 0.9rem;"
-                                                    onclick="updateCounter('p2-kills-current-tp', -1, 99);">
-                                                    <i class="bi bi-dash"></i>
-                                                </button>
-                                                <span class="score-display mx-2 text-danger" id="p2-kills-current-tp"
-                                                    style="font-size: 1.3rem; min-width: 24px;">0</span>
-                                                <button class="btn btn-outline-success counter-btn"
-                                                    style="width: 28px; height: 28px; font-size: 0.9rem;"
-                                                    onclick="updateCounter('p2-kills-current-tp', 1, 99);">
-                                                    <i class="bi bi-plus"></i>
-                                                </button>
+                                        <div>
+                                            <!-- Encabezado compacto: Título + Selector de Rival -->
+                                            <div
+                                                class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
+                                                <span class="fw-bold text-dark" style="font-size: 0.78rem;">
+                                                    <i class="bi bi-skull-fill text-danger me-1"></i>Kill Op
+                                                </span>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="text-muted me-1"
+                                                        style="font-size: 0.7rem;">Rival:</span>
+                                                    <select
+                                                        class="form-select form-select-sm fw-bold py-0 ps-1 pe-3 text-center"
+                                                        id="p2-enemy-size"
+                                                        onchange="validateKills('p2'); calculateTotals()"
+                                                        style="font-size: 0.75rem; min-width: 52px; width: auto; height: 22px;">
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10" selected>10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- Fila de Bajas -->
+                                            <div class="d-flex align-items-center justify-content-between my-1">
+                                                <span class="text-danger fw-bold"
+                                                    style="font-size: 0.75rem;">Bajas:</span>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-outline-danger counter-btn"
+                                                        style="width: 26px; height: 26px; font-size: 0.85rem;"
+                                                        onclick="updateCounter('p2-kills', -1, parseInt(document.getElementById('p2-enemy-size').value)); calculateTotals();">
+                                                        <i class="bi bi-dash"></i>
+                                                    </button>
+                                                    <span class="score-display mx-2 text-danger" id="p2-kills"
+                                                        style="font-size: 1.25rem; min-width: 20px;">0</span>
+                                                    <button class="btn btn-outline-success counter-btn"
+                                                        style="width: 26px; height: 26px; font-size: 0.85rem;"
+                                                        onclick="updateCounter('p2-kills', 1, parseInt(document.getElementById('p2-enemy-size').value)); calculateTotals();">
+                                                        <i class="bi bi-plus"></i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div
-                                            class="bg-white p-1 rounded border text-center d-flex justify-content-center align-items-center mt-1">
-                                            <span class="small fw-bold text-muted" style="font-size: 0.7rem;">Total Kill
-                                                Op: <strong id="p2-killop-total"
+
+                                        <!-- Desglose de Base, Bono de Mayoría y Total Kill Op -->
+                                        <div class="bg-white p-1 rounded border text-center d-flex justify-content-between align-items-center mt-1"
+                                            style="font-size: 0.7rem;">
+                                            <span class="text-muted">Base: <strong id="p2-kill-base"
+                                                    class="text-dark">0</strong></span>
+                                            <span id="p2-kill-bonus"
+                                                class="badge bg-warning text-dark d-none shadow-sm py-0 px-1"
+                                                style="font-size: 0.65rem;"
+                                                title="Bono reglamentario por tener más bajas que el rival">
+                                                <i class="bi bi-trophy-fill"></i> +1 Mayoría
+                                            </span>
+                                            <span class="fw-bold">Total: <strong id="p2-kill-total"
                                                     class="text-danger fs-6">0</strong></span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- ==================== JUGADOR 3 ==================== -->
-                    <div class="col-12 col-md-6 d-none d-md-block mobile-card-col" id="card-p3">
-                        <div class="bg-white rounded shadow-sm player-card player-3 h-100">
-                            <!-- Cabecera J3 Optimizada: Avatar, Nombre, Equipo y Total PV a la derecha -->
-                            <div class="d-flex justify-content-between align-items-center mb-2 pb-1 border-bottom">
-                                <div class="d-flex align-items-center flex-grow-1 me-2 overflow-hidden">
-                                    <img id="p3-faction-img" src="./resources/facciones/blank.png" alt="Facción J3"
-                                        class="me-2 rounded-circle border border-secondary border-opacity-50 flex-shrink-0"
-                                        style="width: 58px; height: 58px; object-fit: cover; background-color: white;">
-                                    <div class="flex-grow-1 d-flex flex-column">
-                                        <input type="text" class="name-input text-success text-start w-100 mb-1"
-                                            value="Jugador 3" placeholder="Nombre Jugador 3" style="font-size: 1.25rem;">
-                                        <select class="form-select form-select-sm fw-bold border-secondary shadow-sm py-0" id="p3-team" style="max-width: 130px; font-size: 0.75rem;">
-                                            <option value="A">Equipo A</option>
-                                            <option value="B">Equipo B</option>
-                                            <option value="C" selected>Equipo C</option>
-                                            <option value="D">Equipo D</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="text-center ps-2 border-start flex-shrink-0">
-                                    <div class="text-muted fw-bold text-uppercase"
-                                        style="font-size: 0.68rem; letter-spacing: 0.5px;">Total PV</div>
-                                    <div class="fw-black text-success lh-1" id="p3-total-vp"
-                                        style="font-size: 1.9rem; font-weight: 900;">0</div>
-                                </div>
-                            </div>
-
-                            <!-- Selección de Facción -->
-                            <div class="mb-2">
-                                <div class="input-group input-group-sm shadow-sm">
-                                    <span class="input-group-text bg-dark text-white fw-bold py-0 px-2" style="font-size: 0.75rem;">
-                                        <i class="bi bi-person-vcard me-1"></i>Facción
-                                    </span>
-                                    <select class="form-select form-select-sm border-dark fw-bold" id="p3-faction">
-                                        <option value="" selected disabled>Selecciona tu facción...</option>
-                                    </select>
-                                    <button class="btn btn-outline-success fw-bold px-3 py-1" type="button"
-                                        id="p3-btn-faction-rules" onclick="showFactionRules('p3')" disabled
-                                        title="Ver reglas y ardides de la facción">
-                                        <i class="bi bi-book-half"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Equipamiento Táctico -->
-                            <div class="op-section border-success border-2 border-opacity-25 mb-2">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                        <i class="bi bi-tools text-success me-1"></i>Equipamiento (<span
-                                            id="p3-selected-equip-count">0</span>/4)
-                                    </span>
-                                    <button class="btn btn-success btn-sm fw-bold shadow-sm py-0 px-2" type="button"
-                                        id="p3-btn-select-equip" onclick="openEquipmentSelectModal('p3')" disabled
-                                        title="Seleccionar equipamiento antes de la batalla" style="font-size: 0.72rem;">
-                                        <i class="bi bi-gear-fill me-1"></i>Seleccionar
-                                    </button>
-                                </div>
-                                <div id="p3-selected-equipment-container" class="equip-list-container">
-                                    <div class="d-flex align-items-center justify-content-center h-100 py-1">
-                                        <small class="text-muted fst-italic text-center" style="font-size: 0.75rem;">Ningún equipamiento seleccionado (hasta 4).</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Fila: Puntos de Mando y Ardides Estratégicos -->
-                            <div class="row row-cols-1 row-cols-lg-2 g-2 mb-2 align-items-stretch">
-                                <!-- Columna 1: Puntos de Mando -->
-                                <div class="col">
-                                    <div class="bg-light p-2 rounded border h-100 d-flex flex-column justify-content-center align-items-center">
-                                        <div class="text-muted fw-bold text-uppercase mb-1 text-center" style="font-size: 0.72rem;">Puntos de Mando</div>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <button class="btn btn-danger counter-btn shadow-sm"
-                                                style="width: 32px; height: 32px; font-size: 1rem;" onclick="updateCounter('p3-cp', -1)">
-                                                <i class="bi bi-dash"></i>
-                                            </button>
-                                            <span class="score-display mx-2 text-dark" id="p3-cp" style="font-size: 1.5rem;">2</span>
-                                            <button class="btn btn-success counter-btn shadow-sm"
-                                                style="width: 32px; height: 32px; font-size: 1rem;" onclick="updateCounter('p3-cp', 1)">
-                                                <i class="bi bi-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Columna 2: Ardides Estratégicos -->
-                                <div class="col">
-                                    <div class="op-section border-warning border-2 border-opacity-50 h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div class="d-flex justify-content-between align-items-center mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides (TP <span class="current-tp-label">1</span>)
-                                            </span>
-                                            <button class="btn btn-warning btn-sm fw-bold shadow-sm py-0 px-2"
-                                                type="button" id="p3-btn-strat-ploys"
-                                                onclick="openStrategicPloysModal('p3')" disabled
-                                                title="Gestionar ardides estratégicos para este TP"
-                                                style="font-size: 0.72rem;">
-                                                <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span
-                                                    class="badge bg-dark ms-1" id="p3-active-ploys-count">0</span>
-                                            </button>
-                                        </div>
-                                        <div id="p3-active-strategic-ploys"
-                                            class="d-flex flex-column gap-1 strat-ploys-container my-auto"
-                                            style="min-height: 38px; max-height: 90px;">
-                                            <div class="d-flex align-items-center justify-content-center h-100 py-1">
-                                                <small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún ardid activo.</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Fila de 2 Columnas: Crit Op y Kill Op  -->
-                            <div class="row row-cols-1 row-cols-lg-2 g-2 mb-1 align-items-stretch">
-                                <!-- 1. Crit Op -->
-                                <div class="col">
-                                    <div class="op-section h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-crosshair text-success me-1"></i>Crit Op (Máx 6)
-                                            </span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center my-auto">
-                                            <button class="btn btn-outline-danger counter-btn" style="width: 30px; height: 30px; font-size: 0.95rem;"
-                                                onclick="changeMissionScore('p3', 'crit', -1);">
-                                                <i class="bi bi-dash"></i>
-                                            </button>
-                                            <span class="score-display mx-2 text-dark" id="p3-crit-vp" style="font-size: 1.4rem; min-width: 26px;">0</span>
-                                            <button class="btn btn-outline-success counter-btn" style="width: 30px; height: 30px; font-size: 0.95rem;"
-                                                onclick="changeMissionScore('p3', 'crit', 1);">
-                                                <i class="bi bi-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 2. Kill Op (Asimétrico) -->
-                                <div class="col">
-                                    <div class="op-section border-success border-2 border-opacity-25 h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-skull-fill text-danger me-1"></i>Kill Op
-                                            </span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="text-success fw-bold lh-sm" style="font-size: 0.7rem;">Incapacitados<br>(TP Actual)</span>
-                                            <div class="d-flex align-items-center">
-                                                <button class="btn btn-outline-danger counter-btn" style="width: 28px; height: 28px; font-size: 0.9rem;"
-                                                    onclick="updateCounter('p3-kills-current-tp', -1, 99);">
-                                                    <i class="bi bi-dash"></i>
-                                                </button>
-                                                <span class="score-display mx-2 text-success" id="p3-kills-current-tp" style="font-size: 1.3rem; min-width: 24px;">0</span>
-                                                <button class="btn btn-outline-success counter-btn" style="width: 28px; height: 28px; font-size: 0.9rem;"
-                                                    onclick="updateCounter('p3-kills-current-tp', 1, 99);">
-                                                    <i class="bi bi-plus"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-1 rounded border text-center d-flex justify-content-center align-items-center mt-1">
-                                            <span class="small fw-bold text-muted" style="font-size: 0.7rem;">Total Kill Op: <strong id="p3-killop-total" class="text-success fs-6">0</strong></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ==================== JUGADOR 4 ==================== -->
-                    <div class="col-12 col-md-6 d-none d-md-block mobile-card-col" id="p4-container">
-                        <div class="bg-white rounded shadow-sm player-card player-4 h-100">
-                            <!-- Cabecera J4 Optimizada: Avatar, Nombre, Equipo y Total PV a la derecha -->
-                            <div class="d-flex justify-content-between align-items-center mb-2 pb-1 border-bottom">
-                                <div class="d-flex align-items-center flex-grow-1 me-2 overflow-hidden">
-                                    <img id="p4-faction-img" src="./resources/facciones/blank.png" alt="Facción J4"
-                                        class="me-2 rounded-circle border border-secondary border-opacity-50 flex-shrink-0"
-                                        style="width: 58px; height: 58px; object-fit: cover; background-color: white;">
-                                    <div class="flex-grow-1 d-flex flex-column">
-                                        <input type="text" class="name-input text-warning text-start w-100 mb-1"
-                                            value="Jugador 4" placeholder="Nombre Jugador 4" style="font-size: 1.25rem;">
-                                        <select class="form-select form-select-sm fw-bold border-secondary shadow-sm py-0" id="p4-team" style="max-width: 130px; font-size: 0.75rem;">
-                                            <option value="A">Equipo A</option>
-                                            <option value="B">Equipo B</option>
-                                            <option value="C">Equipo C</option>
-                                            <option value="D" selected>Equipo D</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="text-center ps-2 border-start flex-shrink-0">
-                                    <div class="text-muted fw-bold text-uppercase"
-                                        style="font-size: 0.68rem; letter-spacing: 0.5px;">Total PV</div>
-                                    <div class="fw-black text-warning lh-1" id="p4-total-vp"
-                                        style="font-size: 1.9rem; font-weight: 900;">0</div>
-                                </div>
-                            </div>
-
-                            <!-- Selección de Facción -->
-                            <div class="mb-2">
-                                <div class="input-group input-group-sm shadow-sm">
-                                    <span class="input-group-text bg-dark text-white fw-bold py-0 px-2" style="font-size: 0.75rem;">
-                                        <i class="bi bi-person-vcard me-1"></i>Facción
-                                    </span>
-                                    <select class="form-select form-select-sm border-dark fw-bold" id="p4-faction">
-                                        <option value="" selected disabled>Selecciona tu facción...</option>
-                                    </select>
-                                    <button class="btn btn-outline-warning fw-bold px-3 py-1" type="button"
-                                        id="p4-btn-faction-rules" onclick="showFactionRules('p4')" disabled
-                                        title="Ver reglas y ardides de la facción">
-                                        <i class="bi bi-book-half"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Equipamiento Táctico -->
-                            <div class="op-section border-warning border-2 border-opacity-25 mb-2">
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                        <i class="bi bi-tools text-warning me-1"></i>Equipamiento (<span
-                                            id="p4-selected-equip-count">0</span>/4)
-                                    </span>
-                                    <button class="btn btn-warning btn-sm fw-bold shadow-sm py-0 px-2" type="button"
-                                        id="p4-btn-select-equip" onclick="openEquipmentSelectModal('p4')" disabled
-                                        title="Seleccionar equipamiento antes de la batalla" style="font-size: 0.72rem;">
-                                        <i class="bi bi-gear-fill me-1"></i>Seleccionar
-                                    </button>
-                                </div>
-                                <div id="p4-selected-equipment-container" class="equip-list-container">
-                                    <div class="d-flex align-items-center justify-content-center h-100 py-1">
-                                        <small class="text-muted fst-italic text-center" style="font-size: 0.75rem;">Ningún equipamiento seleccionado (hasta 4).</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Fila: Puntos de Mando y Ardides Estratégicos -->
-                            <div class="row row-cols-1 row-cols-lg-2 g-2 mb-2 align-items-stretch">
-                                <!-- Columna 1: Puntos de Mando -->
-                                <div class="col">
-                                    <div class="bg-light p-2 rounded border h-100 d-flex flex-column justify-content-center align-items-center">
-                                        <div class="text-muted fw-bold text-uppercase mb-1 text-center" style="font-size: 0.72rem;">Puntos de Mando</div>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <button class="btn btn-danger counter-btn shadow-sm"
-                                                style="width: 32px; height: 32px; font-size: 1rem;" onclick="updateCounter('p4-cp', -1)">
-                                                <i class="bi bi-dash"></i>
-                                            </button>
-                                            <span class="score-display mx-2 text-dark" id="p4-cp" style="font-size: 1.5rem;">2</span>
-                                            <button class="btn btn-success counter-btn shadow-sm"
-                                                style="width: 32px; height: 32px; font-size: 1rem;" onclick="updateCounter('p4-cp', 1)">
-                                                <i class="bi bi-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Columna 2: Ardides Estratégicos -->
-                                <div class="col">
-                                    <div class="op-section border-warning border-2 border-opacity-50 h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div class="d-flex justify-content-between align-items-center mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides (TP <span class="current-tp-label">1</span>)
-                                            </span>
-                                            <button class="btn btn-warning btn-sm fw-bold shadow-sm py-0 px-2"
-                                                type="button" id="p4-btn-strat-ploys"
-                                                onclick="openStrategicPloysModal('p4')" disabled
-                                                title="Gestionar ardides estratégicos para este TP"
-                                                style="font-size: 0.72rem;">
-                                                <i class="bi bi-lightning-charge-fill me-1"></i>Gestionar <span
-                                                    class="badge bg-dark ms-1" id="p4-active-ploys-count">0</span>
-                                            </button>
-                                        </div>
-                                        <div id="p4-active-strategic-ploys"
-                                            class="d-flex flex-column gap-1 strat-ploys-container my-auto"
-                                            style="min-height: 38px; max-height: 90px;">
-                                            <div class="d-flex align-items-center justify-content-center h-100 py-1">
-                                                <small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún ardid activo.</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Fila de 2 Columnas: Crit Op y Kill Op  -->
-                            <div class="row row-cols-1 row-cols-lg-2 g-2 mb-1 align-items-stretch">
-                                <!-- 1. Crit Op -->
-                                <div class="col">
-                                    <div class="op-section h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-crosshair text-warning me-1"></i>Crit Op (Máx 6)
-                                            </span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-center my-auto">
-                                            <button class="btn btn-outline-danger counter-btn" style="width: 30px; height: 30px; font-size: 0.95rem;"
-                                                onclick="changeMissionScore('p4', 'crit', -1);">
-                                                <i class="bi bi-dash"></i>
-                                            </button>
-                                            <span class="score-display mx-2 text-dark" id="p4-crit-vp" style="font-size: 1.4rem; min-width: 26px;">0</span>
-                                            <button class="btn btn-outline-success counter-btn" style="width: 30px; height: 30px; font-size: 0.95rem;"
-                                                onclick="changeMissionScore('p4', 'crit', 1);">
-                                                <i class="bi bi-plus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 2. Kill Op (Asimétrico) -->
-                                <div class="col">
-                                    <div class="op-section border-warning border-2 border-opacity-25 h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
-                                            <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-skull-fill text-danger me-1"></i>Kill Op
-                                            </span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="text-warning fw-bold lh-sm" style="font-size: 0.7rem;">Incapacitados<br>(TP Actual)</span>
-                                            <div class="d-flex align-items-center">
-                                                <button class="btn btn-outline-danger counter-btn" style="width: 28px; height: 28px; font-size: 0.9rem;"
-                                                    onclick="updateCounter('p4-kills-current-tp', -1, 99);">
-                                                    <i class="bi bi-dash"></i>
-                                                </button>
-                                                <span class="score-display mx-2 text-warning" id="p4-kills-current-tp" style="font-size: 1.3rem; min-width: 24px;">0</span>
-                                                <button class="btn btn-outline-success counter-btn" style="width: 28px; height: 28px; font-size: 0.9rem;"
-                                                    onclick="updateCounter('p4-kills-current-tp', 1, 99);">
-                                                    <i class="bi bi-plus"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-1 rounded border text-center d-flex justify-content-center align-items-center mt-1">
-                                            <span class="small fw-bold text-muted" style="font-size: 0.7rem;">Total Kill Op: <strong id="p4-killop-total" class="text-warning fs-6">0</strong></span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1051,6 +961,10 @@
                 <!-- Acciones Globales de la Partida -->
                 <div class="text-center p-4 bg-white rounded shadow-sm border">
                     <h5 class="fw-bold mb-3">Acciones de Fin de Partida</h5>
+                    <button id="btn-reveal-global" class="btn btn-warning btn-lg shadow-sm fw-bold me-3"
+                        onclick="revealPrimaries()">
+                        <i class="bi bi-eye-fill me-2"></i>Revelar Primarias y Finalizar
+                    </button>
                     <button class="btn btn-outline-secondary btn-lg shadow-sm" onclick="resetGame()">
                         <i class="bi bi-arrow-counterclockwise me-2"></i>Reiniciar Partida
                     </button>
@@ -1060,11 +974,47 @@
         </div>
     </div>
 
+    <!-- MODAL DE SELECCIÓN SECRETA DE PRIMARIA -->
+    <div class="modal fade" id="secretModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold"><i class="bi bi-incognito me-2"></i>Selección Secreta - <span
+                            id="modal-player-name" class="text-warning"></span></h5>
+                </div>
+                <div class="modal-body text-center py-5 bg-light">
+                    <p class="text-muted mb-4 px-3">Asegúrate de que tu oponente no esté mirando la pantalla. Selecciona
+                        tu <strong>Operación Primaria</strong> estratégicamente:</p>
+                    <div class="btn-group-vertical w-75 shadow-sm" role="group">
+                        <input type="radio" class="btn-check" name="secretPrimary" id="sec-crit" value="critop"
+                            autocomplete="off">
+                        <label class="btn btn-outline-primary fw-bold p-3 fs-5" for="sec-crit"><i
+                                class="bi bi-crosshair me-2"></i>Crit Op</label>
+
+                        <input type="radio" class="btn-check" name="secretPrimary" id="sec-tac" value="tacop"
+                            autocomplete="off">
+                        <label class="btn btn-outline-primary fw-bold p-3 fs-5" for="sec-tac"><i
+                                class="bi bi-bookmark-star me-2"></i>Tac Op</label>
+
+                        <input type="radio" class="btn-check" name="secretPrimary" id="sec-kill" value="killop"
+                            autocomplete="off">
+                        <label class="btn btn-outline-primary fw-bold p-3 fs-5" for="sec-kill"><i
+                                class="bi bi-skull-fill me-2"></i>Kill Op</label>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center bg-light border-top-0 pb-4">
+                    <button type="button" class="btn btn-dark btn-lg px-5 shadow-sm fw-bold"
+                        onclick="saveSecretPrimary()">Confirmar y Ocultar 🔒</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Lógica del Gestor de Partidas -->
-    <script src="gamesasimetrico.js" defer></script>
+    <script src="../js/controllers/games.js" defer></script>
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
         <div id="limitToast" class="toast align-items-center text-bg-warning border-0 shadow" role="alert"
@@ -1092,6 +1042,176 @@
                 <div class="modal-footer bg-white border-top justify-content-center py-2">
                     <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
                         Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="killOpModal" tabindex="-1" aria-labelledby="killOpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content shadow-lg border-danger border-2">
+
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title fw-bold" id="killOpModalLabel">
+                        <i class="bi bi-skull-fill me-2"></i>Puntuación Kill Op
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <table class="table table-bordered table-striped table-hover text-center m-0 align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th colspan="2" class="bg-dark"></th>
+                                <th colspan="5" class="bg-danger text-white fw-bold py-2">Puntos de KillOp</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="bg-dark"></th>
+                                <th class="table-secondary" style="width: 14%;">1</th>
+                                <th class="table-secondary" style="width: 14%;">2</th>
+                                <th class="table-secondary" style="width: 14%;">3</th>
+                                <th class="table-secondary" style="width: 14%;">4</th>
+                                <th class="table-secondary" style="width: 14%;">5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="10" class="fw-bold text-uppercase bg-dark text-white text-wrap px-2"
+                                    style="writing-mode: vertical-lr; transform: rotate(180deg); letter-spacing: 1px; font-size: 0.85rem;">
+                                    Tamaño del comando rival
+                                </td>
+                                <td class="table-dark"><strong>5</strong></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>6</strong></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>7</strong></td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>8</strong></td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>9</strong></td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>10</strong></td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>11</strong></td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>7</td>
+                                <td>9</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>12</strong></td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>10</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>13</strong></td>
+                                <td>3</td>
+                                <td>5</td>
+                                <td>8</td>
+                                <td>10</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td class="table-dark"><strong>14</strong></td>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>11</td>
+                                <td>14</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-footer bg-light py-1">
+                    <button type="button" class="btn btn-secondary btn-sm fw-bold"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="tacOpInfoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg border-primary border-top border-4">
+                <div class="modal-header bg-light border-bottom-0 pb-0">
+                    <h4 class="modal-title fw-bold text-dark" id="tacOpModalTitle"></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light pt-2" id="tacOpModalBody"></div>
+                <div class="modal-footer bg-white border-top justify-content-center py-2">
+                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-return-left me-2"></i>Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="revealConfirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-warning border-3 shadow-lg">
+                <div class="modal-header bg-warning text-dark">
+                    <h5 class="modal-title fw-bold">
+                        <i class="bi bi-eye-fill me-2"></i>Finalizar y Revelar
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center py-4 bg-light">
+                    <i class="bi bi-exclamation-triangle-fill text-warning" style="font-size: 3rem;"></i>
+                    <p class="mt-3 fs-5 text-dark fw-bold">¿Están listos para terminar la partida?</p>
+                    <p class="text-muted">Esto revelará las Operaciones Primarias de ambos jugadores y sumará los bonos
+                        al puntaje final.</p>
+                </div>
+                <div class="modal-footer bg-light justify-content-center">
+                    <button type="button" class="btn btn-secondary fw-bold shadow-sm"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-warning fw-bold shadow-sm" data-bs-dismiss="modal"
+                        onclick="executeRevealPrimaries()">
+                        Confirmar y Revelar <i class="bi bi-check-lg ms-1"></i>
                     </button>
                 </div>
             </div>
@@ -1183,7 +1303,7 @@
             <div class="modal-content border-0 shadow-lg border-success border-top border-4">
                 <div class="modal-header bg-light pb-2">
                     <div class="d-flex align-items-center">
-                        <img id="factionModalImg" src="./resources/facciones/blank.png" alt="Icono Facción"
+                        <img id="factionModalImg" src="../resources/facciones/blank.png" alt="Icono Facción"
                             class="me-3 rounded-circle border shadow-sm"
                             style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
                         <div>
@@ -1242,7 +1362,7 @@
             <div class="modal-content border-0 shadow-lg border-warning border-top border-4">
                 <div class="modal-header bg-light pb-2">
                     <div class="d-flex align-items-center">
-                        <img id="stratModalFactionImg" src="./resources/facciones/blank.png" alt="Facción"
+                        <img id="stratModalFactionImg" src="../resources/facciones/blank.png" alt="Facción"
                             class="me-3 rounded-circle border shadow-sm"
                             style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
                         <div>
@@ -1282,12 +1402,12 @@
             <div class="modal-content border-0 shadow-lg border-primary border-top border-4" id="equipModalWrapper">
                 <div class="modal-header bg-light pb-2">
                     <div class="d-flex align-items-center">
-                        <img id="equipModalFactionImg" src="./resources/facciones/blank.png" alt="Facción"
+                        <img id="equipModalFactionImg" src="../resources/facciones/blank.png" alt="Facción"
                             class="me-3 rounded-circle border shadow-sm"
                             style="width: 45px; height: 45px; object-fit: cover; background-color: white;">
                         <div>
                             <h5 class="modal-title fw-bold text-dark mb-0" id="equipModalTitle">
-                                <i class="bi bi-tools text-warning me-1"></i>Selección de Equipamiento
+                                <i class="bi bi-tools text-primary me-1"></i>Selección de Equipamiento
                             </h5>
                             <span class="badge bg-dark small" id="equipModalSubtitle">Selección Previa a la
                                 Batalla</span>
@@ -1381,46 +1501,6 @@
                     <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
                         <i class="bi bi-arrow-return-left me-1"></i>Cerrar
                     </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de Visualización de Terrenos -->
-    <div class="modal fade" id="terrainViewModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-            <div class="modal-content border-0 shadow-lg border-secondary border-top border-4">
-                <div class="modal-header bg-light pb-2 border-bottom-0">
-                    <h5 class="modal-title fw-bold text-dark" id="terrainModalTitle"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body bg-light pt-2" id="terrainModalBody">
-                    <!-- La grilla de terrenos se inyecta aquí -->
-                </div>
-                <div class="modal-footer bg-white border-top justify-content-center py-2">
-                    <button type="button" class="btn btn-dark fw-bold px-5 shadow-sm" data-bs-dismiss="modal">
-                        <i class="bi bi-check2 me-2"></i>Entendido
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de Visualización de Plano de Mapa -->
-    <div class="modal fade" id="mapViewModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content border-0 shadow-lg border-info border-top border-4">
-                <div class="modal-header bg-light pb-2">
-                    <h5 class="modal-title fw-bold text-dark" id="mapModalTitle"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body text-center bg-dark p-2">
-                    <img id="mapModalImg" src="" alt="Plano del Mapa" class="img-fluid rounded shadow-sm"
-                        style="max-height: 80vh;">
-                </div>
-                <div class="modal-footer bg-light py-2 justify-content-center">
-                    <button type="button" class="btn btn-secondary fw-bold shadow-sm"
-                        data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>

@@ -251,12 +251,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function loadData() {
         const files = {
-            ploys: 'ploys.json',
-            racial: 'racial.json',
-            factionTacops: 'tacops.json',
-            generalTacops: 'tacopsgenerales.json',
-            operatives: 'operatives.json',
-            equipment: 'equipment.json'
+            ploys: '../data/ploys.json',
+            racial: '../data/racial.json',
+            factionTacops: '../data/tacops.json',
+            generalTacops: '../data/tacopsgenerales.json',
+            operatives: '../data/operatives.json',
+            equipment: '../data/equipment.json'
         };
 
         const promises = Object.entries(files).map(async ([key, url]) => {
@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 color: white;
                                 box-shadow: 0 4px 6px rgba(0,0,0,0.1);
                             ">
-                                <img src="./resources/game_rules_files/${config.icon}" 
+                                <img src="../resources/game_rules_files/${config.icon}" 
                                      alt="${config.name}" 
                                      style="width: 50px; height: 50px; filter: brightness(0) invert(1); margin-bottom: 10px;">
                                 <span style="font-weight: bold; font-size: 0.9em; text-transform: uppercase;">${config.name}</span>
@@ -427,14 +427,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedOps = JSON.parse(localStorage.getItem(storageKey)) || [];
 
         const html = operatives.map(op => {
-            const imgPath = `./resources/roster_images/${factionKey}/${op.id}.png`;
+            const imgPath = `../resources/roster_images/${factionKey}/${op.id}.png`;
 
             // Generación de HTML para Armas
             const weaponsHtml = op.weapons.map(w => {
                 const icon = w.type === 'ranged' ? 'shoot.svg' : 'attack.svg';
                 return `
             <tr class="weapon-profile-row">
-                <td><img src="./resources/game_rules_files/${icon}" class="weapon-icon" width="20"></td>
+                <td><img src="../resources/game_rules_files/${icon}" class="weapon-icon" width="20"></td>
                 <td class="weapon-name fw-bold">${w.name}</td>
                 <td class="text-center">${w.stats.A || '-'}</td>
                 <td class="text-center">${w.stats['HP/HA'] || '-'}</td>
@@ -614,7 +614,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container fade-in">
                     <div class="tacop card shadow-sm h-100 ${op.archetype} border-0">
                         <div class="archetype position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center" style="background-color: ${archData.color};">
-                            <img src="./resources/game_rules_files/${archData.icon}" class="svg-white" alt="Icono ${archData.name}" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
+                            <img src="../resources/game_rules_files/${archData.icon}" class="svg-white" alt="Icono ${archData.name}" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
                             <span>${archData.name.toUpperCase()}</span>
                         </div>
                         <div class="middle p-3 d-flex flex-column h-100 bg-light text-start">

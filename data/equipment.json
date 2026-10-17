@@ -1736,7 +1736,7 @@
       }
     ],
     "img": [
-      "./resources/game_rules_files/equipment/ammo-cache.png"
+      "../resources/game_rules_files/equipment/ammo-cache.png"
     ]
   },
   {
@@ -1747,7 +1747,7 @@
     "weapon": [],
     "action": [],
     "img": [
-      "./resources/game_rules_files/equipment/razor-wire.png"
+      "../resources/game_rules_files/equipment/razor-wire.png"
     ]
   },
   {
@@ -1758,7 +1758,7 @@
     "weapon": [],
     "action": [],
     "img": [
-      "./resources/game_rules_files/equipment/comms-device.png"
+      "../resources/game_rules_files/equipment/comms-device.png"
     ]
   },
   {
@@ -1769,7 +1769,7 @@
     "weapon": [],
     "action": [],
     "img": [
-      "./resources/game_rules_files/equipment/mines.png"
+      "../resources/game_rules_files/equipment/mines.png"
     ]
   },
   {
@@ -1780,7 +1780,7 @@
     "weapon": [],
     "action": [],
     "img": [
-      "./resources/game_rules_files/equipment/light-barricade.png"
+      "../resources/game_rules_files/equipment/light-barricade.png"
     ]
   },
   {
@@ -1791,7 +1791,7 @@
     "weapon": [],
     "action": [],
     "img": [
-      "./resources/game_rules_files/equipment/heavy-barricade.png"
+      "../resources/game_rules_files/equipment/heavy-barricade.png"
     ]
   },
   {
@@ -1802,7 +1802,7 @@
     "weapon": [],
     "action": [],
     "img": [
-      "./resources/game_rules_files/equipment/ladder.png"
+      "../resources/game_rules_files/equipment/ladder.png"
     ]
   },
   {
@@ -1826,8 +1826,8 @@
       }
     ],
     "img": [
-      "./resources/game_rules_files/equipment/utilitygrenades-example-1.png",
-      "./resources/game_rules_files/equipment/utilitygrenades-example-2.png"
+      "../resources/game_rules_files/equipment/utilitygrenades-example-1.png",
+      "../resources/game_rules_files/equipment/utilitygrenades-example-2.png"
     ]
   },
   {
@@ -1853,8 +1853,8 @@
     ],
     "action": [],
     "img": [
-      "./resources/game_rules_files/equipment/explosivegrenades-example-1.png",
-      "./resources/game_rules_files/equipment/explosivegrenades-example-2.png"
+      "../resources/game_rules_files/equipment/explosivegrenades-example-1.png",
+      "../resources/game_rules_files/equipment/explosivegrenades-example-2.png"
     ]
   },
   {
@@ -1880,8 +1880,8 @@
       }
     ],
     "img": [
-      "./resources/game_rules_files/equipment/portable-barricade.png",
-      "./resources/game_rules_files/equipment/portable_barricade-1.png"
+      "../resources/game_rules_files/equipment/portable-barricade.png",
+      "../resources/game_rules_files/equipment/portable_barricade-1.png"
     ]
   }
 ]

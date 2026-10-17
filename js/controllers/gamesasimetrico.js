@@ -1,177 +1,63 @@
 
+
 // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
 let gameState = {
-    p1: {
-        primary: null,
-        strategicPloys: { 1: [], 2: [], 3: [], 4: [] },
-        equipment: [],
-        tpScores: {
-            crit: { 1: 0, 2: 0, 3: 0, 4: 0 },
-            tac: { 1: 0, 2: 0, 3: 0, 4: 0 }
-        }
-    },
-    p2: {
-        primary: null,
-        strategicPloys: { 1: [], 2: [], 3: [], 4: [] },
-        equipment: [],
-        tpScores: {
-            crit: { 1: 0, 2: 0, 3: 0, 4: 0 },
-            tac: { 1: 0, 2: 0, 3: 0, 4: 0 }
-        }
-    },
-    revealed: false,
-    currentPlayerSelecting: 1,
-    currentPlayerSelectingEquip: 'p1',
+    playerCount: 4, // Control de modo de juego
+    p1: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'A', killOpVP: 0 },
+    p2: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'B', killOpVP: 0 },
+    p3: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'C', killOpVP: 0 },
+    p4: { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'D', killOpVP: 0 },
     loading: false
 };
 
-// Tabla de umbrales para Kill Op (100% fiel al reglamento entregado)
-const killOpThresholds = {
-    5: [1, 2, 3, 4, 5],
-    6: [1, 2, 4, 5, 6],
-    7: [1, 3, 4, 6, 7],
-    8: [2, 3, 5, 6, 8],
-    9: [2, 4, 5, 7, 9],
-    10: [2, 4, 6, 8, 10],
-    11: [2, 4, 7, 9, 11],
-    12: [2, 5, 7, 10, 12],
-    13: [3, 5, 8, 10, 13],
-    14: [3, 6, 8, 11, 14]
-};
-
-// --- SISTEMA DE SELECCIÓN SECRETA ---
-function openSecretModal(playerNum) {
-    if (gameState.revealed) {
-        mostrarNotificacion("Acción no permitida: Las misiones ya fueron reveladas. Reinicia la partida para escoger nuevas.");
-        return;
-    }
-
-    gameState.currentPlayerSelecting = playerNum;
-    document.getElementById('modal-player-name').innerText = `Jugador ${playerNum}`;
-
-    // Limpiar selección visual del modal
-    document.querySelectorAll('input[name="secretPrimary"]').forEach(r => r.checked = false);
-
-    // Si ya había seleccionado algo antes de revelar, volver a marcarlo en el modal
-    let currentSelection = playerNum === 1 ? gameState.p1.primary : gameState.p2.primary;
-    if (currentSelection) {
-        document.querySelector(`input[name="secretPrimary"][value="${currentSelection}"]`).checked = true;
-    }
-
-    const modal = new bootstrap.Modal(document.getElementById('secretModal'));
-    modal.show();
-}
-
-function saveSecretPrimary() {
-    const selected = document.querySelector('input[name="secretPrimary"]:checked');
-    if (!selected) {
-        mostrarNotificacion("Falta selección: Debes seleccionar una operación primaria antes de confirmar.");
-        return;
-    }
-
-    const playerNum = gameState.currentPlayerSelecting;
-    const btnId = `p${playerNum}-btn-secret`;
-    const btn = document.getElementById(btnId);
-
-    if (playerNum === 1) {
-        gameState.p1.primary = selected.value;
-    } else {
-        gameState.p2.primary = selected.value;
-    }
-
-    // Cambiar el botón a estado "Fijado"
-    btn.classList.remove('btn-warning');
-    btn.classList.add('btn-success');
-    btn.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Fijada 🔒';
-
-    // Cerrar el modal correctamente
-    const modalEl = document.getElementById('secretModal');
-    const modalInstance = bootstrap.Modal.getInstance(modalEl);
-    modalInstance.hide();
-
-    // NUEVO: Guardar el estado inmediatamente para no perder la selección secreta
-    saveGameState();
-}
-
-// --- SISTEMA DE REVELADO DE PARTIDA ---
-function revealPrimaries() {
-    if (!gameState.p1.primary || !gameState.p2.primary) {
-        // Cambiamos el 'alert' molesto por la notificación integrada en la interfaz
-        mostrarNotificacion("Falta selección: Ambos jugadores deben fijar su Operación Primaria secreta antes de finalizar.");
-        return;
-    }
-
-    // Abrir el modal de confirmación temático
-    const modal = new bootstrap.Modal(document.getElementById('revealConfirmModal'));
-    modal.show();
-}
-
-// Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal
-function executeRevealPrimaries() {
-    gameState.revealed = true;
-
-    // Ocultar botones de selección y mostrar insignias
-    document.getElementById('p1-btn-secret').classList.add('d-none');
-    document.getElementById('p2-btn-secret').classList.add('d-none');
-
-    const mapNames = { 'critop': 'Crit Op', 'tacop': 'Tac Op', 'killop': 'Kill Op' };
-
-    let p1Badge = document.getElementById('p1-revealed-primary');
-    p1Badge.innerText = mapNames[gameState.p1.primary];
-    p1Badge.classList.remove('d-none');
-    document.getElementById('p1-primary-bonus-display').classList.remove('d-none');
-
-    let p2Badge = document.getElementById('p2-revealed-primary');
-    p2Badge.innerText = mapNames[gameState.p2.primary];
-    p2Badge.classList.remove('d-none');
-    document.getElementById('p2-primary-bonus-display').classList.remove('d-none');
-
-    // Ocultar botón global de revelar
-    document.getElementById('btn-reveal-global').classList.add('d-none');
-
-    calculateTotals();
-
-    showMatchResult();
-}
-
 // --- SISTEMA DE DECLARACIÓN DE VICTORIA ---
 function showMatchResult() {
-    // Extraer los puntos finales desde la interfaz (ya calculados)
-    const p1Score = parseInt(document.getElementById('p1-total-vp').innerText) || 0;
-    const p2Score = parseInt(document.getElementById('p2-total-vp').innerText) || 0;
+    let teams = {};
 
-    // Extraer los nombres de los jugadores (Si está vacío, usamos nombres por defecto)
-    let p1Name = document.querySelector('.player-1 .name-input').value.trim() || "Jugador 1";
-    let p2Name = document.querySelector('.player-2 .name-input').value.trim() || "Jugador 2";
+    // Recopilar totales previniendo la duplicación de la KillOp compartida
+    getActivePlayers().forEach(p => {
+        const playerCard = document.querySelector(`.player-${p.replace('p', '')}`);
+        if (playerCard) {
+            let critScore = parseInt(document.getElementById(`${p}-crit-vp`)?.innerText) || 0;
+            let teamId = document.getElementById(`${p}-team`)?.value || 'A';
+            let name = document.querySelector(`.player-${p.replace('p', '')} .name-input`)?.value.trim() || `Jugador ${p.replace('p', '')}`;
 
-    // Referencias a los elementos del Modal de Resultado
+            if (!teams[teamId]) {
+                // Inicializamos el puntaje del equipo con el KillOp compartido
+                let sharedKillOp = gameState[p] ? gameState[p].killOpVP : 0;
+                teams[teamId] = { score: sharedKillOp, members: [] };
+            }
+            // Sumamos ÚNICAMENTE los Puntos de Victoria individuales (CritOp) al total
+            teams[teamId].score += critScore;
+            teams[teamId].members.push(name);
+        }
+    });
+
+    // Ordenar los equipos de mayor a menor puntuación
+    let sortedTeams = Object.keys(teams).map(t => {
+        return { id: t, score: teams[t].score, members: teams[t].members };
+    }).sort((a, b) => b.score - a.score);
+
     const modalHeader = document.getElementById('matchResultHeader');
     const resultMessage = document.getElementById('matchResultMessage');
     const resultScore = document.getElementById('matchResultScore');
     const resultIcon = document.getElementById('matchResultIcon');
 
-    // Lógica de Victoria / Empate
-    if (p1Score > p2Score) {
-        // Gana Jugador 1 (Color Azul)
-        modalHeader.className = "modal-header bg-primary text-white";
-        resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-primary" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(11, 107, 225, 0.4);"></i>';
-        resultMessage.innerHTML = `¡Victoria para <span class="text-primary">${p1Name}</span>!`;
-        resultScore.innerHTML = `Con un total de <b>${p1Score}</b> PV frente a los ${p2Score} PV del enemigo.`;
-    } else if (p2Score > p1Score) {
-        // Gana Jugador 2 (Color Rojo)
-        modalHeader.className = "modal-header bg-danger text-white";
-        resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-danger" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(220, 53, 69, 0.4);"></i>';
-        resultMessage.innerHTML = `¡Victoria para <span class="text-danger">${p2Name}</span>!`;
-        resultScore.innerHTML = `Con un total de <b>${p2Score}</b> PV frente a los ${p1Score} PV del enemigo.`;
-    } else {
-        // Empate (Color Gris/Secundario)
+    let winner = sortedTeams[0];
+    let isTie = sortedTeams.length > 1 && sortedTeams[0].score === sortedTeams[1].score;
+
+    if (isTie) {
         modalHeader.className = "modal-header bg-secondary text-white";
-        resultIcon.innerHTML = '<i class="bi bi-shield-shaded text-secondary" style="font-size: 5rem; text-shadow: 0px 4px 10px rgba(108, 117, 125, 0.4);"></i>';
+        resultIcon.innerHTML = '<i class="bi bi-shield-shaded text-secondary" style="font-size: 5rem;"></i>';
         resultMessage.innerHTML = "¡La escaramuza termina en EMPATE!";
-        resultScore.innerHTML = `Ambos bandos lograron <b>${p1Score}</b> PV. ¡Una batalla reñida!`;
+        resultScore.innerHTML = `Múltiples equipos lograron <b>${winner.score}</b> PV.`;
+    } else {
+        modalHeader.className = "modal-header bg-success text-white";
+        resultIcon.innerHTML = '<i class="bi bi-trophy-fill text-success" style="font-size: 5rem;"></i>';
+        resultMessage.innerHTML = `¡Victoria para el Equipo ${winner.id}!`;
+        resultScore.innerHTML = `Con un total combinado de <b>${winner.score}</b> PV.<br><small class="text-muted">Desplegados por: ${winner.members.join(' y ')}</small>`;
     }
 
-    // Llamar a Bootstrap para mostrar el Modal
     const resultModal = new bootstrap.Modal(document.getElementById('matchResultModal'));
     resultModal.show();
 }
@@ -185,137 +71,84 @@ function resetGame() {
 
 // Esta es la función real que se ejecuta cuando el usuario presiona "Confirmar" en el modal de reinicio
 function executeResetGame() {
-    // 1. Reset de Estado Lógico Interno
-    gameState.p1.primary = null;
-    gameState.p1.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
-    gameState.p1.equipment = [];
-    gameState.p2.primary = null;
-    gameState.p2.strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
-    gameState.p2.equipment = [];
+    // Mapeo de equipos por defecto (Todos contra todos)
+    const defaultTeams = { 'p1': 'A', 'p2': 'B', 'p3': 'C', 'p4': 'D' };
+
+    // 1. Reset de Estado Lógico Interno para los 4
+    ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+        gameState[p] = {
+            strategicPloys: { 1: [], 2: [], 3: [], 4: [] },
+            equipment: [],
+            team: document.getElementById(`${p}-team`)?.value || 'A',
+            killOpVP: 0,
+            tpScores: { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } }
+        };
+    });
     gameState.revealed = false;
 
-    // --- Reset de la Operación Crítica (CritOp) Global ---
     const globalCritOp = document.getElementById('global-critop');
-    if (globalCritOp) {
-        globalCritOp.value = ""; // Devuelve el selector a la opción por defecto ("Selecciona una CritOp...")
-    }
+    if (globalCritOp) globalCritOp.value = "";
 
-    // 2. Reset de Elementos de Jugadores (Nombres, Facciones, TacOps e Interfaz)
-    ['p1', 'p2'].forEach((p, index) => {
-        const playerNum = index === 0 ? '1' : '2';
+    // 2. Reset de Interfaz en Bucle Unificado
+    ['p1', 'p2', 'p3', 'p4'].forEach((p) => {
+        const playerNum = p.replace('p', '');
 
-        // Reestablecer Nombres a vacío (o puedes poner 'Jugador 1' / 'Jugador 2')
-        document.querySelector(`.player-${playerNum} .name-input`).value = "";
+        const nameInput = document.querySelector(`.player-${playerNum} .name-input`);
+        if (nameInput) nameInput.value = `Jugador ${playerNum}`;
 
-        // Reestablecer el selector de Facción al valor por defecto
         const factionSelect = document.getElementById(`${p}-faction`);
         if (factionSelect) factionSelect.value = "";
 
-        // Forzar la actualización de TacOps para limpiar el listado y ocultar imágenes de facción antiguas
-        if (typeof updateTacOps === 'function') {
-            updateTacOps(p);
-        }
+        const imgEl = document.getElementById(`${p}-faction-img`);
+        if (imgEl) imgEl.src = "../resources/facciones/blank.png";
 
-        const archetypesDisplay = document.getElementById(`${p}-archetypes-display`);
-        if (archetypesDisplay) {
-            archetypesDisplay.innerHTML = "";
-        }
+        const rulesBtn = document.getElementById(`${p}-btn-faction-rules`);
+        if (rulesBtn) rulesBtn.disabled = true;
 
-        // Reestablecer el selector de TacOp al valor por defecto
-        const tacopSelect = document.getElementById(`${p}-tacop`);
-        if (tacopSelect) tacopSelect.value = "";
+        // Resetear el selector de equipos en el DOM
+        const teamSelect = document.getElementById(`${p}-team`);
+        if (teamSelect) teamSelect.value = defaultTeams[p];
 
-        // Restaurar visibilidad del contenedor de TacOps (por si estaba oculto/bloqueado)
-        const tacopContainer = document.getElementById(`${p}-tacop-container`);
-        if (tacopContainer) {
-            tacopContainer.classList.remove('d-none');
-            tacopContainer.classList.add('d-flex');
-        }
+        const idsToReset = [`${p}-crit-vp`, `${p}-kills-current-tp`, `${p}-killop-total`];
+        idsToReset.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.innerText = "0";
+        });
 
-        // Ocultar la insignia de TacOp revelada
-        const revealedBadge = document.getElementById(`${p}-revealed-badge-container`);
-        if (revealedBadge) {
-            revealedBadge.classList.add('d-none');
-        }
+        const cpEl = document.getElementById(`${p}-cp`);
+        if (cpEl) cpEl.innerText = "2";
 
-        // Reset de los botones de Operación Primaria Secreta UI
-        let btnPrimary = document.getElementById(`${p}-btn-secret`);
-        if (btnPrimary) {
-            btnPrimary.className = 'btn btn-warning btn-sm fw-bold shadow-sm';
-            btnPrimary.innerHTML = 'Fijar en Secreto 🔒';
-            btnPrimary.classList.remove('d-none');
-        }
-
-        document.getElementById(`${p}-revealed-primary`).classList.add('d-none');
-        document.getElementById(`${p}-primary-bonus-display`).classList.add('d-none');
+        updateActiveStrategicPloysDisplay(p);
+        updateSelectedEquipmentDisplay(p);
     });
 
-    // Mostrar el botón global de revelar primarias nuevamente
-    document.getElementById('btn-reveal-global').classList.remove('d-none');
-
-    // 3. Reset de Contadores Numéricos (Puntos de Victoria y Bajas)
-    const idsToReset = ['p1-crit-vp', 'p1-tac-vp', 'p1-kills', 'p2-crit-vp', 'p2-tac-vp', 'p2-kills'];
-    idsToReset.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.innerText = "0";
-    });
-
-    // Reset de Puntos de Mando (CP) iniciales
-    const p1Cp = document.getElementById('p1-cp');
-    const p2Cp = document.getElementById('p2-cp');
-    if (p1Cp) p1Cp.innerText = "2";
-    if (p2Cp) p2Cp.innerText = "2";
-
-    // Volver el Punto de Inflexión (Turno) al TP1
     const tp1Radio = document.getElementById('tp1');
     if (tp1Radio) tp1Radio.checked = true;
     document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = '1');
 
-    // Actualizar vista de ardides activos y equipamiento
-    updateActiveStrategicPloysDisplay('p1');
-    updateActiveStrategicPloysDisplay('p2');
-    updateSelectedEquipmentDisplay('p1');
-    updateSelectedEquipmentDisplay('p2');
-
-    // Recalcular los totales para que la UI muestre 0 puntos globales
     calculateTotals();
 
-    // Limpiar el autoguardado del LocalStorage para que no recuerde la partida anterior
     if (typeof localStorage !== 'undefined') {
-        localStorage.removeItem('killTeamMatchState');
+        localStorage.removeItem('killTeamMatchState_asymetric');
     }
 
-    // Notificación flotante estética del sistema
-    mostrarNotificacion("Partida reiniciada por completo. Tablero limpio.");
+    mostrarNotificacion("Partida reiniciada por completo. Tableros limpios.");
 }
 
 // --- SISTEMA DE CÁLCULO GENERAL ---
-
 function updateCounter(elementId, amount, max = 99) {
     const el = document.getElementById(elementId);
-    if (!el) return;
-
-    let current = parseInt(el.innerText) || 0;
+    let current = parseInt(el.innerText);
     let newVal = current + amount;
 
     if (newVal >= 0 && newVal <= max) {
         el.innerText = newVal;
 
-        // CRÍTICO: Persistir inmediatamente ante cualquier suma o resta numérica
+        // Disparar la persistencia automáticamente con cualquier cambio numérico
         if (typeof saveGameState === 'function') {
             saveGameState();
         }
     }
-}
-
-function calculatePlayerKillScore(kills, enemySize) {
-    const thresholds = killOpThresholds[enemySize];
-    let score = 0;
-    // Evaluamos la tabla: un punto por cada barrera superada
-    for (let i = 0; i < thresholds.length; i++) {
-        if (kills >= thresholds[i]) score++;
-    }
-    return score;
 }
 
 function changeMissionScore(playerPrefix, type, amount) {
@@ -326,151 +159,77 @@ function changeMissionScore(playerPrefix, type, amount) {
 
     let currentScore = parseInt(scoreEl.innerText) || 0;
 
-    // Si es restar, se permite libremente hasta 0
+    // Asegurar estructura de tpScores en memoria para el modo asimétrico
+    if (!gameState[playerPrefix].tpScores) {
+        gameState[playerPrefix].tpScores = { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } };
+    }
+    if (!gameState[playerPrefix].tpScores[type]) {
+        gameState[playerPrefix].tpScores[type] = { 1: 0, 2: 0, 3: 0, 4: 0 };
+    }
+
+    let scoredInCurrentTP = gameState[playerPrefix].tpScores[type][currentTP] || 0;
+
+    // --- ACCIÓN DE RESTAR ---
     if (amount < 0) {
         if (currentScore > 0) {
+            // Descontar del registro del TP actual si tiene puntos registrados
+            if (scoredInCurrentTP > 0) {
+                gameState[playerPrefix].tpScores[type][currentTP]--;
+            }
             updateCounter(elementId, amount, 6);
             calculateTotals();
         }
         return;
     }
 
-    // Validación de TacOp: Requiere estar revelada para poder sumar
-    if (type === 'tac') {
-        const isRevealed = !document.getElementById(`${playerPrefix}-revealed-badge-container`).classList.contains('d-none');
-        if (!isRevealed) {
-            mostrarNotificacion("Regla no cumplida: Debes revelar tu TacOp antes de poder registrar sus puntos de victoria.");
-            return;
-        }
-    }
-
-    // Obtener la llave de la misión seleccionada
-    let missionKey = "";
-    if (type === 'crit') {
-        missionKey = document.getElementById('global-critop')?.value;
-        if (!missionKey) {
-            mostrarNotificacion("Falta selección: Selecciona primero una CritOp para puntuar.");
-            return;
-        }
-    } else if (type === 'tac') {
-        missionKey = document.getElementById(`${playerPrefix}-tacop`)?.value;
-        if (!missionKey) {
-            mostrarNotificacion("Falta selección: Selecciona y fija tu TacOp antes de puntuar.");
-            return;
-        }
-    }
-
-    // Calcular el límite dinámico estricto para este TP según el JSON
-    const maxAllowedThisTP = calculateDynamicLimit(type, missionKey, currentTP);
-
-    if (currentScore + amount > maxAllowedThisTP) {
-        mostrarNotificacion(`Límite de misión alcanzado: Máximo ${maxAllowedThisTP} PV permitidos en el Punto de Inflexión ${currentTP}.`);
+    // --- ACCIÓN DE SUMAR (VALIDACIONES ESTRICTAS) ---
+    let missionKey = document.getElementById('global-critop')?.value;
+    if (!missionKey) {
+        mostrarNotificacion("Falta selección: Selecciona primero una CritOp para puntuar.");
         return;
     }
 
-    // Si pasa las validaciones, suma y recalcula
-    updateCounter(elementId, amount, maxAllowedThisTP);
+    // Regla 1 de Kill Team: Máximo 2 PV obtenibles por misión en un mismo TP
+    const maxPerTP = 2;
+    if (scoredInCurrentTP + amount > maxPerTP) {
+        mostrarNotificacion(`Límite por turno alcanzado: No puedes obtener más de ${maxPerTP} PV de esta operación en el TP ${currentTP}.`);
+        return;
+    }
+
+    // Regla 2 de Kill Team: Límite acumulado progresivo según el JSON
+    const maxAccumulatedThisTP = calculateDynamicLimit(type, missionKey, currentTP);
+    if (currentScore + amount > maxAccumulatedThisTP) {
+        mostrarNotificacion(`Límite acumulado alcanzado: Máximo ${maxAccumulatedThisTP} PV acumulados permitidos al finalizar el TP ${currentTP}.`);
+        return;
+    }
+
+    // Aplicar la suma en la memoria y en el DOM
+    gameState[playerPrefix].tpScores[type][currentTP] += amount;
+    updateCounter(elementId, amount, maxAccumulatedThisTP);
     calculateTotals();
 }
 
 function calculateTotals() {
-    // 1. Obtener valores de J1
-    let p1Crit = parseInt(document.getElementById('p1-crit-vp').innerText);
-    let p1Tac = parseInt(document.getElementById('p1-tac-vp').innerText);
-    let p1EnemySize = parseInt(document.getElementById('p1-enemy-size').value);
-    let p1Kills = parseInt(document.getElementById('p1-kills').innerText);
-    let p1KillBase = calculatePlayerKillScore(p1Kills, p1EnemySize);
+    getActivePlayers().forEach(p => {
+        if (gameState[p]) {
+            let crit = parseInt(document.getElementById(`${p}-crit-vp`)?.innerText) || 0;
+            let kill = gameState[p].killOpVP || 0;
 
-    // 2. Obtener valores de J2
-    let p2Crit = parseInt(document.getElementById('p2-crit-vp').innerText);
-    let p2Tac = parseInt(document.getElementById('p2-tac-vp').innerText);
-    let p2EnemySize = parseInt(document.getElementById('p2-enemy-size').value);
-    let p2Kills = parseInt(document.getElementById('p2-kills').innerText);
-    let p2KillBase = calculatePlayerKillScore(p2Kills, p2EnemySize);
+            // En modo asimétrico solo se suma CritOp + KillOp
+            let grandTotal = crit + kill;
 
-    // 3. Evaluar el Bono de Mayoría en Kill Op (+1 PV extra)
-    let p1KillBonus = 0;
-    let p2KillBonus = 0;
-    document.getElementById('p1-kill-bonus').classList.add('d-none');
-    document.getElementById('p2-kill-bonus').classList.add('d-none');
+            const totalEl = document.getElementById(`${p}-total-vp`);
+            if (totalEl) totalEl.innerText = grandTotal;
+        }
+    });
 
-    if (p1KillBase > p2KillBase) {
-        p1KillBonus = 1;
-        document.getElementById('p1-kill-bonus').classList.remove('d-none');
-    } else if (p2KillBase > p1KillBase) {
-        p2KillBonus = 1;
-        document.getElementById('p2-kill-bonus').classList.remove('d-none');
+    // Garantizar que si el J4 está inactivo, su total visual quede en 0
+    if (gameState.playerCount === 3) {
+        const p4TotalEl = document.getElementById('p4-total-vp');
+        if (p4TotalEl) p4TotalEl.innerText = "0";
     }
-
-    let p1KillTotal = Math.min(6, p1KillBase + p1KillBonus);
-    let p2KillTotal = Math.min(6, p2KillBase + p2KillBonus);
-
-    document.getElementById('p1-kill-base').innerText = p1KillBase;
-    document.getElementById('p1-kill-total').innerText = p1KillTotal;
-    document.getElementById('p2-kill-base').innerText = p2KillBase;
-    document.getElementById('p2-kill-total').innerText = p2KillTotal;
-
-    // 4. Calcular el Bono de Operación Primaria (Solo si ya fue revelado)
-    let p1PrimaryBonus = 0;
-    let p2PrimaryBonus = 0;
-
-    if (gameState.revealed) {
-        let p1PrimaryType = gameState.p1.primary;
-        let p2PrimaryType = gameState.p2.primary;
-
-        let p1PrimaryScore = (p1PrimaryType === 'critop') ? p1Crit : (p1PrimaryType === 'tacop' ? p1Tac : p1KillTotal);
-        let p2PrimaryScore = (p2PrimaryType === 'critop') ? p2Crit : (p2PrimaryType === 'tacop' ? p2Tac : p2KillTotal);
-
-        // Mitad redondeada al alza (Math.ceil)
-        p1PrimaryBonus = Math.ceil(p1PrimaryScore / 2);
-        p2PrimaryBonus = Math.ceil(p2PrimaryScore / 2);
-
-        document.getElementById('p1-primary-bonus-display').innerText = `+${p1PrimaryBonus} PV (Bono Primaria)`;
-        document.getElementById('p2-primary-bonus-display').innerText = `+${p2PrimaryBonus} PV (Bono Primaria)`;
-    }
-
-    // 5. Total Final de Puntos de Victoria
-    let p1GrandTotal = p1Crit + p1Tac + p1KillTotal + p1PrimaryBonus;
-    let p2GrandTotal = p2Crit + p2Tac + p2KillTotal + p2PrimaryBonus;
-
-    document.getElementById('p1-total-vp').innerText = p1GrandTotal;
-    document.getElementById('p2-total-vp').innerText = p2GrandTotal;
 
     saveGameState();
-}
-
-function validateKills(playerPrefix) {
-    // Obtenemos los elementos HTML según el jugador (p1 o p2)
-    let enemySize = parseInt(document.getElementById(playerPrefix + '-enemy-size').value);
-    let killsDisplay = document.getElementById(playerPrefix + '-kills');
-    let currentKills = parseInt(killsDisplay.innerText);
-
-    // Si las muertes actuales superan el nuevo tamaño rival, las reducimos al tope
-    if (currentKills > enemySize) {
-        killsDisplay.innerText = enemySize;
-    }
-}
-
-// Actualiza una pequeña etiqueta con el resumen del setup en la cabecera colapsable
-function updateSetupSummary() {
-    const critSelect = document.getElementById('global-critop');
-    const kzSelect = document.getElementById('killzoneSelect');
-    const mapSelect = document.getElementById('mapSelect');
-    const badge = document.getElementById('badgeResumenMision');
-
-    if (!badge) return;
-
-    const critText = critSelect.selectedIndex > 0 ? critSelect.options[critSelect.selectedIndex].text : '';
-    const kzText = kzSelect.selectedIndex > 0 ? kzSelect.options[kzSelect.selectedIndex].text : '';
-    const mapText = mapSelect.selectedIndex > 0 ? mapSelect.options[mapSelect.selectedIndex].text : '';
-
-    if (critText || kzText) {
-        badge.innerText = `${critText || 'Sin CritOp'} | ${kzText || 'Sin Killzone'} ${mapText ? '(' + mapText + ')' : ''}`;
-        badge.className = 'badge bg-warning text-dark fw-bold small d-none d-md-inline';
-    } else {
-        badge.innerText = 'Setup inicial';
-        badge.className = 'badge bg-secondary fw-normal small d-none d-md-inline';
-    }
 }
 
 // 1. Diccionario de Traducciones de Facciones
@@ -536,7 +295,6 @@ const archetypeTranslations = {
 
 // Variables para almacenar los datos en memoria
 let dataFactions = {};
-let dataTacOps = {};
 let dataCritOps = {};
 let dataWeapons = {};
 let dataRacial = {};
@@ -547,20 +305,18 @@ let dataMaps = {};
 // 2. Carga Asíncrona de ambos JSON
 async function initializeMatchData() {
     try {
-        // Agregamos reglasArmas.json, racial.json, ploys.json y equipment.json a nuestra promesa concurrente
-        const [factionsRes, tacopsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes, mapsRes] = await Promise.all([
-            fetch('tacops.json'),
-            fetch('tacopsgenerales.json'),
-            fetch('CritsOps.json'),
-            fetch('reglasArmas.json'),
-            fetch('racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
-            fetch('ploys.json').catch(e => { console.warn('ploys.json error', e); return null; }),
-            fetch('equipment.json').catch(e => { console.warn('equipment.json error', e); return null; }),
-            fetch('maps.json').catch(e => { console.warn('maps.json error', e); return null; })
+        // CORRECCIÓN: Se agregan 7 promesas para las 7 variables correspondientes.
+        const [factionsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes, mapsRes] = await Promise.all([
+            fetch('../data/tacops.json'),
+            fetch('../data/CritsOps.json'),
+            fetch('../data/reglasArmas.json'),
+            fetch('../data/racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
+            fetch('../data/ploys.json').catch(e => { console.warn('ploys.json error', e); return null; }),
+            fetch('../data/equipment.json').catch(e => { console.warn('equipment.json error', e); return null; }),
+            fetch('../data/maps.json').catch(e => { console.warn('maps.json error', e); return null; })
         ]);
 
         dataFactions = await factionsRes.json();
-        dataTacOps = await tacopsRes.json();
         dataCritOps = await critopsRes.json();
         dataWeapons = await weaponsRes.json();
         if (racialRes) dataRacial = await racialRes.json();
@@ -572,13 +328,15 @@ async function initializeMatchData() {
         populateCritOps();
         populateKillzonesDropdown();
         populateWeaponRules();
-
         loadGameState();
         calculateTotals();
-        updateActiveStrategicPloysDisplay('p1');
-        updateActiveStrategicPloysDisplay('p2');
-        updateSelectedEquipmentDisplay('p1');
-        updateSelectedEquipmentDisplay('p2');
+
+        // CORRECCIÓN: Bucle unificado para inicializar a los 4 jugadores
+        ['p1', 'p2', 'p3', 'p4'].forEach(p => {
+            updateActiveStrategicPloysDisplay(p);
+            updateSelectedEquipmentDisplay(p);
+        });
+
         onTurningPointChange();
 
     } catch (error) {
@@ -586,16 +344,45 @@ async function initializeMatchData() {
     }
 }
 
+// Actualiza una pequeña etiqueta con el resumen del setup en la cabecera colapsable
+function updateSetupSummary() {
+    const critSelect = document.getElementById('global-critop');
+    const kzSelect = document.getElementById('killzoneSelect');
+    const mapSelect = document.getElementById('mapSelect');
+    const badge = document.getElementById('badgeResumenMision');
+
+    if (!badge) return;
+
+    const critText = (critSelect && critSelect.selectedIndex > 0) ? critSelect.options[critSelect.selectedIndex].text : '';
+    const kzText = (kzSelect && kzSelect.selectedIndex > 0) ? kzSelect.options[kzSelect.selectedIndex].text : '';
+    const mapText = (mapSelect && mapSelect.selectedIndex > 0) ? mapSelect.options[mapSelect.selectedIndex].text : '';
+
+    if (critText || kzText) {
+        badge.innerText = `${critText || 'Sin CritOp'} | ${kzText || 'Sin Killzone'} ${mapText ? '(' + mapText + ')' : ''}`;
+        badge.className = 'badge bg-warning text-dark fw-bold small text-truncate d-none d-md-inline-block';
+    } else {
+        badge.innerText = 'Setup Inicial';
+        badge.className = 'badge bg-secondary fw-normal small text-truncate d-none d-md-inline-block';
+    }
+}
+
 // Función para llenar el selector global de CritOps
 function populateCritOps() {
     const select = document.getElementById('global-critop');
-    if (!select) return;
+    if (!select || !dataCritOps) return;
+
+    select.innerHTML = '<option value="" selected disabled>-- Selecciona Misión Manualmente --</option>';
+
+    // Filtro por los IDs permitidos en el JSON
+    const allowedCritOps = ['1', '2', '3'];
 
     for (const [key, op] of Object.entries(dataCritOps)) {
-        const option = document.createElement('option');
-        option.value = key; // La llave (ej. "secure", "loot")
-        option.textContent = op.name_es || key; // El nombre en español
-        select.appendChild(option);
+        if (allowedCritOps.includes(op.id)) {
+            const option = document.createElement('option');
+            option.value = key;
+            option.textContent = op.name_es || key;
+            select.appendChild(option);
+        }
     }
 }
 
@@ -608,7 +395,8 @@ function populateFactions() {
         return nameA.localeCompare(nameB);
     });
 
-    ['p1', 'p2'].forEach(playerPrefix => {
+    // CORRECCIÓN: Agregar 'p3' y 'p4' al bucle
+    ['p1', 'p2', 'p3', 'p4'].forEach(playerPrefix => {
         const select = document.getElementById(`${playerPrefix}-faction`);
         if (!select) return;
 
@@ -621,126 +409,40 @@ function populateFactions() {
     });
 }
 
-// 4. Lógica de filtrado cuando se elige una facción
-function updateTacOps(playerPrefix) {
-    const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
-    const tacopSelect = document.getElementById(`${playerPrefix}-tacop`);
-    const archetypesDisplay = document.getElementById(`${playerPrefix}-archetypes-display`);
-    const factionRulesBtn = document.getElementById(`${playerPrefix}-btn-faction-rules`);
+// NUEVO: Escuchar el cambio de facción para habilitar botones, actualizar imagen y limpiar selecciones
+document.querySelectorAll('select[id$="-faction"]').forEach(select => {
+    select.addEventListener('change', (e) => {
+        const playerPrefix = e.target.id.split('-')[0]; // Extrae "p1", "p2", "p3", "p4"
+        const factionKey = e.target.value;
 
-    // --- RESET DE SEGURIDAD PARA TACOPS SECRETAS ---
-    document.getElementById(`${playerPrefix}-tacop-container`)?.classList.remove('d-none');
-    document.getElementById(`${playerPrefix}-tacop-container`)?.classList.add('d-flex');
-    document.getElementById(`${playerPrefix}-tacop-status`)?.classList.add('d-none');
-    document.getElementById(`${playerPrefix}-tacop-status`)?.classList.remove('d-flex');
-    document.getElementById(`${playerPrefix}-btn-reveal-tacop`)?.classList.remove('d-none'); // Reestablecer botón
-    document.getElementById(`${playerPrefix}-revealed-badge`)?.classList.add('d-none');
-    let lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
-    if (lockBtn) lockBtn.disabled = true;
-
-    let infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
-    if (infoBtn) infoBtn.disabled = true;
-
-    if (factionRulesBtn) {
-        factionRulesBtn.disabled = !factionKey || !dataFactions[factionKey];
-    }
-
-    const stratBtn = document.getElementById(`${playerPrefix}-btn-strat-ploys`);
-    if (stratBtn) {
-        stratBtn.disabled = !factionKey || !dataFactions[factionKey];
-    }
-
-    const equipBtn = document.getElementById(`${playerPrefix}-btn-select-equip`);
-    if (equipBtn) {
-        equipBtn.disabled = !factionKey || !dataFactions[factionKey];
-    }
-
-    document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.remove('d-flex');
-    document.getElementById(`${playerPrefix}-revealed-badge-container`)?.classList.add('d-none');
-
-    updateActiveStrategicPloysDisplay(playerPrefix);
-
-    // Filtrar equipamientos que ya no pertenezcan a la nueva facción (conservando universales)
-    if (gameState[playerPrefix] && Array.isArray(gameState[playerPrefix].equipment)) {
-        gameState[playerPrefix].equipment = gameState[playerPrefix].equipment.filter(id => {
-            const item = dataEquipment.find(e => e.id_equip === id);
-            return item && (item.faction === 'universal' || item.faction === factionKey);
-        });
-    }
-    updateSelectedEquipmentDisplay(playerPrefix);
-
-    if (!factionKey || !dataFactions[factionKey]) return;
-
-    // Actualización visual de la imagen
-    const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
-    if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
-
-    const allowedArchetypes = dataFactions[factionKey].archetypes;
-    const translatedArchs = allowedArchetypes.map(a => archetypeTranslations[a] || a).join(' / ');
-    archetypesDisplay.innerHTML = `Arquetipos permitidos: <strong>${translatedArchs}</strong>`;
-
-    tacopSelect.innerHTML = '<option value="" selected disabled>Selecciona tu TacOp...</option>';
-
-    for (const [tacopName, tacopData] of Object.entries(dataTacOps)) {
-        if (allowedArchetypes.includes(tacopData.archetype)) {
-            const option = document.createElement('option');
-            option.value = tacopName;
-            option.textContent = `${tacopName} (${archetypeTranslations[tacopData.archetype] || tacopData.archetype})`;
-            tacopSelect.appendChild(option);
+        // 1. Habilitar el botón de Reglas de Facción
+        const rulesBtn = document.getElementById(`${playerPrefix}-btn-faction-rules`);
+        if (rulesBtn) {
+            rulesBtn.disabled = !factionKey || !dataFactions[factionKey];
         }
-    }
 
-    // NUEVO: Guardar estado tras cambiar la facción de forma activa
-    saveGameState();
-}
+        // 2. Actualizar la imagen circular de la facción
+        const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
+        if (imgEl) {
+            imgEl.src = `../resources/facciones/${factionKey}.png`;
+        }
 
-// 1. Habilita el botón de bloqueo e información al seleccionar TacOp
-function enableTacOpLock(playerPrefix) {
-    const lockBtn = document.getElementById(`${playerPrefix}-btn-lock-tacop`);
-    const infoBtn = document.getElementById(`${playerPrefix}-btn-info-tacop`);
-    if (lockBtn) lockBtn.disabled = false;
-    if (infoBtn) infoBtn.disabled = false;
+        // 3. Limpiar equipamiento incompatible con la nueva facción (mantiene universales)
+        if (gameState[playerPrefix] && Array.isArray(gameState[playerPrefix].equipment)) {
+            gameState[playerPrefix].equipment = gameState[playerPrefix].equipment.filter(id => {
+                const item = dataEquipment.find(eq => eq.id_equip === id);
+                return item && (item.faction === 'universal' || item.faction === factionKey);
+            });
+        }
 
-    // NUEVO: Guardar estado tras cambiar la selección del menú de TacOp
-    saveGameState();
-}
+        // 4. Actualizar la UI (Esto remueve el 'disabled' de los botones de equipamiento y ardides)
+        updateActiveStrategicPloysDisplay(playerPrefix);
+        updateSelectedEquipmentDisplay(playerPrefix);
 
-// 2. Fija la TacOp en secreto (Oculta selectores y muestra estado)
-function lockTacOp(playerPrefix) {
-    document.getElementById(`${playerPrefix}-tacop-container`).classList.remove('d-flex');
-    document.getElementById(`${playerPrefix}-tacop-container`).classList.add('d-none');
-
-    document.getElementById(`${playerPrefix}-tacop-status`).classList.remove('d-none');
-    document.getElementById(`${playerPrefix}-tacop-status`).classList.add('d-flex');
-
-    // NUEVO: Guardar estado cuando el jugador confirma el bloqueo secreto
-    saveGameState();
-}
-
-// 3. Transición del Estado 2 al Estado 3 (Revelar en la partida)
-function revealTacOp(playerPrefix) {
-    const selectEl = document.getElementById(`${playerPrefix}-tacop`);
-    const selectedText = selectEl.options[selectEl.selectedIndex].text;
-
-    // Ocultar el botón de revelar
-    const btnReveal = document.getElementById(`${playerPrefix}-btn-reveal-tacop`);
-    if (btnReveal) btnReveal.classList.add('d-none');
-
-    // Asignar texto y mostrar el contenedor revelado
-    const revealedBadge = document.getElementById(`${playerPrefix}-revealed-badge`);
-    if (revealedBadge) {
-        revealedBadge.innerText = selectedText;
-        revealedBadge.classList.remove('d-none');
-    }
-
-    const revealedContainer = document.getElementById(`${playerPrefix}-revealed-badge-container`);
-    if (revealedContainer) {
-        revealedContainer.classList.remove('d-none');
-        revealedContainer.classList.add('d-flex');
-    }
-
-    saveGameState();
-}
+        // 5. Guardar el estado inmediatamente
+        saveGameState();
+    });
+});
 
 // --- SISTEMA DE GESTIÓN Y ACTIVACIÓN DE ARDIDES ESTRATÉGICOS ---
 
@@ -751,48 +453,33 @@ function getCurrentTurn() {
 }
 
 function calculateDynamicLimit(type, key, turn) {
-    let op = null;
-    if (type === 'crit' && dataCritOps) {
-        op = dataCritOps[key];
-    } else if (type === 'tac' && dataTacOps) {
-        op = dataTacOps[key];
-    }
+    if (type === 'crit' && dataCritOps[key]) {
+        const op = dataCritOps[key];
+        // Verificar que exista el arreglo y tenga al menos un objeto
+        if (op.limite_puntos && Array.isArray(op.limite_puntos) && op.limite_puntos.length > 0) {
+            const limitObj = op.limite_puntos[0];
+            let limit = 0;
 
-    if (!op || !op.limite_puntos) {
-        return 6; // Límite general si la operación no define restricciones
-    }
-
-    let limiteData = op.limite_puntos;
-
-    // Si viene envuelto en un arreglo [ { ronda_1: ..., ... } ]
-    if (Array.isArray(limiteData) && limiteData.length > 0 && typeof limiteData[0] === 'object') {
-        limiteData = limiteData[0];
-    }
-
-    // Caso A: Estructura por Rondas del JSON ({ ronda_1: 0, ronda_2: 1, ... })
-    if (typeof limiteData === 'object' && !Array.isArray(limiteData)) {
-        let acumulado = 0;
-        for (let i = 1; i <= turn; i++) {
-            const puntosRonda = parseInt(limiteData[`ronda_${i}`]) || 0;
-            acumulado += puntosRonda;
+            // Sumamos los topes de manera acumulativa hasta el turno actual
+            for (let i = 1; i <= turn; i++) {
+                const rondaKey = `ronda_${i}`;
+                if (limitObj[rondaKey] !== undefined) {
+                    limit += limitObj[rondaKey];
+                }
+            }
+            return limit;
         }
-        return Math.min(6, acumulado);
     }
-
-    // Caso B: Respaldo defensivo si viene como arreglo plano [0, 1, 3, 6]
-    if (Array.isArray(limiteData)) {
-        const val = limiteData[turn - 1];
-        return val !== undefined ? Math.min(6, parseInt(val) || 0) : 6;
-    }
-
-    return 6;
+    return 6; // Límite general por defecto
 }
 
 function onTurningPointChange() {
     const currentTP = getCurrentTurn();
     document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = currentTP);
-    updateActiveStrategicPloysDisplay('p1');
-    updateActiveStrategicPloysDisplay('p2');
+
+    // CORRECCIÓN: Actualizar ardides para los 4 jugadores
+    ['p1', 'p2', 'p3', 'p4'].forEach(p => updateActiveStrategicPloysDisplay(p));
+
     validateAllScores();
     saveGameState();
 }
@@ -835,7 +522,7 @@ function renderStrategicPloysModal(playerPrefix) {
 
     // Actualizar cabecera del modal
     const imgEl = document.getElementById('stratModalFactionImg');
-    if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
+    if (imgEl) imgEl.src = `../resources/facciones/${factionKey}.png`;
 
     const titleEl = document.getElementById('stratModalTitle');
     if (titleEl) titleEl.innerHTML = `<i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos — ${factionName}`;
@@ -875,30 +562,31 @@ function renderStrategicPloysModal(playerPrefix) {
         let actionButtonHtml = '';
         if (isActive) {
             actionButtonHtml = `
-                <div class="d-flex align-items-center gap-2">
-                    <span class="badge bg-success py-2 px-3 fw-bold"><i class="bi bi-check-circle-fill me-1"></i>Activo en TP ${currentTP}</span>
-                    <button type="button" class="btn btn-outline-danger btn-sm fw-bold" onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" title="Desactivar y reembolsar PM">
-                        <i class="bi bi-arrow-counterclockwise me-1"></i>Desactivar (+${cost} PM)
-                    </button>
-                </div>
-            `;
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-success py-2 px-3 fw-bold"><i class="bi bi-check-circle-fill me-1"></i>Activo en TP ${currentTP}</span>
+                            <button type="button" class="btn btn-outline-danger btn-sm fw-bold" onclick="deactivateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})" title="Desactivar y reembolsar PM">
+                                <i class="bi bi-arrow-counterclockwise me-1"></i>Desactivar (+${cost} PM)
+                            </button>
+                        </div>
+                    `;
         } else if (canAfford) {
             actionButtonHtml = `
-                <button type="button" class="btn btn-warning btn-sm fw-bold px-3 shadow-sm" onclick="activateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})">
-                    <i class="bi bi-lightning-charge-fill me-1"></i>Activar (${cost} PM)
-                </button>
-            `;
+                        <button type="button" class="btn btn-warning btn-sm fw-bold px-3 shadow-sm" onclick="activateStrategicPloy('${playerPrefix}', ${ploy.id_ploy})">
+                            <i class="bi bi-lightning-charge-fill me-1"></i>Activar (${cost} PM)
+                        </button>
+                    `;
         } else {
             actionButtonHtml = `
-                <button type="button" class="btn btn-secondary btn-sm fw-bold px-3 disabled" disabled title="Puntos de Mando insuficientes">
-                    <i class="bi bi-x-circle me-1"></i>PM Insuficiente (${cost} PM)
-                </button>
-            `;
+                        <button type="button" class="btn btn-secondary btn-sm fw-bold px-3 disabled" disabled title="Puntos de Mando insuficientes">
+                            <i class="bi bi-x-circle me-1"></i>PM Insuficiente (${cost} PM)
+                        </button>
+                    `;
         }
 
         html += `
-            <div class="col-12">
+            <div class="col-12 mb-3">
                 <div class="equipment-card ploy-modal-card h-100 shadow-sm border ${isActive ? 'is-active border-success border-2' : 'border-secondary border-opacity-25'} rounded overflow-hidden d-flex flex-column">
+                            
                     <!-- Cabecera reestructurada con padding reducido y Flexbox -->
                     <div class="p-2 ${isActive ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center">
                         <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">
@@ -908,7 +596,7 @@ function renderStrategicPloysModal(playerPrefix) {
                             ${ploy.cps || '1 PM'}
                         </span>
                     </div>
-                    
+                        
                     <!-- Cuerpo convertido a flex-column para empujar el footer hacia abajo -->
                     <div class="p-3 bg-light text-dark flex-grow-1 d-flex flex-column">
                         <div class="equipment-description small lh-sm mb-3">
@@ -990,27 +678,38 @@ function deactivateStrategicPloy(playerPrefix, ployId) {
 function syncStratSectionsHeight() {
     const c1 = document.getElementById('p1-active-strategic-ploys');
     const c2 = document.getElementById('p2-active-strategic-ploys');
-    if (!c1 || !c2) return;
+    const c3 = document.getElementById('p3-active-strategic-ploys');
+    const c4 = document.getElementById('p4-active-strategic-ploys');
+
+    if (!c1 || !c2 || !c3 || !c4) return;
 
     // En dispositivos móviles (menor a 768px), las columnas van apiladas verticalmente
     if (window.innerWidth < 768) {
         c1.style.minHeight = 'auto';
         c2.style.minHeight = 'auto';
+        c3.style.minHeight = 'auto';
+        c4.style.minHeight = 'auto';
         return;
     }
 
     // Resetear para medir la altura natural real del contenido
     c1.style.minHeight = 'auto';
     c2.style.minHeight = 'auto';
+    c3.style.minHeight = 'auto';
+    c4.style.minHeight = 'auto';
 
     requestAnimationFrame(() => {
         const h1 = c1.scrollHeight || c1.offsetHeight;
         const h2 = c2.scrollHeight || c2.offsetHeight;
+        const h3 = c3.scrollHeight || c3.offsetHeight;
+        const h4 = c4.scrollHeight || c4.offsetHeight;
         // Reducido de 52px a 36px para ajustarse exactamente a una fila compacta
-        const maxH = Math.max(h1, h2, 36);
+        const maxH = Math.max(h1, h2, h3, h4, 36);
 
         c1.style.minHeight = `${maxH}px`;
         c2.style.minHeight = `${maxH}px`;
+        c3.style.minHeight = `${maxH}px`;
+        c4.style.minHeight = `${maxH}px`;
     });
 }
 
@@ -1034,7 +733,7 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
     }
 
     if (activeList.length === 0) {
-        activeContainer.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-1"><small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún ardid activo.</small></div>';
+        activeContainer.innerHTML = '<div class="d-flex align-items-center justify-content-center h-100 py-1"><small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún ardid estratégico activo en este TP.</small></div>';
         syncStratSectionsHeight();
         return;
     }
@@ -1044,7 +743,7 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
         const ploy = dataPloys.find(p => p.id_ploy === ployId);
         if (!ploy) return;
 
-        // Tarjeta compacta: py-1 px-2 en lugar de p-2
+        // Tarjeta compacta
         html += `
             <div class="active-ploy-card py-1 px-2 bg-white rounded border border-warning shadow-sm">
                 <div class="d-flex justify-content-between align-items-center">
@@ -1072,6 +771,71 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
 
     activeContainer.innerHTML = html;
     syncStratSectionsHeight();
+}
+
+function calculateKillOpAsymmetric() {
+    let teamsData = {};
+
+    // 1. Recolectar a los jugadores presentes y agrupar sus bajas por Alianza (Equipo)
+    getActivePlayers().forEach(p => {
+        const killEl = document.getElementById(`${p}-kills-current-tp`);
+        const teamSelect = document.getElementById(`${p}-team`);
+
+        if (killEl && teamSelect) {
+            let teamId = teamSelect.value;
+            let kills = parseInt(killEl.innerText) || 0;
+
+            if (!teamsData[teamId]) {
+                teamsData[teamId] = { id: teamId, kills: 0, players: [] };
+            }
+            teamsData[teamId].kills += kills;
+            teamsData[teamId].players.push(p);
+        }
+    });
+
+    // Convertir a un arreglo para su ordenamiento
+    let teamsArray = Object.values(teamsData);
+    if (teamsArray.length === 0) return;
+
+    // 2. Ordenar descendente por cantidad de bajas TOTALES del equipo
+    teamsArray.sort((a, b) => b.kills - a.kills);
+
+    let currentRank = 1;
+
+    // 3. Asignación de PV basada en Standard Competition Ranking por EQUIPO
+    for (let i = 0; i < teamsArray.length; i++) {
+        // Regla: 0 bajas = 0 puntos (se ignoran)
+        if (teamsArray[i].kills === 0) {
+            teamsArray[i].vp = 0;
+            continue;
+        }
+
+        if (i > 0 && teamsArray[i].kills < teamsArray[i - 1].kills) {
+            currentRank = i + 1;
+        }
+
+        if (currentRank === 1) {
+            teamsArray[i].vp = 2;
+        } else if (currentRank === 2) {
+            teamsArray[i].vp = 1;
+        } else {
+            teamsArray[i].vp = 0;
+        }
+    }
+
+    // 4. Distribuir el PV ganado a los tableros de todos los jugadores de ese equipo y reiniciar
+    teamsArray.forEach(team => {
+        team.players.forEach(p => {
+            if (gameState[p]) {
+                gameState[p].killOpVP += team.vp;
+                document.getElementById(`${p}-kills-current-tp`).innerText = '0';
+                document.getElementById(`${p}-killop-total`).innerText = gameState[p].killOpVP;
+            }
+        });
+    });
+
+    calculateTotals();
+    mostrarNotificacion("KillOp por Equipos evaluada. Puntos asignados y contadores de TP reseteados.");
 }
 
 // --- SISTEMA DE GESTIÓN Y SELECCIÓN DE EQUIPAMIENTO ---
@@ -1142,40 +906,24 @@ function buildEquipmentCardInnerHtml(item) {
     if (item.action && item.action.length > 0) {
         actionHtml = item.action.map(a => {
             const descYes = Array.isArray(a.action_yes)
-                ? a.action_yes.map(line => `
-                            <div class="equip-action-yes p-2 mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1 me-2"></span>
-                                <div>${line}</div>
-                            </div>`).join('')
-                : (a.action_yes ? `
-                            <div class="equip-action-yes p-2 mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1 me-2"></span>
-                                <div>${a.action_yes}</div>
-                            </div>` : '');
+                ? a.action_yes.map(line => `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${line}</span></p>`).join('')
+                : (a.action_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.action_yes}</span></p>` : '');
 
             const descNo = Array.isArray(a.action_no)
-                ? a.action_no.map(line => `
-                            <div class="equip-action-no p-2 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1 me-2"></span>
-                                <div>${line}</div>
-                            </div>`).join('')
-                : (a.action_no ? `
-                            <div class="equip-action-no p-2 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1 me-2"></span>
-                                <div>${a.action_no}</div>
-                            </div>` : '');
+                ? a.action_no.map(line => `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${line}</span></p>`).join('')
+                : (a.action_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${a.action_no}</span></p>` : '');
 
             return `
-                    <div class="equip-action-box shadow-sm mb-2">
-                        <div class="equip-action-header d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-uppercase">${a.action_name}</span>
-                            <span class="badge bg-dark">${a.action_cost}</span>
-                        </div>
-                        <div class="content bg-white p-2">
-                            ${descYes}
-                            ${descNo}
-                        </div>
-                    </div>`;
+                <div class="unique-actions-section border border-dark rounded mt-2 mb-2 overflow-hidden">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${a.action_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.action_cost}</div>
+                    </div>
+                    <div class="content p-2 small text-start">
+                        ${descYes}
+                        ${descNo}
+                    </div>
+                </div>`;
         }).join('');
     }
 
@@ -1198,13 +946,16 @@ function buildEquipmentCardInnerHtml(item) {
 
 function renderEquipmentSelectModal(playerPrefix) {
     const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
-    const playerName = document.querySelector(`.player-${playerPrefix === 'p1' ? '1' : '2'} .name-input`).value.trim() || (playerPrefix === 'p1' ? 'Jugador 1' : 'Jugador 2');
+
+    const playerNum = playerPrefix.replace('p', '');
+    const playerName = document.querySelector(`.player-${playerNum} .name-input`).value.trim() || `Jugador ${playerNum}`;
+
     const factionName = factionTranslations[factionKey] || factionKey;
     const currentEquipList = getPlayerEquipment(playerPrefix);
 
     // Actualizar cabecera del modal
     const imgEl = document.getElementById('equipModalFactionImg');
-    if (imgEl) imgEl.src = `./resources/facciones/${factionKey}.png`;
+    if (imgEl) imgEl.src = `../resources/facciones/${factionKey}.png`;
 
     const titleEl = document.getElementById('equipModalTitle');
     if (titleEl) titleEl.innerHTML = `<i class="bi bi-tools text-primary me-1"></i>Selección de Equipamiento — ${factionName}`;
@@ -1295,34 +1046,34 @@ function renderEquipmentGridHtml(items, playerPrefix, currentList, isUniversal) 
         }
 
         html += `
-                    <div class="col-12 col-lg-6 mb-3">
-                        <div class="equipment-card equip-select-card h-100 shadow-sm border ${isSelected ? 'is-selected border-success border-2' : 'border-secondary border-opacity-25'} rounded overflow-hidden d-flex flex-column">
+            <div class="col-12 col-lg-6 mb-3">
+                <div class="equipment-card equip-select-card h-100 shadow-sm border ${isSelected ? 'is-selected border-success border-2' : 'border-secondary border-opacity-25'} rounded overflow-hidden d-flex flex-column">
                             
-                            <!-- Cabecera sin padding nativo, usando tu estructura -->
-                            <div class="p-2 ${isSelected ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center">
-                                <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">
-                                    <i class="bi bi-tools me-1"></i>${item.name}
-                                </h6>
-                                <span class="badge ${isSelected ? 'bg-light text-success' : 'bg-secondary text-white'} shadow-sm px-2 py-1">
-                                    ${isUniversal ? 'Universal' : 'Facción'}
-                                </span>
-                            </div>
+                    <!-- Cabecera sin padding nativo, usando tu estructura -->
+                    <div class="p-2 ${isSelected ? 'bg-success text-white' : 'bg-dark text-white'} d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">
+                            <i class="bi bi-tools me-1"></i>${item.name}
+                        </h6>
+                        <span class="badge ${isSelected ? 'bg-light text-success' : 'bg-secondary text-white'} shadow-sm px-2 py-1">
+                            ${isUniversal ? 'Universal' : 'Facción'}
+                        </span>
+                    </div>
                             
-                            <!-- Cuerpo Flexbox para empujar los controles abajo -->
-                            <div class="p-3 bg-light text-dark flex-grow-1 d-flex flex-column">
-                                <div class="equipment-description small mb-3">
-                                    ${buildEquipmentCardInnerHtml(item)}
-                                </div>
+                    <!-- Cuerpo Flexbox para empujar los controles abajo -->
+                    <div class="p-3 bg-light text-dark flex-grow-1 d-flex flex-column">
+                        <div class="equipment-description small mb-3">
+                            ${buildEquipmentCardInnerHtml(item)}
+                        </div>
                                 
-                                <!-- Sección inferior con controles (Seleccionar/Quitar) -->
-                                <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
-                                    <small class="text-muted fst-italic">${isUniversal ? 'Equipo Global' : 'Exclusivo Facción'}</small>
-                                    ${btnHtml}
-                                </div>
-                            </div>
+                        <!-- Sección inferior con controles (Seleccionar/Quitar) -->
+                        <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
+                            <small class="text-muted fst-italic">${isUniversal ? 'Equipo Global' : 'Exclusivo Facción'}</small>
+                            ${btnHtml}
                         </div>
                     </div>
-                `;
+                </div>
+            </div>
+        `;
     });
 
     html += '</div>';
@@ -1359,25 +1110,35 @@ function toggleEquipmentSelection(playerPrefix, equipId) {
 function syncEquipSectionsHeight() {
     const c1 = document.getElementById('p1-selected-equipment-container');
     const c2 = document.getElementById('p2-selected-equipment-container');
-    if (!c1 || !c2) return;
+    const c3 = document.getElementById('p3-selected-equipment-container');
+    const c4 = document.getElementById('p4-selected-equipment-container');
+
+    if (!c1 || !c2 || !c3 || !c4) return;
 
     if (window.innerWidth < 768) {
         c1.style.minHeight = 'auto';
         c2.style.minHeight = 'auto';
+        c3.style.minHeight = 'auto';
+        c4.style.minHeight = 'auto';
         return;
     }
 
     c1.style.minHeight = 'auto';
     c2.style.minHeight = 'auto';
+    c3.style.minHeight = 'auto';
+    c4.style.minHeight = 'auto';
 
     requestAnimationFrame(() => {
         const h1 = c1.scrollHeight || c1.offsetHeight;
         const h2 = c2.scrollHeight || c2.offsetHeight;
-        // Reducido de 44px a 34px como altura base
-        const maxH = Math.max(h1, h2, 34);
+        const h3 = c3.scrollHeight || c3.offsetHeight;
+        const h4 = c4.scrollHeight || c4.offsetHeight;
+        const maxH = Math.max(h1, h2, h3, h4, 44);
 
         c1.style.minHeight = `${maxH}px`;
         c2.style.minHeight = `${maxH}px`;
+        c3.style.minHeight = `${maxH}px`;
+        c4.style.minHeight = `${maxH}px`;
     });
 }
 
@@ -1405,8 +1166,15 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
         return;
     }
 
-    // Cuadrícula: 1 col en móviles pequeños, 2 cols en sm (>= 576px)
+    // Determinar el color dinámico según el jugador
+    let colorClass = 'primary';
+    if (playerPrefix === 'p2') colorClass = 'danger';
+    if (playerPrefix === 'p3') colorClass = 'success';
+    if (playerPrefix === 'p4') colorClass = 'warning';
+
+    // Iniciamos la cuadrícula: 1 col en móviles, 2 cols en pantallas sm o superiores
     let html = '<div class="row row-cols-1 row-cols-sm-2 g-1">';
+
     list.forEach(equipId => {
         const item = dataEquipment.find(e => e.id_equip === equipId);
         if (!item) return;
@@ -1415,17 +1183,17 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
         const hasWeapons = item.weapon && item.weapon.length > 0;
         const hasActions = item.action && item.action.length > 0;
 
-        // Tarjeta compacta: py-1 px-2 y gap ajustado
+        // Tarjeta ultra compacta con flexbox interno para forzar en una sola línea
         html += `
             <div class="col">
-                <div class="active-equip-card py-1 px-2 bg-white rounded border ${playerPrefix === 'p1' ? 'border-primary' : 'border-danger'} border-opacity-50 shadow-sm h-100">
+                <div class="active-equip-card py-1 px-2 bg-white rounded border border-${colorClass} border-opacity-50 shadow-sm h-100">
                     <div class="d-flex justify-content-between align-items-center gap-1">
                         <div class="d-flex align-items-center gap-1 overflow-hidden">
                             <button type="button" class="btn btn-outline-danger btn-sm p-0 px-1 border-0 flex-shrink-0" 
                                 onclick="toggleEquipmentSelection('${playerPrefix}', ${item.id_equip})" title="Quitar equipamiento" style="line-height: 1;">
                                 <i class="bi bi-x-circle-fill" style="font-size: 0.8rem;"></i>
                             </button>
-                            <span class="badge ${isUniversal ? 'bg-secondary' : (playerPrefix === 'p1' ? 'bg-primary' : 'bg-danger')} text-white flex-shrink-0 py-0 px-1" style="font-size: 0.6rem;">
+                            <span class="badge ${isUniversal ? 'bg-secondary' : `bg-${colorClass}`} text-white flex-shrink-0 py-0 px-1" style="font-size: 0.6rem;">
                                 ${isUniversal ? 'Univ.' : 'Fac.'}
                             </span>
                             <span class="fw-bold text-dark text-truncate" style="font-size: 0.78rem;" title="${item.name}">${item.name}</span>
@@ -1441,6 +1209,7 @@ function updateSelectedEquipmentDisplay(playerPrefix) {
             </div>
         `;
     });
+
     html += '</div>';
 
     container.innerHTML = html;
@@ -1501,7 +1270,7 @@ function showPloyDetails(ployId) {
 
 // 4. Función de validación masiva si el usuario cambia de turno hacia atrás
 function validateAllScores() {
-    ['p1', 'p2'].forEach(playerPrefix => {
+    ['p1', 'p2', 'p3', 'p4'].forEach(playerPrefix => {
         let currentTurn = getCurrentTurn();
 
         // Revisar CritOp
@@ -1512,13 +1281,6 @@ function validateAllScores() {
             if (parseInt(critEl.innerText) > limit) critEl.innerText = limit;
         }
 
-        // Revisar TacOp
-        let tacEl = document.getElementById(`${playerPrefix}-tac-vp`);
-        let tacKey = document.getElementById(`${playerPrefix}-tacop`)?.value;
-        if (tacEl && tacKey) {
-            let limit = calculateDynamicLimit('tac', tacKey, currentTurn);
-            if (parseInt(tacEl.innerText) > limit) tacEl.innerText = limit;
-        }
     });
     calculateTotals();
 }
@@ -1645,7 +1407,7 @@ function showFactionRules(playerPrefix) {
     const modalArchetypesEl = document.getElementById('factionModalArchetypes');
 
     if (modalTitleEl) modalTitleEl.textContent = factionName;
-    if (modalImgEl) modalImgEl.src = `./resources/facciones/${factionKey}.png`;
+    if (modalImgEl) modalImgEl.src = `../resources/facciones/${factionKey}.png`;
 
     // 1. Arquetipos
     const allowedArchetypes = dataFactions[factionKey]?.archetypes || [];
@@ -1874,204 +1636,100 @@ function showFactionRules(playerPrefix) {
     modal.show();
 }
 
-// --- SISTEMA DE VISUALIZACIÓN DE REGLAS (TARJETA TACOP) ---
-function showTacOpDetails(playerPrefix) {
-    const selectEl = document.getElementById(`${playerPrefix}-tacop`);
-    const tacKey = selectEl.value;
-
-    if (!tacKey) {
-        mostrarNotificacion("Falta selección: Por favor, selecciona primero tu Operación Táctica.");
-        return;
-    }
-
-    const op = dataTacOps[tacKey];
-    if (!op) return;
-
-    // Colores e iconos por arquetipo (Misma lógica de tacops.html)
-    const archName = archetypeTranslations[op.archetype] || op.archetype;
-
-    function getCustomColor(archetype) {
-        switch (archetype) {
-            case 'recon': return '#f05c22';
-            case 'security': return '#0b6be1';
-            case 'infiltration': return '#5f5f5f';
-            case 'seek-destroy': return '#bd0003';
-            default: return '#6c757d';
-        }
-    }
-
-    function getArchetypeIcon(archetype) {
-        switch (archetype) {
-            case 'recon': return './resources/game_rules_files/recon.svg';
-            case 'security': return './resources/game_rules_files/security.svg';
-            case 'infiltration': return './resources/game_rules_files/infiltration.svg';
-            case 'seek-destroy': return './resources/game_rules_files/seek-destroy.svg';
-            default: return '';
-        }
-    }
-
-    // 1. Manejo de Reglas Adicionales
-    let additionalRulesHtml = '';
-    if (op.additional_rules) {
-        if (Array.isArray(op.additional_rules)) {
-            additionalRulesHtml = `
-                        <div class="victory-points mb-3">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
-                            <ul class="small text-start text-muted ps-3 mb-0">${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul>
-                        </div>`;
-        } else {
-            additionalRulesHtml = `
-                        <div class="victory-points mb-3">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Reglas Adicionales</div>
-                            <p class="text-muted small text-start mb-0">${op.additional_rules}</p>
-                        </div>`;
-        }
-    }
-
-    // 2. Manejo de Acción de Misión
-    let actionHtml = '';
-    if (op.action_mission_name) {
-        actionHtml = `
-            <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-            <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
-                <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
-                    <div class="fw-bold">${op.action_mission_name}</div>
-                    <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${op.action_mission_cost}</div>
-                </div>
-                <div class="content p-2 small text-start">
-                    ${op.action_mission_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${op.action_mission_yes}</span></p>` : ''}
-                    ${op.action_mission_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${op.action_mission_no}</span></p>` : ''}
-                </div>
-            </div>
-        `;
-    }
-
-    // 3. Manejo de Puntos de Victoria (Soporta Arrays)
-    let vpHtml = '';
-    if (op.victoy_points) {
-        if (Array.isArray(op.victoy_points)) {
-            const vpList = [...op.victoy_points];
-            let limitText = '';
-            // Si el último elemento es un límite de texto, lo separamos para pintarlo rojo
-            if (vpList[vpList.length - 1] && vpList[vpList.length - 1].includes("No puedes obtener más de")) {
-                limitText = `<p class="fst-italic text-danger small mt-2 mb-0 text-start">${vpList.pop()}</p>`;
-            }
-            vpHtml = `
-                        <div class="victory-points mt-auto">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
-                            <ul class="text-start small mb-1 ps-3 text-muted">${vpList.map(vp => `<li>${vp}</li>`).join('')}</ul>
-                            ${limitText}
-                        </div>`;
-        } else {
-            vpHtml = `
-                        <div class="victory-points mt-auto">
-                            <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Puntos de Victoria</div>
-                            <p class="small mb-0 text-start text-muted">${op.victoy_points}</p>
-                        </div>`;
-        }
-    }
-
-    // 4. Armar Modal
-    document.getElementById('tacOpModalTitle').innerHTML = `
-                <i class="bi bi-bookmark-star-fill text-primary me-2"></i>Detalles de TacOp
-            `;
-
-    const bodyEl = document.getElementById('tacOpModalBody');
-    bodyEl.innerHTML = `
-                <div class="card shadow border-0 bg-light mx-auto" style="max-width: 600px;">
-                    <div class="position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center shadow-sm" style="background-color: ${getCustomColor(op.archetype)}; font-size: 1.1rem;">
-                        <img src="${getArchetypeIcon(op.archetype)}" class="svg-white" alt="Icono" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
-                        <span>${archName.toUpperCase()}</span>
-                    </div>
-    
-                    <div class="p-4 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom text-center">
-                        <h4 class="name fw-bold text-dark mb-3 text-uppercase">${op.name}</h4>
-                        <div class="mission-container pt-0 flex-grow-1 d-flex flex-column text-start">
-                            <div class="victory-points mb-3">
-                                <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Revelar</div>
-                                <div class="small text-start text-muted">${op.Reveal}</div>
-                            </div>
-                            ${additionalRulesHtml}
-                            ${actionHtml}
-                            ${vpHtml}
-                        </div>
-                    </div>
-                </div>
-            `;
-
-    // 5. Mostrar Modal
-    const modal = new bootstrap.Modal(document.getElementById('tacOpInfoModal'));
-    modal.show();
-}
-
 // --- SISTEMA DE AUTOGUARDADO (LOCALSTORAGE) ---
-
-function saveGameState() {
-
-    // NUEVO: Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardamos estados corruptos
-    if (gameState.loading || Object.keys(dataFactions).length === 0) return;
-
-    // Si los datos aún no cargan de los JSON, no guardamos estados vacíos
-    if (Object.keys(dataFactions).length === 0) return;
-
-    const state = {
-        globalCritOp: document.getElementById('global-critop') ? document.getElementById('global-critop').value : "",
-        killzone: document.getElementById('killzoneSelect') ? document.getElementById('killzoneSelect').value : "",
-        map: document.getElementById('mapSelect') ? document.getElementById('mapSelect').value : "",
-        tp: document.querySelector('input[name="tpRadio"]:checked').id,
-        internalGameState: gameState,
-        p1: getPlayerState('p1'),
-        p2: getPlayerState('p2')
-    };
-
-    // Guardamos todo en formato JSON en el navegador
-    localStorage.setItem('killTeamMatchState', JSON.stringify(state));
-}
-
 function getPlayerState(p) {
-    // Para identificar si es Jugador 1 o Jugador 2 en la clase CSS del input
-    const playerClass = p === 'p1' ? '1' : '2';
+    // Extracción dinámica para soportar p1, p2, p3, p4
+    const playerClass = p.replace('p', '');
 
     return {
-        name: document.querySelector(`.player-${playerClass} .name-input`).value,
-        faction: document.getElementById(`${p}-faction`).value,
-        tacop: document.getElementById(`${p}-tacop`).value,
-        // Detectamos el estado de la TacOp leyendo la interfaz visual
-        tacopLocked: !document.getElementById(`${p}-tacop-container`).classList.contains('d-flex'),
-        tacopRevealed: !document.getElementById(`${p}-revealed-badge-container`).classList.contains('d-none'),
-        cp: document.getElementById(`${p}-cp`).innerText,
-        critVp: document.getElementById(`${p}-crit-vp`).innerText,
-        tacVp: document.getElementById(`${p}-tac-vp`).innerText,
-        enemySize: document.getElementById(`${p}-enemy-size`).value,
-        kills: document.getElementById(`${p}-kills`).innerText,
+        name: document.querySelector(`.player-${playerClass} .name-input`)?.value || "",
+        faction: document.getElementById(`${p}-faction`)?.value || "",
+        team: document.getElementById(`${p}-team`)?.value || "A", // Leemos el equipo
+        cp: document.getElementById(`${p}-cp`)?.innerText || "2",
+        critVp: document.getElementById(`${p}-crit-vp`)?.innerText || "0",
+        killsCurrentTP: document.getElementById(`${p}-kills-current-tp`)?.innerText || "0",
+        killOpVP: gameState[p] ? gameState[p].killOpVP : 0,
+        tpScores: (gameState[p] && gameState[p].tpScores) ? gameState[p].tpScores : { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } },
         strategicPloys: (gameState[p] && gameState[p].strategicPloys) ? gameState[p].strategicPloys : { 1: [], 2: [], 3: [], 4: [] },
         equipment: getPlayerEquipment(p)
     };
 }
 
-function loadGameState() {
-    const savedStateStr = localStorage.getItem('killTeamMatchState');
+function saveGameState() {
+    // Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardar estados vacíos
+    if (gameState.loading || Object.keys(dataFactions).length === 0 || Object.keys(dataMaps).length === 0) return;
 
+    const globalCritOpVal = document.getElementById('global-critop') ? document.getElementById('global-critop').value : "";
+    const killzoneVal = document.getElementById('killzoneSelect') ? document.getElementById('killzoneSelect').value : "";
+    const mapVal = document.getElementById('mapSelect') ? document.getElementById('mapSelect').value : "";
+    const tpChecked = document.querySelector('input[name="tpRadio"]:checked');
+
+    const state = {
+        playerCount: gameState.playerCount,
+        globalCritOp: globalCritOpVal,
+        killzone: killzoneVal,
+        map: mapVal,
+        tp: tpChecked ? tpChecked.id : "tp1",
+        internalGameState: gameState,
+        p1: getPlayerState('p1'),
+        p2: getPlayerState('p2'),
+        p3: getPlayerState('p3'),
+        p4: getPlayerState('p4')
+    };
+
+    // CORRECCIÓN: Clave aislada para evitar colisiones con el modo 1v1
+    localStorage.setItem('killTeamMatchState_asymetric', JSON.stringify(state));
+}
+
+function loadGameState() {
+    // CORRECCIÓN: Leer exclusivamente la clave asimétrica
+    const savedStateStr = localStorage.getItem('killTeamMatchState_asymetric');
     if (!savedStateStr) return;
 
     try {
-        gameState.loading = true; // <-- NUEVO: Encender bandera antes de tocar el DOM
+        gameState.loading = true; // Proteger contra sobreescrituras en cadena
         const state = JSON.parse(savedStateStr);
 
-        // 1. Restaurar Globals
-        if (state.globalCritOp) document.getElementById('global-critop').value = state.globalCritOp;
-        if (state.tp) document.getElementById(state.tp).checked = true;
+        // 1. Restaurar Globals y Modo de Juego
+        if (state.globalCritOp) {
+            const critSelect = document.getElementById('global-critop');
+            if (critSelect) critSelect.value = state.globalCritOp;
+        }
 
+        if (state.playerCount) {
+            gameState.playerCount = state.playerCount;
+            const radioBtn = document.getElementById(`mode${state.playerCount}p`);
+            if (radioBtn) radioBtn.checked = true;
+            togglePlayerMode(state.playerCount, false); // false para no forzar guardado en bucle
+        }
+
+        if (state.tp) {
+            const tpEl = document.getElementById(state.tp);
+            if (tpEl) tpEl.checked = true;
+        }
+
+        // Restaurar Killzone y construir mapas
         if (state.killzone) {
-            document.getElementById('killzoneSelect').value = state.killzone;
-            updateMapOptions(); // CRÍTICO: Reconstruye el DOM del selector de mapas para la killzone restaurada
+            const kzSelect = document.getElementById('killzoneSelect');
+            if (kzSelect) {
+                kzSelect.value = state.killzone;
+                updateMapOptions(false); // NO resetear el mapa en este instante
+            }
         }
 
-        if (state.map) {
-            document.getElementById('mapSelect').value = state.map;
+        // Restaurar Mapa guardado (después de haber poblado las opciones en updateMapOptions)
+        if (state.map !== undefined && state.map !== "") {
+            const mapSelect = document.getElementById('mapSelect');
+            if (mapSelect) {
+                mapSelect.value = state.map;
+                // Activar botón de ver mapa
+                const btnViewMap = document.getElementById('btnViewMap');
+                if (btnViewMap && mapSelect.value !== "") {
+                    btnViewMap.disabled = false;
+                }
+            }
         }
 
-        // Conservar la propiedad loading al restaurar el estado interno
         if (state.internalGameState) {
             gameState = state.internalGameState;
             gameState.loading = true;
@@ -2080,87 +1738,78 @@ function loadGameState() {
         // 2. Restaurar Jugadores
         restorePlayerState('p1', state.p1);
         restorePlayerState('p2', state.p2);
+        restorePlayerState('p3', state.p3);
+        restorePlayerState('p4', state.p4);
 
-        // 3. Restaurar Interfaz de Operaciones Primarias Secretas
-        if (gameState.revealed) {
-            document.getElementById('p1-btn-secret').classList.add('d-none');
-            document.getElementById('p2-btn-secret').classList.add('d-none');
-            document.getElementById('btn-reveal-global').classList.add('d-none');
-
-            const mapNames = { 'critop': 'Crit Op', 'tacop': 'Tac Op', 'killop': 'Kill Op' };
-
-            ['p1', 'p2'].forEach(p => {
-                let pBadge = document.getElementById(`${p}-revealed-primary`);
-                pBadge.innerText = mapNames[gameState[p].primary];
-                pBadge.classList.remove('d-none');
-                document.getElementById(`${p}-primary-bonus-display`).classList.remove('d-none');
-            });
-        } else {
-            ['p1', 'p2'].forEach(p => {
-                if (gameState[p] && gameState[p].primary) {
-                    const btn = document.getElementById(`${p}-btn-secret`);
-                    btn.classList.remove('btn-warning');
-                    btn.classList.add('btn-success');
-                    btn.innerHTML = '<i class="bi bi-check-circle-fill me-1"></i> Fijada 🔒';
-                }
-            });
-        }
         updateSetupSummary();
 
-        gameState.loading = false; // <-- Apagar bandera, la UI ya es estable y fiel al guardado
-        mostrarNotificacion("Partida cargada exitosamente.");
+        // Forzar el renderizado correcto de la vista móvil o de PC tras restaurar a los jugadores
+        const checkedRadio = document.querySelector('input[name="mobileViewRadio"]:checked');
+        const mode = checkedRadio ? checkedRadio.id.replace('viewMode', '').toLowerCase() : 'all';
+        setMobilePlayerView(mode);
+
+        gameState.loading = false; // Finalizar carga
+        mostrarNotificacion("Partida asimétrica cargada exitosamente.");
     } catch (e) {
-        gameState.loading = false; // <-- Asegurar apagado si el JSON está corrupto
+        gameState.loading = false;
         console.error("Error cargando partida guardada:", e);
-        localStorage.removeItem('killTeamMatchState');
+        //  Borrar la clave asimétrica
+        localStorage.removeItem('killTeamMatchState_asymetric');
     }
 }
 
 function restorePlayerState(p, pState) {
     if (!pState) return;
 
-    const playerClass = p === 'p1' ? '1' : '2';
-    document.querySelector(`.player-${playerClass} .name-input`).value = pState.name || "";
+    const playerClass = p.replace('p', '');
 
+    const nameInput = document.querySelector(`.player-${playerClass} .name-input`);
+    if (nameInput) nameInput.value = pState.name || "";
+
+    // Restaurar Facción, su Imagen y el Botón de Reglas
     if (pState.faction) {
-        document.getElementById(`${p}-faction`).value = pState.faction;
-        updateTacOps(p); // Reconstruye el selector y la imagen
+        const factionSelect = document.getElementById(`${p}-faction`);
+        if (factionSelect) factionSelect.value = pState.faction;
+
+        const imgEl = document.getElementById(`${p}-faction-img`);
+        if (imgEl) imgEl.src = `../resources/facciones/${pState.faction}.png`;
+
+        const rulesBtn = document.getElementById(`${p}-btn-faction-rules`);
+        if (rulesBtn) rulesBtn.disabled = !pState.faction || !dataFactions[pState.faction];
     }
 
-    if (pState.tacop) {
-        document.getElementById(`${p}-tacop`).value = pState.tacop;
-        enableTacOpLock(p);
-    }
-
-    // Restaurar los estados visuales que updateTacOps reseteó
-    if (pState.tacopRevealed) {
-        lockTacOp(p);
-        revealTacOp(p);
-    } else if (pState.tacopLocked) {
-        lockTacOp(p);
-    }
-
-    // Restaurar contadores
-    document.getElementById(`${p}-cp`).innerText = pState.cp || "2";
-    document.getElementById(`${p}-crit-vp`).innerText = pState.critVp || "0";
-    document.getElementById(`${p}-tac-vp`).innerText = pState.tacVp || "0";
-
-    if (pState.enemySize) {
-        document.getElementById(`${p}-enemy-size`).value = pState.enemySize;
-    }
-
-    document.getElementById(`${p}-kills`).innerText = pState.kills || "0";
-
-    // Restaurar ardides estratégicos
+    // Restaurar Equipo en la Interfaz y en Memoria
+    const teamSelect = document.getElementById(`${p}-team`);
+    if (teamSelect) teamSelect.value = pState.team || "A";
     if (!gameState[p]) {
-        gameState[p] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] };
+        gameState[p] = { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'A', killOpVP: 0 };
     }
+    gameState[p].team = pState.team || "A";
+
+    const cpEl = document.getElementById(`${p}-cp`);
+    if (cpEl) cpEl.innerText = pState.cp || "2";
+
+    const critEl = document.getElementById(`${p}-crit-vp`);
+    if (critEl) critEl.innerText = pState.critVp || "0";
+
+    const killsTpEl = document.getElementById(`${p}-kills-current-tp`);
+    if (killsTpEl) killsTpEl.innerText = pState.killsCurrentTP || "0";
+
+    gameState[p].killOpVP = pState.killOpVP || 0;
+    const killTotalEl = document.getElementById(`${p}-killop-total`);
+    if (killTotalEl) killTotalEl.innerText = gameState[p].killOpVP;
+
+    if (pState.tpScores) {
+        gameState[p].tpScores = pState.tpScores;
+    } else if (!gameState[p].tpScores) {
+        gameState[p].tpScores = { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } };
+    }
+
     if (pState.strategicPloys) {
         gameState[p].strategicPloys = pState.strategicPloys;
     }
     updateActiveStrategicPloysDisplay(p);
 
-    // Restaurar equipamiento
     if (pState.equipment && Array.isArray(pState.equipment)) {
         gameState[p].equipment = pState.equipment;
     } else if (!gameState[p].equipment) {
@@ -2173,19 +1822,43 @@ function restorePlayerState(p, pState) {
 document.addEventListener('DOMContentLoaded', () => {
     initializeMatchData();
 
-    const btnRandomAll = document.getElementById('btn-random-all');
-    if (btnRandomAll) {
-        btnRandomAll.addEventListener('click', randomizeAll);
-    }
-
+    // Persistir nombres
     document.querySelectorAll('.name-input').forEach(input => {
         input.addEventListener('blur', saveGameState);
     });
 
-    // NUEVO: Detectar cuando el usuario cambia manualmente el mapa para guardarlo
+    // Persistir selector de equipos
+    document.querySelectorAll('select[id$="-team"]').forEach(select => {
+        select.addEventListener('change', saveGameState);
+    });
+
+    // Listener único de CritOp
+    const critSelectEl = document.getElementById('global-critop');
+    if (critSelectEl) {
+        critSelectEl.addEventListener('change', () => {
+            validateAllScores();
+            updateSetupSummary();
+            saveGameState();
+        });
+    }
+
+    // Listener único de Killzone
+    const kzSelectEl = document.getElementById('killzoneSelect');
+    if (kzSelectEl) {
+        kzSelectEl.addEventListener('change', () => {
+            updateMapOptions(true);
+        });
+    }
+
+    // Listener único de Mapa
     const mapSelectEl = document.getElementById('mapSelect');
     if (mapSelectEl) {
-        mapSelectEl.addEventListener('change', saveGameState);
+        mapSelectEl.addEventListener('change', () => {
+            const btnViewMap = document.getElementById('btnViewMap');
+            if (btnViewMap) btnViewMap.disabled = (mapSelectEl.value === "");
+            updateSetupSummary();
+            saveGameState();
+        });
     }
 
     window.addEventListener('resize', () => {
@@ -2194,18 +1867,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function validarSeleccionFacciom(event, playerPrefix) {
-    const factionSelect = document.getElementById(`${playerPrefix}-faction`);
-
-    // Si el valor está vacío (es decir, sigue en la opción por defecto)
-    if (!factionSelect.value) {
-        event.preventDefault(); // Evita que el <select> se despliegue
-        mostrarNotificacion("Debes elegir una facción para poder seleccionar una TacOp.");
-    }
-}
-
 // --- SISTEMA DE REFERENCIA RÁPIDA DE ARMAS ---
-
 function populateWeaponRules() {
     const container = document.getElementById('weaponRulesBody');
     if (!container) return;
@@ -2257,143 +1919,167 @@ function populateKillzonesDropdown() {
     const select = document.getElementById('killzoneSelect');
     if (!select || !dataMaps) return;
 
-    // Reseteo del DOM previo a la inyección
     select.innerHTML = '<option value="" selected disabled>-- Selecciona Killzone Manualmente --</option>';
 
-    // Lista de exclusión para mapas de 3 o 4 jugadores
-    const excludedKillzones = ['open_asymetrics', 'gallowdark_asymetrics'];
+    // Lista de INCLUSIÓN estricta (Whitelisting)
+    const allowedKillzones = ['open_asymetrics', 'gallowdark_asymetrics'];
 
     for (const [key, killzone] of Object.entries(dataMaps)) {
-        // Validación: Omitir la iteración si la clave está en la lista de exclusión
-        if (excludedKillzones.includes(key)) {
-            continue;
+        if (allowedKillzones.includes(key)) {
+            const option = document.createElement('option');
+            option.value = key;
+            option.textContent = killzone.name;
+            select.appendChild(option);
         }
-
-        const option = document.createElement('option');
-        option.value = key;
-        option.textContent = killzone.name;
-        select.appendChild(option);
     }
 }
 
-// 2. Lógica de Cascada Estricta (Killzone -> Mapas)
-function updateMapOptions() {
-    const killzoneKey = document.getElementById('killzoneSelect').value;
+// 2. Lógica de Cascada Estricta (Killzone -> Mapas y Terrenos)
+function updateMapOptions(shouldResetMap = true) {
+    const killzoneSelect = document.getElementById('killzoneSelect');
+    const killzoneKey = killzoneSelect ? killzoneSelect.value : "";
     const mapSelect = document.getElementById('mapSelect');
     const btnRandomMap = document.getElementById('btnRandomMap');
     const btnViewMap = document.getElementById('btnViewMap');
     const btnViewTerrain = document.getElementById('btnViewTerrain');
 
-    mapSelect.innerHTML = '<option value="" selected disabled>-- Selecciona Mapa Manualmente --</option>';
+    if (!mapSelect) return;
 
-    if (!killzoneKey) {
+    const previousMapValue = mapSelect.value;
+    mapSelect.innerHTML = '<option value="" selected disabled>-- Mapa --</option>';
+
+    if (!killzoneKey || !dataMaps[killzoneKey]) {
         mapSelect.disabled = true;
-        btnRandomMap.disabled = true;
-        btnViewMap.disabled = true;
-        btnViewTerrain.disabled = true;
+        if (btnRandomMap) btnRandomMap.disabled = true;
+        if (btnViewMap) btnViewMap.disabled = true;
+        if (btnViewTerrain) btnViewTerrain.disabled = true;
+        updateSetupSummary();
+        saveGameState();
         return;
     }
 
-    // Activar los botones si hay una Killzone válida
+    // Activar selector y botón de aleatorizar mapa
     mapSelect.disabled = false;
-    btnRandomMap.disabled = false;
-    btnViewMap.disabled = false;
+    if (btnRandomMap) btnRandomMap.disabled = false;
 
     const killzone = dataMaps[killzoneKey];
-    // Activar el botón de terrenos SÓLO si existen datos válidos
-    if (killzone && Array.isArray(killzone.terrain) && killzone.terrain.length > 0) {
-        btnViewTerrain.disabled = false;
-    } else {
-        btnViewTerrain.disabled = true;
+
+    // Activar botón de terrenos SÓLO si terrain tiene piezas físicas
+    if (btnViewTerrain) {
+        if (Array.isArray(killzone.terrain) && killzone.terrain.length > 0) {
+            btnViewTerrain.disabled = false;
+        } else {
+            btnViewTerrain.disabled = true;
+        }
     }
 
-    if (killzone && killzone.maps) {
+    // Poblar las opciones de mapas de esta Killzone
+    if (killzone && Array.isArray(killzone.maps)) {
         killzone.maps.forEach((m, index) => {
             const option = document.createElement('option');
-            option.value = index;
+            option.value = String(index);
             option.textContent = `Mapa ${m.m_id}`;
             mapSelect.appendChild(option);
         });
     }
 
+    // Mantener mapa anterior si no se solicitó reinicio
+    if (!shouldResetMap && previousMapValue !== "") {
+        mapSelect.value = previousMapValue;
+    }
+
+    // El botón de ver mapa solo se activa si hay un mapa seleccionado
+    if (btnViewMap) {
+        btnViewMap.disabled = (mapSelect.value === "");
+    }
+
+    updateSetupSummary();
     saveGameState();
 }
 
 // 3. Motores de Aleatorización
 function randomizeCritOp() {
     const select = document.getElementById('global-critop');
+    if (!select) return;
     const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
     if (options.length > 0) {
         const randomOpt = options[Math.floor(Math.random() * options.length)];
         select.value = randomOpt.value;
-        select.dispatchEvent(new Event('change')); // Disparamos tu validador de puntuaciones
+        // Obliga a ejecutar el listener que valida scores y guarda
+        select.dispatchEvent(new Event('change'));
     }
 }
 
 function randomizeKillzone() {
     const select = document.getElementById('killzoneSelect');
+    if (!select) return;
     const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
     if (options.length > 0) {
         const randomOpt = options[Math.floor(Math.random() * options.length)];
         select.value = randomOpt.value;
-        updateMapOptions(); // Vital: Obligamos a la UI a pintar los mapas de esta Killzone
+        // Obliga a ejecutar updateMapOptions(true)
+        select.dispatchEvent(new Event('change'));
     }
 }
 
 function randomizeMap() {
-    const killzoneKey = document.getElementById('killzoneSelect').value;
+    const killzoneSelect = document.getElementById('killzoneSelect');
+    let killzoneKey = killzoneSelect ? killzoneSelect.value : "";
 
+    // Si no hay Killzone, forzamos su aleatorización primero
     if (!killzoneKey) {
         randomizeKillzone();
+        killzoneKey = killzoneSelect.value;
     }
 
     const select = document.getElementById('mapSelect');
+    if (!select) return;
+
     const options = Array.from(select.options).filter(opt => !opt.disabled && opt.value !== "");
     if (options.length > 0) {
         const randomOpt = options[Math.floor(Math.random() * options.length)];
         select.value = randomOpt.value;
-        select.dispatchEvent(new Event('change')); // NUEVO: Dispara el evento para interceptar el guardado
+        // Obliga a habilitar botones, actualizar resumen y guardar el estado
+        select.dispatchEvent(new Event('change'));
     }
 }
 
+// Aleatorizar Todo en Secuencia con propagación inmediata
 function randomizeAll() {
     randomizeCritOp();
     randomizeKillzone();
     randomizeMap();
 }
 
-// 4. Modal de Visualización de Mapa
+// 4. Modal de Visualización de Plano de Mapa
 function showMapModal() {
-    const killzoneKey = document.getElementById('killzoneSelect').value;
-    const mapIndex = document.getElementById('mapSelect').value;
+    const killzoneSelect = document.getElementById('killzoneSelect');
+    const mapSelect = document.getElementById('mapSelect');
 
-    if (killzoneKey && mapIndex !== "") {
+    const killzoneKey = killzoneSelect ? killzoneSelect.value : "";
+    const mapIndex = mapSelect ? mapSelect.value : "";
+
+    if (killzoneKey && mapIndex !== "" && dataMaps[killzoneKey] && dataMaps[killzoneKey].maps[mapIndex]) {
         const mapData = dataMaps[killzoneKey].maps[mapIndex];
         const killzoneName = dataMaps[killzoneKey].name;
 
-        // Inyectar datos
         document.getElementById('mapModalTitle').innerHTML = `<i class="bi bi-map me-2"></i>Mapa ${mapData.m_id} - ${killzoneName}`;
         document.getElementById('mapModalImg').src = mapData.m_img;
 
-        // Lanzar modal de Bootstrap
         const modal = new bootstrap.Modal(document.getElementById('mapViewModal'));
         modal.show();
     } else {
-        if (typeof mostrarNotificacion === 'function') {
-            mostrarNotificacion("Operación bloqueada: Debes elegir una Killzone y un Mapa para visualizar el plano.");
-        } else {
-            alert("Operación bloqueada: Debes elegir una Killzone y un Mapa para visualizar el plano.");
-        }
+        mostrarNotificacion("Falta selección: Debes elegir una Killzone y un Mapa para visualizar el plano.");
     }
 }
 
 // 5. Modal de Catálogo de Terrenos
 function showTerrainModal() {
-    const killzoneKey = document.getElementById('killzoneSelect').value;
+    const killzoneSelect = document.getElementById('killzoneSelect');
+    const killzoneKey = killzoneSelect ? killzoneSelect.value : "";
 
-    // Validación de seguridad (Programación Defensiva)
     if (!killzoneKey || !dataMaps[killzoneKey]) {
-        if (typeof mostrarNotificacion === 'function') mostrarNotificacion("Falta selección: Debes elegir una Killzone primero.");
+        mostrarNotificacion("Falta selección: Debes elegir una Killzone primero.");
         return;
     }
 
@@ -2401,80 +2087,158 @@ function showTerrainModal() {
     const terrainList = kzData.terrain;
 
     if (!Array.isArray(terrainList) || terrainList.length === 0) {
-        if (typeof mostrarNotificacion === 'function') mostrarNotificacion("Esta zona de aniquilación no cuenta con piezas de terreno específicas registradas.");
+        mostrarNotificacion("Esta zona de aniquilación no cuenta con piezas de terreno específicas registradas.");
         return;
     }
 
-    // Cabecera del Modal
     document.getElementById('terrainModalTitle').innerHTML = `<i class="bi bi-bricks text-secondary me-2"></i>Terrenos: ${kzData.name}`;
 
-    // Construcción de la Grilla de Terrenos
     let html = '<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">';
-
     terrainList.forEach(t => {
-        // Validar y construir los badges de tipo
         let typeBadges = '';
         if (Array.isArray(t.type)) {
-            typeBadges = t.type.map(tipo => `<span class="badge bg-dark m-1 shadow-sm" style="font-size: 0.75rem;">${tipo}</span>`).join('');
+            typeBadges = t.type.map(tipo => `<span class="badge bg-dark m-1 shadow-sm" style="font-size: 0.72rem;">${tipo}</span>`).join('');
         }
 
-        // Construir la tarjeta
         html += `
             <div class="col">
-                <div class="card h-100 shadow-sm border-secondary">    
-                    <div class="equipment-card h-100 shadow-sm border border-secondary rounded overflow-hidden"> 
-                        <div class="p-2 bg-secondary text-white text-center">
-                            <h6 class="mb-0 fw-bold text-uppercase">${t.t_id || 'N/A'}</h6>
+                <div class="card h-100 shadow-sm border border-secondary rounded overflow-hidden"> 
+                    <div class="p-2 bg-secondary text-white text-center">
+                        <h6 class="mb-0 fw-bold text-uppercase">${t.t_id || 'N/A'}</h6>
+                    </div>
+                    <div class="p-3 bg-light text-dark d-flex flex-column justify-content-between h-100">
+                        <div class="d-flex justify-content-center align-items-center mb-2" style="min-height: 100px;">
+                            ${t.t_img ? `<img src="${t.t_img}" alt="Pieza ${t.t_id}" class="img-fluid rounded" style="max-height: 100px; object-fit: contain;">` : '<span class="text-muted small fst-italic">Sin imagen</span>'}
                         </div>
-                        <div class="p-3 bg-light text-dark">
-                            <div class="card-body p-2 d-flex justify-content-center align-items-center bg-light">
-                                ${t.t_img ? `<img src="${t.t_img}" alt="Pieza ${t.t_id}" class="img-fluid rounded mb-2" style="max-height: 100px; object-fit: contain; margin: 0 auto;">` : ''}
-                            </div>
-                            <div>
-                                ${t.type.map(t => `<span class="badge bg-dark me-1 mb-1">${t}</span>`).join('')}
-                            </div>
+                        <div class="text-center border-top pt-2">
+                            ${typeBadges}
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         `;
     });
-
     html += '</div>';
 
-    // Inyección y llamado al Modal
     document.getElementById('terrainModalBody').innerHTML = html;
     const modal = new bootstrap.Modal(document.getElementById('terrainViewModal'));
     modal.show();
 }
 
-// --- SISTEMA DE VISUALIZACIÓN MÓVIL OPCIONAL ---
+function getActivePlayers() {
+    return gameState.playerCount === 3 ? ['p1', 'p2', 'p3'] : ['p1', 'p2', 'p3', 'p4'];
+}
+
+function togglePlayerMode(count, shouldSave = true) {
+    gameState.playerCount = count;
+    const p4Container = document.getElementById('p4-container');
+    const labelP4 = document.getElementById('labelViewModeP4');
+    const radioP4 = document.getElementById('viewModeP4');
+
+    if (p4Container) {
+        if (count === 3) {
+            p4Container.classList.remove('d-md-block');
+            p4Container.classList.add('d-none');
+            // 🚀 SOLUCIÓN DEFINITIVA: Forzar ocultación en línea para derrotar a style.css en PC
+            p4Container.style.setProperty('display', 'none', 'important');
+
+            if (labelP4) labelP4.classList.add('d-none'); // Ocultar botón J4 móvil
+
+            // Si estaba en la vista móvil de J4, regresarlo a "Todos"
+            if (radioP4 && radioP4.checked) {
+                document.getElementById('viewModeAll').checked = true;
+                setMobilePlayerView('all');
+            }
+
+            // Purgar los puntos del Jugador 4 para que no afecten los totales
+            if (gameState.p4) gameState.p4.killOpVP = 0;
+            const critVpEl = document.getElementById('p4-crit-vp');
+            const killsTpEl = document.getElementById('p4-kills-current-tp');
+            if (critVpEl) critVpEl.innerText = "0";
+            if (killsTpEl) killsTpEl.innerText = "0";
+        } else {
+            p4Container.classList.remove('d-none');
+            p4Container.classList.add('d-md-block');
+            // 🚀 Liberar el bloqueo en línea para que se muestre en PC
+            p4Container.style.removeProperty('display');
+
+            if (labelP4) labelP4.classList.remove('d-none'); // Mostrar botón J4 móvil
+        }
+    }
+
+    if (shouldSave) saveGameState();
+}
+
+// --- SISTEMA DE VISUALIZACIÓN MÓVIL OPCIONAL ASIMÉTRICO ---
 function setMobilePlayerView(mode) {
-    const colP1 = document.getElementById('p1-column-wrapper');
-    const colP2 = document.getElementById('p2-column-wrapper');
+    const colP1 = document.getElementById('card-p1');
+    const colP2 = document.getElementById('card-p2');
+    const colP3 = document.getElementById('card-p3');
+    const colP4 = document.getElementById('p4-container');
 
-    if (!colP1 || !colP2) return;
+    if (!colP1 || !colP2 || !colP3 || !colP4) return;
 
-    // Solo opera si el ancho de pantalla es inferior a 768px
+    // Limpiar cualquier bloqueo en línea previo para evitar bugs al rotar la pantalla
+    colP1.style.removeProperty('display');
+    colP2.style.removeProperty('display');
+    colP3.style.removeProperty('display');
+    colP4.style.removeProperty('display');
+
+    // Si es PC/Tablet (>= 768px)
     if (window.innerWidth >= 768) {
         colP1.classList.remove('d-none');
         colP2.classList.remove('d-none');
+        colP3.classList.remove('d-none');
+
+        if (gameState.playerCount === 4) {
+            colP4.classList.remove('d-none');
+            colP4.classList.add('d-md-block');
+        } else {
+            colP4.classList.remove('d-md-block');
+            colP4.classList.add('d-none');
+            // 🚀 Forzar ocultación
+            colP4.style.setProperty('display', 'none', 'important');
+        }
         return;
     }
 
-    if (mode === 'p1') {
+    // Modo Móvil (< 768px)
+    if (mode === 'all') {
         colP1.classList.remove('d-none');
-        colP2.classList.add('d-none');
-    } else if (mode === 'p2') {
-        colP1.classList.add('d-none');
         colP2.classList.remove('d-none');
+        colP3.classList.remove('d-none');
+
+        if (gameState.playerCount === 4) {
+            colP4.classList.remove('d-none');
+        } else {
+            colP4.classList.remove('d-md-block');
+            colP4.classList.add('d-none');
+            // 🚀 Forzar ocultación
+            colP4.style.setProperty('display', 'none', 'important');
+        }
     } else {
-        // Modo 'all': despliega ambas tarjetas apiladas para scroll vertical normal
-        colP1.classList.remove('d-none');
-        colP2.classList.remove('d-none');
+        // Ocultar todas primero
+        colP1.classList.add('d-none');
+        colP2.classList.add('d-none');
+        colP3.classList.add('d-none');
+        colP4.classList.remove('d-md-block');
+        colP4.classList.add('d-none');
+
+        // Mostrar solo la seleccionada
+        if (mode === 'p1') colP1.classList.remove('d-none');
+        if (mode === 'p2') colP2.classList.remove('d-none');
+        if (mode === 'p3') colP3.classList.remove('d-none');
+        if (mode === 'p4' && gameState.playerCount === 4) colP4.classList.remove('d-none');
     }
 
-    // Recalcular alturas si el usuario regresa a la vista completa
+    // Recalcular alturas visuales
     if (typeof syncStratSectionsHeight === 'function') syncStratSectionsHeight();
     if (typeof syncEquipSectionsHeight === 'function') syncEquipSectionsHeight();
 }
+
+// Listener para ajustar automáticamente si se rota la pantalla o redimensiona
+window.addEventListener('resize', () => {
+    const checkedRadio = document.querySelector('input[name="mobileViewRadio"]:checked');
+    const mode = checkedRadio ? checkedRadio.id.replace('viewMode', '').toLowerCase() : 'all';
+    setMobilePlayerView(mode);
+});

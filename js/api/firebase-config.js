@@ -1,0 +1,1 @@
+// Este archivo debe contener las credenciales de Firebase para exportar la conexión (db, auth)

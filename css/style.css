@@ -1255,23 +1255,39 @@ body.dark-mode .tacop.card {
 /* =================================================================== */
 
 :root {
-    --player1-color: #0b6be1; /* Azul Bootstrap */
-    --player2-color: #dc3545; /* Rojo Bootstrap */
-    --player3-color: #198754; /* Verde Bootstrap */
-    --player4-color: #ffc107; /* Amarillo Bootstrap */
+    --player1-color: #0b6be1;
+    /* Azul Bootstrap */
+    --player2-color: #dc3545;
+    /* Rojo Bootstrap */
+    --player3-color: #198754;
+    /* Verde Bootstrap */
+    --player4-color: #ffc107;
+    /* Amarillo Bootstrap */
 }
 
 /* Estilos de las Tarjetas de Jugador */
 .player-card {
     border: 2px solid transparent;
     transition: all 0.3s ease;
-    padding: 1.25rem !important; /* Margen unificado para PC */
+    padding: 1.25rem !important;
+    /* Margen unificado para PC */
 }
 
-.player-1 { border-color: var(--player1-color); }
-.player-2 { border-color: var(--player2-color); }
-.player-3 { border-color: var(--player3-color); }
-.player-4 { border-color: var(--player4-color); }
+.player-1 {
+    border-color: var(--player1-color);
+}
+
+.player-2 {
+    border-color: var(--player2-color);
+}
+
+.player-3 {
+    border-color: var(--player3-color);
+}
+
+.player-4 {
+    border-color: var(--player4-color);
+}
 
 .name-input {
     font-size: 1.25rem;
@@ -1337,19 +1353,23 @@ body.dark-mode .tacop.card {
     .player-card {
         padding: 0.75rem !important;
     }
+
     .op-section {
         padding: 0.45rem 0.6rem !important;
         margin-bottom: 0.5rem !important;
     }
+
     .counter-btn {
         width: 28px;
         height: 28px;
         font-size: 1rem;
     }
+
     .score-display {
         font-size: 1.3rem;
         min-width: 30px;
     }
+
     .name-input {
         font-size: 1.2rem;
     }
@@ -1379,9 +1399,17 @@ body.dark-mode .tacop.card {
 }
 
 /* Scrollbars personalizados por jugador para equipos */
-.player-2 .equip-list-container { scrollbar-color: #dc3545 #f8f9fa; }
-.player-3 .equip-list-container { scrollbar-color: #198754 #f8f9fa; }
-.player-4 .equip-list-container { scrollbar-color: #ffc107 #f8f9fa; }
+.player-2 .equip-list-container {
+    scrollbar-color: #dc3545 #f8f9fa;
+}
+
+.player-3 .equip-list-container {
+    scrollbar-color: #198754 #f8f9fa;
+}
+
+.player-4 .equip-list-container {
+    scrollbar-color: #ffc107 #f8f9fa;
+}
 
 .strat-ploys-container::-webkit-scrollbar,
 .equip-list-container::-webkit-scrollbar {
@@ -1394,11 +1422,27 @@ body.dark-mode .tacop.card {
     border-radius: 4px;
 }
 
-.strat-ploys-container::-webkit-scrollbar-thumb { background-color: #ffc107; border-radius: 4px; }
-.equip-list-container::-webkit-scrollbar-thumb { background-color: #0b6be1; border-radius: 4px; }
-.player-2 .equip-list-container::-webkit-scrollbar-thumb { background-color: #dc3545; }
-.player-3 .equip-list-container::-webkit-scrollbar-thumb { background-color: #198754; }
-.player-4 .equip-list-container::-webkit-scrollbar-thumb { background-color: #ffc107; }
+.strat-ploys-container::-webkit-scrollbar-thumb {
+    background-color: #ffc107;
+    border-radius: 4px;
+}
+
+.equip-list-container::-webkit-scrollbar-thumb {
+    background-color: #0b6be1;
+    border-radius: 4px;
+}
+
+.player-2 .equip-list-container::-webkit-scrollbar-thumb {
+    background-color: #dc3545;
+}
+
+.player-3 .equip-list-container::-webkit-scrollbar-thumb {
+    background-color: #198754;
+}
+
+.player-4 .equip-list-container::-webkit-scrollbar-thumb {
+    background-color: #ffc107;
+}
 
 /* Tarjetas Dinámicas Interactuables */
 .active-ploy-card,
@@ -1407,12 +1451,23 @@ body.dark-mode .tacop.card {
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.active-ploy-card { border-left: 4px solid #ffc107 !important; }
-.active-ploy-card:hover,
-.active-equip-card:hover { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12); }
+.active-ploy-card {
+    border-left: 4px solid #ffc107 !important;
+}
 
-.ploy-modal-card { transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.ploy-modal-card.is-active { border-color: #198754 !important; background-color: #f8fff9; }
+.active-ploy-card:hover,
+.active-equip-card:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.ploy-modal-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ploy-modal-card.is-active {
+    border-color: #198754 !important;
+    background-color: #f8fff9;
+}
 
 .equip-select-card.is-selected {
     border-color: #198754 !important;
@@ -1429,16 +1484,24 @@ body.dark-mode .tacop.card {
     transition: all 0.2s ease;
 }
 
-#factionModalTabs .nav-link:hover { background-color: #f1f3f5; }
+#factionModalTabs .nav-link:hover {
+    background-color: #f1f3f5;
+}
+
 #factionModalTabs .nav-link.active {
     background-color: #198754 !important;
     color: #ffffff !important;
 }
-#factionModalTabs .nav-link.active i { color: #ffffff !important; }
+
+#factionModalTabs .nav-link.active i {
+    color: #ffffff !important;
+}
 
 /* Visibilidad Obligatoria en PC (Controlador de Vista Móvil) */
 @media (min-width: 768px) {
-    .mobile-card-col { display: block !important; }
+    .mobile-card-col {
+        display: block !important;
+    }
 }
 
 /* =================================================================== */
@@ -1453,7 +1516,8 @@ body.dark-mode .tacop.card {
 }
 
 .equip-weapon-table th {
-    background-color: #212529; /* Negro/Gris oscuro */
+    background-color: #212529;
+    /* Negro/Gris oscuro */
     color: white;
     padding: 5px;
     text-transform: uppercase;
@@ -1471,12 +1535,14 @@ body.dark-mode .tacop.card {
 
 /* Caja de Acciones Únicas */
 .equip-action-box {
-    border: 2px solid #d35400; /* Borde naranja oscuro */
+    border: 2px solid #d35400;
+    /* Borde naranja oscuro */
     margin-top: 15px;
 }
 
 .equip-action-header {
-    background-color: #e67e22; /* Naranja Kill Team */
+    background-color: #e67e22;
+    /* Naranja Kill Team */
     color: white;
     padding: 5px 10px;
 }
@@ -1506,11 +1572,321 @@ body.dark-mode .tacop.card {
 /*  LÍNEA DE TIEMPO (SECUENCIA DE JUEGO)                               */
 /* =================================================================== */
 
-.timeline { list-style-type: none; position: relative; padding-left: 0; }
-.timeline-item { margin-bottom: 2rem; position: relative; }
-.timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 20px; width: 4px; background: #e9ecef; }
-body.dark-mode .timeline::before { background: #495057; }
-.timeline-icon { position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: #0d6efd; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; z-index: 1; }
-.timeline-content { margin-left: 60px; background: #a2a3a3; padding: 1.5rem; border-radius: 0.25rem; }
-body.dark-mode .timeline-content { background: #343a40; }
-.timeline-content h5 { margin-top: 0; }
+.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 0;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 4px;
+    background: #e9ecef;
+}
+
+body.dark-mode .timeline::before {
+    background: #495057;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+.timeline-content {
+    margin-left: 60px;
+    background: #a2a3a3;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+}
+
+body.dark-mode .timeline-content {
+    background: #343a40;
+}
+
+.timeline-content h5 {
+    margin-top: 0;
+}
+
+/* =================================================================== */
+/* ESPACIADOS BASE PARA PANTALLA (Reemplazo de utilidades Bootstrap)   */
+/* =================================================================== */
+.unique-actions-section {
+    margin-bottom: 0.5rem;
+    /* Reemplaza mb-2 */
+}
+
+.unique-actions-section .header {
+    padding: 0.25rem 0.5rem;
+    /* Reemplaza py-1 px-2 */
+}
+
+.unique-actions-section .content {
+    padding: 0.5rem;
+    /* Reemplaza p-2 */
+}
+
+.unique-actions-section .action-desc {
+    margin-bottom: 0.25rem;
+    /* Reemplaza mb-1 */
+}
+
+.unique-actions-section .icon {
+    margin-top: 0.25rem;
+    /* Reemplaza mt-1 para alinear con el texto */
+}
+
+/* Espaciados para los Sub-Headers en pantalla (Reemplazo de mt-3, mb-2, pb-1) */
+.sub-header {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+}
+
+.mt-display-only {
+    margin-top: 1rem;
+}
+
+.victory-points-container {
+    margin-bottom: 1rem;
+}
+
+/* =================================================================== */
+/*  IMPRESIONES                                                        */
+/* =================================================================== */
+@media print {
+
+    /* 1. Ocultar interfaz inútil para papel */
+    header,
+    .offcanvas,
+    #printModal,
+    button[data-bs-toggle="modal"],
+    #page-header-print {
+        display: none !important;
+    }
+
+    /* 2. Forzar A4 Vertical y MÁRGENES CERO */
+    @page {
+        size: A4 portrait;
+        margin: 0 !important;
+    }
+
+    body,
+    main,
+    .container-fluid,
+    .bg-light,
+    .bg-secondary-soft,
+    .bg-white {
+        background: white !important;
+        background-color: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    main.bg-dark {
+        background-color: white !important;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* 3. Grilla estricta de 3x2 */
+    #critops-cards-container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important; /* Centrado horizontal automático */
+        align-content: flex-start !important;
+        gap: 0 !important;
+        --bs-gutter-x: 0 !important;
+        --bs-gutter-y: 0 !important;
+        margin: 0 !important;
+        /* Empujamos 38.5mm hacia abajo para centrar verticalmente las 2 filas (297 - 220 = 77 / 2 = 38.5) */
+        padding-top: 38.5mm !important;
+    }
+
+    .fade-in {
+        width: 60mm !important;
+        flex: 0 0 60mm !important;
+        max-width: 60mm !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        page-break-inside: avoid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* 4. Dimensiones físicas 60x110 mm solicitadas */
+    .card {
+        width: 60mm !important;
+        height: 120mm !important;
+        border: 1px dashed #999 !important; /* Guía de corte */
+        border-radius: 0 !important;
+        overflow: hidden !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+    }
+
+    /* 5. Conservación de recuadros negros */
+    .card .ap-box.bg-dark {
+        background-color: #212529 !important;
+        color: #ffffff !important;
+    }
+
+    /* 6. Márgenes perimetrales ultra reducidos para 60x110 */
+    .card > .p-3 {
+        padding: 2mm !important;
+    }
+
+    .card > .position-relative {
+        padding: 1.5mm !important;
+    }
+
+    .card .mb-4 {
+        margin-bottom: 1.5mm !important;
+    }
+
+    /* 7. Tipografía ajustada a la proporción angosta de 60mm */
+    .mission-container,
+    .mission-container * {
+        font-size: 7pt !important;
+        line-height: 1.1 !important;
+    }
+
+    .card .name {
+        font-size: 10pt !important;
+        margin-bottom: 1.5mm !important;
+        text-align: center;
+    }
+
+    .card .sub-header {
+        font-size: 7.5pt !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 1mm !important;
+        margin-top: 1.5mm !important;
+    }
+
+    /* 8. Estructuras internas de listas y acciones */
+    .card ul,
+    .card ol {
+        padding-left: 3.5mm !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .card li {
+        margin-bottom: 0.5mm !important;
+    }
+
+    .unique-actions-section {
+        margin-bottom: 0mm !important;
+        border-width: 1px !important;
+    }
+
+    .unique-actions-section .header {
+        padding: 0.25mm 0 !important;
+    }
+
+    .unique-actions-section .header div {
+        font-size: 7pt !important;
+    }
+
+    .unique-actions-section .content {
+        padding: 0.25mm 0 !important;
+    }
+
+    .content p {
+        margin-bottom: 0 !important;
+        margin-top: 0.25mm !important;
+    }
+
+    .icon {
+        width: 2mm !important;
+        height: 2mm !important;
+        margin-right: 0.5mm !important;
+    }
+
+    .card .icon.mt-1 {
+        margin-top: 0.3mm !important;
+    }
+
+    .icon-yes,
+    .icon-no {
+        background-size: contain !important;
+        background-position: center top !important;
+    }
+
+    .victory-points {
+        margin-top: auto !important;
+    }
+}
+
+/* =================================================================== */
+/* CONTRAPORTADAS (Impresión)                                          */
+/* =================================================================== */
+.back-cover-card {
+    background-color: #212529 !important; /* Gris dark de Bootstrap */
+}
+
+.stripe-top, .stripe-bottom {
+    background-color: #ff5418 !important;
+    height: 18mm !important; /* Altura proporcional para los 120mm totales */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14pt !important;
+    letter-spacing: 2px;
+}
+
+/* Inversión de la franja inferior */
+.stripe-bottom {
+    transform: rotate(180deg);
+}
+
+.back-watermark {
+    width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* =================================================================== */
+/* MARCA DE AGUA PARA TARJETAS                                         */
+/* =================================================================== */
+.watermark-container {
+    position: relative;
+    z-index: 1; /* Crea un contexto de apilamiento base */
+}
+
+.watermark-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado matemático perfecto */
+    width: 80%; /* Ocupará el 80% del ancho de la tarjeta */
+    max-height: 80%;
+    object-fit: contain;
+    opacity: 0.08; /* Transparencia severa obligatoria al ser negro puro (8%) */
+    z-index: -1; /* La oculta detrás de las letras pero sobre el fondo blanco */
+    pointer-events: none; /* Evita que el ratón "enganche" la imagen por error */
+}

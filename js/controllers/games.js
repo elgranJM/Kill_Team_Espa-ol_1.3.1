@@ -1142,40 +1142,24 @@ function buildEquipmentCardInnerHtml(item) {
     if (item.action && item.action.length > 0) {
         actionHtml = item.action.map(a => {
             const descYes = Array.isArray(a.action_yes)
-                ? a.action_yes.map(line => `
-                            <div class="equip-action-yes p-2 mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1 me-2"></span>
-                                <div>${line}</div>
-                            </div>`).join('')
-                : (a.action_yes ? `
-                            <div class="equip-action-yes p-2 mb-2 d-flex align-items-start">
-                                <span class="icon icon-yes flex-shrink-0 mt-1 me-2"></span>
-                                <div>${a.action_yes}</div>
-                            </div>` : '');
+                ? a.action_yes.map(line => `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${line}</span></p>`).join('')
+                : (a.action_yes ? `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.action_yes}</span></p>` : '');
 
             const descNo = Array.isArray(a.action_no)
-                ? a.action_no.map(line => `
-                            <div class="equip-action-no p-2 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1 me-2"></span>
-                                <div>${line}</div>
-                            </div>`).join('')
-                : (a.action_no ? `
-                            <div class="equip-action-no p-2 d-flex align-items-start">
-                                <span class="icon icon-no flex-shrink-0 mt-1 me-2"></span>
-                                <div>${a.action_no}</div>
-                            </div>` : '');
+                ? a.action_no.map(line => `<p class="action-desc d-flex align-items-start mb-0"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${line}</span></p>`).join('')
+                : (a.action_no ? `<p class="action-desc d-flex align-items-start mb-0"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${a.action_no}</span></p>` : '');
 
             return `
-                    <div class="equip-action-box shadow-sm mb-2">
-                        <div class="equip-action-header d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-uppercase">${a.action_name}</span>
-                            <span class="badge bg-dark">${a.action_cost}</span>
-                        </div>
-                        <div class="content bg-white p-2">
-                            ${descYes}
-                            ${descNo}
-                        </div>
-                    </div>`;
+                <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${a.action_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.action_cost}</div>
+                    </div>
+                    <div class="content small text-start p-2">
+                        ${descYes}
+                        ${descNo}
+                    </div>
+                </div>`;
         }).join('');
     }
 
@@ -1567,14 +1551,14 @@ function showCritOpDetails() {
         const accionesMapeadas = op.action_mission.map(am => {
             if (!am.action_mission_name) return '';
             return `
-                <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
                     <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
                         <div class="fw-bold">${am.action_mission_name}</div>
                         <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${am.action_mission_cost}</div>
                     </div>
-                    <div class="content p-2 small text-start">
-                        ${am.action_mission_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${am.action_mission_yes}</span></p>` : ''}
-                        ${am.action_mission_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${am.action_mission_no}</span></p>` : ''}
+                    <div class="content small text-start p-2">
+                        ${am.action_mission_yes ? `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${am.action_mission_yes}</span></p>` : ''}
+                        ${am.action_mission_no ? `<p class="action-desc d-flex align-items-start mb-0"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${am.action_mission_no}</span></p>` : ''}
                     </div>
                 </div>
             `;
@@ -1814,25 +1798,25 @@ function showFactionRules(playerPrefix) {
                     item.action.map(a => {
                         const descYes = Array.isArray(a.action_yes)
                             ? a.action_yes.map(line => `
-                                    <p class="mb-1 d-flex align-items-start">
+                                    <p class="action-desc d-flex align-items-start mb-1">
                                         <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
                                         <span>${line}</span>
                                     </p>`).join('')
-                            : `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.action_yes}</span></p>`;
+                            : `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.action_yes}</span></p>`;
 
                         const descNo = a.action_no ? `
-                                <p class="mb-0 d-flex align-items-start">
+                                <p class="action-desc d-flex align-items-start mb-0">
                                     <span class="icon icon-no flex-shrink-0 mt-1"></span> 
                                     <span>${a.action_no}</span>
                                 </p>` : '';
 
                         return `
-                            <div class="crit-op mt-3" data-type="action">
-                                <div class="header">
-                                    <div>${a.action_name}</div>
-                                    <div class="ap-box">${a.action_cost}</div>
+                            <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mt-2 mb-2">
+                                <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                                    <div class="fw-bold">${a.action_name}</div>
+                                    <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.action_cost}</div>
                                 </div>
-                                <div class="content bg-white">
+                                <div class="content small text-start p-2">
                                     ${descYes}
                                     ${descNo}
                                 </div>
@@ -1933,14 +1917,14 @@ function showTacOpDetails(playerPrefix) {
     if (op.action_mission_name) {
         actionHtml = `
             <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2 text-start">Acción de Misión</div>
-            <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+            <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
                 <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
                     <div class="fw-bold">${op.action_mission_name}</div>
                     <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${op.action_mission_cost}</div>
                 </div>
-                <div class="content p-2 small text-start">
-                    ${op.action_mission_yes ? `<p class="mb-1 d-flex align-items-start"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${op.action_mission_yes}</span></p>` : ''}
-                    ${op.action_mission_no ? `<p class="mb-0 d-flex align-items-start"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${op.action_mission_no}</span></p>` : ''}
+                <div class="content small text-start p-2">
+                    ${op.action_mission_yes ? `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${op.action_mission_yes}</span></p>` : ''}
+                    ${op.action_mission_no ? `<p class="action-desc d-flex align-items-start mb-0"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${op.action_mission_no}</span></p>` : ''}
                 </div>
             </div>
         `;

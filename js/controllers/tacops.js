@@ -69,14 +69,14 @@
                 if (op.action_mission_name) {
                     actionHtml = `
                         <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2">Acción de Misión</div>
-                        <div class="unique-actions-section border border-dark rounded mb-2 overflow-hidden">
+                        <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
                             <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
                                 <div class="fw-bold">${op.action_mission_name}</div>
                                 <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${op.action_mission_cost}</div>
                             </div>
-                            <div class="content p-2 small text-start">
-                                ${op.action_mission_yes ? `<p class="mb-1"><span class="icon icon-yes"></span> <span>${op.action_mission_yes}</span></p>` : ''}
-                                ${op.action_mission_no ? `<p class="mb-0"><span class="icon icon-no"></span> <span>${op.action_mission_no}</span></p>` : ''}
+                            <div class="content small text-start p-2">
+                                ${op.action_mission_yes ? `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${op.action_mission_yes}</span></p>` : ''}
+                                ${op.action_mission_no ? `<p class="action-desc d-flex align-items-start mb-0"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${op.action_mission_no}</span></p>` : ''}
                             </div>
                         </div>
                     `;

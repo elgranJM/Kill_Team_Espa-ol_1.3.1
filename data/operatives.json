@@ -1221,7 +1221,7 @@
             "abilities": [
                 {
                     "name": "Protocolos de encubrimiento",
-                    "description": "Este agente puede contraatacar independientemente de su orden, pero si tiene una orden de Ocultarse, durante ese contraataque solo podrá realizar acciones de <b>Recoger marcador</b>, <b>Colocar marcador</b> o de misión."
+                    "description": "Este agente puede reaccionar independientemente de su orden, pero si tiene una orden de Ocultarse, durante esa reacción solo podrá realizar acciones de <b>Recoger marcador</b>, <b>Colocar marcador</b> o de misión."
                 }
             ],
             "uniqueActions": [],
@@ -2137,7 +2137,7 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente quede usado, debes activar a continuación otro agente <b>COMBATIENTE</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+                    "description": "Cuando este agente quede agotado, debes activar a continuación otro agente <b>COMBATIENTE</b> <span class=\"faction\">FILOSIERPE</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
                 }
             ],
             "uniqueActions": [],
@@ -5065,7 +5065,7 @@
             "abilities": [
                 {
                     "name": "Astartes",
-                    "description": "Durante la activación de este agente, puede realizar o bien dos acciones de <b>Disparar</b> o bien dos acciones de <b>Combatir</b>. Si han sido dos acciones de <b>Disparar</b>, debe elegirse al menos para una de ellas una escopeta Astartes, una pistola bólter o un bólter. Este agente puede contraatacar sea cual sea su orden."
+                    "description": "Durante la activación de este agente, puede realizar o bien dos acciones de <b>Disparar</b> o bien dos acciones de <b>Combatir</b>. Si han sido dos acciones de <b>Disparar</b>, debe elegirse al menos para una de ellas una escopeta Astartes, una pistola bólter o un bólter. Este agente puede reaccionar sea cual sea su orden."
                 },
                 {
                     "name": "Guía y experiencia",
@@ -5150,7 +5150,7 @@
             "abilities": [
                 {
                     "name": "Bípode de armas pesadas",
-                    "description": "Siempre que este agente dispare con un arma de su tarjeta de datos, si no ha movido durante la activación, o si es un contraataque, esa arma tiene la regla de arma Incesante; si el arma ya la tiene (p. ej., por el ardid de estrategia Emboscada), pasa a tener la regla de arma Implacable. Ten en cuenta que este agente no tiene prohibido moverse tras disparar."
+                    "description": "Siempre que este agente dispare con un arma de su tarjeta de datos, si no ha movido durante la activación, o si es una reacción, esa arma tiene la regla de arma Incesante; si el arma ya la tiene (p. ej., por el ardid de estrategia Emboscada), pasa a tener la regla de arma Implacable. Ten en cuenta que este agente no tiene prohibido moverse tras disparar."
                 }
             ],
             "uniqueActions": [],
@@ -8473,7 +8473,7 @@
       "abilities": [
         {
           "name": "Activación en grupo",
-          "description": "Cuando este agente quede usado, debes activar a continuación otro agente <b>SHAS'LA</b> <span class=\"faction\">RASTREADOR</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+          "description": "Cuando este agente quede agotado, debes activar a continuación otro agente <b>SHAS'LA</b> <span class=\"faction\">RASTREADOR</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
         },
         {
           "name": "Valor en primera línea",
@@ -11933,7 +11933,7 @@
                 },
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente haya sido usado, a continuación debes activar a un agente INTERROGADOR <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo apostado (si puedes) antes de que tu oponente active. Lo mismo ocurre en orden inverso (INTERROGADOR seguido por BIBLIOCRÁNEO). Cuando ese otro agente sea usado, tu oponente activa de manera normal."
+                    "description": "Cuando este agente haya quedado agotado, a continuación debes activar a un agente INTERROGADOR <span class=\"faction\">OPERATIVO INQUISITORIAL</span> amigo apostado (si puedes) antes de que tu oponente active. Lo mismo ocurre en orden inverso (INTERROGADOR seguido por BIBLIOCRÁNEO). Cuando ese otro agente quede agotado, tu oponente activa de manera normal."
                 }
             ],
             "uniqueActions": [],
@@ -12916,7 +12916,7 @@
             "abilities": [
                 {
                     "name": "Activación de grupo",
-                    "description": "Siempre que este agente quede usado, a continuación debes activar otro agente <b>INFANTE</b> <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo apostado (si puedes) antes de que tu oponente se active. Una vez que ese otro oponente quede usado, tu oponente se activa de manera normal (en otras palabras, no puedes activar a más de dos agentes seguidos mediante esta regla). Ignora esta regla cuando estés usando la regla de facción Penetrar y limpiar."
+                    "description": "Siempre que este agente quede agotado, a continuación debes activar otro agente <b>INFANTE</b> <span class=\"faction\">ABORDADOR DE LA ARMADA IMPERIAL</span> amigo apostado (si puedes) antes de que tu oponente se active. Una vez que ese otro oponente quede agotado, tu oponente se activa de manera normal (en otras palabras, no puedes activar a más de dos agentes seguidos mediante esta regla). Ignora esta regla cuando estés usando la regla de facción Penetrar y limpiar."
                 }
             ],
             "uniqueActions": [],
@@ -14413,7 +14413,7 @@
                     "name": "ASTILLA TEMPORAL",
                     "cost": "1 PA",
                     "description": [
-                        "<b>APOYO</b>. Elige un agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo distinto usado a 5\" o menos de este agente y visible para él. Retíralo de la zona de aniquilación y despliégalo de nuevo a 5\" o menos en horizontal de este agente y visible para él, en una ubicación en la que pueda ser colocado. Ten en cuenta que el equipo universal Aparato de comunicaciones solo afecta a la primera distancia de esta regla."
+                        "<b>APOYO</b>. Elige un agente <span class=\"faction\">CÍRCULO DE HIEROTECNÓLOGOS</span> amigo distinto agotado a 5\" o menos de este agente y visible para él. Retíralo de la zona de aniquilación y despliégalo de nuevo a 5\" o menos en horizontal de este agente y visible para él, en una ubicación en la que pueda ser colocado. Ten en cuenta que el equipo universal Aparato de comunicaciones solo afecta a la primera distancia de esta regla."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, durante el primer punto de inflexión, o si un agente amigo ya ha realizado esta acción durante este punto de inflexión."
                 },
@@ -14802,7 +14802,7 @@
                     "name": "REANIMAR",
                     "cost": "1/2 PA",
                     "description": [
-                        "Elige uno de tus marcadores de Reanimación a 6\" o menos de este agente y visible para él. Tira 1D6: con 3+, un agente amigo es REANIMADO; si has gastado 1 PA adicional, un agente amigo es REANIMADO automáticamente (no hace falta que tires). Un agente REANIMADO debido a esta acción única es desplegado usado si ya fue usado durante este punto de inflexión."
+                        "Elige uno de tus marcadores de Reanimación a 6\" o menos de este agente y visible para él. Tira 1D6: con 3+, un agente amigo es REANIMADO; si has gastado 1 PA adicional, un agente amigo es REANIMADO automáticamente (no hace falta que tires). Un agente REANIMADO debido a esta acción única es desplegado agotado si ya quedó agotado durante este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -15021,7 +15021,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Bípode",
-                    "description": "Cuando este agente dispara con esta arma, si no se ha movido durante la activación o si es un contraataque, esta arma tiene la regla de arma Incesante. Ten en cuenta que este agente no tiene prohibido moverse tras disparar."
+                    "description": "Cuando este agente dispara con esta arma, si no se ha movido durante la activación o si es una reacción, esta arma tiene la regla de arma Incesante. Ten en cuenta que este agente no tiene prohibido moverse tras disparar."
                 }
             ],
             "uniqueActions": [],
@@ -15186,7 +15186,7 @@
                 },
                 {
                     "name": "Rastreador",
-                    "description": "Cuando este agente dispare o combata contra un agente usado a 6\" o menos de él, las armas de este agente tienen la regla de arma Castigadora."
+                    "description": "Cuando este agente dispare o combata contra un agente agotado a 6\" o menos de él, las armas de este agente tienen la regla de arma Castigadora."
                 }
             ],
             "uniqueActions": [],
@@ -15733,7 +15733,7 @@
                     "name": "INTERFERIR SISTEMAS",
                     "cost": "1 PA",
                     "description": [
-                        "Elige un agente enemigo que sea un blanco válido para este agente y que no tenga una de tus fichas de Interferir sistemas; dicho agente enemigo gana una. Hasta el final de la batalla, mientras un agente enemigo tenga una de tus fichas de Interferir sistemas, no podrá activarse hasta que cada agente enemigo sin una de estas fichas haya quedado usado. Cuando un agente enemigo que tenga una de tus fichas de Interferir sistemas sea activado, retírale esa ficha."
+                        "Elige un agente enemigo que sea un blanco válido para este agente y que no tenga una de tus fichas de Interferir sistemas; dicho agente enemigo gana una. Hasta el final de la batalla, mientras un agente enemigo tenga una de tus fichas de Interferir sistemas, no podrá activarse hasta que cada agente enemigo sin una de estas fichas haya quedado agotado. Cuando un agente enemigo que tenga una de tus fichas de Interferir sistemas sea activado, retírale esa ficha."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo."
                 }
@@ -16703,7 +16703,7 @@
       "abilities": [
         {
           "name": "Incitar a la caza",
-          "description": "<p>Cuando este agente incapacite a un agente enemigo desde más de 2\" de distancia, antes de que ese agente enemigo sea retirado de la zona de aniquilación, puedes incrementar el <b>DEPÓSITO SANGRIENTO</b> de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo a 8\" o menos de ese agente enemigo.</p><p>Cuando este agente inflija daño a un agente enemigo con cualquiera de los perfiles de sus pistolas automáticas dobles pero no lo incapacite, ese agente enemigo gana una de tus fichas de Ampollas (si no tiene ya una). Durante la activación o contraataque de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, antes o después de que realice una acción, si se encuentra a 8\" o menos de un agente enemigo que tenga una de tus fichas de Ampollas puedes retirar esa ficha e incrementar el <b>DEPÓSITO SANGRIENTO</b> de ese agente amigo.</p>"
+          "description": "<p>Cuando este agente incapacite a un agente enemigo desde más de 2\" de distancia, antes de que ese agente enemigo sea retirado de la zona de aniquilación, puedes incrementar el <b>DEPÓSITO SANGRIENTO</b> de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo a 8\" o menos de ese agente enemigo.</p><p>Cuando este agente inflija daño a un agente enemigo con cualquiera de los perfiles de sus pistolas automáticas dobles pero no lo incapacite, ese agente enemigo gana una de tus fichas de Ampollas (si no tiene ya una). Durante la activación o reacción de un agente <span class=\"faction\">SIEMBRASANGRE</span> amigo, antes o después de que realice una acción, si se encuentra a 8\" o menos de un agente enemigo que tenga una de tus fichas de Ampollas puedes retirar esa ficha e incrementar el <b>DEPÓSITO SANGRIENTO</b> de ese agente amigo.</p>"
         }
       ],
       "uniqueActions": [
@@ -16910,11 +16910,11 @@
       "abilities": [
         {
           "name": "<span class=\"faction\">*</span>Barrido",
-          "description": "Siempre que este agente realiza una acción de <b>Combatir</b> y eliges este perfil de arma, si no resulta incapacitado, puede realizar inmediatamente a continuación una acción libre de <b>Combatir</b>, pero debes elegir este perfil de arma y solo puede combatir contra cada agente enemigo en su zona de control una vez por activación o contraataque usando este perfil de arma. Esto tiene preferencia sobre las restricciones de acciones, y puedes seguir realizando acciones libres de <b>Combatir</b> hasta que este agente resulte incapacitado o haya combatido contra cada agente enemigo en su zona de control."
+          "description": "Siempre que este agente realiza una acción de <b>Combatir</b> y eliges este perfil de arma, si no resulta incapacitado, puede realizar inmediatamente a continuación una acción libre de <b>Combatir</b>, pero debes elegir este perfil de arma y solo puede combatir contra cada agente enemigo en su zona de control una vez por activación o reacción usando este perfil de arma. Esto tiene preferencia sobre las restricciones de acciones, y puedes seguir realizando acciones libres de <b>Combatir</b> hasta que este agente resulte incapacitado o haya combatido contra cada agente enemigo en su zona de control."
         },
         {
           "name": "Agarre con tentáculos",
-          "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 1D6, sumando 1 al resultado si ese agente enemigo tiene un atributo Heridas de 8 o menos: con 4+, ese agente enemigo no puede realizar esa acción durante esa activación/contraataque (los PA gastados no se recuperan)."
+          "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 1D6, sumando 1 al resultado si ese agente enemigo tiene un atributo Heridas de 8 o menos: con 4+, ese agente enemigo no puede realizar esa acción durante esa activación/reacción (los PA gastados no se recuperan)."
         }
       ],
       "uniqueActions": [],
@@ -17037,7 +17037,7 @@
       "abilities": [
         {
           "name": "Activación en grupo",
-          "description": "Cuando este agente quede usado, debes activar a continuación otro agente MUTANTE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+          "description": "Cuando este agente quede agotado, debes activar a continuación otro agente MUTANTE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
         },
         {
           "name": "Máscaras de Gellercausto",
@@ -17090,7 +17090,7 @@
         },
         {
           "name": "Activación en grupo",
-          "description": "Cuando este agente quede usado, debes activar a continuación otro agente FERRONURGLETE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+          "description": "Cuando este agente quede agotado, debes activar a continuación otro agente FERRONURGLETE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
         }
       ],
       "uniqueActions": [],
@@ -17125,7 +17125,7 @@
         },
         {
           "name": "Activación en grupo",
-          "description": "Cuando este agente quede usado, debes activar a continuación otro agente ALIMAÑA MUTANTE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+          "description": "Cuando este agente quede agotado, debes activar a continuación otro agente ALIMAÑA MUTANTE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
         }
       ],
       "uniqueActions": [],
@@ -17166,7 +17166,7 @@
       "abilities": [
         {
           "name": "Activación en grupo",
-          "description": "Cuando este agente quede usado, debes activar a continuación otro agente ALIMAÑA MUTANTE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+          "description": "Cuando este agente quede agotado, debes activar a continuación otro agente ALIMAÑA MUTANTE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
         }
       ],
       "uniqueActions": [],
@@ -17207,7 +17207,7 @@
       "abilities": [
         {
           "name": "Activación en grupo",
-          "description": "Cuando este agente quede usado, debes activar a continuación otro agente ALIMAÑA MUTANTE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+          "description": "Cuando este agente quede agotado, debes activar a continuación otro agente ALIMAÑA MUTANTE INFECTADO GELLER amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
         },
         {
           "name": "Defunción cáustica",
@@ -17562,7 +17562,7 @@
             "abilities": [
                 {
                     "name": "<span class=\"faction\">*</span>Cazador sensorial",
-                    "description": "Siempre que este agente combata con esta arma contra un agente usado, la primera vez que golpees con un éxito crítico durante esa secuencia, puedes resolver inmediatamente otro de tus éxitos como un golpe (antes que tu oponente)."
+                    "description": "Siempre que este agente combata con esta arma contra un agente agotado, la primera vez que golpees con un éxito crítico durante esa secuencia, puedes resolver inmediatamente otro de tus éxitos como un golpe (antes que tu oponente)."
                 },
                 {
                     "name": "Berserker",
@@ -19006,7 +19006,7 @@
             "abilities": [
                 {
                     "name": "Vigilancia en combate cerrado",
-                    "description": "Este agente puede realizar la acción <b>Disparar</b> (salvo <b>En guardia</b>) mientras se encuentre en la zona de control de un agente enemigo, pero solo si no ha realizado la acción <b>Cargar</b> durante esa activación, o si es un contraataque. Este agente no tiene prohibido realizar la acción de <b>Cargar</b> tras realizar la acción de <b>Disparar</b>."
+                    "description": "Este agente puede realizar la acción <b>Disparar</b> (salvo <b>En guardia</b>) mientras se encuentre en la zona de control de un agente enemigo, pero solo si no ha realizado la acción <b>Cargar</b> durante esa activación, o si es una reacción. Este agente no tiene prohibido realizar la acción de <b>Cargar</b> tras realizar la acción de <b>Disparar</b>."
                 }
             ],
             "uniqueActions": [],
@@ -19840,7 +19840,7 @@
                 },
                 {
                     "name": "Directiva",
-                    "description": "Siempre que este agente sea activado, si no has usado la regla Segundo al mando durante la batalla, puedes elegir otro agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo apostado a 6\" o menos de este agente y visible para él. Cuando este agente sea usado, activa a ese otro agente amigo antes de que active tu oponente (si ese agente es un SOLDADO, ignora su regla de Activación en grupo)."
+                    "description": "Siempre que este agente sea activado, si no has usado la regla Segundo al mando durante la batalla, puedes elegir otro agente <span class=\"faction\">KORPS DE LA MUERTE</span> amigo apostado a 6\" o menos de este agente y visible para él. Cuando este agente quede agotado, activa a ese otro agente amigo antes de que active tu oponente (si ese agente es un SOLDADO, ignora su regla de Activación en grupo)."
                 }
             ],
             "uniqueActions": [],
@@ -20369,7 +20369,7 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente quede usado, debes activar a continuación otro agente SOLDADO <span class=\"faction\">KORPS DE LA MUERTE</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+                    "description": "Cuando este agente quede agotado, debes activar a continuación otro agente SOLDADO <span class=\"faction\">KORPS DE LA MUERTE</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
                 }
             ],
             "uniqueActions": [],
@@ -21275,7 +21275,7 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente quede usado, debes activar a continuación otro agente DEVOTO <span class=\"faction\">CULTO DEL CAOS</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla),"
+                    "description": "Cuando este agente quede agotado, debes activar a continuación otro agente DEVOTO <span class=\"faction\">CULTO DEL CAOS</span> amigo apostado (si es posible) antes de que active tu oponente. En cuanto ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla),"
                 }
             ],
             "uniqueActions": [],
@@ -21420,7 +21420,7 @@
                     "description": [
                         "<b>APOYO</b>. Elige un agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo a 6\" o menos de este agente y visible para él. Como alternativa, puedes elegir un agente <b>CANÓPTICO</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo que sea visible para este agente y se encuentre en tu <b>MATRIZ DE NODOS DE OBELISCOS</b> (<b>APOYO</b> no se aplica a esta selección). El agente elegido puede realizar de inmediato una acción libre de 1PA; durante esa acción, no puede moverse más de 2\" ni ser retirado y desplegado de nuevo a más de 2\"."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o como contraataque."
+                    "description_no": "Este agente no puede realizar esta acción si se encuentra en la zona de control de un agente enemigo, o como reacción."
                 },
                 {
                     "name": "BRECHA MOLECULAR",
@@ -22159,7 +22159,7 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente haya sido usado, a continuación debes activar a otro agente SOLDADO <span class=\"faction\">HERMANO DE PROGENIE</span> amigo apostado (si puedes) antes de que tu oponente active. Una vez que ese otro agente sea usado, tu oponente activa de manera normal (en otras palabras, con esta regla no puedes activar más de dos agentes sucesivos)."
+                    "description": "Cuando este agente haya quedado agotado, a continuación debes activar a otro agente SOLDADO <span class=\"faction\">HERMANO DE PROGENIE</span> amigo apostado (si puedes) antes de que tu oponente active. Una vez que ese otro agente quede agotado, tu oponente activa de manera normal (en otras palabras, con esta regla no puedes activar más de dos agentes sucesivos)."
                 }
             ],
             "uniqueActions": [],
@@ -22419,7 +22419,7 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente haya sido usado, a continuación debes activar a otro agente FAMILIAR PSÍQUICO <span class=\"faction\">HERMANO DE PROGENIE</span> amigo apostado (si puedes) antes de que tu oponente active. Una vez que ese otro agente sea usado, tu oponente activa de manera normal."
+                    "description": "Cuando este agente haya quedado agotado, a continuación debes activar a otro agente FAMILIAR PSÍQUICO <span class=\"faction\">HERMANO DE PROGENIE</span> amigo apostado (si puedes) antes de que tu oponente active. Una vez que ese otro agente quede agotado, tu oponente activa de manera normal."
                 },
                 {
                     "name": "Pequeño",
@@ -23211,7 +23211,7 @@
             "abilities": [
                 {
                     "name": "Activación en grupo",
-                    "description": "Cuando este agente quede usado, debes activar a continuación otro agente SOLDADO UNGIDO amigo apostado (si es posible) antes de que active tu oponente. Cuando ese otro agente quede usado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
+                    "description": "Cuando este agente quede agotado, debes activar a continuación otro agente SOLDADO UNGIDO amigo apostado (si es posible) antes de que active tu oponente. Cuando ese otro agente quede agotado, tu oponente activa de manera normal (es decir, no puedes activar más de dos agentes sucesivos mediante esta regla)."
                 }
             ],
             "uniqueActions": [],
@@ -23994,7 +23994,7 @@
             "abilities": [
                 {
                     "name": "Tripulación",
-                    "description": "Una vez por punto de inflexión, cuando fueras a contraatacar, si no has usado un <b>ACTIVO DE APOYO PRIVADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, puedes contraatacar con un agente <b>INFANTE DEL VACÍO</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo que tenga una orden de Ocultarse, pero durante ese contraataque solo puedes realizar acciones de <b>Disparar</b>, y debes usar un <b>ACTIVO DE APOYO PRIVADO</b> para ello."
+                    "description": "Una vez por punto de inflexión, cuando fueras a reaccionar, si no has usado un <b>ACTIVO DE APOYO PRIVADO</b> durante este punto de inflexión, puedes usar esta regla. Si lo haces, puedes reaccionar con un agente <b>INFANTE DEL VACÍO</b> <span class=\"faction\">RECORRESTRELLAS ELUCIDIANO</span> amigo que tenga una orden de Ocultarse, pero durante esa reacción solo puedes realizar acciones de <b>Disparar</b>, y debes usar un <b>ACTIVO DE APOYO PRIVADO</b> para ello."
                 }
             ],
             "uniqueActions": [],
@@ -24307,7 +24307,7 @@
             "abilities": [
                 {
                     "name": "Presa acorralada",
-                    "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, si no hay otros agentes enemigos en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 2D6, o 1D6 si ese agente enemigo tiene un atributo Heridas mayor que este agente. Si sacas algún 4+, el agente enemigo no puede realizar esa acción durante esta activación/contraataque (y no gasta PA en ella)."
+                    "description": "Siempre que un agente enemigo vaya a realizar una acción de <b>Retroceder</b> estando en la zona de control de este agente, si no hay otros agentes enemigos en la zona de control de este agente, puedes usar esta regla. Si lo haces, tira 2D6, o 1D6 si ese agente enemigo tiene un atributo Heridas mayor que este agente. Si sacas algún 4+, el agente enemigo no puede realizar esa acción durante esta activación/reacción (y no gasta PA en ella)."
                 }
             ],
             "uniqueActions": [
@@ -24534,7 +24534,7 @@
             "abilities": [
                 {
                     "name": "Rajar el velo",
-                    "description": "<p>Al desplegar a este agente antes de la batalla, en lugar de ello puedes desplegarlo en la disformidad: sitúalo a un lado en lugar de en la zona de aniquilación. En la primera fase de tiroteo, cuando se active a este agente, coloca uno de tus marcadores de Disformidad completamente dentro de tu territorio, y a continuación este agente queda usado.</p> <p>En la segunda fase de tiroteo, cuando actives a este agente, despliégalo con una orden de tu elección en una ubicación en la que pueda colocarse, o bien completamente dentro de tu zona de descenso, o completamente dentro de tu territorio disputando tu marcador de Disformidad. Continúa con su activación de manera normal, pero durante esa activación no puede realizar más de dos acciones y no puede usar más de 4\" de distancia de movimiento. Hasta el paso de preparación de la siguiente fase de estrategia, este agente está ofuscado para los agentes a más de 3\" de él.</p> <p>Cuando este agente se encuentre en la disformidad, no puede ser el agente <span class=\"faction\">ALA ASESINA</span> amigo apostado de cara al ardid de tiroteo Narcisismo malicioso.</p>"
+                    "description": "<p>Al desplegar a este agente antes de la batalla, en lugar de ello puedes desplegarlo en la disformidad: sitúalo a un lado en lugar de en la zona de aniquilación. En la primera fase de tiroteo, cuando se active a este agente, coloca uno de tus marcadores de Disformidad completamente dentro de tu territorio, y a continuación este agente queda agotado.</p> <p>En la segunda fase de tiroteo, cuando actives a este agente, despliégalo con una orden de tu elección en una ubicación en la que pueda colocarse, o bien completamente dentro de tu zona de descenso, o completamente dentro de tu territorio disputando tu marcador de Disformidad. Continúa con su activación de manera normal, pero durante esa activación no puede realizar más de dos acciones y no puede usar más de 4\" de distancia de movimiento. Hasta el paso de preparación de la siguiente fase de estrategia, este agente está ofuscado para los agentes a más de 3\" de él.</p> <p>Cuando este agente se encuentre en la disformidad, no puede ser el agente <span class=\"faction\">ALA ASESINA</span> amigo apostado de cara al ardid de tiroteo Narcisismo malicioso.</p>"
                 }
             ],
             "uniqueActions": [],
@@ -25219,7 +25219,7 @@
                     "name": "ASIGNAR MISIÓN",
                     "cost": "0PA",
                     "description": [
-                        "Elige un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo usado (salvo <b>VOCOBALIZA</b>) visible para este agente que no haya interrumpido la activación de un agente enemigo con la regla de facción Habilidades de campo de élite en este punto de inflexión. Hasta el final del punto de inflexión, ese agente amigo puede hacerlo aunque esté usado (esto tiene preferencia sobre las reglas normales). Sin embargo, si lo hace, no puede contraatacar durante el punto de inflexión, ni realizar la acción de <b>Reposicionarse</b> si ya lo ha hecho este punto de inflexión."
+                        "Elige un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo agotado (salvo <b>VOCOBALIZA</b>) visible para este agente que no haya interrumpido la activación de un agente enemigo con la regla de facción Habilidades de campo de élite en este punto de inflexión. Hasta el final del punto de inflexión, ese agente amigo puede hacerlo aunque esté agotado (esto tiene preferencia sobre las reglas normales). Sin embargo, si lo hace, no puede reaccionar durante el punto de inflexión, ni realizar la acción de <b>Reposicionarse</b> si ya lo ha hecho este punto de inflexión."
                     ],
                     "description_no": "Este agente no puede realizar esta acción si está en la zona de control de algún agente enemigo."
                 }
@@ -25562,7 +25562,7 @@
                     "description": [
                         "Elige 1 agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo en la zona de control de este agente que esté a más de 3\" de todo agente enemigo. Ese agente amigo puede realizar inmediatamente una acción libre de <b>Disparar</b> (salvo <b>Ponerse en guardia</b>), y puedes cambiar su orden para hacerlo."
                     ],
-                    "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo, al contraatacar, o durante una activación en la que realizó la acción de <b>Cargar</b>, <b>Correr</b> o <b>Disparar</b> (o viceversa)."
+                    "description_no": "Este agente no puede realizar esta acción mientras esté en la zona de control de un agente enemigo, al reaccionar, o durante una activación en la que realizó la acción de <b>Cargar</b>, <b>Correr</b> o <b>Disparar</b> (o viceversa)."
                 }
             ],
             "keywords": "<span class=\"faction\">ESCUADRA ESPECTRO</span>, IMPERIUM, ASTRA MILITARUM, CARGADOR",
@@ -25813,7 +25813,7 @@
                 },
                 {
                     "name": "Prescindible",
-                    "description": "<p>Este agente solo puede realizar la acción de <b>Señal</b>. No puede contraatacar ni asistir en un combate.</p><p>Este agente no puede disputar marcadores ni áreas de la zona de aniquilación, y se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y PV que requieran que agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/es incapacitado; al determinar cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.).</p><p>Los agentes pueden moverse a través de este agente. Tu oponente siempre puede ignorar la zona de control de este agente. Siempre que un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo realice la acción de <b>Disparar</b> y elijas un blanco válido, puedes ignorar la zona de control de este agente. Ten en cuenta que, si se ignora, la zona de control no es mutua.</p>"
+                    "description": "<p>Este agente solo puede realizar la acción de <b>Señal</b>. No puede reaccionar, contraatacar ni asistir en un combate.</p><p>Este agente no puede disputar marcadores ni áreas de la zona de aniquilación, y se ignora para las operaciones de asesinato/eliminación de tu oponente (al quedar incapacitado, y al determinar tu número inicial de agentes). También se ignora para condiciones de victoria y PV que requieran que agentes \"escapen\", \"sobrevivan\" o queden incapacitados por agentes enemigos (si escapa/sobrevive/es incapacitado; al determinar cuántos agentes deben escapar/sobrevivir/ser incapacitados, etc.).</p><p>Los agentes pueden moverse a través de este agente. Tu oponente siempre puede ignorar la zona de control de este agente. Siempre que un agente <span class=\"faction\">ESCUADRA ESPECTRO</span> amigo realice la acción de <b>Disparar</b> y elijas un blanco válido, puedes ignorar la zona de control de este agente. Ten en cuenta que, si se ignora, la zona de control no es mutua.</p>"
                 }
             ],
             "uniqueActions": [

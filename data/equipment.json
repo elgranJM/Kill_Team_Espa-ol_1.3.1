@@ -59,7 +59,7 @@
     "id_equip": 7,
     "faction": "tempestus-aquilons",
     "name": "Augurio Preinserción",
-    "description": "Una vez durante la batalla, al activar un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo desplegado en las alturas, antes de decidir si el agente aterriza o es usado, puedes mover de nuevo uno de tus marcadores de descenso. No obstante, no puede moverse más cerca de lo que está de la zona de descenso de tu oponente.", 
+    "description": "Una vez durante la batalla, al activar un agente <span class=\"faction\">TEMPESTUS AQUILON</span> amigo desplegado en las alturas, antes de decidir si el agente aterriza o queda agotado, puedes mover de nuevo uno de tus marcadores de descenso. No obstante, no puede moverse más cerca de lo que está de la zona de descenso de tu oponente.", 
     "weapon": [],
     "action": []
   },
@@ -420,7 +420,7 @@
     "id_equip": 47,
     "faction": "exaction-squad",
     "name": "Esposas",
-    "description": "Cuando un agente enemigo vaya a realizar una acción de <b>Retroceder</b> mientras se encuentra en la zona de control de un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, si no hay otros agentes enemigos en la zona de control de ese agente amigo, puedes usar esta regla. En tal caso, tira dos D6, o un D6 si ese agente enemigo tiene un atributo Heridas mayor que el del agente amigo en cuestión. Si algún resultado es un 4+, dicho agente enemigo no puede realizar esa acción durante esta activación o contraataque (no se gastan PA en ella), y no puedes usar esta regla otra vez durante este punto de inflexión.", 
+    "description": "Cuando un agente enemigo vaya a realizar una acción de <b>Retroceder</b> mientras se encuentra en la zona de control de un agente <span class=\"faction\">ESCUADRA DE EXACCIÓN</span> amigo, si no hay otros agentes enemigos en la zona de control de ese agente amigo, puedes usar esta regla. En tal caso, tira dos D6, o un D6 si ese agente enemigo tiene un atributo Heridas mayor que el del agente amigo en cuestión. Si algún resultado es un 4+, dicho agente enemigo no puede realizar esa acción durante esta activación o reacción (no se gastan PA en ella), y no puedes usar esta regla otra vez durante este punto de inflexión.", 
     "weapon": [],
     "action": []
   },
@@ -904,7 +904,7 @@
     "id_equip": 114,
     "faction": "xv26-battlesuits",
     "name": "Selectores de Blanco Integrados",
-    "description": "Siempre que fueras a contraatacar, puedes hacerlo con un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo que tenga una orden de Ocultarse y esté a más de 3\" de agentes enemigos, pero antes de que contraataque, debes cambiar su orden a Trabarse y no puede realizar ninguna acción aparte de <b>Disparar</b> durante ese contraataque.",
+    "description": "Siempre que fueras a reaccionar, puedes hacerlo con un agente <span class=\"faction\">EXOARMADURA XV26 SIGILO</span> amigo que tenga una orden de Ocultarse y esté a más de 3\" de agentes enemigos, pero antes de que reaccione, debes cambiar su orden a Trabarse y no puede realizar ninguna acción aparte de <b>Disparar</b> durante esa reacción.",
     "weapon": [],
     "action": []
   },
@@ -1455,7 +1455,7 @@
     "id_equip": 174,
     "faction": "canoptek",
     "name": "Manipulador de Matriz",
-    "description": "Una vez por batalla, durante la activación o contraataque de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, puedes usar esta regla. Si lo haces, hasta el final de esa activación/contraataque, un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se trata como si fuera tu cuarto marcador de <b>NODO DE OBELISCOS</b>.", 
+    "description": "Una vez por batalla, durante la activación o reacción de un agente <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo, puedes usar esta regla. Si lo haces, hasta el final de esa activación/reacción, un agente <b>GEOMANTE</b> <span class=\"faction\">CÍRCULO CANÓPTICO</span> amigo se trata como si fuera tu cuarto marcador de <b>NODO DE OBELISCOS</b>.", 
     "weapon": [],
     "action": []
   },

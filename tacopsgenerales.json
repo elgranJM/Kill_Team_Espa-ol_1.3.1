@@ -186,8 +186,8 @@
         "action_mission_yes": "Un marcador de objetivo que controla el agente activo gana una de tus fichas de Dispositivo.",
         "action_mission_no": "Un agente no puede realizar esta acción durante el primer punto de inflexión, mientras esté dentro del rango de control de un agente enemigo, o si ese marcador de objetivo ya tiene una de tus fichas de Dispositivo.",
         "victoy_points": ["Al final de cada punto de inflexión después del primero:",
-                        "Si el marcador de objetivo de tu oponente tiene una de tus fichas de Dispositivo, obtienes 1PV.",
-                        "Por cada otro marcador de objetivo que disputen los agentes enemigos que tenga una de tus fichas de Dispositivo, obtienes 1PV.",
+                        "<ul><li>Si el marcador de objetivo de tu oponente tiene una de tus fichas de Dispositivo, obtienes 1PV.</li></ul>",
+                        "<ul><li>Por cada otro marcador de objetivo que disputen los agentes enemigos que tenga una de tus fichas de Dispositivo, obtienes 1PV.</li></ul>",
                         "No puedes obtener más de 2PV de esta op por punto de inflexión."],
         "limite_puntos": [
             {

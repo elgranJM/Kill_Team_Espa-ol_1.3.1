@@ -9,7 +9,7 @@ Se aplica a todo el contenido de reglas de la web, en especial a los archivos de
 - **Fuente principal:** el PDF oficial en español de cada facción (tarjetas de datos, reglas de facción, ardides y equipo) junto con su registro de actualizaciones (erratas).
 - **Erratas:** si la tarjeta y la errata no coinciden, manda la errata, salvo que la tarjeta y la versión oficial en inglés coincidan entre sí contra ella.
 - **Referencia en inglés:** cuando el texto en español es ambiguo o tiene un error evidente, se contrasta con la versión en inglés de las reglas.
-- **Unificación:** cuando el PDF oficial usa un término distinto al de esta matriz (por ejemplo, "reaccionar"), se reemplaza por el término de la matriz para que toda la web sea coherente.
+- **Unificación:** cuando el PDF oficial usa un término distinto al de esta matriz (por ejemplo, las tarjetas dicen "usado" y la matriz usa "agotado"), se reemplaza por el término de la matriz para que toda la web sea coherente.
 - **Formato en los archivos de datos:** la palabra clave de la facción va en `<span class="faction">…</span>` tal como aparece en las tarjetas (por ejemplo, `BANDAESTIRPE ACECHANTE`); los nombres de acciones (**Disparar**, **Cargar**…) y las demás palabras clave (**LÍDER**, **APOYO**…) van en `<b>…</b>`.
 
 ## 1. Conceptos generales
@@ -29,8 +29,9 @@ Se aplica a todo el contenido de reglas de la web, en especial a los archivos de
 | Ready step | **paso de preparación** | — | — |
 | Initiative | **iniciativa** | — | — |
 | Activation | **activación** | — | — |
-| Counteract | **contraatacar / contraataque** | reaccionar / reacción | Los PDF oficiales en español usan "reaccionar"; el proyecto unifica en "contraatacar". En combate (retaliate) también es "contraatacar"; el contexto distingue ambos usos. |
-| Expended / Ready (operative) | **usado / preparado** | agotado | — |
+| Counteract | **reaccionar / reacción** | contraatacar / contraataque (para esta mecánica) | Cuando es tu turno de activar pero todos tus agentes están agotados y el rival aún tiene agentes preparados, un agente tuyo que no haya reaccionado en el punto de inflexión realiza una acción de 1PA; si es de movimiento, no puede mover más de 2". |
+| Retaliate | **contraatacar / contraataque** | reaccionar / reacción (para esta mecánica), represalia | Durante la acción de Combatir, el agente que recibe el ataque también tira sus dados de ataque y responde: eso es contraatacar. No confundir con la reacción. |
+| Expended / Ready (operative) | **agotado / preparado** | usado (para el estado del agente) | "Usado" se mantiene solo con su sentido normal, por ejemplo "si ya has usado ese ardid". |
 | Set up (deploy) | **desplegar** | — | — |
 | Datacard | **tarjeta de datos** | — | — |
 | Base | **peana** | — | — |

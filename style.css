@@ -827,9 +827,9 @@ body.dark-mode .tacop.card {
     align-items: flex-start;
 }
 
-/* Reducción del 15% para el diagrama de Flanco y centrado automático */
+/* Reducción del 25% para el diagrama de Flanco y centrado automático */
 .tacop-columns img {
-    max-width: 80% !important;
+    max-width: 70% !important;
     margin: 0 auto !important;
     display: block !important;
 }
@@ -1671,7 +1671,7 @@ body.dark-mode .timeline-content {
 }
 
 /* =================================================================== */
-/*  IMPRESIONES (VERSIÓN INLINE-BLOCK MATEMÁTICA)                      */
+/*  IMPRESIONES                     */
 /* =================================================================== */
 @media print {
 
@@ -1879,6 +1879,13 @@ body.dark-mode .timeline-content {
 
     .tacop .gototacops {
         display: none !important;
+    }
+
+    /* Excepción para encoger el texto del diagrama en la TacOp Flanco */
+    .tacop-columns .col-5 p {
+        font-size: 5.5pt !important;
+        line-height: 1 !important;
+        letter-spacing: -0.8px !important;
     }
 }
 

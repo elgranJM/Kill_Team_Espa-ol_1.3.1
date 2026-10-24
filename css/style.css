@@ -827,6 +827,13 @@ body.dark-mode .tacop.card {
     align-items: flex-start;
 }
 
+/* Reducción del 25% para el diagrama de Flanco y centrado automático */
+.tacop-columns img {
+    max-width: 70% !important;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
 /* Custom Switch for Favorites Toggle */
 .switch-label {
     position: relative;
@@ -907,14 +914,7 @@ body.dark-mode .tacop.card {
 }
 
 .crit-op[data-type="action"],
-.tacop,
 .unique-actions-section {
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.tacop {
-    border: 1px solid var(--bs-) !important;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
@@ -1671,7 +1671,7 @@ body.dark-mode .timeline-content {
 }
 
 /* =================================================================== */
-/*  IMPRESIONES                                                        */
+/*  IMPRESIONES                     */
 /* =================================================================== */
 @media print {
 
@@ -1680,22 +1680,19 @@ body.dark-mode .timeline-content {
     .offcanvas,
     #printModal,
     button[data-bs-toggle="modal"],
-    #page-header-print {
+    #page-header-print,
+    .d-print-none,
+    .fade-in.d-print-none {
         display: none !important;
     }
 
-    /* 2. Forzar A4 Vertical y MÁRGENES CERO */
+    /* 2. Forzar A4 Vertical y Márgenes Estrictos de la Hoja */
     @page {
         size: A4 portrait;
-        margin: 0 !important;
+        margin: 0 !important; /* Apagamos el margen nativo problemático */
     }
 
-    body,
-    main,
-    .container-fluid,
-    .bg-light,
-    .bg-secondary-soft,
-    .bg-white {
+    body, main, .container-fluid, .bg-light, .bg-secondary-soft, .bg-white {
         background: white !important;
         background-color: white !important;
         padding: 0 !important;
@@ -1711,50 +1708,74 @@ body.dark-mode .timeline-content {
         print-color-adjust: exact !important;
     }
 
-    /* 3. Grilla estricta de 3x2 */
-    #critops-cards-container {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important; /* Centrado horizontal automático */
-        align-content: flex-start !important;
-        gap: 0 !important;
-        --bs-gutter-x: 0 !important;
-        --bs-gutter-y: 0 !important;
-        margin: 0 !important;
-        /* Empujamos 38.5mm hacia abajo para centrar verticalmente las 2 filas (297 - 220 = 77 / 2 = 38.5) */
-        padding-top: 38.5mm !important;
-    }
-
-    .fade-in {
-        width: 60mm !important;
-        flex: 0 0 60mm !important;
-        max-width: 60mm !important;
+    /* 3. El contenedor padre debe ser un simple bloque centrado (NO Grid, NO Flexbox) */
+    #critops-cards-container,
+    #tacops-cards-container {
+        display: block !important;
+        text-align: center !important; /* Centra las tarjetas inline-block */
+        margin: 0 auto !important;
         padding: 0 !important;
-        margin: 0 !important;
-        page-break-inside: avoid;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 0 !important; /* Elimina espacios en blanco de HTML que descuadran el inline-block */
     }
 
-    /* 4. Dimensiones físicas 60x110 mm solicitadas */
-    .card {
+    /* 4. Las Tarjetas se comportan como ladrillos rígidos */
+    .fade-in {
+        display: inline-block !important; /* Clave para eludir bugs de paginación */
+        vertical-align: top !important;
         width: 60mm !important;
-        height: 120mm !important;
+        height: 120mm !important; /* Altura física estricta */
+        
+        /* Margen físico inyectado a cada tarjeta: 10mm abajo, 1.5mm a los lados (3mm entre columnas) */
+        margin: 0 1.5mm 10mm 1.5mm !important; 
+        
+        padding: 0 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    /* =================================================================== */
+    /* EL MOTOR MATEMÁTICO: Fuerza los márgenes por fila                   */
+    /* =================================================================== */
+    
+    /* Obligamos a la Tarjeta 1, 2 y 3 (Primera Fila) a tener 23mm de margen superior */
+    .fade-in:nth-child(1),
+    .fade-in:nth-child(2),
+    .fade-in:nth-child(3) {
+        margin-top: 23mm !important;
+    }
+
+    /* Forzamos el salto de hoja estricto antes de la Tarjeta 7, 13, 19... */
+    .fade-in:nth-child(6n + 1):not(:first-child) {
+        page-break-before: always !important;
+        break-before: page !important;
+    }
+
+    /* A las primeras 3 tarjetas de cada nueva hoja (7,8,9 - 13,14,15) les inyectamos los 23mm superior */
+    .fade-in:nth-child(6n + 1):not(:first-child),
+    .fade-in:nth-child(6n + 2):not(:nth-child(2)),
+    .fade-in:nth-child(6n + 3):not(:nth-child(3)) {
+        margin-top: 23mm !important;
+    }
+
+    /* 5. Dimensiones internas de la Tarjeta */
+    .card {
+        width: 100% !important; 
+        height: 100% !important; 
         border: 1px dashed #999 !important; /* Guía de corte */
         border-radius: 0 !important;
         overflow: hidden !important;
         box-shadow: none !important;
         margin: 0 !important;
+        font-size: 1rem !important; /* Restaura el tamaño de fuente anulado en el contenedor padre */
     }
 
-    /* 5. Conservación de recuadros negros */
+    /* 6. Conservación de recuadros negros */
     .card .ap-box.bg-dark {
         background-color: #212529 !important;
         color: #ffffff !important;
     }
 
-    /* 6. Márgenes perimetrales ultra reducidos para 60x110 */
+    /* 7. Márgenes perimetrales ultra reducidos para 60x120 */
     .card > .p-3 {
         padding: 2mm !important;
     }
@@ -1767,7 +1788,7 @@ body.dark-mode .timeline-content {
         margin-bottom: 1.5mm !important;
     }
 
-    /* 7. Tipografía ajustada a la proporción angosta de 60mm */
+    /* 8. Tipografía ajustada a la proporción angosta de 60mm */
     .mission-container,
     .mission-container * {
         font-size: 7pt !important;
@@ -1787,7 +1808,7 @@ body.dark-mode .timeline-content {
         margin-top: 1.5mm !important;
     }
 
-    /* 8. Estructuras internas de listas y acciones */
+    /* 9. Estructuras internas de listas y acciones */
     .card ul,
     .card ol {
         padding-left: 3.5mm !important;
@@ -1840,6 +1861,33 @@ body.dark-mode .timeline-content {
     .victory-points {
         margin-top: auto !important;
     }
+
+    /* 10. Ajustes de TacOps en impresión */
+    .tacop .archetype {
+        font-size: 8pt !important;
+        padding: 1mm !important;
+    }
+    
+    .tacop .archetype img {
+        width: 3.5mm !important;
+        height: 3.5mm !important;
+        margin-right: 1.5mm !important;
+    }
+
+    .tacop .middle {
+        padding: 2mm !important;
+    }
+
+    .tacop .gototacops {
+        display: none !important;
+    }
+
+    /* Excepción para encoger el texto del diagrama en la TacOp Flanco */
+    .tacop-columns .col-5 p {
+        font-size: 5.5pt !important;
+        line-height: 1 !important;
+        letter-spacing: -0.8px !important;
+    }
 }
 
 /* =================================================================== */
@@ -1889,4 +1937,34 @@ body.dark-mode .timeline-content {
     opacity: 0.08; /* Transparencia severa obligatoria al ser negro puro (8%) */
     z-index: -1; /* La oculta detrás de las letras pero sobre el fondo blanco */
     pointer-events: none; /* Evita que el ratón "enganche" la imagen por error */
+}
+
+/* =================================================================== */
+/* MARCA DE AGUA TACOPS (Modificadores para SVGs)                      */
+/* =================================================================== */
+.tacop-watermark {
+    /* Convierte cualquier SVG a negro puro y confía en la opacidad del 8% de .watermark-img */
+    filter: brightness(0) contrast(100%) grayscale(100%); 
+}
+
+@media print {
+    /* Ajustes específicos para la cabecera de las TacOps en la impresión */
+    .tacop .archetype {
+        font-size: 8pt !important;
+        padding: 1mm !important;
+    }
+    
+    .tacop .archetype img {
+        width: 3.5mm !important;
+        height: 3.5mm !important;
+        margin-right: 1.5mm !important;
+    }
+
+    .tacop .middle {
+        padding: 2mm !important;
+    }
+
+    .tacop .gototacops {
+        display: none !important; /* Oculta el icono del corazón en el papel */
+    }
 }

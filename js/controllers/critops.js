@@ -11,6 +11,7 @@
                 .then(data => {
                     allCritOps = data;
                     renderCritOps();
+                    populatePrintDropdown();
                 })
                 .catch(error => {
                     console.error("Error cargando CritOps:", error);
@@ -121,7 +122,11 @@
             // 2. Controlar si el <select> está deshabilitado
             window.togglePrintSelect = function () {
                 const isSpecific = document.getElementById('printSpecific').checked;
-                document.getElementById('specificPrintSelect').disabled = !isSpecific;
+                const select = document.getElementById('specificPrintSelect');
+                select.disabled = !isSpecific;
+                if (isSpecific && select.options.length === 0) {
+                    populatePrintDropdown();
+                }
             };
 
             // Generador de Contraportadas

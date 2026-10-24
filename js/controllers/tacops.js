@@ -21,6 +21,7 @@
                 .then(data => {
                     allTacOps = data;
                     renderTacOps();
+                    populatePrintDropdown();
                 })
                 .catch(error => {
                     console.error("Error cargando TacOps:", error);
@@ -107,7 +108,9 @@
                                    style="cursor: pointer; font-size: 1.2rem;" 
                                    onclick="window.toggleFavorite('${key}')" title="Favorito"></i>
                             </div>
-                            <div class="middle p-3 d-flex flex-column h-100 bg-light">
+                            <div class="middle p-3 d-flex flex-column h-100 bg-light watermark-container border border-top-0 rounded-bottom">
+                                <!-- Marca de Agua Absoluta -->
+                                <img src="${getArchetypeIcon(op.archetype)}" class="watermark-img tacop-watermark" alt="Símbolo de arquetipo">
                                 <h4 class="name fw-bold text-dark mb-3">${op.name}</h4>
                                 <div class="mission-container pt-0 flex-grow-1">
                                     <div class="victory-points mb-3">
@@ -158,5 +161,84 @@
                 else favTacOps.push(key);
                 localStorage.setItem('favTacops', JSON.stringify(favTacOps));
                 renderTacOps();
+            };
+
+            // --- LÓGICA DE IMPRESIÓN ---
+            function populatePrintDropdown() {
+                const select = document.getElementById('specificPrintSelect');
+                if (!select) return;
+                select.innerHTML = ''; 
+                for (const [key, op] of Object.entries(allTacOps)) {
+                    select.innerHTML += `<option value="${key}">${op.name}</option>`;
+                }
+            }
+
+            setTimeout(populatePrintDropdown, 500);
+
+            window.togglePrintSelect = function () {
+                const specificSelect = document.getElementById('specificPrintSelect');
+                const printSpecific = document.getElementById('printSpecific');
+                if (specificSelect && printSpecific) {
+                    specificSelect.disabled = !printSpecific.checked;
+                }
+            };
+
+            function generateBackCoverHtml() {
+                return `
+                    <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 fade-in back-cover-wrapper">
+                        <div class="card back-cover-card shadow-sm h-100 border-0 d-flex flex-column justify-content-between position-relative">
+                            <div class="stripe-top text-white fw-bold"><span>TAC OP</span></div>
+                            <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+                                <img src="../resources/marca-de-agua-naranja.png" class="back-watermark" alt="TacOp Back">
+                            </div>
+                            <div class="stripe-bottom text-white fw-bold"><span>TAC OP</span></div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            window.executePrint = function () {
+                const isSpecific = document.getElementById('printSpecific').checked;
+                const includeBackCovers = document.getElementById('printBackCovers').checked;
+                const container = document.getElementById('tacops-cards-container');
+                const allCards = container.querySelectorAll('.tacop-container');
+                
+                let printedCount = 0;
+                document.querySelectorAll('.back-cover-wrapper').forEach(el => el.remove());
+
+                if (isSpecific) {
+                    const selectEl = document.getElementById('specificPrintSelect');
+                    const selectedKeys = Array.from(selectEl.selectedOptions).map(opt => opt.value);
+                    if (selectedKeys.length === 0) { alert("Error: Debes seleccionar al menos una misión."); return; }
+                    
+                    printedCount = selectedKeys.length;
+                    
+                    // Ocultar usando la clase de Bootstrap d-print-none
+                    for (const [key, op] of Object.entries(allTacOps)) {
+                         const cardEl = container.querySelector(`.tacop-container:nth-child(${Object.keys(allTacOps).indexOf(key) + 1})`);
+                         if(cardEl) {
+                             if (selectedKeys.includes(key)) cardEl.classList.remove('d-print-none');
+                             else cardEl.classList.add('d-print-none');
+                         }
+                    }
+                } else {
+                    const visibleCards = container.querySelectorAll('.tacop-container:not(.d-none)');
+                    printedCount = visibleCards.length;
+                    allCards.forEach(card => card.classList.remove('d-print-none'));
+                }
+
+                if (includeBackCovers && printedCount > 0) {
+                    for (let i = 0; i < printedCount; i++) {
+                        container.insertAdjacentHTML('beforeend', generateBackCoverHtml());
+                    }
+                }
+
+                bootstrap.Modal.getInstance(document.getElementById('printModal')).hide();
+
+                setTimeout(() => {
+                    window.print();
+                    document.querySelectorAll('.back-cover-wrapper').forEach(el => el.remove());
+                    allCards.forEach(card => card.classList.remove('d-print-none'));
+                }, 400);
             };
         });

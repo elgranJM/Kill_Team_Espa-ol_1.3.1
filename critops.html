@@ -139,6 +139,7 @@
                 .then(data => {
                     allCritOps = data;
                     renderCritOps();
+                    populatePrintDropdown(); // <-- Garantiza que allCritOps ya tiene datos
                 })
                 .catch(error => {
                     console.error("Error cargando CritOps:", error);
@@ -244,7 +245,7 @@
                 }
             }
 
-            setTimeout(populatePrintDropdown, 100);
+
 
             // 2. Controlar si el <select> está deshabilitado
             window.togglePrintSelect = function () {
@@ -277,7 +278,7 @@
                 const includeBackCovers = document.getElementById('printBackCovers').checked;
                 const container = document.getElementById('critops-cards-container');
                 const allCards = container.querySelectorAll('[data-op-id]');
-                
+
                 let printedCount = 0;
 
                 // Limpieza de seguridad por si quedaron contraportadas anteriores

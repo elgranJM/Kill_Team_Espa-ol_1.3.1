@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Mapas - Kill Team</title>
+    <!-- Reutilizando Bootstrap como en tu proyecto -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- html2canvas para la exportación de la imagen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Zona de la Paleta de Piezas (Carrusel) */
+        #palette-container {
+            /* Ocultar scrollbar nativo */
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        #palette-container::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari and Opera */
+        }
+
+        .palette-item {
+            max-height: 80px;
+            cursor: grab;
+            transition: transform 0.2s;
+        }
+
+        .palette-item:hover {
+            transform: scale(1.1);
+        }
+
+        /* Lienzo de Trabajo */
+        #workspace-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px solid #6c757d;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: #e9ecef;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            /* Transición para el zoom */
+            transform-origin: top center;
+        }
+
+        #workspace {
+            position: relative;
+            transform-origin: top left;
+        }
+
+        #map-bg {
+            display: block;
+            pointer-events: none;
+            width: 100%;
+            /* El tamaño lo dictará el JS */
+            height: 100%;
+        }
+
+        /* Piezas dentro del lienzo */
+        .map-piece {
+            position: absolute;
+            cursor: pointer;
+            user-select: none;
+            /* El transform se manejará via JS para la rotación */
+        }
+
+        .map-piece img {
+            display: block;
+            pointer-events: none;
+            /* El tamaño ahora lo dicta estrictamente el motor JS */
+        }
+
+        .map-piece.selected {
+            outline: 3px dashed #ff5418;
+            z-index: 100;
+        }
+
+        /* Panel de Controles Fijo en Pantalla (Gamepad) */
+        #controls-panel {
+            position: fixed;
+            /* Cambiado de absolute a fixed */
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(33, 37, 41, 0.95);
+            /* Más oscuro para contraste */
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 2000;
+            /* Asegurar que quede sobre todo */
+            border: 2px solid #6c757d;
+        }
+
+        #controls-panel.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* Botones del control flotante en blanco para mejor visibilidad */
+        #controls-panel .btn-outline-dark {
+            color: white;
+            border-color: #6c757d;
+            background-color: #343a40;
+        }
+
+        #controls-panel .btn-outline-dark:hover {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        #controls-panel .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        /* Botones de navegación del carrusel */
+        .palette-nav-btn {
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #212529;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .palette-nav-btn:hover {
+            background-color: #0d6efd;
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+            /* translateY se mantiene por el translate-middle-y del HTML */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid py-4">
+
+        <!-- Paso 1: Barra de Herramientas Principal -->
+        <div class="d-flex justify-content-between align-items-center bg-white p-3 rounded shadow-sm mb-3 border">
+            <!-- Grupo Izquierdo: Título y Selectores -->
+            <div class="d-flex align-items-center gap-3">
+                <h2 class="h5 fw-bold mb-0 text-uppercase text-nowrap"><i class="bi bi-map-fill me-2"></i>Creador de
+                    Mapas</h2>
+
+                <!-- BOTÓN DE INSTRUCCIONES -->
+                <button class="btn btn-outline-info btn-sm fw-bold shadow-sm" data-bs-toggle="modal"
+                    data-bs-target="#instructionsModal" title="Ver instrucciones y atajos">
+                    <i class="bi bi-question-circle-fill"></i> Ayuda
+                </button>
+
+                <select class="form-select form-select-sm border-primary fw-bold shadow-sm" id="map-select"
+                    onchange="changeMap()" style="width: auto;">
+                    <option value="map-cq-long-min.png">Mapa Cerrado vertical</option>
+                    <option value="map-cq-short-min.png">Mapa Cerrado horizontal</option>
+                    <option value="map-op-1-min.png">Mapa Abierto 1</option>
+                    <option value="map-op-2-min.png">Mapa Abierto 2</option>
+                    <option value="map-op-3-min.png">Mapa Abierto 3</option>
+                    <option value="map-op-4-min.png">Mapa Abierto 4</option>
+                    <option value="map-op-5-min.png">Mapa Abierto 5</option>
+                    <option value="map-op-6-min.png">Mapa Abierto 6</option>
+                    <option value="narrative-min.png">Mapa Narrativo</option>
+                </select>
+
+                <select class="form-select form-select-sm border-secondary fw-bold shadow-sm" id="kz-select"
+                    onchange="loadPalette()" style="width: auto;">
+                    <option value="General">Marcadores Generales</option>
+                    <option value="Chalnath">Chalnath</option>
+                    <option value="Gallowdark">Horcasombría (Gallowdark)</option>
+                    <option value="Moroch">Moroch</option>
+                    <option value="Nachmunt">Nachmund</option> //nachmund es el nombre en español de nachmunt
+                    <option value="Octarius">Octarius</option>
+                    <option value="Tombworld">Mundo Tumba (Tombworld)</option>
+                    <option value="Volkus">Volkus</option>
+                    <option value="WTC">Torneo WTC</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="form-check form-switch me-3 d-flex align-items-center">
+                <input class="form-check-input me-2 mt-0" type="checkbox" role="switch" id="gridToggleSwitch"
+                    onchange="toggleGridMode()">
+                <label class="form-check-label fw-bold small text-muted text-nowrap" for="gridToggleSwitch">Modo
+                    Cuadrícula</label>
+            </div>
+            <!-- Grupo Derecho: Botones de Acción -->
+            <div class="d-flex gap-2">
+                <button class="btn btn-danger btn-sm fw-bold shadow-sm" onclick="clearAllMap()">
+                    <i class="bi bi-trash-fill me-1"></i> Descartar Todo
+                </button>
+                <button class="btn btn-primary btn-sm fw-bold shadow-sm" onclick="exportMap()">
+                    <i class="bi bi-floppy-fill me-1"></i>Guardar Mapa
+                </button>
+            </div>
+        </div>
+
+        <!-- Paso 2: Carrusel de Piezas (Paleta) con Controles de Desplazamiento -->
+        <div class="position-relative mb-4 bg-white border border-primary rounded shadow-sm px-4 py-2">
+            <!-- Botón Izquierdo -->
+            <button
+                class="btn btn-sm border position-absolute start-0 top-50 translate-middle-y ms-1 z-1 palette-nav-btn"
+                onclick="document.getElementById('palette-container').scrollBy({left: -200, behavior: 'smooth'})">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <!-- Contenedor Scrolleable -->
+            <div id="palette-container" class="d-flex align-items-center gap-3 overflow-hidden"
+                style="min-height: 90px; scroll-behavior: smooth;">
+                <!-- Las imágenes se inyectan por JS -->
+            </div>
+
+            <!-- Botón Derecho -->
+            <button class="btn btn-sm border position-absolute end-0 top-50 translate-middle-y me-1 z-1 palette-nav-btn"
+                onclick="document.getElementById('palette-container').scrollBy({left: 200, behavior: 'smooth'})">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Área Principal de Edición (Lienzo) -->
+        <div class="text-center">
+            <div id="workspace-wrapper">
+                <div id="workspace">
+                    <img id="map-bg" src="./resources/creacion-mapas/Mapas-generales/map-cq-long-min.png"
+                        alt="Fondo del mapa">
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- Cierre del container-fluid -->
+
+    <!-- Paso 3: Panel de Controles Flotante (Fuera del flujo del lienzo) -->
+    <div id="controls-panel">
+        <div class="control-row">
+            <button class="btn btn-sm btn-danger shadow-sm" onclick="deleteSelected()" title="Eliminar"><i
+                    class="bi bi-x-lg"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="rotateSelected(-15)"
+                title="Girar Izquierda"><i class="bi bi-arrow-counterclockwise"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="moveFromUI(0, -1)" title="Arriba"><i
+                    class="bi bi-arrow-up"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="rotateSelected(15)" title="Girar Derecha"><i
+                    class="bi bi-arrow-clockwise"></i></button>
+        </div>
+        <div class="control-row">
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="moveFromUI(-1, 0)" title="Izquierda"><i
+                    class="bi bi-arrow-left"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="moveFromUI(0, 1)" title="Abajo"><i
+                    class="bi bi-arrow-down"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="moveFromUI(1, 0)" title="Derecha"><i
+                    class="bi bi-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // 1. DICCIONARIO DE DATOS (Solución a la restricción de lectura de carpetas)
+        const terrainData = {
+            "General": ["point.png"],
+            "Chalnath": ["chalnath_b_1.png", "chalnath_b_2.png", "chalnath_m_1.png", "chalnath_m_2.png", "chalnath_m_3.png", "chalnath_m_4.png", "chalnath_m_5.png", "chalnath_m_6.png"],
+            "Gallowdark": ["gallowdark_a_1.png", "gallowdark_a_2.png", "gallowdark_a_3.png", "gallowdark_a_4.png", "gallowdark_b_1.png", "gallowdark_b_2.png", "gallowdark_b_3.png", "gallowdark_s_1.png", "gallowdark_s_2.png", "gallowdark_s_3.png", "gallowdark_s_4.png"],
+            "Moroch": ["moroch_a_1.png", "moroch_a_2.png", "moroch_b_1.png", "moroch_b_2.png", "moroch_m_1.png", "moroch_m_2.png", "moroch_m_3.png"],
+            "Nachmunt": ["nachmunt_b_1.png", "nachmunt_b_2.png", "nachmunt_g_1.png", "nachmunt_s_1.png", "nachmunt_s_2.png", "nachmunt_t_1.png", "nachmunt_t_2.png", "nachmunt_t_3.png", "nachmunt_t_4.png", "nachmunt_t_5.png", "nachmunt_t_6.png", "nachmunt_t_7.png"],
+            "Octarius": ["octarius_b_1.png", "octarius_b_2.png", "octarius_g_1.png", "octarius_m_1.png", "octarius_m_2.png", "octarius_m_3.png", "octarius_p_1.png", "octarius_p_2.png", "octarius_p_3.png", "octarius_t_1.png", "octarius_t_2.png", "octarius_t_3.png"],
+            "Tombworld": ["tomb_world_a_1.png", "tomb_world_a_2.png", "tomb_world_a_3.png", "tomb_world_a_4.png", "tomb_world_b_1.png", "tomb_world_b_2.png", "tomb_world_b_3.png", "tomb_world_b_4.png", "tomb_world_c_1.png", "tomb_world_c_2.png", "tomb_world_c_3.png", "tomb_world_c_4.png", "tomb_world_c_5.png", "tomb_world_s_1.png", "tomb_world_s_2.png", "tomb_world_t.png"],
+            "Volkus": ["volkus_lr_1.png", "volkus_lr_2.png", "volkus_obs_1.png", "volkus_obs_2.png", "volkus_obs_3.png", "volkus_obs_4.png", "volkus_obs_5.png", "volkus_sr_1.png", "volkus_sr_2.png", "volkus_v_1.png", "volkus_v_2.png"],
+            "WTC": ["wtc_b_1.png", "wtc_b_3.png", "wtc_b_5.png", "wtc_b_6.png", "wtc_c_2.png", "wtc_m_1.png", "wtc_m_2.png", "wtc_m_3.png", "wtc_m_4.png", "wtc_m_5.png", "wtc_m_6.png", "wtc_m_7.png", "wtc_m_8.png", "wtc_m_9.png", "wtc_m_10.png", "wtc_p_1.png"],
+            "Otros": ["others_b_1.png", "others_b_2.png", "others_b_3.png", "others_b_4.png", "others_b_5.png", "others_m_1.png", "others_t_1.png"]
+        };
+
+        // DICCIONARIO DE DIMENSIONES NATIVAS
+        const pieceDimensions = {
+            // --- Gallowdark (Horcasombría) ---
+            "gallowdark_a_1.png": { w: 359, h: 52 },
+            "gallowdark_a_2.png": { w: 450, h: 52 },
+            "gallowdark_a_3.png": { w: 359, h: 52 },
+            "gallowdark_a_4.png": { w: 450, h: 52 },
+            "gallowdark_b_1.png": { w: 159, h: 24 },
+            "gallowdark_b_2.png": { w: 159, h: 38 },
+            "gallowdark_b_3.png": { w: 251, h: 52 },
+            "gallowdark_s_1.png": { w: 53, h: 52 },
+            "gallowdark_s_2.png": { w: 53, h: 52 },
+            "gallowdark_s_3.png": { w: 53, h: 52 },
+            "gallowdark_s_4.png": { w: 53, h: 52 },
+
+            // --- Tombworld (Mundo Tumba) ---
+            "tomb_world_a_1.png": { w: 450, h: 52 },
+            "tomb_world_a_2.png": { w: 450, h: 52 },
+            "tomb_world_a_3.png": { w: 450, h: 52 },
+            "tomb_world_a_4.png": { w: 450, h: 52 },
+            "tomb_world_b_1.png": { w: 157, h: 24 },
+            "tomb_world_b_2.png": { w: 157, h: 24 },
+            "tomb_world_b_3.png": { w: 251, h: 52 },
+            "tomb_world_b_4.png": { w: 251, h: 52 },
+            "tomb_world_c_1.png": { w: 186, h: 240 },
+            "tomb_world_c_2.png": { w: 170, h: 152 },
+            "tomb_world_c_3.png": { w: 122, h: 124 },
+            "tomb_world_c_4.png": { w: 78, h: 122 },
+            "tomb_world_c_5.png": { w: 103, h: 114 },
+            "tomb_world_s_1.png": { w: 53, h: 52 },
+            "tomb_world_s_2.png": { w: 53, h: 52 },
+            "tomb_world_t.png": { w: 183, h: 184 },
+
+            // --- Octarius ---
+            "octarius_b_1.png": { w: 262, h: 407 },
+            "octarius_b_2.png": { w: 213, h: 390 },
+            "octarius_g_1.png": { w: 407, h: 408 },
+            "octarius_m_1.png": { w: 285, h: 95 },
+            "octarius_m_2.png": { w: 330, h: 101 },
+            "octarius_m_3.png": { w: 369, h: 104 },
+            "octarius_p_1.png": { w: 190, h: 147 },
+            "octarius_p_2.png": { w: 114, h: 89 },
+            "octarius_p_3.png": { w: 260, h: 116 },
+            "octarius_t_1.png": { w: 245, h: 245 },
+            "octarius_t_2.png": { w: 234, h: 312 },
+            "octarius_t_3.png": { w: 249, h: 285 },
+
+            // --- Volkus ---
+            "volkus_lr_1.png": { w: 347, h: 234 },
+            "volkus_lr_2.png": { w: 372, h: 262 },
+            "volkus_obs_1.png": { w: 176, h: 219 },
+            "volkus_obs_2.png": { w: 233, h: 138 },
+            "volkus_obs_3.png": { w: 177, h: 84 },
+            "volkus_obs_4.png": { w: 177, h: 119 },
+            "volkus_obs_5.png": { w: 134, h: 66 },
+            "volkus_sr_1.png": { w: 391, h: 205 },
+            "volkus_sr_2.png": { w: 361, h: 196 },
+            "volkus_v_1.png": { w: 431, h: 461 },
+            "volkus_v_2.png": { w: 456, h: 336 },
+
+            // -- Moroch --
+            "moroch_a_1.png": { w: 333, h: 365 },
+            "moroch_a_2.png": { w: 340, h: 242 },
+            "moroch_b_1.png": { w: 675, h: 472 },
+            "moroch_b_2.png": { w: 360, h: 501 },
+            "moroch_m_1.png": { w: 356, h: 131 },
+            "moroch_m_2.png": { w: 356, h: 115 },
+            "moroch_m_3.png": { w: 161, h: 98 },
+
+            // -- Nachmund --
+            "nachmunt_b_1.png": { w: 411, h: 406 },
+            "nachmunt_b_2.png": { w: 263, h: 187 },
+            "nachmunt_g_1.png": { w: 572, h: 198 },
+            "nachmunt_s_1.png": { w: 164, h: 159 },
+            "nachmunt_s_2.png": { w: 195, h: 307 },
+            "nachmunt_t_1.png": { w: 151, h: 146 },
+            "nachmunt_t_2.png": { w: 173, h: 145 },
+            "nachmunt_t_3.png": { w: 95, h: 233 },
+            "nachmunt_t_4.png": { w: 141, h: 307 },
+            "nachmunt_t_5.png": { w: 224, h: 141 },
+            "nachmunt_t_6.png": { w: 95, h: 126 },
+            "nachmunt_t_7.png": { w: 95, h: 132 },
+
+            // -- Torneo de Campeonato Mundial --
+            "wtc_b_1.png": { w: 366, h: 233 },
+            "wtc_b_3.png": { w: 366, h: 233 },
+            "wtc_b_5.png": { w: 322, h: 195 },
+            "wtc_b_6.png": { w: 323, h: 195 },
+            "wtc_c_2.png": { w: 118, h: 99 },
+            "wtc_m_1.png": { w: 507, h: 305 },
+            "wtc_m_2.png": { w: 139, h: 74 },
+            "wtc_m_3.png": { w: 210, h: 65 },
+            "wtc_m_4.png": { w: 508, h: 306 },
+            "wtc_m_5.png": { w: 303, h: 102 },
+            "wtc_m_6.png": { w: 310, h: 102 },
+            "wtc_m_7.png": { w: 306, h: 105 },
+            "wtc_m_8.png": { w: 331, h: 325 },
+            "wtc_m_9.png": { w: 503, h: 311 },
+            "wtc_m_10.png": { w: 503, h: 311 },
+            "wtc_p_1.png": { w: 31, h: 31 },
+
+            // -- otros --
+            "others_b_1.png": { w: 335, h: 310 },
+            "others_b_2.png": { w: 362, h: 237 },
+            "others_b_3.png": { w: 378, h: 254 },
+            "others_b_4.png": { w: 409, h: 266 },
+            "others_b_5.png": { w: 153, h: 168 },
+            "others_m_1.png": { w: 304, h: 205 },
+            "others_t_1.png": { w: 273, h: 274 },
+
+            // -- Chalnath --
+            "chalnath_b_1.png": { w: 513, h: 331 },
+            "chalnath_b_2.png": { w: 535, h: 534 },
+            "chalnath_m_1.png": { w: 391, h: 386 },
+            "chalnath_m_2.png": { w: 215, h: 173 },
+            "chalnath_m_3.png": { w: 380, h: 389 },
+            "chalnath_m_4.png": { w: 611, h: 631 },
+            "chalnath_m_5.png": { w: 298, h: 189 },
+            "chalnath_m_6.png": { w: 324, h: 207 },
+
+            "point.png": { w: 183, h: 184 }
+        };
+        
+
+        // Mantén el factor de escala que calibraste empíricamente
+        const TERRAIN_SCALE_FACTOR = 0.585;
+
+        const basePathMap = "./resources/creacion-mapas/Mapas-generales/";
+        const basePathTerrain = "./resources/creacion-mapas/";
+
+        let selectedPiece = null;
+
+        // --- VARIABLES DE HISTORIAL (UNDO/REDO) ---
+        let historyStack = [];
+        let historyIndex = -1;
+        let isRestoringHistory = false;
+        let keyboardModified = false; // Bandera para evitar spam de guardado
+
+        // --- VARIABLES MODO CUADRÍCULA (GRID SNAPPING) ---
+        let isGridModeActive = false;
+        const GRID_SIZE = 90; // 3 pulgadas x 30px
+
+        // Listas de piezas restrictivas
+        const gridWallPieces = [
+            "gallowdark_a_1.png", "gallowdark_a_2.png", "gallowdark_a_3.png", "gallowdark_a_4.png", "gallowdark_b_1.png", "gallowdark_b_2.png", "gallowdark_b_3.png",
+            "tomb_world_a_1.png", "tomb_world_a_2.png", "tomb_world_a_3.png", "tomb_world_a_4.png", "tomb_world_b_1.png", "tomb_world_b_2.png", "tomb_world_b_3.png", "tomb_world_b_4.png",
+            "wtc_m_1.png", "wtc_m_4.png", "wtc_m_5.png", "wtc_m_6.png", "wtc_m_7.png", "wtc_m_8.png", "wtc_m_9.png", "wtc_m_10.png"
+        ];
+        const gridPillarPieces = [
+            "gallowdark_s_1.png", "gallowdark_s_2.png", "gallowdark_s_3.png", "gallowdark_s_4.png",
+            "tomb_world_s_1.png", "tomb_world_s_2.png",
+            "wtc_p_1.png"
+        ];
+
+        // Inicialización
+        document.addEventListener("DOMContentLoaded", () => {
+            loadPalette();
+            setupWorkspaceEvents();
+
+            // Retrasar levemente la carga del estado para asegurar la construcción del DOM
+            setTimeout(() => {
+                const loaded = loadMapState();
+                if (!loaded) {
+                    // Si no hay datos guardados, inicia con el mapa por defecto
+                    changeMap();
+                }
+            }, 100);
+        });
+
+        // 2. LÓGICA DE LA INTERFAZ Y AUTO-ESCALA
+        function changeMap(isRestoring = false, preserveZoom = false) {
+            const select = document.getElementById("map-select");
+            const mapImg = document.getElementById("map-bg");
+            const workspace = document.getElementById("workspace");
+            const wrapper = document.getElementById("workspace-wrapper");
+            const val = select.value;
+
+            // Cambiar la imagen
+            mapImg.src = basePathMap + val;
+
+            // Motor de Proporciones (1 pulgada = 30px)
+            const SCALE_PX_PER_INCH = 30;
+            let widthInches, heightInches;
+
+            if (val.includes("map-cq-long")) {
+                widthInches = 27.7;
+                heightInches = 23.9;
+            } else if (val.includes("map-cq-short")) {
+                widthInches = 27.7;
+                heightInches = 23.9;
+            } else {
+                widthInches = 30.0;
+                heightInches = 22.4;
+            }
+
+            const finalWidth = widthInches * SCALE_PX_PER_INCH;
+            const finalHeight = heightInches * SCALE_PX_PER_INCH;
+
+            workspace.style.width = finalWidth + "px";
+            workspace.style.height = finalHeight + "px";
+
+            // --- LÓGICA DE AUTOESCALA AL CARGAR ---
+            // Ajustar automáticamente el zoom solo cuando corresponda.
+            if (!preserveZoom) {
+                const availableWidth = window.innerWidth * 0.90;
+
+                if (finalWidth > availableWidth) {
+                    currentZoomLevel = availableWidth / finalWidth;
+                } else {
+                    currentZoomLevel = 1.0;
+                }
+            }
+
+            // Aplicar el zoom actual, tanto si se calculó como si se conservó.
+            wrapper.style.transform = `scale(${currentZoomLevel})`;
+
+            if (!isRestoring) {
+                saveMapState();
+            }
+        }
+
+        // Función específica para aplicar Zoom Manual
+        function applyZoom(delta) {
+            const wrapper = document.getElementById("workspace-wrapper");
+            currentZoomLevel += delta;
+
+            // Forzar límites matemáticos
+            if (currentZoomLevel < MIN_ZOOM) currentZoomLevel = MIN_ZOOM;
+            if (currentZoomLevel > MAX_ZOOM) currentZoomLevel = MAX_ZOOM;
+
+            wrapper.style.transform = `scale(${currentZoomLevel})`;
+        }
+
+        function loadPalette() {
+            const kz = document.getElementById("kz-select").value;
+            const container = document.getElementById("palette-container");
+            container.innerHTML = "";
+
+            const pieces = terrainData[kz] || [];
+
+            pieces.forEach(filename => {
+                // Lógica de rutas basada en tu descripción
+                const folder = kz === "General" ? "" : kz + "/";
+                const src = basePathTerrain + folder + filename;
+
+                const img = document.createElement("img");
+                img.src = src;
+                img.className = "palette-item";
+                img.draggable = false; // Desactivamos el drag nativo del navegador
+
+                // Al hacer clic en la paleta, se añade al centro del lienzo
+                img.onclick = () => addPieceToWorkspace(src);
+                container.appendChild(img);
+            });
+        }
+
+        // --- MOTOR DE ENCAJE A CUADRÍCULA ---
+        function snapToGrid(piece) {
+            if (!isGridModeActive || !piece) return;
+
+            const imgSrc = piece.querySelector('img').src;
+            const filename = imgSrc.split('/').pop();
+
+            const isWall = gridWallPieces.includes(filename);
+            const isPillar = gridPillarPieces.includes(filename);
+
+            if (!isWall && !isPillar) return;
+
+            let currentX = parseFloat(piece.style.left || 0);
+            let currentY = parseFloat(piece.style.top || 0);
+
+            // Convertir la rotación a un valor equivalente entre 0 y 359 grados.
+            const rawRotation = Number(piece.dataset.rotation) || 0;
+            const rotation = ((rawRotation % 360) + 360) % 360;
+
+            const isHorizontal = rotation === 0 || rotation === 180;
+            const isVertical = rotation === 90 || rotation === 270;
+
+            // No aplicar el encaje de muros a una orientación diagonal.
+            if (isWall && !isHorizontal && !isVertical) return;
+
+            // Obtener el ancho y alto real escalado (evita el hardcode de 15px)
+            const imgEl = piece.querySelector('img');
+            const rectW =
+                parseFloat(imgEl.style.width) || imgEl.offsetWidth;
+
+            const rectH =
+                parseFloat(imgEl.style.height) || imgEl.offsetHeight;
+
+            // Si la imagen aún no tiene tamaño, esperar a que termine de cargar.
+            if (!(rectW > 0) || !(rectH > 0)) return;
+
+            if (isPillar) {
+                // Pilares (S1, S2, etc) en intersecciones (cada 90px)
+                const offsetX = rectW / 2;
+                const offsetY = rectH / 2;
+
+                currentX =
+                    Math.round((currentX + offsetX) / GRID_SIZE) * GRID_SIZE - offsetX;
+
+                currentY =
+                    Math.round((currentY + offsetY) / GRID_SIZE) * GRID_SIZE - offsetY;
+            } else if (isWall) {
+                // Muros (A1, A2, B1, etc) encajan estrictamente entre pilares
+                const thicknessOffset = isHorizontal ? (rectH / 2) : (rectW / 2);
+
+                if (isHorizontal) {
+                    // Muro horizontal: Anclado estrictamente al eje Y en incrementos de 90px
+                    currentY = Math.round((currentY + thicknessOffset) / GRID_SIZE) * GRID_SIZE - thicknessOffset;
+                    // Y avanza por tramos de 45px en el eje X
+                    currentX = Math.round(currentX / (GRID_SIZE / 2)) * (GRID_SIZE / 2);
+                } else {
+                    // Muro vertical: Anclado estrictamente al eje X en incrementos de 90px
+                    currentX = Math.round((currentX + thicknessOffset) / GRID_SIZE) * GRID_SIZE - thicknessOffset;
+                    // Y avanza por tramos de 45px en el eje Y
+                    currentY = Math.round(currentY / (GRID_SIZE / 2)) * (GRID_SIZE / 2);
+                }
+            }
+
+            piece.style.left = currentX + "px";
+            piece.style.top = currentY + "px";
+        }
+
+        // 3. LÓGICA DEL LIENZO Y PIEZAS
+        function addPieceToWorkspace(src) {
+            const workspace = document.getElementById("workspace");
+
+            const piece = document.createElement("div");
+            piece.className = "map-piece";
+            piece.dataset.rotation = 0;
+
+            const img = document.createElement("img");
+            img.src = src;
+
+            // Extraer el nombre del archivo de la ruta
+            const filename = src.split('/').pop();
+
+            // Si la pieza está registrada, forzamos su tamaño ajustado
+            if (pieceDimensions[filename]) {
+                const nativeW = pieceDimensions[filename].w;
+                const nativeH = pieceDimensions[filename].h;
+
+                let specificScaleFactor = TERRAIN_SCALE_FACTOR; // 0.585 por defecto para las killzones
+
+                img.style.width = (nativeW * specificScaleFactor) + "px";
+                img.style.height = (nativeH * specificScaleFactor) + "px";
+            }
+
+            piece.appendChild(img);
+            workspace.appendChild(piece);
+
+            // Centrar la pieza dentro del mapa usando sus dimensiones sin zoom.
+            const centerPiece = () => {
+                // Evita modificar una pieza eliminada mientras cargaba su imagen.
+                if (!piece.isConnected) return;
+
+                const pieceWidth = img.offsetWidth;
+                const pieceHeight = img.offsetHeight;
+
+                piece.style.left =
+                    ((workspace.clientWidth - pieceWidth) / 2) + "px";
+
+                piece.style.top =
+                    ((workspace.clientHeight - pieceHeight) / 2) + "px";
+            };
+
+            centerPiece();
+
+            if (!pieceDimensions[filename]) {
+                const centerAndSave = () => {
+                    if (!piece.isConnected) return;
+
+                    centerPiece();
+
+                    if (isGridModeActive) {
+                        normalizeGridRotation(piece);
+                        snapToGrid(piece);
+                    }
+
+                    saveMapState();
+                };
+
+                if (img.complete && img.naturalWidth > 0) {
+                    centerPiece();
+                } else {
+                    img.addEventListener("load", centerAndSave, { once: true });
+                }
+            }
+
+            // Eventos de ratón para el Drag & Drop manual
+            piece.addEventListener("mousedown", startDrag);
+
+            // Evento para seleccionar la pieza
+            piece.addEventListener("click", (e) => {
+                e.stopPropagation();
+                selectPiece(piece);
+            });
+
+            selectPiece(piece);
+
+            if (isGridModeActive) {
+                normalizeGridRotation(piece);
+                snapToGrid(piece);
+            }
+
+            saveMapState();
+        }
+
+        // 4. CONTROL DE ESTADOS Y MOVIMIENTO (DRAG & DROP)
+        let isDragging = false;
+        let dragStart = { mouseX: 0, mouseY: 0, left: 0, top: 0 };
+
+        function startDrag(e) {
+            if (e.button !== 0) return; // solo clic izquierdo
+            if (!e.target.classList.contains('map-piece')) return;
+
+            isDragging = true;
+            selectPiece(e.target);
+
+            dragStart = {
+                mouseX: e.clientX,
+                mouseY: e.clientY,
+                left: parseFloat(e.target.style.left) || 0,
+                top: parseFloat(e.target.style.top) || 0
+            };
+
+            document.addEventListener("mousemove", dragPiece);
+            document.addEventListener("mouseup", stopDrag);
+        }
+
+        function dragPiece(e) {
+            if (!isDragging || !selectedPiece) return;
+
+            const dx = (e.clientX - dragStart.mouseX) / currentZoomLevel;
+            const dy = (e.clientY - dragStart.mouseY) / currentZoomLevel;
+
+            selectedPiece.style.left = (dragStart.left + dx) + "px";
+            selectedPiece.style.top = (dragStart.top + dy) + "px";
+        }
+
+        function stopDrag(e) {
+            isDragging = false;
+            document.removeEventListener("mousemove", dragPiece);
+            document.removeEventListener("mouseup", stopDrag);
+            if (selectedPiece) snapToGrid(selectedPiece);
+            saveMapState(); // el dedupe por JSON ya ignora estados idénticos
+        }
+
+        // 5. CONTROLES DEL PANEL (Botones visuales de la referencia)
+        function selectPiece(piece) {
+            if (selectedPiece) selectedPiece.classList.remove("selected");
+            selectedPiece = piece;
+            selectedPiece.classList.add("selected");
+            document.getElementById("controls-panel").classList.add("active");
+        }
+
+        function deselectAll() {
+            if (selectedPiece) selectedPiece.classList.remove("selected");
+            selectedPiece = null;
+            document.getElementById("controls-panel").classList.remove("active");
+        }
+
+        function setupWorkspaceEvents() {
+            // Deseleccionar si se hace clic en el fondo
+            document.getElementById("workspace").addEventListener("click", deselectAll);
+        }
+
+        function rotateSelected(degrees, skipSave = false) {
+            if (!selectedPiece) return;
+
+            // Determinar si la pieza es de cuadrícula estricta (Muros o Pilares)
+            const imgSrc = selectedPiece.querySelector('img').src;
+            const filename = imgSrc.split('/').pop();
+            const isStrictGrid = gridWallPieces.includes(filename) || gridPillarPieces.includes(filename);
+
+            if (isGridModeActive && isStrictGrid) {
+                normalizeGridRotation(selectedPiece);
+            }
+
+            let currentRotation = Number(selectedPiece.dataset.rotation) || 0;
+
+            // Si el modo cuadrícula está activo Y la pieza es un muro/pilar, forzar giro de 90°
+            if (isGridModeActive && isStrictGrid) {
+                // Si venía de girar a la izquierda (ej -15) rotamos -90, si era derecha rotamos +90
+                const snapDegrees = (degrees > 0) ? 90 : -90;
+                currentRotation = (currentRotation + snapDegrees) % 360;
+            } else {
+                // Si es un barril, escombro, o el modo grid está apagado, gira suavemente los grados especificados (15°)
+                currentRotation = (currentRotation + degrees) % 360;
+            }
+
+            selectedPiece.dataset.rotation = currentRotation;
+            selectedPiece.style.transform = `rotate(${currentRotation}deg)`;
+
+            // Re-evaluar el encaje (snapping) si está en modo grid, porque al girar cambian sus ejes
+            if (isGridModeActive && isStrictGrid) {
+                snapToGrid(selectedPiece);
+            }
+
+            if (!skipSave) saveMapState();
+        }
+
+        function moveSelected(dx, dy, skipSave = false) {
+            if (!selectedPiece) return;
+            const currentLeft = parseFloat(selectedPiece.style.left) || 0;
+            const currentTop = parseFloat(selectedPiece.style.top) || 0;
+            selectedPiece.style.left = (currentLeft + dx) + "px";
+            selectedPiece.style.top = (currentTop + dy) + "px";
+            if (!skipSave) saveMapState();
+        }
+
+        function getMovementStep(piece, axis) {
+            if (!isGridModeActive) return 5;
+
+            const filename = piece.querySelector("img").src.split("/").pop();
+
+            const isPillar = gridPillarPieces.includes(filename);
+            const isWall = gridWallPieces.includes(filename);
+
+            if (isPillar) {
+                return GRID_SIZE;
+            }
+
+            if (isWall) {
+                const rawRotation = Number(piece.dataset.rotation) || 0;
+                const rotation = ((rawRotation % 360) + 360) % 360;
+
+                const isHorizontal = rotation === 0 || rotation === 180;
+
+                if (isHorizontal) {
+                    return axis === "x" ? GRID_SIZE / 2 : GRID_SIZE;
+                }
+
+                return axis === "x" ? GRID_SIZE : GRID_SIZE / 2;
+            }
+
+            // Mantener el paso de 45px para piezas no restringidas.
+            return GRID_SIZE / 2;
+        }
+
+        function moveFromUI(dirX, dirY) {
+            if (!selectedPiece) return;
+
+            movePieceWrapper(dirX, dirY);
+            saveMapState();
+        }
+
+        function deleteSelected() {
+            if (!selectedPiece) return;
+            selectedPiece.remove();
+            deselectAll();
+            saveMapState();
+        }
+
+        // 6. EXPORTACIÓN DEL MAPA A PNG
+        function exportMap() {
+            // Ocultar elementos UI (bordes de selección) antes de la captura
+            deselectAll();
+
+            const workspace = document.getElementById("workspace");
+
+            // Uso de html2canvas para renderizar el DOM como imagen
+            html2canvas(workspace, {
+                backgroundColor: null, // Mantiene transparencias si las hubiera
+                scale: 2 // Aumenta la resolución de salida
+            }).then(canvas => {
+                const link = document.createElement("a");
+                link.download = "mapa_personalizado.png";
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            }).catch(err => {
+                console.error("Error al exportar el mapa:", err);
+                alert("Hubo un error al generar la imagen. Revisa la consola.");
+            });
+        }
+
+        // --- SISTEMA DE AUTOGUARDADO (LOCALSTORAGE) ---
+
+        function saveMapState() {
+            const workspace = document.getElementById("workspace");
+            const pieces = Array.from(workspace.querySelectorAll('.map-piece')).map(piece => {
+                const img = piece.querySelector('img');
+                return {
+                    src: img.src,
+                    left: piece.style.left,
+                    top: piece.style.top,
+                    rotation: piece.dataset.rotation || 0,
+                    width: img.style.width,
+                    height: img.style.height
+                };
+            });
+
+            const state = {
+                mapBg: document.getElementById("map-select").value,
+                pieces: pieces
+            };
+
+            // GESTIÓN DE HISTORIAL EN MEMORIA (Undo/Redo)
+            if (!isRestoringHistory) {
+                const serializedState = JSON.stringify(state);
+
+                const currentHistoryState =
+                    historyIndex >= 0
+                        ? JSON.stringify(historyStack[historyIndex])
+                        : null;
+
+                // Solo una modificación real crea una nueva rama del historial.
+                if (serializedState !== currentHistoryState) {
+                    // Si había acciones para rehacer, descartarlas ahora.
+                    if (historyIndex < historyStack.length - 1) {
+                        historyStack = historyStack.slice(0, historyIndex + 1);
+                    }
+
+                    historyStack.push(state);
+                    historyIndex = historyStack.length - 1;
+                }
+            }
+
+            localStorage.setItem(
+                'killTeamMapCreatorState',
+                JSON.stringify(state)
+            );
+        }
+
+        function loadMapState() {
+            const savedStateStr = localStorage.getItem('killTeamMapCreatorState');
+            if (!savedStateStr) return false;
+
+            try {
+                const state = JSON.parse(savedStateStr);
+
+                // 1. Restaurar Fondo del Mapa
+                if (state.mapBg) {
+                    const mapSelect = document.getElementById("map-select");
+                    mapSelect.value = state.mapBg;
+                    changeMap(true); // <-- CORRECCIÓN: true le indica que NO sobrescriba el saveState
+                }
+
+                // 2. Restaurar Piezas
+                if (state.pieces && state.pieces.length > 0) {
+                    const workspace = document.getElementById("workspace");
+
+                    state.pieces.forEach(p => {
+                        const piece = document.createElement("div");
+                        piece.className = "map-piece";
+                        piece.dataset.rotation = p.rotation;
+                        piece.style.left = p.left;
+                        piece.style.top = p.top;
+                        piece.style.transform = `rotate(${p.rotation}deg)`;
+
+                        const img = document.createElement("img");
+                        img.src = p.src;
+                        if (p.width) img.style.width = p.width;
+                        if (p.height) img.style.height = p.height;
+
+                        piece.appendChild(img);
+                        workspace.appendChild(piece);
+
+                        piece.addEventListener("mousedown", startDrag);
+                        piece.addEventListener("click", (e) => {
+                            e.stopPropagation();
+                            selectPiece(piece);
+                        });
+                    });
+                }
+
+                // Registrar inmediatamente el mapa restaurado en el historial.
+                saveMapState();
+
+                // La notificación solo informa; no modifica el estado.
+                showLoadNotification();
+
+                return true;
+            } catch (e) {
+                console.error("Error restaurando el estado del mapa:", e);
+                return false;
+            }
+        }
+
+        function clearAllMap() {
+            if (confirm("¿Estás seguro de borrar todas las piezas del mapa?")) {
+                const workspace = document.getElementById("workspace");
+                // Eliminar solo las piezas, conservando la imagen de fondo
+                const pieces = workspace.querySelectorAll('.map-piece');
+                pieces.forEach(p => p.remove());
+                deselectAll();
+                saveMapState(); // CRÍTICO: Informar al localStorage que el mapa ahora está vacío
+            }
+        }
+
+        // 7. NOTIFICACIÓN VISUAL DE CARGA
+        function showLoadNotification() {
+            const toast = document.createElement("div");
+            // Estilos de Bootstrap para una alerta elegante flotante
+            toast.className = "p-3 bg-success text-white fw-bold shadow-lg d-flex align-items-center";
+            toast.style.position = "fixed";
+            toast.style.bottom = "20px";
+            toast.style.right = "20px";
+            toast.style.borderRadius = "8px";
+            toast.style.zIndex = "2000";
+            toast.innerHTML = '<i class="bi bi-check-circle-fill me-2 fs-5"></i> Mapa cargado correctamente';
+
+            document.body.appendChild(toast);
+
+            // Lógica de desaparición progresiva
+            setTimeout(() => {
+                toast.style.transition = "opacity 0.5s ease";
+                toast.style.opacity = "0";
+
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+
+        const STORAGE_KEY = "killTeamMapCreatorState";
+        const MAX_HISTORY_STATES = 20;
+
+        function readStoredMap() {
+            try {
+                return localStorage.getItem(STORAGE_KEY);
+            } catch (error) {
+                console.warn("No se pudo leer el mapa guardado:", error);
+                return null;
+            }
+        }
+
+        function writeStoredMap(state) {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+                return true;
+            } catch (error) {
+                console.warn("No se pudo guardar el mapa:", error);
+                return false;
+            }
+        }
+
+        // --- CONTROL DE HISTORIAL (CTRL+Z / CTRL+Y) ---
+        function undoAction() {
+            if (historyIndex > 0) {
+                historyIndex--;
+                applyHistoryState(historyStack[historyIndex]);
+            }
+        }
+
+        function redoAction() {
+            if (historyIndex < historyStack.length - 1) {
+                historyIndex++;
+                applyHistoryState(historyStack[historyIndex]);
+            }
+        }
+
+        // --- VARIABLES DE ZOOM ---
+        let currentZoomLevel = 1.0;
+        const ZOOM_STEP = 0.1;
+        const MIN_ZOOM = 0.3;
+        const MAX_ZOOM = 2.0;
+
+        function applyHistoryState(state) {
+            isRestoringHistory = true; // Evitar ciclo infinito de guardado
+            deselectAll();
+
+            // 1. Restaurar Fondo
+            if (state.mapBg) {
+                const mapSelect = document.getElementById("map-select");
+                mapSelect.value = state.mapBg;
+                // Restaurar el mapa sin guardar ni modificar el zoom actual.
+                changeMap(true, true);
+            }
+
+            // 2. Limpiar e inyectar piezas de la fotografía histórica
+            const workspace = document.getElementById("workspace");
+            workspace.querySelectorAll('.map-piece').forEach(p => p.remove());
+
+            if (state.pieces && state.pieces.length > 0) {
+                state.pieces.forEach(p => {
+                    const piece = document.createElement("div");
+                    piece.className = "map-piece";
+                    piece.dataset.rotation = p.rotation;
+                    piece.style.left = p.left;
+                    piece.style.top = p.top;
+                    piece.style.transform = `rotate(${p.rotation}deg)`;
+
+                    const img = document.createElement("img");
+                    img.src = p.src;
+                    if (p.width) img.style.width = p.width;
+                    if (p.height) img.style.height = p.height;
+
+                    piece.appendChild(img);
+                    workspace.appendChild(piece);
+
+                    piece.addEventListener("mousedown", startDrag);
+                    piece.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        selectPiece(piece);
+                    });
+                });
+            }
+
+            // Re-sincronizar el almacenamiento local silenciosamente
+            localStorage.setItem('killTeamMapCreatorState', JSON.stringify(state));
+            isRestoringHistory = true;
+            try {
+                // Restaurar estado.
+            } finally {
+                isRestoringHistory = false;
+            }
+        }
+
+        function movePieceWrapper(dirX, dirY) {
+            if (!selectedPiece) return;
+
+            if (isGridModeActive) {
+                // Preparar la pieza antes de calcular y aplicar el movimiento.
+                normalizeGridRotation(selectedPiece);
+                snapToGrid(selectedPiece);
+            }
+
+            const stepX = getMovementStep(selectedPiece, "x");
+            const stepY = getMovementStep(selectedPiece, "y");
+
+            moveSelected(
+                dirX * stepX,
+                dirY * stepY,
+                true
+            );
+
+            if (isGridModeActive) {
+                snapToGrid(selectedPiece);
+            }
+        }
+
+        // --- MANEJO DE EVENTOS DEL TECLADO ---
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+            // Atajos de Historial (No requieren pieza seleccionada)
+            if (e.ctrlKey) {
+                if (e.key.toLowerCase() === 'z') { e.preventDefault(); undoAction(); return; }
+                if (e.key.toLowerCase() === 'y') { e.preventDefault(); redoAction(); return; }
+            }
+
+            // Atajos de Zoom (Globales, con la tecla normal o el pad numérico)
+            if (e.key === '+' || e.key === 'Add') { applyZoom(ZOOM_STEP); return; }
+            if (e.key === '-' || e.key === 'Subtract') { applyZoom(-ZOOM_STEP); return; }
+
+            // Todos los controles inferiores requieren que una pieza esté seleccionada
+            if (!selectedPiece) return;
+
+            const key = e.key.toLowerCase();
+
+            if (['w', 'a', 's', 'd', 'q', 'e', 'backspace', 'delete'].includes(key)) {
+                e.preventDefault();
+            }
+
+            switch (key) {
+                case 'w':
+                    movePieceWrapper(0, -1);
+                    keyboardModified = true;
+                    break;
+
+                case 's':
+                    movePieceWrapper(0, 1);
+                    keyboardModified = true;
+                    break;
+
+                case 'a':
+                    movePieceWrapper(-1, 0);
+                    keyboardModified = true;
+                    break;
+
+                case 'd':
+                    movePieceWrapper(1, 0);
+                    keyboardModified = true;
+                    break;
+                case 'q': rotateSelected(-15, true); keyboardModified = true; break;
+                case 'e': rotateSelected(15, true); keyboardModified = true; break;
+                case 'backspace':
+                case 'delete':
+                    deleteSelected();
+                    break;
+            }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            const key = e.key.toLowerCase();
+            if (['w', 'a', 's', 'd', 'q', 'e'].includes(key) && keyboardModified) {
+                // Hemos removido snapToGrid de aquí. Solo disparamos el autoguardado.
+                saveMapState();
+                keyboardModified = false;
+            }
+        });
+
+        function normalizeGridRotation(piece) {
+            if (!piece) return;
+
+            const img = piece.querySelector("img");
+            if (!img) return;
+
+            const filename = img.src.split("/").pop();
+
+            const isStrictGrid =
+                gridWallPieces.includes(filename) ||
+                gridPillarPieces.includes(filename);
+
+            // Las piezas libres conservan su rotación.
+            if (!isStrictGrid) return;
+
+            const currentRotation = Number(piece.dataset.rotation) || 0;
+
+            // Ajustar al múltiplo de 90 más cercano.
+            const snappedRotation = Math.round(currentRotation / 90) * 90;
+
+            // Guardar un ángulo equivalente entre 0 y 359 grados.
+            const normalizedRotation =
+                ((snappedRotation % 360) + 360) % 360;
+
+            piece.dataset.rotation = String(normalizedRotation);
+            piece.style.transform = `rotate(${normalizedRotation}deg)`;
+        }
+
+        function toggleGridMode() {
+            isGridModeActive =
+                document.getElementById("gridToggleSwitch").checked;
+
+            if (!isGridModeActive) return;
+
+            const pieces =
+                document.querySelectorAll("#workspace .map-piece");
+
+            pieces.forEach(piece => {
+                normalizeGridRotation(piece);
+                snapToGrid(piece);
+            });
+
+            // Guardar una sola vez, después de ajustar todo el mapa.
+            saveMapState();
+        }
+    </script>
+
+    <!-- Modal de Instrucciones -->
+    <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-info border-3">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold" id="instructionsModalLabel"><i
+                            class="bi bi-info-circle-fill text-info me-2"></i>Bienvenido al Creador de Mapas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light">
+                    <p class="lead fw-semibold text-center mb-4">Diseña escenarios personalizados, prepara misiones
+                        narrativas o recrea tus mapas competitivos favoritos para la comunidad de Kill Team.</p>
+
+                    <h6 class="fw-bold border-bottom pb-2 text-primary"><i class="bi bi-1-circle-fill me-1"></i>¿Cómo
+                        funciona?</h6>
+                    <ul class="mb-4 text-muted">
+                        <li>Selecciona la plantilla de mapa (Cerrado, Abierto, Narrativo) desde el primer menú.</li>
+                        <li>Elige la zona de aniquilación en el segundo menú para cargar sus piezas en la paleta
+                            central.</li>
+                        <li><strong>Haz clic</strong> en las piezas del carrusel para inyectarlas en el mapa.</li>
+                        <li>Haz clic en el botón <span class="badge bg-primary">Guardar Mapa</span> para descargar tu
+                            creación en un archivo PNG de alta resolución.</li>
+                    </ul>
+
+                    <h6 class="fw-bold border-bottom pb-2 text-dark"><i class="bi bi-keyboard-fill me-1"></i>Atajos de
+                        Teclado y Controles</h6>
+                    <p class="small text-muted mb-2">Para utilizar estos atajos, asegúrate de hacer clic primero sobre
+                        la pieza de terreno que deseas manipular para que quede marcada en naranja.</p>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush shadow-sm border rounded">
+                                <li class="list-group-item py-1"><kbd class="bg-dark">W</kbd> Mover Arriba</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">S</kbd> Mover Abajo</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">A</kbd> Mover Izquierda</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">D</kbd> Mover Derecha</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush shadow-sm border rounded">
+                                <li class="list-group-item py-1"><kbd class="bg-dark">Q</kbd> Rotar a la Izquierda</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">E</kbd> Rotar a la Derecha</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">+</kbd> Acercar pantalla</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">-</kbd> Alejar pantalla</li>
+                                <li class="list-group-item py-1"><kbd class="bg-danger">Supr / Backspace</kbd> Borrar
+                                    Pieza</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6 class="fw-bold border-bottom pb-2 text-warning"><i
+                            class="bi bi-clock-history me-1 text-warning"></i>Historial de Cambios</h6>
+                    <ul class="list-group list-group-flush shadow-sm border rounded">
+                        <li class="list-group-item py-1"><kbd class="bg-dark">Ctrl</kbd> + <kbd class="bg-dark">Z</kbd>
+                            Deshacer movimiento o acción.</li>
+                        <li class="list-group-item py-1"><kbd class="bg-dark">Ctrl</kbd> + <kbd class="bg-dark">Y</kbd>
+                            Rehacer paso.</li>
+                        <li class="list-group-item py-1 text-danger small"><i
+                                class="bi bi-exclamation-triangle-fill me-1"></i>Nota: Si presionas F5 o recargas la
+                            página de forma manual, el historial del teclado (Ctrl+Z) se borrará por completo,
+                            conservando solo la última posición en pantalla.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer bg-white justify-content-center">
+                    <button type="button" class="btn btn-primary px-5 fw-bold"
+                        data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de Bootstrap (Requerido para que funcionen los Modales) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

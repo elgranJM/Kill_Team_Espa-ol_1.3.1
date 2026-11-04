@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elgranjm.github.io/Kill_Team_Espa-ol_1.3.1/sitemap.xml

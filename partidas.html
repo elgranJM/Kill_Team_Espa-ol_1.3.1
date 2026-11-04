@@ -4,14 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de Partidas - Kill Team BattleKit</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Etiquetas SEO Específicas del Módulo -->
+    <title>Gestor de Partidas Estándar - Kill Team BattleKit Español</title>
+    <meta name="description"
+        content="Calculadora de Puntos de Victoria y gestor de estado para partidas 1v1 de Warhammer Kill Team. Registra TacOps ocultas, bajas, Puntos de Mando y despliegue de mapas.">
+    <meta name="keywords"
+        content="Kill Team, calculadora PV, gestor partidas, tracker, Warhammer, wargame, 1v1, TacOps, KillOps">
+    <meta name="author" content="Javier">
+
+    <!-- Open Graph (Visualización en Redes Sociales/Discord) -->
+    <meta property="og:title" content="Gestor de Partidas - Kill Team BattleKit">
+    <meta property="og:description" content="Asistente digital de mesa para partidas estándar de Kill Team.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elgranjm.github.io/Kill_Team_Espa-ol_1.3.1/partidas.html">
+    <meta property="og:image"
+        content="https://elgranjm.github.io/Kill_Team_Espa-ol_1.3.1/resources/marca-de-agua-naranja.png">
+
+    <!-- Recursos de Estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -306,27 +318,34 @@
                             <span class="small fw-bold text-muted" style="font-size: 0.72rem;">
                                 <i class="bi bi-phone me-1"></i>Vista Móvil:
                             </span>
-                            <span class="badge bg-light text-secondary border py-0 px-1" style="font-size: 0.65rem;">Opcional</span>
+                            <span class="badge bg-light text-secondary border py-0 px-1"
+                                style="font-size: 0.65rem;">Opcional</span>
                         </div>
                         <div class="btn-group btn-group-sm w-100" role="group" aria-label="Modo de visualización móvil">
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeAll" autocomplete="off" checked onchange="setMobilePlayerView('all')">
-                            <label class="btn btn-outline-secondary fw-bold py-1" for="viewModeAll" style="font-size: 0.75rem;">
+                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeAll"
+                                autocomplete="off" checked onchange="setMobilePlayerView('all')">
+                            <label class="btn btn-outline-secondary fw-bold py-1" for="viewModeAll"
+                                style="font-size: 0.75rem;">
                                 <i class="bi bi-arrows-vertical me-1"></i>Ambos (Scroll)
                             </label>
 
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP1" autocomplete="off" onchange="setMobilePlayerView('p1')">
-                            <label class="btn btn-outline-primary fw-bold py-1" for="viewModeP1" style="font-size: 0.75rem;">
+                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP1"
+                                autocomplete="off" onchange="setMobilePlayerView('p1')">
+                            <label class="btn btn-outline-primary fw-bold py-1" for="viewModeP1"
+                                style="font-size: 0.75rem;">
                                 <i class="bi bi-person-fill me-1"></i>Jugador 1
                             </label>
 
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP2" autocomplete="off" onchange="setMobilePlayerView('p2')">
-                            <label class="btn btn-outline-danger fw-bold py-1" for="viewModeP2" style="font-size: 0.75rem;">
+                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP2"
+                                autocomplete="off" onchange="setMobilePlayerView('p2')">
+                            <label class="btn btn-outline-danger fw-bold py-1" for="viewModeP2"
+                                style="font-size: 0.75rem;">
                                 <i class="bi bi-person-fill me-1"></i>Jugador 2
                             </label>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Tableros de Jugadores -->
                 <div class="row g-4 mb-4">
 

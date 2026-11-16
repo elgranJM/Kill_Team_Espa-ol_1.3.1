@@ -56,7 +56,8 @@
         #workspace {
             position: relative;
             transform-origin: top left;
-            transition: transform 0.2s ease; /* Transición movida al lienzo interno */
+            transition: transform 0.2s ease;
+            /* Transición movida al lienzo interno */
         }
 
         #map-bg {
@@ -487,10 +488,10 @@
             "wtc_m_5.png": { w: 303, h: 102 },
             "wtc_m_6.png": { w: 310, h: 102 },
             "wtc_m_7.png": { w: 306, h: 105 },
-            "wtc_m_8.png": { w: 331, h: 325 },
+            "wtc_m_8.png": { w: 314, h: 308 },
             "wtc_m_9.png": { w: 503, h: 311 },
             "wtc_m_10.png": { w: 503, h: 311 },
-            "wtc_p_1.png": { w: 31, h: 31 },
+            "wtc_p_1.png": { w: 53, h: 52 },
 
             // -- otros --
             "others_b_1.png": { w: 335, h: 310 },
@@ -543,21 +544,32 @@
 
         function getPieceTolerance(piece) {
             if (!isGridModeActive) return { left: 0, right: 0, top: 0, bottom: 0 };
-            
+
             const filename = piece.querySelector('img').src.split('/').pop();
             let rotation = ((Number(piece.dataset.rotation) || 0) % 360 + 360) % 360;
-            
-            // Excepción quirúrgica para el muro asimétrico
-            if (filename === "tomb_world_a_2.png") {
-                return GRID_TOLERANCE_TWA2[rotation] || GRID_TOLERANCE_TWA2[0];
+
+            // Muros estándar clasificados por tamaño
+            if (gridWallLong.includes(filename)) return GRID_TOLERANCE_LONG[rotation] || GRID_TOLERANCE_LONG[0];
+            if (gridWallMedium.includes(filename)) return GRID_TOLERANCE_MEDIUM[rotation] || GRID_TOLERANCE_MEDIUM[0];
+            if (gridWallTiny.includes(filename) || gridWallB2.includes(filename)) return GRID_TOLERANCE_TINY[rotation] || GRID_TOLERANCE_TINY[0];
+
+            // Excepciones y Pilares
+            if (gridPillars.includes(filename)) {
+                return GRID_TOLERANCE_PILLARS[rotation] || GRID_TOLERANCE_PILLARS[0];
             }
-            
-            return GRID_TOLERANCE[rotation] || GRID_TOLERANCE[0];
+            if (gridWallWtcIrregular.includes(filename)) {
+                return GRID_TOLERANCE_WTC_IRREGULAR[rotation] || GRID_TOLERANCE_WTC_IRREGULAR[0];
+            }
+            if (gridWallWtcM8.includes(filename)) {
+                return GRID_TOLERANCE_WTC_M8[rotation] || GRID_TOLERANCE_WTC_M8[0];
+            }
+
+            // Fallback de seguridad (Muros Short o libres)
+            return { left: 50, right: 50, top: 40, bottom: 40 };
         }
-        
-        function clampToWorkspace(x, y, piece) {
+
+        function getPieceBounds(piece) {
             const workspace = document.getElementById("workspace");
-            
             const tol = getPieceTolerance(piece);
             let rotation = ((Number(piece.dataset.rotation) || 0) % 360 + 360) % 360;
 
@@ -565,14 +577,19 @@
             let realWidth = isVertical ? piece.offsetHeight : piece.offsetWidth;
             let realHeight = isVertical ? piece.offsetWidth : piece.offsetHeight;
 
-            const minX = -tol.left;
-            const minY = -tol.top;
-            const maxX = workspace.clientWidth - realWidth + tol.right;
-            const maxY = workspace.clientHeight - realHeight + tol.bottom;
-
             return {
-                x: Math.max(minX, Math.min(x, maxX)),
-                y: Math.max(minY, Math.min(y, maxY))
+                minX: -tol.left,
+                minY: -tol.top,
+                maxX: workspace.clientWidth - realWidth + tol.right,
+                maxY: workspace.clientHeight - realHeight + tol.bottom
+            };
+        }
+
+        function clampToWorkspace(x, y, piece) {
+            const bounds = getPieceBounds(piece);
+            return {
+                x: Math.max(bounds.minX, Math.min(x, bounds.maxX)),
+                y: Math.max(bounds.minY, Math.min(y, bounds.maxY))
             };
         }
 
@@ -580,26 +597,73 @@
         let isGridModeActive = false;
         const GRID_SIZE = 115; // Constante matemática exacta (Telemetría)
 
-        // 🛠️ ZONA DE PRUEBA Y ERROR: Ajusta los márgenes según la rotación específica de la pieza
-        const GRID_TOLERANCE = {
+        // --- MATRICES DE TOLERANCIA POR TAMAÑO DE PIEZA ---
+
+        // Muros Largos (450px) - Gallowdark A2/A4 y Tombworld A1-A4
+        const GRID_TOLERANCE_LONG = {
             0: { left: 50, right: 50, top: 40, bottom: 40 },
-            90: { left: 100, right: -30, top: -30, bottom: 100 },
+            90: { left: 140, right: -70, top: -70, bottom: 140 },
             180: { left: 50, right: 50, top: 40, bottom: 40 },
-            270: { left: 100, right: -30, top: -30, bottom: 100 }
+            270: { left: 140, right: -70, top: -70, bottom: 140 }
         };
-        // Matriz exclusiva para compensar el acolchado transparente de Tomb World A2
-        const GRID_TOLERANCE_TWA2 = {
+
+        // Muros Medianos (359px) - Gallowdark A1/A3
+        const GRID_TOLERANCE_MEDIUM = {
             0: { left: 50, right: 50, top: 40, bottom: 40 },
-            90: { left: 140, right: -70, top: -70, bottom: 140 }, // Ajustado para estirarse más
+            90: { left: 100, right: -75, top: -75, bottom: 100 },
             180: { left: 50, right: 50, top: 40, bottom: 40 },
-            270: { left: 140, right: -70, top: -70, bottom: 140 } // Ajustado para estirarse más
+            270: { left: 100, right: -75, top: -75, bottom: 100 }
+        };
+
+        // Muros Pequeños y B2 (159px) - Gallowdark B1/B2 y Tombworld B1/B2
+        const GRID_TOLERANCE_TINY = {
+            0: { left: 50, right: 50, top: 40, bottom: 40 },
+            90: { left: 55, right: -30, top: -30, bottom: 55 },
+            180: { left: 50, right: 50, top: 40, bottom: 40 },
+            270: { left: 55, right: -30, top: -30, bottom: 55 }
+        };
+        // Matriz exclusiva para muros irregulares de WTC (wtc_m_4, wtc_m_9, wtc_m_10)
+        const GRID_TOLERANCE_WTC_IRREGULAR = {
+            0: { left: 50, right: 50, top: 40, bottom: 40 },
+            90: { left: 100, right: -30, top: 15, bottom: 100 }, // Aumentado 'top' de -30 a 30 para alcanzar el borde superior
+            180: { left: 50, right: 50, top: 40, bottom: 40 },
+            270: { left: 100, right: 15, top: -30, bottom: 100 }  // Aumentado 'right' de -30 a 30 para alcanzar el borde derecho
+        };
+        // Matriz exclusiva para la pieza cuadrada grande de WTC (wtc_m_8.png)
+        const GRID_TOLERANCE_WTC_M8 = {
+            0: { left: 50, right: 50, top: 40, bottom: 40 },
+            90: { left: 45, right: 45, top: 45, bottom: 45 },
+            180: { left: 50, right: 50, top: 40, bottom: 40 },
+            270: { left: 45, right: 45, top: 45, bottom: 45 }
+        };
+        // Matriz simétrica para pilares (no sufren desplazamiento de masa al rotar)
+        const GRID_TOLERANCE_PILLARS = {
+            0: { left: 20, right: 20, top: 20, bottom: 20 },
+            90: { left: 20, right: 20, top: 20, bottom: 20 },
+            180: { left: 20, right: 20, top: 20, bottom: 20 },
+            270: { left: 20, right: 20, top: 20, bottom: 20 }
         };
 
         // Clasificación estricta de piezas restrictivas
         const gridWallLong = [
             "gallowdark_a_2.png", "gallowdark_a_4.png",
-            "tomb_world_a_1.png", "tomb_world_a_2.png", "tomb_world_a_3.png", "tomb_world_a_4.png",
-            "wtc_m_1.png", "wtc_m_4.png", "wtc_m_5.png", "wtc_m_6.png", "wtc_m_7.png", "wtc_m_8.png", "wtc_m_9.png", "wtc_m_10.png"
+            "tomb_world_a_1.png", "tomb_world_a_2.png", "tomb_world_a_3.png", "tomb_world_a_4.png"
+        ];
+
+        const gridWallWtcIrregular = [
+            "wtc_m_1.png", "wtc_m_4.png", "wtc_m_9.png", "wtc_m_10.png"
+        ];
+
+        const gridWallWtcDoors = [
+            "wtc_m_5.png", "wtc_m_6.png"
+        ];
+
+        const gridWallWtcM7 = [
+            "wtc_m_7.png"
+        ];
+
+        const gridWallWtcM8 = [
+            "wtc_m_8.png"
         ];
 
         const gridWallMedium = [
@@ -621,13 +685,13 @@
         ];
 
         const gridPillarsCorner = [
-            "gallowdark_s_1.png", "gallowdark_s_2.png", 
+            "gallowdark_s_1.png", "gallowdark_s_2.png",
             "tomb_world_s_1.png"
         ];
 
         const gridPillarsFull = [
-            "gallowdark_s_3.png", "gallowdark_s_4.png", 
-            "tomb_world_s_2.png", 
+            "gallowdark_s_3.png", "gallowdark_s_4.png",
+            "tomb_world_s_2.png",
             "wtc_p_1.png"
         ];
 
@@ -780,6 +844,49 @@
             });
         }
 
+        function getGridOffsets(filename, rotation) {
+            const isHorizontal = (rotation === 0 || rotation === 180);
+            const HALF_GRID = GRID_SIZE / 2;
+
+            // 1. Pilares (Salto completo)
+            if (gridPillarsCorner.includes(filename)) return { stepX: GRID_SIZE, stepY: GRID_SIZE, offsetX: -5, offsetY: 0 };
+            if (gridPillarsFull.includes(filename)) return { stepX: GRID_SIZE, stepY: GRID_SIZE, offsetX: -3.5, offsetY: 1.5 };
+
+            // 2. Muros (Medio salto)
+            let config = { stepX: HALF_GRID, stepY: HALF_GRID, offsetX: 0, offsetY: 0 };
+
+            if (gridWallLong.includes(filename)) {
+                config.offsetX = isHorizontal ? -5.6 : -4.2;
+                config.offsetY = isHorizontal ? -0.5 : 0;
+            } else if (gridWallWtcIrregular.includes(filename)) {
+                const vals = { 0: [-25.6, -10.5], 90: [-24.2, -30.0], 180: [-10.6, -25.5], 270: [-13.2, -15.0] };
+                [config.offsetX, config.offsetY] = vals[rotation];
+            } else if (gridWallWtcDoors.includes(filename)) {
+                const vals = { 0: [-25.6, -10.5], 90: [-24.2, -25.0], 180: [-10.6, -25.5], 270: [-9.2, -10.0] };
+                [config.offsetX, config.offsetY] = vals[rotation];
+            } else if (gridWallWtcM7.includes(filename)) {
+                const vals = { 0: [-10.6, -10.5], 90: [-24.2, -10.0], 180: [-25.6, -20.5], 270: [-14.2, -20.0] };
+                [config.offsetX, config.offsetY] = vals[rotation];
+            } else if (gridWallWtcM8.includes(filename)) {
+                const vals = { 0: [-30.6, -15.5], 90: [-24.2, -30.0], 180: [-10.6, -25.5], 270: [-19.2, -10.0] };
+                [config.offsetX, config.offsetY] = vals[rotation];
+            } else if (gridWallMedium.includes(filename)) {
+                config.offsetX = isHorizontal ? 22.4 : 20.9;
+                config.offsetY = -2.0;
+            } else if (gridWallShort.includes(filename)) {
+                const vals = { 0: [-4.0, 0], 90: [-2.5, 56.5], 180: [-5.5, 0], 270: [-61.5, 56.0] };
+                [config.offsetX, config.offsetY] = vals[rotation];
+            } else if (gridWallTiny.includes(filename)) {
+                config.offsetX = isHorizontal ? 23.0 : -35.0;
+                config.offsetY = isHorizontal ? 5.5 : 66.5;
+            } else if (gridWallB2.includes(filename)) {
+                const vals = { 0: [25.0, 6.5], 90: [-38.0, 61.5], 180: [24.0, -3.5], 270: [-28.0, 61.5] };
+                [config.offsetX, config.offsetY] = vals[rotation];
+            }
+
+            return config;
+        }
+
         // --- MOTOR DE ENCAJE A CUADRÍCULA (ALGEBRAICO CORREGIDO) ---
         function snapToGrid(piece) {
             if (!isGridModeActive || !piece) return;
@@ -787,113 +894,18 @@
             const imgSrc = piece.querySelector('img').src;
             const filename = imgSrc.split('/').pop();
 
-            const isLongWall = gridWallLong.includes(filename);
-            const isMediumWall = gridWallMedium.includes(filename);
-            const isShortWall = gridWallShort.includes(filename);
-            const isTinyWall = gridWallTiny.includes(filename);
-            const isB2Wall = gridWallB2.includes(filename);
-            const isPillar = gridPillars.includes(filename);
-
-            // Incluir isTinyWall en el bloqueo de piezas libres
-            if (!isLongWall && !isMediumWall && !isShortWall && !isTinyWall && !isB2Wall && !isPillar) return;
+            if (!isStrictGridPiece(filename)) return;
 
             let currentX = parseFloat(piece.style.left || 0);
             let currentY = parseFloat(piece.style.top || 0);
 
             let rawRotation = Number(piece.dataset.rotation) || 0;
             let rotation = ((rawRotation % 360) + 360) % 360;
-            const isHorizontal = (rotation === 0 || rotation === 180);
 
-            let offsetX = 0;
-            let offsetY = 0;
-            let stepX = GRID_SIZE / 2;
-            let stepY = GRID_SIZE / 2;
+            // Extraemos la configuración limpia
+            const { stepX, stepY, offsetX, offsetY } = getGridOffsets(filename, rotation);
 
-            if (gridPillarsCorner.includes(filename)) {
-                stepX = GRID_SIZE; // CRÍTICO: Se reinyecta el salto estricto de intersección
-                stepY = GRID_SIZE; // CRÍTICO: Se reinyecta el salto estricto de intersección
-                
-                // Preparamos la matriz para que calibres las esquinas según su giro
-                if (rotation === 0) {
-                    offsetX = -5;
-                    offsetY = 0;
-                } else if (rotation === 90) {
-                    offsetX = -5; 
-                    offsetY = 0;  
-                } else if (rotation === 180) {
-                    offsetX = -5; 
-                    offsetY = 0;  
-                } else if (rotation === 270) {
-                    offsetX = -5; 
-                    offsetY = 0; 
-                }
-            } else if (gridPillarsFull.includes(filename)) {
-                stepX = GRID_SIZE; // CRÍTICO: Se reinyecta el salto estricto de intersección
-                stepY = GRID_SIZE; // CRÍTICO: Se reinyecta el salto estricto de intersección
-                
-                // Los pilares completos tienen su masa al centro, la rotación no los descentra
-                offsetX = -3.5;
-                offsetY = 1.5;
-            } else if (isLongWall) {
-                stepX = GRID_SIZE / 2;
-                stepY = GRID_SIZE / 2;
-                if (isHorizontal) {
-                    offsetX = -5.6;
-                    offsetY = -0.5;
-                } else {
-                    offsetX = -4.2;
-                    offsetY = 0;
-                }
-            } else if (isMediumWall) {
-                if (isHorizontal) {
-                    offsetX = -5.5 + 27.9; 
-                    offsetY = -2.0;
-                } else {
-                    offsetX = 20.9; 
-                    offsetY = -2.0;
-                }
-            } else if (isShortWall) {
-                // Piezas B3 y B4: Tratamiento asimétrico estricto por ángulo
-                if (rotation === 180) {
-                    offsetX = -5.5;    
-                    offsetY = 0;
-                } else if (rotation === 0) {
-                    offsetX = -4.0;
-                    offsetY = 0;
-                } else if (rotation === 90) {
-                    offsetX = -2.5;  
-                    offsetY = 56.5;   
-                } else if (rotation === 270) {
-                    offsetX = -61.5;  
-                    offsetY = 56;   
-                }
-            } else if (isTinyWall) {
-                stepX = GRID_SIZE / 2;
-                stepY = GRID_SIZE / 2;
-                if (isHorizontal) {
-                    offsetX = 23.0;
-                    offsetY = 5.5;
-                } else {
-                    offsetX = -35.0;
-                    offsetY = 66.5;
-                }
-            } else if (isB2Wall) {
-                // Tratamiento asimétrico estricto por ángulo
-                if (rotation === 180) {
-                    offsetX = 24.0;
-                    offsetY = 1.5;
-                } else if (rotation === 0) {
-                    offsetX = 25.0;
-                    offsetY = 11.5;   
-                } else if (rotation === 90) {
-                    offsetX = -38.0; // -33.0 - 5
-                    offsetY = 61.5;
-                } else if (rotation === 270) {
-                    offsetX = -28.0; // -33.0 + 5
-                    offsetY = 61.5;
-                }
-            }
-
+            // Aplicamos la matemática
             currentX = Math.round((currentX - offsetX) / stepX) * stepX + offsetX;
             currentY = Math.round((currentY - offsetY) / stepY) * stepY + offsetY;
 
@@ -1024,31 +1036,21 @@
 
             // 1. Filtro de colisión en grupo (Group Bumper)
             dragOffsets.forEach(item => {
-                const tol = getPieceTolerance(item.piece);
-                let rotation = ((Number(item.piece.dataset.rotation) || 0) % 360 + 360) % 360;
-
-                let isVertical = (rotation === 90 || rotation === 270);
-                let realWidth = isVertical ? item.piece.offsetHeight : item.piece.offsetWidth;
-                let realHeight = isVertical ? item.piece.offsetWidth : item.piece.offsetHeight;
-
-                const minX = -tol.left;
-                const minY = -tol.top;
-                const maxX = workspace.clientWidth - realWidth + tol.right;
-                const maxY = workspace.clientHeight - realHeight + tol.bottom;
+                const bounds = getPieceBounds(item.piece);
 
                 const targetX = item.left + dx;
                 const targetY = item.top + dy;
 
-                if (targetX < minX) {
-                    dx = minX - item.left;
-                } else if (targetX > maxX) {
-                    dx = maxX - item.left;
+                if (targetX < bounds.minX) {
+                    dx = bounds.minX - item.left;
+                } else if (targetX > bounds.maxX) {
+                    dx = bounds.maxX - item.left;
                 }
 
-                if (targetY < minY) {
-                    dy = minY - item.top;
-                } else if (targetY > maxY) {
-                    dy = maxY - item.top;
+                if (targetY < bounds.minY) {
+                    dy = bounds.minY - item.top;
+                } else if (targetY > bounds.maxY) {
+                    dy = bounds.maxY - item.top;
                 }
             });
 
@@ -1201,6 +1203,19 @@
             });
         }
 
+        function isStrictGridPiece(filename) {
+            return gridWallLong.includes(filename) ||
+                gridWallWtcIrregular.includes(filename) ||
+                gridWallWtcDoors.includes(filename) ||
+                gridWallWtcM7.includes(filename) ||
+                gridWallWtcM8.includes(filename) ||
+                gridWallMedium.includes(filename) ||
+                gridWallShort.includes(filename) ||
+                gridWallTiny.includes(filename) ||
+                gridWallB2.includes(filename) ||
+                gridPillars.includes(filename);
+        }
+
         function rotateSelected(degrees, skipSave = false) {
             const selection = document.querySelectorAll('.map-piece.selected');
             if (selection.length === 0) return;
@@ -1208,7 +1223,7 @@
             selection.forEach(piece => {
                 const imgSrc = piece.querySelector('img').src;
                 const filename = imgSrc.split('/').pop();
-                const isStrictGrid = gridWallLong.includes(filename) || gridWallMedium.includes(filename) || gridWallShort.includes(filename) || gridWallTiny.includes(filename) || gridWallB2.includes(filename) || gridPillars.includes(filename);
+                const isStrictGrid = isStrictGridPiece(filename);
 
                 if (isGridModeActive && isStrictGrid) {
                     normalizeGridRotation(piece);
@@ -1241,8 +1256,8 @@
 
             const workspace = document.getElementById("workspace");
 
-            const primaryStepX = getMovementStep(selection[0], "x") * dirX;
-            const primaryStepY = getMovementStep(selection[0], "y") * dirY;
+            const primaryStepX = getMovementStep(selection[0]) * dirX;
+            const primaryStepY = getMovementStep(selection[0]) * dirY;
 
             let canMove = true;
 
@@ -1258,19 +1273,9 @@
                 const targetX = currentLeft + primaryStepX;
                 const targetY = currentTop + primaryStepY;
 
-                const tol = getPieceTolerance(piece);
-                let rotation = ((Number(piece.dataset.rotation) || 0) % 360 + 360) % 360;
+                const bounds = getPieceBounds(piece);
 
-                let isVertical = (rotation === 90 || rotation === 270);
-                let realWidth = isVertical ? piece.offsetHeight : piece.offsetWidth;
-                let realHeight = isVertical ? piece.offsetWidth : piece.offsetHeight;
-
-                const minX = -tol.left;
-                const minY = -tol.top;
-                const maxX = workspace.clientWidth - realWidth + tol.right;
-                const maxY = workspace.clientHeight - realHeight + tol.bottom;
-
-                if (targetX < minX || targetX > maxX || targetY < minY || targetY > maxY) {
+                if (targetX < bounds.minX || targetX > bounds.maxX || targetY < bounds.minY || targetY > bounds.maxY) {
                     canMove = false;
                 }
             });
@@ -1389,15 +1394,11 @@
             saveMapState();
         }
 
-        function getMovementStep(piece, axis) {
+        function getMovementStep(piece) {
             if (!isGridModeActive) return 5;
 
             const filename = piece.querySelector("img").src.split("/").pop();
-            const isLongWall = gridWallLong.includes(filename);
-            const isShortWall = gridWallShort.includes(filename);
             const isPillar = gridPillars.includes(filename);
-
-            const isStrictGrid = gridWallLong.includes(filename) || gridWallMedium.includes(filename) || gridWallShort.includes(filename) || gridWallTiny.includes(filename) || gridWallB2.includes(filename) || gridPillars.includes(filename);
 
             // Pilares requieren salto completo para ir de esquina a esquina
             if (isPillar) return GRID_SIZE;
@@ -1476,12 +1477,11 @@
 
             const state = {
                 mapBg: document.getElementById("map-select").value,
-                zoom: currentZoomLevel, // NUEVO: Guardar el nivel de zoom
-                grid: isGridModeActive, // NUEVO: Guardar el estado de la cuadrícula
+                zoom: currentZoomLevel,
+                grid: isGridModeActive,
                 pieces: pieces
             };
 
-            // GESTIÓN DE HISTORIAL EN MEMORIA (Undo/Redo)
             if (!isRestoringHistory) {
                 const serializedState = JSON.stringify(state);
                 const currentHistoryState = historyIndex >= 0 ? JSON.stringify(historyStack[historyIndex]) : null;
@@ -1495,67 +1495,66 @@
                 }
             }
 
-            localStorage.setItem('killTeamMapCreatorState', JSON.stringify(state));
+            if (historyStack.length > MAX_HISTORY_STATES) historyStack.shift();
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }
+
+        function renderSavedPieces(piecesArray) {
+            const workspace = document.getElementById("workspace");
+            piecesArray.forEach(p => {
+                const piece = document.createElement("div");
+                piece.className = "map-piece";
+                piece.dataset.rotation = p.rotation;
+                piece.style.left = p.left;
+                piece.style.top = p.top;
+                piece.style.transform = `rotate(${p.rotation}deg)`;
+
+                const img = document.createElement("img");
+                img.src = p.src;
+                if (p.width) img.style.width = p.width;
+                if (p.height) img.style.height = p.height;
+
+                piece.appendChild(img);
+                workspace.appendChild(piece);
+
+                piece.addEventListener("mousedown", startDrag);
+                piece.addEventListener("click", (e) => e.stopPropagation());
+            });
         }
 
         function loadMapState() {
-            const savedStateStr = localStorage.getItem('killTeamMapCreatorState');
+            const savedStateStr = localStorage.getItem(STORAGE_KEY);
             if (!savedStateStr) return false;
 
             try {
                 const state = JSON.parse(savedStateStr);
 
-                // 1. Restaurar Fondo del Mapa
                 if (state.mapBg) {
                     const mapSelect = document.getElementById("map-select");
                     mapSelect.value = state.mapBg;
-                    // Restaurar enviando true para evitar sobrescritura, y true para preservar zoom manual
                     changeMap(true, true);
                 }
 
-                // Restaurar Zoom Físico y Visual
                 if (state.zoom) {
                     currentZoomLevel = state.zoom;
                     const workspace = document.getElementById("workspace");
                     const wrapper = document.getElementById("workspace-wrapper");
-                    
                     const baseW = parseFloat(workspace.style.width);
                     const baseH = parseFloat(workspace.style.height);
-                    
                     wrapper.style.width = (baseW * currentZoomLevel) + "px";
                     wrapper.style.height = (baseH * currentZoomLevel) + "px";
                     workspace.style.transform = `scale(${currentZoomLevel})`;
                 }
 
-                // NUEVO: Restaurar Estado del Switch de Cuadrícula
                 if (state.grid !== undefined) {
                     isGridModeActive = state.grid;
                     const switchEl = document.getElementById("gridToggleSwitch");
                     if (switchEl) switchEl.checked = isGridModeActive;
                 }
 
-                // 2. Restaurar Piezas
                 if (state.pieces && state.pieces.length > 0) {
-                    const workspace = document.getElementById("workspace");
-                    state.pieces.forEach(p => {
-                        const piece = document.createElement("div");
-                        piece.className = "map-piece";
-                        piece.dataset.rotation = p.rotation;
-                        piece.style.left = p.left;
-                        piece.style.top = p.top;
-                        piece.style.transform = `rotate(${p.rotation}deg)`;
-
-                        const img = document.createElement("img");
-                        img.src = p.src;
-                        if (p.width) img.style.width = p.width;
-                        if (p.height) img.style.height = p.height;
-
-                        piece.appendChild(img);
-                        workspace.appendChild(piece);
-
-                        piece.addEventListener("mousedown", startDrag);
-                        piece.addEventListener("click", (e) => e.stopPropagation());
-                    });
+                    renderSavedPieces(state.pieces);
                 }
 
                 saveMapState();
@@ -1641,7 +1640,7 @@
                 changeMap(true, true);
             }
 
-            // NUEVO: Sincronizar el interruptor y el estado de la cuadrícula con este punto exacto del historial
+            // Sincronizar el interruptor y el estado de la cuadrícula con este punto exacto del historial
             if (state.grid !== undefined) {
                 isGridModeActive = state.grid;
                 const switchEl = document.getElementById("gridToggleSwitch");
@@ -1653,29 +1652,10 @@
             workspace.querySelectorAll('.map-piece').forEach(p => p.remove());
 
             if (state.pieces && state.pieces.length > 0) {
-                state.pieces.forEach(p => {
-                    const piece = document.createElement("div");
-                    piece.className = "map-piece";
-                    piece.dataset.rotation = p.rotation;
-                    piece.style.left = p.left;
-                    piece.style.top = p.top;
-                    piece.style.transform = `rotate(${p.rotation}deg)`;
-
-                    const img = document.createElement("img");
-                    img.src = p.src;
-                    if (p.width) img.style.width = p.width;
-                    if (p.height) img.style.height = p.height;
-
-                    piece.appendChild(img);
-                    workspace.appendChild(piece);
-
-                    piece.addEventListener("mousedown", startDrag);
-                    piece.addEventListener("click", (e) => e.stopPropagation());
-                });
+                renderSavedPieces(state.pieces);
             }
 
-            // Re-sincronizar el almacenamiento local silenciosamente
-            localStorage.setItem('killTeamMapCreatorState', JSON.stringify(state));
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
             isRestoringHistory = false;
         }
 
@@ -1791,8 +1771,7 @@
             if (!img) return;
 
             const filename = img.src.split("/").pop();
-            // CORRECCIÓN: Usar las listas actualizadas
-            const isStrictGrid = gridWallLong.includes(filename) || gridWallMedium.includes(filename) || gridWallShort.includes(filename) || gridWallTiny.includes(filename) || gridWallB2.includes(filename) || gridPillars.includes(filename);
+            const isStrictGrid = isStrictGridPiece(filename);
 
             if (!isStrictGrid) return;
 

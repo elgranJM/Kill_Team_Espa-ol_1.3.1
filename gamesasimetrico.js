@@ -79,7 +79,7 @@ function executeResetGame() {
         gameState[p] = {
             strategicPloys: { 1: [], 2: [], 3: [], 4: [] },
             equipment: [],
-            team: document.getElementById(`${p}-team`)?.value || 'A',
+            team: defaultTeams[p],
             killOpVP: 0,
             tpScores: { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } }
         };
@@ -171,13 +171,12 @@ function changeMissionScore(playerPrefix, type, amount) {
 
     // --- ACCIÓN DE RESTAR ---
     if (amount < 0) {
-        if (currentScore > 0) {
-            // Descontar del registro del TP actual si tiene puntos registrados
-            if (scoredInCurrentTP > 0) {
-                gameState[playerPrefix].tpScores[type][currentTP]--;
-            }
+        if (currentScore > 0 && scoredInCurrentTP > 0) {
+            gameState[playerPrefix].tpScores[type][currentTP] += amount;
             updateCounter(elementId, amount, 6);
             calculateTotals();
+        } else if (currentScore > 0 && scoredInCurrentTP <= 0) {
+            mostrarNotificacion("No puedes restar puntos obtenidos en un Punto de Inflexión anterior.");
         }
         return;
     }
@@ -486,10 +485,7 @@ function onTurningPointChange() {
 
 function getPlayerPloysForTP(playerPrefix, tp) {
     if (!gameState[playerPrefix]) {
-        gameState[playerPrefix] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] } };
-    }
-    if (!gameState[playerPrefix].strategicPloys) {
-        gameState[playerPrefix].strategicPloys = { 1: [], 2: [], 3: [], 4: [] };
+        gameState[playerPrefix] = { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'A', killOpVP: 0, tpScores: { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } } };
     }
     if (!Array.isArray(gameState[playerPrefix].strategicPloys[tp])) {
         gameState[playerPrefix].strategicPloys[tp] = [];
@@ -842,7 +838,7 @@ function calculateKillOpAsymmetric() {
 
 function getPlayerEquipment(playerPrefix) {
     if (!gameState[playerPrefix]) {
-        gameState[playerPrefix] = { primary: null, strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [] };
+        gameState[playerPrefix] = { strategicPloys: { 1: [], 2: [], 3: [], 4: [] }, equipment: [], team: 'A', killOpVP: 0, tpScores: { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } } };
     }
     if (!Array.isArray(gameState[playerPrefix].equipment)) {
         gameState[playerPrefix].equipment = [];
@@ -1268,23 +1264,58 @@ function showPloyDetails(ployId) {
     modal.show();
 }
 
-// 4. Función de validación masiva si el usuario cambia de turno hacia atrás
+// 4. Función de validación masiva y recálculo desde memoria
 function validateAllScores() {
-    ['p1', 'p2', 'p3', 'p4'].forEach(playerPrefix => {
-        let currentTurn = getCurrentTurn();
+    let critKey = document.getElementById('global-critop')?.value;
 
-        // Revisar CritOp
-        let critEl = document.getElementById(`${playerPrefix}-crit-vp`);
-        let critKey = document.getElementById('global-critop').value;
-        if (critEl && critKey) {
-            let limit = calculateDynamicLimit('crit', critKey, currentTurn);
-            if (parseInt(critEl.innerText) > limit) critEl.innerText = limit;
+    ['p1', 'p2', 'p3', 'p4'].forEach(playerPrefix => {
+        if (!gameState[playerPrefix]) return;
+
+        // Garantizar que la estructura de memoria existe
+        if (!gameState[playerPrefix].tpScores) {
+            gameState[playerPrefix].tpScores = { crit: { 1: 0, 2: 0, 3: 0, 4: 0 } };
+        }
+        if (!gameState[playerPrefix].tpScores.crit) {
+            gameState[playerPrefix].tpScores.crit = { 1: 0, 2: 0, 3: 0, 4: 0 };
         }
 
+        let runningTotal = 0;
+
+        // Barrido secuencial de turnos para reconstruir el puntaje total legal
+        for (let tp = 1; tp <= 4; tp++) {
+            let scoredThisTP = gameState[playerPrefix].tpScores.crit[tp] || 0;
+
+            // Regla 1: Jamás se pueden anotar más de 2 PV por TP individual
+            if (scoredThisTP > 2) {
+                scoredThisTP = 2;
+            }
+
+            // Regla 2: Respetar el límite acumulativo del JSON si hay misión seleccionada
+            if (critKey) {
+                let cumulativeLimit = calculateDynamicLimit('crit', critKey, tp);
+                if (runningTotal + scoredThisTP > cumulativeLimit) {
+                    scoredThisTP = cumulativeLimit - runningTotal; // Poda los puntos excedentes
+                }
+            } else {
+                // Si deseleccionan la misión, se anulan los puntos
+                scoredThisTP = 0;
+            }
+
+            // Guardar el valor corregido en la memoria RAM
+            gameState[playerPrefix].tpScores.crit[tp] = scoredThisTP;
+            runningTotal += scoredThisTP;
+        }
+
+        // Sincronizar el total validado matemáticamente con el DOM
+        let critEl = document.getElementById(`${playerPrefix}-crit-vp`);
+        if (critEl) {
+            critEl.innerText = runningTotal;
+        }
     });
+
+    // Recalcular los grandes totales (CritOp + KillOp) y ejecutar el autoguardado
     calculateTotals();
 }
-
 // --- SISTEMA DE NOTIFICACIONES ---
 function mostrarNotificacion(mensaje) {
     const toastEl = document.getElementById('limitToast');

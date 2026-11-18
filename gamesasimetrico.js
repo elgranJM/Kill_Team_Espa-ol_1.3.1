@@ -476,8 +476,21 @@ function onTurningPointChange() {
     const currentTP = getCurrentTurn();
     document.querySelectorAll('.current-tp-label').forEach(el => el.innerText = currentTP);
 
-    // CORRECCIÓN: Actualizar ardides para los 4 jugadores
     ['p1', 'p2', 'p3', 'p4'].forEach(p => updateActiveStrategicPloysDisplay(p));
+
+    // Transformación dinámica del botón de cierre de turno
+    const btnKillOp = document.getElementById('btn-score-killop');
+    if (btnKillOp) {
+        if (currentTP === 4) {
+            btnKillOp.className = "btn btn-warning text-dark btn-sm fw-bold shadow-sm py-1 px-2";
+            btnKillOp.innerHTML = '<i class="bi bi-trophy-fill me-1"></i>Calcular Victoria';
+            btnKillOp.title = "Puntuar KillOp final y calcular victoria de la partida";
+        } else {
+            btnKillOp.className = "btn btn-danger text-white btn-sm fw-bold shadow-sm py-1 px-2";
+            btnKillOp.innerHTML = '<i class="bi bi-skull-fill me-1"></i>Puntuar KillOp';
+            btnKillOp.title = "Cerrar turno y puntuar Kill Op por equipos";
+        }
+    }
 
     validateAllScores();
     saveGameState();
@@ -767,6 +780,16 @@ function updateActiveStrategicPloysDisplay(playerPrefix) {
 
     activeContainer.innerHTML = html;
     syncStratSectionsHeight();
+}
+
+function executeTurnEnd() {
+    // 1. Siempre evalúa la KillOp del turno actual primero
+    calculateKillOpAsymmetric();
+
+    // 2. Si estamos en la ronda final, dispara el modal de victoria
+    if (getCurrentTurn() === 4) {
+        showMatchResult();
+    }
 }
 
 function calculateKillOpAsymmetric() {

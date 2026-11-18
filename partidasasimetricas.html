@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Etiquetas SEO Específicas del Módulo -->
     <title>Gestor de Partidas Asimétricas Multijugador - Kill Team BattleKit Español</title>
-    <meta name="description" content="Gestor algorítmico de partidas para 3 a 4 jugadores en Warhammer Kill Team. Cálculo dinámico de KillOps por equipos, eliminación de TacOps y soporte multijugador.">
-    <meta name="keywords" content="Kill Team multijugador, 2v2, 1v2, asimétrico, gestor partidas, calculadora PV, Warhammer, wargame">
+    <meta name="description"
+        content="Gestor algorítmico de partidas para 3 a 4 jugadores en Warhammer Kill Team. Cálculo dinámico de KillOps por equipos, eliminación de TacOps y soporte multijugador.">
+    <meta name="keywords"
+        content="Kill Team multijugador, 2v2, 1v2, asimétrico, gestor partidas, calculadora PV, Warhammer, wargame">
     <meta name="author" content="Javier">
 
     <!-- Open Graph (Visualización en Redes Sociales/Discord) -->
     <meta property="og:title" content="Gestor Multijugador - Kill Team BattleKit">
-    <meta property="og:description" content="Soporte para partidas de 3 a 4 jugadores o por equipos, con lógica asimétrica de KillOps.">
+    <meta property="og:description"
+        content="Soporte para partidas de 3 a 4 jugadores o por equipos, con lógica asimétrica de KillOps.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elgranjm.github.io/Kill_Team_Espa-ol_1.3.1/partidasasimetricas.html">
-    <meta property="og:image" content="https://elgranjm.github.io/Kill_Team_Espa-ol_1.3.1/resources/marca-de-agua-naranja.png">
+    <meta property="og:image"
+        content="https://elgranjm.github.io/Kill_Team_Espa-ol_1.3.1/resources/marca-de-agua-naranja.png">
 
     <!-- Recursos de Estilos -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -253,9 +257,10 @@
                     <div
                         class="bg-white p-1 px-3 rounded shadow-sm border d-flex flex-wrap align-items-center justify-content-center gap-2">
 
-                        <!-- 1. Botón Calcular Kill Op Asimétrica -->
-                        <button type="button" class="btn btn-danger btn-sm fw-bold shadow-sm py-1 px-2"
-                            onclick="calculateKillOpAsymmetric()" title="Cerrar turno y puntuar Kill Op por equipos">
+                        <!-- 1. Botón Calcular Kill Op Asimétrica / Calcular Victoria -->
+                        <button type="button" id="btn-score-killop"
+                            class="btn btn-danger text-white btn-sm fw-bold shadow-sm py-1 px-2"
+                            onclick="executeTurnEnd()" title="Cerrar turno y puntuar Kill Op por equipos">
                             <i class="bi bi-skull-fill me-1"></i>Puntuar KillOp
                         </button>
 
@@ -305,37 +310,48 @@
                             <span class="small fw-bold text-muted" style="font-size: 0.72rem;">
                                 <i class="bi bi-phone me-1"></i>Vista Móvil:
                             </span>
-                            <span class="badge bg-light text-secondary border py-0 px-1" style="font-size: 0.65rem;">Opcional</span>
+                            <span class="badge bg-light text-secondary border py-0 px-1"
+                                style="font-size: 0.65rem;">Opcional</span>
                         </div>
                         <div class="btn-group btn-group-sm w-100" role="group" aria-label="Modo de visualización móvil">
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeAll" autocomplete="off" checked onchange="setMobilePlayerView('all')">
-                            <label class="btn btn-outline-secondary fw-bold py-1 px-1" for="viewModeAll" style="font-size: 0.75rem;" title="Ver todos (Scroll)">
+                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeAll"
+                                autocomplete="off" checked onchange="setMobilePlayerView('all')">
+                            <label class="btn btn-outline-secondary fw-bold py-1 px-1" for="viewModeAll"
+                                style="font-size: 0.75rem;" title="Ver todos (Scroll)">
                                 <i class="bi bi-arrows-vertical"></i> Todos
                             </label>
 
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP1" autocomplete="off" onchange="setMobilePlayerView('p1')">
-                            <label class="btn btn-outline-primary fw-bold py-1 px-1" for="viewModeP1" style="font-size: 0.75rem;">
+                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP1"
+                                autocomplete="off" onchange="setMobilePlayerView('p1')">
+                            <label class="btn btn-outline-primary fw-bold py-1 px-1" for="viewModeP1"
+                                style="font-size: 0.75rem;">
                                 J1
                             </label>
 
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP2" autocomplete="off" onchange="setMobilePlayerView('p2')">
-                            <label class="btn btn-outline-danger fw-bold py-1 px-1" for="viewModeP2" style="font-size: 0.75rem;">
+                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP2"
+                                autocomplete="off" onchange="setMobilePlayerView('p2')">
+                            <label class="btn btn-outline-danger fw-bold py-1 px-1" for="viewModeP2"
+                                style="font-size: 0.75rem;">
                                 J2
                             </label>
-                            
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP3" autocomplete="off" onchange="setMobilePlayerView('p3')">
-                            <label class="btn btn-outline-success fw-bold py-1 px-1" for="viewModeP3" style="font-size: 0.75rem;">
+
+                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP3"
+                                autocomplete="off" onchange="setMobilePlayerView('p3')">
+                            <label class="btn btn-outline-success fw-bold py-1 px-1" for="viewModeP3"
+                                style="font-size: 0.75rem;">
                                 J3
                             </label>
 
-                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP4" autocomplete="off" onchange="setMobilePlayerView('p4')">
-                            <label class="btn btn-outline-warning fw-bold text-dark py-1 px-1" for="viewModeP4" id="labelViewModeP4" style="font-size: 0.75rem;">
+                            <input type="radio" class="btn-check" name="mobileViewRadio" id="viewModeP4"
+                                autocomplete="off" onchange="setMobilePlayerView('p4')">
+                            <label class="btn btn-outline-warning fw-bold text-dark py-1 px-1" for="viewModeP4"
+                                id="labelViewModeP4" style="font-size: 0.75rem;">
                                 J4
                             </label>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Tableros de Jugadores -->
                 <div class="row g-4 mb-4">
 
@@ -738,8 +754,11 @@
                                         style="width: 58px; height: 58px; object-fit: cover; background-color: white;">
                                     <div class="flex-grow-1 d-flex flex-column">
                                         <input type="text" class="name-input text-success text-start w-100 mb-1"
-                                            value="Jugador 3" placeholder="Nombre Jugador 3" style="font-size: 1.25rem;">
-                                        <select class="form-select form-select-sm fw-bold border-secondary shadow-sm py-0" id="p3-team" style="max-width: 130px; font-size: 0.75rem;">
+                                            value="Jugador 3" placeholder="Nombre Jugador 3"
+                                            style="font-size: 1.25rem;">
+                                        <select
+                                            class="form-select form-select-sm fw-bold border-secondary shadow-sm py-0"
+                                            id="p3-team" style="max-width: 130px; font-size: 0.75rem;">
                                             <option value="A">Equipo A</option>
                                             <option value="B">Equipo B</option>
                                             <option value="C" selected>Equipo C</option>
@@ -758,7 +777,8 @@
                             <!-- Selección de Facción -->
                             <div class="mb-2">
                                 <div class="input-group input-group-sm shadow-sm">
-                                    <span class="input-group-text bg-dark text-white fw-bold py-0 px-2" style="font-size: 0.75rem;">
+                                    <span class="input-group-text bg-dark text-white fw-bold py-0 px-2"
+                                        style="font-size: 0.75rem;">
                                         <i class="bi bi-person-vcard me-1"></i>Facción
                                     </span>
                                     <select class="form-select form-select-sm border-dark fw-bold" id="p3-faction">
@@ -781,13 +801,16 @@
                                     </span>
                                     <button class="btn btn-success btn-sm fw-bold shadow-sm py-0 px-2" type="button"
                                         id="p3-btn-select-equip" onclick="openEquipmentSelectModal('p3')" disabled
-                                        title="Seleccionar equipamiento antes de la batalla" style="font-size: 0.72rem;">
+                                        title="Seleccionar equipamiento antes de la batalla"
+                                        style="font-size: 0.72rem;">
                                         <i class="bi bi-gear-fill me-1"></i>Seleccionar
                                     </button>
                                 </div>
                                 <div id="p3-selected-equipment-container" class="equip-list-container">
                                     <div class="d-flex align-items-center justify-content-center h-100 py-1">
-                                        <small class="text-muted fst-italic text-center" style="font-size: 0.75rem;">Ningún equipamiento seleccionado (hasta 4).</small>
+                                        <small class="text-muted fst-italic text-center"
+                                            style="font-size: 0.75rem;">Ningún equipamiento seleccionado (hasta
+                                            4).</small>
                                     </div>
                                 </div>
                             </div>
@@ -796,16 +819,21 @@
                             <div class="row row-cols-1 row-cols-lg-2 g-2 mb-2 align-items-stretch">
                                 <!-- Columna 1: Puntos de Mando -->
                                 <div class="col">
-                                    <div class="bg-light p-2 rounded border h-100 d-flex flex-column justify-content-center align-items-center">
-                                        <div class="text-muted fw-bold text-uppercase mb-1 text-center" style="font-size: 0.72rem;">Puntos de Mando</div>
+                                    <div
+                                        class="bg-light p-2 rounded border h-100 d-flex flex-column justify-content-center align-items-center">
+                                        <div class="text-muted fw-bold text-uppercase mb-1 text-center"
+                                            style="font-size: 0.72rem;">Puntos de Mando</div>
                                         <div class="d-flex align-items-center justify-content-center">
                                             <button class="btn btn-danger counter-btn shadow-sm"
-                                                style="width: 32px; height: 32px; font-size: 1rem;" onclick="updateCounter('p3-cp', -1)">
+                                                style="width: 32px; height: 32px; font-size: 1rem;"
+                                                onclick="updateCounter('p3-cp', -1)">
                                                 <i class="bi bi-dash"></i>
                                             </button>
-                                            <span class="score-display mx-2 text-dark" id="p3-cp" style="font-size: 1.5rem;">2</span>
+                                            <span class="score-display mx-2 text-dark" id="p3-cp"
+                                                style="font-size: 1.5rem;">2</span>
                                             <button class="btn btn-success counter-btn shadow-sm"
-                                                style="width: 32px; height: 32px; font-size: 1rem;" onclick="updateCounter('p3-cp', 1)">
+                                                style="width: 32px; height: 32px; font-size: 1rem;"
+                                                onclick="updateCounter('p3-cp', 1)">
                                                 <i class="bi bi-plus"></i>
                                             </button>
                                         </div>
@@ -814,10 +842,12 @@
 
                                 <!-- Columna 2: Ardides Estratégicos -->
                                 <div class="col">
-                                    <div class="op-section border-warning border-2 border-opacity-50 h-100 d-flex flex-column justify-content-between p-2 mb-0">
+                                    <div
+                                        class="op-section border-warning border-2 border-opacity-50 h-100 d-flex flex-column justify-content-between p-2 mb-0">
                                         <div class="d-flex justify-content-between align-items-center mb-1">
                                             <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides (TP <span class="current-tp-label">1</span>)
+                                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides (TP <span
+                                                    class="current-tp-label">1</span>)
                                             </span>
                                             <button class="btn btn-warning btn-sm fw-bold shadow-sm py-0 px-2"
                                                 type="button" id="p3-btn-strat-ploys"
@@ -832,7 +862,8 @@
                                             class="d-flex flex-column gap-1 strat-ploys-container my-auto"
                                             style="min-height: 38px; max-height: 90px;">
                                             <div class="d-flex align-items-center justify-content-center h-100 py-1">
-                                                <small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún ardid activo.</small>
+                                                <small class="text-muted fst-italic text-center"
+                                                    style="font-size: 0.72rem;">Ningún ardid activo.</small>
                                             </div>
                                         </div>
                                     </div>
@@ -850,12 +881,15 @@
                                             </span>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-center my-auto">
-                                            <button class="btn btn-outline-danger counter-btn" style="width: 30px; height: 30px; font-size: 0.95rem;"
+                                            <button class="btn btn-outline-danger counter-btn"
+                                                style="width: 30px; height: 30px; font-size: 0.95rem;"
                                                 onclick="changeMissionScore('p3', 'crit', -1);">
                                                 <i class="bi bi-dash"></i>
                                             </button>
-                                            <span class="score-display mx-2 text-dark" id="p3-crit-vp" style="font-size: 1.4rem; min-width: 26px;">0</span>
-                                            <button class="btn btn-outline-success counter-btn" style="width: 30px; height: 30px; font-size: 0.95rem;"
+                                            <span class="score-display mx-2 text-dark" id="p3-crit-vp"
+                                                style="font-size: 1.4rem; min-width: 26px;">0</span>
+                                            <button class="btn btn-outline-success counter-btn"
+                                                style="width: 30px; height: 30px; font-size: 0.95rem;"
                                                 onclick="changeMissionScore('p3', 'crit', 1);">
                                                 <i class="bi bi-plus"></i>
                                             </button>
@@ -865,28 +899,37 @@
 
                                 <!-- 2. Kill Op (Asimétrico) -->
                                 <div class="col">
-                                    <div class="op-section border-success border-2 border-opacity-25 h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
+                                    <div
+                                        class="op-section border-success border-2 border-opacity-25 h-100 d-flex flex-column justify-content-between p-2 mb-0">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
                                             <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
                                                 <i class="bi bi-skull-fill text-danger me-1"></i>Kill Op
                                             </span>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="text-success fw-bold lh-sm" style="font-size: 0.7rem;">Incapacitados<br>(TP Actual)</span>
+                                            <span class="text-success fw-bold lh-sm"
+                                                style="font-size: 0.7rem;">Incapacitados<br>(TP Actual)</span>
                                             <div class="d-flex align-items-center">
-                                                <button class="btn btn-outline-danger counter-btn" style="width: 28px; height: 28px; font-size: 0.9rem;"
+                                                <button class="btn btn-outline-danger counter-btn"
+                                                    style="width: 28px; height: 28px; font-size: 0.9rem;"
                                                     onclick="updateCounter('p3-kills-current-tp', -1, 99);">
                                                     <i class="bi bi-dash"></i>
                                                 </button>
-                                                <span class="score-display mx-2 text-success" id="p3-kills-current-tp" style="font-size: 1.3rem; min-width: 24px;">0</span>
-                                                <button class="btn btn-outline-success counter-btn" style="width: 28px; height: 28px; font-size: 0.9rem;"
+                                                <span class="score-display mx-2 text-success" id="p3-kills-current-tp"
+                                                    style="font-size: 1.3rem; min-width: 24px;">0</span>
+                                                <button class="btn btn-outline-success counter-btn"
+                                                    style="width: 28px; height: 28px; font-size: 0.9rem;"
                                                     onclick="updateCounter('p3-kills-current-tp', 1, 99);">
                                                     <i class="bi bi-plus"></i>
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="bg-white p-1 rounded border text-center d-flex justify-content-center align-items-center mt-1">
-                                            <span class="small fw-bold text-muted" style="font-size: 0.7rem;">Total Kill Op: <strong id="p3-killop-total" class="text-success fs-6">0</strong></span>
+                                        <div
+                                            class="bg-white p-1 rounded border text-center d-flex justify-content-center align-items-center mt-1">
+                                            <span class="small fw-bold text-muted" style="font-size: 0.7rem;">Total Kill
+                                                Op: <strong id="p3-killop-total"
+                                                    class="text-success fs-6">0</strong></span>
                                         </div>
                                     </div>
                                 </div>
@@ -905,8 +948,11 @@
                                         style="width: 58px; height: 58px; object-fit: cover; background-color: white;">
                                     <div class="flex-grow-1 d-flex flex-column">
                                         <input type="text" class="name-input text-warning text-start w-100 mb-1"
-                                            value="Jugador 4" placeholder="Nombre Jugador 4" style="font-size: 1.25rem;">
-                                        <select class="form-select form-select-sm fw-bold border-secondary shadow-sm py-0" id="p4-team" style="max-width: 130px; font-size: 0.75rem;">
+                                            value="Jugador 4" placeholder="Nombre Jugador 4"
+                                            style="font-size: 1.25rem;">
+                                        <select
+                                            class="form-select form-select-sm fw-bold border-secondary shadow-sm py-0"
+                                            id="p4-team" style="max-width: 130px; font-size: 0.75rem;">
                                             <option value="A">Equipo A</option>
                                             <option value="B">Equipo B</option>
                                             <option value="C">Equipo C</option>
@@ -925,7 +971,8 @@
                             <!-- Selección de Facción -->
                             <div class="mb-2">
                                 <div class="input-group input-group-sm shadow-sm">
-                                    <span class="input-group-text bg-dark text-white fw-bold py-0 px-2" style="font-size: 0.75rem;">
+                                    <span class="input-group-text bg-dark text-white fw-bold py-0 px-2"
+                                        style="font-size: 0.75rem;">
                                         <i class="bi bi-person-vcard me-1"></i>Facción
                                     </span>
                                     <select class="form-select form-select-sm border-dark fw-bold" id="p4-faction">
@@ -948,13 +995,16 @@
                                     </span>
                                     <button class="btn btn-warning btn-sm fw-bold shadow-sm py-0 px-2" type="button"
                                         id="p4-btn-select-equip" onclick="openEquipmentSelectModal('p4')" disabled
-                                        title="Seleccionar equipamiento antes de la batalla" style="font-size: 0.72rem;">
+                                        title="Seleccionar equipamiento antes de la batalla"
+                                        style="font-size: 0.72rem;">
                                         <i class="bi bi-gear-fill me-1"></i>Seleccionar
                                     </button>
                                 </div>
                                 <div id="p4-selected-equipment-container" class="equip-list-container">
                                     <div class="d-flex align-items-center justify-content-center h-100 py-1">
-                                        <small class="text-muted fst-italic text-center" style="font-size: 0.75rem;">Ningún equipamiento seleccionado (hasta 4).</small>
+                                        <small class="text-muted fst-italic text-center"
+                                            style="font-size: 0.75rem;">Ningún equipamiento seleccionado (hasta
+                                            4).</small>
                                     </div>
                                 </div>
                             </div>
@@ -963,16 +1013,21 @@
                             <div class="row row-cols-1 row-cols-lg-2 g-2 mb-2 align-items-stretch">
                                 <!-- Columna 1: Puntos de Mando -->
                                 <div class="col">
-                                    <div class="bg-light p-2 rounded border h-100 d-flex flex-column justify-content-center align-items-center">
-                                        <div class="text-muted fw-bold text-uppercase mb-1 text-center" style="font-size: 0.72rem;">Puntos de Mando</div>
+                                    <div
+                                        class="bg-light p-2 rounded border h-100 d-flex flex-column justify-content-center align-items-center">
+                                        <div class="text-muted fw-bold text-uppercase mb-1 text-center"
+                                            style="font-size: 0.72rem;">Puntos de Mando</div>
                                         <div class="d-flex align-items-center justify-content-center">
                                             <button class="btn btn-danger counter-btn shadow-sm"
-                                                style="width: 32px; height: 32px; font-size: 1rem;" onclick="updateCounter('p4-cp', -1)">
+                                                style="width: 32px; height: 32px; font-size: 1rem;"
+                                                onclick="updateCounter('p4-cp', -1)">
                                                 <i class="bi bi-dash"></i>
                                             </button>
-                                            <span class="score-display mx-2 text-dark" id="p4-cp" style="font-size: 1.5rem;">2</span>
+                                            <span class="score-display mx-2 text-dark" id="p4-cp"
+                                                style="font-size: 1.5rem;">2</span>
                                             <button class="btn btn-success counter-btn shadow-sm"
-                                                style="width: 32px; height: 32px; font-size: 1rem;" onclick="updateCounter('p4-cp', 1)">
+                                                style="width: 32px; height: 32px; font-size: 1rem;"
+                                                onclick="updateCounter('p4-cp', 1)">
                                                 <i class="bi bi-plus"></i>
                                             </button>
                                         </div>
@@ -981,10 +1036,12 @@
 
                                 <!-- Columna 2: Ardides Estratégicos -->
                                 <div class="col">
-                                    <div class="op-section border-warning border-2 border-opacity-50 h-100 d-flex flex-column justify-content-between p-2 mb-0">
+                                    <div
+                                        class="op-section border-warning border-2 border-opacity-50 h-100 d-flex flex-column justify-content-between p-2 mb-0">
                                         <div class="d-flex justify-content-between align-items-center mb-1">
                                             <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
-                                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides (TP <span class="current-tp-label">1</span>)
+                                                <i class="bi bi-hourglass-split text-warning me-1"></i>Ardides (TP <span
+                                                    class="current-tp-label">1</span>)
                                             </span>
                                             <button class="btn btn-warning btn-sm fw-bold shadow-sm py-0 px-2"
                                                 type="button" id="p4-btn-strat-ploys"
@@ -999,7 +1056,8 @@
                                             class="d-flex flex-column gap-1 strat-ploys-container my-auto"
                                             style="min-height: 38px; max-height: 90px;">
                                             <div class="d-flex align-items-center justify-content-center h-100 py-1">
-                                                <small class="text-muted fst-italic text-center" style="font-size: 0.72rem;">Ningún ardid activo.</small>
+                                                <small class="text-muted fst-italic text-center"
+                                                    style="font-size: 0.72rem;">Ningún ardid activo.</small>
                                             </div>
                                         </div>
                                     </div>
@@ -1017,12 +1075,15 @@
                                             </span>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-center my-auto">
-                                            <button class="btn btn-outline-danger counter-btn" style="width: 30px; height: 30px; font-size: 0.95rem;"
+                                            <button class="btn btn-outline-danger counter-btn"
+                                                style="width: 30px; height: 30px; font-size: 0.95rem;"
                                                 onclick="changeMissionScore('p4', 'crit', -1);">
                                                 <i class="bi bi-dash"></i>
                                             </button>
-                                            <span class="score-display mx-2 text-dark" id="p4-crit-vp" style="font-size: 1.4rem; min-width: 26px;">0</span>
-                                            <button class="btn btn-outline-success counter-btn" style="width: 30px; height: 30px; font-size: 0.95rem;"
+                                            <span class="score-display mx-2 text-dark" id="p4-crit-vp"
+                                                style="font-size: 1.4rem; min-width: 26px;">0</span>
+                                            <button class="btn btn-outline-success counter-btn"
+                                                style="width: 30px; height: 30px; font-size: 0.95rem;"
                                                 onclick="changeMissionScore('p4', 'crit', 1);">
                                                 <i class="bi bi-plus"></i>
                                             </button>
@@ -1032,28 +1093,37 @@
 
                                 <!-- 2. Kill Op (Asimétrico) -->
                                 <div class="col">
-                                    <div class="op-section border-warning border-2 border-opacity-25 h-100 d-flex flex-column justify-content-between p-2 mb-0">
-                                        <div class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
+                                    <div
+                                        class="op-section border-warning border-2 border-opacity-25 h-100 d-flex flex-column justify-content-between p-2 mb-0">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center border-bottom pb-1 mb-1">
                                             <span class="fw-bold text-dark small" style="font-size: 0.78rem;">
                                                 <i class="bi bi-skull-fill text-danger me-1"></i>Kill Op
                                             </span>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mb-1">
-                                            <span class="text-warning fw-bold lh-sm" style="font-size: 0.7rem;">Incapacitados<br>(TP Actual)</span>
+                                            <span class="text-warning fw-bold lh-sm"
+                                                style="font-size: 0.7rem;">Incapacitados<br>(TP Actual)</span>
                                             <div class="d-flex align-items-center">
-                                                <button class="btn btn-outline-danger counter-btn" style="width: 28px; height: 28px; font-size: 0.9rem;"
+                                                <button class="btn btn-outline-danger counter-btn"
+                                                    style="width: 28px; height: 28px; font-size: 0.9rem;"
                                                     onclick="updateCounter('p4-kills-current-tp', -1, 99);">
                                                     <i class="bi bi-dash"></i>
                                                 </button>
-                                                <span class="score-display mx-2 text-warning" id="p4-kills-current-tp" style="font-size: 1.3rem; min-width: 24px;">0</span>
-                                                <button class="btn btn-outline-success counter-btn" style="width: 28px; height: 28px; font-size: 0.9rem;"
+                                                <span class="score-display mx-2 text-warning" id="p4-kills-current-tp"
+                                                    style="font-size: 1.3rem; min-width: 24px;">0</span>
+                                                <button class="btn btn-outline-success counter-btn"
+                                                    style="width: 28px; height: 28px; font-size: 0.9rem;"
                                                     onclick="updateCounter('p4-kills-current-tp', 1, 99);">
                                                     <i class="bi bi-plus"></i>
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="bg-white p-1 rounded border text-center d-flex justify-content-center align-items-center mt-1">
-                                            <span class="small fw-bold text-muted" style="font-size: 0.7rem;">Total Kill Op: <strong id="p4-killop-total" class="text-warning fs-6">0</strong></span>
+                                        <div
+                                            class="bg-white p-1 rounded border text-center d-flex justify-content-center align-items-center mt-1">
+                                            <span class="small fw-bold text-muted" style="font-size: 0.7rem;">Total Kill
+                                                Op: <strong id="p4-killop-total"
+                                                    class="text-warning fs-6">0</strong></span>
                                         </div>
                                     </div>
                                 </div>

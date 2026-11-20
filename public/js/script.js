@@ -1,0 +1,834 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Referencias a Elementos del DOM ---
+    const factionSelect = document.getElementById('faction-select');
+    // Actualizado: Referencia al nuevo selector de Tipo de Facción
+    const factionTypeSelect = document.getElementById('faction-type-select');
+
+    // Contenedores de contenido
+    const containers = {
+        racial: document.getElementById('faction-info-pane'),
+        operatives: document.getElementById('datacards-container'),
+        tacops: document.getElementById('faction-tacops-pane'),
+        ploys: document.getElementById('ploys-pane'),
+        equipment: document.getElementById('equipment-pane')
+    };
+    const body = document.body;
+
+    // --- Almacén de Datos ---
+    let gameData = {
+        ploys: [],
+        racial: {},
+        factionTacops: {},   // tacops.json (Mapeo Facción -> Arquetipos)
+        generalTacops: {},   // tacopsgenerales.json (Detalle de las misiones)
+        operatives: {},
+        equipment: []        // Inicializado como Array
+    };
+
+    // --- Nueva Categorización: Tipos de Facción ---
+    const factionCategories = {
+        'Imperio': [
+            'intercessors', 'battleclade', 'deathwatch', 'elucidian-starstrider',
+            'hunter-clade', 'imperial-navy-breachers', 'inquisitorial-agent',
+            'kasrkin', 'novitiates', 'phobos', 'ratling', 'sanctifiers',
+            'scouts', 'tempestus-aquilons', 'wolf-scouts', 'strike-force-variel',
+            'exaction-squad', 'veteran-guardsmen', 'celestian-insidiants',
+            'spectre-squad'
+        ],
+        'Caos': [
+            'blooded', 'chaos-cult', 'fellgor-ravagers', 'gellerpox',
+            'goremongers', 'legionary', 'nemesis-claw', 'plague-marines',
+            'warpcoven', 'murderwing'
+        ],
+        'Xenos': [
+            'blades-of-khaine', 'brood-brothers', 'canoptek', 'corsair-voidscarred',
+            'farstalker-kinband', 'hearthkyn-salvager', 'hierotek', 'kabalite',
+            'kommandos', 'mandrakes', 'pathfinders', 'raveners', 'vespid-stingwings',
+            'void-dancer-troupe', 'wrecka-krew', 'wyrmblade', 'yaegirs',
+            'xv26-battlesuits', 'exodite-dragon-masters'
+        ]
+    };
+
+    // --- Configuración Visual ---
+    const archetypeConfig = {
+        'recon': {
+            color: '#f05c22',
+            name: 'Reconocimiento',
+            icon: 'recon.svg'
+        },
+        'security': {
+            color: '#0b6be1',
+            name: 'Seguridad',
+            icon: 'security.svg'
+        },
+        'seek-destroy': {
+            color: '#bd0003',
+            name: 'Búsqueda y Destrucción',
+            icon: 'seek-destroy.svg'
+        },
+        'infiltration': {
+            color: '#5f5f5f',
+            name: 'Infiltración',
+            icon: 'infiltration.svg'
+        }
+    };
+
+    // Mapeo de Nombres de Facción para el Selector
+    const factionNames = {
+        'intercessors': 'Ángeles de la Muerte',
+        'battleclade': 'Clado de Batalla',
+        'deathwatch': 'Vigias de la Muerte',
+        'elucidian-starstrider': 'Recorrestrellas Elucidianos',
+        'hunter-clade': 'Clado de Caza',
+        'imperial-navy-breachers': 'Abordadores de la Armada Imperial',
+        'inquisitorial-agent': 'Operativos Inquisitoriales',
+        'kasrkin': 'Kasrkin',
+        'novitiates': 'Novicias',
+        'phobos': 'Asaltantes Phobos',
+        'ratling': 'Rátido',
+        'sanctifiers': 'Santificadores',
+        'scouts': 'Escuadra de Exploradores',
+        'tempestus-aquilons': 'Tempestus Aquilons',
+        'wolf-scouts': 'Exploradores Lobo',
+        'strike-force-variel': 'Fuerza de Ataque Variel',
+        'exaction-squad': 'Escuadra de Exacción',
+        'veteran-guardsmen': 'Korps de la Muerte',
+        'celestian-insidiants': 'Insidiadora Celeste',
+        'spectre-squad': 'Escuadra Espectro',
+
+        'blooded': 'Ungidos',
+        'chaos-cult': 'Culto del Caos',
+        'fellgor-ravagers': 'Expoliagores Impíos',
+        'gellerpox': 'Infectados Geller',
+        'goremongers': 'Siembrasangres',
+        'legionary': 'Legionarios',
+        'nemesis-claw': 'Garra Némesis',
+        'plague-marines': 'Marines de Plaga',
+        'warpcoven': 'Aquelarre Disforme',
+        'murderwing': 'Ala Asesina',
+
+        'blades-of-khaine': 'Filos de Khaine',
+        'brood-brothers': 'Hermanos de Progenie',
+        'canoptek': 'Círculo Canóptico',
+        'corsair-voidscarred': 'Corsarios del Vacío',
+        'farstalker-kinband': 'Bandaestirpe Acechante',
+        'hearthkyn-salvager': 'Sucesores Recuperadores',
+        'hierotek': 'Círculo de Hierotecnólogos',
+        'kabalite': 'Mano del Arconte',
+        'kommandos': 'Orkomandos',
+        'mandrakes': 'Mandrágoras',
+        'pathfinders': 'Rastreadores T\'au',
+        'raveners': 'Mantifex',
+        'vespid-stingwings': 'Aguijones Alados Véspid',
+        'void-dancer-troupe': 'Compañia de Bailarines del Vacío',
+        'wrecka-krew': 'Demoledorez',
+        'wyrmblade': 'FiloSierpe',
+        'yaegirs': 'Yaegirs Hernkyn',
+        'xv26-battlesuits': 'Exoarmaduras XV26 Sigilo',
+        'exodite-dragon-masters': 'Señores Dragoneros Exoditas'
+    };
+
+    // --- Inicialización ---
+    async function init() {
+        console.log('Iniciando Kill Team BattleKit...');
+
+        try {
+            await loadData();
+            // Inicializamos el selector con el filtro vacío (o el seleccionado por defecto)
+            populateFactionSelector(factionTypeSelect.value);
+            console.log('Datos cargados y listos.');
+
+            // ⚠️ AQUÍ ESTÁ LA CLAVE: Restaurar el estado justo después de cargar la base
+            restoreState();
+
+        } catch (error) {
+            console.error('Error fatal cargando datos:', error);
+            factionSelect.innerHTML = '<option>Error al cargar archivos JSON. Revisa la consola.</option>';
+        }
+
+        factionSelect.addEventListener('change', handleFactionSelection);
+
+        // Listener para el cambio de Tipo de Facción
+        factionTypeSelect.addEventListener('change', (e) => {
+            localStorage.setItem('battlekit_factionType', e.target.value);
+
+            populateFactionSelector(e.target.value);
+            // Limpiamos los paneles al cambiar de tipo de filtro para evitar confusión
+            clearPanes();
+        });
+
+        // 2. Guardar Facción Específica
+        factionSelect.addEventListener('change', (e) => {
+            localStorage.setItem('battlekit_faction', e.target.value);
+
+            // Limpiar buscador y Switch al cambiar de facción
+            if (document.getElementById('operative-search')) {
+                document.getElementById('operative-search').value = '';
+            }
+            if (document.getElementById('filter-selected-switch')) {
+                document.getElementById('filter-selected-switch').checked = false;
+            }
+        });
+
+        // 3. Guardar la Pestaña Activa
+        const tabElements = document.querySelectorAll('button[data-bs-toggle="tab"], button[data-bs-toggle="pill"]');
+        tabElements.forEach(tab => {
+            tab.addEventListener('shown.bs.tab', event => {
+                // Guarda el ID del contenedor al que apunta la pestaña (ej. #operatives-pane)
+                localStorage.setItem('battlekit_activeTab', event.target.getAttribute('data-bs-target'));
+            });
+        });
+
+        // --- MOTOR DE FILTRADO UNIFICADO DE OPERATIVOS ---
+        const operativeSearchInput = document.getElementById('operative-search');
+        const filterSelectedSwitch = document.getElementById('filter-selected-switch');
+
+        function applyOperativeFilters() {
+            if (!operativeSearchInput || !filterSelectedSwitch) return;
+
+            const searchTerm = operativeSearchInput.value.toLowerCase().trim();
+            const showOnlySelected = filterSelectedSwitch.checked;
+            const operativeCards = containers.operatives.querySelectorAll('.operative-card');
+
+            operativeCards.forEach(card => {
+                // Buscamos el nombre usando la clase específica que le pusimos al span
+                const opNameElement = card.querySelector('.op-title-name');
+                if (!opNameElement) return;
+
+                const opName = opNameElement.textContent.toLowerCase();
+                const matchesSearch = opName.includes(searchTerm);
+                // Si tiene la clase de borde azul, está seleccionado
+                const isSelected = card.classList.contains('border-primary');
+
+                // Lógica combinada: Coincide con texto Y (no está activo el switch O está seleccionado)
+                if (matchesSearch && (!showOnlySelected || isSelected)) {
+                    card.classList.remove('d-none');
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+        }
+
+        // Listeners para ejecutar el filtro
+        if (operativeSearchInput) operativeSearchInput.addEventListener('input', applyOperativeFilters);
+        if (filterSelectedSwitch) filterSelectedSwitch.addEventListener('change', applyOperativeFilters);
+
+        // --- DELEGACIÓN DE EVENTOS: Clic en botón "Agregar al equipo" ---
+        containers.operatives.addEventListener('click', (e) => {
+            const btn = e.target.closest('.toggle-roster-btn');
+            if (!btn) return; // Si el clic no fue en el botón, ignorar
+
+            const opName = btn.getAttribute('data-op');
+            const factionKey = btn.getAttribute('data-faction');
+            const storageKey = `battlekit_roster_${factionKey}`;
+            const card = btn.closest('.operative-card');
+
+            // Leemos el estado actual de la base de datos
+            let selectedOps = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+            if (selectedOps.includes(opName)) {
+                // DESELECCIONAR
+                selectedOps = selectedOps.filter(name => name !== opName);
+                btn.classList.replace('btn-primary', 'btn-outline-secondary');
+                btn.innerHTML = 'Agregar al equipo';
+                card.classList.replace('border-primary', 'border');
+                card.classList.remove('border-3');
+            } else {
+                // SELECCIONAR
+                selectedOps.push(opName);
+                btn.classList.replace('btn-outline-secondary', 'btn-primary');
+                btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Listo';
+                card.classList.replace('border', 'border-primary');
+                card.classList.add('border-3');
+            }
+
+            // Guardamos en memoria
+            localStorage.setItem(storageKey, JSON.stringify(selectedOps));
+
+            // Re-aplicamos filtros por si el jugador deselecciona mientras el Switch está activo (para que la carta desaparezca)
+            applyOperativeFilters();
+        });
+    }
+
+    async function loadData() {
+        const files = {
+            ploys: '/data/ploys.json',
+            racial: '/data/racial.json',
+            factionTacops: '/data/tacops.json',
+            generalTacops: '/data/tacopsgenerales.json',
+            operatives: '/data/operatives.json',
+            equipment: '/data/equipment.json'
+        };
+
+        const promises = Object.entries(files).map(async ([key, url]) => {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+                gameData[key] = await response.json();
+            } catch (err) {
+                console.warn(`No se pudo cargar ${url}:`, err);
+                if (Array.isArray(gameData[key])) gameData[key] = [];
+                else gameData[key] = {};
+            }
+        });
+
+        await Promise.all(promises);
+    }
+
+    // --- Función de Filtrado Actualizada ---
+    function populateFactionSelector(filterType = "") {
+        factionSelect.innerHTML = '<option selected value="">Elige un Comando...</option>';
+
+        let filteredKeys = [];
+
+        if (!filterType || filterType === "Todas las facciones") {
+            // Si no hay filtro o es "Todas", usamos todas las claves
+            filteredKeys = Object.keys(factionNames);
+        } else {
+            // Si hay filtro (Imperio, Caos, Xenos), obtenemos el array correspondiente
+            // y filtramos solo aquellas que existan en factionNames
+            const categoryFactions = factionCategories[filterType] || [];
+            filteredKeys = categoryFactions.filter(key => factionNames.hasOwnProperty(key));
+        }
+
+        // Ordenamos alfabéticamente por el nombre visible
+        filteredKeys.sort((a, b) => factionNames[a].localeCompare(factionNames[b]));
+
+        filteredKeys.forEach(key => {
+            const option = document.createElement('option');
+            option.value = key;
+            option.textContent = factionNames[key];
+            factionSelect.appendChild(option);
+        });
+    }
+
+    // --- Manejador Principal ---
+    function handleFactionSelection(e) {
+        const factionKey = e.target.value;
+        if (!factionKey) {
+            clearPanes();
+            return;
+        }
+
+        console.log(`Renderizando facción: ${factionKey}`);
+        clearPanes();
+
+        // 1. Info de Facción y Arquetipos
+        renderFactionHeader(factionKey);
+
+        // 2. Agentes
+        renderOperatives(factionKey);
+
+        // 3. TacOps
+        renderTacops(factionKey);
+
+        // 4. Ardides
+        renderPloys(factionKey);
+
+        // 5. Equipamiento
+        renderEquipment(factionKey);
+    }
+
+    function clearPanes() {
+        Object.values(containers).forEach(el => el.innerHTML = '');
+    }
+
+    // --- Funciones de Renderizado ---
+
+    // 1 y 2. Reglas de Facción y Arquetipos
+    function renderFactionHeader(factionKey) {
+        const factionArchetypes = gameData.factionTacops[factionKey]?.archetypes || [];
+        let archetypesHtml = '';
+
+        if (factionArchetypes.length > 0) {
+            archetypesHtml = `
+            <div class="col-12 col-lg-10 mx-auto mb-4">
+                <div class="ability-card text-center">
+                    <h3 class="mb-3">Arquetipos</h3>
+                    <div class="d-flex justify-content-center flex-wrap gap-3">
+                        ${factionArchetypes.map(arch => {
+                const config = archetypeConfig[arch] || { color: '#333', name: arch, icon: '' };
+                return `
+                            <div class="archetype-box" style="
+                                background-color: ${config.color};
+                                width: 140px;
+                                padding: 15px;
+                                border-radius: 8px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                color: white;
+                                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                            ">
+                                <img src="/resources/game_rules_files/${config.icon}" 
+                                     alt="${config.name}" 
+                                     style="width: 50px; height: 50px; filter: brightness(0) invert(1); margin-bottom: 10px;">
+                                <span style="font-weight: bold; font-size: 0.9em; text-transform: uppercase;">${config.name}</span>
+                            </div>`;
+            }).join('')}
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        const team = gameData.racial[factionKey] || [];
+        let teamHtml = '';
+
+        if (Array.isArray(team)) {
+            // Filtramos y recorremos solo los elementos que definen al equipo (operativos)
+            team.forEach(item => {
+                if (item.type === "team") {
+                    teamHtml += `
+                        <div class="team-roster-box" style="background-color: #000; color: #fff; padding: 20px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #444;">
+                            <h2 style="color: #fff; text-transform: uppercase; border-bottom: 2px solid #fff; padding-bottom: 10px; margin-top: 0;">
+                                ${item.name}
+                            </h2>
+                            <div class="operatives-list" style="line-height: 1.6;">
+                                ${item.description}
+                            </div>
+                        </div>
+                    `;
+                }
+            });
+        }
+
+        const abilities = gameData.racial[factionKey] || [];
+        let rulesHtml = '';
+
+        if (Array.isArray(abilities)) {
+            rulesHtml = abilities
+                .filter(r => r.type === 'racial' && r.name !== 'Arquetipos')
+                .map(rule => `
+                <div class="col-12 col-lg-10 mx-auto mb-3">
+                    <div class="ability-card shadow-sm border border-dark rounded overflow-hidden">
+                        <div class="p-2 bg-dark text-white">
+                            <h3 class="rules-title mb-0">${rule.name}</h3>
+                        </div>
+                        <div class="rules-text p-3 bg-white text-dark">
+                            ${rule.description}
+                        </div>
+                    </div>
+                </div>`).join('');
+        }
+
+        containers.racial.innerHTML = archetypesHtml + teamHtml + rulesHtml;
+    }
+
+    // 3. Agentes
+    function renderOperatives(factionKey) {
+        const operatives = gameData.operatives[factionKey] || [];
+
+        if (operatives.length === 0) {
+            containers.operatives.innerHTML = '<div class="alert alert-info">No hay datos de agentes disponibles para esta facción.</div>';
+            return;
+        }
+
+        // Leer los agentes seleccionados de esta facción desde localStorage
+        const storageKey = `battlekit_roster_${factionKey}`;
+        const selectedOps = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+        const html = operatives.map(op => {
+            const imgPath = `/resources/roster_images/${factionKey}/${op.id}.png`;
+
+            // Generación de HTML para Armas
+            const weaponsHtml = op.weapons.map(w => {
+                const icon = w.type === 'ranged' ? 'shoot.svg' : 'attack.svg';
+                return `
+            <tr class="weapon-profile-row">
+                <td><img src="/resources/game_rules_files/${icon}" class="weapon-icon" width="20"></td>
+                <td class="weapon-name fw-bold">${w.name}</td>
+                <td class="text-center">${w.stats.A || '-'}</td>
+                <td class="text-center">${w.stats['HP/HA'] || '-'}</td>
+                <td class="text-center">${w.stats['Dñ'] || '-'}</td>
+                <td class="small">${w.stats.RA || '-'}</td>
+            </tr>`;
+            }).join('');
+
+            // Generación de HTML para Habilidades
+            const abilitiesHtml = op.abilities?.length ?
+                `<div class="mt-2 p-2 bg-light rounded"><strong>Habilidades:</strong>${op.abilities.map(a => `<div class="mb-1"><span class="fw-bold">${a.name}:</span> ${a.description}</div>`).join('')}</div>` : '';
+
+            // Generación de HTML para Acciones Únicas (Sistema de Yes/No)
+            const actionsHtml = op.uniqueActions?.length ?
+                op.uniqueActions.map(a => {
+                    const descYes = Array.isArray(a.description)
+                        ? a.description.map(line => `
+                        <p class="action-desc d-flex align-items-start mb-1">
+                            <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
+                            <span>${line}</span>
+                        </p>`).join('')
+                        : `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.description}</span></p>`;
+
+                    const descNo = a.description_no ? `
+                    <p class="action-desc d-flex align-items-start mb-0">
+                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                        <span>${a.description_no}</span>
+                    </p>` : '';
+
+                    return `
+        <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
+            <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                <div class="fw-bold">${a.name}</div>
+                <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.cost}</div>
+            </div>
+            <div class="content small text-start p-2">
+                ${descYes}
+                ${descNo}
+            </div>
+        </div>`;
+                }).join('') : '';
+
+            // ⚠️ LÓGICA DE ESTADO VISUAL: Se calcula ANTES de imprimir el HTML
+            const isSelected = selectedOps.includes(op.name);
+            const borderClass = isSelected ? 'border-primary border-3' : 'border';
+            const btnClass = isSelected ? 'btn-primary' : 'btn-outline-secondary';
+            const btnText = isSelected ? '<i class="bi bi-check-circle-fill"></i> Listo' : 'Agregar al equipo';
+
+            // ⚠️ ÚNICO RETURN: Tarjeta HTML completa y fusionada
+            return `
+        <div class="card-container operative-card col-12 col-lg-11 mt-4 mb-3 mx-auto shadow bg-white ${borderClass} rounded overflow-hidden" data-op-name="${op.name}">
+            <div class="row g-0 align-items-stretch">
+                <div class="col-12 col-md-8 p-3 d-flex flex-column">
+                    
+                    <div class="mb-2 border-bottom pb-2 d-flex justify-content-between align-items-center">
+                        <span class="fs-4 fw-bold text-uppercase text-dark op-title-name">${op.name}</span>
+                        <button class="btn btn-sm ${btnClass} toggle-roster-btn" data-faction="${factionKey}" data-op="${op.name}">${btnText}</button>
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3 text-center bg-light p-2 rounded">
+                        <div><div class="small text-muted fw-bold">LPA</div><div class="fs-4">${op.stats.LPA}</div></div>
+                        <div><div class="small text-muted fw-bold">MOV.</div><div class="fs-4">${op.stats.MOVER}</div></div>
+                        <div><div class="small text-muted fw-bold">SALV.</div><div class="fs-4">${op.stats.SALVACIÓN}</div></div>
+                        <div><div class="small text-muted fw-bold">HERIDAS</div><div class="fs-4">${op.stats.HERIDAS}</div></div>
+                    </div>
+
+                    <div class="table-responsive mb-3">
+                        <table class="table table-sm table-hover mb-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th style="width:30px"></th>
+                                    <th>Nombre</th>
+                                    <th class="text-center">ATAQ.</th>
+                                    <th class="text-center">IMP.</th>
+                                    <th class="text-center">DAÑO</th>
+                                    <th>Reglas de armas</th>
+                                </tr>
+                            </thead>
+                            <tbody>${weaponsHtml}</tbody>
+                        </table>
+                    </div>
+
+                    <div class="flex-grow-1">
+                        ${abilitiesHtml}
+                        ${actionsHtml}
+                    </div>
+                
+                    <div class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center">
+                        <div class="peana-box bg-dark text-white px-2 py-1 rounded small fw-bold" style="font-size: 0.75rem;">
+                            ${op.peana || 'N/A'}
+                        </div>
+                        <div class="text-end text-muted x-small fst-italic" style="font-size: 0.7rem; max-width: 70%;">
+                            ${op.keywords || ''}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 bg-dark d-flex align-items-center justify-content-center p-2" style="min-height: 250px;">
+                    <img src="${imgPath}" 
+                         class="img-fluid" 
+                         style="max-height: 100%; width: auto; object-fit: contain; display: block;"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                
+                    <div class="fallback-image w-100 h-100" style="display:none; background:linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); align-items:center; justify-content:center; text-align:center; padding:20px;">
+                        <h3 class="m-0 text-white">${op.name}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+        }).join('');
+
+        containers.operatives.innerHTML = `<div class="row">${html}</div>`;
+    }
+
+    // 4. TacOps Generales
+    function renderTacops(factionKey) {
+        const validArchetypes = gameData.factionTacops[factionKey]?.archetypes || [];
+        const allOps = gameData.generalTacops;
+
+        const factionOpsKeys = Object.keys(allOps).filter(key => {
+            const op = allOps[key];
+            return validArchetypes.includes(op.archetype);
+        });
+
+        if (factionOpsKeys.length === 0) {
+            containers.tacops.innerHTML = '<div class="alert alert-warning text-center">No hay TacOps disponibles para los arquetipos de esta facción.</div>';
+            return;
+        }
+
+        const html = factionOpsKeys.map(key => {
+            const op = allOps[key];
+            const archData = archetypeConfig[op.archetype] || { color: '#666', icon: '', name: op.archetype };
+
+            let specialImage = '';
+
+            // Adaptado a la nueva estructura visual
+            let additionalRulesHtml = '';
+            if (op.additional_rules) {
+                if (Array.isArray(op.additional_rules)) {
+                    additionalRulesHtml = `<div class="victory-points mb-3"><div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2">Reglas Adicionales</div><ul class="mb-2 ps-3 small text-muted">${op.additional_rules.map(r => `<li>${r}</li>`).join('')}</ul></div>`;
+                } else {
+                    additionalRulesHtml = `<div class="victory-points mb-3"><div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2">Reglas Adicionales</div><div class="mb-2 small text-muted">${op.additional_rules}</div></div>`;
+                }
+            }
+
+            // Adaptado para extraer límites de puntuación como en tacops.html
+            let vpHtml = '';
+            if (op.victoy_points) {
+                if (Array.isArray(op.victoy_points)) {
+                    const vpList = [...op.victoy_points];
+                    let limitText = '';
+                    if (vpList[vpList.length - 1] && vpList[vpList.length - 1].includes("No puedes obtener más de")) {
+                        limitText = `<p class="fst-italic text-danger small mt-2 mb-0">${vpList.pop()}</p>`;
+                    }
+                    vpHtml = `<ul class="text-start small mb-1 ps-3 text-muted">${vpList.map(vp => `<li>${vp}</li>`).join('')}</ul>${limitText}`;
+                } else {
+                    vpHtml = `<p class="small mb-0 text-start text-muted">${op.victoy_points}</p>`;
+                }
+            }
+
+            // Adaptado a la tarjeta de acción única
+            const missionAction = op.action_mission_name ? `
+                <div class="sub-header mt-3 text-uppercase fw-bold border-bottom pb-1 mb-2">Acción de Misión</div>
+                <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mb-2">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${op.action_mission_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${op.action_mission_cost}</div>
+                    </div>
+                    <div class="content small text-start p-2">
+                        ${op.action_mission_yes ? `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${op.action_mission_yes}</span></p>` : ''}
+                        ${op.action_mission_no ? `<p class="action-desc d-flex align-items-start mb-0"><span class="icon icon-no flex-shrink-0 mt-1"></span> <span>${op.action_mission_no}</span></p>` : ''}
+                    </div>
+                </div>` : '';
+
+            // El bloque HTML literal idéntico a tacops.html (sin el icono de favoritos)
+            return `
+                <div class="col-xs-12 col-md-6 col-lg-4 text-center p-2 tacop-container fade-in">
+                    <div class="tacop card shadow-sm h-100 ${op.archetype} border-0">
+                        <div class="archetype position-relative text-white p-2 rounded-top fw-bold d-flex align-items-center justify-content-center" style="background-color: ${archData.color};">
+                            <img src="/resources/game_rules_files/${archData.icon}" class="svg-white" alt="Icono ${archData.name}" style="width: 1.5rem; height: 1.5rem; margin-right: 8px; filter: brightness(0) invert(1);">
+                            <span>${archData.name.toUpperCase()}</span>
+                        </div>
+                        <div class="middle p-3 d-flex flex-column h-100 bg-light text-start">
+                            <h4 class="name fw-bold text-dark mb-3 text-center">${op.name}</h4>
+                            <div class="mission-container pt-0 flex-grow-1">
+                                <div class="victory-points mb-3">
+                                    <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2">Revelar</div>
+                                    <div class="small text-muted">${op.Reveal}</div>
+                                </div>
+                                ${additionalRulesHtml}
+                                ${specialImage}
+                                ${missionAction}
+                                <div class="victory-points mt-auto">
+                                    <div class="sub-header text-uppercase fw-bold border-bottom pb-1 mb-2">Puntos de Victoria</div>
+                                    <div class="small">${vpHtml}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        containers.tacops.innerHTML = `<div class="row justify-content-center">${html}</div>`;
+    }
+
+    // 5. Ardides
+    function renderPloys(factionKey) {
+        const ploys = gameData.ploys.filter(p => p.faction === factionKey);
+
+        if (ploys.length === 0) {
+            containers.ploys.innerHTML = '<div class="alert alert-light text-center">No hay ardides disponibles.</div>';
+            return;
+        }
+
+        ploys.sort((a, b) => (a.type || '').localeCompare(b.type || ''));
+
+        const html = ploys.map(ploy => {
+            const isStrategic = ploy.type === 'strategic';
+            // Configuración estricta de colores según tu solicitud
+            const headerClasses = isStrategic ? 'bg-dark text-white' : 'bg-secondary text-white';
+            const typeLabel = isStrategic ? 'Ardid de Estrategia' : 'Ardid de Tiroteo';
+
+            return `
+            <div class="col-12 col-md-6 mb-4">
+                <div class="equipment-card h-100 shadow-sm border border-dark rounded overflow-hidden d-flex flex-column"> 
+                    <!-- Cabecera: Nombre a la izquierda, Costo a la derecha -->
+                    <div class="p-2 ${headerClasses} d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 fw-bold text-uppercase" style="font-size: 0.85rem;">${ploy.name}</h6>
+                        <span class="badge bg-light text-dark shadow-sm px-2 py-1">${ploy.cps}</span>
+                    </div>
+                    <!-- Cuerpo: Etiqueta y Descripción compactadas -->
+                    <div class="p-3 bg-light text-dark flex-grow-1">
+                        <div class="mb-2">
+                            <span class="badge ${isStrategic ? 'bg-warning text-dark' : 'bg-info text-dark'} shadow-sm">${typeLabel}</span>
+                        </div>
+                        <div class="equipment-description small">
+                            ${ploy.description}
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }).join('');
+
+        containers.ploys.innerHTML = `<div class="row">${html}</div>`;
+    }
+
+    // 6. Equipamiento
+    function renderEquipment(factionKey) {
+        // Obtenemos los datos brutos. Si es un array (como esperamos con la traducción), usamos filter.
+        // Si por casualidad es un objeto, usamos el método antiguo de acceso directo (fallback).
+        let equipmentList = [];
+        if (Array.isArray(gameData.equipment)) {
+            equipmentList = gameData.equipment.filter(item => item.faction === factionKey);
+        } else if (gameData.equipment && gameData.equipment[factionKey]) {
+            equipmentList = gameData.equipment[factionKey];
+        }
+
+        if (!equipmentList || equipmentList.length === 0) {
+            containers.equipment.innerHTML = '<div class="alert alert-light text-center py-4">Esta Facción no posee Equipamiento.<br></div>';
+            return;
+        }
+
+        // Ordenar alfabéticamente
+        equipmentList.sort((a, b) => a.name.localeCompare(b.name));
+
+        const html = equipmentList.map(item => {
+            // Descripción: Array o String
+            let descHtml = '';
+            if (Array.isArray(item.description)) {
+                descHtml = item.description.map(line => `<p class="mb-1">${line}</p>`).join('');
+            } else {
+                descHtml = `<p>${item.description}</p>`;
+            }
+
+
+            // Armas (si el arreglo 'weapon' existe y tiene elementos)
+            let weaponHtml = '';
+            if (item.weapon && item.weapon.length > 0) {
+
+                // Mapeamos el arreglo de armas para generar múltiples filas <tr>
+                const rowsHtml = item.weapon.map(w => `
+                    <tr>
+                        <td class="fw-bold text-start">${w.w_name}</td>
+                        <td class="text-center">${w.ATK}</td>
+                        <td class="text-center">${w.HIT}</td>
+                        <td class="text-center">${w.DMG}</td>
+                        <td class="text-start fst-italic">${w.rules || '-'}</td>
+                    </tr>
+                `).join('');
+
+                weaponHtml = `
+                <div class="equip-weapon-table mt-3">
+                    <table class="table table-sm table-dark table-bordered mb-0">
+                        <thead>
+                            <tr class="text-center">
+                                <th class="text-start">NOMBRE</th>
+                                <th>ATAQ.</th>
+                                <th>IMP.</th>
+                                <th>DAÑO</th>
+                                <th class="text-start">REGLAS DE ARMAS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${rowsHtml}
+                        </tbody>
+                    </table>
+                </div>`;
+            }
+
+            const actionHtml = item.action?.length ?
+                item.action.map(a => {
+                    // Mapeo de descripciones positivas (icon-yes)
+                    const descYes = Array.isArray(a.action_yes)
+                        ? a.action_yes.map(line => `
+                        <p class="action-desc d-flex align-items-start mb-1">
+                            <span class="icon icon-yes flex-shrink-0 mt-1"></span> 
+                            <span>${line}</span>
+                        </p>`).join('')
+                        : `<p class="action-desc d-flex align-items-start mb-1"><span class="icon icon-yes flex-shrink-0 mt-1"></span> <span>${a.action_yes}</span></p>`;
+
+                    // Mapeo de descripción negativa (icon-no)
+                    const descNo = a.action_no ? `
+                    <p class="action-desc d-flex align-items-start mb-0">
+                        <span class="icon icon-no flex-shrink-0 mt-1"></span> 
+                        <span>${a.action_no}</span>
+                    </p>` : '';
+
+                    // Estructura de tarjeta consistente
+                    return `
+                <div class="unique-actions-section border border-dark rounded-0 overflow-hidden p-0 mt-2 mb-2">
+                    <div class="header d-flex justify-content-between align-items-center text-white px-2 py-1">
+                        <div class="fw-bold">${a.action_name}</div>
+                        <div class="ap-box fw-bold text-white bg-transparent border-0 p-0">${a.action_cost}</div>
+                    </div>
+                    <div class="content small text-start p-2">
+                        ${descYes}
+                        ${descNo}
+                    </div>
+                </div>`;
+                }).join('') : '';
+
+            // Retorno del componente
+            return `
+        <div class="col-12 col-md-6 mb-4">
+            <div class="equipment-card h-100 shadow-sm border border-dark rounded overflow-hidden"> 
+                <div class="p-2 bg-dark text-white text-center">
+                    <h6 class="mb-0 fw-bold text-uppercase">${item.name}</h6>
+                </div>
+                <div class="p-3 bg-light text-dark">
+                    <div class="equipment-description small">
+                        ${descHtml}
+                    </div>
+                    ${weaponHtml}
+                    ${actionHtml}
+                </div>
+            </div>
+        </div>`;
+        }).join('');
+
+        containers.equipment.innerHTML = `<div class="row">${html}</div>`;
+    }
+
+    function restoreState() {
+        const savedFactionType = localStorage.getItem('battlekit_factionType');
+        const savedFaction = localStorage.getItem('battlekit_faction');
+        const savedTab = localStorage.getItem('battlekit_activeTab');
+
+        // A. Restaurar Tipo de Facción
+        if (savedFactionType) {
+            factionTypeSelect.value = savedFactionType;
+            // Forzamos el evento 'change' para que se dispare tu lógica que llena el segundo select
+            factionTypeSelect.dispatchEvent(new Event('change'));
+        }
+
+        // B. Restaurar Facción Específica
+        // Usamos setTimeout(..., 0) para permitir que el DOM se actualice tras el evento anterior
+        setTimeout(() => {
+            if (savedFaction && factionSelect.querySelector(`option[value="${savedFaction}"]`)) {
+                factionSelect.value = savedFaction;
+                factionSelect.dispatchEvent(new Event('change')); // Renderiza los datos de la facción
+            }
+        }, 0);
+
+        // C. Restaurar Pestaña Activa
+        if (savedTab) {
+            const tabTrigger = document.querySelector(`[data-bs-target="${savedTab}"]`);
+            if (tabTrigger) {
+                // Utilizamos la API de Bootstrap para activar la pestaña vía JS
+                const tab = new bootstrap.Tab(tabTrigger);
+                tab.show();
+            }
+        }
+    }
+
+    init();
+});

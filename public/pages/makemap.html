@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Mapas - Kill Team</title>
+    <!-- Reutilizando Bootstrap como en tu proyecto -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- html2canvas para la exportación de la imagen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        /* Zona de la Paleta de Piezas (Carrusel) */
+        #palette-container {
+            /* Ocultar scrollbar nativo */
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        #palette-container::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari and Opera */
+        }
+
+        .palette-item {
+            max-height: 80px;
+            cursor: grab;
+            transition: transform 0.2s;
+        }
+
+        .palette-item:hover {
+            transform: scale(1.1);
+        }
+
+        /* Lienzo de Trabajo */
+        #workspace-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px solid #6c757d;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: #e9ecef;
+            overflow: hidden;
+            /* La transición se ha eliminado de aquí */
+        }
+
+        #workspace {
+            position: relative;
+            transform-origin: top left;
+            transition: transform 0.2s ease;
+            /* Transición movida al lienzo interno */
+        }
+
+        #map-bg {
+            display: block;
+            pointer-events: none;
+            width: 100%;
+            /* El tamaño lo dictará el JS */
+            height: 100%;
+        }
+
+        /* Piezas dentro del lienzo */
+        .map-piece {
+            position: absolute;
+            cursor: pointer;
+            user-select: none;
+            /* El transform se manejará via JS para la rotación */
+        }
+
+        .map-piece img {
+            display: block;
+            pointer-events: none;
+            /* El tamaño ahora lo dicta estrictamente el motor JS */
+        }
+
+        .map-piece.selected {
+            outline: 3px dashed #ff5418;
+            /* z-index eliminado para respetar el orden real de las capas del DOM */
+        }
+
+        /* Cuadro de Selección Múltiple (Marquee) */
+        #selection-box {
+            position: absolute;
+            border: 1px solid rgba(13, 110, 253, 0.8);
+            /* Azul primary de Bootstrap */
+            background-color: rgba(13, 110, 253, 0.2);
+            pointer-events: none;
+            /* Crucial: evita que el cuadro bloquee el mouse */
+            display: none;
+            z-index: 10000;
+            /* Asegurar que quede sobre el mapa y las piezas */
+        }
+
+        /* Panel de Controles Fijo en Pantalla (Gamepad) */
+        #controls-panel {
+            position: fixed;
+            /* Cambiado de absolute a fixed */
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(33, 37, 41, 0.95);
+            /* Más oscuro para contraste */
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 2000;
+            /* Asegurar que quede sobre todo */
+            border: 2px solid #6c757d;
+        }
+
+        #controls-panel.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* Botones del control flotante en blanco para mejor visibilidad */
+        #controls-panel .btn-outline-dark {
+            color: white;
+            border-color: #6c757d;
+            background-color: #343a40;
+        }
+
+        #controls-panel .btn-outline-dark:hover {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        #controls-panel .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        /* Botones de navegación del carrusel */
+        .palette-nav-btn {
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #212529;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .palette-nav-btn:hover {
+            background-color: #0d6efd;
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+            /* translateY se mantiene por el translate-middle-y del HTML */
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- Header -->
+    <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler me-2 border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white" href="../index.html">
+                <i class="bi bi-shield-shaded me-2"></i>Kill Team BattleKit
+            </a>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Menú Lateral Offcanvas -->
+            <div class="offcanvas offcanvas-start bg-white shadow" tabindex="-1" id="sidebarMenu"
+                aria-labelledby="sidebarMenuLabel">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title fw-bold text-dark" id="sidebarMenuLabel">
+                        <i class="bi bi-shield-shaded me-2" style="color: #ff5418;"></i>Menú Principal
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body p-0 pt-3">
+                    <ul class="nav nav-pills flex-column" id="main-nav">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-dark" href="../index.html"><i class="bi bi-house-door me-2"></i> Inicio
+                                (Portada)</a>
+                        </li>
+                        <hr class="my-2">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="secuencia.html"><i
+                                    class="bi bi-sort-numeric-down me-2"></i> Secuencia de Juego</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="critops.html"><i class="bi bi-crosshair me-2"></i>
+                                CritOps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="tacops.html"><i class="bi bi-bookmark-star me-2"></i>
+                                TacOps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="facciones.html"><i class="bi bi-person-vcard me-2"></i>
+                                Reglas de Facción</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="reglas.html"><i class="bi bi-book me-2"></i> Reglas de
+                                Juego</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="partidas.html"><i class="bi bi-list-ol me-2"></i>
+                                Partidas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="partidasasimetricas.html"><i
+                                    class="bi bi-list-ol me-2"></i> Partidas Asimetricas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active shadow-sm" href="makemap.html"><i class="bi bi-map me-2"></i>
+                                Creador de Mapas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content Area (Inicio) -->
+            <main class="col-12 px-md-4 py-4 bg-dark">
+
+                <!-- PASO 1: HUD de Desarrollo -->
+                <div id="dev-telemetry"
+                    class="position-fixed top-0 end-0 bg-dark text-warning p-3 m-3 rounded border border-warning shadow-lg"
+                    style="display: none; z-index: 9999; font-family: monospace; font-size: 14px; opacity: 0.95;">
+                    <!-- Los datos se inyectarán aquí -->
+                </div>
+
+                <div class="container-fluid py-4">
+
+                    <!-- Paso 1: Barra de Herramientas Principal -->
+                    <div
+                        class="d-flex flex-column flex-lg-row justify-content-between align-items-center bg-secondary p-3 rounded shadow-sm mb-3 border gap-3">
+                        <!-- Grupo Izquierdo: Título y Selectores -->
+                        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                            <h2 class="h5 fw-bold mb-0 text-uppercase text-nowrap text-light"><i
+                                    class="bi bi-map-fill me-2 text-light"></i>Creador de Mapas</h2>
+
+                            <!-- BOTÓN DE INSTRUCCIONES -->
+                            <button class="btn btn-outline-info btn-sm fw-bold shadow-sm" data-bs-toggle="modal"
+                                data-bs-target="#instructionsModal" title="Ver instrucciones y atajos">
+                                <i class="bi bi-question-circle-fill"></i> Ayuda
+                            </button>
+
+                            <select class="form-select form-select-sm border-primary fw-bold shadow-sm" id="map-select"
+                                onchange="changeMap()" style="width: auto;">
+                                <option value="map-cq-long-min.png">Mapa Cerrado vertical</option>
+                                <option value="map-cq-short-min.png">Mapa Cerrado horizontal</option>
+                                <option value="map-op-1-min.png">Mapa Abierto 1</option>
+                                <option value="map-op-2-min.png">Mapa Abierto 2</option>
+                                <option value="map-op-3-min.png">Mapa Abierto 3</option>
+                                <option value="map-op-4-min.png">Mapa Abierto 4</option>
+                                <option value="map-op-5-min.png">Mapa Abierto 5</option>
+                                <option value="map-op-6-min.png">Mapa Abierto 6</option>
+                                <option value="narrative-min.png">Mapa Narrativo</option>
+                            </select>
+
+                            <select class="form-select form-select-sm border-secondary fw-bold shadow-sm" id="kz-select"
+                                onchange="loadPalette()" style="width: auto;">
+                                <option value="General">Marcadores Generales</option>
+                                <option value="Chalnath">Chalnath</option>
+                                <option value="Gallowdark">Horcasombría (Gallowdark)</option>
+                                <option value="Moroch">Moroch</option>
+                                <option value="Nachmunt">Nachmund</option> //nachmund es el nombre en español de
+                                nachmunt
+                                <option value="Octarius">Octarius</option>
+                                <option value="Tombworld">Mundo Tumba (Tombworld)</option>
+                                <option value="Volkus">Volkus</option>
+                                <option value="WTC">Torneo WTC</option>
+                                <option value="Otros">Otros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check form-switch me-3 d-flex align-items-center">
+                            <input class="form-check-input me-2 mt-0" type="checkbox" role="switch"
+                                id="gridToggleSwitch" onchange="toggleGridMode()">
+                            <label class="form-check-label fw-bold small text-muted text-nowrap"
+                                for="gridToggleSwitch">Modo
+                                Cuadrícula</label>
+                        </div>
+                        <!-- Grupo Derecho: Botones de Acción -->
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-danger btn-sm fw-bold shadow-sm" data-bs-toggle="modal"
+                                data-bs-target="#clearConfirmModal">
+                                <i class="bi bi-trash-fill me-1"></i> Descartar Todo
+                            </button>
+                            <button class="btn btn-primary btn-sm fw-bold shadow-sm" onclick="exportMap()">
+                                <i class="bi bi-floppy-fill me-1"></i>Guardar Mapa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2: Carrusel de Piezas (Paleta) con Controles de Desplazamiento -->
+                    <div class="position-relative mb-4 bg-secondary border border-primary rounded shadow-sm px-4 py-2">
+                        <!-- Botón Izquierdo -->
+                        <button
+                            class="btn btn-sm border position-absolute start-0 top-50 translate-middle-y ms-1 z-1 palette-nav-btn"
+                            onclick="document.getElementById('palette-container').scrollBy({left: -200, behavior: 'smooth'})">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <!-- Contenedor Scrolleable -->
+                        <div id="palette-container" class="d-flex align-items-center gap-3 overflow-hidden"
+                            style="min-height: 90px; scroll-behavior: smooth;">
+                            <!-- Las imágenes se inyectan por JS -->
+                        </div>
+
+                        <!-- Botón Derecho -->
+                        <button
+                            class="btn btn-sm border position-absolute end-0 top-50 translate-middle-y me-1 z-1 palette-nav-btn"
+                            onclick="document.getElementById('palette-container').scrollBy({left: 200, behavior: 'smooth'})">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Área Principal de Edición (Lienzo) -->
+                    <div class="text-center">
+                        <div id="workspace-wrapper">
+                            <div id="workspace">
+                                <img id="map-bg" src="/resources/creacion-mapas/Mapas-generales/map-cq-long-min.png"
+                                    alt="Fondo del mapa">
+                                <div id="selection-box"></div> <!-- Nodo dinámico de selección -->
+                            </div>
+                        </div>
+                    </div>
+
+            </main> <!-- Cierre del Main Content Area -->
+        </div> <!-- Cierre del row -->
+    </div> <!-- Cierre del container-fluid principal -->
+
+    <!-- Paso 3: Panel de Controles Flotante (Fuera del flujo del lienzo) -->
+    <div id="controls-panel">
+        <div class="control-row">
+            <button class="btn btn-sm btn-danger shadow-sm" onclick="deleteSelected()" title="Eliminar"><i
+                    class="bi bi-x-lg"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="rotateSelected(-15)"
+                title="Girar Izquierda"><i class="bi bi-arrow-counterclockwise"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="moveFromUI(0, -1)" title="Arriba"><i
+                    class="bi bi-arrow-up"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="rotateSelected(15)" title="Girar Derecha"><i
+                    class="bi bi-arrow-clockwise"></i></button>
+            <button class="btn btn-sm btn-outline-info shadow-sm" onclick="bringToFront()"
+                title="Traer al Frente (R)"><i class="bi bi-layers-half"></i></button>
+        </div>
+        <div class="control-row">
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="moveFromUI(-1, 0)" title="Izquierda"><i
+                    class="bi bi-arrow-left"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="moveFromUI(0, 1)" title="Abajo"><i
+                    class="bi bi-arrow-down"></i></button>
+            <button class="btn btn-sm btn-outline-dark shadow-sm" onclick="moveFromUI(1, 0)" title="Derecha"><i
+                    class="bi bi-arrow-right"></i></button>
+            <button class="btn btn-sm btn-outline-secondary shadow-sm" onclick="sendToBack()"
+                title="Enviar al Fondo (F)"><i class="bi bi-layers"></i></button>
+        </div>
+    </div>
+
+    <script src="/js/makemap.js"></script>
+
+    <!-- Modal de Instrucciones -->
+    <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-info border-3">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold" id="instructionsModalLabel"><i
+                            class="bi bi-info-circle-fill text-info me-2"></i>Bienvenido al Creador de Mapas
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light">
+                    <p class="lead fw-semibold text-center mb-4">Diseña escenarios personalizados, misiones
+                        narrativas o
+                        recrea mapas competitivos para Kill Team.</p>
+
+                    <h6 class="fw-bold border-bottom pb-2 text-primary"><i class="bi bi-1-circle-fill me-1"></i>¿Cómo
+                        funciona?</h6>
+                    <ul class="mb-4 text-muted small">
+                        <li>Selecciona la plantilla (Cerrado, Abierto, Narrativo) y la zona de aniquilación
+                            desde los
+                            menús superiores.</li>
+                        <li><strong>Haz clic</strong> en las piezas del carrusel para inyectarlas. Las
+                            piezas no pueden
+                            salir de los límites del tablero.</li>
+                        <li>Haz clic en el botón <span class="badge bg-primary">Guardar Mapa</span> para
+                            descargar tu
+                            creación en un archivo PNG de alta resolución.</li>
+                    </ul>
+
+                    <h6 class="fw-bold border-bottom pb-2 text-dark"><i class="bi bi-keyboard-fill me-1"></i>Atajos de
+                        Teclado y Herramientas</h6>
+                    <p class="small text-muted mb-3">Para usar los atajos de movimiento o edición, la pieza
+                        de terreno
+                        debe estar seleccionada (borde naranja).</p>
+
+                    <div class="row g-2 mb-4">
+                        <!-- Columna 1: Selección y Portapapeles -->
+                        <div class="col-md-6">
+                            <h6 class="small fw-bold text-secondary mb-2">Selección y Portapapeles</h6>
+                            <ul class="list-group list-group-flush shadow-sm border rounded small">
+                                <li class="list-group-item py-1"><kbd class="bg-info text-dark">Ctrl</kbd> +
+                                    <kbd class="bg-info text-dark">Clic</kbd> Seleccionar múltiples piezas
+                                </li>
+                                <li class="list-group-item py-1"><kbd class="bg-info text-dark">Ctrl</kbd> +
+                                    <kbd class="bg-dark">A</kbd> Seleccionar todas las piezas
+                                </li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">Tab</kbd> Alternar
+                                    selección entre
+                                    piezas</li>
+                                <li class="list-group-item py-1"><kbd class="bg-info text-dark">Ctrl</kbd> +
+                                    <kbd class="bg-dark">C</kbd> / <kbd class="bg-dark">X</kbd> / <kbd
+                                        class="bg-dark">V</kbd> Copiar, Cortar y Pegar
+                                </li>
+                                <li class="list-group-item py-1"><kbd class="bg-danger">Supr /
+                                        Backspace</kbd> Borrar
+                                    pieza seleccionada</li>
+                            </ul>
+                        </div>
+                        <!-- Columna 2: Transformación y Visualización -->
+                        <div class="col-md-6">
+                            <h6 class="small fw-bold text-secondary mb-2">Posicionamiento y Visualización
+                            </h6>
+                            <ul class="list-group list-group-flush shadow-sm border rounded small">
+                                <li class="list-group-item py-1"><kbd class="bg-dark">W</kbd> <kbd
+                                        class="bg-dark">A</kbd> <kbd class="bg-dark">S</kbd> <kbd
+                                        class="bg-dark">D</kbd> Mover pieza en 4 direcciones</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">Q</kbd> / <kbd
+                                        class="bg-dark">E</kbd> Rotar Izquierda / Derecha</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">C</kbd>
+                                    Activar/Desactivar Modo
+                                    Cuadrícula</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">F</kbd> / <kbd
+                                        class="bg-dark">R</kbd> Enviar al Fondo / Traer al Frente</li>
+                                <li class="list-group-item py-1"><kbd class="bg-dark">+</kbd> / <kbd
+                                        class="bg-dark">-</kbd> Acercar / Alejar pantalla</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6 class="fw-bold border-bottom pb-2 text-warning"><i
+                            class="bi bi-clock-history me-1 text-warning"></i>Historial de Cambios</h6>
+                    <ul class="list-group list-group-flush shadow-sm border rounded small">
+                        <li class="list-group-item py-1"><kbd class="bg-dark">Ctrl</kbd> + <kbd class="bg-dark">Z</kbd>
+                            Deshacer movimiento. <span class="ms-3"><kbd class="bg-dark">Ctrl</kbd> + <kbd
+                                    class="bg-dark">Y</kbd> Rehacer paso.</span></li>
+                        <li class="list-group-item py-1 text-danger"><i
+                                class="bi bi-exclamation-triangle-fill me-1"></i>Si recargas la página (F5),
+                            el mapa se
+                            conservará en memoria, pero el historial de retroceso (Ctrl+Z) se borrará.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer bg-white justify-content-center">
+                    <button type="button" class="btn btn-primary px-5 fw-bold"
+                        data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmación para Descartar Todo -->
+    <div class="modal fade" id="clearConfirmModal" tabindex="-1" aria-labelledby="clearConfirmModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-danger border-3">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title fw-bold" id="clearConfirmModalLabel"><i
+                            class="bi bi-exclamation-triangle-fill me-2"></i>Advertencia</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light text-center py-4">
+                    <p class="fs-5 mb-0 fw-semibold">¿Estás seguro de borrar todas las piezas del mapa?</p>
+                    <p class="text-muted small mt-2">Esta acción borrará todo el lienzo y no se puede
+                        deshacer.</p>
+                </div>
+                <div class="modal-footer bg-white justify-content-center gap-3">
+                    <button type="button" class="btn btn-secondary fw-bold px-4 shadow-sm"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <!-- Al hacer clic, ejecuta la limpieza y cierra el modal automáticamente -->
+                    <button type="button" class="btn btn-danger fw-bold px-4 shadow-sm" onclick="executeClearAllMap()"
+                        data-bs-dismiss="modal">
+                        <i class="bi bi-trash-fill me-2"></i>Sí, borrar todo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de Bootstrap (Requerido para que funcionen los Modales) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

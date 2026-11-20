@@ -3,7 +3,7 @@
             let allCritOps = {};
 
             // Petición al nuevo JSON de CritsOps
-            fetch('./CritsOps.json')
+            fetch('/data/CritsOps.json')
                 .then(response => {
                     if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
                     return response.json();

@@ -1,4 +1,9 @@
-
+function resolveAssetPath(path) {
+    if (!path || typeof path !== 'string') return '';
+    const clean = path.trim();
+    if (!clean || clean.startsWith('http') || clean.startsWith('../')) return clean;
+    return '../' + clean.replace(/^(\.\/|\/)/, '');
+}
 
 // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
 let gameState = {
@@ -100,7 +105,7 @@ function executeResetGame() {
         if (factionSelect) factionSelect.value = "";
 
         const imgEl = document.getElementById(`${p}-faction-img`);
-        if (imgEl) imgEl.src = "/resources/facciones/blank.png";
+        if (imgEl) imgEl.src = "../resources/facciones/blank.png";
 
         const rulesBtn = document.getElementById(`${p}-btn-faction-rules`);
         if (rulesBtn) rulesBtn.disabled = true;
@@ -306,13 +311,13 @@ async function initializeMatchData() {
     try {
         // CORRECCIÓN: Se agregan 7 promesas para las 7 variables correspondientes.
         const [factionsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes, mapsRes] = await Promise.all([
-            fetch('/data/tacops.json'),
-            fetch('/data/CritsOps.json'),
-            fetch('/data/reglasArmas.json'),
-            fetch('/data/racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
-            fetch('/data/ploys.json').catch(e => { console.warn('ploys.json error', e); return null; }),
-            fetch('/data/equipment.json').catch(e => { console.warn('equipment.json error', e); return null; }),
-            fetch('/data/maps.json').catch(e => { console.warn('maps.json error', e); return null; })
+            fetch('../data/tacops.json'),
+            fetch('../data/CritsOps.json'),
+            fetch('../data/reglasArmas.json'),
+            fetch('../data/racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
+            fetch('../data/ploys.json').catch(e => { console.warn('ploys.json error', e); return null; }),
+            fetch('../data/equipment.json').catch(e => { console.warn('equipment.json error', e); return null; }),
+            fetch('../data/maps.json').catch(e => { console.warn('maps.json error', e); return null; })
         ]);
 
         dataFactions = await factionsRes.json();
@@ -423,7 +428,7 @@ document.querySelectorAll('select[id$="-faction"]').forEach(select => {
         // 2. Actualizar la imagen circular de la facción
         const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
         if (imgEl) {
-            imgEl.src = `/resources/facciones/${factionKey}.png`;
+            imgEl.src = `../resources/facciones/${factionKey}.png`;
         }
 
         // 3. Limpiar equipamiento incompatible con la nueva facción (mantiene universales)
@@ -515,7 +520,7 @@ function openStrategicPloysModal(playerPrefix) {
         return;
     }
 
-    gameState.currentPlayerSelecting = playerPrefix === 'p1' ? 1 : 2;
+    gameState.currentPlayerSelecting = parseInt(playerPrefix.replace('p', ''), 10);
     renderStrategicPloysModal(playerPrefix);
 
     const modal = new bootstrap.Modal(document.getElementById('strategicPloysModal'));
@@ -526,12 +531,13 @@ function renderStrategicPloysModal(playerPrefix) {
     const factionKey = document.getElementById(`${playerPrefix}-faction`).value;
     const currentTP = getCurrentTurn();
     const currentCP = parseInt(document.getElementById(`${playerPrefix}-cp`).innerText) || 0;
-    const playerName = document.querySelector(`.player-${playerPrefix === 'p1' ? '1' : '2'} .name-input`).value.trim() || (playerPrefix === 'p1' ? 'Jugador 1' : 'Jugador 2');
+    const playerNum = playerPrefix.replace('p', '');
+const playerName = document.querySelector(`.player-${playerNum} .name-input`)?.value.trim() || `Jugador ${playerNum}`;
     const factionName = factionTranslations[factionKey] || factionKey;
 
     // Actualizar cabecera del modal
     const imgEl = document.getElementById('stratModalFactionImg');
-    if (imgEl) imgEl.src = `/resources/facciones/${factionKey}.png`;
+    if (imgEl) imgEl.src = `../resources/facciones/${factionKey}.png`;
 
     const titleEl = document.getElementById('stratModalTitle');
     if (titleEl) titleEl.innerHTML = `<i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos — ${factionName}`;
@@ -950,7 +956,7 @@ function buildEquipmentCardInnerHtml(item) {
     if (item.img && item.img.length > 0) {
         imgHtml = `
                     <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
-                        ${item.img.map(src => `<img src="${src}" class="img-fluid rounded border shadow-sm" style="max-height: 160px;" alt="Ejemplo de equipo">`).join('')}
+                        ${item.img.map(src => `<img src="${resolveAssetPath(src)}" class="img-fluid rounded border shadow-sm" style="max-height: 160px;" alt="Ejemplo de equipo">`).join('')}
                     </div>
                 `;
     }
@@ -974,7 +980,7 @@ function renderEquipmentSelectModal(playerPrefix) {
 
     // Actualizar cabecera del modal
     const imgEl = document.getElementById('equipModalFactionImg');
-    if (imgEl) imgEl.src = `/resources/facciones/${factionKey}.png`;
+    if (imgEl) imgEl.src = `../resources/facciones/${factionKey}.png`;
 
     const titleEl = document.getElementById('equipModalTitle');
     if (titleEl) titleEl.innerHTML = `<i class="bi bi-tools text-primary me-1"></i>Selección de Equipamiento — ${factionName}`;
@@ -1461,7 +1467,7 @@ function showFactionRules(playerPrefix) {
     const modalArchetypesEl = document.getElementById('factionModalArchetypes');
 
     if (modalTitleEl) modalTitleEl.textContent = factionName;
-    if (modalImgEl) modalImgEl.src = `/resources/facciones/${factionKey}.png`;
+    if (modalImgEl) modalImgEl.src = `../resources/facciones/${factionKey}.png`;
 
     // 1. Arquetipos
     const allowedArchetypes = dataFactions[factionKey]?.archetypes || [];
@@ -1826,7 +1832,7 @@ function restorePlayerState(p, pState) {
         if (factionSelect) factionSelect.value = pState.faction;
 
         const imgEl = document.getElementById(`${p}-faction-img`);
-        if (imgEl) imgEl.src = `/resources/facciones/${pState.faction}.png`;
+        if (imgEl) imgEl.src = `../resources/facciones/${pState.faction}.png`;
 
         const rulesBtn = document.getElementById(`${p}-btn-faction-rules`);
         if (rulesBtn) rulesBtn.disabled = !pState.faction || !dataFactions[pState.faction];
@@ -2118,7 +2124,7 @@ function showMapModal() {
         const killzoneName = dataMaps[killzoneKey].name;
 
         document.getElementById('mapModalTitle').innerHTML = `<i class="bi bi-map me-2"></i>Mapa ${mapData.m_id} - ${killzoneName}`;
-        document.getElementById('mapModalImg').src = mapData.m_img;
+        document.getElementById('mapModalImg').src = resolveAssetPath(mapData.m_img);
 
         const modal = new bootstrap.Modal(document.getElementById('mapViewModal'));
         modal.show();
@@ -2162,7 +2168,7 @@ function showTerrainModal() {
                     </div>
                     <div class="p-3 bg-light text-dark d-flex flex-column justify-content-between h-100">
                         <div class="d-flex justify-content-center align-items-center mb-2" style="min-height: 100px;">
-                            ${t.t_img ? `<img src="${t.t_img}" alt="Pieza ${t.t_id}" class="img-fluid rounded" style="max-height: 100px; object-fit: contain;">` : '<span class="text-muted small fst-italic">Sin imagen</span>'}
+                            ${t.t_img ? `<img src="${resolveAssetPath(t.t_img)}" alt="Pieza ${t.t_id}" class="img-fluid rounded" style="max-height: 100px; object-fit: contain;">` : '<span class="text-muted small fst-italic">Sin imagen</span>'}
                         </div>
                         <div class="text-center border-top pt-2">
                             ${typeBadges}

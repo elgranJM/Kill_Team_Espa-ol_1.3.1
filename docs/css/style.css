@@ -63,11 +63,11 @@
 }
 
 .icon-yes {
-    background-image: url('resources/game_rules_files/yes.svg');
+    background-image: url('../resources/game_rules_files/yes.svg');
 }
 
 .icon-no {
-    background-image: url('resources/game_rules_files/no.svg');
+    background-image: url('../resources/game_rules_files/no.svg');
 }
 
 .shape-badge {
@@ -809,14 +809,6 @@ body.dark-mode .tacop.card {
     margin-right: 10px;
 }
 
-.icon-yes {
-    background-image: url('resources/game_rules_files/yes.svg');
-}
-
-.icon-no {
-    background-image: url('resources/game_rules_files/no.svg');
-}
-
 .svg-white {
     filter: brightness(0) invert(1);
 }
@@ -1139,14 +1131,6 @@ body.dark-mode .tacop.card {
     background-repeat: no-repeat;
     margin-right: 5px;
     vertical-align: middle;
-}
-
-.icon-yes {
-    background-image: url('/resources/game_rules_files/yes.svg');
-}
-
-.icon-no {
-    background-image: url('/resources/game_rules_files/no.svg');
 }
 
 /* Estilos para Ardides Estratégicos */
@@ -1688,10 +1672,16 @@ body.dark-mode .timeline-content {
     /* 2. Forzar A4 Vertical y Márgenes Estrictos de la Hoja */
     @page {
         size: A4 portrait;
-        margin: 0 !important; /* Apagamos el margen nativo problemático */
+        margin: 0 !important;
+        /* Apagamos el margen nativo problemático */
     }
 
-    body, main, .container-fluid, .bg-light, .bg-secondary-soft, .bg-white {
+    body,
+    main,
+    .container-fluid,
+    .bg-light,
+    .bg-secondary-soft,
+    .bg-white {
         background: white !important;
         background-color: white !important;
         padding: 0 !important;
@@ -1711,22 +1701,26 @@ body.dark-mode .timeline-content {
     #critops-cards-container,
     #tacops-cards-container {
         display: block !important;
-        text-align: center !important; /* Centra las tarjetas inline-block */
+        text-align: center !important;
+        /* Centra las tarjetas inline-block */
         margin: 0 auto !important;
         padding: 0 !important;
-        font-size: 0 !important; /* Elimina espacios en blanco de HTML que descuadran el inline-block */
+        font-size: 0 !important;
+        /* Elimina espacios en blanco de HTML que descuadran el inline-block */
     }
 
     /* 4. Las Tarjetas se comportan como ladrillos rígidos */
     .fade-in {
-        display: inline-block !important; /* Clave para eludir bugs de paginación */
+        display: inline-block !important;
+        /* Clave para eludir bugs de paginación */
         vertical-align: top !important;
         width: 60mm !important;
-        height: 120mm !important; /* Altura física estricta */
-        
+        height: 120mm !important;
+        /* Altura física estricta */
+
         /* Margen físico inyectado a cada tarjeta: 10mm abajo, 1.5mm a los lados (3mm entre columnas) */
-        margin: 0 1.5mm 10mm 1.5mm !important; 
-        
+        margin: 0 1.5mm 10mm 1.5mm !important;
+
         padding: 0 !important;
         page-break-inside: avoid !important;
         break-inside: avoid !important;
@@ -1735,7 +1729,7 @@ body.dark-mode .timeline-content {
     /* =================================================================== */
     /* EL MOTOR MATEMÁTICO: Fuerza los márgenes por fila                   */
     /* =================================================================== */
-    
+
     /* Obligamos a la Tarjeta 1, 2 y 3 (Primera Fila) a tener 23mm de margen superior */
     .fade-in:nth-child(1),
     .fade-in:nth-child(2),
@@ -1758,14 +1752,16 @@ body.dark-mode .timeline-content {
 
     /* 5. Dimensiones internas de la Tarjeta */
     .card {
-        width: 100% !important; 
-        height: 100% !important; 
-        border: 1px dashed #999 !important; /* Guía de corte */
+        width: 100% !important;
+        height: 100% !important;
+        border: 1px dashed #999 !important;
+        /* Guía de corte */
         border-radius: 0 !important;
         overflow: hidden !important;
         box-shadow: none !important;
         margin: 0 !important;
-        font-size: 1rem !important; /* Restaura el tamaño de fuente anulado en el contenedor padre */
+        font-size: 1rem !important;
+        /* Restaura el tamaño de fuente anulado en el contenedor padre */
     }
 
     /* 6. Conservación de recuadros negros */
@@ -1775,11 +1771,11 @@ body.dark-mode .timeline-content {
     }
 
     /* 7. Márgenes perimetrales ultra reducidos para 60x120 */
-    .card > .p-3 {
+    .card>.p-3 {
         padding: 2mm !important;
     }
 
-    .card > .position-relative {
+    .card>.position-relative {
         padding: 1.5mm !important;
     }
 
@@ -1866,7 +1862,7 @@ body.dark-mode .timeline-content {
         font-size: 8pt !important;
         padding: 1mm !important;
     }
-    
+
     .tacop .archetype img {
         width: 3.5mm !important;
         height: 3.5mm !important;
@@ -1893,12 +1889,15 @@ body.dark-mode .timeline-content {
 /* CONTRAPORTADAS (Impresión)                                          */
 /* =================================================================== */
 .back-cover-card {
-    background-color: #212529 !important; /* Gris dark de Bootstrap */
+    background-color: #212529 !important;
+    /* Gris dark de Bootstrap */
 }
 
-.stripe-top, .stripe-bottom {
+.stripe-top,
+.stripe-bottom {
     background-color: #ff5418 !important;
-    height: 18mm !important; /* Altura proporcional para los 120mm totales */
+    height: 18mm !important;
+    /* Altura proporcional para los 120mm totales */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1922,20 +1921,26 @@ body.dark-mode .timeline-content {
 /* =================================================================== */
 .watermark-container {
     position: relative;
-    z-index: 1; /* Crea un contexto de apilamiento base */
+    z-index: 1;
+    /* Crea un contexto de apilamiento base */
 }
 
 .watermark-img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centrado matemático perfecto */
-    width: 80%; /* Ocupará el 80% del ancho de la tarjeta */
+    transform: translate(-50%, -50%);
+    /* Centrado matemático perfecto */
+    width: 80%;
+    /* Ocupará el 80% del ancho de la tarjeta */
     max-height: 80%;
     object-fit: contain;
-    opacity: 0.08; /* Transparencia severa obligatoria al ser negro puro (8%) */
-    z-index: -1; /* La oculta detrás de las letras pero sobre el fondo blanco */
-    pointer-events: none; /* Evita que el ratón "enganche" la imagen por error */
+    opacity: 0.08;
+    /* Transparencia severa obligatoria al ser negro puro (8%) */
+    z-index: -1;
+    /* La oculta detrás de las letras pero sobre el fondo blanco */
+    pointer-events: none;
+    /* Evita que el ratón "enganche" la imagen por error */
 }
 
 /* =================================================================== */
@@ -1943,27 +1948,5 @@ body.dark-mode .timeline-content {
 /* =================================================================== */
 .tacop-watermark {
     /* Convierte cualquier SVG a negro puro y confía en la opacidad del 8% de .watermark-img */
-    filter: brightness(0) contrast(100%) grayscale(100%); 
-}
-
-@media print {
-    /* Ajustes específicos para la cabecera de las TacOps en la impresión */
-    .tacop .archetype {
-        font-size: 8pt !important;
-        padding: 1mm !important;
-    }
-    
-    .tacop .archetype img {
-        width: 3.5mm !important;
-        height: 3.5mm !important;
-        margin-right: 1.5mm !important;
-    }
-
-    .tacop .middle {
-        padding: 2mm !important;
-    }
-
-    .tacop .gototacops {
-        display: none !important; /* Oculta el icono del corazón en el papel */
-    }
+    filter: brightness(0) contrast(100%) grayscale(100%);
 }

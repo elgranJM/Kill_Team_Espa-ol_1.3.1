@@ -1,3 +1,9 @@
+function resolveAssetPath(path) {
+    if (!path || typeof path !== 'string') return '';
+    const clean = path.trim();
+    if (!clean || clean.startsWith('http') || clean.startsWith('../')) return clean;
+    return '../' + clean.replace(/^(\.\/|\/)/, '');
+}
 
 // Estado del Juego (Para la Selección Secreta, Ardides y Equipamiento)
 let gameState = {
@@ -549,14 +555,14 @@ async function initializeMatchData() {
     try {
         // Agregamos reglasArmas.json, racial.json, ploys.json y equipment.json a nuestra promesa concurrente
         const [factionsRes, tacopsRes, critopsRes, weaponsRes, racialRes, ploysRes, equipRes, mapsRes] = await Promise.all([
-            fetch('/data/tacops.json'),
-            fetch('/data/tacopsgenerales.json'),
-            fetch('/data/CritsOps.json'),
-            fetch('/data/reglasArmas.json'),
-            fetch('/data/racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
-            fetch('/data/ploys.json').catch(e => { console.warn('ploys.json error', e); return null; }),
-            fetch('/data/equipment.json').catch(e => { console.warn('equipment.json error', e); return null; }),
-            fetch('/data/maps.json').catch(e => { console.warn('maps.json error', e); return null; })
+            fetch('../data/tacops.json'),
+            fetch('../data/tacopsgenerales.json'),
+            fetch('../data/CritsOps.json'),
+            fetch('../data/reglasArmas.json'),
+            fetch('../data/racial.json').catch(e => { console.warn('racial.json error', e); return null; }),
+            fetch('../data/ploys.json').catch(e => { console.warn('ploys.json error', e); return null; }),
+            fetch('../data/equipment.json').catch(e => { console.warn('equipment.json error', e); return null; }),
+            fetch('../data/maps.json').catch(e => { console.warn('maps.json error', e); return null; })
         ]);
 
         dataFactions = await factionsRes.json();
@@ -673,7 +679,7 @@ function updateTacOps(playerPrefix) {
 
     // Actualización visual de la imagen
     const imgEl = document.getElementById(`${playerPrefix}-faction-img`);
-    if (imgEl) imgEl.src = `/resources/facciones/${factionKey}.png`;
+    if (imgEl) imgEl.src = `../resources/facciones/${factionKey}.png`;
 
     const allowedArchetypes = dataFactions[factionKey].archetypes;
     const translatedArchs = allowedArchetypes.map(a => archetypeTranslations[a] || a).join(' / ');
@@ -835,7 +841,7 @@ function renderStrategicPloysModal(playerPrefix) {
 
     // Actualizar cabecera del modal
     const imgEl = document.getElementById('stratModalFactionImg');
-    if (imgEl) imgEl.src = `/resources/facciones/${factionKey}.png`;
+    if (imgEl) imgEl.src = `../resources/facciones/${factionKey}.png`;
 
     const titleEl = document.getElementById('stratModalTitle');
     if (titleEl) titleEl.innerHTML = `<i class="bi bi-hourglass-split text-warning me-1"></i>Ardides Estratégicos — ${factionName}`;
@@ -1167,7 +1173,7 @@ function buildEquipmentCardInnerHtml(item) {
     if (item.img && item.img.length > 0) {
         imgHtml = `
                     <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
-                        ${item.img.map(src => `<img src="${src}" class="img-fluid rounded border shadow-sm" style="max-height: 160px;" alt="Ejemplo de equipo">`).join('')}
+                        ${item.img.map(src => `<img src="${resolveAssetPath(src)}" class="img-fluid rounded border shadow-sm" style="max-height: 160px;" alt="Ejemplo de equipo">`).join('')}
                     </div>
                 `;
     }
@@ -1188,7 +1194,7 @@ function renderEquipmentSelectModal(playerPrefix) {
 
     // Actualizar cabecera del modal
     const imgEl = document.getElementById('equipModalFactionImg');
-    if (imgEl) imgEl.src = `/resources/facciones/${factionKey}.png`;
+    if (imgEl) imgEl.src = `../resources/facciones/${factionKey}.png`;
 
     const titleEl = document.getElementById('equipModalTitle');
     if (titleEl) titleEl.innerHTML = `<i class="bi bi-tools text-primary me-1"></i>Selección de Equipamiento — ${factionName}`;
@@ -1629,7 +1635,7 @@ function showFactionRules(playerPrefix) {
     const modalArchetypesEl = document.getElementById('factionModalArchetypes');
 
     if (modalTitleEl) modalTitleEl.textContent = factionName;
-    if (modalImgEl) modalImgEl.src = `/resources/facciones/${factionKey}.png`;
+    if (modalImgEl) modalImgEl.src = `../resources/facciones/${factionKey}.png`;
 
     // 1. Arquetipos
     const allowedArchetypes = dataFactions[factionKey]?.archetypes || [];
@@ -1886,10 +1892,10 @@ function showTacOpDetails(playerPrefix) {
 
     function getArchetypeIcon(archetype) {
         switch (archetype) {
-            case 'recon': return '/resources/game_rules_files/recon.svg';
-            case 'security': return '/resources/game_rules_files/security.svg';
-            case 'infiltration': return '/resources/game_rules_files/infiltration.svg';
-            case 'seek-destroy': return '/resources/game_rules_files/seek-destroy.svg';
+            case 'recon': return '../resources/game_rules_files/recon.svg';
+            case 'security': return '../resources/game_rules_files/security.svg';
+            case 'infiltration': return '../resources/game_rules_files/infiltration.svg';
+            case 'seek-destroy': return '../resources/game_rules_files/seek-destroy.svg';
             default: return '';
         }
     }
@@ -1992,11 +1998,8 @@ function showTacOpDetails(playerPrefix) {
 
 function saveGameState() {
 
-    // NUEVO: Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardamos estados corruptos
+    // Si la aplicación está restaurando datos antiguos o los JSON no han cargado, no guardamos estados corruptos
     if (gameState.loading || Object.keys(dataFactions).length === 0) return;
-
-    // Si los datos aún no cargan de los JSON, no guardamos estados vacíos
-    if (Object.keys(dataFactions).length === 0) return;
 
     const state = {
         globalCritOp: document.getElementById('global-critop') ? document.getElementById('global-critop').value : "",
@@ -2357,7 +2360,7 @@ function showMapModal() {
 
         // Inyectar datos
         document.getElementById('mapModalTitle').innerHTML = `<i class="bi bi-map me-2"></i>Mapa ${mapData.m_id} - ${killzoneName}`;
-        document.getElementById('mapModalImg').src = mapData.m_img;
+        document.getElementById('mapModalImg').src = resolveAssetPath(mapData.m_img);
 
         // Lanzar modal de Bootstrap
         const modal = new bootstrap.Modal(document.getElementById('mapViewModal'));
@@ -2412,10 +2415,10 @@ function showTerrainModal() {
                         </div>
                         <div class="p-3 bg-light text-dark">
                             <div class="card-body p-2 d-flex justify-content-center align-items-center bg-light">
-                                ${t.t_img ? `<img src="${t.t_img}" alt="Pieza ${t.t_id}" class="img-fluid rounded mb-2" style="max-height: 100px; object-fit: contain; margin: 0 auto;">` : ''}
+                                ${t.t_img ? `<img src="${resolveAssetPath(t.t_img)}" class="img-fluid rounded mb-2" style="max-height: 100px; object-fit: contain; margin: 0 auto;">` : ''}
                             </div>
                             <div>
-                                ${t.type.map(t => `<span class="badge bg-dark me-1 mb-1">${t}</span>`).join('')}
+                                ${typeBadges}
                             </div>
                         </div>
                     </div>   

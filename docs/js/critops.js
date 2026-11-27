@@ -3,7 +3,7 @@
             let allCritOps = {};
 
             // Petición al nuevo JSON de CritsOps
-            fetch('/data/CritsOps.json')
+            fetch('../data/CritsOps.json')
                 .then(response => {
                     if (!response.ok) throw new Error("No se pudo cargar el archivo JSON");
                     return response.json();
@@ -92,7 +92,7 @@
                             <div class="p-3 d-flex flex-column h-100 bg-white border border-top-0 rounded-bottom watermark-container">
                                 
                                 <!-- Marca de Agua Absoluta -->
-                                <img src="/resources/marca-de-agua.png" class="watermark-img" alt="Símbolo de facción">
+                                <img src="../resources/marca-de-agua.png" class="watermark-img" alt="Símbolo de facción">
                                 
                                 <h4 class="name fw-bold text-dark mb-4">${op.name_es}</h4>
                                 <div class="mission-container pt-0 flex-grow-1 d-flex flex-column">
@@ -134,7 +134,7 @@
                                 <span>CRIT OP</span>
                             </div>
                             <div class="flex-grow-1 d-flex align-items-center justify-content-center">
-                                <img src="/resources/marca-de-agua-naranja.png" class="back-watermark" alt="CritOp Back">
+                                <img src="../resources/marca-de-agua-naranja.png" class="back-watermark" alt="CritOp Back">
                             </div>
                             <div class="stripe-bottom text-white fw-bold">
                                 <span>CRIT OP</span>

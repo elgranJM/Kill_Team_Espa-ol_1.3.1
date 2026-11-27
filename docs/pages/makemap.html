@@ -8,7 +8,7 @@
     <!-- Reutilizando Bootstrap como en tu proyecto -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- html2canvas para la exportación de la imagen -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -199,7 +199,8 @@
                 <div class="offcanvas-body p-0 pt-3">
                     <ul class="nav nav-pills flex-column" id="main-nav">
                         <li class="nav-item mb-2">
-                            <a class="nav-link text-dark" href="../index.html"><i class="bi bi-house-door me-2"></i> Inicio
+                            <a class="nav-link text-dark" href="../index.html"><i class="bi bi-house-door me-2"></i>
+                                Inicio
                                 (Portada)</a>
                         </li>
                         <hr class="my-2">
@@ -284,8 +285,8 @@
                                 <option value="Chalnath">Chalnath</option>
                                 <option value="Gallowdark">Horcasombría (Gallowdark)</option>
                                 <option value="Moroch">Moroch</option>
-                                <option value="Nachmunt">Nachmund</option> //nachmund es el nombre en español de
-                                nachmunt
+                                <!--nachmund es el nombre en español de nachmunt-->
+                                <option value="Nachmunt">Nachmund</option>
                                 <option value="Octarius">Octarius</option>
                                 <option value="Tombworld">Mundo Tumba (Tombworld)</option>
                                 <option value="Volkus">Volkus</option>
@@ -340,12 +341,13 @@
                     <div class="text-center">
                         <div id="workspace-wrapper">
                             <div id="workspace">
-                                <img id="map-bg" src="/resources/creacion-mapas/Mapas-generales/map-cq-long-min.png"
+                                <img id="map-bg" src="../resources/creacion-mapas/Mapas-generales/map-cq-long-min.png"
                                     alt="Fondo del mapa">
                                 <div id="selection-box"></div> <!-- Nodo dinámico de selección -->
                             </div>
                         </div>
                     </div>
+                </div>
 
             </main> <!-- Cierre del Main Content Area -->
         </div> <!-- Cierre del row -->
@@ -377,7 +379,7 @@
         </div>
     </div>
 
-    <script src="/js/makemap.js"></script>
+    <script src="../js/makemap.js"></script>
 
     <!-- Modal de Instrucciones -->
     <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
